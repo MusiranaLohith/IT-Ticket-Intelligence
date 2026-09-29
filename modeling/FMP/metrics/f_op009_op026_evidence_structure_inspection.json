@@ -1,0 +1,158 @@
+{
+  "operation": "F-OP-009",
+  "title": "OP-026 Evidence-State Structure Inspection",
+  "status": "PASS",
+  "read_only": true,
+  "models_executed": false,
+  "model_modified": false,
+  "retraining_performed": false,
+  "threshold_selection_performed": false,
+  "locked_test_reused_for_policy_selection": false,
+  "op026_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/mod036/op026/t8_mod036_op026_decision_engine_validation.json",
+  "top_level_keys": [
+    "operation",
+    "operation_name",
+    "status",
+    "closure_status",
+    "validated_operations",
+    "population",
+    "observed_overall_states",
+    "observed_consistency_states",
+    "evidence_count_distribution",
+    "closure_criteria",
+    "architecture",
+    "limitations",
+    "next_phase",
+    "artifacts"
+  ],
+  "target_number_matches": [
+    {
+      "path": "root.population.decision_engine_union",
+      "key": "decision_engine_union",
+      "value": 119895,
+      "type": "int"
+    },
+    {
+      "path": "root.population.all_four_intersection",
+      "key": "all_four_intersection",
+      "value": 0,
+      "type": "int"
+    },
+    {
+      "path": "root.population.prediction_rows",
+      "key": "prediction_rows",
+      "value": 119895,
+      "type": "int"
+    },
+    {
+      "path": "root.population.unique_prediction_ids",
+      "key": "unique_prediction_ids",
+      "value": 119895,
+      "type": "int"
+    },
+    {
+      "path": "root.observed_overall_states[0]",
+      "key": "0",
+      "value": "INSUFFICIENT_EVIDENCE",
+      "type": "str"
+    },
+    {
+      "path": "root.observed_overall_states[1]",
+      "key": "1",
+      "value": "SUPPORTED",
+      "type": "str"
+    },
+    {
+      "path": "root.observed_consistency_states[0]",
+      "key": "0",
+      "value": "INSUFFICIENT_EVIDENCE",
+      "type": "str"
+    },
+    {
+      "path": "root.observed_consistency_states[1]",
+      "key": "1",
+      "value": "SUPPORTED",
+      "type": "str"
+    },
+    {
+      "path": "root.evidence_count_distribution.2",
+      "key": "2",
+      "value": 9727,
+      "type": "int"
+    },
+    {
+      "path": "root.evidence_count_distribution.1",
+      "key": "1",
+      "value": 109649,
+      "type": "int"
+    },
+    {
+      "path": "root.evidence_count_distribution.3",
+      "key": "3",
+      "value": 519,
+      "type": "int"
+    }
+  ],
+  "semantic_matches": [
+    {
+      "path": "root.evidence_count_distribution",
+      "key": "evidence_count_distribution",
+      "value": {
+        "2": 9727,
+        "1": 109649,
+        "3": 519
+      },
+      "type": "dict"
+    },
+    {
+      "path": "root.evidence_count_distribution.2",
+      "key": "2",
+      "value": 9727,
+      "type": "int"
+    },
+    {
+      "path": "root.evidence_count_distribution.1",
+      "key": "1",
+      "value": 109649,
+      "type": "int"
+    },
+    {
+      "path": "root.evidence_count_distribution.3",
+      "key": "3",
+      "value": 519,
+      "type": "int"
+    },
+    {
+      "path": "root.closure_criteria.component_baselines_established",
+      "key": "component_baselines_established",
+      "value": true,
+      "type": "bool"
+    },
+    {
+      "path": "root.architecture.variable_evidence",
+      "key": "variable_evidence",
+      "value": true,
+      "type": "bool"
+    },
+    {
+      "path": "root.architecture.missing_evidence_is_unavailable",
+      "key": "missing_evidence_is_unavailable",
+      "value": true,
+      "type": "bool"
+    }
+  ],
+  "expected_evidence_distribution": {
+    "SUPPORTED": 10246,
+    "CONFLICTING": 0,
+    "INSUFFICIENT_EVIDENCE": 109649,
+    "UNAVAILABLE": 0,
+    "TOTAL": 119895
+  },
+  "expected_component_distribution": {
+    "1": 109649,
+    "2": 9727,
+    "3": 519,
+    "4": 0,
+    "TOTAL": 119895
+  }
+}

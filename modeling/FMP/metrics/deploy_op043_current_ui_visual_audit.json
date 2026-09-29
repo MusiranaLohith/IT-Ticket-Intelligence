@@ -1,0 +1,97 @@
+{
+  "operation": "DEPLOY-OP-043",
+  "title": "CURRENT UI VISUAL AUDIT",
+  "status": "PASS",
+  "read_only_source_audit": true,
+  "source_files_modified": false,
+  "backend_modified": false,
+  "frozen_runtime_modified": false,
+  "model_logic_modified": false,
+  "frontend": "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend",
+  "files": {
+    "index.html": {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/index.html",
+      "bytes": 16156,
+      "sha256": "ee9e540be567ec260b7866349ffd484574a6cac98b8d58bb21085700ffe80921"
+    },
+    "style.css": {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/style.css",
+      "bytes": 73477,
+      "sha256": "26a370dc6ecfa46d949d992bd530e6c013ee82455bd9377435164db1c469b997"
+    },
+    "app.js": {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/app.js",
+      "bytes": 59396,
+      "sha256": "a7dc4f1f943139836774c9f6bf07772463fb8b9c35d19ab4cb159dfb1a2e2c42"
+    }
+  },
+  "html_regions": {
+    "topbar": true,
+    "single_ticket_panel": true,
+    "ticket_form": true,
+    "batch_file_input": true,
+    "batch_results_panel": true,
+    "results_panel": true,
+    "evidence_content": true,
+    "pipeline_content": true,
+    "review_content": true,
+    "limitations_content": true,
+    "explanation_content": true,
+    "reset_button": true,
+    "footer": true
+  },
+  "ticket_fields": {
+    "ticket_id": true,
+    "creation_time": true,
+    "creator": true,
+    "creator_detail": true,
+    "summary": true,
+    "description": true
+  },
+  "batch_features": {
+    "batch_results_table": true,
+    "batch_results_table_body": true,
+    "batch_results_summary": true,
+    "batch_results_empty": true
+  },
+  "css_features": {
+    "root_variables": 2,
+    "topbar_rules": 5,
+    "panel_rules": 6,
+    "subpanel_rules": 1,
+    "pipeline_rules": 31,
+    "explanation_rules": 88,
+    "limitations_rules": 17,
+    "footer_rules": 14,
+    "media_queries": 5,
+    "gradients": 69,
+    "box_shadows": 44,
+    "backdrop_filters": 0
+  },
+  "visual_tokens": {
+    "body": true,
+    "topbar": true,
+    "panel": true,
+    "subpanel": true,
+    "pipeline_card": true,
+    "task_id": true,
+    "task_state": true,
+    "explanation_block": true,
+    "limitations_content": true,
+    "footer": true
+  },
+  "app_features": {
+    "single_api": true,
+    "batch_api": true,
+    "predict_batch_not_frontend": true,
+    "ticket_pipeline_not_frontend": true,
+    "sklearn_not_frontend": true,
+    "select_batch_ticket": true,
+    "render_analysis_response": true
+  },
+  "source_hashes_before": {
+    "index.html": "ee9e540be567ec260b7866349ffd484574a6cac98b8d58bb21085700ffe80921",
+    "style.css": "26a370dc6ecfa46d949d992bd530e6c013ee82455bd9377435164db1c469b997",
+    "app.js": "a7dc4f1f943139836774c9f6bf07772463fb8b9c35d19ab4cb159dfb1a2e2c42"
+  }
+}

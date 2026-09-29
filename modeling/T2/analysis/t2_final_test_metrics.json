@@ -1,0 +1,122 @@
+{
+  "operation": "T2-MOD-020",
+  "operation_name": "Final Locked Test Evaluation",
+  "task": "T2",
+  "dataset": "Mozilla CORE",
+  "model": {
+    "operation": "T2-MOD-007",
+    "name": "TF-IDF + Class-Weighted Logistic Regression",
+    "artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/models/t2_class_weighted_tfidf_logreg.joblib",
+    "refitted": false
+  },
+  "test": {
+    "artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/splits/test.csv",
+    "rows": 4425,
+    "schema": [
+      "ID",
+      "Creation time",
+      "Summary",
+      "Description",
+      "target_priority"
+    ],
+    "used_for_final_evaluation": true
+  },
+  "training": {
+    "performed": false,
+    "refit": false,
+    "parameter_changes": false
+  },
+  "metrics": {
+    "accuracy": 0.4201129943502825,
+    "macro_f1": 0.26495957519937885,
+    "weighted_f1": 0.42540851125365187,
+    "per_class": {
+      "P1": {
+        "precision": 0.2560728744939271,
+        "recall": 0.4048,
+        "f1": 0.3137011779293242,
+        "support": 625
+      },
+      "P2": {
+        "precision": 0.4161988773055333,
+        "recall": 0.33679428942245293,
+        "f1": 0.37230989956958394,
+        "support": 1541
+      },
+      "P3": {
+        "precision": 0.5434782608695652,
+        "recall": 0.5175734232065479,
+        "f1": 0.530209617755857,
+        "support": 2077
+      },
+      "P4": {
+        "precision": 0.03125,
+        "recall": 0.06060606060606061,
+        "f1": 0.041237113402061855,
+        "support": 33
+      },
+      "P5": {
+        "precision": 0.06756756756756757,
+        "recall": 0.06711409395973154,
+        "f1": 0.06734006734006734,
+        "support": 149
+      }
+    }
+  },
+  "actual_distribution": {
+    "P1": 625,
+    "P2": 1541,
+    "P3": 2077,
+    "P4": 33,
+    "P5": 149
+  },
+  "predicted_distribution": {
+    "P1": 988,
+    "P2": 1247,
+    "P3": 1978,
+    "P4": 64,
+    "P5": 148
+  },
+  "confusion_matrix": [
+    [
+      253,
+      162,
+      191,
+      2,
+      17
+    ],
+    [
+      354,
+      519,
+      614,
+      10,
+      44
+    ],
+    [
+      349,
+      533,
+      1075,
+      43,
+      77
+    ],
+    [
+      2,
+      10,
+      19,
+      2,
+      0
+    ],
+    [
+      30,
+      23,
+      79,
+      7,
+      10
+    ]
+  ],
+  "artifacts": {
+    "predictions": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/analysis/t2_final_test_predictions.csv",
+    "confusion_matrix": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/analysis/t2_final_test_confusion_matrix.csv"
+  },
+  "test_evaluation_status": "COMPLETE"
+}

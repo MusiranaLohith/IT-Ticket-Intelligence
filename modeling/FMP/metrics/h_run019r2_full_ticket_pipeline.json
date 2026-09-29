@@ -1,0 +1,155 @@
+{
+  "ticket": {
+    "id": "H-RUN-021R3-VPN-001",
+    "title": "VPN connection fails after password reset"
+  },
+  "T1": {
+    "status": "EXECUTED",
+    "prediction": "Support general",
+    "artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/baselines/t1_it_support_char_svm.joblib",
+    "transformed_shape": [
+      1,
+      29096
+    ]
+  },
+  "T2": {
+    "status": "EXECUTED",
+    "prediction": "P1",
+    "artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/models/t2_class_weighted_tfidf_logreg.joblib",
+    "transformed_shape": [
+      1,
+      212254
+    ]
+  },
+  "T3": {
+    "status": "EXECUTED",
+    "prediction": "S3",
+    "artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib",
+    "transformed_shape": [
+      1,
+      288972
+    ]
+  },
+  "T4": {
+    "status": "EXECUTED",
+    "results": [
+      {
+        "id": "1321841",
+        "distance": 0.7060008645057678,
+        "summary": "Firefox network loss after connection to Cisco VPN.",
+        "target_assignee": "dd.mozilla@gmail.com"
+      },
+      {
+        "id": "220663",
+        "distance": 0.745875358581543,
+        "summary": "Conn: Hang when my VPN connection times out (?)",
+        "target_assignee": "darin@meer.net"
+      },
+      {
+        "id": "1405307",
+        "distance": 0.7511016726493835,
+        "summary": "After connecting to VPN Firefox is unable to navigate to sites inside the VPN but Chrome can",
+        "target_assignee": "daniel@haxx.se"
+      },
+      {
+        "id": "125875",
+        "distance": 0.7548562288284302,
+        "summary": "PAC: configured to work proxy server, but user not on work VPN",
+        "target_assignee": "darin@netscape.com"
+      },
+      {
+        "id": "947801",
+        "distance": 0.7649978399276733,
+        "summary": "DNS resolution sporadically fails in Android 4.4/5.0 when connected to a VPN",
+        "target_assignee": "daniel@haxx.se"
+      }
+    ],
+    "artifact_tfidf": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_tfidf.joblib",
+    "artifact_neighbors": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_neighbors.joblib"
+  },
+  "T5": {
+    "status": "EXECUTED",
+    "duplicate_evidence": 0.0,
+    "threshold_used": false,
+    "decision_score": -3.4282709831179505,
+    "artifact_vectorizer": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod007_calibrated_tfidf.joblib",
+    "artifact_classifier": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod005_logreg.joblib",
+    "artifact_calibration": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod007_calibration_models.joblib"
+  },
+  "T6": {
+    "status": "PARTIAL_NATIVE_RUNTIME",
+    "full_mod010_hybrid_available": false,
+    "top_ids": [],
+    "reason": "Frozen MOD-010 semantic evidence is bound to the existing evaluation population; a new ticket has no stored semantic evidence row."
+  },
+  "T7": {
+    "status": "EXECUTED_WITH_SUPPORT_LIMITATION",
+    "median_seconds": 19.629117104199928,
+    "temporal_support": "OUTSIDE_OBSERVED_TRAINING_RANGE",
+    "creation_year": 2026,
+    "training_year_max": 2020,
+    "linear_predictor": 2.9770140304149306,
+    "feature_count": 21,
+    "model": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod010_log_normal_aft_model.json"
+  },
+  "T8": {
+    "status": "EXECUTED",
+    "evidence_state": "SUPPORTED_WITH_LIMITATIONS",
+    "available": [
+      "T1",
+      "T2",
+      "T3",
+      "T4",
+      "T5"
+    ],
+    "partial": [
+      "T6",
+      "T7"
+    ],
+    "unavailable": [],
+    "missing_evidence_is_not_negative": true,
+    "native_semantics_preserved": true
+  },
+  "T9": {
+    "status": "EXECUTED",
+    "universal_confidence": null,
+    "universal_risk": null,
+    "cross_task_probability_aggregation": false,
+    "reason": "Task outputs retain their native semantics; no universal confidence or risk score is created."
+  },
+  "T10": {
+    "status": "EXECUTED",
+    "action": "HUMAN_DECISION_REQUIRED",
+    "automation": "NOT_ESTABLISHED",
+    "warnings": [
+      "Evidence is not fully supported; missing evidence is not negative evidence.",
+      "T6 full MOD-010 hybrid is unavailable for this new-ticket runtime.",
+      "T7 ticket creation year is outside observed training temporal range."
+    ]
+  },
+  "T11": {
+    "status": "EXECUTED",
+    "feedback": "AWAITING_OUTCOME",
+    "synthetic_feedback": false
+  },
+  "final": {
+    "category": "Support general",
+    "priority": "P1",
+    "severity": "S3",
+    "duplicate": 0.0,
+    "related": [],
+    "resolution_seconds": 19.629117104199928,
+    "evidence_state": "SUPPORTED_WITH_LIMITATIONS",
+    "action": "HUMAN_DECISION_REQUIRED",
+    "lifecycle": "AWAITING_OUTCOME"
+  },
+  "integrity": {
+    "model_retraining": false,
+    "model_modification": false,
+    "threshold_optimization": false,
+    "locked_test_reuse": false,
+    "prediction_modification": false,
+    "synthetic_feedback": false
+  },
+  "overall_status": "PASS_WITH_LIMITATIONS"
+}

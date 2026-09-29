@@ -1,0 +1,1652 @@
+{
+  "status": "EVALUATION_GROUP_AUDIT_COMPLETE",
+  "task": {
+    "task_id": "T1",
+    "dataset": "IT Support"
+  },
+  "evaluation": {
+    "records": 446,
+    "unique_normalized_texts": 119,
+    "repeated_normalized_text_groups": 69,
+    "records_in_repeated_groups": 396,
+    "repeated_record_rate": 0.8878923766816144,
+    "multi_label_normalized_text_groups": 1,
+    "records_in_multi_label_groups": 5
+  },
+  "largest_repeated_groups": [
+    {
+      "normalized_text": "file share access - [ticket id] - [name] ([company]. [location])",
+      "record_count": 76,
+      "labels": [
+        "Fileservice"
+      ],
+      "multi_label": false,
+      "records": [
+        {
+          "id": "1473",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1474",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1475",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1480",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1486",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1524",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1525",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1530",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1535",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1543",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1547",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1595",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1614",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1615",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1626",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1643",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1648",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1666",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1697",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1706",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1707",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1712",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1713",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1722",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1723",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1727",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1728",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1750",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1751",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1758",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1766",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1767",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1802",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1806",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1820",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1823",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1829",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1841",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1849",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1852",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1854",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1857",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1885",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1895",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1904",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1916",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1925",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1937",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1946",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2014",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2018",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2032",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2033",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2071",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2073",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2075",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2090",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2098",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2099",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2100",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2119",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2135",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2143",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2200",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2210",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2211",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2222",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2227",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2228",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2238",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2270",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2271",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2274",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2275",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2294",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2296",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        }
+      ]
+    },
+    {
+      "normalized_text": "shared mailbox access - [address] - [email]",
+      "record_count": 46,
+      "labels": [
+        "Support general"
+      ],
+      "multi_label": false,
+      "records": [
+        {
+          "id": "540",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "744",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1563",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1564",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1592",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1600",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1671",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1692",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1704",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1715",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1724",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1731",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1734",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1735",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1736",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1739",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1740",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1741",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1759",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1763",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1804",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1809",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1812",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1816",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1830",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1842",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1873",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1880",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1881",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1886",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1924",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1941",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1960",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1961",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "2007",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "2068",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "2080",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "2086",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "2120",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "2137",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "2154",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "2160",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "2219",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "2220",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "2246",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "2315",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        }
+      ]
+    },
+    {
+      "normalized_text": "[ticket id] - new support ticket received - basis user - [username] - [name] ([company]. [location])",
+      "record_count": 22,
+      "labels": [
+        "Support general"
+      ],
+      "multi_label": false,
+      "records": [
+        {
+          "id": "254",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "604",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "616",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "621",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "625",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "642",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "696",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "698",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "726",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "732",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "734",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "755",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "757",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "151",
+          "category_truth": "Support general",
+          "source_partition": "test"
+        },
+        {
+          "id": "599",
+          "category_truth": "Support general",
+          "source_partition": "test"
+        },
+        {
+          "id": "619",
+          "category_truth": "Support general",
+          "source_partition": "test"
+        },
+        {
+          "id": "622",
+          "category_truth": "Support general",
+          "source_partition": "test"
+        },
+        {
+          "id": "747",
+          "category_truth": "Support general",
+          "source_partition": "test"
+        },
+        {
+          "id": "748",
+          "category_truth": "Support general",
+          "source_partition": "test"
+        },
+        {
+          "id": "761",
+          "category_truth": "Support general",
+          "source_partition": "test"
+        },
+        {
+          "id": "763",
+          "category_truth": "Support general",
+          "source_partition": "test"
+        },
+        {
+          "id": "765",
+          "category_truth": "Support general",
+          "source_partition": "test"
+        }
+      ]
+    },
+    {
+      "normalized_text": "initiated by git: missing connection to all securitytools on system [server]",
+      "record_count": 18,
+      "labels": [
+        "Software"
+      ],
+      "multi_label": false,
+      "records": [
+        {
+          "id": "323",
+          "category_truth": "Software",
+          "source_partition": "train"
+        },
+        {
+          "id": "2078",
+          "category_truth": "Software",
+          "source_partition": "train"
+        },
+        {
+          "id": "3830",
+          "category_truth": "Software",
+          "source_partition": "train"
+        },
+        {
+          "id": "3853",
+          "category_truth": "Software",
+          "source_partition": "train"
+        },
+        {
+          "id": "5500",
+          "category_truth": "Software",
+          "source_partition": "train"
+        },
+        {
+          "id": "5835",
+          "category_truth": "Software",
+          "source_partition": "train"
+        },
+        {
+          "id": "5898",
+          "category_truth": "Software",
+          "source_partition": "train"
+        },
+        {
+          "id": "6568",
+          "category_truth": "Software",
+          "source_partition": "train"
+        },
+        {
+          "id": "6749",
+          "category_truth": "Software",
+          "source_partition": "train"
+        },
+        {
+          "id": "7035",
+          "category_truth": "Software",
+          "source_partition": "train"
+        },
+        {
+          "id": "7576",
+          "category_truth": "Software",
+          "source_partition": "train"
+        },
+        {
+          "id": "8028",
+          "category_truth": "Software",
+          "source_partition": "train"
+        },
+        {
+          "id": "8513",
+          "category_truth": "Software",
+          "source_partition": "train"
+        },
+        {
+          "id": "9333",
+          "category_truth": "Software",
+          "source_partition": "train"
+        },
+        {
+          "id": "9793",
+          "category_truth": "Software",
+          "source_partition": "train"
+        },
+        {
+          "id": "11414",
+          "category_truth": "Software",
+          "source_partition": "train"
+        },
+        {
+          "id": "11543",
+          "category_truth": "Software",
+          "source_partition": "train"
+        },
+        {
+          "id": "13996",
+          "category_truth": "Software",
+          "source_partition": "train"
+        }
+      ]
+    },
+    {
+      "normalized_text": "[ticket id] - new support ticket received - file share access - [ticket id] - [name] ([company]. [location])",
+      "record_count": 16,
+      "labels": [
+        "Fileservice"
+      ],
+      "multi_label": false,
+      "records": [
+        {
+          "id": "226",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "617",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "675",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "691",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "730",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "733",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "768",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "164",
+          "category_truth": "Fileservice",
+          "source_partition": "test"
+        },
+        {
+          "id": "615",
+          "category_truth": "Fileservice",
+          "source_partition": "test"
+        },
+        {
+          "id": "626",
+          "category_truth": "Fileservice",
+          "source_partition": "test"
+        },
+        {
+          "id": "663",
+          "category_truth": "Fileservice",
+          "source_partition": "test"
+        },
+        {
+          "id": "688",
+          "category_truth": "Fileservice",
+          "source_partition": "test"
+        },
+        {
+          "id": "690",
+          "category_truth": "Fileservice",
+          "source_partition": "test"
+        },
+        {
+          "id": "719",
+          "category_truth": "Fileservice",
+          "source_partition": "test"
+        },
+        {
+          "id": "725",
+          "category_truth": "Fileservice",
+          "source_partition": "test"
+        },
+        {
+          "id": "741",
+          "category_truth": "Fileservice",
+          "source_partition": "test"
+        }
+      ]
+    },
+    {
+      "normalized_text": "remove file share access - [ticket id] - [name] ([company]a. [location])",
+      "record_count": 14,
+      "labels": [
+        "Fileservice"
+      ],
+      "multi_label": false,
+      "records": [
+        {
+          "id": "1542",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1550",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1580",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1791",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1840",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1869",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2060",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2066",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2147",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2230",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2231",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2232",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2233",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2293",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        }
+      ]
+    },
+    {
+      "normalized_text": "file share access - [ticket id] - [address] ([company]a. [location])",
+      "record_count": 13,
+      "labels": [
+        "Fileservice"
+      ],
+      "multi_label": false,
+      "records": [
+        {
+          "id": "1488",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1497",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1558",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1682",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1693",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1799",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1836",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1863",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1865",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2077",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2092",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2223",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2267",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        }
+      ]
+    },
+    {
+      "normalized_text": "missing connection to all securitytools on system [server]",
+      "record_count": 8,
+      "labels": [
+        "Software"
+      ],
+      "multi_label": false,
+      "records": [
+        {
+          "id": "4291",
+          "category_truth": "Software",
+          "source_partition": "train"
+        },
+        {
+          "id": "6033",
+          "category_truth": "Software",
+          "source_partition": "train"
+        },
+        {
+          "id": "7672",
+          "category_truth": "Software",
+          "source_partition": "train"
+        },
+        {
+          "id": "9186",
+          "category_truth": "Software",
+          "source_partition": "train"
+        },
+        {
+          "id": "9426",
+          "category_truth": "Software",
+          "source_partition": "train"
+        },
+        {
+          "id": "10830",
+          "category_truth": "Software",
+          "source_partition": "train"
+        },
+        {
+          "id": "11160",
+          "category_truth": "Software",
+          "source_partition": "train"
+        },
+        {
+          "id": "14067",
+          "category_truth": "Software",
+          "source_partition": "train"
+        }
+      ]
+    },
+    {
+      "normalized_text": "delete shared mailbox - [email] - [email]. [location])",
+      "record_count": 7,
+      "labels": [
+        "Support general"
+      ],
+      "multi_label": false,
+      "records": [
+        {
+          "id": "1255",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "2124",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "2125",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "2126",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "2127",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "2130",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "2131",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        }
+      ]
+    },
+    {
+      "normalized_text": "file share access - [ticket id] - [name] ([company] [location])",
+      "record_count": 7,
+      "labels": [
+        "Fileservice"
+      ],
+      "multi_label": false,
+      "records": [
+        {
+          "id": "1606",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1844",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1902",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1905",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1917",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2002",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2204",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        }
+      ]
+    },
+    {
+      "normalized_text": "file share access - [ticket id] - [name] ([company])",
+      "record_count": 6,
+      "labels": [
+        "Fileservice"
+      ],
+      "multi_label": false,
+      "records": [
+        {
+          "id": "1699",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1745",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1987",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1994",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2021",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2025",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        }
+      ]
+    },
+    {
+      "normalized_text": "file share access - [ticket id] - [name] ([company]. [location])service request: file share access grant access to file share for the following user: [name] ([company]. [location]) (username: [username]) access type: (rw) read / write file share: j:/ce-sta/ please create the folder if it does not yet exist and give r/w access for this and all subfolders. requestor: [name] ([company]. [location]) comment:",
+      "record_count": 6,
+      "labels": [
+        "Fileservice"
+      ],
+      "multi_label": false,
+      "records": [
+        {
+          "id": "4800",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "7176",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "6128",
+          "category_truth": "Fileservice",
+          "source_partition": "test"
+        },
+        {
+          "id": "6528",
+          "category_truth": "Fileservice",
+          "source_partition": "test"
+        },
+        {
+          "id": "7364",
+          "category_truth": "Fileservice",
+          "source_partition": "test"
+        },
+        {
+          "id": "11547",
+          "category_truth": "Fileservice",
+          "source_partition": "test"
+        }
+      ]
+    },
+    {
+      "normalized_text": "[ticket id] - a support ticket was forwarded to your role - check_mk sd hostalarm: ([server]) [company] ls site2site[location]- up -> down",
+      "record_count": 5,
+      "labels": [
+        "Support general"
+      ],
+      "multi_label": false,
+      "records": [
+        {
+          "id": "1206",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1016",
+          "category_truth": "Support general",
+          "source_partition": "test"
+        },
+        {
+          "id": "1141",
+          "category_truth": "Support general",
+          "source_partition": "test"
+        },
+        {
+          "id": "1186",
+          "category_truth": "Support general",
+          "source_partition": "test"
+        },
+        {
+          "id": "1251",
+          "category_truth": "Support general",
+          "source_partition": "test"
+        }
+      ]
+    },
+    {
+      "normalized_text": "[ticket id] - new support ticket received - acesso",
+      "record_count": 5,
+      "labels": [
+        "Active Directory",
+        "Fileservice"
+      ],
+      "multi_label": true,
+      "records": [
+        {
+          "id": "976",
+          "category_truth": "Active Directory",
+          "source_partition": "train"
+        },
+        {
+          "id": "997",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1260",
+          "category_truth": "Active Directory",
+          "source_partition": "train"
+        },
+        {
+          "id": "888",
+          "category_truth": "Active Directory",
+          "source_partition": "test"
+        },
+        {
+          "id": "892",
+          "category_truth": "Active Directory",
+          "source_partition": "test"
+        }
+      ]
+    },
+    {
+      "normalized_text": "[ticket id] - new support ticket received - skype",
+      "record_count": 5,
+      "labels": [
+        "O365"
+      ],
+      "multi_label": false,
+      "records": [
+        {
+          "id": "1041",
+          "category_truth": "O365",
+          "source_partition": "train"
+        },
+        {
+          "id": "1331",
+          "category_truth": "O365",
+          "source_partition": "test"
+        },
+        {
+          "id": "1341",
+          "category_truth": "O365",
+          "source_partition": "test"
+        },
+        {
+          "id": "1344",
+          "category_truth": "O365",
+          "source_partition": "test"
+        },
+        {
+          "id": "1367",
+          "category_truth": "O365",
+          "source_partition": "test"
+        }
+      ]
+    },
+    {
+      "normalized_text": "create shared mailbox - [email] - [email]",
+      "record_count": 5,
+      "labels": [
+        "Support general"
+      ],
+      "multi_label": false,
+      "records": [
+        {
+          "id": "1472",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1479",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1632",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1896",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "2234",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        }
+      ]
+    },
+    {
+      "normalized_text": "create shared mailbox - [ticket id] - [email]",
+      "record_count": 5,
+      "labels": [
+        "Support general"
+      ],
+      "multi_label": false,
+      "records": [
+        {
+          "id": "1622",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1801",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1822",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1859",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        },
+        {
+          "id": "1930",
+          "category_truth": "Support general",
+          "source_partition": "train"
+        }
+      ]
+    },
+    {
+      "normalized_text": "file share access - [ticket id] - [name] (kwa. [location])",
+      "record_count": 5,
+      "labels": [
+        "Fileservice"
+      ],
+      "multi_label": false,
+      "records": [
+        {
+          "id": "1746",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1793",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1795",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1843",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2260",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        }
+      ]
+    },
+    {
+      "normalized_text": "file share access - [ticket id] - [name]. [name] ([company]. [location])",
+      "record_count": 5,
+      "labels": [
+        "Fileservice"
+      ],
+      "multi_label": false,
+      "records": [
+        {
+          "id": "1485",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1521",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1581",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1919",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "2001",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        }
+      ]
+    },
+    {
+      "normalized_text": "[ticket id] - new support ticket received - light user for external - [username] - [name]",
+      "record_count": 4,
+      "labels": [
+        "Support general"
+      ],
+      "multi_label": false,
+      "records": [
+        {
+          "id": "680",
+          "category_truth": "Support general",
+          "source_partition": "test"
+        },
+        {
+          "id": "686",
+          "category_truth": "Support general",
+          "source_partition": "test"
+        },
+        {
+          "id": "738",
+          "category_truth": "Support general",
+          "source_partition": "test"
+        },
+        {
+          "id": "754",
+          "category_truth": "Support general",
+          "source_partition": "test"
+        }
+      ]
+    }
+  ],
+  "multi_label_groups": [
+    {
+      "normalized_text": "[ticket id] - new support ticket received - acesso",
+      "record_count": 5,
+      "labels": [
+        "Active Directory",
+        "Fileservice"
+      ],
+      "multi_label": true,
+      "records": [
+        {
+          "id": "976",
+          "category_truth": "Active Directory",
+          "source_partition": "train"
+        },
+        {
+          "id": "997",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1260",
+          "category_truth": "Active Directory",
+          "source_partition": "train"
+        },
+        {
+          "id": "888",
+          "category_truth": "Active Directory",
+          "source_partition": "test"
+        },
+        {
+          "id": "892",
+          "category_truth": "Active Directory",
+          "source_partition": "test"
+        }
+      ]
+    }
+  ],
+  "integrity": {
+    "frozen_split_modified": false,
+    "labels_modified": false,
+    "raw_source_modified": false
+  }
+}

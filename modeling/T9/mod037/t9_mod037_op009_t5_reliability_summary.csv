@@ -1,0 +1,4 @@
+probability_field,total_bins,populated_bins,empty_bins,total_observations,min_bin_count,median_bin_count,max_bin_count,max_absolute_gap,mean_absolute_gap_unweighted,weighted_gap_sum,sparse_bins_lt_100
+p_base,14,14,0,74091,47,915.5,26684,0.7327007606720759,0.4078700638123362,0.0758147596005904,1
+p_isotonic,14,8,6,74091,25,315.5,67112,0.0537541335499602,0.020497194604226148,0.0012006431935899526,3
+p_sigmoid,14,12,2,74091,1,58.0,65264,0.903069109135812,0.13491573725946912,0.0009205397765845672,7

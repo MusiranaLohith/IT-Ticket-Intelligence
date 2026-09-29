@@ -1,0 +1,46 @@
+services:
+
+  db:
+    image: postgres:18
+    environment:
+      POSTGRES_DB: it_ticket_triage
+      POSTGRES_USER: it_ticket_app
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql
+      - ./deployment/backend/schema.sql:/docker-entrypoint-initdb.d/001_schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U it_ticket_app -d it_ticket_triage"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build:
+      context: .
+      dockerfile: deployment/backend/Dockerfile
+    image: it-ticket-backend:local
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: it_ticket_triage
+      DB_USER: it_ticket_app
+      DB_PASSWORD: ${POSTGRES_PASSWORD}
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build:
+      context: ./deployment/frontend
+      dockerfile: Dockerfile
+    image: it-ticket-frontend:local
+    depends_on:
+      - backend
+    ports:
+      - "8080:80"
+
+volumes:
+  postgres_data:

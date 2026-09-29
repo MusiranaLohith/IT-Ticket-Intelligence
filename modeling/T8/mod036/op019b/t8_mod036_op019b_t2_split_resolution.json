@@ -1,0 +1,250 @@
+{
+  "operation": "MOD-036 OP-019B",
+  "status": "PASS",
+  "resolution": {
+    "status": "RESOLVED",
+    "development_population": [
+      "modeling/T2/splits/train.csv",
+      "modeling/T2/splits/validation.csv"
+    ],
+    "locked_test": "modeling/T2/splits/test.csv"
+  },
+  "split_sizes": {
+    "train": 20648,
+    "validation": 4425,
+    "test": 4425
+  },
+  "unique_ids": {
+    "train": 20648,
+    "validation": 4425,
+    "test": 4425
+  },
+  "target_distributions": {
+    "train": {
+      "P1": 5894,
+      "P3": 6884,
+      "P2": 6298,
+      "P5": 862,
+      "P4": 710
+    },
+    "validation": {
+      "P2": 1317,
+      "P1": 806,
+      "P3": 2054,
+      "P5": 207,
+      "P4": 41
+    },
+    "test": {
+      "P2": 1541,
+      "P3": 2077,
+      "P1": 625,
+      "P5": 149,
+      "P4": 33
+    }
+  },
+  "duplicate_ids": {
+    "train": 0,
+    "validation": 0,
+    "test": 0
+  },
+  "pairwise_overlaps": {
+    "train_x_validation": 0,
+    "train_x_test": 0,
+    "validation_x_test": 0
+  },
+  "population_accounting": {
+    "sum_split_rows": 29498,
+    "unique_union_ids": 29498,
+    "development_rows": 25073,
+    "development_unique_ids": 25073
+  },
+  "column_audit": {
+    "train": {
+      "columns": [
+        "ID",
+        "Creation time",
+        "Summary",
+        "Description",
+        "target_priority"
+      ],
+      "missing_required_columns": []
+    },
+    "validation": {
+      "columns": [
+        "ID",
+        "Creation time",
+        "Summary",
+        "Description",
+        "target_priority"
+      ],
+      "missing_required_columns": []
+    },
+    "test": {
+      "columns": [
+        "ID",
+        "Creation time",
+        "Summary",
+        "Description",
+        "target_priority"
+      ],
+      "missing_required_columns": []
+    }
+  },
+  "test_isolation": {
+    "overlap_rows": 0,
+    "isolated": true
+  },
+  "resolution_checks": {
+    "train_exists": true,
+    "validation_exists": true,
+    "test_exists": true,
+    "train_duplicate_ids": true,
+    "validation_duplicate_ids": true,
+    "test_duplicate_ids": true,
+    "train_validation_disjoint": true,
+    "train_test_disjoint": true,
+    "validation_test_disjoint": true,
+    "required_columns_present": true,
+    "locked_test_isolated": true,
+    "native_priority_target_present": true
+  },
+  "provenance": {
+    "modeling/T2/splits/t2_split_report.json": {
+      "exists": true,
+      "path": "modeling/T2/splits/t2_split_report.json",
+      "type": "dict",
+      "top_level_keys": [
+        "operation",
+        "operation_name",
+        "task",
+        "task_name",
+        "dataset",
+        "input_artifact",
+        "split_method",
+        "shuffle",
+        "stratification",
+        "ordering",
+        "fractions",
+        "sizes",
+        "temporal_boundaries",
+        "class_counts",
+        "missing_classes",
+        "integrity",
+        "artifacts",
+        "status"
+      ],
+      "text_excerpt": "{\"operation\": \"T2-MOD-005\", \"operation_name\": \"Leakage-Safe Temporal Split\", \"task\": \"T2\", \"task_name\": \"Priority Prediction\", \"dataset\": \"Mozilla CORE\", \"input_artifact\": \"/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/derived/t2_features.csv\", \"split_method\": \"chronological\", \"shuffle\": false, \"stratification\": false, \"ordering\": [\"Creation time ascending\", \"ID ascending secondary key\"], \"fractions\": {\"train\": 0.7, \"validation\": 0.15, \"test\": 0.15}, \"sizes\": {\"total\": 29498, \"train\": 20648, \"validation\": 4425, \"test\": 4425}, \"temporal_boundaries\": {\"train_min\": \"1998-11-01T05:32:12+00:00\", \"train_max\": \"2019-12-19T11:52:32+00:00\", \"validation_min\": \"2019-12-19T12:48:10+00:00\", \"validation_max\": \"2021-09-27T12:10:28+00:00\", \"test_min\": \"2021-09-27T17:51:33+00:00\", \"test_max\": \"2024-11-12T19:31:39+00:00\", \"train_before_validation\": true, \"validation_before_test\": true, \"train_validation_equal_boundary_timestamp\": false, \"validation_test_equal_boundary_timestamp\": false}, \"class_counts\": {\"train\": {\"P1\": 5894, \"P2\": 6298, \"P3\": 6884, \"P4\": 710, \"P5\": 862}, \"validation\": {\"P1\": 806, \"P2\": 1317, \"P3\": 2054, \"P4\": 41, \"P5\": 207}, \"test\": {\"P1\": 625, \"P2\": 1541, \"P3\": 2077, \"P4\": 33, \"P5\": 149}}, \"missing_classes\": {\"train\": [], \"validation\": [], \"test\": []}, \"integrity\": {\"train_validation_overlap\": false, \"train_test_overlap\": false, \"validation_test_overlap\": false, \"complete_id_coverage\": true, \"input_artifact_modified\": false, \"raw_source_modified\": false, \"frozen_target_artifact_modified\": false}, \"artifacts\": {\"train\": \"/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/splits/train.csv\", \"validation\": \"/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/splits/validation.csv\", \"test\": \"/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/splits/test.csv\"}, \"status\": \"COMPLETE\"}"
+    },
+    "modeling/T2/analysis/t2_final_closure.json": {
+      "exists": true,
+      "path": "modeling/T2/analysis/t2_final_closure.json",
+      "type": "dict",
+      "top_level_keys": [
+        "operation",
+        "operation_name",
+        "task",
+        "task_name",
+        "dataset",
+        "prediction_boundary",
+        "admitted_features",
+        "excluded_features",
+        "final_model",
+        "final_test",
+        "generalization",
+        "system_role",
+        "suitability_decision",
+        "strengths",
+        "limitations",
+        "supported_claims",
+        "unsupported_claims",
+        "integrity",
+        "evidence_dependencies",
+        "final_conclusion",
+        "closure_status",
+        "next_system_use"
+      ],
+      "text_excerpt": "{\"operation\": \"T2-MOD-022\", \"operation_name\": \"Final T2 Task Suitability & Closure\", \"task\": \"T2\", \"task_name\": \"Priority Prediction\", \"dataset\": {\"name\": \"Mozilla CORE\", \"eligible_population\": 29498, \"target\": \"first valid P1-P5 Priority assigned strictly after Creation and within following 24 hours\", \"target_field\": \"target_priority\", \"semantic_target\": \"priority\", \"classes\": [\"P1\", \"P2\", \"P3\", \"P4\", \"P5\"], \"class_counts\": {\"P1\": 7325, \"P2\": 9156, \"P3\": 11015, \"P4\": 784, \"P5\": 1218}}, \"prediction_boundary\": \"Creation\", \"admitted_features\": [\"Summary\", \"Description\"], \"excluded_features\": [\"post-Creation administrative information\", \"current mutable state\", \"final-state backfill\", \"target-derived information\", \"future information\", \"fabricated historical information\"], \"final_model\": {\"operation\": \"T2-MOD-007\", \"name\": \"TF-IDF + Class-Weighted Logistic Regression\", \"selection_basis\": \"validation macro-F1 with minority-class performance considered\", \"final_model_selected\": true}, \"final_test\": {\"rows\": 4425, \"accuracy\": 0.4201129943502825, \"macro_f1\": 0.26495957519937885, \"weighted_f1\": 0.42540851125365187, \"per_class\": {\"P1\": {\"precision\": 0.2560728744939271, \"recall\": 0.4048, \"f1\": 0.3137011779293242, \"support\": 625}, \"P2\": {\"precision\": 0.4161988773055333, \"recall\": 0.33679428942245293, \"f1\": 0.37230989956958394, \"support\": 1541}, \"P3\": {\"precision\": 0.5434782608695652, \"recall\": 0.5175734232065479, \"f1\": 0.530209617755857, \"support\": 2077}, \"P4\": {\"precision\": 0.03125, \"recall\": 0.06060606060606061, \"f1\": 0.041237113402061855, \"support\": 33}, \"P5\": {\"precision\": 0.06756756756756757, \"recall\": 0.06711409395973154, \"f1\": 0.06734006734006734, \"support\": 149}}}, \"generalization\": {\"validation_accuracy\": 0.446102, \"test_accuracy\": 0.4201129943502825, \"accuracy_change_pp\": -2.598900564971751, \"validation_macro_f1\": 0.31045, \"test_macro_f1\": 0.26495957519937885, \"macro_f1_change_pp\": -4.549042480062115, \"validation_weighted_f1\": 0.443565, \"test_weighted_f1\": 0.42540851125365187, \"weighted_f1_change_pp\": -1.815648874634812}, \"system_role\": {\"decision\": \"SECONDARY_DECISION_SUPPORT_SIGNAL\", \"description\": \"T2 is suitable as a secondary, confidence-aware priority prediction signal within the integrated IT Ticket Intelligence system. It should assist triage and downstream evidence fusion, but should not independently determine final ticket priority.\"}, \"suitability_decision\": \"SUPPORTED_WITH_LIMITATIONS\", \"strengths\": [\"The T2 target has an explicit temporal definition: first valid P1-P5 Priority assigned after Creation and within the following 24 hours.\", \"The prediction boundary is Creation, preserving the intended incoming-ticket decision boundary.\", \"The modeling features are restricted to Creation-time Summary and Description.\", \"A chronological train/validation/test split was used.\", \"The locked test set was evaluated only after model selection.\", \"The final evaluation was performed without retraining or refitting.\", \"The model provides measurable signal for priority prediction, especially for the more represented classes.\"], \"limitations\": [\"Overall five-class predictive performance is limited: final test accuracy is 42.0113% and macro-F1 is 26.4960%.\", \"Minority-class performance is very weak, with P4 F1=4.1237% and P5 F1=6.7340%.\", \"Performance decreases from validation to the later locked test period.\", \"The dominant error paths involve confusion among P1, P2, and P3.\", \"The evidence does not justify treating the model as a fully autonomous priority assignment system.\", \"A universal automated confidence threshold has not been empirically established.\"], \"supported_claims\": [\"A leakage-controlled five-class priority prediction experiment can be performed on Mozilla CORE.\", \"Creation-time Summary and Description contain predictive signal for the subsequent 24-hour priority outcome.\", \"The selected model generalizes to a later chronological test period, although with degraded performance.\", \"Priority prediction is substantially harder for P4 and P5 than for the more represented priority classes.\", \"T2 can contribute one evidence channel to a larger confidence-aware triage system.\"], \"unsupported_claims\": [\"T2 does not support claiming highly accurate autonomous five-class priority assignment.\", \"T2 does not support claiming reliable prediction of P4 or P5.\", \"T2 does not support automatic action at a fixed confidence threshold without further empirical calibration and policy evaluation.\", \"T2 does not establish that predicted priority should replace human priority judgment.\"], \"integrity\": {\"training_in_closure\": false, \"refitting_in_closure\": false, \"test_tuning_in_closure\": false, \"dataset_modified\": false, \"new_labels_created\": false, \"future_features_added\": false, \"target_derived_features_added\": false, \"advanced_branch_reopened\": false}, \"evidence_dependencies\": {\"model_contract\": \"READY_FOR_CONTROLLED_MODELING\", \"baseline_comparison\": \"COMPLETE\", \"advanced_branch\": \"ADVANCED_MODEL_BRANCH_CLOSED\", \"final_model_selection\": \"FINAL_MODEL_SELECTED\", \"generalization_analysis\": \"GENERALIZATION_ANALYSIS_COMPLETE\"}, \"final_conclusion\": \"Mozilla CORE is suitable for T2 priority-prediction modeling under the frozen Creation-time target and feature boundary. The final TF-IDF + Class-Weighted Logistic Regression model demonstrates measurable but limited predictive performance on the locked chronological test period. Because minority-class performance is weak and generalization degrades on the later period, T2 is closed as a supported secondary decision-support signal rather than an autonomous priority assignment component.\", \"closure_status\": \"CLOSED\", \"next_system_use\": \"Retain the T2 prediction as one evidence channel for later confidence-aware fusion and human-review policy development. Do not independently automate final priority assignment from T2.\"}"
+    },
+    "modeling/T2/analysis/t2_final_model_selection.json": {
+      "exists": true,
+      "path": "modeling/T2/analysis/t2_final_model_selection.json",
+      "type": "dict",
+      "top_level_keys": [
+        "operation",
+        "operation_name",
+        "task",
+        "task_name",
+        "dataset",
+        "selection_basis",
+        "selected_model",
+        "selection_reasons",
+        "all_validation_results",
+        "non_selected_models",
+        "test_evaluation",
+        "training",
+        "final_model_status",
+        "status"
+      ],
+      "text_excerpt": "{\"operation\": \"T2-MOD-019\", \"operation_name\": \"Final Model Selection\", \"task\": \"T2\", \"task_name\": \"Priority Prediction\", \"dataset\": \"Mozilla CORE\", \"selection_basis\": {\"partition\": \"validation\", \"test_used\": false, \"test_locked\": true, \"primary_selection_metric\": \"macro_f1\", \"secondary_considerations\": [\"P4 F1\", \"P5 F1\", \"accuracy\", \"weighted F1\"]}, \"selected_model\": {\"operation\": \"T2-MOD-007\", \"model\": \"TF-IDF + Class-Weighted Logistic Regression\", \"accuracy\": 0.446102, \"macro_f1\": 0.31045, \"weighted_f1\": 0.443565, \"p4_f1\": 0.107143, \"p5_f1\": 0.139037}, \"selection_reasons\": [\"Highest validation macro-F1 among all completed T2 baseline models.\", \"Best observed validation P4 F1 among the completed models.\", \"Best observed validation P5 F1 among the completed models.\", \"Class weighting improves minority-class recognition relative to the unweighted Logistic Regression baseline.\", \"Selection avoids choosing solely by accuracy in the presence of substantial class imbalance.\"], \"all_validation_results\": [{\"operation\": \"T2-MOD-006\", \"model\": \"TF-IDF + Logistic Regression\", \"accuracy\": 0.470282, \"macro_f1\": 0.269346, \"weighted_f1\": 0.448665, \"p4_f1\": 0.0, \"p5_f1\": 0.028169}, {\"operation\": \"T2-MOD-007\", \"model\": \"TF-IDF + Class-Weighted Logistic Regression\", \"accuracy\": 0.446102, \"macro_f1\": 0.31045, \"weighted_f1\": 0.443565, \"p4_f1\": 0.107143, \"p5_f1\": 0.139037}, {\"operation\": \"T2-MOD-008\", \"model\": \"TF-IDF + Linear SVM\", \"accuracy\": 0.44904, \"macro_f1\": 0.268347, \"weighted_f1\": 0.435913, \"p4_f1\": 0.0, \"p5_f1\": 0.063348}, {\"operation\": \"T2-MOD-010\", \"model\": \"TF-IDF + Class-Weighted Linear SVM\", \"accuracy\": 0.44339, \"macro_f1\": 0.291273, \"weighted_f1\": 0.435755, \"p4_f1\": 0.090909, \"p5_f1\": 0.087273}], \"non_selected_models\": [{\"operation\": \"T2-MOD-006\", \"model\": \"TF-IDF + Logistic Regression\", \"reason\": \"Not selected for final locked test evaluation because it did not provide the strongest overall macro-F1/minority-class validation profile.\"}, {\"operation\": \"T2-MOD-008\", \"model\": \"TF-IDF + Linear SVM\", \"reason\": \"Not selected for final locked test evaluation because it did not provide the strongest overall macro-F1/minority-class validation profile.\"}, {\"operation\": \"T2-MOD-010\", \"model\": \"TF-IDF + Class-Weighted Linear SVM\", \"reason\": \"Not selected for final locked test evaluation because it did not provide the strongest overall macro-F1/minority-class validation profile.\"}], \"test_evaluation\": {\"completed\": false, \"test_loaded\": false}, \"training\": {\"new_training_performed\": false}, \"final_model_status\": {\"selected\": true, \"operation\": \"T2-MOD-007\", \"ready_for_locked_test_evaluation\": true}, \"status\": \"FINAL_MODEL_SELECTED\"}"
+    },
+    "modeling/T2/contracts/t2_model_contract.json": {
+      "exists": true,
+      "path": "modeling/T2/contracts/t2_model_contract.json",
+      "type": "dict",
+      "top_level_keys": [
+        "operation",
+        "operation_name",
+        "task",
+        "task_name",
+        "status",
+        "contract_status",
+        "source_authority",
+        "dataset",
+        "objective",
+        "target",
+        "prediction_boundary",
+        "admitted_features",
+        "rn136_historical_features",
+        "excluded_features",
+        "missingness_policy",
+        "leakage_controls",
+        "modeling_policy",
+        "required_next_steps",
+        "downstream",
+        "integrity"
+      ],
+      "text_excerpt": "{\"operation\": \"T2-MOD-002\", \"operation_name\": \"T2 MODELING CONTRACT RECONCILIATION\", \"task\": \"T2\", \"task_name\": \"Priority Prediction\", \"status\": \"READY_FOR_CONTROLLED_MODELING\", \"contract_status\": \"RECONCILED\", \"source_authority\": {\"dataset\": \"Mozilla CORE\", \"dtm\": \"DTM-002\", \"final_readiness_operation\": \"OP-036\", \"task_contract_operation\": \"OP-024\", \"feature_admissibility_operation\": \"OP-035\"}, \"dataset\": {\"name\": \"Mozilla CORE\", \"role\": \"PRIMARY_T2_DATASET\", \"derived_artifact\": \"/run/media/whiteblack/User 1/Datasets/Mozilla_CORE/DTM-002_T2_FIRST_PRIORITY_24H_derived.csv\", \"eligible_records\": 29498, \"derived_artifact_rows\": 29498, \"derived_artifact_columns\": 24, \"raw_source_immutable\": true, \"rn136_immutable\": true}, \"objective\": {\"statement\": \"Predict the first valid P1-P5 Priority assigned strictly after Creation and within the following 24-hour observation window using information available at the Creation boundary.\", \"prediction_unit\": \"ticket\", \"task_type\": \"multiclass_classification\"}, \"target\": {\"physical_field\": \"target_priority\", \"semantic_name\": \"priority\", \"semantic_definition\": \"Earliest valid P1-P5 Priority assignment occurring strictly after Creation and within the subsequent 24-hour window.\", \"classes\": [\"P1\", \"P2\", \"P3\", \"P4\", \"P5\"], \"class_counts\": {\"P1\": 7325, \"P2\": 9156, \"P3\": 11015, \"P4\": 784, \"P5\": 1218}, \"target_total\": 29498, \"target_directly_observed\": true, \"target_semantics_frozen\": true}, \"prediction_boundary\": {\"event\": \"Creation\", \"horizon_hours\": 24, \"strictly_after_creation\": true, \"allowed_information\": \"Information legitimately available at the Creation prediction boundary.\", \"future_information_forbidden\": true, \"post_creation_information_forbidden\": true, \"future_target_information_forbidden\": true}, \"admitted_features\": {\"feature_sources\": [\"Summary\", \"Description\"], \"Summary\": {\"status\": \"ADMITTED\", \"semantic_role\": \"submitted_ticket_content\", \"coverage_records\": 29498, \"coverage_fraction\": 1.0, \"missing_records\": 0, \"missingness_preserved\": true}, \"Description\": {\"status\": \"ADMITTED\", \"semantic_role\": \"submitted_ticket_content\", \"coverage_records\": 27906, \"coverage_fraction\": 0.946, \"missing_records\": 1592, \"missing_fraction\": 0.054, \"missingness_preserved\": true, \"backfill_forbidden\": true}, \"feature_materialization_required\": true, \"feature_materialization_note\": \"The accepted 24-column T2 target artifact does not physically contain Summary and Description. The admitted modeling feature boundary therefore requires a controlled feature-materialization step using the same 29,498 frozen T2 IDs. The target artifact itself must remain unchanged.\"}, \"rn136_historical_features\": {\"source\": \"RN136_D6_historical_features.csv\", \"status\": \"FROZEN_BUT_UNAVAILABLE_FOR_T2_POPULATION\", \"fields\": [\"Product_historical\", \"Component_historical\", \"Priority_historical\", \"Status_historical\", \"Keywords_historical\", \"Blocks_historical\", \"CC_historical\"], \"availability_all_zero\": true, \"available_records_per_field\": 0, \"total_t2_records\": 29498, \"use_as_predictive_features\": false, \"current_state_substitution_forbidden\": true, \"final_state_substitution_forbidden\": true, \"dataset_rebuild_forbidden\": true}, \"excluded_features\": {\"current_mutable_fields\": [\"Product\", \"Component\", \"Priority\", \"Severity\", \"Status\", \"Keywords\", \"Version\", \"Platform\", \"Target Milestone\", \"Classification\"], \"future_or_post_cutoff_information\": [\"Future Priority assignments\", \"Post-Creation Priority changes\", \"Post-Creation administrative changes\", \"Post-Creation workflow information\", \"Future events\", \"Target-derived information\"], \"target_related_columns\": [\"target_priority\", \"target_priority_time\", \"target_elapsed_seconds\", \"t2_target_definition\"], \"metadata_only_columns\": [\"ID\", \"Creation time\", \"t2_prediction_cutoff\", \"t2_horizon_hours\", \"t2_contract\", \"t2_source_artifact\"]}, \"missingness_policy\": {\"description_missing_records\": 1592, \"description_missing_fraction\": 0.054, \"missing_description_must_remain_missing\": true, \"later_value_backfill_forbidden\": true, \"fabricated_text_forbidden\": true}, \"leakage_controls\": {\"creation_boundary_frozen\": true, \"future_target_excluded\": true, \"post_creation_information_excluded\": true, \"current_mutable_backfill_forbidden\": true, \"rn136_unavailable_features_not_substituted\": true, \"target_derived_features_excluded\": true, \"evaluation_data_must_not_be_used_for_fit\": true}, \"modeling_policy\": {\"baseline_required_before_advanced_model\": true, \"model_selected\": false, \"training_started\": false, \"advanced_model_preselected\": false, \"evaluation_used_for_training\": false, \"final_architecture_frozen\": false}, \"required_next_steps\": [\"Controlled Summary/Description feature materialization\", \"Feature materialization validation\", \"Leakage-sensitive modeling split\", \"Baseline model\", \"Advanced candidate comparison\", \"Error analysis\", \"Candidate model selection\", \"Task-specific calibration under T9\"], \"downstream\": {\"t8_evidence_fusion\": \"PENDING\", \"t9_calibration\": \"PENDING\", \"t10_review_automation_policy\": \"PENDING\", \"t11_feedback\": \"PENDING\"}, \"integrity\": {\"raw_mozilla_source_modified\": false, \"rn136_modified\": false, \"t2_target_artifact_modified\": false, \"labels_modified\": false, \"target_reconstructed_during_modeling\": false, \"fabricated_labels\": false, \"silent_feature_substitution\": false}}"
+    },
+    "modeling/T2/contracts/t2_contract.json": {
+      "exists": true,
+      "path": "modeling/T2/contracts/t2_contract.json",
+      "type": "dict",
+      "top_level_keys": [
+        "operation",
+        "task",
+        "task_name",
+        "status",
+        "contract_status",
+        "dataset",
+        "objective",
+        "target",
+        "prediction_boundary",
+        "historical_feature_basis",
+        "feature_constraints",
+        "known_feature_availability",
+        "split_policy",
+        "modeling_policy",
+        "data_integrity",
+        "downstream"
+      ],
+      "text_excerpt": "{\"operation\": \"T2-MOD-001\", \"task\": \"T2\", \"task_name\": \"Priority Prediction\", \"status\": \"SUPPORTED\", \"contract_status\": \"ACCEPTED\", \"dataset\": {\"name\": \"Mozilla CORE\", \"role\": \"PRIMARY_T2_DATASET\", \"eligible_records\": 29498, \"source_contract_status\": \"ACCEPTED\", \"dtm_status\": \"COMPLETED_CLOSED\"}, \"objective\": {\"statement\": \"Predict the first valid P1-P5 priority assigned strictly after Creation and within the following 24-hour observation window.\", \"prediction_boundary\": \"Creation\", \"prediction_unit\": \"ticket\", \"task_type\": \"multiclass_classification\"}, \"target\": {\"field\": \"priority\", \"semantic_definition\": \"First valid priority in the P1-P5 vocabulary assigned strictly after Creation and within 24 hours.\", \"classes\": [\"P1\", \"P2\", \"P3\", \"P4\", \"P5\"], \"class_counts\": {\"P1\": 7325, \"P2\": 9156, \"P3\": 11015, \"P4\": 784, \"P5\": 1218}, \"target_total\": 29498}, \"prediction_boundary\": {\"event\": \"Creation\", \"allowed_information\": \"Information demonstrably available at or before the Creation boundary.\", \"future_information_forbidden\": true, \"post_creation_information_forbidden\": true, \"future_target_information_forbidden\": true}, \"historical_feature_basis\": {\"source\": \"RN136\", \"status\": \"FROZEN_ACCEPTED\", \"fields\": [\"Product\", \"Component\", \"Priority\", \"Status\", \"Keywords\", \"Blocks\", \"CC\"], \"availability_indicators\": [\"Product_available\", \"Component_available\", \"Priority_available\", \"Status_available\", \"Keywords_available\", \"Blocks_available\", \"CC_available\"], \"historical_only\": true, \"current_state_backfill_forbidden\": true, \"final_state_backfill_forbidden\": true, \"future_state_backfill_forbidden\": true, \"feature_substitution_without_contract_change\": false}, \"feature_constraints\": {\"allowed\": [\"Accepted RN136 historical fields and their availability indicators, subject to actual historical availability at Creation.\"], \"forbidden\": [\"Future priority\", \"Post-Creation priority changes\", \"Current/final priority backfill\", \"Post-Creation status\", \"Post-Creation workflow information\", \"Future events\", \"Target-derived features\", \"Information unavailable at Creation\", \"Unapproved feature substitution\", \"Summary\", \"Description\", \"Severity\"]}, \"known_feature_availability\": {\"t2_population_records\": 29498, \"historical_feature_availability_indicators_all_zero\": true, \"interpretation\": \"The accepted T2 population has no populated historical values for the seven RN136 historical feature fields. This is an evidence finding and must not be repaired through current-state or final-state backfill.\"}, \"split_policy\": {\"required\": true, \"strategy\": \"A leakage-safe modeling split must be established using only information permitted by this contract.\", \"evaluation_data_must_not_be_used_for_fit\": true, \"target_distribution_must_be_reported\": true, \"temporal_boundary_must_be_respected\": true, \"future_information_must_not_cross_split\": true}, \"modeling_policy\": {\"baseline_required_before_advanced_model\": true, \"model_selected\": false, \"training_started\": false, \"advanced_model_preselected\": false, \"evaluation_used_for_training\": false}, \"data_integrity\": {\"raw_source_immutable\": true, \"raw_source_modified\": false, \"labels_modified\": false, \"historical_values_backfilled\": false, \"silent_merge_forbidden\": true, \"fabricated_labels_forbidden\": true}, \"downstream\": {\"t8_evidence_fusion\": \"PENDING\", \"t9_calibration\": \"PENDING\", \"t10_review_automation_policy\": \"PENDING\", \"t11_feedback\": \"PENDING\"}}"
+    }
+  },
+  "controls": {
+    "training_performed": false,
+    "prediction_generation_performed": false,
+    "model_selected": false,
+    "dataset_modified": false,
+    "locked_test_used_for_selection": false
+  }
+}

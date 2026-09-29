@@ -1,0 +1,79 @@
+{
+  "operation": "MOD-036 OP-019",
+  "component": "priority",
+  "status": "PASS",
+  "sources": {
+    "train": "modeling/T2/splits/train.csv",
+    "validation": "modeling/T2/splits/validation.csv"
+  },
+  "population": {
+    "train_rows": 20648,
+    "validation_rows": 4425,
+    "development_rows": 25073,
+    "train_unique_ids": 20648,
+    "validation_unique_ids": 4425,
+    "train_validation_overlap": 0
+  },
+  "target": {
+    "column": "target_priority",
+    "classes": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5"
+    ],
+    "train_distribution": {
+      "P1": 5894,
+      "P2": 6298,
+      "P3": 6884,
+      "P4": 710,
+      "P5": 862
+    },
+    "validation_distribution": {
+      "P1": 806,
+      "P2": 1317,
+      "P3": 2054,
+      "P4": 41,
+      "P5": 207
+    }
+  },
+  "boundary": {
+    "prediction_boundary": "Creation",
+    "features": [
+      "summary",
+      "description"
+    ],
+    "post_creation_features_used": false
+  },
+  "model": {
+    "type": "TFIDF_LOGISTIC_REGRESSION",
+    "class_weight": "balanced",
+    "solver": "lbfgs",
+    "max_iter": 2000,
+    "random_state": 42,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 2,
+    "max_df": 0.98,
+    "sublinear_tf": true
+  },
+  "metrics": {
+    "accuracy": 0.44610169491525425,
+    "macro_f1": 0.3104499808937769,
+    "weighted_f1": 0.44356450564378974,
+    "log_loss": 1.2782080660106971
+  },
+  "outputs": {
+    "validation_predictions": "modeling/T8/mod036/op019/t8_mod036_op019_priority_predictions.csv"
+  },
+  "controls": {
+    "locked_test_used": false,
+    "post_creation_information_used": false,
+    "synthetic_universal_target_created": false,
+    "blind_cross_task_probability_averaging": false,
+    "arbitrary_cross_task_weighting": false
+  }
+}

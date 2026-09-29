@@ -1,0 +1,107 @@
+{
+  "operation": "FMP-05-OP-003R",
+  "operation_type": "READ_ONLY_T10_SOURCE_EVIDENCE_EXTRACTION",
+  "status": "PASS",
+  "source_file": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/project_consolidation.py",
+  "source_line_count": 319,
+  "matching_source_line_count": 7,
+  "term_counts": {
+    "model_independent": 0,
+    "empirical_evidence": 0,
+    "human_review": 1,
+    "automation": 0,
+    "defer": 0,
+    "threshold": 2,
+    "unsupported_operational_threshold_claim": 1,
+    "universal": 2,
+    "autonomous": 2,
+    "policy": 0
+  },
+  "matches": [
+    {
+      "line": 242,
+      "terms": [
+        "universal"
+      ],
+      "text": "\"They are not treated as a single universally calibrated \""
+    },
+    {
+      "line": 248,
+      "terms": [
+        "autonomous"
+      ],
+      "text": "\"decision-support architecture rather than autonomous \""
+    },
+    {
+      "line": 252,
+      "terms": [
+        "human_review"
+      ],
+      "text": "\"human_review\": ("
+    },
+    {
+      "line": 257,
+      "terms": [
+        "threshold"
+      ],
+      "text": "\"threshold requirements.\""
+    },
+    {
+      "line": 261,
+      "terms": [
+        "autonomous"
+      ],
+      "text": "\"No project-level autonomous deployment claim is established \""
+    },
+    {
+      "line": 276,
+      "terms": [
+        "threshold",
+        "unsupported_operational_threshold_claim"
+      ],
+      "text": "\"unsupported_operational_threshold_claim\": False,"
+    },
+    {
+      "line": 277,
+      "terms": [
+        "universal"
+      ],
+      "text": "\"universal_confidence_score_claim\": False,"
+    }
+  ],
+  "threshold_matches": [
+    {
+      "line": 257,
+      "terms": [
+        "threshold"
+      ],
+      "text": "\"threshold requirements.\""
+    },
+    {
+      "line": 276,
+      "terms": [
+        "threshold",
+        "unsupported_operational_threshold_claim"
+      ],
+      "text": "\"unsupported_operational_threshold_claim\": False,"
+    }
+  ],
+  "human_review_defer_matches": [
+    {
+      "line": 252,
+      "terms": [
+        "human_review"
+      ],
+      "text": "\"human_review\": ("
+    }
+  ],
+  "read_only_safeguards": {
+    "models_loaded": false,
+    "predictions_generated": false,
+    "retraining_performed": false,
+    "calibration_fitted": false,
+    "threshold_selected": false,
+    "policy_modified": false,
+    "artifacts_modified": false
+  }
+}

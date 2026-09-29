@@ -1,0 +1,453 @@
+{
+  "operation": "MOD-036 OP-013",
+  "purpose": "Audit whether each T8 structured recommendation has a valid historical learning target or must remain evidence-based.",
+  "decision_outputs": {
+    "priority_recommendation": {
+      "task": "T2",
+      "target_question": "Is there a valid Creation-boundary historical priority target that can supervise a T8 priority recommendation?"
+    },
+    "assignment_recommendation": {
+      "task": "T1/T4",
+      "target_question": "Is there a valid historical assignment/assignee outcome aligned with the Creation-boundary evidence?"
+    },
+    "duplicate_recommendation": {
+      "task": "T5",
+      "target_question": "Is there a valid historical duplicate target aligned with the T5 duplicate definition?"
+    },
+    "resolution_context": {
+      "task": "T7",
+      "target_question": "Does T7 provide a valid survival/time-to-resolution target that can support this recommendation?"
+    },
+    "overall_triage_recommendation": {
+      "task": "T8",
+      "target_question": "Does an authoritative historical universal triage decision target exist? Do not synthesize one if absent."
+    }
+  },
+  "json_evidence": [
+    {
+      "path": "modeling/T1/contracts/t1_contract.json",
+      "status": "INSPECTED",
+      "target_like_findings": [
+        {
+          "location": "root.text_policy.repeated_text_is_not_duplicate_ground_truth",
+          "value": true
+        }
+      ]
+    },
+    {
+      "path": "modeling/T1/analysis/t1_it_support_3model_compare.json",
+      "status": "INSPECTED",
+      "target_like_findings": [
+        {
+          "location": "root.labels_modified",
+          "value": false
+        }
+      ]
+    },
+    {
+      "path": "modeling/T2/contracts/t2_model_contract.json",
+      "status": "INSPECTED",
+      "target_like_findings": [
+        {
+          "location": "root.target.target_total",
+          "value": 29498
+        },
+        {
+          "location": "root.target.target_directly_observed",
+          "value": true
+        },
+        {
+          "location": "root.target.target_semantics_frozen",
+          "value": true
+        },
+        {
+          "location": "root.prediction_boundary.event",
+          "value": "Creation"
+        },
+        {
+          "location": "root.prediction_boundary.future_target_information_forbidden",
+          "value": true
+        },
+        {
+          "location": "root.leakage_controls.future_target_excluded",
+          "value": true
+        },
+        {
+          "location": "root.leakage_controls.target_derived_features_excluded",
+          "value": true
+        },
+        {
+          "location": "root.integrity.t2_target_artifact_modified",
+          "value": false
+        },
+        {
+          "location": "root.integrity.labels_modified",
+          "value": false
+        },
+        {
+          "location": "root.integrity.target_reconstructed_during_modeling",
+          "value": false
+        },
+        {
+          "location": "root.integrity.fabricated_labels",
+          "value": false
+        }
+      ]
+    },
+    {
+      "path": "modeling/T3/contracts/t3_model_contract.json",
+      "status": "INSPECTED",
+      "target_like_findings": [
+        {
+          "location": "root.target.historical_severity_mapping",
+          "value": "FORBIDDEN"
+        },
+        {
+          "location": "root.target.current_final_severity",
+          "value": "FORBIDDEN_AS_CREATION_TARGET"
+        },
+        {
+          "location": "root.migration_policy.excluded_migration_events",
+          "value": 39832
+        },
+        {
+          "location": "root.validation_status.target_accounting",
+          "value": "PASS"
+        },
+        {
+          "location": "root.validation_status.duplicate_consistency",
+          "value": "PASS"
+        }
+      ]
+    },
+    {
+      "path": "modeling/T3/analysis/t3_final_closure.json",
+      "status": "INSPECTED",
+      "target_like_findings": []
+    },
+    {
+      "path": "modeling/T4/contracts/t4_model_contract.json",
+      "status": "INSPECTED",
+      "target_like_findings": [
+        {
+          "location": "root.population.expected_distinct_target_assignees",
+          "value": 4809
+        },
+        {
+          "location": "root.population.observed_distinct_target_assignees",
+          "value": 4809
+        },
+        {
+          "location": "root.operational_target.target_column",
+          "value": "target_assignee"
+        },
+        {
+          "location": "root.operational_target.target_event_must_be_strictly_after_creation",
+          "value": true
+        },
+        {
+          "location": "root.operational_target.blank_target_excluded",
+          "value": true
+        },
+        {
+          "location": "root.feature_boundary.current_assigned_to_is_target_side_information",
+          "value": true
+        },
+        {
+          "location": "root.feature_boundary.future_assignment_information_forbidden",
+          "value": true
+        },
+        {
+          "location": "root.dataset_integrity_observed.duplicate_ids",
+          "value": 0
+        },
+        {
+          "location": "root.dataset_integrity_observed.blank_target_rows",
+          "value": 0
+        },
+        {
+          "location": "root.dataset_integrity_observed.target_distribution.aaronleventhal@moonset.net",
+          "value": 207
+        },
+        {
+          "location": "root.dataset_integrity_observed.target_distribution.events@dom.bugs",
+          "value": 311
+        },
+        {
+          "location": "root.evaluation_protocol.candidate_space.global_historical_assignees",
+          "value": 4809
+        },
+        {
+          "location": "root.evaluation_metrics.unseen_target_evaluation",
+          "value": "reported separately; never converted into negatives"
+        },
+        {
+          "location": "root.modeling_constraints.synthetic_labels",
+          "value": false
+        },
+        {
+          "location": "root.modeling_constraints.operational_assignee_eligibility_claim",
+          "value": false
+        },
+        {
+          "location": "root.candidate_selection_policy.must_preserve_open_world_unseen_target_information",
+          "value": true
+        },
+        {
+          "location": "root.controls.target_frozen",
+          "value": true
+        },
+        {
+          "location": "root.controls.unseen_targets_retained",
+          "value": true
+        },
+        {
+          "location": "root.controls.unseen_targets_not_negatives",
+          "value": true
+        }
+      ]
+    },
+    {
+      "path": "modeling/T5/metrics/t5_mod011_final_closure.json",
+      "status": "INSPECTED",
+      "target_like_findings": []
+    },
+    {
+      "path": "modeling/T7/contracts/t7_model_contract.json",
+      "status": "MISSING"
+    },
+    {
+      "path": "modeling/T7/analysis/t7_final_closure.json",
+      "status": "MISSING"
+    }
+  ],
+  "csv_evidence": [
+    {
+      "path": "modeling/T1/derived/t1_features.csv",
+      "status": "MISSING"
+    },
+    {
+      "path": "modeling/T2/splits/train.csv",
+      "status": "INSPECTED",
+      "rows_sampled": 5,
+      "columns": [
+        "ID",
+        "Creation time",
+        "Summary",
+        "Description",
+        "target_priority"
+      ],
+      "target_like_columns": [
+        "target_priority"
+      ]
+    },
+    {
+      "path": "modeling/T2/splits/test.csv",
+      "status": "INSPECTED",
+      "rows_sampled": 5,
+      "columns": [
+        "ID",
+        "Creation time",
+        "Summary",
+        "Description",
+        "target_priority"
+      ],
+      "target_like_columns": [
+        "target_priority"
+      ]
+    },
+    {
+      "path": "modeling/T2/splits/validation.csv",
+      "status": "INSPECTED",
+      "rows_sampled": 5,
+      "columns": [
+        "ID",
+        "Creation time",
+        "Summary",
+        "Description",
+        "target_priority"
+      ],
+      "target_like_columns": [
+        "target_priority"
+      ]
+    },
+    {
+      "path": "modeling/T4/derived/t4_features.csv",
+      "status": "INSPECTED",
+      "rows_sampled": 5,
+      "columns": [
+        "ID",
+        "Creation time",
+        "Creator",
+        "Creator Detail",
+        "Summary",
+        "Description",
+        "target_assignee"
+      ],
+      "target_like_columns": [
+        "target_assignee"
+      ]
+    },
+    {
+      "path": "modeling/T4/derived/t4_train.csv",
+      "status": "INSPECTED",
+      "rows_sampled": 5,
+      "columns": [
+        "ID",
+        "Creation time",
+        "Creator",
+        "Creator Detail",
+        "Summary",
+        "Description",
+        "target_assignee"
+      ],
+      "target_like_columns": [
+        "target_assignee"
+      ]
+    },
+    {
+      "path": "modeling/T4/derived/t4_eval.csv",
+      "status": "INSPECTED",
+      "rows_sampled": 5,
+      "columns": [
+        "ID",
+        "Creation time",
+        "Creator",
+        "Creator Detail",
+        "Summary",
+        "Description",
+        "target_assignee"
+      ],
+      "target_like_columns": [
+        "target_assignee"
+      ]
+    },
+    {
+      "path": "modeling/T5/derived/t5_train_features.csv",
+      "status": "INSPECTED",
+      "rows_sampled": 5,
+      "columns": [
+        "ID",
+        "Creation time",
+        "Creator",
+        "Creator Detail",
+        "Summary",
+        "Description",
+        "T5 target"
+      ],
+      "target_like_columns": [
+        "T5 target"
+      ]
+    },
+    {
+      "path": "modeling/T5/splits/t5_model_train.csv",
+      "status": "INSPECTED",
+      "rows_sampled": 5,
+      "columns": [
+        "ID",
+        "Creation time",
+        "Creator",
+        "Creator Detail",
+        "Summary",
+        "Description",
+        "T5 target"
+      ],
+      "target_like_columns": [
+        "T5 target"
+      ]
+    },
+    {
+      "path": "modeling/T5/splits/t5_model_val.csv",
+      "status": "INSPECTED",
+      "rows_sampled": 5,
+      "columns": [
+        "ID",
+        "Creation time",
+        "Creator",
+        "Creator Detail",
+        "Summary",
+        "Description",
+        "T5 target"
+      ],
+      "target_like_columns": [
+        "T5 target"
+      ]
+    },
+    {
+      "path": "modeling/T6/metrics/t6_mod010_corrected_hybrid_query_rankings.csv",
+      "status": "INSPECTED",
+      "rows_sampled": 5,
+      "columns": [
+        "split",
+        "query_id",
+        "candidate_id",
+        "target_observed",
+        "semantic_score",
+        "tfidf_score",
+        "tfidf_score_normalized",
+        "semantic_score_normalized",
+        "hybrid_score"
+      ],
+      "target_like_columns": [
+        "target_observed"
+      ]
+    },
+    {
+      "path": "modeling/T7/derived/t7_mod010_evaluation_predictions.csv",
+      "status": "INSPECTED",
+      "rows_sampled": 5,
+      "columns": [
+        "ID",
+        "duration_seconds",
+        "event",
+        "predicted_median_survival_seconds",
+        "survival_probability_at_211583_seconds",
+        "survival_probability_at_1780179_seconds",
+        "survival_probability_at_14608619_seconds"
+      ],
+      "target_like_columns": [
+        "event"
+      ]
+    }
+  ],
+  "target_assessment": {
+    "priority_recommendation": {
+      "source": "T2",
+      "status": "VALID_NATIVE_TARGET_AVAILABLE",
+      "reason": "T2 has a frozen Creation-boundary priority task and native priority target semantics."
+    },
+    "assignment_recommendation": {
+      "source": "T1/T4",
+      "status": "REQUIRES_NATIVE_OUTCOME_RECONCILIATION",
+      "reason": "T1 category evidence and T4 retrieval/assignee evidence are not automatically equivalent to a historical assignment decision target."
+    },
+    "duplicate_recommendation": {
+      "source": "T5",
+      "status": "VALID_NATIVE_TARGET_AVAILABLE",
+      "reason": "T5 has an established duplicate target and calibrated native duplicate evidence."
+    },
+    "resolution_context": {
+      "source": "T7",
+      "status": "VALID_NATIVE_SURVIVAL_TARGET_AVAILABLE",
+      "reason": "T7 has an established time-to-resolution survival target with event/censoring semantics."
+    },
+    "overall_triage_recommendation": {
+      "source": "T8",
+      "status": "NO_AUTHORITATIVE_UNIVERSAL_TARGET_ESTABLISHED",
+      "reason": "No validated universal historical triage label should be synthesized from T1-T7 outputs."
+    }
+  },
+  "rules": [
+    "Do not infer a target from a target-like column name alone.",
+    "Do not synthesize a universal T8 target.",
+    "Preserve native task semantics.",
+    "Missing target evidence means unresolved, not negative.",
+    "Do not train a T8 model in this operation."
+  ],
+  "controls": {
+    "training_performed": false,
+    "prediction_generation_performed": false,
+    "model_selected": false,
+    "dataset_modified": false
+  }
+}

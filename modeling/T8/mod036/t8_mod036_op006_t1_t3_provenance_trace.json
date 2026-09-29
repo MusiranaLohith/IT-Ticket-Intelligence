@@ -1,0 +1,503 @@
+{
+  "operation": "T8 / MOD-036 / OP-006",
+  "status": "PASS",
+  "purpose": "Trace authoritative T1/T3 model and prediction provenance from existing contract, closure, baseline, and metric artifacts.",
+  "source_files": {
+    "T1_baseline_report": {
+      "status": "FOUND",
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/baselines/t1_it_support_baseline_report.json",
+      "top_level_keys": [
+        "status",
+        "model",
+        "data",
+        "features",
+        "targets",
+        "metrics",
+        "probability_output",
+        "raw_source_modified"
+      ],
+      "interesting_entries": [
+        {
+          "path": "root.model",
+          "key": "model",
+          "value_type": "dict",
+          "value": "{'type': 'TFIDF_LOGISTIC_REGRESSION', 'random_state': 42, 'class_weight': 'balanced', 'ngram_range': [1, 2], 'min_df': 2, 'max_df': 0.98, 'sublinear_tf': True}"
+        },
+        {
+          "path": "root.features",
+          "key": "features",
+          "value_type": "dict",
+          "value": "{'text': True, 'id': False, 'category_truth': False, 'source_partition': False, 'source_row_x': False, 'source_row_y': False, 'normalized_text': False, 'modeling_split': False}"
+        },
+        {
+          "path": "root.features.modeling_split",
+          "key": "modeling_split",
+          "value_type": "bool",
+          "value": false
+        },
+        {
+          "path": "root.targets",
+          "key": "targets",
+          "value_type": "dict",
+          "value": "{'classes': ['Active Directory', 'Computer-Services', 'EOL', 'Fileservice', 'O365', 'Software', 'Support general'], 'evaluation_class_counts': {'Active Directory': 21, 'Computer-Services': 10, 'EOL': 2, 'Fileservice': 183, 'O365': 34, 'Software': 44, 'Support general': 152}, 'evaluation_classes_without_examples': []}"
+        },
+        {
+          "path": "root.probability_output",
+          "key": "probability_output",
+          "value_type": "dict",
+          "value": "{'available': True, 'classes': ['Active Directory', 'Computer-Services', 'EOL', 'Fileservice', 'O365', 'Software', 'Support general'], 'probability_rows': 446}"
+        },
+        {
+          "path": "root.probability_output.probability_rows",
+          "key": "probability_rows",
+          "value_type": "int",
+          "value": 446
+        }
+      ]
+    },
+    "T1_svm_report": {
+      "status": "FOUND",
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/baselines/t1_it_support_svm_report.json",
+      "top_level_keys": [
+        "status",
+        "task",
+        "data",
+        "model",
+        "metrics",
+        "targets",
+        "integrity",
+        "artifacts"
+      ],
+      "interesting_entries": [
+        {
+          "path": "root.task.target",
+          "key": "target",
+          "value_type": "str",
+          "value": "category_truth"
+        },
+        {
+          "path": "root.task.prediction_boundary",
+          "key": "prediction_boundary",
+          "value_type": "str",
+          "value": "incoming_ticket_text"
+        },
+        {
+          "path": "root.data.target_column",
+          "key": "target_column",
+          "value_type": "str",
+          "value": "category_truth"
+        },
+        {
+          "path": "root.model",
+          "key": "model",
+          "value_type": "dict",
+          "value": "{'name': 'TFIDF_LINEAR_SVC', 'tfidf': {'ngram_range': [1, 2], 'min_df': 2, 'max_df': 0.98, 'sublinear_tf': True}, 'classifier': {'class_weight': 'balanced', 'random_state': 42}}"
+        },
+        {
+          "path": "root.targets",
+          "key": "targets",
+          "value_type": "dict",
+          "value": "{'classes': ['Active Directory', 'Computer-Services', 'EOL', 'Fileservice', 'O365', 'Software', 'Support general'], 'evaluation_class_counts': {'Active Directory': 21, 'Computer-Services': 10, 'EOL': 2, 'Fileservice': 183, 'O365': 34, 'Software': 44, 'Support general': 152}, 'evaluation_classes_without_examples': []}"
+        },
+        {
+          "path": "root.artifacts",
+          "key": "artifacts",
+          "value_type": "dict",
+          "value": "{'model_path': '/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/baselines/t1_it_support_svm.joblib', 'report_path': '/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/baselines/t1_it_support_svm_report.json'}"
+        },
+        {
+          "path": "root.artifacts.model_path",
+          "key": "model_path",
+          "value_type": "str",
+          "value": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/baselines/t1_it_support_svm.joblib"
+        }
+      ]
+    },
+    "T1_char_svm_report": {
+      "status": "FOUND",
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/baselines/t1_it_support_char_svm_report.json",
+      "top_level_keys": [
+        "operation",
+        "status",
+        "development_records",
+        "evaluation_records",
+        "evaluation_used_for_fit",
+        "model",
+        "overall",
+        "subset_summary",
+        "class_analysis",
+        "error_pairs",
+        "feature_design",
+        "classifier",
+        "model_retrained",
+        "frozen_split_modified",
+        "labels_modified",
+        "raw_source_modified",
+        "model_path",
+        "analysis_path"
+      ],
+      "interesting_entries": [
+        {
+          "path": "root.model",
+          "key": "model",
+          "value_type": "str",
+          "value": "TFIDF_WORD_CHAR_LINEAR_SVC"
+        },
+        {
+          "path": "root.error_pairs.overall[0].prediction",
+          "key": "prediction",
+          "value_type": "str",
+          "value": "Support general"
+        },
+        {
+          "path": "root.error_pairs.overall[1].prediction",
+          "key": "prediction",
+          "value_type": "str",
+          "value": "Software"
+        },
+        {
+          "path": "root.error_pairs.overall[2].prediction",
+          "key": "prediction",
+          "value_type": "str",
+          "value": "Support general"
+        },
+        {
+          "path": "root.error_pairs.overall[3].prediction",
+          "key": "prediction",
+          "value_type": "str",
+          "value": "Active Directory"
+        },
+        {
+          "path": "root.error_pairs.overall[4].prediction",
+          "key": "prediction",
+          "value_type": "str",
+          "value": "Support general"
+        },
+        {
+          "path": "root.error_pairs.overall[5].prediction",
+          "key": "prediction",
+          "value_type": "str",
+          "value": "Fileservice"
+        },
+        {
+          "path": "root.error_pairs.overall[6].prediction",
+          "key": "prediction",
+          "value_type": "str",
+          "value": "Fileservice"
+        },
+        {
+          "path": "root.error_pairs.overall[7].prediction",
+          "key": "prediction",
+          "value_type": "str",
+          "value": "Support general"
+        },
+        {
+          "path": "root.error_pairs.overall[8].prediction",
+          "key": "prediction",
+          "value_type": "str",
+          "value": "Software"
+        },
+        {
+          "path": "root.error_pairs.overall[9].prediction",
+          "key": "prediction",
+          "value_type": "str",
+          "value": "Software"
+        },
+        {
+          "path": "root.error_pairs.overall[10].prediction",
+          "key": "prediction",
+          "value_type": "str",
+          "value": "Fileservice"
+        },
+        {
+          "path": "root.error_pairs.repeated_text[0].prediction",
+          "key": "prediction",
+          "value_type": "str",
+          "value": "Support general"
+        },
+        {
+          "path": "root.error_pairs.repeated_text[1].prediction",
+          "key": "prediction",
+          "value_type": "str",
+          "value": "Software"
+        },
+        {
+          "path": "root.error_pairs.repeated_text[2].prediction",
+          "key": "prediction",
+          "value_type": "str",
+          "value": "Support general"
+        },
+        {
+          "path": "root.error_pairs.repeated_text[3].prediction",
+          "key": "prediction",
+          "value_type": "str",
+          "value": "Software"
+        },
+        {
+          "path": "root.error_pairs.single_record[0].prediction",
+          "key": "prediction",
+          "value_type": "str",
+          "value": "Support general"
+        },
+        {
+          "path": "root.error_pairs.single_record[1].prediction",
+          "key": "prediction",
+          "value_type": "str",
+          "value": "Active Directory"
+        },
+        {
+          "path": "root.error_pairs.single_record[2].prediction",
+          "key": "prediction",
+          "value_type": "str",
+          "value": "Support general"
+        },
+        {
+          "path": "root.error_pairs.single_record[3].prediction",
+          "key": "prediction",
+          "value_type": "str",
+          "value": "Fileservice"
+        },
+        {
+          "path": "root.error_pairs.single_record[4].prediction",
+          "key": "prediction",
+          "value_type": "str",
+          "value": "Fileservice"
+        },
+        {
+          "path": "root.error_pairs.single_record[5].prediction",
+          "key": "prediction",
+          "value_type": "str",
+          "value": "Support general"
+        },
+        {
+          "path": "root.error_pairs.single_record[6].prediction",
+          "key": "prediction",
+          "value_type": "str",
+          "value": "Software"
+        },
+        {
+          "path": "root.error_pairs.single_record[7].prediction",
+          "key": "prediction",
+          "value_type": "str",
+          "value": "Fileservice"
+        },
+        {
+          "path": "root.model_retrained",
+          "key": "model_retrained",
+          "value_type": "bool",
+          "value": true
+        },
+        {
+          "path": "root.model_path",
+          "key": "model_path",
+          "value_type": "str",
+          "value": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/baselines/t1_it_support_char_svm.joblib"
+        }
+      ]
+    },
+    "T3_model_contract": {
+      "status": "FOUND",
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/contracts/t3_model_contract.json",
+      "top_level_keys": [
+        "operation",
+        "task",
+        "task_name",
+        "dataset",
+        "status",
+        "target",
+        "prediction_boundary",
+        "horizon",
+        "features",
+        "migration_policy",
+        "eligibility",
+        "class_distribution",
+        "validated_artifact",
+        "validation_status",
+        "modeling_constraints",
+        "integrity",
+        "source_decision"
+      ],
+      "interesting_entries": [
+        {
+          "path": "root.target",
+          "key": "target",
+          "value_type": "dict",
+          "value": "{'name': 'first operational post-Creation Severity', 'classes': ['S1', 'S2', 'S3', 'S4'], 'selection_rule': 'First post-Creation History event containing a Severity change; use the first Severity change within that event.', 'admissible_added_values': ['S1', 'S2', 'S3', 'S4'], 'excluded_target_values': ['S3 S3'], 'historical_severity_mapping': 'FORBIDDEN', 'current_final_severity': 'FORBIDDEN_AS_CREATION_TARGET'}"
+        },
+        {
+          "path": "root.target.excluded_target_values",
+          "key": "excluded_target_values",
+          "value_type": "list",
+          "value": "['S3 S3']"
+        },
+        {
+          "path": "root.prediction_boundary",
+          "key": "prediction_boundary",
+          "value_type": "dict",
+          "value": "{'name': 'Creation', 'type': 'Creation-time cutoff', 'post_creation_information': 'FORBIDDEN', 'current_state_backfill': 'FORBIDDEN'}"
+        },
+        {
+          "path": "root.features",
+          "key": "features",
+          "value_type": "dict",
+          "value": "{'admitted': ['Summary', 'Description'], 'boundary': 'Creation-time ticket content', 'forbidden': ['post-Creation History', 'target-event information', 'current/final Severity', 'current mutable state', 'future information', 'target-derived features', 'historical Severity relabeling']}"
+        },
+        {
+          "path": "root.validated_artifact",
+          "key": "validated_artifact",
+          "value_type": "dict",
+          "value": "{'path': '/run/media/whiteblack/User 1/Datasets/Mozilla_CORE/DTM-002_T3_FIRST_SEVERITY_derived.csv', 'rows': 30839, 'columns': 11, 'validated': True, 'validation_operation': 'DTM-002 OP-049', 'readiness_operation': 'DTM-002 OP-055'}"
+        },
+        {
+          "path": "root.validation_status.target_accounting",
+          "key": "target_accounting",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "path": "root.modeling_constraints",
+          "key": "modeling_constraints",
+          "value_type": "dict",
+          "value": "{'advanced_model_required': False, 'test_set': 'Must remain locked until final model selection.', 'model_selection': 'Must be based on training/validation evidence only.', 'class_imbalance': 'Must be explicitly considered during modeling and evaluation.', 'minority_classes': ['S1', 'S2'], 'calibration': 'Categorical probability/confidence evaluation is permitted and should remain task-specific.'}"
+        },
+        {
+          "path": "root.modeling_constraints.advanced_model_required",
+          "key": "advanced_model_required",
+          "value_type": "bool",
+          "value": false
+        },
+        {
+          "path": "root.modeling_constraints.model_selection",
+          "key": "model_selection",
+          "value_type": "str",
+          "value": "Must be based on training/validation evidence only."
+        },
+        {
+          "path": "root.integrity.model_selected",
+          "key": "model_selected",
+          "value_type": "bool",
+          "value": false
+        },
+        {
+          "path": "root.source_decision.modeling_readiness",
+          "key": "modeling_readiness",
+          "value_type": "str",
+          "value": "READY_FOR_CONTROLLED_MODELING"
+        }
+      ]
+    },
+    "T3_final_metrics": {
+      "status": "FOUND",
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/metrics/t3_final_test_metrics.json",
+      "top_level_keys": [
+        "operation",
+        "task",
+        "model_id",
+        "model_path",
+        "test_rows",
+        "accuracy",
+        "macro_f1",
+        "weighted_f1",
+        "per_class",
+        "true_counts",
+        "prediction_counts",
+        "confusion_matrix",
+        "controls"
+      ],
+      "interesting_entries": [
+        {
+          "path": "root.model_id",
+          "key": "model_id",
+          "value_type": "str",
+          "value": "T3-MOD-008"
+        },
+        {
+          "path": "root.model_path",
+          "key": "model_path",
+          "value_type": "str",
+          "value": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib"
+        },
+        {
+          "path": "root.prediction_counts",
+          "key": "prediction_counts",
+          "value_type": "dict",
+          "value": "{'S1': 19, 'S2': 792, 'S3': 2554, 'S4': 1261}"
+        }
+      ]
+    },
+    "T3_final_closure": {
+      "status": "FOUND",
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/analysis/t3_final_closure.json",
+      "top_level_keys": [
+        "operation",
+        "task",
+        "status",
+        "final_candidate",
+        "test_per_class",
+        "generalization",
+        "advanced_branch",
+        "limitations",
+        "suitability",
+        "system_role",
+        "recommended_use",
+        "evidence_controls",
+        "closure_statement",
+        "next_task"
+      ],
+      "interesting_entries": [
+        {
+          "path": "root.final_candidate",
+          "key": "final_candidate",
+          "value_type": "dict",
+          "value": "{'model_id': 'T3-MOD-008', 'selection_primary_metric': 'macro_f1', 'validation_metrics': {'accuracy': 0.5845222654561176, 'macro_f1': 0.3480174180281372, 'weighted_f1': 0.6148412546447116}, 'locked_test_metrics': {'accuracy': 0.5540423692174665, 'macro_f1': 0.3036817032407433, 'weighted_f1': 0.6030788055367481}}"
+        },
+        {
+          "path": "root.final_candidate.model_id",
+          "key": "model_id",
+          "value_type": "str",
+          "value": "T3-MOD-008"
+        },
+        {
+          "path": "root.system_role",
+          "key": "system_role",
+          "value_type": "str",
+          "value": "SECONDARY_DECISION_SUPPORT_SIGNAL"
+        },
+        {
+          "path": "root.recommended_use",
+          "key": "recommended_use",
+          "value_type": "str",
+          "value": "Use T3 severity prediction as a secondary decision-support signal for downstream triage or human review. Do not treat the prediction as an autonomous or authoritative severity assignment."
+        },
+        {
+          "path": "root.evidence_controls.final_model_retrained_after_selection",
+          "key": "final_model_retrained_after_selection",
+          "value_type": "bool",
+          "value": false
+        },
+        {
+          "path": "root.evidence_controls.final_model_refit_on_test",
+          "key": "final_model_refit_on_test",
+          "value_type": "bool",
+          "value": false
+        }
+      ]
+    }
+  },
+  "resolved_references": [
+    {
+      "source": "T3_final_metrics",
+      "field": "root.model_path",
+      "reference": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib",
+      "resolved_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib",
+      "exists": true,
+      "is_file": true
+    }
+  ],
+  "controls": {
+    "no_model_training": true,
+    "no_prediction_generation": true,
+    "no_dataset_modification": true,
+    "creation_boundary_preserved": true
+  }
+}

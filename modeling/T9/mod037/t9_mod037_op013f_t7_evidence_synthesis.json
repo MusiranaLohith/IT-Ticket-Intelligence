@@ -1,0 +1,137 @@
+{
+  "operation": "T9_MOD-037_OP-013F",
+  "title": "T7 Evidence Synthesis & T9 Calibration-Readiness Closure",
+  "status": "PASS",
+  "purpose": "Reconcile the completed T7 native survival evidence chain and establish the final T9 evidence boundary without performing new modeling or inventing formal calibration quantities.",
+  "prior_operations": {
+    "OP-004": {
+      "overall_status": "FAIL",
+      "T7_acceptance": true,
+      "acceptance_basis": "T7 present in accepted_tasks; overall OP-004 status is not used as the T7 acceptance criterion."
+    },
+    "OP-005": "PASS",
+    "OP-013A": "PASS",
+    "OP-013B": "PASS",
+    "OP-013D": "PASS",
+    "OP-013E": "PASS"
+  },
+  "semantic_boundary": {
+    "status": "PASS",
+    "OP-004_overall_status": "FAIL",
+    "OP-004_T7_accepted": true,
+    "OP-004_T7_acceptance_basis": "T7 present in accepted_tasks; overall OP-004 status is not used as the T7 acceptance criterion.",
+    "OP-005_status": "PASS",
+    "OP-005_T7_status": "ACCEPTED_NATIVE_SURVIVAL",
+    "native_quantity": "Survival / time-to-event prediction",
+    "survival_semantics": true
+  },
+  "survival_semantics": {
+    "status": "PASS",
+    "native_survival_semantics": true,
+    "right_censoring_preserved": true,
+    "survival_to_binary_conversion": false,
+    "censoring_relabelled": false,
+    "final_model_selection_performed": false
+  },
+  "existing_evaluation_evidence": {
+    "status": "PASS",
+    "native_survival_evaluation": "ALREADY_ESTABLISHED",
+    "model_comparison": "ALREADY_ESTABLISHED",
+    "IPCW_Brier": "ALREADY_ESTABLISHED",
+    "C_index": "ALREADY_ESTABLISHED",
+    "formal_survival_calibration": "NOT_ESTABLISHED",
+    "calibration_uncertainty": "NOT_ESTABLISHED"
+  },
+  "uncertainty_evidence": {
+    "status": "PASS",
+    "bootstrap_replicates": 1000,
+    "bootstrap_results": 6,
+    "bootstrap_summary_rows": 6,
+    "reliability_rows": 60,
+    "formal_survival_calibration": "NOT_ESTABLISHED",
+    "uncertainty_type": "fixed_full_sample_censoring_weight_bootstrap",
+    "interpretation": "Native survival uncertainty was established for fixed-horizon IPCW Brier quantities. Formal survival calibration uncertainty remains not established."
+  },
+  "population_reconciliation": {
+    "status": "PASS",
+    "training_rows": 411052,
+    "evaluation_rows": 102764,
+    "evaluation_events": 81583,
+    "evaluation_censored": 21181,
+    "evaluation_right_censoring_preserved": true
+  },
+  "native_quantity_status": {
+    "T7": {
+      "task": "Resolution-Time Estimation",
+      "prediction_boundary": "Ticket Creation",
+      "target": "Time from Creation until first post-Creation operationally observed Status -> RESOLVED",
+      "event_definition": "First qualifying RESOLVED event",
+      "censoring": "Right-censored observations preserved",
+      "native_prediction_quantity": "Survival distribution / predicted median survival time / survival probability at fixed horizons",
+      "native_evaluation": "ESTABLISHED",
+      "c_index": "ESTABLISHED",
+      "ipcw_brier": "ESTABLISHED",
+      "model_comparison": "ESTABLISHED",
+      "native_uncertainty": "ESTABLISHED",
+      "descriptive_reliability": "ESTABLISHED",
+      "formal_survival_calibration": "NOT_ESTABLISHED",
+      "formal_calibration_uncertainty": "NOT_ESTABLISHED",
+      "universal_probability": "NOT_CREATED",
+      "universal_confidence": "NOT_CREATED",
+      "universal_risk_score": "NOT_CREATED"
+    }
+  },
+  "final_t7_conclusion": {
+    "t7_t9_status": "NATIVE_SURVIVAL_EVIDENCE_CLOSED",
+    "native_evaluation": "ESTABLISHED",
+    "native_uncertainty": "ESTABLISHED",
+    "descriptive_reliability": "ESTABLISHED",
+    "formal_survival_calibration": "NOT_ESTABLISHED",
+    "formal_calibration_uncertainty": "NOT_ESTABLISHED",
+    "model_selection": "NOT_PERFORMED",
+    "automation_threshold": "NOT_ESTABLISHED",
+    "autonomous_resolution_decision": "NOT_SUPPORTED",
+    "interpretation": "T7 has sufficient native survival evaluation and uncertainty evidence for T9 evidence closure. Native survival performance and uncertainty can be reported while preserving right censoring. A formal survival calibration estimator and formal calibration uncertainty remain unestablished and are therefore not claimed."
+  },
+  "controls": {
+    "artifact_read_only": true,
+    "new_model_fitted": false,
+    "new_predictions_generated": false,
+    "new_probability_output_generated": false,
+    "calibration_model_fitted": false,
+    "new_target_created": false,
+    "target_relabelled": false,
+    "censoring_relabelled": false,
+    "survival_to_binary_conversion": false,
+    "threshold_selected": false,
+    "model_selected": false,
+    "locked_test_used": false,
+    "universal_confidence_created": false,
+    "universal_risk_score_created": false,
+    "cross_task_probability_aggregation": false,
+    "post_creation_information_used": false,
+    "existing_t7_artifacts_modified": false,
+    "native_survival_semantics_preserved": true,
+    "right_censoring_preserved": true,
+    "uncertainty_method_predefined": true
+  },
+  "control_validation": {
+    "status": "PASS",
+    "failed_controls": []
+  },
+  "methodological_restrictions": [
+    "T7 remains a survival/time-to-event task.",
+    "Right censoring remains part of the target observation structure.",
+    "No censoring relabelling was performed.",
+    "No survival quantity was converted into a binary classification target.",
+    "No calibration model was fitted.",
+    "No model was selected in OP-013F.",
+    "No threshold was selected.",
+    "No locked test was used.",
+    "No universal confidence score was created.",
+    "No universal risk score was created.",
+    "Formal survival calibration remains unestablished.",
+    "The T7 evidence boundary is closed for native survival evaluation, native uncertainty, and descriptive reliability."
+  ],
+  "closure_statement": "T7 native survival evidence is closed for T9. Native survival evaluation, model comparison, IPCW Brier evidence, C-index evidence, and native uncertainty have been reconciled. Formal survival calibration and formal calibration uncertainty remain unestablished and must not be represented as completed calibration evidence."
+}

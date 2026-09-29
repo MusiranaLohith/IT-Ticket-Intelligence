@@ -1,0 +1,114 @@
+{
+  "operation": "T4-MOD-005",
+  "task": "T4 \u2014 Specific Assignee Prediction",
+  "status": "READY_FOR_BASELINE_MODELING",
+  "source_artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/derived/t4_features.csv",
+  "training_artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/derived/t4_train.csv",
+  "evaluation_artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/derived/t4_eval.csv",
+  "population": {
+    "full_rows": 178127,
+    "training_rows": 142501,
+    "evaluation_rows": 35626,
+    "training_observed_candidate_assignees": 4139,
+    "evaluation_distinct_targets": 1161,
+    "covered_evaluation_distinct_targets": 491,
+    "unseen_evaluation_distinct_targets": 670,
+    "covered_evaluation_rows": 32773,
+    "unseen_evaluation_rows": 2853,
+    "unseen_evaluation_rate": 0.08008196261157581
+  },
+  "prediction_boundary": "Creation time",
+  "features": {
+    "admitted": [
+      "Creator",
+      "Creator Detail",
+      "Summary",
+      "Description"
+    ],
+    "target": "target_assignee",
+    "target_side_fields_excluded": [
+      "target_assignment_time",
+      "target_event_index",
+      "target_change_index",
+      "Assigned to",
+      "Assigned to detail"
+    ],
+    "blank_feature_counts_training": {
+      "Creator": 0,
+      "Creator Detail": 0,
+      "Summary": 0,
+      "Description": 5107
+    }
+  },
+  "baseline": {
+    "model_family": "TF-IDF + Logistic Regression",
+    "text_representation": "word-level TF-IDF",
+    "input_features": [
+      "Creator",
+      "Creator Detail",
+      "Summary",
+      "Description"
+    ],
+    "classifier": "LogisticRegression",
+    "advanced_nlp": false,
+    "class_weight": null
+  },
+  "evaluation_protocol": {
+    "primary_metrics": [
+      "top_1_accuracy",
+      "top_3_accuracy",
+      "top_5_accuracy",
+      "top_10_accuracy"
+    ],
+    "secondary_metrics": [
+      "macro_f1",
+      "weighted_f1"
+    ],
+    "coverage_metrics": [
+      "evaluation_candidate_coverage",
+      "evaluation_row_coverage",
+      "unseen_target_rows",
+      "unseen_target_rate"
+    ],
+    "diagnostic_metrics": [
+      "prediction_class_count",
+      "prediction_top_1_share",
+      "prediction_top_10_share",
+      "prediction_top_50_share",
+      "prediction_top_100_share"
+    ],
+    "top_k": [
+      1,
+      3,
+      5,
+      10
+    ],
+    "candidate_space": "Distinct target_assignee values observed in training only",
+    "unseen_target_policy": "Retain in evaluation; do not convert to negatives, do not silently discard"
+  },
+  "controls": {
+    "chronological_split_frozen": true,
+    "candidate_space_from_training_only": true,
+    "unseen_evaluation_targets_retained": true,
+    "unseen_targets_not_converted_to_negatives": true,
+    "unseen_targets_not_dropped": true,
+    "target_side_fields_excluded_from_features": true,
+    "creation_time_boundary_respected": true,
+    "raw_mozilla_access": false,
+    "target_reconstruction": false,
+    "test_use": false
+  },
+  "modeling_state": {
+    "model_fitted": false,
+    "predictions_created": false,
+    "evaluation_scored": false,
+    "test_used": false
+  },
+  "notes": [
+    "T4 is a high-cardinality multiclass routing/assignment task.",
+    "Historical target assignees are not treated as universal operational eligibility.",
+    "Top-k metrics are required because routing is a candidate recommendation problem with a severe long tail.",
+    "Unseen evaluation targets represent open-world cases outside the training-observed candidate space.",
+    "No advanced NLP model is admitted before the classical baseline is executed and analyzed."
+  ]
+}

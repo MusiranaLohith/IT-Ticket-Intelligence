@@ -1,0 +1,467 @@
+{
+  "operation": "T1_IT_SUPPORT_FORMAL_THREE_MODEL_COMPARISON",
+  "status": "COMPLETE",
+  "evaluation_records": 446,
+  "evaluation_used_for_fit": false,
+  "models_retrained": false,
+  "frozen_split_modified": false,
+  "labels_modified": false,
+  "raw_source_modified": false,
+  "results": {
+    "Logistic Regression": {
+      "name": "Logistic Regression",
+      "accuracy": 0.9170403587443946,
+      "macro_f1": 0.8770242592655446,
+      "weighted_f1": 0.9173567226204572,
+      "correct": 409,
+      "incorrect": 37,
+      "class_metrics": [
+        {
+          "class": "Active Directory",
+          "precision": 0.75,
+          "recall": 0.5714285714285714,
+          "f1": 0.6486486486486487,
+          "support": 21
+        },
+        {
+          "class": "Computer-Services",
+          "precision": 1.0,
+          "recall": 0.9,
+          "f1": 0.9473684210526315,
+          "support": 10
+        },
+        {
+          "class": "EOL",
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 2
+        },
+        {
+          "class": "Fileservice",
+          "precision": 1.0,
+          "recall": 0.994535519125683,
+          "f1": 0.9972602739726028,
+          "support": 183
+        },
+        {
+          "class": "O365",
+          "precision": 0.8,
+          "recall": 0.8235294117647058,
+          "f1": 0.8115942028985508,
+          "support": 34
+        },
+        {
+          "class": "Software",
+          "precision": 0.7096774193548387,
+          "recall": 1.0,
+          "f1": 0.8301886792452831,
+          "support": 44
+        },
+        {
+          "class": "Support general",
+          "precision": 0.9428571428571428,
+          "recall": 0.868421052631579,
+          "f1": 0.9041095890410958,
+          "support": 152
+        }
+      ],
+      "subset_metrics": {
+        "repeated_text": {
+          "records": 396,
+          "correct": 371,
+          "incorrect": 25,
+          "accuracy": 0.9368686868686869,
+          "macro_f1": 0.8509421144521402,
+          "weighted_f1": 0.9382247616417789
+        },
+        "single_record": {
+          "records": 50,
+          "correct": 38,
+          "incorrect": 12,
+          "accuracy": 0.76,
+          "macro_f1": 0.6680451127819549,
+          "weighted_f1": 0.8016165413533833
+        }
+      }
+    },
+    "Word-only Linear SVM": {
+      "name": "Word-only Linear SVM",
+      "accuracy": 0.9417040358744395,
+      "macro_f1": 0.8913472459228619,
+      "weighted_f1": 0.9388989916748003,
+      "correct": 420,
+      "incorrect": 26,
+      "class_metrics": [
+        {
+          "class": "Active Directory",
+          "precision": 0.8571428571428571,
+          "recall": 0.5714285714285714,
+          "f1": 0.6857142857142857,
+          "support": 21
+        },
+        {
+          "class": "Computer-Services",
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1": 0.8888888888888888,
+          "support": 10
+        },
+        {
+          "class": "EOL",
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 2
+        },
+        {
+          "class": "Fileservice",
+          "precision": 0.9837837837837838,
+          "recall": 0.994535519125683,
+          "f1": 0.9891304347826086,
+          "support": 183
+        },
+        {
+          "class": "O365",
+          "precision": 1.0,
+          "recall": 0.7941176470588235,
+          "f1": 0.8852459016393442,
+          "support": 34
+        },
+        {
+          "class": "Software",
+          "precision": 0.8222222222222222,
+          "recall": 0.8409090909090909,
+          "f1": 0.8314606741573034,
+          "support": 44
+        },
+        {
+          "class": "Support general",
+          "precision": 0.9212121212121213,
+          "recall": 1.0,
+          "f1": 0.9589905362776026,
+          "support": 152
+        }
+      ],
+      "subset_metrics": {
+        "repeated_text": {
+          "records": 396,
+          "correct": 383,
+          "incorrect": 13,
+          "accuracy": 0.9671717171717171,
+          "macro_f1": 0.9179747515444534,
+          "weighted_f1": 0.9647489669729798
+        },
+        "single_record": {
+          "records": 50,
+          "correct": 37,
+          "incorrect": 13,
+          "accuracy": 0.74,
+          "macro_f1": 0.5216536479090281,
+          "weighted_f1": 0.7875912641479356
+        }
+      }
+    },
+    "Word + Character Linear SVM": {
+      "name": "Word + Character Linear SVM",
+      "accuracy": 0.9461883408071748,
+      "macro_f1": 0.8991333969917121,
+      "weighted_f1": 0.9434824991619081,
+      "correct": 422,
+      "incorrect": 24,
+      "class_metrics": [
+        {
+          "class": "Active Directory",
+          "precision": 0.8571428571428571,
+          "recall": 0.5714285714285714,
+          "f1": 0.6857142857142857,
+          "support": 21
+        },
+        {
+          "class": "Computer-Services",
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1": 0.8888888888888888,
+          "support": 10
+        },
+        {
+          "class": "EOL",
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 2
+        },
+        {
+          "class": "Fileservice",
+          "precision": 0.9837837837837838,
+          "recall": 0.994535519125683,
+          "f1": 0.9891304347826086,
+          "support": 183
+        },
+        {
+          "class": "O365",
+          "precision": 1.0,
+          "recall": 0.8529411764705882,
+          "f1": 0.9206349206349206,
+          "support": 34
+        },
+        {
+          "class": "Software",
+          "precision": 0.8604651162790697,
+          "recall": 0.8409090909090909,
+          "f1": 0.8505747126436781,
+          "support": 44
+        },
+        {
+          "class": "Support general",
+          "precision": 0.9212121212121213,
+          "recall": 1.0,
+          "f1": 0.9589905362776026,
+          "support": 152
+        }
+      ],
+      "subset_metrics": {
+        "repeated_text": {
+          "records": 396,
+          "correct": 383,
+          "incorrect": 13,
+          "accuracy": 0.9671717171717171,
+          "macro_f1": 0.9179747515444534,
+          "weighted_f1": 0.9647489669729798
+        },
+        "single_record": {
+          "records": 50,
+          "correct": 39,
+          "incorrect": 11,
+          "accuracy": 0.78,
+          "macro_f1": 0.5307290875006334,
+          "weighted_f1": 0.8137285301717587
+        }
+      }
+    }
+  },
+  "rankings": {
+    "accuracy": [
+      {
+        "model": "Word + Character Linear SVM",
+        "value": 0.9461883408071748
+      },
+      {
+        "model": "Word-only Linear SVM",
+        "value": 0.9417040358744395
+      },
+      {
+        "model": "Logistic Regression",
+        "value": 0.9170403587443946
+      }
+    ],
+    "macro_f1": [
+      {
+        "model": "Word + Character Linear SVM",
+        "value": 0.8991333969917121
+      },
+      {
+        "model": "Word-only Linear SVM",
+        "value": 0.8913472459228619
+      },
+      {
+        "model": "Logistic Regression",
+        "value": 0.8770242592655446
+      }
+    ],
+    "weighted_f1": [
+      {
+        "model": "Word + Character Linear SVM",
+        "value": 0.9434824991619081
+      },
+      {
+        "model": "Word-only Linear SVM",
+        "value": 0.9388989916748003
+      },
+      {
+        "model": "Logistic Regression",
+        "value": 0.9173567226204572
+      }
+    ]
+  },
+  "pairwise_deltas": {
+    "Word-only SVM minus Logistic": {
+      "accuracy": 0.024663677130044914,
+      "macro_f1": 0.014322986657317238,
+      "weighted_f1": 0.02154226905434309
+    },
+    "Word+Character SVM minus Word-only SVM": {
+      "accuracy": 0.004484304932735328,
+      "macro_f1": 0.007786151068850278,
+      "weighted_f1": 0.004583507487107785
+    },
+    "Word+Character SVM minus Logistic": {
+      "accuracy": 0.029147982062780242,
+      "macro_f1": 0.022109137726167516,
+      "weighted_f1": 0.026125776541450874
+    }
+  },
+  "class_comparison": {
+    "Active Directory": {
+      "Logistic Regression": {
+        "class": "Active Directory",
+        "precision": 0.75,
+        "recall": 0.5714285714285714,
+        "f1": 0.6486486486486487,
+        "support": 21
+      },
+      "Word-only Linear SVM": {
+        "class": "Active Directory",
+        "precision": 0.8571428571428571,
+        "recall": 0.5714285714285714,
+        "f1": 0.6857142857142857,
+        "support": 21
+      },
+      "Word + Character Linear SVM": {
+        "class": "Active Directory",
+        "precision": 0.8571428571428571,
+        "recall": 0.5714285714285714,
+        "f1": 0.6857142857142857,
+        "support": 21
+      }
+    },
+    "Computer-Services": {
+      "Logistic Regression": {
+        "class": "Computer-Services",
+        "precision": 1.0,
+        "recall": 0.9,
+        "f1": 0.9473684210526315,
+        "support": 10
+      },
+      "Word-only Linear SVM": {
+        "class": "Computer-Services",
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1": 0.8888888888888888,
+        "support": 10
+      },
+      "Word + Character Linear SVM": {
+        "class": "Computer-Services",
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1": 0.8888888888888888,
+        "support": 10
+      }
+    },
+    "EOL": {
+      "Logistic Regression": {
+        "class": "EOL",
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 2
+      },
+      "Word-only Linear SVM": {
+        "class": "EOL",
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 2
+      },
+      "Word + Character Linear SVM": {
+        "class": "EOL",
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 2
+      }
+    },
+    "Fileservice": {
+      "Logistic Regression": {
+        "class": "Fileservice",
+        "precision": 1.0,
+        "recall": 0.994535519125683,
+        "f1": 0.9972602739726028,
+        "support": 183
+      },
+      "Word-only Linear SVM": {
+        "class": "Fileservice",
+        "precision": 0.9837837837837838,
+        "recall": 0.994535519125683,
+        "f1": 0.9891304347826086,
+        "support": 183
+      },
+      "Word + Character Linear SVM": {
+        "class": "Fileservice",
+        "precision": 0.9837837837837838,
+        "recall": 0.994535519125683,
+        "f1": 0.9891304347826086,
+        "support": 183
+      }
+    },
+    "O365": {
+      "Logistic Regression": {
+        "class": "O365",
+        "precision": 0.8,
+        "recall": 0.8235294117647058,
+        "f1": 0.8115942028985508,
+        "support": 34
+      },
+      "Word-only Linear SVM": {
+        "class": "O365",
+        "precision": 1.0,
+        "recall": 0.7941176470588235,
+        "f1": 0.8852459016393442,
+        "support": 34
+      },
+      "Word + Character Linear SVM": {
+        "class": "O365",
+        "precision": 1.0,
+        "recall": 0.8529411764705882,
+        "f1": 0.9206349206349206,
+        "support": 34
+      }
+    },
+    "Software": {
+      "Logistic Regression": {
+        "class": "Software",
+        "precision": 0.7096774193548387,
+        "recall": 1.0,
+        "f1": 0.8301886792452831,
+        "support": 44
+      },
+      "Word-only Linear SVM": {
+        "class": "Software",
+        "precision": 0.8222222222222222,
+        "recall": 0.8409090909090909,
+        "f1": 0.8314606741573034,
+        "support": 44
+      },
+      "Word + Character Linear SVM": {
+        "class": "Software",
+        "precision": 0.8604651162790697,
+        "recall": 0.8409090909090909,
+        "f1": 0.8505747126436781,
+        "support": 44
+      }
+    },
+    "Support general": {
+      "Logistic Regression": {
+        "class": "Support general",
+        "precision": 0.9428571428571428,
+        "recall": 0.868421052631579,
+        "f1": 0.9041095890410958,
+        "support": 152
+      },
+      "Word-only Linear SVM": {
+        "class": "Support general",
+        "precision": 0.9212121212121213,
+        "recall": 1.0,
+        "f1": 0.9589905362776026,
+        "support": 152
+      },
+      "Word + Character Linear SVM": {
+        "class": "Support general",
+        "precision": 0.9212121212121213,
+        "recall": 1.0,
+        "f1": 0.9589905362776026,
+        "support": 152
+      }
+    }
+  }
+}

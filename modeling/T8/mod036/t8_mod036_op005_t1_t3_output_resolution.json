@@ -1,0 +1,3078 @@
+{
+  "operation": "T8 / MOD-036 / OP-005",
+  "status": "PASS",
+  "purpose": "Resolve T1 and T3 native machine-generated inference outputs for consumption by the T8 Decision Engine.",
+  "discovered_candidates": {
+    "T1": [
+      {
+        "path": "modeling/T1/splits/t1_vscode_split.csv",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 11103895
+      },
+      {
+        "path": "modeling/T1/derived/t1_vscode_dataset.csv",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 11049055
+      },
+      {
+        "path": "modeling/T1/splits/t1_split.csv",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 467464
+      },
+      {
+        "path": "modeling/T1/derived/t1_dataset.csv",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 441147
+      },
+      {
+        "path": "modeling/T1/derived/t1_group_audit.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 130175
+      },
+      {
+        "path": "modeling/T1/analysis/t1_it_support_eval_groups.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 41874
+      },
+      {
+        "path": "modeling/project_consolidation/t1_t5_consolidated_evidence.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 26914
+      },
+      {
+        "path": "modeling/T1/analysis/t1_it_support_model_subset_compare.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 14312
+      },
+      {
+        "path": "modeling/T1/derived/t1_overlap_report.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 13913
+      },
+      {
+        "path": "modeling/T1/analysis/t1_it_support_group_eval.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 12889
+      },
+      {
+        "path": "modeling/T1/analysis/t1_it_support_3model_compare.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 12213
+      },
+      {
+        "path": "modeling/T1/analysis/t1_it_support_svm_errors.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 10351
+      },
+      {
+        "path": "modeling/T1/analysis/t1_it_support_subset_analysis.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 10183
+      },
+      {
+        "path": "modeling/T1/baselines/t1_it_support_char_svm_report.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 7195
+      },
+      {
+        "path": "modeling/T1/analysis/t1_it_support_char_svm_analysis.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 6361
+      },
+      {
+        "path": "modeling/T1/baselines/t1_it_support_svm_report.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 4070
+      },
+      {
+        "path": "modeling/T1/baselines/t1_it_support_baseline_report.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 4021
+      },
+      {
+        "path": "modeling/T1/baselines/t1_vscode_feature_compare_report.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 3147
+      },
+      {
+        "path": "modeling/T1/analysis/t1_it_support_split_check.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 3014
+      },
+      {
+        "path": "modeling/T1/baselines/t1_vscode_baseline_report.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 2765
+      },
+      {
+        "path": "modeling/T1/baselines/t1_vscode_model_compare_report.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 2631
+      },
+      {
+        "path": "modeling/T1/contracts/t1_vscode_contract.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 2465
+      },
+      {
+        "path": "modeling/T1/baselines/t1_vscode_advanced_report.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 2361
+      },
+      {
+        "path": "modeling/T1/splits/t1_split_report.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 1918
+      },
+      {
+        "path": "modeling/T1/derived/t1_vscode_dataset_manifest.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 1878
+      },
+      {
+        "path": "modeling/T1/contracts/t1_contract.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 1699
+      },
+      {
+        "path": "modeling/T1/splits/t1_vscode_split_report.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 1526
+      },
+      {
+        "path": "modeling/T1/derived/t1_vscode_validation_report.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 946
+      },
+      {
+        "path": "modeling/T1/derived/t1_dataset_manifest.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 885
+      },
+      {
+        "path": "modeling/T1/baselines/t1_vscode_baseline.joblib",
+        "score": 0,
+        "reasons": [],
+        "size_bytes": 4209084
+      },
+      {
+        "path": "modeling/T1/baselines/t1_vscode_advanced.joblib",
+        "score": 0,
+        "reasons": [],
+        "size_bytes": 4208936
+      },
+      {
+        "path": "modeling/T1/baselines/t1_it_support_char_svm.joblib",
+        "score": 0,
+        "reasons": [],
+        "size_bytes": 2179887
+      },
+      {
+        "path": "modeling/T1/baselines/t1_it_support_svm.joblib",
+        "score": 0,
+        "reasons": [],
+        "size_bytes": 252176
+      },
+      {
+        "path": "modeling/T1/baselines/t1_it_support_baseline.joblib",
+        "score": 0,
+        "reasons": [],
+        "size_bytes": 251780
+      },
+      {
+        "path": "modeling/T1/analysis/t1_it_support_svm_error_review.txt",
+        "score": 0,
+        "reasons": [],
+        "size_bytes": 8573
+      },
+      {
+        "path": "modeling/T1/inspection/vscode_t1_label_trace.txt",
+        "score": 0,
+        "reasons": [],
+        "size_bytes": 2792
+      },
+      {
+        "path": "modeling/T1/inspection/t1_vscode_source_report.json",
+        "score": -2,
+        "reasons": [
+          "-source",
+          "+artifact"
+        ],
+        "size_bytes": 1579
+      },
+      {
+        "path": "modeling/T1/splits/t1_split.py",
+        "score": -8,
+        "reasons": [
+          "-source"
+        ],
+        "size_bytes": 22508
+      },
+      {
+        "path": "modeling/T1/derived/t1_vscode_derive.py",
+        "score": -8,
+        "reasons": [
+          "-source"
+        ],
+        "size_bytes": 18621
+      },
+      {
+        "path": "modeling/T1/splits/t1_it_support_3model_compare.py",
+        "score": -8,
+        "reasons": [
+          "-source"
+        ],
+        "size_bytes": 14599
+      },
+      {
+        "path": "modeling/T1/splits/t1_it_support_group_eval.py",
+        "score": -8,
+        "reasons": [
+          "-source"
+        ],
+        "size_bytes": 14187
+      },
+      {
+        "path": "modeling/T1/splits/t1_it_support_model_subset_compare.py",
+        "score": -8,
+        "reasons": [
+          "-source"
+        ],
+        "size_bytes": 13783
+      },
+      {
+        "path": "modeling/T1/splits/t1_it_support_char_svm.py",
+        "score": -8,
+        "reasons": [
+          "-source"
+        ],
+        "size_bytes": 13201
+      },
+      {
+        "path": "modeling/T1/derived/t1_vscode_validate.py",
+        "score": -8,
+        "reasons": [
+          "-source"
+        ],
+        "size_bytes": 12706
+      },
+      {
+        "path": "modeling/T1/splits/t1_it_support_baseline.py",
+        "score": -8,
+        "reasons": [
+          "-source"
+        ],
+        "size_bytes": 12223
+      },
+      {
+        "path": "modeling/T1/splits/t1_vscode_baseline.py",
+        "score": -8,
+        "reasons": [
+          "-source"
+        ],
+        "size_bytes": 11595
+      },
+      {
+        "path": "modeling/T1/splits/t1_vscode_split.py",
+        "score": -8,
+        "reasons": [
+          "-source"
+        ],
+        "size_bytes": 11551
+      },
+      {
+        "path": "modeling/T1/splits/t1_it_support_svm.py",
+        "score": -8,
+        "reasons": [
+          "-source"
+        ],
+        "size_bytes": 11472
+      },
+      {
+        "path": "modeling/T1/splits/t1_vscode_feature_compare.py",
+        "score": -8,
+        "reasons": [
+          "-source"
+        ],
+        "size_bytes": 11184
+      },
+      {
+        "path": "modeling/T1/splits/t1_vscode_model_compare.py",
+        "score": -8,
+        "reasons": [
+          "-source"
+        ],
+        "size_bytes": 9018
+      },
+      {
+        "path": "modeling/T1/splits/t1_it_support_split_check.py",
+        "score": -8,
+        "reasons": [
+          "-source"
+        ],
+        "size_bytes": 8952
+      },
+      {
+        "path": "modeling/T1/splits/t1_vscode_advanced.py",
+        "score": -8,
+        "reasons": [
+          "-source"
+        ],
+        "size_bytes": 8794
+      },
+      {
+        "path": "modeling/T1/splits/t1_it_support_subset_analysis.py",
+        "score": -8,
+        "reasons": [
+          "-source"
+        ],
+        "size_bytes": 8452
+      },
+      {
+        "path": "modeling/T1/splits/t1_it_support_svm_errors.py",
+        "score": -8,
+        "reasons": [
+          "-source"
+        ],
+        "size_bytes": 7820
+      },
+      {
+        "path": "modeling/T1/splits/t1_it_support_eval_groups.py",
+        "score": -8,
+        "reasons": [
+          "-source"
+        ],
+        "size_bytes": 7791
+      },
+      {
+        "path": "modeling/T1/derived/t1_validate.py",
+        "score": -8,
+        "reasons": [
+          "-source"
+        ],
+        "size_bytes": 7132
+      },
+      {
+        "path": "modeling/T1/derived/t1_derive.py",
+        "score": -8,
+        "reasons": [
+          "-source"
+        ],
+        "size_bytes": 6448
+      },
+      {
+        "path": "modeling/T1/splits/t1_it_support_baseline_analysis.py",
+        "score": -8,
+        "reasons": [
+          "-source"
+        ],
+        "size_bytes": 5920
+      },
+      {
+        "path": "modeling/T1/splits/t1_it_support_svm_analysis.py",
+        "score": -8,
+        "reasons": [
+          "-source"
+        ],
+        "size_bytes": 4464
+      },
+      {
+        "path": "modeling/T1/inspection/t1_vscode_inspect.py",
+        "score": -8,
+        "reasons": [
+          "-source"
+        ],
+        "size_bytes": 4430
+      },
+      {
+        "path": "modeling/T1/derived/t1_group_audit.py",
+        "score": -8,
+        "reasons": [
+          "-source"
+        ],
+        "size_bytes": 4151
+      },
+      {
+        "path": "modeling/T1/analysis  /t1_it_support_svm_error_review.py",
+        "score": -8,
+        "reasons": [
+          "-source"
+        ],
+        "size_bytes": 4071
+      },
+      {
+        "path": "modeling/T1/contracts/t1_vscode_contract.py",
+        "score": -8,
+        "reasons": [
+          "-source"
+        ],
+        "size_bytes": 3972
+      },
+      {
+        "path": "modeling/T1/derived/t1_split.py",
+        "score": -8,
+        "reasons": [
+          "-source"
+        ],
+        "size_bytes": 3899
+      },
+      {
+        "path": "modeling/T1/inspection/t1_vscode_marker_inspect.py",
+        "score": -8,
+        "reasons": [
+          "-source"
+        ],
+        "size_bytes": 3632
+      },
+      {
+        "path": "modeling/T1/splits/t1_vscode_baseline_analysis.py",
+        "score": -8,
+        "reasons": [
+          "-source"
+        ],
+        "size_bytes": 2924
+      },
+      {
+        "path": "modeling/T1/contracts/t1_contract.py",
+        "score": -8,
+        "reasons": [
+          "-source"
+        ],
+        "size_bytes": 2640
+      },
+      {
+        "path": "modeling/T1/inspection/t1_vscode_leakage_inspect.py",
+        "score": -8,
+        "reasons": [
+          "-source"
+        ],
+        "size_bytes": 2498
+      },
+      {
+        "path": "modeling/T1/splits/t1_reconcile_status.py",
+        "score": -8,
+        "reasons": [
+          "-source"
+        ],
+        "size_bytes": 1408
+      },
+      {
+        "path": "modeling/T8/scripts/t8_mod036_op005_t1_t3_output_resolution.py",
+        "score": -13,
+        "reasons": [
+          "+output",
+          "-script",
+          "-scripts",
+          "-source"
+        ],
+        "size_bytes": 9082
+      }
+    ],
+    "T3": [
+      {
+        "path": "modeling/T3/derived/t3_features.csv",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 69577458
+      },
+      {
+        "path": "modeling/T3/splits/t3_train.csv",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 45666371
+      },
+      {
+        "path": "modeling/T3/splits/t3_validation.csv",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 12153706
+      },
+      {
+        "path": "modeling/T3/splits/t3_test.csv",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 11911682
+      },
+      {
+        "path": "modeling/T3/analysis/t3_advanced_branch_decision.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 165450
+      },
+      {
+        "path": "modeling/T3/analysis/t3_error_analysis.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 164054
+      },
+      {
+        "path": "modeling/T3/analysis/t3_error_inspection.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 45024
+      },
+      {
+        "path": "modeling/T3/analysis/t3_model_comparison.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 4540
+      },
+      {
+        "path": "modeling/T3/analysis/t3_final_generalization_analysis.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 4281
+      },
+      {
+        "path": "modeling/T3/analysis/t3_classical_model_comparison.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 3995
+      },
+      {
+        "path": "modeling/T3/contracts/t3_model_contract.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 3731
+      },
+      {
+        "path": "modeling/T3/analysis/t3_baseline_comparison.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 3473
+      },
+      {
+        "path": "modeling/T3/contracts/t3_advanced_model_contract.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 3057
+      },
+      {
+        "path": "modeling/T3/analysis/t3_final_closure.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 3048
+      },
+      {
+        "path": "modeling/T3/analysis/t3_advanced_branch_closure.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 2436
+      },
+      {
+        "path": "modeling/T3/analysis/t3_split_report.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 1902
+      },
+      {
+        "path": "modeling/T3/metrics/t3_final_test_metrics.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 1493
+      },
+      {
+        "path": "modeling/T3/metrics/t3_word_char_validation_metrics.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 1300
+      },
+      {
+        "path": "modeling/T3/plots/t3_visualization_manifest.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 1265
+      },
+      {
+        "path": "modeling/T3/metrics/t3_svm_class_weighted_validation_metrics.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 1244
+      },
+      {
+        "path": "modeling/T3/metrics/t3_class_weighted_validation_metrics.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 1209
+      },
+      {
+        "path": "modeling/T3/metrics/t3_baseline_validation_metrics.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 1179
+      },
+      {
+        "path": "modeling/T3/metrics/t3_linear_svm_validation_metrics.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 1176
+      },
+      {
+        "path": "modeling/T3/metrics/t3_distilbert_feasibility_validation_metrics.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 1157
+      },
+      {
+        "path": "modeling/T3/contracts/t3_model_selection_criterion.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 997
+      },
+      {
+        "path": "modeling/T3/analysis/t3_locked_test_evaluation.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 807
+      },
+      {
+        "path": "modeling/T3/models/t3_distilbert_feasibility/config.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 794
+      },
+      {
+        "path": "modeling/T3/analysis/t3_validation_report.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 551
+      },
+      {
+        "path": "modeling/T3/analysis/t3_distilbert_feasibility.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 540
+      },
+      {
+        "path": "modeling/T3/analysis/t3_transformer_smoke_test.json",
+        "score": 2,
+        "reasons": [
+          "+artifact"
+        ],
+        "size_bytes": 471
+      },
+      {
+        "path": "modeling/T3/models/t3_distilbert_feasibility/model.safetensors",
+        "score": 0,
+        "reasons": [],
+        "size_bytes": 267838720
+      },
+      {
+        "path": "modeling/T3/models/t3_svm_class_weighted.joblib",
+        "score": 0,
+        "reasons": [],
+        "size_bytes": 17315277
+      },
+      {
+        "path": "modeling/T3/models/t3_linear_svm.joblib",
+        "score": 0,
+        "reasons": [],
+        "size_bytes": 17315261
+      },
+      {
+        "path": "modeling/T3/plots/t3_test_confusion_matrix.png",
+        "score": 0,
+        "reasons": [],
+        "size_bytes": 82036
+      },
+      {
+        "path": "modeling/T3/plots/t3_test_true_vs_predicted_distribution.png",
+        "score": 0,
+        "reasons": [],
+        "size_bytes": 53197
+      },
+      {
+        "path": "modeling/T3/plots/t3_validation_vs_test.png",
+        "score": 0,
+        "reasons": [],
+        "size_bytes": 51348
+      },
+      {
+        "path": "modeling/T3/plots/t3_test_per_class_f1.png",
+        "score": 0,
+        "reasons": [],
+        "size_bytes": 37233
+      },
+      {
+        "path": "modeling/T3/models/t3_distilbert_feasibility/tokenizer.json",
+        "score": -2,
+        "reasons": [
+          "-tokenizer",
+          "+artifact"
+        ],
+        "size_bytes": 711661
+      },
+      {
+        "path": "modeling/T3/models/t3_distilbert_feasibility/tokenizer_config.json",
+        "score": -2,
+        "reasons": [
+          "-tokenizer",
+          "+artifact"
+        ],
+        "size_bytes": 351
+      },
+      {
+        "path": "modeling/T3/models/t3_word_char_tfidf_logreg.joblib",
+        "score": -4,
+        "reasons": [
+          "-log"
+        ],
+        "size_bytes": 80837857
+      },
+      {
+        "path": "modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib",
+        "score": -4,
+        "reasons": [
+          "-log"
+        ],
+        "size_bytes": 17315561
+      },
+      {
+        "path": "modeling/T3/models/t3_baseline_tfidf_logreg.joblib",
+        "score": -4,
+        "reasons": [
+          "-log"
+        ],
+        "size_bytes": 17315557
+      },
+      {
+        "path": "modeling/T8/scripts/t8_mod036_op005_t1_t3_output_resolution.py",
+        "score": -13,
+        "reasons": [
+          "+output",
+          "-script",
+          "-scripts",
+          "-source"
+        ],
+        "size_bytes": 9082
+      },
+      {
+        "path": "modeling/T3/scripts/t3_distilbert_feasibility.py",
+        "score": -16,
+        "reasons": [
+          "-script",
+          "-scripts",
+          "-source"
+        ],
+        "size_bytes": 12579
+      },
+      {
+        "path": "modeling/T3/scripts/t3_final_closure.py",
+        "score": -16,
+        "reasons": [
+          "-script",
+          "-scripts",
+          "-source"
+        ],
+        "size_bytes": 10076
+      },
+      {
+        "path": "modeling/T3/scripts/t3_locked_test.py",
+        "score": -16,
+        "reasons": [
+          "-script",
+          "-scripts",
+          "-source"
+        ],
+        "size_bytes": 8866
+      },
+      {
+        "path": "modeling/T3/scripts/t3_generalization_analysis.py",
+        "score": -16,
+        "reasons": [
+          "-script",
+          "-scripts",
+          "-source"
+        ],
+        "size_bytes": 8649
+      },
+      {
+        "path": "modeling/T3/scripts/t3_advanced_branch_decision.py",
+        "score": -16,
+        "reasons": [
+          "-script",
+          "-scripts",
+          "-source"
+        ],
+        "size_bytes": 7784
+      },
+      {
+        "path": "modeling/T3/scripts/t3_model_contract.py",
+        "score": -16,
+        "reasons": [
+          "-script",
+          "-scripts",
+          "-source"
+        ],
+        "size_bytes": 7777
+      },
+      {
+        "path": "modeling/T3/scripts/t3_word_char.py",
+        "score": -16,
+        "reasons": [
+          "-script",
+          "-scripts",
+          "-source"
+        ],
+        "size_bytes": 6749
+      },
+      {
+        "path": "modeling/T3/scripts/t3_model_comparison.py",
+        "score": -16,
+        "reasons": [
+          "-script",
+          "-scripts",
+          "-source"
+        ],
+        "size_bytes": 6035
+      },
+      {
+        "path": "modeling/T3/scripts/t3_split.py",
+        "score": -16,
+        "reasons": [
+          "-script",
+          "-scripts",
+          "-source"
+        ],
+        "size_bytes": 5945
+      },
+      {
+        "path": "modeling/T3/scripts/t3_generate_plots.py",
+        "score": -16,
+        "reasons": [
+          "-script",
+          "-scripts",
+          "-source"
+        ],
+        "size_bytes": 5821
+      },
+      {
+        "path": "modeling/T3/scripts/t3_advanced_model_contract.py",
+        "score": -16,
+        "reasons": [
+          "-script",
+          "-scripts",
+          "-source"
+        ],
+        "size_bytes": 5510
+      },
+      {
+        "path": "modeling/T3/scripts/t3_class_weighted.py",
+        "score": -16,
+        "reasons": [
+          "-script",
+          "-scripts",
+          "-source"
+        ],
+        "size_bytes": 4995
+      },
+      {
+        "path": "modeling/T3/scripts/t3_svm_class_weighted.py",
+        "score": -16,
+        "reasons": [
+          "-script",
+          "-scripts",
+          "-source"
+        ],
+        "size_bytes": 4917
+      },
+      {
+        "path": "modeling/T3/scripts/t3_error_analysis.py",
+        "score": -16,
+        "reasons": [
+          "-script",
+          "-scripts",
+          "-source"
+        ],
+        "size_bytes": 4872
+      },
+      {
+        "path": "modeling/T3/scripts/t3_linear_svm.py",
+        "score": -16,
+        "reasons": [
+          "-script",
+          "-scripts",
+          "-source"
+        ],
+        "size_bytes": 4800
+      },
+      {
+        "path": "modeling/T3/scripts/t3_baseline.py",
+        "score": -16,
+        "reasons": [
+          "-script",
+          "-scripts",
+          "-source"
+        ],
+        "size_bytes": 4798
+      },
+      {
+        "path": "modeling/T3/scripts/t3_baseline_comparison.py",
+        "score": -16,
+        "reasons": [
+          "-script",
+          "-scripts",
+          "-source"
+        ],
+        "size_bytes": 4778
+      },
+      {
+        "path": "modeling/T3/scripts/t3_validate.py",
+        "score": -16,
+        "reasons": [
+          "-script",
+          "-scripts",
+          "-source"
+        ],
+        "size_bytes": 3946
+      },
+      {
+        "path": "modeling/T3/scripts/t3_classical_comparison.py",
+        "score": -16,
+        "reasons": [
+          "-script",
+          "-scripts",
+          "-source"
+        ],
+        "size_bytes": 3777
+      },
+      {
+        "path": "modeling/T3/scripts/t3_inspect_errors.py",
+        "score": -16,
+        "reasons": [
+          "-script",
+          "-scripts",
+          "-source"
+        ],
+        "size_bytes": 3406
+      },
+      {
+        "path": "modeling/T3/scripts/t3_materialize.py",
+        "score": -16,
+        "reasons": [
+          "-script",
+          "-scripts",
+          "-source"
+        ],
+        "size_bytes": 3196
+      },
+      {
+        "path": "modeling/T3/scripts/t3_environment_check.py",
+        "score": -16,
+        "reasons": [
+          "-script",
+          "-scripts",
+          "-source"
+        ],
+        "size_bytes": 2780
+      },
+      {
+        "path": "modeling/T3/scripts/t3_transformer_smoke_test.py",
+        "score": -16,
+        "reasons": [
+          "-script",
+          "-scripts",
+          "-source"
+        ],
+        "size_bytes": 2331
+      },
+      {
+        "path": "modeling/T3/scripts/t3_selection_criterion.py",
+        "score": -16,
+        "reasons": [
+          "-script",
+          "-scripts",
+          "-source"
+        ],
+        "size_bytes": 2105
+      }
+    ]
+  },
+  "candidate_inspection": {
+    "T1": [
+      {
+        "candidate": {
+          "path": "modeling/T1/splits/t1_vscode_split.csv",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 11103895
+        },
+        "content": {
+          "path": "modeling/T1/splits/t1_vscode_split.csv",
+          "exists": true,
+          "suffix": ".csv",
+          "status": "FOUND",
+          "columns": [
+            "issue_id",
+            "summary",
+            "created",
+            "description_clean",
+            "issue_type",
+            "target_representation",
+            "source_row",
+            "split"
+          ],
+          "sample_rows": [
+            [
+              "42031",
+              "Split Editor menu button doesn't work",
+              "2018-01-23 10:55:00+00:00",
+              "### ![screenshot 4](https://user-images.githubusercontent.com/9638156/35272011-df1c727c-0044-11e8-9d04-98d773b88dbf.png)VS Code version: Code - Insiders 1.20.0-insider (60440c72461e96893766bce73d7bdf1f5136a19f, 2018-01-23T07:19:15.823Z)OS version: Windows_NT x64 10.0.17063<!-- Generated by VS Code Issue Helper -->",
+              "Bug",
+              "Issue_Type",
+              "24439",
+              "development"
+            ],
+            [
+              "42551",
+              "[Issue Reporter] mouse middle click on similar issue opens github inside vscode",
+              "2018-01-30 21:29:06+00:00",
+              "Related #42351### ![middle_click](https://user-images.githubusercontent.com/9638156/35592314-a1e88ede-061d-11e8-9611-498825c8baa9.png)### VS Code InfoVS Code version: Code - Insiders 1.20.0-insider (8cac1acd97466afc75c663dc1626d8562a9a3f3d, 2018-01-30T17:29:05.837Z)OS version: Windows_NT x64 10.0.17083Reproduces without extensions<!-- Generated by VS Code Issue Helper -->",
+              "Bug",
+              "Issue_Type",
+              "24327",
+              "development"
+            ]
+          ],
+          "rows_sampled": 2
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/T1/derived/t1_vscode_dataset.csv",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 11049055
+        },
+        "content": {
+          "path": "modeling/T1/derived/t1_vscode_dataset.csv",
+          "exists": true,
+          "suffix": ".csv",
+          "status": "FOUND",
+          "columns": [
+            "issue_id",
+            "summary",
+            "created",
+            "description_clean",
+            "issue_type",
+            "target_representation",
+            "source_row"
+          ],
+          "sample_rows": [
+            [
+              "223582",
+              "issue reporter dropdown is too large",
+              "2024-07-25 07:48:54+00:00",
+              "> > > 1. Open Help > Report Issue> > The dropdowns are too large....also make sure `\"issueReporter.experimental.auxWindow\": true`the issue with the dropdown seems related to the aux window service. looks like in all zoom levels, it is at `current zoom level + 1`might consider switching to the custom dropdowns (like we have in settings). _Originally posted by @kieferrm in https://github.com/microsoft/vscode/issues/223506_",
+              "Bug",
+              "Type",
+              "8"
+            ],
+            [
+              "223508",
+              "Endless loop for applying setting",
+              "2024-07-24 15:46:15+00:00",
+              "1) Create a codespace in GH.com2) when the codespace is created open it in insiders using the status line remote menu-> I'm asked to reload the window to apply a setting![Image](https://github.com/user-attachments/assets/6126273d-8295-4c12-a322-b17ca95785c9)3) Press reload-> I'm asked to reload the window to apply a setting4) Press reload-> I'm asked to reload the window to apply a setting5) Press reload...VS Code version: Code - Insiders 1.92.0-insider (7ed4cdc56d037146b2c4c890f09e78b2ba14b49d, 2024-07-24T07:50:18.385Z)OS version: Darwin arm64 23.5.0Modes:Remote OS version: Linux x64 5.15.0-1057-azureRemote OS version: Linux x64 6.5.0-1022-azure<details><summary>System Info</summary>|Item|Value||---|---||CPUs|Apple M3 (8 x 2400)||GPU Status|2d_canvas: enabled<br>canvas_oop_rasterization: enabled_on<br>direct_rendering_display_compositor: disabled_off_ok<br>gpu_compositing: enabled<br>multiple_raster_threads: enabled_on<br>opengl: enabled_on<br>rasterization: enabled<br>raw_draw: disabled_off_ok<br>skia_graphite: disabled_off<br>video_decode: enabled<br>video_encode: enabled<br>webgl: enabled<br>webgl2: enabled<br>webgpu: enabled<br>webnn: disabled_off||Load (avg)|3, 4, 4||Memory (System)|24.00GB (0.10GB free)||Process Argv|--enable-proposed-api lszomoru.lszomoru-proposed-api-sample --enable-proposed-api donjayamanne.kusto --crash-reporter-id ef10dfea-3602-4c74-ba1a-109ce7da7825||Screen Reader|no||VM|0%||Item|Value||---|---||Remote|SSH: az-devbox||OS|Linux x64 5.15.0-1057-azure||CPUs|Intel(R) Xeon(R) Platinum 8171M CPU @ 2.60GHz (4 x 0)||Memory (System)|15.62GB (14.70GB free)||VM|0%||Item|Value||---|---||Remote|Codespaces: opulent space enigma||OS|Linux x64 6.5.0-1022-azure||CPUs|AMD EPYC 7763 64-Core Processor (2 x 0)||Memory (System)|7.74GB (4.86GB free)||VM|0%|</details><details><summary>Extensions (84)</summary>Extension|Author (truncated)|Version---|---|---tsl-problem-matcher|amo|0.6.2mermaid-markdown-syntax-highlighting|bpr|1.6.6esbuild-problem-matchers|con|0.0.3vsc-material-theme|Equ|34.4.0vsc-material-theme-icons|equ|3.6.1codespaces|Git|1.17.2remotehub|Git|0.63.2024061801Kotlin|mat|1.7.1theme-monokai-pro-vscode|mon|1.3.2jupyter-keymap|ms-|1.1.2remote-containers|ms-|0.378.0remote-ssh|ms-|0.113.2024072315remote-ssh-edit|ms-|0.86.0azure-repos|ms-|0.39.2024061901remote-explorer|ms-|0.5.2024070409remote-repositories|ms-|0.41.2024022202remote-server|ms-|1.6.2024070809vscode-speech|ms-|0.10.0material-icon-theme|PKi|5.7.0excalidraw-editor|pom|3.7.4vscode-dall-toys|rob|0.0.9vscode-ruby|win|0.28.0vscode-track-build-errors|aes|0.0.3git-branch|ale|1.7.0tsl-problem-matcher|amo|0.6.2github-markdown-preview|bie|0.3.0markdown-checkbox|bie|0.4.0markdown-emoji|bie|0.3.0markdown-footnotes|bie|0.1.1markdown-mermaid|bie|1.23.1markdown-preview-github-styles|bie|2.0.4markdown-yaml-preamble|bie|0.1.0mermaid-markdown-syntax-highlighting|bpr|1.6.6vscode-opennewinstance|chr|0.0.15network-proxy-test|chr|0.0.12esbuild-problem-matchers|con|0.0.3vscode-eslint|dba|3.0.10typescript-notebook|don|2.0.6vsc-material-theme|Equ|34.4.0vsc-material-theme-icons|equ|3.6.1prettier-vscode|esb|10.4.0graphviz-markdown-preview|gee|0.0.8codespaces|Git|1.17.2copilot|Git|1.214.1003copilot-chat|Git|0.18.2024072401remotehub|Git|0.62.0vscode-pull-request-github|Git|0.92.0mdmath|goe|2.7.4vscode-mocha-test-adapter|hbe|2.14.1vscode-test-explorer|hbe|2.21.1vscode-pr-pinger|jri|0.0.6Kotlin|mat|1.7.1rainbow-csv|mec|3.12.0theme-monokai-pro-vscode|mon|1.3.2compare-folders|mos|0.24.3vscode-docker|ms-|1.29.1black-formatter|ms-|2024.2.0debugpy|ms-|2024.8.0isort|ms-|2023.10.1python|ms-|2024.10.0vscode-pylance|ms-|2024.7.1jupyter|ms-|2024.6.0jupyter-keymap|ms-|1.1.2jupyter-renderers|ms-|1.0.18vscode-jupyter-cell-tags|ms-|0.1.9vscode-jupyter-slideshow|ms-|0.1.6azure-repos|ms-|0.38.0extension-test-runner|ms-|0.0.11hexeditor|ms-|1.10.0js-debug-nightly|ms-|2024.7.2217live-server|ms-|0.4.14remote-repositories|ms-|0.40.0test-adapter-converter|ms-|0.1.9vscode-github-issue-notebooks|ms-|0.0.130vscode-js-profile-flame|ms-|1.0.9vscode-markdown-notebook|ms-|0.0.26vsliveshare|ms-|1.0.5936material-icon-theme|PKi|5.7.0vscode-commons|red|0.0.6vscode-xml|red|0.27.1ruby-lsp|Sho|0.7.14codetour|vsl|0.0.59vscode-mermaid-preview|vst|1.6.3vscode-ruby|win|0.28.0(9 theme extensions excluded)</details><details><summary>A/B Experiments</summary>```vsliv368cf:30146710vspor879:30202332vspor708:30202333vspor363:30204092vstes627:30244334vsc_aacf:30263846vscod805cf:30301675vsaa593cf:30376535py29gd2263:31024238c4g48928:305357282i9eh265:30646982962ge761:30841072pythongtdpath:30726887welcomedialog:30812478pythonnoceb:30776497asynctok:30898717dsvsc013:30777762dsvsc014:30777825dsvsc015:30821418pythonregdiag2:30926734pythonmypyd1:30859725h48ei257:31000450pythontbext0:30879054accentitlementst:30870582dsvsc016:30879898dsvsc017:30880771dsvsc018:30880772cppperfnew:30980852pythonait:30973460724cj586:31013169a69g1124:31018687dvdeprecation:31040973dwnewjupyter:31046869impr_priority:31057980nativerepl1:31093711refactort:31084545pythonrstrctxt:310938681iic9185:31091668flighttreat:31102345wkspc-onlycs-c:31102393nativeloc2:31101556```</details>This seems to come from here: https://github.com/microsoft/vscode/blob/12f9169c935bd3fd2730777130330c3bb19e0005/extensions/github-authentication/src/github.ts#L145<!-- generated by issue reporter -->",
+              "Bug",
+              "Type",
+              "13"
+            ]
+          ],
+          "rows_sampled": 2
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/T1/splits/t1_split.csv",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 467464
+        },
+        "content": {
+          "path": "modeling/T1/splits/t1_split.csv",
+          "exists": true,
+          "suffix": ".csv",
+          "status": "FOUND",
+          "columns": [
+            "id",
+            "text",
+            "category_truth",
+            "source_partition",
+            "source_row_x",
+            "source_row_y",
+            "modeling_split"
+          ],
+          "sample_rows": [
+            [
+              "10",
+              "Initiated by [COMPANY][LOCATION]- Vulnerable .Net 4.5 Version on SS-E03F49869B22",
+              "Software",
+              "train",
+              "367",
+              "367",
+              "development"
+            ],
+            [
+              "12",
+              "Windows user [NAME] can use users deplewsk office 365 without password",
+              "O365",
+              "train",
+              "1108",
+              "1108",
+              "development"
+            ]
+          ],
+          "rows_sampled": 2
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/T1/derived/t1_dataset.csv",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 441147
+        },
+        "content": {
+          "path": "modeling/T1/derived/t1_dataset.csv",
+          "exists": true,
+          "suffix": ".csv",
+          "status": "FOUND",
+          "columns": [
+            "id",
+            "text",
+            "category_truth",
+            "source_partition",
+            "source_row_x",
+            "source_row_y"
+          ],
+          "sample_rows": [
+            [
+              "10",
+              "Initiated by [COMPANY][LOCATION]- Vulnerable .Net 4.5 Version on SS-E03F49869B22",
+              "Software",
+              "train",
+              "367",
+              "367"
+            ],
+            [
+              "12",
+              "Windows user [NAME] can use users deplewsk office 365 without password",
+              "O365",
+              "train",
+              "1108",
+              "1108"
+            ]
+          ],
+          "rows_sampled": 2
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/T1/derived/t1_group_audit.json",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 130175
+        },
+        "content": {
+          "path": "modeling/T1/derived/t1_group_audit.json",
+          "exists": true,
+          "suffix": ".json",
+          "status": "FOUND",
+          "type": "dict",
+          "keys": [
+            "operation",
+            "status",
+            "normalization",
+            "total_records",
+            "total_normalized_text_groups",
+            "group_size_distribution",
+            "repeated_group_count",
+            "cross_supplier_partition_group_count",
+            "multi_label_group_count",
+            "multi_label_groups",
+            "repeated_groups"
+          ],
+          "interesting_entries": [
+            {
+              "key": "multi_label_group_count",
+              "value_type": "int",
+              "value_preview": "1"
+            },
+            {
+              "key": "multi_label_groups",
+              "value_type": "list",
+              "value_preview": "[{'normalized_text': '[ticket id] - new support ticket received - acesso', 'record_count': 5, 'labels': ['Active Directory', 'Fileservice'], 'records': [{'id': '976', 'category_truth': 'Active Directory', 'source_partition': 'train'}, {'id': '997', 'category_truth': 'Fileservice', 'source_partition': 'train'}, {'id': '1260', 'category_truth': 'Active Directory', 'source_partition': 'train'}, {'id': '888', 'category_truth': 'Active Directory', 'source_partition': 'test'}, {'id': '892', 'category_"
+            }
+          ]
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/T1/analysis/t1_it_support_eval_groups.json",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 41874
+        },
+        "content": {
+          "path": "modeling/T1/analysis/t1_it_support_eval_groups.json",
+          "exists": true,
+          "suffix": ".json",
+          "status": "FOUND",
+          "type": "dict",
+          "keys": [
+            "status",
+            "task",
+            "evaluation",
+            "largest_repeated_groups",
+            "multi_label_groups",
+            "integrity"
+          ],
+          "interesting_entries": [
+            {
+              "key": "evaluation",
+              "value_type": "dict",
+              "value_preview": "{'records': 446, 'unique_normalized_texts': 119, 'repeated_normalized_text_groups': 69, 'records_in_repeated_groups': 396, 'repeated_record_rate': 0.8878923766816144, 'multi_label_normalized_text_groups': 1, 'records_in_multi_label_groups': 5}"
+            },
+            {
+              "key": "multi_label_groups",
+              "value_type": "list",
+              "value_preview": "[{'normalized_text': '[ticket id] - new support ticket received - acesso', 'record_count': 5, 'labels': ['Active Directory', 'Fileservice'], 'multi_label': True, 'records': [{'id': '976', 'category_truth': 'Active Directory', 'source_partition': 'train'}, {'id': '997', 'category_truth': 'Fileservice', 'source_partition': 'train'}, {'id': '1260', 'category_truth': 'Active Directory', 'source_partition': 'train'}, {'id': '888', 'category_truth': 'Active Directory', 'source_partition': 'test'}, {'i"
+            }
+          ]
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/project_consolidation/t1_t5_consolidated_evidence.json",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 26914
+        },
+        "content": {
+          "path": "modeling/project_consolidation/t1_t5_consolidated_evidence.json",
+          "exists": true,
+          "suffix": ".json",
+          "status": "FOUND",
+          "type": "dict",
+          "keys": [
+            "project",
+            "consolidation_status",
+            "t1",
+            "t2",
+            "t3",
+            "t4",
+            "t5",
+            "project_level_interpretation",
+            "integrity_controls"
+          ],
+          "interesting_entries": []
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/T1/analysis/t1_it_support_model_subset_compare.json",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 14312
+        },
+        "content": {
+          "path": "modeling/T1/analysis/t1_it_support_model_subset_compare.json",
+          "exists": true,
+          "suffix": ".json",
+          "status": "FOUND",
+          "type": "dict",
+          "keys": [
+            "operation",
+            "status",
+            "evaluation_records",
+            "logistic",
+            "svm",
+            "subset_accuracy_deltas",
+            "model_agreement",
+            "subset_model_agreement",
+            "model_retrained",
+            "evaluation_used_for_fit",
+            "frozen_split_modified",
+            "labels_modified",
+            "raw_source_modified"
+          ],
+          "interesting_entries": [
+            {
+              "key": "evaluation_records",
+              "value_type": "int",
+              "value_preview": "446"
+            },
+            {
+              "key": "model_agreement",
+              "value_type": "dict",
+              "value_preview": "{'records': 446, 'models_agree': 411, 'models_disagree': 35, 'both_correct': 399, 'svm_only_correct': 21, 'logistic_only_correct': 10, 'both_wrong': 16}"
+            },
+            {
+              "key": "subset_model_agreement",
+              "value_type": "dict",
+              "value_preview": "{'repeated_text': {'records': 396, 'models_agree': 372, 'models_disagree': 24, 'both_correct': 365, 'svm_only_correct': 18, 'logistic_only_correct': 6, 'both_wrong': 7}, 'single_record': {'records': 50, 'models_agree': 39, 'models_disagree': 11, 'both_correct': 34, 'svm_only_correct': 3, 'logistic_only_correct': 4, 'both_wrong': 9}}"
+            },
+            {
+              "key": "model_retrained",
+              "value_type": "bool",
+              "value_preview": "False"
+            },
+            {
+              "key": "evaluation_used_for_fit",
+              "value_type": "bool",
+              "value_preview": "False"
+            },
+            {
+              "key": "labels_modified",
+              "value_type": "bool",
+              "value_preview": "False"
+            }
+          ]
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/T1/derived/t1_overlap_report.json",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 13913
+        },
+        "content": {
+          "path": "modeling/T1/derived/t1_overlap_report.json",
+          "exists": true,
+          "suffix": ".json",
+          "status": "FOUND",
+          "type": "dict",
+          "keys": [
+            "operation",
+            "status",
+            "normalization",
+            "total_rows",
+            "train_rows",
+            "test_rows",
+            "train_unique_normalized_texts",
+            "test_unique_normalized_texts",
+            "overlapping_normalized_text_count",
+            "overlapping_test_record_count",
+            "overlap_rate_of_test_records",
+            "overlap_details"
+          ],
+          "interesting_entries": [
+            {
+              "key": "test_rows",
+              "value_type": "int",
+              "value_preview": "657"
+            },
+            {
+              "key": "test_unique_normalized_texts",
+              "value_type": "int",
+              "value_preview": "553"
+            },
+            {
+              "key": "overlapping_test_record_count",
+              "value_type": "int",
+              "value_preview": "127"
+            },
+            {
+              "key": "overlap_rate_of_test_records",
+              "value_type": "float",
+              "value_preview": "0.1933028919330289"
+            }
+          ]
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/T1/analysis/t1_it_support_group_eval.json",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 12889
+        },
+        "content": {
+          "path": "modeling/T1/analysis/t1_it_support_group_eval.json",
+          "exists": true,
+          "suffix": ".json",
+          "status": "FOUND",
+          "type": "dict",
+          "keys": [
+            "operation",
+            "status",
+            "split_path",
+            "model_path",
+            "evaluation_records",
+            "record_correct",
+            "record_incorrect",
+            "record_accuracy",
+            "unique_normalized_text_groups",
+            "repeated_normalized_text_groups",
+            "records_in_repeated_groups",
+            "repeated_record_rate",
+            "single_record_groups",
+            "fully_correct_groups",
+            "fully_correct_group_rate",
+            "prediction_consistent_groups",
+            "prediction_consistent_group_rate",
+            "homogeneous_label_groups",
+            "homogeneous_group_correct",
+            "homogeneous_group_accuracy",
+            "multi_label_normalized_text_groups",
+            "records_in_multi_label_groups",
+            "repeated_group_record_count",
+            "repeated_group_record_correct",
+            "repeated_group_record_accuracy",
+            "repeated_groups_fully_correct",
+            "repeated_group_fully_correct_rate",
+            "single_record_group_count",
+            "single_record_group_correct",
+            "single_record_group_accuracy",
+            "largest_groups",
+            "multi_label_group_details",
+            "model_retrained",
+            "evaluation_used_for_fit",
+            "frozen_split_modified",
+            "labels_modified",
+            "raw_source_modified"
+          ],
+          "interesting_entries": [
+            {
+              "key": "split_path",
+              "value_type": "str",
+              "value_preview": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/splits/t1_split.csv"
+            },
+            {
+              "key": "model_path",
+              "value_type": "str",
+              "value_preview": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/baselines/t1_it_support_svm.joblib"
+            },
+            {
+              "key": "evaluation_records",
+              "value_type": "int",
+              "value_preview": "446"
+            },
+            {
+              "key": "prediction_consistent_groups",
+              "value_type": "int",
+              "value_preview": "119"
+            },
+            {
+              "key": "prediction_consistent_group_rate",
+              "value_type": "float",
+              "value_preview": "1.0"
+            },
+            {
+              "key": "homogeneous_label_groups",
+              "value_type": "int",
+              "value_preview": "118"
+            },
+            {
+              "key": "multi_label_normalized_text_groups",
+              "value_type": "int",
+              "value_preview": "1"
+            },
+            {
+              "key": "records_in_multi_label_groups",
+              "value_type": "int",
+              "value_preview": "5"
+            },
+            {
+              "key": "multi_label_group_details",
+              "value_type": "list",
+              "value_preview": "[{'normalized_text': '[ticket id] - new support ticket received - acesso', 'record_count': 5, 'labels': ['Active Directory', 'Fileservice'], 'predictions': ['Software'], 'correct_records': 0, 'incorrect_records': 5, 'records': [{'id': '976', 'actual': 'Active Directory', 'prediction': 'Software', 'correct': False}, {'id': '997', 'actual': 'Fileservice', 'prediction': 'Software', 'correct': False}, {'id': '1260', 'actual': 'Active Directory', 'prediction': 'Software', 'correct': False}, {'id': '8"
+            },
+            {
+              "key": "model_retrained",
+              "value_type": "bool",
+              "value_preview": "False"
+            },
+            {
+              "key": "evaluation_used_for_fit",
+              "value_type": "bool",
+              "value_preview": "False"
+            },
+            {
+              "key": "labels_modified",
+              "value_type": "bool",
+              "value_preview": "False"
+            }
+          ]
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/T1/analysis/t1_it_support_3model_compare.json",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 12213
+        },
+        "content": {
+          "path": "modeling/T1/analysis/t1_it_support_3model_compare.json",
+          "exists": true,
+          "suffix": ".json",
+          "status": "FOUND",
+          "type": "dict",
+          "keys": [
+            "operation",
+            "status",
+            "evaluation_records",
+            "evaluation_used_for_fit",
+            "models_retrained",
+            "frozen_split_modified",
+            "labels_modified",
+            "raw_source_modified",
+            "results",
+            "rankings",
+            "pairwise_deltas",
+            "class_comparison"
+          ],
+          "interesting_entries": [
+            {
+              "key": "evaluation_records",
+              "value_type": "int",
+              "value_preview": "446"
+            },
+            {
+              "key": "evaluation_used_for_fit",
+              "value_type": "bool",
+              "value_preview": "False"
+            },
+            {
+              "key": "models_retrained",
+              "value_type": "bool",
+              "value_preview": "False"
+            },
+            {
+              "key": "labels_modified",
+              "value_type": "bool",
+              "value_preview": "False"
+            }
+          ]
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/T1/analysis/t1_it_support_svm_errors.json",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 10351
+        },
+        "content": {
+          "path": "modeling/T1/analysis/t1_it_support_svm_errors.json",
+          "exists": true,
+          "suffix": ".json",
+          "status": "FOUND",
+          "type": "dict",
+          "keys": [
+            "status",
+            "task",
+            "data",
+            "error_summary",
+            "errors",
+            "artifacts"
+          ],
+          "interesting_entries": [
+            {
+              "key": "artifacts",
+              "value_type": "dict",
+              "value_preview": "{'model_path': '/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/baselines/t1_it_support_svm.joblib', 'output_path': '/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/analysis/t1_it_support_svm_errors.json'}"
+            }
+          ]
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/T1/analysis/t1_it_support_subset_analysis.json",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 10183
+        },
+        "content": {
+          "path": "modeling/T1/analysis/t1_it_support_subset_analysis.json",
+          "exists": true,
+          "suffix": ".json",
+          "status": "FOUND",
+          "type": "dict",
+          "keys": [
+            "operation",
+            "status",
+            "evaluation_records",
+            "record_level_accuracy",
+            "subset_summary",
+            "class_analysis",
+            "error_pairs",
+            "single_record_error_records",
+            "repeated_text_error_records",
+            "model_retrained",
+            "evaluation_used_for_fit",
+            "frozen_split_modified",
+            "labels_modified",
+            "raw_source_modified"
+          ],
+          "interesting_entries": [
+            {
+              "key": "evaluation_records",
+              "value_type": "int",
+              "value_preview": "446"
+            },
+            {
+              "key": "model_retrained",
+              "value_type": "bool",
+              "value_preview": "False"
+            },
+            {
+              "key": "evaluation_used_for_fit",
+              "value_type": "bool",
+              "value_preview": "False"
+            },
+            {
+              "key": "labels_modified",
+              "value_type": "bool",
+              "value_preview": "False"
+            }
+          ]
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/T1/baselines/t1_it_support_char_svm_report.json",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 7195
+        },
+        "content": {
+          "path": "modeling/T1/baselines/t1_it_support_char_svm_report.json",
+          "exists": true,
+          "suffix": ".json",
+          "status": "FOUND",
+          "type": "dict",
+          "keys": [
+            "operation",
+            "status",
+            "development_records",
+            "evaluation_records",
+            "evaluation_used_for_fit",
+            "model",
+            "overall",
+            "subset_summary",
+            "class_analysis",
+            "error_pairs",
+            "feature_design",
+            "classifier",
+            "model_retrained",
+            "frozen_split_modified",
+            "labels_modified",
+            "raw_source_modified",
+            "model_path",
+            "analysis_path"
+          ],
+          "interesting_entries": [
+            {
+              "key": "evaluation_records",
+              "value_type": "int",
+              "value_preview": "446"
+            },
+            {
+              "key": "evaluation_used_for_fit",
+              "value_type": "bool",
+              "value_preview": "False"
+            },
+            {
+              "key": "model",
+              "value_type": "str",
+              "value_preview": "TFIDF_WORD_CHAR_LINEAR_SVC"
+            },
+            {
+              "key": "feature_design",
+              "value_type": "dict",
+              "value_preview": "{'word': {'analyzer': 'word', 'ngram_range': [1, 2], 'min_df': 2, 'max_df': 0.98, 'sublinear_tf': True}, 'character': {'analyzer': 'char', 'ngram_range': [3, 5], 'min_df': 2, 'max_df': 0.98, 'sublinear_tf': True}}"
+            },
+            {
+              "key": "model_retrained",
+              "value_type": "bool",
+              "value_preview": "True"
+            },
+            {
+              "key": "labels_modified",
+              "value_type": "bool",
+              "value_preview": "False"
+            },
+            {
+              "key": "model_path",
+              "value_type": "str",
+              "value_preview": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/baselines/t1_it_support_char_svm.joblib"
+            },
+            {
+              "key": "analysis_path",
+              "value_type": "str",
+              "value_preview": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/analysis/t1_it_support_char_svm_analysis.json"
+            }
+          ]
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/T1/analysis/t1_it_support_char_svm_analysis.json",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 6361
+        },
+        "content": {
+          "path": "modeling/T1/analysis/t1_it_support_char_svm_analysis.json",
+          "exists": true,
+          "suffix": ".json",
+          "status": "FOUND",
+          "type": "dict",
+          "keys": [
+            "operation",
+            "status",
+            "evaluation_records",
+            "overall_accuracy",
+            "subset_summary",
+            "class_analysis",
+            "error_pairs",
+            "model_retrained",
+            "evaluation_used_for_fit",
+            "frozen_split_modified",
+            "labels_modified",
+            "raw_source_modified"
+          ],
+          "interesting_entries": [
+            {
+              "key": "evaluation_records",
+              "value_type": "int",
+              "value_preview": "446"
+            },
+            {
+              "key": "model_retrained",
+              "value_type": "bool",
+              "value_preview": "True"
+            },
+            {
+              "key": "evaluation_used_for_fit",
+              "value_type": "bool",
+              "value_preview": "False"
+            },
+            {
+              "key": "labels_modified",
+              "value_type": "bool",
+              "value_preview": "False"
+            }
+          ]
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/T1/baselines/t1_it_support_svm_report.json",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 4070
+        },
+        "content": {
+          "path": "modeling/T1/baselines/t1_it_support_svm_report.json",
+          "exists": true,
+          "suffix": ".json",
+          "status": "FOUND",
+          "type": "dict",
+          "keys": [
+            "status",
+            "task",
+            "data",
+            "model",
+            "metrics",
+            "targets",
+            "integrity",
+            "artifacts"
+          ],
+          "interesting_entries": [
+            {
+              "key": "model",
+              "value_type": "dict",
+              "value_preview": "{'name': 'TFIDF_LINEAR_SVC', 'tfidf': {'ngram_range': [1, 2], 'min_df': 2, 'max_df': 0.98, 'sublinear_tf': True}, 'classifier': {'class_weight': 'balanced', 'random_state': 42}}"
+            },
+            {
+              "key": "targets",
+              "value_type": "dict",
+              "value_preview": "{'classes': ['Active Directory', 'Computer-Services', 'EOL', 'Fileservice', 'O365', 'Software', 'Support general'], 'evaluation_class_counts': {'Active Directory': 21, 'Computer-Services': 10, 'EOL': 2, 'Fileservice': 183, 'O365': 34, 'Software': 44, 'Support general': 152}, 'evaluation_classes_without_examples': []}"
+            },
+            {
+              "key": "artifacts",
+              "value_type": "dict",
+              "value_preview": "{'model_path': '/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/baselines/t1_it_support_svm.joblib', 'report_path': '/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/baselines/t1_it_support_svm_report.json'}"
+            }
+          ]
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/T1/baselines/t1_it_support_baseline_report.json",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 4021
+        },
+        "content": {
+          "path": "modeling/T1/baselines/t1_it_support_baseline_report.json",
+          "exists": true,
+          "suffix": ".json",
+          "status": "FOUND",
+          "type": "dict",
+          "keys": [
+            "status",
+            "model",
+            "data",
+            "features",
+            "targets",
+            "metrics",
+            "probability_output",
+            "raw_source_modified"
+          ],
+          "interesting_entries": [
+            {
+              "key": "model",
+              "value_type": "dict",
+              "value_preview": "{'type': 'TFIDF_LOGISTIC_REGRESSION', 'random_state': 42, 'class_weight': 'balanced', 'ngram_range': [1, 2], 'min_df': 2, 'max_df': 0.98, 'sublinear_tf': True}"
+            },
+            {
+              "key": "features",
+              "value_type": "dict",
+              "value_preview": "{'text': True, 'id': False, 'category_truth': False, 'source_partition': False, 'source_row_x': False, 'source_row_y': False, 'normalized_text': False, 'modeling_split': False}"
+            },
+            {
+              "key": "targets",
+              "value_type": "dict",
+              "value_preview": "{'classes': ['Active Directory', 'Computer-Services', 'EOL', 'Fileservice', 'O365', 'Software', 'Support general'], 'evaluation_class_counts': {'Active Directory': 21, 'Computer-Services': 10, 'EOL': 2, 'Fileservice': 183, 'O365': 34, 'Software': 44, 'Support general': 152}, 'evaluation_classes_without_examples': []}"
+            },
+            {
+              "key": "probability_output",
+              "value_type": "dict",
+              "value_preview": "{'available': True, 'classes': ['Active Directory', 'Computer-Services', 'EOL', 'Fileservice', 'O365', 'Software', 'Support general'], 'probability_rows': 446}"
+            }
+          ]
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/T1/baselines/t1_vscode_feature_compare_report.json",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 3147
+        },
+        "content": {
+          "path": "modeling/T1/baselines/t1_vscode_feature_compare_report.json",
+          "exists": true,
+          "suffix": ".json",
+          "status": "FOUND",
+          "type": "dict",
+          "keys": [
+            "status",
+            "dataset",
+            "model",
+            "summary_only",
+            "summary_plus_description",
+            "delta_combined_minus_summary",
+            "evaluation_class_counts",
+            "unavailable_evaluation_classes",
+            "raw_source_modified"
+          ],
+          "interesting_entries": [
+            {
+              "key": "model",
+              "value_type": "dict",
+              "value_preview": "{'type': 'TFIDF_LOGISTIC_REGRESSION', 'random_state': 42, 'class_weight': 'balanced', 'ngram_range': [1, 2], 'min_df': 2, 'max_df': 0.98, 'sublinear_tf': True}"
+            },
+            {
+              "key": "evaluation_class_counts",
+              "value_type": "dict",
+              "value_preview": "{'Bug': 900, 'Feature Request': 16, 'Performance Issue': 14, 'Usability': 0}"
+            },
+            {
+              "key": "unavailable_evaluation_classes",
+              "value_type": "list",
+              "value_preview": "['Usability']"
+            }
+          ]
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/T1/analysis/t1_it_support_split_check.json",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 3014
+        },
+        "content": {
+          "path": "modeling/T1/analysis/t1_it_support_split_check.json",
+          "exists": true,
+          "suffix": ".json",
+          "status": "FOUND",
+          "type": "dict",
+          "keys": [
+            "status",
+            "input",
+            "summary",
+            "checked_ids",
+            "checked_id_groups",
+            "cross_split_groups",
+            "raw_source_modified",
+            "split_modified",
+            "labels_modified"
+          ],
+          "interesting_entries": [
+            {
+              "key": "labels_modified",
+              "value_type": "bool",
+              "value_preview": "False"
+            }
+          ]
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/T1/baselines/t1_vscode_baseline_report.json",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 2765
+        },
+        "content": {
+          "path": "modeling/T1/baselines/t1_vscode_baseline_report.json",
+          "exists": true,
+          "suffix": ".json",
+          "status": "FOUND",
+          "type": "dict",
+          "keys": [
+            "status",
+            "model",
+            "data",
+            "features",
+            "targets",
+            "metrics",
+            "model_classes",
+            "raw_source_modified"
+          ],
+          "interesting_entries": [
+            {
+              "key": "model",
+              "value_type": "dict",
+              "value_preview": "{'type': 'TFIDF_LOGISTIC_REGRESSION', 'random_state': 42, 'class_weight': 'balanced', 'ngram_range': [1, 2], 'min_df': 2, 'max_df': 0.98, 'sublinear_tf': True}"
+            },
+            {
+              "key": "features",
+              "value_type": "dict",
+              "value_preview": "{'summary': True, 'description_clean': True, 'issue_id': False, 'source_row': False, 'created': False, 'resolved': False, 'resolution': False}"
+            },
+            {
+              "key": "targets",
+              "value_type": "dict",
+              "value_preview": "{'classes': ['Bug', 'Feature Request', 'Performance Issue', 'Usability'], 'evaluation_class_counts': {'Bug': 900, 'Feature Request': 16, 'Performance Issue': 14, 'Usability': 0}, 'evaluation_classes_without_examples': ['Usability']}"
+            },
+            {
+              "key": "model_classes",
+              "value_type": "list",
+              "value_preview": "['Bug', 'Feature Request', 'Performance Issue', 'Usability']"
+            }
+          ]
+        }
+      }
+    ],
+    "T3": [
+      {
+        "candidate": {
+          "path": "modeling/T3/derived/t3_features.csv",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 69577458
+        },
+        "content": {
+          "path": "modeling/T3/derived/t3_features.csv",
+          "exists": true,
+          "suffix": ".csv",
+          "status": "FOUND",
+          "columns": [
+            "ID",
+            "Creation time",
+            "Summary",
+            "Description",
+            "target_severity"
+          ],
+          "sample_rows": [
+            [
+              "1798074",
+              "2022-10-28T20:57:23Z",
+              "High commit, leading to system instability",
+              "Created attachment 9300873\\\\nmemory-report.json.gz\\\\n\\\\nUser Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:106.0) Gecko/20100101 Firefox/106.0\\\\n\\\\nSteps to reproduce:\\\\n\\\\nBrowse web with lots of tabs.\\\\n\\\\n\\\\nActual results:\\\\n\\\\nSystem hit the upper limit of commit at 47.9GB out of 48GB and starts refusing allocation requests.\\\\n\\\\n\\\\nExpected results:\\\\n\\\\nFirefox releases commit",
+              "S3"
+            ],
+            [
+              "1903641",
+              "2024-06-19T19:25:57Z",
+              "Incorrect gamma for background color alpha when Windows ACM is enabled",
+              "Created attachment 9408505\\\\nScreenshot 2024-06-19 152141.png\\\\n\\\\nWhen Windows 11 Auto Color Management is enabled (\\\\\"Automatically manage color for apps\\\\\"), background colors with an alpha component (such as those specified with rgba) are displayed with an apparently incorrect gamma for the alpha component. It is especially noticeable in places like the GitHub diff view.\\\\n\\\\nThis occurs regardless of whether \\\\\"Use legacy display ICC color management\\\\\" is selected in the EXE compatibility options. It also occurs in the latest Firefox Nightly build. \\\\n\\\\nThis issue disappears in normal screenshots, however it does appear in OBS desktop capture (not window capture).",
+              "S3"
+            ]
+          ],
+          "rows_sampled": 2
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/T3/splits/t3_train.csv",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 45666371
+        },
+        "content": {
+          "path": "modeling/T3/splits/t3_train.csv",
+          "exists": true,
+          "suffix": ".csv",
+          "status": "FOUND",
+          "columns": [
+            "ID",
+            "Creation time",
+            "Summary",
+            "Description",
+            "target_severity"
+          ],
+          "sample_rows": [
+            [
+              "6796",
+              "1999-05-20 16:26:21+00:00",
+              "Need to implement TextServicesCompositeDocument",
+              "I need to implement a TextServicesCompositeDocument interface that will allow\\\\nthings like the message compose window to pass a collection of\\\\nnsITextServicesDocuments to a text service like the spellchecker. This will be\\\\nextremely useful when Ender replaces all textfields and textareas, and will\\\\nallow us to spellcheck not only the message body, but all text fields like the\\\\nsubject field, etc.",
+              "S4"
+            ],
+            [
+              "6798",
+              "1999-05-20 16:33:49+00:00",
+              "Need TransactionItem recycler",
+              "We can optimize the TransactionManager by implementing a TransactionItem\\\\nrecycler so that we don't have to allocate a new TransactionItem everytime we\\\\npush something on the Undo stack.",
+              "S4"
+            ]
+          ],
+          "rows_sampled": 2
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/T3/splits/t3_validation.csv",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 12153706
+        },
+        "content": {
+          "path": "modeling/T3/splits/t3_validation.csv",
+          "exists": true,
+          "suffix": ".csv",
+          "status": "FOUND",
+          "columns": [
+            "ID",
+            "Creation time",
+            "Summary",
+            "Description",
+            "target_severity"
+          ],
+          "sample_rows": [
+            [
+              "1822154",
+              "2023-03-13 18:55:36+00:00",
+              "Occasional crash when testing WebTransport DOM with xpcshell tests",
+              "While developing solution for Bug 1818828, I came across this crash a few times. \\\\n\\\\nAs the tests are it only occurs occasionally/rarely when running verify tests. However, I am able to reliably elicit a similar crash with a call to the following test with `.only()` and `--verify` on debug (and IIRC release) builds on linux locally. The `cancel()` seems particularly problematic.\\\\n```\\\\nadd_task(async function test_wt_incoming_unidi_stream() {\\\\n  let wt = new WebTransport(\\\\n    \\\\\"https://\\\\\" + host + \\\\\"/create_unidi_stream_and_hello\\\\\"\\\\n  );\\\\n  registerCleanupFunction(async () => {\\\\n    wt.close();\\\\n  });\\\\n  await wt.ready;\\\\n\\\\n  const streams = await wt.incomingUnidirectionalStreams;\\\\n  const stream_reader = streams.getReader();\\\\n  const { value: recv_stream } = await stream_reader.read();\\\\n  let str = await read_stream_as_string(recv_stream);\\\\n  await stream_reader.cancel(); // after adding this\\\\n  await stream_reader.closed;\\\\n  stream_reader.releaseLock();\\\\n  Assert.equal(str, \\\\\"qwerty\\\\\");\\\\n\\\\n  wt.close();\\\\n  await wt.closed;\\\\n});\\\\n```\\\\nA local `./mach xpcshell-test <test> --verify` reveals:\\\\n\\\\n```\\\\n0:03.13 PASS test_wt_incoming_unidi_stream - [test_wt_incoming_unidi_stream : 200] \\\\\"qwerty\\\\\" == \\\\\"qwerty\\\\\"\\\\n0:03.13 pid:524989 ExceptionHandler::GenerateDump cloned child 525022\\\\n0:03.13 pid:524989 ExceptionHandler::SendContinueSignalToChild sent continue signal to child\\\\n0:03.13 pid:524989 ExceptionHandler::WaitForContinueSignal waiting for continue signal...\\\\n<...>\\\\nOperating system: Linux\\\\n                  6.0.12-76060006-generic #202212290932~1674139725~22.04~ca93ccf SMP PREEMPT_DYNAMIC Thu J\\\\nCPU: amd64\\\\n     family 6 model 141 stepping 1\\\\n     1 CPU\\\\nLinux Pop 22.04 - jammy (Pop!_OS 22.04 LTS)\\\\n\\\\nCrash reason:  SIGSEGV / SEGV_MAPERR\\\\nCrash address: 0x10\\\\nCrashing instruction: `mov rax, qword [rax]`\\\\nMemory accessed by instruction:\\\\n  0. Address: 0x0000000000000010\\\\n     Size: 8\\\\nProcess uptime: not available\\\\n\\\\nThread 3 Socket Thread (crashed)\\\\n 0  libxul.so + 0xd6fca5c\\\\n     rax = 0x0000000000000010    rdx = 0x0000000000000098\\\\n     rcx = 0x00007f3a315fc278    rbx = 0x00007f3a315fe640\\\\n     rsi = 0x00000000000000aa    rdi = 0x0000000000000010\\\\n     rbp = 0x00007f3a315fc1a0    rsp = 0x00007f3a315fc1a0\\\\n      r8 = 0x00007f3a339784c0     r9 = 0x0000000000000000\\\\n     r10 = 0x0000000000000000    r11 = 0x0000000000000000\\\\n     r12 = 0x00007f3a315fe640    r13 = 0x0000000000000002\\\\n     r14 = 0x00007f3a34e94850    r15 = 0x00007ffebc173b70\\\\n     rip = 0x00007f3a43afca5c\\\\n    Found by: given as instruction pointer in context\\\\n 1  libxul.so + 0xd702424\\\\n     rbp = 0x00007f3a315fc1c0    rsp = 0x00007f3a315fc1b0\\\\n     rip = 0x00007f3a43b02425\\\\n    Found by: previous frame's frame pointer\\\\n 2  libxul.so + 0xd6f1114\\\\n<...>\\\\nFAIL dom/webtransport/test/xpcshell/test_simple.js - xpcshell return code: -11\\\\n```\\\\nA debug stack of the failure:\\\\n```\\\\nThread 1 \\\\\"xpcshell\\\\\" received signal SIGSEGV, Segmentation fault.\\\\n0x00007fffec8ff6b1 in mozilla::dom::ReadableStream::CloseNative (this=0x7fffd246dbe0, aCx=0x7fffd5633f00, aRv=...) at /home/ed/mozilla/central/dom/st\\\\nreams/ReadableStream.cpp:1098\\\\n1098     MOZ_ASSERT(mController->GetAlgorithms()->IsNative());\\\\n(gdb) bt\\\\n#0  0x00007fffec8ff6b1 in mozilla::dom::ReadableStream::CloseNative(JSContext*, mozilla::ErrorResult&)\\\\n    (this=0x7fffd246dbe0, aCx=0x7fffd5633f00, aRv=...) at /home/ed/mozilla/central/dom/streams/ReadableStream.cpp:1098\\\\n#1  0x00007fffec9c1504 in mozilla::dom::WebTransport::Cleanup(mozilla::dom::WebTransportError*, mozilla::dom::WebTransportCloseInfo const*, mozilla::\\\\nErrorResult&) (this=0x7fffd24803a0, aError=0x7fffced37600, aCloseInfo=0x7fffffff0828, aRv=...)\\\\n    at /home/ed/mozilla/central/dom/webtransport/api/WebTransport.cpp:734\\\\n#2  0x00007fffec9c1fb9 in mozilla::dom::WebTransport::Close(mozilla::dom::WebTransportCloseInfo const&, mozilla::ErrorResult&)\\\\n    (this=0x7fffd24803a0, aOptions=..., aRv=...) at /home/ed/mozilla/central/dom/webtransport/api/WebTransport.cpp:518\\\\n#3  0x00007fffe98a1f63 in mozilla::dom::WebTransport_Binding::close(JSContext*, JS::Handle<JSObject*>, void*, JSJitMethodCallArgs const&)\\\\n    (cx_=0x7fffd5633f00, obj=..., void_self=0x7fffd24803a0, args=...) at WebTransportBinding.cpp:1276\\\\n#4  0x00007fffea066671 in mozilla::dom::binding_detail::GenericMethod<mozilla::dom::binding_detail::NormalThisPolicy, mozilla::dom::binding_detail::T\\\\nhrowExceptions>(JSContext*, unsigned int, JS::Value*) (cx=0x7fffd5633f00, argc=0, vp=0x7fffd29fb378)\\\\n    at /home/ed/mozilla/central/dom/bindings/BindingUtils.cpp:3318\\\\n#5  0x00007ffff18c166c in CallJSNative(JSContext*, bool (*)(JSContext*, unsigned int, JS::Value*), js::CallReason, JS::CallArgs const&)\\\\n    (cx=0x7fffd5633f00, native=0x7fffea0662f0 <mozilla::dom::binding_detail::GenericMethod<mozilla::dom::binding_detail::NormalThisPolicy, mozilla::d\\\\nom::binding_detail::ThrowExceptions>(JSContext*, unsigned int, JS::Value*)>, reason=js::CallReason::Call, args=...)\\\\n    at /home/ed/mozilla/central/js/src/vm/Interpreter.cpp:459\\\\n#6  0x00007ffff18afd73 in js::InternalCallOrConstruct(JSContext*, JS::CallArgs const&, js::MaybeConstruct, js::CallReason)\\\\n    (cx=0x7fffd5633f00, args=..., construct=js::NO_CONSTRUCT, reason=js::CallReason::Call) at /home/ed/mozilla/central/js/src/vm/Interpreter.cpp:547\\\\n#7  0x00007ffff18b04f9 in InternalCall(JSContext*, js::AnyInvokeArgs const&, js::CallReason)\\\\n    (cx=0x7fffd5633f00, args=..., reason=js::CallReason::Call) at /home/ed/mozilla/central/js/src/vm/Interpreter.cpp:614\\\\n#8  0x00007ffff18b0333 in js::CallFromStack(JSContext*, JS::CallArgs const&, js::CallReason)\\\\n    (cx=0x7fffd5633f00, args=..., reason=js::CallReason::Call) at /home/ed/mozilla/central/js/src/vm/Interpreter.cpp:619\\\\n#9  0x00007ffff18a41e8 in Interpret(JSContext*, js::RunState&) (cx=0x7fffd5633f00, state=...)\\\\n    at /home/ed/mozilla/central/js/src/vm/Interpreter.cpp:3362\\\\n#10 0x00007ffff1898a61 in js::RunScript(JSContext*, js::RunState&) (cx=0x7fffd5633f00, state=...)\\\\n    at /home/ed/mozilla/central/js/src/vm/Interpreter.cpp:431\\\\n#11 0x00007ffff18aff83 in js::InternalCallOrConstruct(JSContext*, JS::CallArgs const&, js::MaybeConstruct, js::CallReason)\\\\n    (cx=0x7fffd5633f00, args=..., construct=js::NO_CONSTRUCT, reason=js::CallReason::Call) at /home/ed/mozilla/central/js/src/vm/Interpreter.cpp:579\\\\n#12 0x00007ffff18b04f9 in InternalCall(JSContext*, js::AnyInvokeArgs const&, js::CallReason)\\\\n    (cx=0x7fffd5633f00, args=..., reason=js::CallReason::Call) at /home/ed/mozilla/central/js/src/vm/Interpreter.cpp:614\\\\n#13 0x00007ffff18b06a9 in js::Call(JSContext*, JS::Handle<JS::Value>, JS::Handle<JS::Value>, js::AnyInvokeArgs const&, JS::MutableHandle<JS::Value>,\\\\njs::CallReason) (cx=0x7fffd5633f00, fval=..., thisv=..., args=..., rval=..., reason=js::CallReason::Call)\\\\n    at /home/ed/mozilla/central/js/src/vm/Interpreter.cpp:646\\\\n#14 0x00007ffff1ced78a in js::CallSelfHostedFunction(JSContext*, JS::Handle<js::PropertyName*>, JS::Handle<JS::Value>, js::AnyInvokeArgs const&, JS::\\\\nMutableHandle<JS::Value>) (cx=0x7fffd5633f00, name=..., thisv=..., args=..., rval=...) at /home/ed/mozilla/central/js/src/vm/SelfHosting.cpp:1488\\\\n#15 0x00007ffff2756403 in js::jit::InterpretResume(JSContext*, JS::Handle<JSObject*>, JS::Value*, JS::MutableHandle<JS::Value>)\\\\n    (cx=0x7fffd5633f00, obj=..., stackValues=0x7fffffff3d88, rval=...) at /home/ed/mozilla/central/js/src/jit/VMFunctions.cpp:1086\\\\n```\\\\nAnd a debug stack of where we call ClearAlgorithms, which nulls the `mAlgorithms` ptr:\\\\n```\\\\nThread 1 \\\\\"xpcshell\\\\\" hit Breakpoint 5, mozilla::dom::ReadableStreamController::ClearAlgorithms (this=0x7fffd2bd8ca0) at /home/ed/mozilla/central/obj-d\\\\nebug/dist/include/mozilla/dom/ReadableStreamController.h:54\\\\n54         mAlgorithms = nullptr;\\\\n(gdb) bt\\\\n#0  mozilla::dom::ReadableStreamController::ClearAlgorithms() (this=0x7fffd2bd8ca0)\\\\n    at /home/ed/mozilla/central/obj-debug/dist/include/mozilla/dom/ReadableStreamController.h:54\\\\n#1  0x00007fffec904795 in mozilla::dom::streams_abstract::ReadableStreamDefaultControllerClearAlgorithms(mozilla::dom::ReadableStreamDefaultControlle\\\\nr*) (aController=0x7fffd2bd8ca0) at /home/ed/mozilla/central/dom/streams/ReadableStreamDefaultController.cpp:202\\\\n#2  0x00007fffec904ed1 in mozilla::dom::ReadableStreamDefaultController::CancelSteps(JSContext*, JS::Handle<JS::Value>, mozilla::ErrorResult&)\\\\n    (this=0x7fffd2bd8ca0, aCx=0x7fffd5633f00, aReason=..., aRv=...) at /home/ed/mozilla/central/dom/streams/ReadableStreamDefaultController.cpp:596\\\\n#3  0x00007fffec8fc1c2 in mozilla::dom::streams_abstract::ReadableStreamCancel(JSContext*, mozilla::dom::ReadableStream*, JS::Handle<JS::Value>, mozi\\\\nlla::ErrorResult&) (aCx=0x7fffd5633f00, aStream=0x7fffd246dbe0, aError=..., aRv=...) at /home/ed/mozilla/central/dom/streams/ReadableStream.cpp:389\\\\n#4  0x00007fffec8fec88 in mozilla::dom::ReadableStream::IteratorReturn(JSContext*, mozilla::dom::AsyncIterableIterator<mozilla::dom::ReadableStream>*\\\\n, JS::Handle<JS::Value>, mozilla::ErrorResult&) (this=0x7fffd246dbe0, aCx=0x7fffd5633f00, aIterator=0x7fffced3a2e0, aValue=..., aRv=...)\\\\n    at /home/ed/mozilla/central/dom/streams/ReadableStream.cpp:950\\\\n#5  0x00007fffe91b9218 in mozilla::dom::binding_detail::AsyncIterableIteratorWithReturn<mozilla::dom::ReadableStream>::GetReturnPromise(JSContext*, J\\\\nS::Handle<JS::Value>, mozilla::ErrorResult&) (this=0x7fffced3a2e0, aCx=0x7fffd5633f00, aValue=..., aRv=...)\\\\n    at /home/ed/mozilla/central/obj-debug/dist/include/mozilla/dom/IterableIterator.h:402\\\\n#6  0x00007fffe91b92cc in non-virtual thunk to mozilla::dom::binding_detail::AsyncIterableIteratorWithReturn<mozilla::dom::ReadableStream>::GetReturn\\\\nPromise(JSContext*, JS::Handle<JS::Value>, mozilla::ErrorResult&) () at /home/ed/mozilla/central/obj-debug/dist/bin/libxul.so\\\\n#7  0x00007fffea043e5b in mozilla::dom::binding_detail::AsyncIterableReturnImpl::ReturnSteps(JSContext*, mozilla::dom::AsyncIterableIteratorBase*, ns\\\\nIGlobalObject*, JS::Handle<JS::Value>, mozilla::ErrorResult&)\\\\n    (this=0x7fffced3a330, aCx=0x7fffd5633f00, aObject=0x7fffced3a2e0, aGlobalObject=0x7fffd2b03be0, aValue=..., aRv=...)\\\\n    at /home/ed/mozilla/central/dom/bindings/IterableIterator.cpp:257\\\\n#8  0x00007fffea0441b7 in mozilla::dom::binding_detail::AsyncIterableReturnImpl::Return(JSContext*, mozilla::dom::AsyncIterableIteratorBase*, nsISupp\\\\norts*, JS::Handle<JS::Value>, mozilla::ErrorResult&)\\\\n    (this=0x7fffced3a330, aCx=0x7fffd5633f00, aObject=0x7fffced3a2e0, aGlobalObject=0x7fffd2b03be0, aValue=..., aRv=...)\\\\n    at /home/ed/mozilla/central/dom/bindings/IterableIterator.cpp:310\\\\n#9  0x00007fffe91b9759 in mozilla::dom::binding_detail::AsyncIterableIteratorWithReturn<mozilla::dom::ReadableStream>::Return(JSContext*, JS::Handle<\\\\nJS::Value>, mozilla::ErrorResult&) (this=0x7fffced3a2e0, aCx=0x7fffd5633f00, aValue=..., aRv=...)\\\\n    at /home/ed/mozilla/central/obj-debug/dist/include/mozilla/dom/IterableIterator.h:392\\\\n#10 0x00007fffe918589c in mozilla::dom::ReadableStreamAsyncIterator_Binding::_return_(JSContext*, JS::Handle<JSObject*>, void*, JSJitMethodCallArgs c\\\\nonst&) (cx=0x7fffd5633f00, obj=..., void_self=0x7fffced3a2e0, args=...) at ReadableStreamBinding.cpp:1459\\\\n#11 0x00007fffe9185686 in mozilla::dom::ReadableStreamAsyncIterator_Binding::_return__promiseWrapper(JSContext*, JS::Handle<JSObject*>, void*, JSJitM\\\\nethodCallArgs const&) (cx=0x7fffd5633f00, obj=..., void_self=0x7fffced3a2e0, args=...) at ReadableStreamBinding.cpp:1473\\\\n#12 0x00007fffea066b21 in mozilla::dom::binding_detail::GenericMethod<mozilla::dom::binding_detail::NormalThisPolicy, mozilla::dom::binding_detail::C\\\\nonvertExceptionsToPromises>(JSContext*, unsigned int, JS::Value*) (cx=0x7fffd5633f00, argc=0, vp=0x7fffd29fb3a8)\\\\n    at /home/ed/mozilla/central/dom/bindings/BindingUtils.cpp:3318\\\\n#13 0x00007ffff18c166c in CallJSNative(JSContext*, bool (*)(JSContext*, unsigned int, JS::Value*), js::CallReason, JS::CallArgs const&)\\\\n    (cx=0x7fffd5633f00, native=0x7fffea0667a0 <mozilla::dom::binding_detail::GenericMethod<mozilla::dom::binding_detail::NormalThisPolicy, mozilla::d\\\\nom::binding_detail::ConvertExceptionsToPromises>(JSContext*, unsigned int, JS::Value*)>, reason=js::CallReason::Call, args=...)\\\\n    at /home/ed/mozilla/central/js/src/vm/Interpreter.cpp:459\\\\n#14 0x00007ffff18afd73 in js::InternalCallOrConstruct(JSContext*, JS::CallArgs const&, js::MaybeConstruct, js::CallReason)\\\\n    (cx=0x7fffd5633f00, args=..., construct=js::NO_CONSTRUCT, reason=js::CallReason::Call) at /home/ed/mozilla/central/js/src/vm/Interpreter.cpp:547\\\\n#15 0x00007ffff18b04f9 in InternalCall(JSContext*, js::AnyInvokeArgs const&, js::CallReason)\\\\n    (cx=0x7fffd5633f00, args=..., reason=js::CallReason::Call) at /home/ed/mozilla/central/js/src/vm/Interpreter.cpp:614\\\\n\\\\n```",
+              "S3"
+            ],
+            [
+              "1822161",
+              "2023-03-13 19:11:33+00:00",
+              "selecting text bubble persists if also using left side of screen to return to previous page",
+              "User Agent: Mozilla/5.0 (Android 13; Mobile; rv:109.0) Gecko/110.0 Firefox/110.0\\\\nFirefox for Android\\\\n\\\\nSteps to reproduce:\\\\n\\\\nSelecting text on Quora.com near left side of screen. Using zoomed in text bubble to help capture right text near edge of screen. Accidentally used  \\\\\"back\\\\\" gesture on left side to return to previous page while text bubble active by dragging finger off edge of screen. Using a glads screen protector with android setting to match use of screen protector (sensitivity adjustment im guessing). Unable to determine if this is android thing or firefox thing, saving screenshot does not also save badly behaving text bubble\\\\n\\\\n\\\\nActual results:\\\\n\\\\nText bubble persisted. Non responsive to changes. Persisted through page changes. Only in firefox browser. Closing firefox fixed it.\\\\n\\\\n\\\\nExpected results:\\\\n\\\\nGeaturing \\\\\"back\\\\\" to previous page should have closed text select bubble",
+              "S3"
+            ]
+          ],
+          "rows_sampled": 2
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/T3/splits/t3_test.csv",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 11911682
+        },
+        "content": {
+          "path": "modeling/T3/splits/t3_test.csv",
+          "exists": true,
+          "suffix": ".csv",
+          "status": "FOUND",
+          "columns": [
+            "ID",
+            "Creation time",
+            "Summary",
+            "Description",
+            "target_severity"
+          ],
+          "sample_rows": [
+            [
+              "1875118",
+              "2024-01-17 17:44:01+00:00",
+              "Crash [@ mozilla::net::DefaultURI::EqualsExceptRef]",
+              "Testcase found while fuzzing mozilla-central rev 4a059c9f97e7 built with: --enable-address-sanitizer --enable-fuzzing.\\\\n\\\\nTestcase can be reproduced using the following commands:\\\\n```\\\\n$ pip install fuzzfetch\\\\n$ python -m fuzzfetch --build 4a059c9f97e7 -a --fuzzing --target firefox gtest -n firefox\\\\n$ FUZZER=URIParser ./firefox/firefox testcase.bin\\\\n```\\\\n\\\\n```\\\\n[@ mozilla::net::DefaultURI::EqualsExceptRef]\\\\n\\\\n    ==220==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x7fa4bad56ba5 bp 0x7fffd2116b90 sp 0x7fffd2116ac0 T0)\\\\n    ==220==The signal is caused by a READ memory access.\\\\n    ==220==Hint: address points to the zero page.\\\\n    SCARINESS: 10 (null-deref)\\\\n        #0 0x7fa4bad56ba5 in mozilla::net::DefaultURI::EqualsExceptRef(nsIURI*, bool*) /netwerk/base/DefaultURI.cpp:219:24\\\\n        #1 0x7fa4b6fc6d3b in FuzzingRunURIParser(unsigned char const*, unsigned long) /netwerk/test/fuzz/TestURIFuzzing.cpp:201:18\\\\n        #2 0x557c54f21d0b in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /tools/fuzzing/libfuzzer/FuzzerLoop.cpp:570:11\\\\n        #3 0x557c54f21791 in fuzzer::Fuzzer::RunOne(unsigned char const*, unsigned long, bool, fuzzer::InputInfo*, bool*) /tools/fuzzing/libfuzzer/FuzzerLoop.cpp:479:7\\\\n        #4 0x557c54f22bc7 in fuzzer::Fuzzer::MutateAndTestOne() /tools/fuzzing/libfuzzer/FuzzerLoop.cpp:717:19\\\\n        #5 0x557c54f235d5 in fuzzer::Fuzzer::Loop(std::vector<fuzzer::SizedFile, fuzzer::fuzzer_allocator<fuzzer::SizedFile> >&) /tools/fuzzing/libfuzzer/FuzzerLoop.cpp:861:9\\\\n        #6 0x557c54f13f5b in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /tools/fuzzing/libfuzzer/FuzzerDriver.cpp:864:14\\\\n        #7 0x7fa4cad51a2e in mozilla::FuzzerRunner::Run(int*, char***) /tools/fuzzing/interface/harness/FuzzerRunner.cpp:75:13\\\\n        #8 0x7fa4cac5c876 in XREMain::XRE_mainStartup(bool*) /toolkit/xre/nsAppRunner.cpp:4684:35\\\\n        #9 0x7fa4cac6d9f6 in XREMain::XRE_main(int, char**, mozilla::BootstrapConfig const&) /toolkit/xre/nsAppRunner.cpp:5940:12\\\\n        #10 0x7fa4cac6ed61 in XRE_main(int, char**, mozilla::BootstrapConfig const&) /toolkit/xre/nsAppRunner.cpp:6009:21\\\\n        #11 0x557c54d51182 in do_main /browser/app/nsBrowserApp.cpp:227:22\\\\n        #12 0x557c54d51182 in main /browser/app/nsBrowserApp.cpp:445:16\\\\n        #13 0x7fa4e21d2082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: eebe5d5f4b608b8a53ec446b63981bba373ca0ca)\\\\n        #14 0x557c54c75848 in _start (/home/worker/firefox/firefox+0xdc848) (BuildId: bd3c21ce7f10fab700e40ad6dfbf1222edd7322e)\\\\n    \\\\n    DEDUP_TOKEN: mozilla::net::DefaultURI::EqualsExceptRef(nsIURI*, bool*)\\\\n    AddressSanitizer can not provide additional info.\\\\n    SUMMARY: AddressSanitizer: SEGV /netwerk/base/DefaultURI.cpp:219:24 in mozilla::net::DefaultURI::EqualsExceptRef(nsIURI*, bool*)\\\\n    \\\\n    Command: /home/worker/firefox/firefox -rss_limit_mb=3500 -use_value_profile=1 -timeout=5 -entropic=1 -dict=./tokens.dict ./corpora/ -handle_segv=0 -handle_bus=0 -handle_abrt=0 -handle_ill=0 -handle_fpe=0 -print_pcs=1\\\\n    \\\\n    ==220==ABORTING\\\\n```",
+              "S3"
+            ],
+            [
+              "1875119",
+              "2024-01-17 17:49:44+00:00",
+              "Crash [@ mozilla::net::SubstitutingURL::EnsureFile]",
+              "Testcase found while fuzzing mozilla-central rev 7392664630b1 built with: --enable-address-sanitizer --enable-fuzzing.\\\\n\\\\nTestcase can be reproduced using the following commands:\\\\n```\\\\n$ pip install fuzzfetch\\\\n$ python -m fuzzfetch --build 7392664630b1 -a --fuzzing --target firefox gtest -n firefox\\\\n$ FUZZER=URIParser ./firefox/firefox testcase.bin\\\\n```\\\\n\\\\n```\\\\n[@ mozilla::net::SubstitutingURL::EnsureFile]\\\\n\\\\n    ==214==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x7f023e9e6594 bp 0x7fff43322f30 sp 0x7fff43322c40 T0)\\\\n    ==214==The signal is caused by a READ memory access.\\\\n    ==214==Hint: address points to the zero page.\\\\n    SCARINESS: 10 (null-deref)\\\\n        #0 0x7f023e9e6594 in mozilla::net::SubstitutingURL::EnsureFile() /netwerk/protocol/res/SubstitutingProtocolHandler.cpp:78:22\\\\n        #1 0x7f023da184a6 in mozilla::net::nsStandardURL::EqualsInternal(nsIURI*, mozilla::net::nsStandardURL::RefHandlingEnum, bool*) /netwerk/base/nsStandardURL.cpp:2498:10\\\\n        #2 0x7f0239b1716b in FuzzingRunURIParser(unsigned char const*, unsigned long) /netwerk/test/fuzz/TestURIFuzzing.cpp:201:18\\\\n        #3 0x565119f19b7b in fuzzer::Fuzzer::ExecuteCallback(unsigned char const*, unsigned long) /tools/fuzzing/libfuzzer/FuzzerLoop.cpp:570:11\\\\n        #4 0x565119f19601 in fuzzer::Fuzzer::RunOne(unsigned char const*, unsigned long, bool, fuzzer::InputInfo*, bool*) /tools/fuzzing/libfuzzer/FuzzerLoop.cpp:479:7\\\\n        #5 0x565119f1aa37 in fuzzer::Fuzzer::MutateAndTestOne() /tools/fuzzing/libfuzzer/FuzzerLoop.cpp:717:19\\\\n        #6 0x565119f1b445 in fuzzer::Fuzzer::Loop(std::vector<fuzzer::SizedFile, fuzzer::fuzzer_allocator<fuzzer::SizedFile> >&) /tools/fuzzing/libfuzzer/FuzzerLoop.cpp:861:9\\\\n        #7 0x565119f0bdcb in fuzzer::FuzzerDriver(int*, char***, int (*)(unsigned char const*, unsigned long)) /tools/fuzzing/libfuzzer/FuzzerDriver.cpp:864:14\\\\n        #8 0x7f024dfcf7ce in mozilla::FuzzerRunner::Run(int*, char***) /tools/fuzzing/interface/harness/FuzzerRunner.cpp:75:13\\\\n        #9 0x7f024dee5434 in XREMain::XRE_mainStartup(bool*) /toolkit/xre/nsAppRunner.cpp:4663:35\\\\n        #10 0x7f024def63f6 in XREMain::XRE_main(int, char**, mozilla::BootstrapConfig const&) /toolkit/xre/nsAppRunner.cpp:5870:12\\\\n        #11 0x7f024def7701 in XRE_main(int, char**, mozilla::BootstrapConfig const&) /toolkit/xre/nsAppRunner.cpp:5938:21\\\\n        #12 0x565119d46d82 in do_main /browser/app/nsBrowserApp.cpp:227:22\\\\n        #13 0x565119d46d82 in main /browser/app/nsBrowserApp.cpp:445:16\\\\n        #14 0x7f0265364082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) (BuildId: e678fe54a5d2c2092f8e47eb0b33105e380f7340)\\\\n        #15 0x565119c6b448 in _start (/home/worker/firefox/firefox+0xdc448) (BuildId: 99ef5a5bc0a9c3ced2831ce0601b4b9e97147496)\\\\n    \\\\n    DEDUP_TOKEN: mozilla::net::SubstitutingURL::EnsureFile()\\\\n    AddressSanitizer can not provide additional info.\\\\n    SUMMARY: AddressSanitizer: SEGV /netwerk/protocol/res/SubstitutingProtocolHandler.cpp:78:22 in mozilla::net::SubstitutingURL::EnsureFile()\\\\n    \\\\n    Command: /home/worker/firefox/firefox -rss_limit_mb=3500 -use_value_profile=1 -timeout=5 -entropic=1 -dict=./tokens.dict ./corpora/ -handle_segv=0 -handle_bus=0 -handle_abrt=0 -handle_ill=0 -handle_fpe=0 -print_pcs=1\\\\n    \\\\n    ==214==ABORTING\\\\n```",
+              "S3"
+            ]
+          ],
+          "rows_sampled": 2
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/T3/analysis/t3_advanced_branch_decision.json",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 165450
+        },
+        "content": {
+          "path": "modeling/T3/analysis/t3_advanced_branch_decision.json",
+          "exists": true,
+          "suffix": ".json",
+          "status": "FOUND",
+          "type": "dict",
+          "keys": [
+            "task",
+            "operation",
+            "classical_candidate",
+            "classical_candidate_validation_macro_f1",
+            "evidence",
+            "justification_conditions",
+            "advanced_nlp_branch",
+            "constraints",
+            "status"
+          ],
+          "interesting_entries": [
+            {
+              "key": "classical_candidate_validation_macro_f1",
+              "value_type": "float",
+              "value_preview": "0.3480174180281372"
+            }
+          ]
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/T3/analysis/t3_error_analysis.json",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 164054
+        },
+        "content": {
+          "path": "modeling/T3/analysis/t3_error_analysis.json",
+          "exists": true,
+          "suffix": ".json",
+          "status": "FOUND",
+          "type": "dict",
+          "keys": [
+            "task",
+            "model",
+            "analysis_type",
+            "validation_rows",
+            "feature_count",
+            "test_used",
+            "confusion_matrix",
+            "labels",
+            "prediction_counts",
+            "confusion_pairs",
+            "representative_errors"
+          ],
+          "interesting_entries": [
+            {
+              "key": "model",
+              "value_type": "str",
+              "value_preview": "T3-MOD-007"
+            },
+            {
+              "key": "validation_rows",
+              "value_type": "int",
+              "value_preview": "4626"
+            },
+            {
+              "key": "feature_count",
+              "value_type": "int",
+              "value_preview": "288972"
+            },
+            {
+              "key": "test_used",
+              "value_type": "bool",
+              "value_preview": "False"
+            },
+            {
+              "key": "labels",
+              "value_type": "list",
+              "value_preview": "['S1', 'S2', 'S3', 'S4']"
+            },
+            {
+              "key": "prediction_counts",
+              "value_type": "dict",
+              "value_preview": "{'S1': 0, 'S2': 20, 'S3': 4281, 'S4': 325}"
+            }
+          ]
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/T3/analysis/t3_error_inspection.json",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 45024
+        },
+        "content": {
+          "path": "modeling/T3/analysis/t3_error_inspection.json",
+          "exists": true,
+          "suffix": ".json",
+          "status": "FOUND",
+          "type": "dict",
+          "keys": [
+            "task",
+            "source",
+            "test_used",
+            "pairs"
+          ],
+          "interesting_entries": [
+            {
+              "key": "test_used",
+              "value_type": "bool",
+              "value_preview": "False"
+            }
+          ]
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/T3/analysis/t3_model_comparison.json",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 4540
+        },
+        "content": {
+          "path": "modeling/T3/analysis/t3_model_comparison.json",
+          "exists": true,
+          "suffix": ".json",
+          "status": "FOUND",
+          "type": "dict",
+          "keys": [
+            "task",
+            "evaluation_split",
+            "test_used",
+            "models",
+            "feature_details",
+            "pairwise_changes"
+          ],
+          "interesting_entries": [
+            {
+              "key": "evaluation_split",
+              "value_type": "str",
+              "value_preview": "VALIDATION_ONLY"
+            },
+            {
+              "key": "test_used",
+              "value_type": "bool",
+              "value_preview": "False"
+            },
+            {
+              "key": "models",
+              "value_type": "dict",
+              "value_preview": "{'T3-MOD-007': {'model': 'TF-IDF + Logistic Regression', 'class_weight': None, 'train_rows': 21587, 'validation_rows': 4626, 'feature_count': 288972, 'accuracy': 0.7455685257241678, 'macro_f1': 0.3048406686411903, 'weighted_f1': 0.6819056084522465, 'per_class': {'S1': {'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'support': 20}, 'S2': {'precision': 0.6, 'recall': 0.024640657084188913, 'f1': 0.047337278106508875, 'support': 487}, 'S3': {'precision': 0.7643074048119598, 'recall': 0.9567251461988304"
+            },
+            {
+              "key": "feature_details",
+              "value_type": "dict",
+              "value_preview": "{'T3-MOD-007': {'word_features': 288972, 'character_features': 0, 'combined_features': 288972}, 'T3-MOD-008': {'word_features': 288972, 'character_features': 0, 'combined_features': 288972}, 'T3-MOD-010': {'word_features': 288972, 'character_features': 1210447, 'combined_features': 1499419}}"
+            }
+          ]
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/T3/analysis/t3_final_generalization_analysis.json",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 4281
+        },
+        "content": {
+          "path": "modeling/T3/analysis/t3_final_generalization_analysis.json",
+          "exists": true,
+          "suffix": ".json",
+          "status": "FOUND",
+          "type": "dict",
+          "keys": [
+            "operation",
+            "task",
+            "model",
+            "evaluation_design",
+            "overall_generalization",
+            "per_class_generalization",
+            "test_confusion_pairs",
+            "test_prediction_distribution",
+            "observations",
+            "interpretation",
+            "controls",
+            "status"
+          ],
+          "interesting_entries": [
+            {
+              "key": "model",
+              "value_type": "str",
+              "value_preview": "T3-MOD-008"
+            },
+            {
+              "key": "evaluation_design",
+              "value_type": "dict",
+              "value_preview": "{'validation_rows': 4626, 'test_rows': 4626, 'test_used_for_selection': False, 'retrained': False, 'refit': False}"
+            },
+            {
+              "key": "test_confusion_pairs",
+              "value_type": "list",
+              "value_preview": "[{'actual': 'S3', 'predicted': 'S4', 'count': 901}, {'actual': 'S3', 'predicted': 'S2', 'count': 590}, {'actual': 'S4', 'predicted': 'S3', 'count': 216}, {'actual': 'S2', 'predicted': 'S3', 'count': 196}, {'actual': 'S4', 'predicted': 'S2', 'count': 94}, {'actual': 'S2', 'predicted': 'S4', 'count': 34}, {'actual': 'S3', 'predicted': 'S1', 'count': 16}, {'actual': 'S1', 'predicted': 'S3', 'count': 5}, {'actual': 'S1', 'predicted': 'S4', 'count': 5}, {'actual': 'S1', 'predicted': 'S2', 'count': 3}"
+            },
+            {
+              "key": "test_prediction_distribution",
+              "value_type": "dict",
+              "value_preview": "{'counts': {'S1': 19, 'S2': 792, 'S3': 2554, 'S4': 1261}, 'shares': {'S1': 0.004107220060527454, 'S2': 0.17120622568093385, 'S3': 0.5520968439256377, 'S4': 0.27258971033290097}}"
+            }
+          ]
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/T3/analysis/t3_classical_model_comparison.json",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 3995
+        },
+        "content": {
+          "path": "modeling/T3/analysis/t3_classical_model_comparison.json",
+          "exists": true,
+          "suffix": ".json",
+          "status": "FOUND",
+          "type": "dict",
+          "keys": [
+            "task",
+            "operation",
+            "selection_criterion",
+            "models",
+            "ranking_by_frozen_criterion",
+            "selected_classical_candidate",
+            "selection_note",
+            "status"
+          ],
+          "interesting_entries": [
+            {
+              "key": "models",
+              "value_type": "dict",
+              "value_preview": "{'T3-MOD-007': {'accuracy': 0.7455685257241678, 'macro_f1': 0.3048406686411903, 'weighted_f1': 0.6819056084522465, 'per_class': {'S1': {'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'support': 20}, 'S2': {'precision': 0.6, 'recall': 0.024640657084188913, 'f1': 0.047337278106508875, 'support': 487}, 'S3': {'precision': 0.7643074048119598, 'recall': 0.9567251461988304, 'f1': 0.8497597714582522, 'support': 3420}, 'S4': {'precision': 0.5076923076923077, 'recall': 0.23605150214592274, 'f1': 0.322265625"
+            }
+          ]
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/T3/contracts/t3_model_contract.json",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 3731
+        },
+        "content": {
+          "path": "modeling/T3/contracts/t3_model_contract.json",
+          "exists": true,
+          "suffix": ".json",
+          "status": "FOUND",
+          "type": "dict",
+          "keys": [
+            "operation",
+            "task",
+            "task_name",
+            "dataset",
+            "status",
+            "target",
+            "prediction_boundary",
+            "horizon",
+            "features",
+            "migration_policy",
+            "eligibility",
+            "class_distribution",
+            "validated_artifact",
+            "validation_status",
+            "modeling_constraints",
+            "integrity",
+            "source_decision"
+          ],
+          "interesting_entries": [
+            {
+              "key": "target",
+              "value_type": "dict",
+              "value_preview": "{'name': 'first operational post-Creation Severity', 'classes': ['S1', 'S2', 'S3', 'S4'], 'selection_rule': 'First post-Creation History event containing a Severity change; use the first Severity change within that event.', 'admissible_added_values': ['S1', 'S2', 'S3', 'S4'], 'excluded_target_values': ['S3 S3'], 'historical_severity_mapping': 'FORBIDDEN', 'current_final_severity': 'FORBIDDEN_AS_CREATION_TARGET'}"
+            },
+            {
+              "key": "prediction_boundary",
+              "value_type": "dict",
+              "value_preview": "{'name': 'Creation', 'type': 'Creation-time cutoff', 'post_creation_information': 'FORBIDDEN', 'current_state_backfill': 'FORBIDDEN'}"
+            },
+            {
+              "key": "features",
+              "value_type": "dict",
+              "value_preview": "{'admitted': ['Summary', 'Description'], 'boundary': 'Creation-time ticket content', 'forbidden': ['post-Creation History', 'target-event information', 'current/final Severity', 'current mutable state', 'future information', 'target-derived features', 'historical Severity relabeling']}"
+            },
+            {
+              "key": "validated_artifact",
+              "value_type": "dict",
+              "value_preview": "{'path': '/run/media/whiteblack/User 1/Datasets/Mozilla_CORE/DTM-002_T3_FIRST_SEVERITY_derived.csv', 'rows': 30839, 'columns': 11, 'validated': True, 'validation_operation': 'DTM-002 OP-049', 'readiness_operation': 'DTM-002 OP-055'}"
+            },
+            {
+              "key": "validation_status",
+              "value_type": "dict",
+              "value_preview": "{'structural_validation': 'PASS', 'target_accounting': 'PASS', 'temporal_integrity': 'PASS', 'migration_exclusion': 'PASS', 'feature_availability': 'PASS', 'semantic_leakage_review': 'PASS', 'duplicate_consistency': 'PASS', 'class_eligibility_accounting': 'PASS'}"
+            },
+            {
+              "key": "modeling_constraints",
+              "value_type": "dict",
+              "value_preview": "{'advanced_model_required': False, 'test_set': 'Must remain locked until final model selection.', 'model_selection': 'Must be based on training/validation evidence only.', 'class_imbalance': 'Must be explicitly considered during modeling and evaluation.', 'minority_classes': ['S1', 'S2'], 'calibration': 'Categorical probability/confidence evaluation is permitted and should remain task-specific.'}"
+            }
+          ]
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/T3/analysis/t3_baseline_comparison.json",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 3473
+        },
+        "content": {
+          "path": "modeling/T3/analysis/t3_baseline_comparison.json",
+          "exists": true,
+          "suffix": ".json",
+          "status": "FOUND",
+          "type": "dict",
+          "keys": [
+            "task",
+            "baseline",
+            "comparison_model",
+            "controlled_conditions",
+            "overall_metrics",
+            "per_class_changes",
+            "confusion_matrices"
+          ],
+          "interesting_entries": [
+            {
+              "key": "comparison_model",
+              "value_type": "dict",
+              "value_preview": "{'model': 'TF-IDF + Logistic Regression', 'class_weight': 'balanced'}"
+            }
+          ]
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/T3/contracts/t3_advanced_model_contract.json",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 3057
+        },
+        "content": {
+          "path": "modeling/T3/contracts/t3_advanced_model_contract.json",
+          "exists": true,
+          "suffix": ".json",
+          "status": "FOUND",
+          "type": "dict",
+          "keys": [
+            "task",
+            "operation",
+            "advanced_branch_status",
+            "candidate_model",
+            "data_contract",
+            "split_contract",
+            "training_contract",
+            "evaluation_contract",
+            "comparison_contract",
+            "environment_contract",
+            "resource_constraints",
+            "forbidden",
+            "status"
+          ],
+          "interesting_entries": [
+            {
+              "key": "candidate_model",
+              "value_type": "dict",
+              "value_preview": "{'primary': 'DistilBERT', 'alternatives': ['MiniLM', 'BERT'], 'selection_status': 'PRIMARY_CANDIDATE_DEFINED', 'reason': 'Use a pretrained transformer encoder to test whether contextual language representations improve severity separation beyond classical TF-IDF models.'}"
+            },
+            {
+              "key": "evaluation_contract",
+              "value_type": "dict",
+              "value_preview": "{'primary_metric': 'macro_f1', 'secondary_metrics': ['accuracy', 'weighted_f1'], 'per_class_metrics_required': True, 'labels': ['S1', 'S2', 'S3', 'S4'], 's1_support_caution': True, 'test_use_for_candidate_selection': False}"
+            }
+          ]
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/T3/analysis/t3_final_closure.json",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 3048
+        },
+        "content": {
+          "path": "modeling/T3/analysis/t3_final_closure.json",
+          "exists": true,
+          "suffix": ".json",
+          "status": "FOUND",
+          "type": "dict",
+          "keys": [
+            "operation",
+            "task",
+            "status",
+            "final_candidate",
+            "test_per_class",
+            "generalization",
+            "advanced_branch",
+            "limitations",
+            "suitability",
+            "system_role",
+            "recommended_use",
+            "evidence_controls",
+            "closure_statement",
+            "next_task"
+          ],
+          "interesting_entries": [
+            {
+              "key": "test_per_class",
+              "value_type": "dict",
+              "value_preview": "{'S1': {'precision': 0.0, 'recall': 0.0, 'f1': 0.0, 'support': 13}, 'S2': {'precision': 0.13257575757575757, 'recall': 0.3115727002967359, 'f1': 0.18600531443755536, 'support': 337}, 'S3': {'precision': 0.83672670321065, 'recall': 0.5864434687156971, 'f1': 0.6895772829945144, 'support': 3644}, 'S4': {'precision': 0.25455987311657413, 'recall': 0.5079113924050633, 'f1': 0.33914421553090335, 'support': 632}}"
+            }
+          ]
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/T3/analysis/t3_advanced_branch_closure.json",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 2436
+        },
+        "content": {
+          "path": "modeling/T3/analysis/t3_advanced_branch_closure.json",
+          "exists": true,
+          "suffix": ".json",
+          "status": "FOUND",
+          "type": "dict",
+          "keys": [
+            "operation",
+            "task",
+            "decision_basis",
+            "classical_candidate",
+            "advanced_candidate",
+            "metric_changes_advanced_minus_classical",
+            "interpretation",
+            "decision",
+            "controls",
+            "next_stage",
+            "status"
+          ],
+          "interesting_entries": []
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/T3/analysis/t3_split_report.json",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 1902
+        },
+        "content": {
+          "path": "modeling/T3/analysis/t3_split_report.json",
+          "exists": true,
+          "suffix": ".json",
+          "status": "FOUND",
+          "type": "dict",
+          "keys": [
+            "input",
+            "total_rows",
+            "split_method",
+            "fractions",
+            "splits",
+            "id_overlap",
+            "temporal_order_valid",
+            "status"
+          ],
+          "interesting_entries": []
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/T3/metrics/t3_final_test_metrics.json",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 1493
+        },
+        "content": {
+          "path": "modeling/T3/metrics/t3_final_test_metrics.json",
+          "exists": true,
+          "suffix": ".json",
+          "status": "FOUND",
+          "type": "dict",
+          "keys": [
+            "operation",
+            "task",
+            "model_id",
+            "model_path",
+            "test_rows",
+            "accuracy",
+            "macro_f1",
+            "weighted_f1",
+            "per_class",
+            "true_counts",
+            "prediction_counts",
+            "confusion_matrix",
+            "controls"
+          ],
+          "interesting_entries": [
+            {
+              "key": "model_id",
+              "value_type": "str",
+              "value_preview": "T3-MOD-008"
+            },
+            {
+              "key": "model_path",
+              "value_type": "str",
+              "value_preview": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib"
+            },
+            {
+              "key": "test_rows",
+              "value_type": "int",
+              "value_preview": "4626"
+            },
+            {
+              "key": "prediction_counts",
+              "value_type": "dict",
+              "value_preview": "{'S1': 19, 'S2': 792, 'S3': 2554, 'S4': 1261}"
+            }
+          ]
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/T3/metrics/t3_word_char_validation_metrics.json",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 1300
+        },
+        "content": {
+          "path": "modeling/T3/metrics/t3_word_char_validation_metrics.json",
+          "exists": true,
+          "suffix": ".json",
+          "status": "FOUND",
+          "type": "dict",
+          "keys": [
+            "task",
+            "model",
+            "class_weight",
+            "train_rows",
+            "validation_rows",
+            "word_feature_count",
+            "char_feature_count",
+            "combined_feature_count",
+            "accuracy",
+            "macro_f1",
+            "weighted_f1",
+            "per_class",
+            "confusion_matrix",
+            "labels",
+            "test_used",
+            "status"
+          ],
+          "interesting_entries": [
+            {
+              "key": "model",
+              "value_type": "str",
+              "value_preview": "Word TF-IDF + Character TF-IDF + Logistic Regression"
+            },
+            {
+              "key": "validation_rows",
+              "value_type": "int",
+              "value_preview": "4626"
+            },
+            {
+              "key": "word_feature_count",
+              "value_type": "int",
+              "value_preview": "288972"
+            },
+            {
+              "key": "char_feature_count",
+              "value_type": "int",
+              "value_preview": "1210447"
+            },
+            {
+              "key": "combined_feature_count",
+              "value_type": "int",
+              "value_preview": "1499419"
+            },
+            {
+              "key": "labels",
+              "value_type": "list",
+              "value_preview": "['S1', 'S2', 'S3', 'S4']"
+            },
+            {
+              "key": "test_used",
+              "value_type": "bool",
+              "value_preview": "False"
+            }
+          ]
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/T3/plots/t3_visualization_manifest.json",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 1265
+        },
+        "content": {
+          "path": "modeling/T3/plots/t3_visualization_manifest.json",
+          "exists": true,
+          "suffix": ".json",
+          "status": "FOUND",
+          "type": "dict",
+          "keys": [
+            "operation",
+            "task",
+            "source_artifacts",
+            "plots",
+            "visualizations",
+            "modeling_performed",
+            "training_performed",
+            "test_selection_performed",
+            "raw_mozilla_accessed",
+            "dataset_modified",
+            "status"
+          ],
+          "interesting_entries": [
+            {
+              "key": "source_artifacts",
+              "value_type": "list",
+              "value_preview": "['/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/metrics/t3_class_weighted_validation_metrics.json', '/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/metrics/t3_final_test_metrics.json', '/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/analysis/t3_final_generalization_analysis.json']"
+            },
+            {
+              "key": "modeling_performed",
+              "value_type": "bool",
+              "value_preview": "False"
+            },
+            {
+              "key": "test_selection_performed",
+              "value_type": "bool",
+              "value_preview": "False"
+            }
+          ]
+        }
+      },
+      {
+        "candidate": {
+          "path": "modeling/T3/metrics/t3_svm_class_weighted_validation_metrics.json",
+          "score": 2,
+          "reasons": [
+            "+artifact"
+          ],
+          "size_bytes": 1244
+        },
+        "content": {
+          "path": "modeling/T3/metrics/t3_svm_class_weighted_validation_metrics.json",
+          "exists": true,
+          "suffix": ".json",
+          "status": "FOUND",
+          "type": "dict",
+          "keys": [
+            "task",
+            "model_id",
+            "model_family",
+            "class_weight",
+            "parameters",
+            "features",
+            "train_rows",
+            "validation_rows",
+            "feature_dimensions",
+            "accuracy",
+            "macro_f1",
+            "weighted_f1",
+            "per_class",
+            "test_used",
+            "status"
+          ],
+          "interesting_entries": [
+            {
+              "key": "model_id",
+              "value_type": "str",
+              "value_preview": "T3-MOD-016"
+            },
+            {
+              "key": "model_family",
+              "value_type": "str",
+              "value_preview": "LinearSVC"
+            },
+            {
+              "key": "features",
+              "value_type": "dict",
+              "value_preview": "{'fields': ['Summary', 'Description'], 'representation': 'TF-IDF', 'analyzer': 'word', 'ngram_range': [1, 2], 'min_df': 2, 'max_df': 0.98, 'sublinear_tf': True}"
+            },
+            {
+              "key": "validation_rows",
+              "value_type": "int",
+              "value_preview": "4626"
+            },
+            {
+              "key": "feature_dimensions",
+              "value_type": "int",
+              "value_preview": "288972"
+            },
+            {
+              "key": "test_used",
+              "value_type": "bool",
+              "value_preview": "False"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "resolution_criteria": {
+    "must_be_machine_generated": true,
+    "must_represent_prediction_or_inference_evidence": true,
+    "must_have_ticket_or_equivalent_decision_identifier": true,
+    "must_respect_creation_boundary": true,
+    "must_not_be_observed_target_only": true,
+    "must_not_be_evaluation_metrics_only": true,
+    "must_not_be_analysis_only": true,
+    "must_not_contain_post_creation_information": true,
+    "filename_alone_is_insufficient": true
+  }
+}

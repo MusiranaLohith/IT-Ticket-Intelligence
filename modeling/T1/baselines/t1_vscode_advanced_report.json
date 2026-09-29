@@ -1,0 +1,117 @@
+{
+  "status": "ADVANCED_MODEL_COMPLETE",
+  "model": {
+    "type": "TFIDF_LINEAR_SVC",
+    "C": 1.0,
+    "class_weight": "balanced",
+    "random_state": 42,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 2,
+    "max_df": 0.98,
+    "sublinear_tf": true,
+    "probability_output": false
+  },
+  "data": {
+    "development_records": 3717,
+    "evaluation_records": 930,
+    "evaluation_used_for_fit": false
+  },
+  "features": {
+    "summary": true,
+    "description_clean": true,
+    "issue_id": false,
+    "source_row": false,
+    "created": false,
+    "resolved": false,
+    "resolution": false
+  },
+  "metrics": {
+    "accuracy": 0.9774193548387097,
+    "macro_f1": 0.44276914261156075,
+    "weighted_f1": 0.9683630204879491,
+    "classification_report": {
+      "Bug": {
+        "precision": 0.9771986970684039,
+        "recall": 1.0,
+        "f1-score": 0.9884678747940692,
+        "support": 900.0
+      },
+      "Feature Request": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 16.0
+      },
+      "Performance Issue": {
+        "precision": 1.0,
+        "recall": 0.6428571428571429,
+        "f1-score": 0.782608695652174,
+        "support": 14.0
+      },
+      "Usability": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "accuracy": 0.9774193548387097,
+      "macro avg": {
+        "precision": 0.494299674267101,
+        "recall": 0.4107142857142857,
+        "f1-score": 0.44276914261156075,
+        "support": 930.0
+      },
+      "weighted avg": {
+        "precision": 0.9607299218941543,
+        "recall": 0.9774193548387097,
+        "f1-score": 0.9683630204879491,
+        "support": 930.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        900,
+        0,
+        0,
+        0
+      ],
+      [
+        16,
+        0,
+        0,
+        0
+      ],
+      [
+        5,
+        0,
+        9,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "Bug",
+      "Feature Request",
+      "Performance Issue",
+      "Usability"
+    ]
+  },
+  "evaluation_class_counts": {
+    "Bug": 900,
+    "Feature Request": 16,
+    "Performance Issue": 14,
+    "Usability": 0
+  },
+  "unavailable_evaluation_classes": [
+    "Usability"
+  ],
+  "raw_source_modified": false
+}

@@ -1,0 +1,125 @@
+{
+  "operation": "MOD-036 OP-011",
+  "purpose": "Define the validated development-time input schema for the T8 Decision Engine without creating a universal scalar target.",
+  "prediction_boundary": "Creation",
+  "decision_unit": "canonical Mozilla ticket",
+  "decision_unit_population": 513816,
+  "decision_outputs": {
+    "priority_recommendation": {
+      "source_task": "T2",
+      "native_semantics": "predicted priority class",
+      "allowed_evidence": [
+        "predicted_priority",
+        "native class probabilities when available"
+      ]
+    },
+    "assignment_recommendation": {
+      "source_task": "T1/T4",
+      "native_semantics": "IT Support category evidence plus retrieval/assignee evidence",
+      "allowed_evidence": [
+        "T1 predicted category",
+        "T1 native decision evidence where available",
+        "T4 retrieved candidate assignees",
+        "T4 native retrieval scores/ranks"
+      ]
+    },
+    "duplicate_recommendation": {
+      "source_task": "T5",
+      "native_semantics": "duplicate probability/evidence",
+      "allowed_evidence": [
+        "native T5 duplicate probability",
+        "native T5 calibrated evidence"
+      ]
+    },
+    "resolution_context": {
+      "source_task": "T7",
+      "native_semantics": "time-to-resolution / survival evidence",
+      "allowed_evidence": [
+        "predicted median survival time",
+        "native survival probabilities",
+        "censoring/event semantics"
+      ]
+    },
+    "overall_triage_recommendation": {
+      "source_task": "T8",
+      "native_semantics": "structured machine-generated synthesis of available task-specific evidence",
+      "universal_scalar_required": false
+    }
+  },
+  "task_input_layers": {
+    "T1": {
+      "role": "category evidence",
+      "status": "candidate evidence available; native model not formally frozen",
+      "restriction": "Do not silently promote a historical candidate model to frozen production status."
+    },
+    "T2": {
+      "role": "priority evidence",
+      "status": "validated native prediction evidence"
+    },
+    "T3": {
+      "role": "severity evidence",
+      "status": "validated secondary decision-support signal",
+      "restriction": "Do not treat T3 as autonomous or authoritative severity."
+    },
+    "T4": {
+      "role": "assignee/retrieval evidence",
+      "status": "validated native retrieval evidence"
+    },
+    "T5": {
+      "role": "duplicate evidence",
+      "status": "validated calibrated duplicate evidence"
+    },
+    "T6": {
+      "role": "query-level retrieval/ranking evidence",
+      "status": "validated native ranking evidence",
+      "restriction": "observable_non_positive is not a true negative."
+    },
+    "T7": {
+      "role": "resolution-time evidence",
+      "status": "validated survival evidence",
+      "restriction": "right censoring remains censoring; survival output is not converted into an ordinary regression target."
+    }
+  },
+  "fusion_rules": [
+    "Preserve native task semantics.",
+    "Missing evidence means unavailable, not negative.",
+    "Do not average incompatible probabilities.",
+    "Do not assign arbitrary task weights.",
+    "Do not concatenate heterogeneous outputs blindly.",
+    "Do not construct a synthetic universal triage target.",
+    "Do not use post-Creation information.",
+    "Do not convert ranking outputs into probabilities without native justification.",
+    "Do not convert survival outputs into ordinary regression outputs.",
+    "Do not make causal claims from predictive evidence.",
+    "T6 observable_non_positive is not a true negative.",
+    "T7 censoring must remain explicitly represented."
+  ],
+  "layer_model": {
+    "Layer_A": [
+      "T1",
+      "T2",
+      "T3",
+      "T4",
+      "T5",
+      "T7"
+    ],
+    "Layer_B": [
+      "T6 query-level"
+    ],
+    "Layer_C": [
+      "T6 query-candidate"
+    ],
+    "all_task_intersection_required": false
+  },
+  "human_control": {
+    "role": "review_and_override",
+    "replacement_for_machine_recommendation": false
+  },
+  "development_constraints": {
+    "training_performed": false,
+    "prediction_generation_performed": false,
+    "new_model_selected": false,
+    "dataset_modified": false,
+    "post_creation_information_allowed": false
+  }
+}

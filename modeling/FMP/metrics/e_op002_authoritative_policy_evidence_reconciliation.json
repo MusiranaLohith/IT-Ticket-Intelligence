@@ -1,0 +1,386 @@
+{
+  "operation": "E-OP-002",
+  "title": "Authoritative Policy Evidence Reconciliation",
+  "status": "PASS",
+  "read_only": true,
+  "model_modified": false,
+  "retraining_performed": false,
+  "threshold_selection_performed": false,
+  "threshold_optimization_performed": false,
+  "locked_test_reused": false,
+  "task_semantics": {
+    "T1": {
+      "native_signal": "classification / native decision score",
+      "policy_role": "task evidence",
+      "policy_status": "TASK_EVIDENCE_ONLY"
+    },
+    "T2": {
+      "native_signal": "priority classification",
+      "policy_role": "task evidence",
+      "policy_status": "TASK_EVIDENCE_ONLY"
+    },
+    "T3": {
+      "native_signal": "severity classification",
+      "policy_role": "task evidence",
+      "policy_status": "TASK_EVIDENCE_ONLY"
+    },
+    "T4": {
+      "native_signal": "historical assignee retrieval",
+      "policy_role": "retrieval evidence",
+      "policy_status": "SEE_AUTHORITATIVE_EVIDENCE"
+    },
+    "T5": {
+      "native_signal": "duplicate probability / calibration evidence",
+      "policy_role": "calibrated task-specific evidence",
+      "policy_status": "SEE_AUTHORITATIVE_EVIDENCE"
+    },
+    "T6": {
+      "native_signal": "retrieval ranking",
+      "policy_role": "retrieval evidence",
+      "policy_status": "SEE_AUTHORITATIVE_EVIDENCE"
+    },
+    "T7": {
+      "native_signal": "survival / time-to-resolution",
+      "policy_role": "time-to-resolution evidence",
+      "policy_status": "SEE_AUTHORITATIVE_EVIDENCE"
+    },
+    "T8": {
+      "native_signal": "evidence availability / decision state",
+      "policy_role": "evidence integration state",
+      "policy_status": "SEE_AUTHORITATIVE_EVIDENCE"
+    },
+    "T9": {
+      "native_signal": "task-specific reliability semantics",
+      "policy_role": "reliability evidence",
+      "policy_status": "SEE_AUTHORITATIVE_EVIDENCE"
+    },
+    "T10": {
+      "native_signal": "decision-policy boundary",
+      "policy_role": "policy specification/evidence boundary",
+      "policy_status": "SEE_AUTHORITATIVE_EVIDENCE"
+    }
+  },
+  "authoritative_sources": {
+    "T4": [
+      {
+        "task": "T4",
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/t4_mod013_closure.json",
+        "exists": true,
+        "readable": true,
+        "bytes": 6363,
+        "evidence_classification": {
+          "classification": "POLICY_RELEVANT_TASK_EVIDENCE",
+          "signals": {
+            "calibration": false,
+            "probability": false,
+            "confidence": false,
+            "threshold": false,
+            "automation": false,
+            "human_review": true,
+            "defer": false,
+            "ranking": true,
+            "retrieval": true,
+            "survival": false,
+            "censoring": false,
+            "evidence": false,
+            "not_established": false,
+            "not_created": false
+          }
+        }
+      }
+    ],
+    "T5": [
+      {
+        "task": "T5",
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod011_final_closure.json",
+        "exists": true,
+        "readable": true,
+        "bytes": 5177,
+        "evidence_classification": {
+          "classification": "POLICY_RELEVANT_TASK_EVIDENCE",
+          "signals": {
+            "calibration": true,
+            "probability": true,
+            "confidence": false,
+            "threshold": true,
+            "automation": false,
+            "human_review": false,
+            "defer": false,
+            "ranking": false,
+            "retrieval": false,
+            "survival": false,
+            "censoring": false,
+            "evidence": true,
+            "not_established": false,
+            "not_created": false
+          }
+        }
+      }
+    ],
+    "T6": [
+      {
+        "task": "T6",
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_final_closure.json",
+        "exists": true,
+        "readable": true,
+        "bytes": 5819,
+        "evidence_classification": {
+          "classification": "POLICY_RELEVANT_TASK_EVIDENCE",
+          "signals": {
+            "calibration": true,
+            "probability": true,
+            "confidence": false,
+            "threshold": true,
+            "automation": true,
+            "human_review": true,
+            "defer": false,
+            "ranking": true,
+            "retrieval": true,
+            "survival": false,
+            "censoring": false,
+            "evidence": true,
+            "not_established": false,
+            "not_created": false
+          }
+        }
+      }
+    ],
+    "T7": [
+      {
+        "task": "T7",
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod012_final_closure.json",
+        "exists": true,
+        "readable": true,
+        "bytes": 4425,
+        "evidence_classification": {
+          "classification": "POLICY_RELEVANT_TASK_EVIDENCE",
+          "signals": {
+            "calibration": true,
+            "probability": false,
+            "confidence": false,
+            "threshold": true,
+            "automation": true,
+            "human_review": true,
+            "defer": false,
+            "ranking": false,
+            "retrieval": false,
+            "survival": true,
+            "censoring": true,
+            "evidence": true,
+            "not_established": true,
+            "not_created": false
+          }
+        }
+      }
+    ],
+    "T8": [
+      {
+        "task": "T8",
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/mod036/op026/t8_mod036_op026_decision_engine_validation.json",
+        "exists": true,
+        "readable": true,
+        "bytes": 2256,
+        "evidence_classification": {
+          "classification": "POLICY_RELEVANT_TASK_EVIDENCE",
+          "signals": {
+            "calibration": true,
+            "probability": true,
+            "confidence": true,
+            "threshold": true,
+            "automation": true,
+            "human_review": false,
+            "defer": false,
+            "ranking": false,
+            "retrieval": false,
+            "survival": true,
+            "censoring": false,
+            "evidence": true,
+            "not_established": false,
+            "not_created": false
+          }
+        }
+      }
+    ],
+    "T9": [
+      {
+        "task": "T9",
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op015_final_integrated_closure.json",
+        "exists": true,
+        "readable": true,
+        "bytes": 6247,
+        "evidence_classification": {
+          "classification": "POLICY_RELEVANT_TASK_EVIDENCE",
+          "signals": {
+            "calibration": true,
+            "probability": true,
+            "confidence": true,
+            "threshold": true,
+            "automation": false,
+            "human_review": true,
+            "defer": false,
+            "ranking": true,
+            "retrieval": true,
+            "survival": true,
+            "censoring": true,
+            "evidence": true,
+            "not_established": true,
+            "not_created": true
+          }
+        }
+      },
+      {
+        "task": "T9",
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op014_cross_task_evidence_synthesis.json",
+        "exists": true,
+        "readable": true,
+        "bytes": 10677,
+        "evidence_classification": {
+          "classification": "POLICY_RELEVANT_TASK_EVIDENCE",
+          "signals": {
+            "calibration": true,
+            "probability": true,
+            "confidence": true,
+            "threshold": true,
+            "automation": false,
+            "human_review": false,
+            "defer": false,
+            "ranking": true,
+            "retrieval": true,
+            "survival": true,
+            "censoring": true,
+            "evidence": true,
+            "not_established": true,
+            "not_created": true
+          }
+        }
+      }
+    ],
+    "T10": [
+      {
+        "task": "T10",
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp05_op006_native_policy_evidence_inventory.json",
+        "exists": true,
+        "readable": true,
+        "bytes": 22365,
+        "evidence_classification": {
+          "classification": "POLICY_BOUNDARY_EVIDENCE",
+          "signals": {
+            "calibration": true,
+            "probability": true,
+            "confidence": true,
+            "threshold": true,
+            "automation": false,
+            "human_review": false,
+            "defer": false,
+            "ranking": false,
+            "retrieval": false,
+            "survival": false,
+            "censoring": false,
+            "evidence": true,
+            "not_established": false,
+            "not_created": false
+          }
+        }
+      },
+      {
+        "task": "T10",
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp05_op007r_native_operating_evidence.json",
+        "exists": true,
+        "readable": true,
+        "bytes": 53312,
+        "evidence_classification": {
+          "classification": "POLICY_BOUNDARY_EVIDENCE",
+          "signals": {
+            "calibration": true,
+            "probability": true,
+            "confidence": true,
+            "threshold": true,
+            "automation": false,
+            "human_review": true,
+            "defer": false,
+            "ranking": false,
+            "retrieval": false,
+            "survival": false,
+            "censoring": false,
+            "evidence": true,
+            "not_established": false,
+            "not_created": false
+          }
+        }
+      },
+      {
+        "task": "T10",
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp05_op008_empirical_policy_boundary_audit.json",
+        "exists": true,
+        "readable": true,
+        "bytes": 4145,
+        "evidence_classification": {
+          "classification": "POLICY_BOUNDARY_EVIDENCE",
+          "signals": {
+            "calibration": true,
+            "probability": false,
+            "confidence": true,
+            "threshold": true,
+            "automation": true,
+            "human_review": true,
+            "defer": true,
+            "ranking": false,
+            "retrieval": true,
+            "survival": false,
+            "censoring": false,
+            "evidence": true,
+            "not_established": true,
+            "not_created": true
+          }
+        }
+      },
+      {
+        "task": "T10",
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op022r8_final_t10_literal_key_reconciliation.json",
+        "exists": true,
+        "readable": true,
+        "bytes": 1219,
+        "evidence_classification": {
+          "classification": "POLICY_BOUNDARY_EVIDENCE",
+          "signals": {
+            "calibration": false,
+            "probability": false,
+            "confidence": true,
+            "threshold": true,
+            "automation": true,
+            "human_review": true,
+            "defer": false,
+            "ranking": false,
+            "retrieval": false,
+            "survival": false,
+            "censoring": false,
+            "evidence": false,
+            "not_established": true,
+            "not_created": true
+          }
+        }
+      }
+    ]
+  },
+  "source_counts": {
+    "existing": 11,
+    "readable": 11,
+    "expected": 11
+  },
+  "policy_boundary": {
+    "AUTOMATION": "NOT_ESTABLISHED",
+    "HUMAN_REVIEW": "NOT_ESTABLISHED",
+    "UNIVERSAL_THRESHOLD": "NOT_ESTABLISHED",
+    "UNIVERSAL_CONFIDENCE": "NOT_CREATED",
+    "UNIVERSAL_RISK": "NOT_CREATED",
+    "SYNTHETIC_FUSION_TARGET": "NOT_CREATED"
+  },
+  "interpretation": {
+    "task_evidence_is_not_equivalent_to_policy_validation": true,
+    "retrieval_scores_are_not_probability_outputs": true,
+    "survival_outputs_are_not_automation_thresholds": true,
+    "missing_evidence_is_not_a_negative_outcome": true,
+    "cross_task_probability_aggregation_is_not_created": true,
+    "operational_thresholds_are_not_selected_by_this_operation": true
+  }
+}

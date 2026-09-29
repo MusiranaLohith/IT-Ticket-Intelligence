@@ -1,0 +1,76 @@
+{
+  "operation": "T6 MOD-003",
+  "task": "T6",
+  "status": "ACCEPTED",
+  "source_artifact": "/run/media/whiteblack/User 1/Datasets/Mozilla_CORE/DTM-002_T6_CANDIDATE_DATASET_derived.csv",
+  "source_artifact_modified": false,
+  "split_policy": {
+    "nominal_boundary_year": 2024,
+    "nominal_train_rule": "query Creation year < 2024",
+    "nominal_eval_rule": "query Creation year >= 2024",
+    "content_group_definition": "normalized Summary + normalized Description",
+    "crossing_group_rule": "majority query-occurrence side",
+    "tie_rule": "side containing earliest query Creation year",
+    "group_isolation": true
+  },
+  "source_accounting": {
+    "rows": 274922,
+    "queries": 2722,
+    "positive_rows": 2722,
+    "observable_non_positive_rows": 272200,
+    "candidates_per_query": 101
+  },
+  "content_groups": {
+    "total": 2714,
+    "train_only": 1900,
+    "eval_only": 814,
+    "cross_boundary": 0,
+    "cross_boundary_assigned_train": 0,
+    "cross_boundary_assigned_eval": 0
+  },
+  "final_split": {
+    "train_rows": 192506,
+    "eval_rows": 82416,
+    "train_queries": 1906,
+    "eval_queries": 816,
+    "train_positive_rows": 1906,
+    "eval_positive_rows": 816,
+    "train_observable_non_positive_rows": 190600,
+    "eval_observable_non_positive_rows": 81600
+  },
+  "temporal_displacement": {
+    "train_preboundary_queries": 1906,
+    "train_boundary_plus_queries": 0,
+    "eval_preboundary_queries": 0,
+    "eval_boundary_plus_queries": 816,
+    "train_preboundary_rows": 192506,
+    "train_boundary_plus_rows": 0,
+    "eval_preboundary_rows": 0,
+    "eval_boundary_plus_rows": 82416
+  },
+  "temporal_purity": {
+    "train": 1.0,
+    "eval": 1.0,
+    "train_positive": 1.0,
+    "eval_positive": 1.0
+  },
+  "leakage_controls": {
+    "query_overlap": 0,
+    "content_group_overlap": 0,
+    "no_query_overlap": true,
+    "no_content_group_overlap": true
+  },
+  "immutability_controls": {
+    "raw_dataset_modified": false,
+    "accepted_dtm_artifact_modified": false,
+    "modeling_copy_created": true
+  },
+  "artifacts": {
+    "train": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/splits/t6_train_group_aware.csv",
+    "eval": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/splits/t6_eval_group_aware.csv",
+    "content_group_assignments": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/derived/t6_content_group_assignments.csv",
+    "audit": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_group_aware_split_audit.json"
+  },
+  "overall_control": true,
+  "decision": "ACCEPTED — group-aware chronological split constructed from the accepted DTM T6 candidate artifact."
+}

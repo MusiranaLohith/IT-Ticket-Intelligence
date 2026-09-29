@@ -1,0 +1,105 @@
+======================================================================
+        IT TICKET INTELLIGENCE & TRIAGE SYSTEM
+======================================================================
+
+TICKET
+----------------------------------------------------------------------
+ID          : H-RUN-019-VPN-001
+CREATION    : 2026-09-27T05:20:00Z
+TITLE       : VPN connection fails after password reset
+DESCRIPTION : I reset my corporate password this morning. Since then, the VPN client connects briefly and then disconnects. I restarted the laptop and reinstalled the VPN client, but the issue persists. I need access to the internal systems for today's work.
+
+T1 — CATEGORY
+----------------------------------------------------------------------
+Prediction  : None
+Status      : FAILED
+
+T2 — PRIORITY
+----------------------------------------------------------------------
+Prediction  : None
+Status      : FAILED
+
+T3 — SEVERITY
+----------------------------------------------------------------------
+Prediction  : None
+Status      : FAILED
+
+T4 — HISTORICAL ASSIGNEE RETRIEVAL
+----------------------------------------------------------------------
+1. 1321841 | dd.mozilla@gmail.com | distance=0.706001
+2. 220663 | darin@meer.net | distance=0.745875
+3. 1405307 | daniel@haxx.se | distance=0.751102
+4. 125875 | darin@netscape.com | distance=0.754856
+5. 947801 | daniel@haxx.se | distance=0.764998
+Semantics   : historical retrieval evidence
+Auto assign : False
+
+T5 — DUPLICATE EVIDENCE
+----------------------------------------------------------------------
+Evidence    : None
+Threshold   : None
+Status      : FAILED
+
+T6 — RELATED TICKETS
+----------------------------------------------------------------------
+Runtime     : PARTIAL_NATIVE_RUNTIME
+Full MOD-010: False
+Top IDs     : ['T6', 'MOD-010', '274922', 'False']
+
+T7 — RESOLUTION-TIME EVIDENCE
+----------------------------------------------------------------------
+Model       : None
+Median sec  : None
+Temporal    : None
+Status      : FAILED
+
+T8 — EVIDENCE INTEGRATION
+----------------------------------------------------------------------
+Status      : EXECUTED
+Evidence    : PARTIAL
+Available   : ['T4']
+Partial     : ['T6']
+Missing ≠ negative: True
+
+T9 — RELIABILITY
+----------------------------------------------------------------------
+Status      : EXECUTED
+Universal confidence: None
+Universal risk      : None
+T1: native_classifier_decision_output
+T2: native_classifier_decision_output
+T3: native_classifier_decision_output
+T4: retrieval_evidence
+T5: task_specific_calibrated_evidence
+T6: retrieval_evidence
+T7: survival_model_output
+
+T10 — POLICY
+----------------------------------------------------------------------
+Status      : EXECUTED
+Automation  : NOT_ESTABLISHED
+Human review: NOT_ESTABLISHED
+Action state: HUMAN_DECISION_REQUIRED
+WARNING     : Evidence is partial; unsupported components must not be treated as negative evidence.
+WARNING     : T6 full MOD-010 hybrid is unavailable for this new-ticket runtime.
+
+T11 — LIFECYCLE
+----------------------------------------------------------------------
+Status      : EXECUTED
+Feedback    : AWAITING_OUTCOME
+
+FINAL TRIAGE OUTPUT
+----------------------------------------------------------------------
+Category    : None
+Priority    : None
+Severity    : None
+Duplicate   : None
+Related     : ['T6', 'MOD-010', '274922', 'False']
+Resolution  : None sec
+Evidence    : PARTIAL
+Action      : HUMAN_DECISION_REQUIRED
+Lifecycle   : AWAITING_OUTCOME
+
+======================================================================
+OVERALL STATUS: PASS
+======================================================================

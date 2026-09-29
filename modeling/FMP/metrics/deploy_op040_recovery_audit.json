@@ -1,0 +1,136 @@
+{
+  "backend_checks": {
+    "batch_ticket_route": true,
+    "health_route": true,
+    "predict_batch_present": true,
+    "predict_present": true,
+    "single_ticket_route": true,
+    "ticket_explanation_present": true,
+    "ticket_pipeline_present": true
+  },
+  "backend_modified": false,
+  "backup_comparison": {
+    "current_equals_op036": false,
+    "current_equals_op039_final_tweak": false
+  },
+  "backups": {
+    "app_before_op036": {
+      "exists": true,
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/app.js.before-deploy-op036",
+      "sha256": "f83782df06a0542c2dd0d96f7a20435119a7ccfe911bd6e00c30db2b60ebd321",
+      "size_bytes": 53193
+    },
+    "app_before_op039_final_tweak": {
+      "exists": true,
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/app.js.before-deploy-op039-final-tweak",
+      "sha256": "ae9e99d54a987efe2762450f56445d1bbc5a0bb2116038339d90ab8a3c30b39e",
+      "size_bytes": 59158
+    },
+    "css_before_op039": {
+      "exists": true,
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/style.css.before-deploy-op039",
+      "sha256": "497149b1ad4dea1fd6cec6c3a5412f2b9be7d6f4839d4be73ea0f2f227b20720",
+      "size_bytes": 49230
+    }
+  },
+  "click_checks": {
+    "keyboard_support_present": true,
+    "row_click_listener_present": true,
+    "select_calls_render_analysis_response": true,
+    "select_function_found": true,
+    "select_uses_batch_response": true
+  },
+  "current_hashes": {
+    "app_js": "4ddaf6fefe3d07c033fe75f507e1fdaf286a0e55e6f05f78c158efca02e7d81d",
+    "backend_app": "4a579e54d6c6a116502ee3ae7b9a03310aec30ad206538619685b5430300bc5b",
+    "explanation": "08000b44ebed531f6617ab197e5b688033bc7ceed47dacd5e1f03a905175a85c",
+    "index_html": "ee9e540be567ec260b7866349ffd484574a6cac98b8d58bb21085700ffe80921",
+    "pipeline": "117212633e47ecf630be1cf936d87d43803d5c817329e2661e0ede4fcf6ab3f5",
+    "style_css": "f99a263e7f2697409641b126a3181de92654ca112f9466dce27e7555da80707e"
+  },
+  "explanation_change_checks": {
+    "integrity_wrapper_present": true,
+    "plain_text_explanation_assignment_present": true,
+    "render_explanation_section_present": false,
+    "split_explanation_sections_present": false
+  },
+  "files": {
+    "backend_app": {
+      "exists": true,
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/backend/app.py",
+      "sha256": "4a579e54d6c6a116502ee3ae7b9a03310aec30ad206538619685b5430300bc5b",
+      "size_bytes": 6624
+    },
+    "frontend_app_js": {
+      "exists": true,
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/app.js",
+      "sha256": "4ddaf6fefe3d07c033fe75f507e1fdaf286a0e55e6f05f78c158efca02e7d81d",
+      "size_bytes": 54377
+    },
+    "frontend_index_html": {
+      "exists": true,
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/index.html",
+      "sha256": "ee9e540be567ec260b7866349ffd484574a6cac98b8d58bb21085700ffe80921",
+      "size_bytes": 16156
+    },
+    "frontend_style_css": {
+      "exists": true,
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/style.css",
+      "sha256": "f99a263e7f2697409641b126a3181de92654ca112f9466dce27e7555da80707e",
+      "size_bytes": 102574
+    },
+    "frozen_explanation": {
+      "exists": true,
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/deployment/runtime/ticket_explanation.py",
+      "sha256": "08000b44ebed531f6617ab197e5b688033bc7ceed47dacd5e1f03a905175a85c",
+      "size_bytes": 10140
+    },
+    "frozen_pipeline": {
+      "exists": true,
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/deployment/runtime/ticket_pipeline.py",
+      "sha256": "117212633e47ecf630be1cf936d87d43803d5c817329e2661e0ede4fcf6ab3f5",
+      "size_bytes": 24016
+    }
+  },
+  "files_modified": false,
+  "frontend_checks": {
+    "analyze_batch_function": true,
+    "batch_api_route_reference": true,
+    "batch_button_reference": true,
+    "batch_file_input_reference": true,
+    "handle_batch_analysis_function": true,
+    "render_analysis_response_function": true,
+    "render_batch_results_function": true,
+    "render_explanation_function": true,
+    "render_pipeline_function": true,
+    "select_batch_ticket_function": true,
+    "single_api_route_reference": true
+  },
+  "frontend_modified": false,
+  "model_modified": false,
+  "overall": "PASS",
+  "read_only": true,
+  "renderer_checks": {
+    "renderer_calls_evidence": true,
+    "renderer_calls_explanation": true,
+    "renderer_calls_pipeline": true,
+    "renderer_calls_review": true,
+    "renderer_calls_summary": true,
+    "renderer_found": true,
+    "renderer_shows_results": true
+  },
+  "runtime_checks": {
+    "predict_batch_present": true,
+    "predict_present": true,
+    "ticket_explanation_present": true,
+    "ticket_pipeline_present": true
+  },
+  "runtime_modified": false,
+  "structure_counts": {
+    "analyzeBatch": 1,
+    "renderAnalysisResponse": 1,
+    "renderExplanation": 1,
+    "renderPipeline": 1,
+    "selectBatchTicket": 1
+  }
+}

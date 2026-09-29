@@ -1,0 +1,71 @@
+{
+  "task": "T3_SEVERITY_PREDICTION",
+  "model": "TF-IDF + Logistic Regression",
+  "class_weight": "balanced",
+  "train_rows": 21587,
+  "validation_rows": 4626,
+  "feature_count": 288972,
+  "accuracy": 0.5845222654561176,
+  "macro_f1": 0.3480174180281372,
+  "weighted_f1": 0.6148412546447116,
+  "per_class": {
+    "S1": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 20
+    },
+    "S2": {
+      "precision": 0.23049645390070922,
+      "recall": 0.4004106776180698,
+      "f1": 0.29257314328582146,
+      "support": 487
+    },
+    "S3": {
+      "precision": 0.8109527381845462,
+      "recall": 0.6321637426900585,
+      "f1": 0.710483075911929,
+      "support": 3420
+    },
+    "S4": {
+      "precision": 0.31981566820276497,
+      "recall": 0.49642346208869814,
+      "f1": 0.3890134529147982,
+      "support": 699
+    }
+  },
+  "confusion_matrix": [
+    [
+      0,
+      9,
+      9,
+      2
+    ],
+    [
+      8,
+      195,
+      224,
+      60
+    ],
+    [
+      18,
+      564,
+      2162,
+      676
+    ],
+    [
+      3,
+      78,
+      271,
+      347
+    ]
+  ],
+  "labels": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+  ],
+  "test_used": false,
+  "status": "VALIDATION_ONLY"
+}

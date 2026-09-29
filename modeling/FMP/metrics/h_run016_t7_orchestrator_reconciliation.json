@@ -1,0 +1,266 @@
+{
+  "operation": "H-RUN-016",
+  "operation_name": "T7_ORCHESTRATOR_REPRODUCTION_RECONCILIATION",
+  "status": "PASS",
+  "ticket": {
+    "ticket_id": "H-RUN-015-VPN-001",
+    "creation_time": "2026-09-26T18:03:00Z",
+    "creator": "",
+    "creator_detail": "",
+    "title": "VPN connection fails after password reset",
+    "description": "I reset my corporate password this morning. Since then, the VPN client connects briefly and then disconnects. I restarted the laptop and reinstalled the VPN client, but the issue persists. I need access to the internal systems for today's work."
+  },
+  "previous_h_run_011r3_prediction": null,
+  "current_prediction": 76.65428001700653,
+  "prediction_delta": null,
+  "linear_predictor": 4.339305442206489,
+  "feature_names": [
+    "creator_frequency_log1p",
+    "creator_detail_frequency_log1p",
+    "summary_chars_log1p",
+    "summary_words_log1p",
+    "summary_digits_log1p",
+    "summary_lines_log1p",
+    "summary_uppercase_log1p",
+    "summary_missing",
+    "description_chars_log1p",
+    "description_words_log1p",
+    "description_digits_log1p",
+    "description_lines_log1p",
+    "description_uppercase_log1p",
+    "description_missing",
+    "creation_year_scaled",
+    "creation_month_sin",
+    "creation_month_cos",
+    "creation_weekday_sin",
+    "creation_weekday_cos",
+    "creation_hour_sin",
+    "creation_hour_cos"
+  ],
+  "raw_features": {
+    "creator_frequency_log1p": 0.0,
+    "creator_detail_frequency_log1p": 0.0,
+    "summary_chars_log1p": 3.7376696182833684,
+    "summary_words_log1p": 1.9459101490553132,
+    "summary_digits_log1p": 0.0,
+    "summary_lines_log1p": 0.6931471805599453,
+    "summary_uppercase_log1p": 1.3862943611198906,
+    "summary_missing": 0.0,
+    "description_chars_log1p": 5.501258210544727,
+    "description_words_log1p": 3.713572066704308,
+    "description_digits_log1p": 0.0,
+    "description_lines_log1p": 0.6931471805599453,
+    "description_uppercase_log1p": 2.3978952727983707,
+    "description_missing": 0.0,
+    "creation_year_scaled": 2.6,
+    "creation_month_sin": -1.0,
+    "creation_month_cos": -1.8369701987210297e-16,
+    "creation_weekday_sin": -0.9749279121818236,
+    "creation_weekday_cos": -0.2225209339563146,
+    "creation_hour_sin": -1.0,
+    "creation_hour_cos": -1.8369701987210297e-16
+  },
+  "standardized_features": [
+    -1.924214532583068,
+    -1.3391055131294995,
+    -0.8241844788859479,
+    -0.5867793108783534,
+    -0.5253602841018177,
+    0.6931471805599453,
+    -0.028199157929861163,
+    0.0,
+    -0.3712682498607682,
+    -0.2037441658580846,
+    -1.486359200028797,
+    0.6931471805599453,
+    -0.44891390549660376,
+    -0.18419178340389636,
+    3.7986865671853205,
+    -1.4367778288711879,
+    0.04867779955187732,
+    -1.6719332153088295,
+    -0.14726084088024005,
+    -1.4422712586954807,
+    -0.2671207705327453
+  ],
+  "beta": [
+    -0.12340342801349583,
+    -0.22491529444930908,
+    0.13520808138997747,
+    0.3309687359112039,
+    -0.3143311443440842,
+    0.0,
+    -0.11754794360133392,
+    0.0,
+    0.7602783260895162,
+    0.21682993357796834,
+    -0.5527778108803403,
+    0.0,
+    -0.22991929275001233,
+    0.11670077200457585,
+    0.8572757038367161,
+    -0.05119327902284837,
+    0.02593533772195976,
+    -0.050357096464383765,
+    0.00015343206452288481,
+    0.037799425213742265,
+    0.00013477156396692167
+  ],
+  "feature_contributions": [
+    {
+      "feature": "creation_year_scaled",
+      "raw": 2.6,
+      "standardized": 3.7986865671853205,
+      "beta": 0.8572757038367161,
+      "contribution": 3.2565217005388747
+    },
+    {
+      "feature": "description_digits_log1p",
+      "raw": 0.0,
+      "standardized": -1.486359200028797,
+      "beta": -0.5527778108803403,
+      "contribution": 0.8216263847737723
+    },
+    {
+      "feature": "creator_detail_frequency_log1p",
+      "raw": 0.0,
+      "standardized": -1.3391055131294995,
+      "beta": -0.22491529444930908,
+      "contribution": 0.3011853107842145
+    },
+    {
+      "feature": "description_chars_log1p",
+      "raw": 5.501258210544727,
+      "standardized": -0.3712682498607682,
+      "beta": 0.7602783260895162,
+      "contribution": -0.28226720353432905
+    },
+    {
+      "feature": "creator_frequency_log1p",
+      "raw": 0.0,
+      "standardized": -1.924214532583068,
+      "beta": -0.12340342801349583,
+      "contribution": 0.23745466955413713
+    },
+    {
+      "feature": "summary_words_log1p",
+      "raw": 1.9459101490553132,
+      "standardized": -0.5867793108783534,
+      "beta": 0.3309687359112039,
+      "contribution": -0.19420560678025597
+    },
+    {
+      "feature": "summary_digits_log1p",
+      "raw": 0.0,
+      "standardized": -0.5253602841018177,
+      "beta": -0.3143311443440842,
+      "contribution": 0.16513709929465753
+    },
+    {
+      "feature": "summary_chars_log1p",
+      "raw": 3.7376696182833684,
+      "standardized": -0.8241844788859479,
+      "beta": 0.13520808138997747,
+      "contribution": -0.11143640210156742
+    },
+    {
+      "feature": "description_uppercase_log1p",
+      "raw": 2.3978952727983707,
+      "standardized": -0.44891390549660376,
+      "beta": -0.22991929275001233,
+      "contribution": 0.10321396765742501
+    },
+    {
+      "feature": "creation_weekday_sin",
+      "raw": -0.9749279121818236,
+      "standardized": -1.6719332153088295,
+      "beta": -0.050357096464383765,
+      "contribution": 0.08419370220531404
+    },
+    {
+      "feature": "creation_month_sin",
+      "raw": -1.0,
+      "standardized": -1.4367778288711879,
+      "beta": -0.05119327902284837,
+      "contribution": 0.07355336828724501
+    },
+    {
+      "feature": "creation_hour_sin",
+      "raw": -1.0,
+      "standardized": -1.4422712586954807,
+      "beta": 0.037799425213742265,
+      "contribution": -0.05451702458098975
+    },
+    {
+      "feature": "description_words_log1p",
+      "raw": 3.713572066704308,
+      "standardized": -0.2037441658580846,
+      "beta": 0.21682993357796834,
+      "contribution": -0.04417783394990705
+    },
+    {
+      "feature": "description_missing",
+      "raw": 0.0,
+      "standardized": -0.18419178340389636,
+      "beta": 0.11670077200457585,
+      "contribution": -0.021495323320134326
+    },
+    {
+      "feature": "summary_uppercase_log1p",
+      "raw": 1.3862943611198906,
+      "standardized": -0.028199157929861163,
+      "beta": -0.11754794360133392,
+      "contribution": 0.003314753025944428
+    },
+    {
+      "feature": "creation_month_cos",
+      "raw": -1.8369701987210297e-16,
+      "standardized": 0.04867779955187732,
+      "beta": 0.02593533772195976,
+      "contribution": 0.0012624751709397997
+    },
+    {
+      "feature": "creation_hour_cos",
+      "raw": -1.8369701987210297e-16,
+      "standardized": -0.2671207705327453,
+      "beta": 0.00013477156396692167,
+      "contribution": -3.600028401274729e-05
+    },
+    {
+      "feature": "creation_weekday_cos",
+      "raw": -0.2225209339563146,
+      "standardized": -0.14726084088024005,
+      "beta": 0.00015343206452288481,
+      "contribution": -2.2594534839631267e-05
+    },
+    {
+      "feature": "summary_lines_log1p",
+      "raw": 0.6931471805599453,
+      "standardized": 0.6931471805599453,
+      "beta": 0.0,
+      "contribution": 0.0
+    },
+    {
+      "feature": "summary_missing",
+      "raw": 0.0,
+      "standardized": 0.0,
+      "beta": 0.0,
+      "contribution": 0.0
+    },
+    {
+      "feature": "description_lines_log1p",
+      "raw": 0.6931471805599453,
+      "standardized": 0.6931471805599453,
+      "beta": 0.0,
+      "contribution": 0.0
+    }
+  ],
+  "checks": {
+    "feature_count_21": true,
+    "beta_alignment": true,
+    "standardization_alignment": true,
+    "finite_features": true,
+    "finite_prediction": true
+  },
+  "interpretation": "Reconciliation evidence for the T7 value discrepancy. No model modification or prediction adjustment performed."
+}

@@ -1,0 +1,87 @@
+H-RUN-024 — FINAL END-TO-END DEMONSTRATION
+==============================================================================
+
+Project root: /home/whiteblack/Documents/IT-Ticket-Triage-System
+Tickets executed: 3
+
+TICKET E2E-001
+------------------------------------------------------------------------------
+T1: EXECUTED
+T2: EXECUTED
+T3: EXECUTED
+T4: EXECUTED
+T5: EXECUTED
+T6: PARTIAL_NATIVE_RUNTIME
+T7: EXECUTED_WITH_SUPPORT_LIMITATION
+T8: EXECUTED
+T9: EXECUTED
+T10: EXECUTED
+T11: EXECUTED
+
+FINAL TICKET OUTPUT
+Category: Support general
+Priority: P1
+Severity: S3
+Duplicate evidence: 0.0
+Related ticket IDs: []
+Resolution median seconds: 21.212726771237556
+Evidence state: SUPPORTED_WITH_LIMITATIONS
+Action: HUMAN_DECISION_REQUIRED
+Lifecycle: AWAITING_OUTCOME
+
+TICKET E2E-002
+------------------------------------------------------------------------------
+T1: EXECUTED
+T2: EXECUTED
+T3: EXECUTED
+T4: EXECUTED
+T5: EXECUTED
+T6: PARTIAL_NATIVE_RUNTIME
+T7: EXECUTED_WITH_SUPPORT_LIMITATION
+T8: EXECUTED
+T9: EXECUTED
+T10: EXECUTED
+T11: EXECUTED
+
+FINAL TICKET OUTPUT
+Category: Support general
+Priority: P2
+Severity: S3
+Duplicate evidence: 0.0
+Related ticket IDs: []
+Resolution median seconds: 22.074303807155353
+Evidence state: SUPPORTED_WITH_LIMITATIONS
+Action: HUMAN_DECISION_REQUIRED
+Lifecycle: AWAITING_OUTCOME
+
+TICKET E2E-003
+------------------------------------------------------------------------------
+T1: EXECUTED
+T2: EXECUTED
+T3: EXECUTED
+T4: EXECUTED
+T5: EXECUTED
+T6: PARTIAL_NATIVE_RUNTIME
+T7: EXECUTED_WITH_SUPPORT_LIMITATION
+T8: EXECUTED
+T9: EXECUTED
+T10: EXECUTED
+T11: EXECUTED
+
+FINAL TICKET OUTPUT
+Category: Active Directory
+Priority: P1
+Severity: S3
+Duplicate evidence: 0.0
+Related ticket IDs: []
+Resolution median seconds: 20.865100151085493
+Evidence state: SUPPORTED_WITH_LIMITATIONS
+Action: HUMAN_DECISION_REQUIRED
+Lifecycle: AWAITING_OUTCOME
+
+VALIDATION
+------------------------------------------------------------------------------
+Structural failures: 0
+Integrity failures: 0
+Stage failures: 0
+FINAL STATUS: PASS_WITH_LIMITATIONS

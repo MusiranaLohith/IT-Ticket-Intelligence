@@ -1,0 +1,95 @@
+{
+  "operation": "H-RUN-012",
+  "operation_name": "T7 Duration Scale Reconciliation",
+  "status": "PASS",
+  "files": {
+    "t7_source": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/scripts/t7_mod010_log_normal_aft_baseline.py",
+    "t7_model": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod010_log_normal_aft_model.json",
+    "t7_train": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/splits/t7_train.csv",
+    "t7_evaluation": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/splits/t7_evaluation.csv",
+    "h_run_011": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/h_run011_t7_new_ticket_inference.json"
+  },
+  "model": {
+    "model_type": "LogNormal_AFT",
+    "sigma": 16.259349942778254
+  },
+  "training_duration_statistics": {
+    "label": "T7 train duration_seconds",
+    "count": 411052,
+    "min": 5.0,
+    "max": 827119786.0,
+    "mean": 56268897.19331131,
+    "median": 2434996.5,
+    "q01": 530.0,
+    "q05": 6798.0,
+    "q25": 269443.75,
+    "q50": 2434996.5,
+    "q75": 33757711.5,
+    "q95": 333455467.6999998,
+    "q99": 574868504.1799998
+  },
+  "evaluation_duration_statistics": {
+    "label": "T7 evaluation duration_seconds",
+    "count": 102764,
+    "min": 5.0,
+    "max": 132512646.0,
+    "mean": 16815668.76390565,
+    "median": 2250134.0,
+    "q01": 2003.670000000001,
+    "q05": 36741.35000000001,
+    "q25": 425523.0,
+    "q50": 2250134.0,
+    "q75": 15786323.75,
+    "q95": 97453657.54999991,
+    "q99": 124540978.61
+  },
+  "runtime_prediction": {
+    "seconds": 19.629117104199928,
+    "minutes": 0.32715195173666545,
+    "hours": 0.005452532528944424,
+    "days": 0.00022718885537268435
+  },
+  "relative_position": {
+    "ratio_to_train_median": 8.06125064417954e-06,
+    "ratio_to_evaluation_median": 8.72353251148595e-06
+  },
+  "source_duration_semantics": [
+    {
+      "line": 46,
+      "text": "    \"duration_seconds\","
+    },
+    {
+      "line": 71,
+      "text": "            duration = float(row[\"duration_seconds\"])"
+    },
+    {
+      "line": 76,
+      "text": "                    f\"Invalid target for ID={row['ID']}\""
+    },
+    {
+      "line": 216,
+      "text": "        durations.append(float(row[\"duration_seconds\"]))"
+    },
+    {
+      "line": 904,
+      "text": "            \"duration_seconds\","
+    },
+    {
+      "line": 973,
+      "text": "        \"task\": \"T7 Resolution-Time Estimation\","
+    },
+    {
+      "line": 996,
+      "text": "            \"current_resolution_used\": False,"
+    }
+  ],
+  "controls": {
+    "training": false,
+    "retraining": false,
+    "prediction": false,
+    "model_modification": false,
+    "locked_test_use": false,
+    "target_modification": false
+  },
+  "interpretation_boundary": "This operation reconciles the frozen T7 runtime prediction against the native duration scale present in the T7 development and evaluation populations. It does not modify the model or establish an operational SLA, threshold, or workflow policy."
+}

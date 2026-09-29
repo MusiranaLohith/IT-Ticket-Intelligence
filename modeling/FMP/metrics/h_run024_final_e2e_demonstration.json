@@ -1,0 +1,648 @@
+{
+  "operation": "H-RUN-024",
+  "operation_name": "final_end_to_end_demonstration",
+  "timestamp_utc": "2026-09-27T06:41:00.577501+00:00",
+  "project_root": "/home/whiteblack/Documents/IT-Ticket-Triage-System",
+  "runtime_module": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/runtime/ticket_pipeline.py",
+  "input_population": {
+    "type": "development_demonstration_tickets",
+    "training": false,
+    "evaluation": false,
+    "ticket_count": 3,
+    "tickets": [
+      {
+        "ticket_id": "E2E-001",
+        "creation_time": "2026-09-27T09:00:00+05:30",
+        "creator": "",
+        "creator_detail": "",
+        "summary": "VPN connection fails after password reset",
+        "description": "I reset my corporate password this morning. Since then, the VPN client connects briefly and then disconnects. I restarted the laptop and reinstalled the VPN client, but the issue persists. I need access to the internal systems for today's work."
+      },
+      {
+        "ticket_id": "E2E-002",
+        "creation_time": "2026-09-27T09:05:00+05:30",
+        "creator": "",
+        "creator_detail": "",
+        "summary": "Laptop will not connect to external monitor",
+        "description": "The company laptop detects the monitor but the external display remains black. I tried another HDMI cable and restarted the laptop. The monitor works with another computer."
+      },
+      {
+        "ticket_id": "E2E-003",
+        "creation_time": "2026-09-27T09:10:00+05:30",
+        "creator": "",
+        "creator_detail": "",
+        "summary": "Account locked after repeated password attempts",
+        "description": "My corporate account is locked after several failed password attempts. I cannot sign in to company applications and need the account restored."
+      }
+    ]
+  },
+  "results": [
+    {
+      "ticket_id": "E2E-001",
+      "T1": {
+        "status": "EXECUTED",
+        "output": {
+          "status": "EXECUTED",
+          "prediction": "Support general",
+          "transformed_shape": [
+            1,
+            29096
+          ],
+          "artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/baselines/t1_it_support_char_svm.joblib"
+        }
+      },
+      "T2": {
+        "status": "EXECUTED",
+        "output": {
+          "status": "EXECUTED",
+          "prediction": "P1",
+          "transformed_shape": [
+            1,
+            212254
+          ],
+          "artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/models/t2_class_weighted_tfidf_logreg.joblib"
+        }
+      },
+      "T3": {
+        "status": "EXECUTED",
+        "output": {
+          "status": "EXECUTED",
+          "prediction": "S3",
+          "transformed_shape": [
+            1,
+            288972
+          ],
+          "artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib"
+        }
+      },
+      "T4": {
+        "status": "EXECUTED",
+        "output": {
+          "status": "EXECUTED",
+          "results": [
+            {
+              "id": "1321841",
+              "distance": 0.7060008645057678,
+              "summary": "Firefox network loss after connection to Cisco VPN.",
+              "target_assignee": "dd.mozilla@gmail.com"
+            },
+            {
+              "id": "220663",
+              "distance": 0.745875358581543,
+              "summary": "Conn: Hang when my VPN connection times out (?)",
+              "target_assignee": "darin@meer.net"
+            },
+            {
+              "id": "1405307",
+              "distance": 0.7511016726493835,
+              "summary": "After connecting to VPN Firefox is unable to navigate to sites inside the VPN but Chrome can",
+              "target_assignee": "daniel@haxx.se"
+            },
+            {
+              "id": "125875",
+              "distance": 0.7548562288284302,
+              "summary": "PAC: configured to work proxy server, but user not on work VPN",
+              "target_assignee": "darin@netscape.com"
+            },
+            {
+              "id": "947801",
+              "distance": 0.7649978399276733,
+              "summary": "DNS resolution sporadically fails in Android 4.4/5.0 when connected to a VPN",
+              "target_assignee": "daniel@haxx.se"
+            }
+          ],
+          "artifacts": {
+            "tfidf": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_tfidf.joblib",
+            "neighbors": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_neighbors.joblib",
+            "population": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/derived/t4_train.csv"
+          }
+        }
+      },
+      "T5": {
+        "status": "EXECUTED",
+        "output": {
+          "status": "EXECUTED",
+          "duplicate_evidence": 0.0,
+          "threshold_used": false,
+          "decision_score": -3.4282709831179505,
+          "artifacts": {
+            "tfidf": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod005_tfidf.joblib",
+            "classifier": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod005_logreg.joblib",
+            "calibrated_vectorizer": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod007_calibrated_tfidf.joblib",
+            "calibration_models": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod007_calibration_models.joblib"
+          }
+        }
+      },
+      "T6": {
+        "status": "PARTIAL_NATIVE_RUNTIME",
+        "output": {
+          "status": "PARTIAL_NATIVE_RUNTIME",
+          "full_mod010_hybrid_available": false,
+          "top_ids": [],
+          "reason": "The frozen MOD-010 semantic component depends on stored semantic evidence for the existing evaluation population. A genuinely new ticket does not have a corresponding stored semantic evidence row. No semantic score is fabricated."
+        }
+      },
+      "T7": {
+        "status": "EXECUTED_WITH_SUPPORT_LIMITATION",
+        "output": {
+          "status": "EXECUTED_WITH_SUPPORT_LIMITATION",
+          "median_seconds": 21.212726771237556,
+          "creation_year": 2026,
+          "training_year_min": 1997,
+          "training_year_max": 2020,
+          "temporal_support": "OUTSIDE_OBSERVED_TRAINING_RANGE",
+          "linear_predictor": 3.0546013209563574,
+          "feature_count": 21,
+          "artifacts": {
+            "model": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod010_log_normal_aft_model.json",
+            "train_population": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/splits/t7_train.csv"
+          }
+        }
+      },
+      "T8": {
+        "status": "EXECUTED",
+        "output": {
+          "status": "EXECUTED",
+          "evidence_state": "SUPPORTED_WITH_LIMITATIONS",
+          "available": [
+            "T1",
+            "T2",
+            "T3",
+            "T4",
+            "T5"
+          ],
+          "partial": [
+            "T6",
+            "T7"
+          ],
+          "unavailable": [],
+          "missing_evidence_is_not_negative": true,
+          "native_semantics_preserved": true
+        }
+      },
+      "T9": {
+        "status": "EXECUTED",
+        "output": {
+          "status": "EXECUTED",
+          "universal_confidence": null,
+          "universal_risk": null,
+          "cross_task_probability_aggregation": false,
+          "reason": "Task outputs retain native semantics. No universal confidence or risk score is created."
+        }
+      },
+      "T10": {
+        "status": "EXECUTED",
+        "output": {
+          "status": "EXECUTED",
+          "action": "HUMAN_DECISION_REQUIRED",
+          "automation": "NOT_ESTABLISHED",
+          "warnings": [
+            "Evidence is not fully supported; missing evidence is not negative evidence.",
+            "T6 full MOD-010 hybrid is unavailable for this new-ticket runtime.",
+            "T7 ticket creation year is outside observed training temporal range."
+          ]
+        }
+      },
+      "T11": {
+        "status": "EXECUTED",
+        "output": {
+          "status": "EXECUTED",
+          "feedback": "AWAITING_OUTCOME",
+          "synthetic_feedback": false
+        }
+      },
+      "final": {
+        "category": "Support general",
+        "priority": "P1",
+        "severity": "S3",
+        "duplicate_evidence": 0.0,
+        "related_ticket_ids": [],
+        "resolution_median_seconds": 21.212726771237556,
+        "evidence_state": "SUPPORTED_WITH_LIMITATIONS",
+        "action": "HUMAN_DECISION_REQUIRED",
+        "lifecycle": "AWAITING_OUTCOME"
+      },
+      "integrity": {
+        "model_retraining": false,
+        "model_modification": false,
+        "threshold_optimization": false,
+        "locked_test_reuse": false,
+        "prediction_modification": false,
+        "synthetic_feedback": false
+      }
+    },
+    {
+      "ticket_id": "E2E-002",
+      "T1": {
+        "status": "EXECUTED",
+        "output": {
+          "status": "EXECUTED",
+          "prediction": "Support general",
+          "transformed_shape": [
+            1,
+            29096
+          ],
+          "artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/baselines/t1_it_support_char_svm.joblib"
+        }
+      },
+      "T2": {
+        "status": "EXECUTED",
+        "output": {
+          "status": "EXECUTED",
+          "prediction": "P2",
+          "transformed_shape": [
+            1,
+            212254
+          ],
+          "artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/models/t2_class_weighted_tfidf_logreg.joblib"
+        }
+      },
+      "T3": {
+        "status": "EXECUTED",
+        "output": {
+          "status": "EXECUTED",
+          "prediction": "S3",
+          "transformed_shape": [
+            1,
+            288972
+          ],
+          "artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib"
+        }
+      },
+      "T4": {
+        "status": "EXECUTED",
+        "output": {
+          "status": "EXECUTED",
+          "results": [
+            {
+              "id": "138905",
+              "distance": 0.6548371911048889,
+              "summary": "Contextual menu pops up in wrong display of two-display system.",
+              "target_assignee": "jaggernaut@netscape.com"
+            },
+            {
+              "id": "396614",
+              "distance": 0.6586135625839233,
+              "summary": "Context and Dropdown Menus show up dominant monitor in multi-monitor usage",
+              "target_assignee": "joshmoz@gmail.com"
+            },
+            {
+              "id": "1125325",
+              "distance": 0.7012012600898743,
+              "summary": "Web content is not rescaled when OS X moves browser window from HiDPI laptop display to external display.",
+              "target_assignee": "davidp99@gmail.com"
+            },
+            {
+              "id": "1242720",
+              "distance": 0.7238183617591858,
+              "summary": "Text sizing problem with mixed DPI screens",
+              "target_assignee": "jfkthame@gmail.com"
+            },
+            {
+              "id": "1096550",
+              "distance": 0.7303134799003601,
+              "summary": "Dragging tab from one window to another on different displays zooms in",
+              "target_assignee": "enndeakin@gmail.com"
+            }
+          ],
+          "artifacts": {
+            "tfidf": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_tfidf.joblib",
+            "neighbors": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_neighbors.joblib",
+            "population": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/derived/t4_train.csv"
+          }
+        }
+      },
+      "T5": {
+        "status": "EXECUTED",
+        "output": {
+          "status": "EXECUTED",
+          "duplicate_evidence": 0.0,
+          "threshold_used": false,
+          "decision_score": -1.7419417606130785,
+          "artifacts": {
+            "tfidf": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod005_tfidf.joblib",
+            "classifier": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod005_logreg.joblib",
+            "calibrated_vectorizer": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod007_calibrated_tfidf.joblib",
+            "calibration_models": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod007_calibration_models.joblib"
+          }
+        }
+      },
+      "T6": {
+        "status": "PARTIAL_NATIVE_RUNTIME",
+        "output": {
+          "status": "PARTIAL_NATIVE_RUNTIME",
+          "full_mod010_hybrid_available": false,
+          "top_ids": [],
+          "reason": "The frozen MOD-010 semantic component depends on stored semantic evidence for the existing evaluation population. A genuinely new ticket does not have a corresponding stored semantic evidence row. No semantic score is fabricated."
+        }
+      },
+      "T7": {
+        "status": "EXECUTED_WITH_SUPPORT_LIMITATION",
+        "output": {
+          "status": "EXECUTED_WITH_SUPPORT_LIMITATION",
+          "median_seconds": 22.074303807155353,
+          "creation_year": 2026,
+          "training_year_min": 1997,
+          "training_year_max": 2020,
+          "temporal_support": "OUTSIDE_OBSERVED_TRAINING_RANGE",
+          "linear_predictor": 3.094414208377996,
+          "feature_count": 21,
+          "artifacts": {
+            "model": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod010_log_normal_aft_model.json",
+            "train_population": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/splits/t7_train.csv"
+          }
+        }
+      },
+      "T8": {
+        "status": "EXECUTED",
+        "output": {
+          "status": "EXECUTED",
+          "evidence_state": "SUPPORTED_WITH_LIMITATIONS",
+          "available": [
+            "T1",
+            "T2",
+            "T3",
+            "T4",
+            "T5"
+          ],
+          "partial": [
+            "T6",
+            "T7"
+          ],
+          "unavailable": [],
+          "missing_evidence_is_not_negative": true,
+          "native_semantics_preserved": true
+        }
+      },
+      "T9": {
+        "status": "EXECUTED",
+        "output": {
+          "status": "EXECUTED",
+          "universal_confidence": null,
+          "universal_risk": null,
+          "cross_task_probability_aggregation": false,
+          "reason": "Task outputs retain native semantics. No universal confidence or risk score is created."
+        }
+      },
+      "T10": {
+        "status": "EXECUTED",
+        "output": {
+          "status": "EXECUTED",
+          "action": "HUMAN_DECISION_REQUIRED",
+          "automation": "NOT_ESTABLISHED",
+          "warnings": [
+            "Evidence is not fully supported; missing evidence is not negative evidence.",
+            "T6 full MOD-010 hybrid is unavailable for this new-ticket runtime.",
+            "T7 ticket creation year is outside observed training temporal range."
+          ]
+        }
+      },
+      "T11": {
+        "status": "EXECUTED",
+        "output": {
+          "status": "EXECUTED",
+          "feedback": "AWAITING_OUTCOME",
+          "synthetic_feedback": false
+        }
+      },
+      "final": {
+        "category": "Support general",
+        "priority": "P2",
+        "severity": "S3",
+        "duplicate_evidence": 0.0,
+        "related_ticket_ids": [],
+        "resolution_median_seconds": 22.074303807155353,
+        "evidence_state": "SUPPORTED_WITH_LIMITATIONS",
+        "action": "HUMAN_DECISION_REQUIRED",
+        "lifecycle": "AWAITING_OUTCOME"
+      },
+      "integrity": {
+        "model_retraining": false,
+        "model_modification": false,
+        "threshold_optimization": false,
+        "locked_test_reuse": false,
+        "prediction_modification": false,
+        "synthetic_feedback": false
+      }
+    },
+    {
+      "ticket_id": "E2E-003",
+      "T1": {
+        "status": "EXECUTED",
+        "output": {
+          "status": "EXECUTED",
+          "prediction": "Active Directory",
+          "transformed_shape": [
+            1,
+            29096
+          ],
+          "artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/baselines/t1_it_support_char_svm.joblib"
+        }
+      },
+      "T2": {
+        "status": "EXECUTED",
+        "output": {
+          "status": "EXECUTED",
+          "prediction": "P1",
+          "transformed_shape": [
+            1,
+            212254
+          ],
+          "artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/models/t2_class_weighted_tfidf_logreg.joblib"
+        }
+      },
+      "T3": {
+        "status": "EXECUTED",
+        "output": {
+          "status": "EXECUTED",
+          "prediction": "S3",
+          "transformed_shape": [
+            1,
+            288972
+          ],
+          "artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib"
+        }
+      },
+      "T4": {
+        "status": "EXECUTED",
+        "output": {
+          "status": "EXECUTED",
+          "results": [
+            {
+              "id": "86537",
+              "distance": 0.7318881750106812,
+              "summary": "Mozilla crashes when I attempt to change my Mozilla password",
+              "target_assignee": "rods@netscape.com"
+            },
+            {
+              "id": "112263",
+              "distance": 0.7527704834938049,
+              "summary": "unable to log into Brown and Company account",
+              "target_assignee": "jst@netscape.com"
+            },
+            {
+              "id": "1316019",
+              "distance": 0.7935142517089844,
+              "summary": "[FirstPartyIsolation] Failed to sign in to the pixnet.net",
+              "target_assignee": "tihuang@mozilla.com"
+            },
+            {
+              "id": "81696",
+              "distance": 0.7942435145378113,
+              "summary": "No response when trying to login to excite, though login succeeds",
+              "target_assignee": "pollmann@netscape.com"
+            },
+            {
+              "id": "1096930",
+              "distance": 0.7953189611434937,
+              "summary": "Crash while trying to enter the password for my Firefox account",
+              "target_assignee": "surkov.alexander@gmail.com"
+            }
+          ],
+          "artifacts": {
+            "tfidf": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_tfidf.joblib",
+            "neighbors": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_neighbors.joblib",
+            "population": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/derived/t4_train.csv"
+          }
+        }
+      },
+      "T5": {
+        "status": "EXECUTED",
+        "output": {
+          "status": "EXECUTED",
+          "duplicate_evidence": 0.0,
+          "threshold_used": false,
+          "decision_score": -4.3018471609996904,
+          "artifacts": {
+            "tfidf": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod005_tfidf.joblib",
+            "classifier": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod005_logreg.joblib",
+            "calibrated_vectorizer": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod007_calibrated_tfidf.joblib",
+            "calibration_models": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod007_calibration_models.joblib"
+          }
+        }
+      },
+      "T6": {
+        "status": "PARTIAL_NATIVE_RUNTIME",
+        "output": {
+          "status": "PARTIAL_NATIVE_RUNTIME",
+          "full_mod010_hybrid_available": false,
+          "top_ids": [],
+          "reason": "The frozen MOD-010 semantic component depends on stored semantic evidence for the existing evaluation population. A genuinely new ticket does not have a corresponding stored semantic evidence row. No semantic score is fabricated."
+        }
+      },
+      "T7": {
+        "status": "EXECUTED_WITH_SUPPORT_LIMITATION",
+        "output": {
+          "status": "EXECUTED_WITH_SUPPORT_LIMITATION",
+          "median_seconds": 20.865100151085493,
+          "creation_year": 2026,
+          "training_year_min": 1997,
+          "training_year_max": 2020,
+          "temporal_support": "OUTSIDE_OBSERVED_TRAINING_RANGE",
+          "linear_predictor": 3.0380779139881664,
+          "feature_count": 21,
+          "artifacts": {
+            "model": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod010_log_normal_aft_model.json",
+            "train_population": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/splits/t7_train.csv"
+          }
+        }
+      },
+      "T8": {
+        "status": "EXECUTED",
+        "output": {
+          "status": "EXECUTED",
+          "evidence_state": "SUPPORTED_WITH_LIMITATIONS",
+          "available": [
+            "T1",
+            "T2",
+            "T3",
+            "T4",
+            "T5"
+          ],
+          "partial": [
+            "T6",
+            "T7"
+          ],
+          "unavailable": [],
+          "missing_evidence_is_not_negative": true,
+          "native_semantics_preserved": true
+        }
+      },
+      "T9": {
+        "status": "EXECUTED",
+        "output": {
+          "status": "EXECUTED",
+          "universal_confidence": null,
+          "universal_risk": null,
+          "cross_task_probability_aggregation": false,
+          "reason": "Task outputs retain native semantics. No universal confidence or risk score is created."
+        }
+      },
+      "T10": {
+        "status": "EXECUTED",
+        "output": {
+          "status": "EXECUTED",
+          "action": "HUMAN_DECISION_REQUIRED",
+          "automation": "NOT_ESTABLISHED",
+          "warnings": [
+            "Evidence is not fully supported; missing evidence is not negative evidence.",
+            "T6 full MOD-010 hybrid is unavailable for this new-ticket runtime.",
+            "T7 ticket creation year is outside observed training temporal range."
+          ]
+        }
+      },
+      "T11": {
+        "status": "EXECUTED",
+        "output": {
+          "status": "EXECUTED",
+          "feedback": "AWAITING_OUTCOME",
+          "synthetic_feedback": false
+        }
+      },
+      "final": {
+        "category": "Active Directory",
+        "priority": "P1",
+        "severity": "S3",
+        "duplicate_evidence": 0.0,
+        "related_ticket_ids": [],
+        "resolution_median_seconds": 20.865100151085493,
+        "evidence_state": "SUPPORTED_WITH_LIMITATIONS",
+        "action": "HUMAN_DECISION_REQUIRED",
+        "lifecycle": "AWAITING_OUTCOME"
+      },
+      "integrity": {
+        "model_retraining": false,
+        "model_modification": false,
+        "threshold_optimization": false,
+        "locked_test_reuse": false,
+        "prediction_modification": false,
+        "synthetic_feedback": false
+      }
+    }
+  ],
+  "validation": {
+    "expected_ticket_count": 3,
+    "executed_ticket_count": 3,
+    "structural_failures": [],
+    "integrity_failures": [],
+    "stage_failures": []
+  },
+  "freeze_controls": {
+    "model_retraining": false,
+    "model_modification": false,
+    "threshold_optimization": false,
+    "locked_test_reuse": false,
+    "prediction_modification": false,
+    "synthetic_feedback": false
+  },
+  "final_status": "PASS_WITH_LIMITATIONS",
+  "known_boundaries": {
+    "T6_full_MOD010_new_ticket_semantic_runtime": "NOT_AVAILABLE",
+    "T7_temporal_support_for_2026_tickets": "OUTSIDE_OBSERVED_TRAINING_RANGE",
+    "T8_missing_evidence": "UNAVAILABLE_IS_NOT_NEGATIVE",
+    "T9_universal_confidence": "NOT_CREATED",
+    "T9_universal_risk": "NOT_CREATED",
+    "T10_automatic_action_policy": "NOT_ESTABLISHED",
+    "T11_operational_feedback": "NOT_AVAILABLE"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "operation": "MOD-036 OP-022",
+  "operation_name": "T7 Native Resolution Output Resolution",
+  "status": "PASS",
+  "sources": {
+    "t7_oof": "modeling/T8/t8_mod029_t7_oof.csv",
+    "t7_evaluation": "modeling/T7/derived/t7_mod007_evaluation_predictions.csv"
+  },
+  "population": {
+    "oof_rows": 16518,
+    "oof_unique_ids": 16518,
+    "oof_duplicate_ids": 0,
+    "evaluation_rows": 102764,
+    "evaluation_unique_ids": 102764,
+    "evaluation_duplicate_ids": 0
+  },
+  "resolved_fields": {
+    "oof_id": "ID",
+    "evaluation_id": "ID"
+  },
+  "schemas": {
+    "oof_columns": [
+      "ID",
+      "predicted_median_survival_seconds",
+      "survival_probability_at_211583_seconds",
+      "survival_probability_at_1780179_seconds",
+      "survival_probability_at_14608619_seconds",
+      "prediction_block",
+      "prediction_creation_time",
+      "model_task",
+      "implementation_identifier",
+      "preprocessing_scope",
+      "prediction_boundary"
+    ],
+    "evaluation_columns": [
+      "ID",
+      "duration_seconds",
+      "event",
+      "predicted_median_survival_seconds",
+      "survival_probability_at_211583_seconds",
+      "survival_probability_at_1780179_seconds",
+      "survival_probability_at_14608619_seconds"
+    ],
+    "common_columns": [
+      {
+        "oof": "ID",
+        "evaluation": "ID"
+      },
+      {
+        "oof": "predicted_median_survival_seconds",
+        "evaluation": "predicted_median_survival_seconds"
+      },
+      {
+        "oof": "survival_probability_at_14608619_seconds",
+        "evaluation": "survival_probability_at_14608619_seconds"
+      },
+      {
+        "oof": "survival_probability_at_1780179_seconds",
+        "evaluation": "survival_probability_at_1780179_seconds"
+      },
+      {
+        "oof": "survival_probability_at_211583_seconds",
+        "evaluation": "survival_probability_at_211583_seconds"
+      }
+    ]
+  },
+  "candidate_semantic_fields": {
+    "event_status": [],
+    "duration_survival": [
+      "predicted_median_survival_seconds",
+      "survival_probability_at_211583_seconds",
+      "survival_probability_at_1780179_seconds",
+      "survival_probability_at_14608619_seconds"
+    ],
+    "prediction": [
+      "predicted_median_survival_seconds",
+      "survival_probability_at_211583_seconds",
+      "survival_probability_at_1780179_seconds",
+      "survival_probability_at_14608619_seconds",
+      "prediction_block",
+      "prediction_creation_time",
+      "prediction_boundary"
+    ]
+  },
+  "controls": {
+    "no_model_fitted": true,
+    "no_target_redefined": true,
+    "no_censored_case_relabeling": true,
+    "no_probability_assumption": true,
+    "no_post_creation_feature_engineering": true,
+    "native_t7_semantics_preserved": true
+  },
+  "decision": {
+    "purpose": "Resolve native T7 output structure before constructing the T8 resolution decision component.",
+    "component_not_yet_built": true
+  }
+}

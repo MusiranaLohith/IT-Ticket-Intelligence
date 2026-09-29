@@ -1,0 +1,4699 @@
+{
+  "operation": "H-OP-005",
+  "operation_name": "Frozen Callable Selection",
+  "status": "PASS",
+  "purpose": "Reconcile H-OP-004 callable candidates against the exact frozen T1-T7 artifact bindings and source-level inference/retrieval evidence.",
+  "frozen_artifacts": {
+    "T1": [
+      "t1_it_support_char_svm.joblib"
+    ],
+    "T2": [
+      "t2_class_weighted_tfidf_logreg.joblib"
+    ],
+    "T3": [
+      "t3_class_weighted_tfidf_logreg.joblib"
+    ],
+    "T4": [
+      "t4_mod007_tfidf.joblib",
+      "t4_mod007_neighbors.joblib",
+      "t4_mod007_full_retrieval.npz"
+    ],
+    "T5": [
+      "t5_mod005_tfidf.joblib",
+      "t5_mod005_logreg.joblib",
+      "t5_mod007_calibrated_tfidf.joblib",
+      "t5_mod007_calibration_models.joblib"
+    ],
+    "T6": [
+      "t6_mod010_corrected_hybrid_results.json"
+    ],
+    "T7": [
+      "t7_mod010_log_normal_aft_model.json"
+    ]
+  },
+  "task_results": {
+    "T1": {
+      "frozen_artifacts": [
+        "t1_it_support_char_svm.joblib"
+      ],
+      "evaluated_candidate_count": 30,
+      "strong_candidate_count": 2,
+      "top_candidates": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r5_t1_corrected_frozen_runtime_probe.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [
+            "t1_it_support_char_svm.joblib"
+          ],
+          "score": 31,
+          "evidence": [
+            "frozen_artifact_reference",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "predict"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r5_t1_corrected_frozen_runtime_probe.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [
+            "t1_it_support_char_svm.joblib"
+          ],
+          "score": 31,
+          "evidence": [
+            "frozen_artifact_reference",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "predict"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op019r1_final_t1_t7_runtime_binding_reconciliation.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [
+            "t1_it_support_char_svm.joblib"
+          ],
+          "score": 23,
+          "evidence": [
+            "frozen_artifact_reference",
+            "task_output_signal"
+          ],
+          "output_hits": [
+            "predict"
+          ],
+          "input_hits": [],
+          "inference_hits": [],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp07_op004_frozen_runtime_reproducibility_manifest.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [],
+          "score": 21,
+          "evidence": [
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "description",
+            "query",
+            "text",
+            "ticket"
+          ],
+          "inference_hits": [
+            "survival"
+          ],
+          "historical_hits": [
+            "candidate",
+            "historical",
+            "neighbor",
+            "retrieval"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp07_op004_frozen_runtime_reproducibility_manifest.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [],
+          "score": 21,
+          "evidence": [
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "description",
+            "query",
+            "text",
+            "ticket"
+          ],
+          "inference_hits": [
+            "survival"
+          ],
+          "historical_hits": [
+            "candidate",
+            "historical",
+            "neighbor",
+            "retrieval"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp07_op004_frozen_runtime_reproducibility_manifest.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [],
+          "score": 21,
+          "evidence": [
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "description",
+            "query",
+            "text",
+            "ticket"
+          ],
+          "inference_hits": [
+            "survival"
+          ],
+          "historical_hits": [
+            "candidate",
+            "historical",
+            "neighbor",
+            "retrieval"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp07_op004_frozen_runtime_reproducibility_manifest.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [],
+          "score": 21,
+          "evidence": [
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "description",
+            "query",
+            "text",
+            "ticket"
+          ],
+          "inference_hits": [
+            "survival"
+          ],
+          "historical_hits": [
+            "candidate",
+            "historical",
+            "neighbor",
+            "retrieval"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r5_t1_corrected_frozen_runtime_probe.py",
+          "function": "rel",
+          "parameters": [
+            "path"
+          ],
+          "artifact_hits": [
+            "t1_it_support_char_svm.joblib"
+          ],
+          "score": 20,
+          "evidence": [
+            "frozen_artifact_reference"
+          ],
+          "output_hits": [],
+          "input_hits": [],
+          "inference_hits": [],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op019r1_final_t1_t7_runtime_binding_reconciliation.py",
+          "function": "load_json",
+          "parameters": [
+            "path"
+          ],
+          "artifact_hits": [
+            "t1_it_support_char_svm.joblib"
+          ],
+          "score": 20,
+          "evidence": [
+            "frozen_artifact_reference"
+          ],
+          "output_hits": [],
+          "input_hits": [],
+          "inference_hits": [],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r5_t1_corrected_frozen_runtime_probe.py",
+          "function": "rel",
+          "parameters": [
+            "path"
+          ],
+          "artifact_hits": [
+            "t1_it_support_char_svm.joblib"
+          ],
+          "score": 20,
+          "evidence": [
+            "frozen_artifact_reference"
+          ],
+          "output_hits": [],
+          "input_hits": [],
+          "inference_hits": [],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/h_op003_exact_frozen_runtime_reconciliation.py",
+          "function": "runtime_signal_hits",
+          "parameters": [
+            "source"
+          ],
+          "artifact_hits": [],
+          "score": 19,
+          "evidence": [
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal"
+          ],
+          "output_hits": [
+            "predict"
+          ],
+          "input_hits": [],
+          "inference_hits": [
+            "kneighbors(",
+            "predict(",
+            "predict_proba(",
+            "rank(",
+            "retrieve",
+            "similarity",
+            "survival",
+            "transform("
+          ],
+          "historical_hits": [
+            "neighbor"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/h_op003_exact_frozen_runtime_reconciliation.py",
+          "function": "runtime_signal_hits",
+          "parameters": [
+            "source"
+          ],
+          "artifact_hits": [],
+          "score": 19,
+          "evidence": [
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal"
+          ],
+          "output_hits": [
+            "predict"
+          ],
+          "input_hits": [],
+          "inference_hits": [
+            "kneighbors(",
+            "predict(",
+            "predict_proba(",
+            "rank(",
+            "retrieve",
+            "similarity",
+            "survival",
+            "transform("
+          ],
+          "historical_hits": [
+            "neighbor"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/h_op003_exact_frozen_runtime_reconciliation.py",
+          "function": "runtime_signal_hits",
+          "parameters": [
+            "source"
+          ],
+          "artifact_hits": [],
+          "score": 19,
+          "evidence": [
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal"
+          ],
+          "output_hits": [
+            "predict"
+          ],
+          "input_hits": [],
+          "inference_hits": [
+            "kneighbors(",
+            "predict(",
+            "predict_proba(",
+            "rank(",
+            "retrieve",
+            "similarity",
+            "survival",
+            "transform("
+          ],
+          "historical_hits": [
+            "neighbor"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/h_op003_exact_frozen_runtime_reconciliation.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [],
+          "score": 9,
+          "evidence": [
+            "historical_reference_dependency",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class"
+          ],
+          "input_hits": [
+            "text",
+            "ticket"
+          ],
+          "inference_hits": [],
+          "historical_hits": [
+            "corpus",
+            "reference"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/h_op003_exact_frozen_runtime_reconciliation.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [],
+          "score": 9,
+          "evidence": [
+            "historical_reference_dependency",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class"
+          ],
+          "input_hits": [
+            "text",
+            "ticket"
+          ],
+          "inference_hits": [],
+          "historical_hits": [
+            "corpus",
+            "reference"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/h_op003_exact_frozen_runtime_reconciliation.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [],
+          "score": 9,
+          "evidence": [
+            "historical_reference_dependency",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class"
+          ],
+          "input_hits": [
+            "text",
+            "ticket"
+          ],
+          "inference_hits": [],
+          "historical_hits": [
+            "corpus",
+            "reference"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op022_controlled_end_to_end_execution_probe.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [],
+          "score": 5,
+          "evidence": [
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "predict"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op022_controlled_end_to_end_execution_probe.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [],
+          "score": 5,
+          "evidence": [
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "predict"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op022_controlled_end_to_end_execution_probe.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [],
+          "score": 5,
+          "evidence": [
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "predict"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/h_op003_exact_frozen_runtime_reconciliation.py",
+          "function": "extract_ast_names",
+          "parameters": [
+            "source"
+          ],
+          "artifact_hits": [],
+          "score": 3,
+          "evidence": [
+            "task_output_signal"
+          ],
+          "output_hits": [
+            "class"
+          ],
+          "input_hits": [],
+          "inference_hits": [],
+          "historical_hits": []
+        }
+      ]
+    },
+    "T2": {
+      "frozen_artifacts": [
+        "t2_class_weighted_tfidf_logreg.joblib"
+      ],
+      "evaluated_candidate_count": 82,
+      "strong_candidate_count": 35,
+      "top_candidates": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t5",
+          "parameters": [],
+          "artifact_hits": [
+            "t2_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 40,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text",
+            "ticket"
+          ],
+          "inference_hits": [
+            "decision_function(",
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": [
+            "index"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t5",
+          "parameters": [],
+          "artifact_hits": [
+            "t2_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 40,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text",
+            "ticket"
+          ],
+          "inference_hits": [
+            "decision_function(",
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": [
+            "index"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t5",
+          "parameters": [],
+          "artifact_hits": [
+            "t2_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 40,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text",
+            "ticket"
+          ],
+          "inference_hits": [
+            "decision_function(",
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": [
+            "index"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t5",
+          "parameters": [],
+          "artifact_hits": [
+            "t2_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 40,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text",
+            "ticket"
+          ],
+          "inference_hits": [
+            "decision_function(",
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": [
+            "index"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t5",
+          "parameters": [],
+          "artifact_hits": [
+            "t2_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 40,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text",
+            "ticket"
+          ],
+          "inference_hits": [
+            "decision_function(",
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": [
+            "index"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t5",
+          "parameters": [],
+          "artifact_hits": [
+            "t2_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 40,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text",
+            "ticket"
+          ],
+          "inference_hits": [
+            "decision_function(",
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": [
+            "index"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t5",
+          "parameters": [],
+          "artifact_hits": [
+            "t2_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 40,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text",
+            "ticket"
+          ],
+          "inference_hits": [
+            "decision_function(",
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": [
+            "index"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t2",
+          "parameters": [],
+          "artifact_hits": [
+            "t2_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 34,
+          "evidence": [
+            "frozen_artifact_reference",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t3",
+          "parameters": [],
+          "artifact_hits": [
+            "t2_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 34,
+          "evidence": [
+            "frozen_artifact_reference",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t2",
+          "parameters": [],
+          "artifact_hits": [
+            "t2_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 34,
+          "evidence": [
+            "frozen_artifact_reference",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t3",
+          "parameters": [],
+          "artifact_hits": [
+            "t2_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 34,
+          "evidence": [
+            "frozen_artifact_reference",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t2",
+          "parameters": [],
+          "artifact_hits": [
+            "t2_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 34,
+          "evidence": [
+            "frozen_artifact_reference",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t3",
+          "parameters": [],
+          "artifact_hits": [
+            "t2_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 34,
+          "evidence": [
+            "frozen_artifact_reference",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t2",
+          "parameters": [],
+          "artifact_hits": [
+            "t2_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 34,
+          "evidence": [
+            "frozen_artifact_reference",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t3",
+          "parameters": [],
+          "artifact_hits": [
+            "t2_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 34,
+          "evidence": [
+            "frozen_artifact_reference",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t2",
+          "parameters": [],
+          "artifact_hits": [
+            "t2_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 34,
+          "evidence": [
+            "frozen_artifact_reference",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t3",
+          "parameters": [],
+          "artifact_hits": [
+            "t2_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 34,
+          "evidence": [
+            "frozen_artifact_reference",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t2",
+          "parameters": [],
+          "artifact_hits": [
+            "t2_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 34,
+          "evidence": [
+            "frozen_artifact_reference",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t3",
+          "parameters": [],
+          "artifact_hits": [
+            "t2_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 34,
+          "evidence": [
+            "frozen_artifact_reference",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t2",
+          "parameters": [],
+          "artifact_hits": [
+            "t2_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 34,
+          "evidence": [
+            "frozen_artifact_reference",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": []
+        }
+      ]
+    },
+    "T3": {
+      "frozen_artifacts": [
+        "t3_class_weighted_tfidf_logreg.joblib"
+      ],
+      "evaluated_candidate_count": 82,
+      "strong_candidate_count": 35,
+      "top_candidates": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t5",
+          "parameters": [],
+          "artifact_hits": [
+            "t3_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 40,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text",
+            "ticket"
+          ],
+          "inference_hits": [
+            "decision_function(",
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": [
+            "index"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t5",
+          "parameters": [],
+          "artifact_hits": [
+            "t3_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 40,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text",
+            "ticket"
+          ],
+          "inference_hits": [
+            "decision_function(",
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": [
+            "index"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t5",
+          "parameters": [],
+          "artifact_hits": [
+            "t3_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 40,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text",
+            "ticket"
+          ],
+          "inference_hits": [
+            "decision_function(",
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": [
+            "index"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t5",
+          "parameters": [],
+          "artifact_hits": [
+            "t3_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 40,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text",
+            "ticket"
+          ],
+          "inference_hits": [
+            "decision_function(",
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": [
+            "index"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t5",
+          "parameters": [],
+          "artifact_hits": [
+            "t3_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 40,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text",
+            "ticket"
+          ],
+          "inference_hits": [
+            "decision_function(",
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": [
+            "index"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t5",
+          "parameters": [],
+          "artifact_hits": [
+            "t3_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 40,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text",
+            "ticket"
+          ],
+          "inference_hits": [
+            "decision_function(",
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": [
+            "index"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t5",
+          "parameters": [],
+          "artifact_hits": [
+            "t3_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 40,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text",
+            "ticket"
+          ],
+          "inference_hits": [
+            "decision_function(",
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": [
+            "index"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t2",
+          "parameters": [],
+          "artifact_hits": [
+            "t3_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 34,
+          "evidence": [
+            "frozen_artifact_reference",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t3",
+          "parameters": [],
+          "artifact_hits": [
+            "t3_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 34,
+          "evidence": [
+            "frozen_artifact_reference",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t2",
+          "parameters": [],
+          "artifact_hits": [
+            "t3_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 34,
+          "evidence": [
+            "frozen_artifact_reference",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t3",
+          "parameters": [],
+          "artifact_hits": [
+            "t3_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 34,
+          "evidence": [
+            "frozen_artifact_reference",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t2",
+          "parameters": [],
+          "artifact_hits": [
+            "t3_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 34,
+          "evidence": [
+            "frozen_artifact_reference",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t3",
+          "parameters": [],
+          "artifact_hits": [
+            "t3_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 34,
+          "evidence": [
+            "frozen_artifact_reference",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t2",
+          "parameters": [],
+          "artifact_hits": [
+            "t3_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 34,
+          "evidence": [
+            "frozen_artifact_reference",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t3",
+          "parameters": [],
+          "artifact_hits": [
+            "t3_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 34,
+          "evidence": [
+            "frozen_artifact_reference",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t2",
+          "parameters": [],
+          "artifact_hits": [
+            "t3_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 34,
+          "evidence": [
+            "frozen_artifact_reference",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t3",
+          "parameters": [],
+          "artifact_hits": [
+            "t3_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 34,
+          "evidence": [
+            "frozen_artifact_reference",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t2",
+          "parameters": [],
+          "artifact_hits": [
+            "t3_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 34,
+          "evidence": [
+            "frozen_artifact_reference",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t3",
+          "parameters": [],
+          "artifact_hits": [
+            "t3_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 34,
+          "evidence": [
+            "frozen_artifact_reference",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t2",
+          "parameters": [],
+          "artifact_hits": [
+            "t3_class_weighted_tfidf_logreg.joblib"
+          ],
+          "score": 34,
+          "evidence": [
+            "frozen_artifact_reference",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "class",
+            "predict"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": []
+        }
+      ]
+    },
+    "T4": {
+      "frozen_artifacts": [
+        "t4_mod007_tfidf.joblib",
+        "t4_mod007_neighbors.joblib",
+        "t4_mod007_full_retrieval.npz"
+      ],
+      "evaluated_candidate_count": 40,
+      "strong_candidate_count": 14,
+      "top_candidates": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r14_t4_corrected_frozen_runtime_smoke.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [
+            "t4_mod007_tfidf.joblib",
+            "t4_mod007_neighbors.joblib"
+          ],
+          "score": 50,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "assignee",
+            "candidate",
+            "neighbor",
+            "rank"
+          ],
+          "input_hits": [
+            "description",
+            "text",
+            "ticket"
+          ],
+          "inference_hits": [
+            "kneighbors(",
+            "similarity",
+            "transform("
+          ],
+          "historical_hits": [
+            "candidate",
+            "neighbor",
+            "retrieval"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r14_t4_corrected_frozen_runtime_smoke.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [
+            "t4_mod007_tfidf.joblib",
+            "t4_mod007_neighbors.joblib"
+          ],
+          "score": 50,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "assignee",
+            "candidate",
+            "neighbor",
+            "rank"
+          ],
+          "input_hits": [
+            "description",
+            "text",
+            "ticket"
+          ],
+          "inference_hits": [
+            "kneighbors(",
+            "similarity",
+            "transform("
+          ],
+          "historical_hits": [
+            "candidate",
+            "neighbor",
+            "retrieval"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r14_t4_corrected_frozen_runtime_smoke.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [
+            "t4_mod007_tfidf.joblib",
+            "t4_mod007_neighbors.joblib"
+          ],
+          "score": 50,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "assignee",
+            "candidate",
+            "neighbor",
+            "rank"
+          ],
+          "input_hits": [
+            "description",
+            "text",
+            "ticket"
+          ],
+          "inference_hits": [
+            "kneighbors(",
+            "similarity",
+            "transform("
+          ],
+          "historical_hits": [
+            "candidate",
+            "neighbor",
+            "retrieval"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r16_t4_exact_eval_retrieval_reproduction.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [
+            "t4_mod007_tfidf.joblib",
+            "t4_mod007_neighbors.joblib",
+            "t4_mod007_full_retrieval.npz"
+          ],
+          "score": 44,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "assignee",
+            "neighbor"
+          ],
+          "input_hits": [
+            "description",
+            "text",
+            "ticket"
+          ],
+          "inference_hits": [
+            "kneighbors(",
+            "similarity",
+            "transform("
+          ],
+          "historical_hits": [
+            "index",
+            "neighbor",
+            "retrieval"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r16_t4_exact_eval_retrieval_reproduction.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [
+            "t4_mod007_tfidf.joblib",
+            "t4_mod007_neighbors.joblib",
+            "t4_mod007_full_retrieval.npz"
+          ],
+          "score": 44,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "assignee",
+            "neighbor"
+          ],
+          "input_hits": [
+            "description",
+            "text",
+            "ticket"
+          ],
+          "inference_hits": [
+            "kneighbors(",
+            "similarity",
+            "transform("
+          ],
+          "historical_hits": [
+            "index",
+            "neighbor",
+            "retrieval"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r12_t4_frozen_runtime_smoke.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [
+            "t4_mod007_tfidf.joblib",
+            "t4_mod007_neighbors.joblib"
+          ],
+          "score": 42,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "assignee",
+            "candidate",
+            "neighbor",
+            "rank"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "kneighbors(",
+            "transform("
+          ],
+          "historical_hits": [
+            "candidate",
+            "neighbor"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r12_t4_frozen_runtime_smoke.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [
+            "t4_mod007_tfidf.joblib",
+            "t4_mod007_neighbors.joblib"
+          ],
+          "score": 42,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "assignee",
+            "candidate",
+            "neighbor",
+            "rank"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "kneighbors(",
+            "transform("
+          ],
+          "historical_hits": [
+            "candidate",
+            "neighbor"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r12_t4_frozen_runtime_smoke.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [
+            "t4_mod007_tfidf.joblib",
+            "t4_mod007_neighbors.joblib"
+          ],
+          "score": 42,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "assignee",
+            "candidate",
+            "neighbor",
+            "rank"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "kneighbors(",
+            "transform("
+          ],
+          "historical_hits": [
+            "candidate",
+            "neighbor"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r12_t4_frozen_runtime_smoke.py",
+          "function": "rank_assignees",
+          "parameters": [
+            "neighbor_indices",
+            "similarities",
+            "train_targets"
+          ],
+          "artifact_hits": [
+            "t4_mod007_tfidf.joblib",
+            "t4_mod007_neighbors.joblib"
+          ],
+          "score": 34,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal"
+          ],
+          "output_hits": [
+            "assignee",
+            "neighbor",
+            "rank"
+          ],
+          "input_hits": [],
+          "inference_hits": [
+            "similarity"
+          ],
+          "historical_hits": [
+            "index",
+            "neighbor"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r12_t4_frozen_runtime_smoke.py",
+          "function": "rank_assignees",
+          "parameters": [
+            "neighbor_indices",
+            "similarities",
+            "train_targets"
+          ],
+          "artifact_hits": [
+            "t4_mod007_tfidf.joblib",
+            "t4_mod007_neighbors.joblib"
+          ],
+          "score": 34,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal"
+          ],
+          "output_hits": [
+            "assignee",
+            "neighbor",
+            "rank"
+          ],
+          "input_hits": [],
+          "inference_hits": [
+            "similarity"
+          ],
+          "historical_hits": [
+            "index",
+            "neighbor"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r12_t4_frozen_runtime_smoke.py",
+          "function": "rank_assignees",
+          "parameters": [
+            "neighbor_indices",
+            "similarities",
+            "train_targets"
+          ],
+          "artifact_hits": [
+            "t4_mod007_tfidf.joblib",
+            "t4_mod007_neighbors.joblib"
+          ],
+          "score": 34,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal"
+          ],
+          "output_hits": [
+            "assignee",
+            "neighbor",
+            "rank"
+          ],
+          "input_hits": [],
+          "inference_hits": [
+            "similarity"
+          ],
+          "historical_hits": [
+            "index",
+            "neighbor"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r14_t4_corrected_frozen_runtime_smoke.py",
+          "function": "rank_assignees",
+          "parameters": [
+            "neighbor_indices",
+            "neighbor_similarities",
+            "train_targets"
+          ],
+          "artifact_hits": [
+            "t4_mod007_tfidf.joblib",
+            "t4_mod007_neighbors.joblib"
+          ],
+          "score": 33,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal"
+          ],
+          "output_hits": [
+            "assignee",
+            "neighbor",
+            "rank"
+          ],
+          "input_hits": [],
+          "inference_hits": [
+            "similarity"
+          ],
+          "historical_hits": [
+            "neighbor"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r14_t4_corrected_frozen_runtime_smoke.py",
+          "function": "rank_assignees",
+          "parameters": [
+            "neighbor_indices",
+            "neighbor_similarities",
+            "train_targets"
+          ],
+          "artifact_hits": [
+            "t4_mod007_tfidf.joblib",
+            "t4_mod007_neighbors.joblib"
+          ],
+          "score": 33,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal"
+          ],
+          "output_hits": [
+            "assignee",
+            "neighbor",
+            "rank"
+          ],
+          "input_hits": [],
+          "inference_hits": [
+            "similarity"
+          ],
+          "historical_hits": [
+            "neighbor"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r14_t4_corrected_frozen_runtime_smoke.py",
+          "function": "rank_assignees",
+          "parameters": [
+            "neighbor_indices",
+            "neighbor_similarities",
+            "train_targets"
+          ],
+          "artifact_hits": [
+            "t4_mod007_tfidf.joblib",
+            "t4_mod007_neighbors.joblib"
+          ],
+          "score": 33,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal"
+          ],
+          "output_hits": [
+            "assignee",
+            "neighbor",
+            "rank"
+          ],
+          "input_hits": [],
+          "inference_hits": [
+            "similarity"
+          ],
+          "historical_hits": [
+            "neighbor"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r14_t4_corrected_frozen_runtime_smoke.py",
+          "function": "build_text",
+          "parameters": [
+            "df"
+          ],
+          "artifact_hits": [
+            "t4_mod007_tfidf.joblib",
+            "t4_mod007_neighbors.joblib"
+          ],
+          "score": 27,
+          "evidence": [
+            "frozen_artifact_reference",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "rank"
+          ],
+          "input_hits": [
+            "description",
+            "text"
+          ],
+          "inference_hits": [],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r14_t4_corrected_frozen_runtime_smoke.py",
+          "function": "build_text",
+          "parameters": [
+            "df"
+          ],
+          "artifact_hits": [
+            "t4_mod007_tfidf.joblib",
+            "t4_mod007_neighbors.joblib"
+          ],
+          "score": 27,
+          "evidence": [
+            "frozen_artifact_reference",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "rank"
+          ],
+          "input_hits": [
+            "description",
+            "text"
+          ],
+          "inference_hits": [],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r14_t4_corrected_frozen_runtime_smoke.py",
+          "function": "build_text",
+          "parameters": [
+            "df"
+          ],
+          "artifact_hits": [
+            "t4_mod007_tfidf.joblib",
+            "t4_mod007_neighbors.joblib"
+          ],
+          "score": 27,
+          "evidence": [
+            "frozen_artifact_reference",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "rank"
+          ],
+          "input_hits": [
+            "description",
+            "text"
+          ],
+          "inference_hits": [],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r12_t4_frozen_runtime_smoke.py",
+          "function": "build_text",
+          "parameters": [
+            "row"
+          ],
+          "artifact_hits": [
+            "t4_mod007_tfidf.joblib",
+            "t4_mod007_neighbors.joblib"
+          ],
+          "score": 25,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [],
+          "input_hits": [
+            "description",
+            "text"
+          ],
+          "inference_hits": [],
+          "historical_hits": [
+            "index"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r12_t4_frozen_runtime_smoke.py",
+          "function": "build_text",
+          "parameters": [
+            "row"
+          ],
+          "artifact_hits": [
+            "t4_mod007_tfidf.joblib",
+            "t4_mod007_neighbors.joblib"
+          ],
+          "score": 25,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [],
+          "input_hits": [
+            "description",
+            "text"
+          ],
+          "inference_hits": [],
+          "historical_hits": [
+            "index"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r12_t4_frozen_runtime_smoke.py",
+          "function": "build_text",
+          "parameters": [
+            "row"
+          ],
+          "artifact_hits": [
+            "t4_mod007_tfidf.joblib",
+            "t4_mod007_neighbors.joblib"
+          ],
+          "score": 25,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [],
+          "input_hits": [
+            "description",
+            "text"
+          ],
+          "inference_hits": [],
+          "historical_hits": [
+            "index"
+          ]
+        }
+      ]
+    },
+    "T5": {
+      "frozen_artifacts": [
+        "t5_mod005_tfidf.joblib",
+        "t5_mod005_logreg.joblib",
+        "t5_mod007_calibrated_tfidf.joblib",
+        "t5_mod007_calibration_models.joblib"
+      ],
+      "evaluated_candidate_count": 81,
+      "strong_candidate_count": 35,
+      "top_candidates": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t5",
+          "parameters": [],
+          "artifact_hits": [
+            "t5_mod005_tfidf.joblib",
+            "t5_mod005_logreg.joblib",
+            "t5_mod007_calibration_models.joblib"
+          ],
+          "score": 43,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "predict",
+            "prob",
+            "score"
+          ],
+          "input_hits": [
+            "text",
+            "ticket"
+          ],
+          "inference_hits": [
+            "decision_function(",
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": [
+            "index"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t5",
+          "parameters": [],
+          "artifact_hits": [
+            "t5_mod005_tfidf.joblib",
+            "t5_mod005_logreg.joblib",
+            "t5_mod007_calibration_models.joblib"
+          ],
+          "score": 43,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "predict",
+            "prob",
+            "score"
+          ],
+          "input_hits": [
+            "text",
+            "ticket"
+          ],
+          "inference_hits": [
+            "decision_function(",
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": [
+            "index"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t5",
+          "parameters": [],
+          "artifact_hits": [
+            "t5_mod005_tfidf.joblib",
+            "t5_mod005_logreg.joblib",
+            "t5_mod007_calibration_models.joblib"
+          ],
+          "score": 43,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "predict",
+            "prob",
+            "score"
+          ],
+          "input_hits": [
+            "text",
+            "ticket"
+          ],
+          "inference_hits": [
+            "decision_function(",
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": [
+            "index"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t5",
+          "parameters": [],
+          "artifact_hits": [
+            "t5_mod005_tfidf.joblib",
+            "t5_mod005_logreg.joblib",
+            "t5_mod007_calibration_models.joblib"
+          ],
+          "score": 43,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "predict",
+            "prob",
+            "score"
+          ],
+          "input_hits": [
+            "text",
+            "ticket"
+          ],
+          "inference_hits": [
+            "decision_function(",
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": [
+            "index"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t5",
+          "parameters": [],
+          "artifact_hits": [
+            "t5_mod005_tfidf.joblib",
+            "t5_mod005_logreg.joblib",
+            "t5_mod007_calibration_models.joblib"
+          ],
+          "score": 43,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "predict",
+            "prob",
+            "score"
+          ],
+          "input_hits": [
+            "text",
+            "ticket"
+          ],
+          "inference_hits": [
+            "decision_function(",
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": [
+            "index"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t5",
+          "parameters": [],
+          "artifact_hits": [
+            "t5_mod005_tfidf.joblib",
+            "t5_mod005_logreg.joblib",
+            "t5_mod007_calibration_models.joblib"
+          ],
+          "score": 43,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "predict",
+            "prob",
+            "score"
+          ],
+          "input_hits": [
+            "text",
+            "ticket"
+          ],
+          "inference_hits": [
+            "decision_function(",
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": [
+            "index"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t5",
+          "parameters": [],
+          "artifact_hits": [
+            "t5_mod005_tfidf.joblib",
+            "t5_mod005_logreg.joblib",
+            "t5_mod007_calibration_models.joblib"
+          ],
+          "score": 43,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "predict",
+            "prob",
+            "score"
+          ],
+          "input_hits": [
+            "text",
+            "ticket"
+          ],
+          "inference_hits": [
+            "decision_function(",
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": [
+            "index"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t1",
+          "parameters": [],
+          "artifact_hits": [
+            "t5_mod005_tfidf.joblib",
+            "t5_mod005_logreg.joblib",
+            "t5_mod007_calibration_models.joblib"
+          ],
+          "score": 35,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "predict",
+            "prob"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": [
+            "dataset"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t1",
+          "parameters": [],
+          "artifact_hits": [
+            "t5_mod005_tfidf.joblib",
+            "t5_mod005_logreg.joblib",
+            "t5_mod007_calibration_models.joblib"
+          ],
+          "score": 35,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "predict",
+            "prob"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": [
+            "dataset"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t1",
+          "parameters": [],
+          "artifact_hits": [
+            "t5_mod005_tfidf.joblib",
+            "t5_mod005_logreg.joblib",
+            "t5_mod007_calibration_models.joblib"
+          ],
+          "score": 35,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "predict",
+            "prob"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": [
+            "dataset"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t1",
+          "parameters": [],
+          "artifact_hits": [
+            "t5_mod005_tfidf.joblib",
+            "t5_mod005_logreg.joblib",
+            "t5_mod007_calibration_models.joblib"
+          ],
+          "score": 35,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "predict",
+            "prob"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": [
+            "dataset"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t1",
+          "parameters": [],
+          "artifact_hits": [
+            "t5_mod005_tfidf.joblib",
+            "t5_mod005_logreg.joblib",
+            "t5_mod007_calibration_models.joblib"
+          ],
+          "score": 35,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "predict",
+            "prob"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": [
+            "dataset"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t1",
+          "parameters": [],
+          "artifact_hits": [
+            "t5_mod005_tfidf.joblib",
+            "t5_mod005_logreg.joblib",
+            "t5_mod007_calibration_models.joblib"
+          ],
+          "score": 35,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "predict",
+            "prob"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": [
+            "dataset"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t1",
+          "parameters": [],
+          "artifact_hits": [
+            "t5_mod005_tfidf.joblib",
+            "t5_mod005_logreg.joblib",
+            "t5_mod007_calibration_models.joblib"
+          ],
+          "score": 35,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "predict",
+            "prob"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": [
+            "dataset"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t2",
+          "parameters": [],
+          "artifact_hits": [
+            "t5_mod005_tfidf.joblib",
+            "t5_mod005_logreg.joblib",
+            "t5_mod007_calibration_models.joblib"
+          ],
+          "score": 34,
+          "evidence": [
+            "frozen_artifact_reference",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "predict",
+            "prob"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t3",
+          "parameters": [],
+          "artifact_hits": [
+            "t5_mod005_tfidf.joblib",
+            "t5_mod005_logreg.joblib",
+            "t5_mod007_calibration_models.joblib"
+          ],
+          "score": 34,
+          "evidence": [
+            "frozen_artifact_reference",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "predict",
+            "prob"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t2",
+          "parameters": [],
+          "artifact_hits": [
+            "t5_mod005_tfidf.joblib",
+            "t5_mod005_logreg.joblib",
+            "t5_mod007_calibration_models.joblib"
+          ],
+          "score": 34,
+          "evidence": [
+            "frozen_artifact_reference",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "predict",
+            "prob"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t3",
+          "parameters": [],
+          "artifact_hits": [
+            "t5_mod005_tfidf.joblib",
+            "t5_mod005_logreg.joblib",
+            "t5_mod007_calibration_models.joblib"
+          ],
+          "score": 34,
+          "evidence": [
+            "frozen_artifact_reference",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "predict",
+            "prob"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t2",
+          "parameters": [],
+          "artifact_hits": [
+            "t5_mod005_tfidf.joblib",
+            "t5_mod005_logreg.joblib",
+            "t5_mod007_calibration_models.joblib"
+          ],
+          "score": 34,
+          "evidence": [
+            "frozen_artifact_reference",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "predict",
+            "prob"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t3",
+          "parameters": [],
+          "artifact_hits": [
+            "t5_mod005_tfidf.joblib",
+            "t5_mod005_logreg.joblib",
+            "t5_mod007_calibration_models.joblib"
+          ],
+          "score": 34,
+          "evidence": [
+            "frozen_artifact_reference",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "predict",
+            "prob"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "predict(",
+            "transform("
+          ],
+          "historical_hits": []
+        }
+      ]
+    },
+    "T6": {
+      "frozen_artifacts": [
+        "t6_mod010_corrected_hybrid_results.json"
+      ],
+      "evaluated_candidate_count": 57,
+      "strong_candidate_count": 0,
+      "top_candidates": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/h_op003_exact_frozen_runtime_reconciliation.py",
+          "function": "runtime_signal_hits",
+          "parameters": [
+            "source"
+          ],
+          "artifact_hits": [],
+          "score": 25,
+          "evidence": [
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal"
+          ],
+          "output_hits": [
+            "rank",
+            "retrieve",
+            "similar"
+          ],
+          "input_hits": [],
+          "inference_hits": [
+            "kneighbors(",
+            "predict(",
+            "predict_proba(",
+            "rank(",
+            "retrieve",
+            "similarity",
+            "survival",
+            "transform("
+          ],
+          "historical_hits": [
+            "neighbor"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/h_op003_exact_frozen_runtime_reconciliation.py",
+          "function": "runtime_signal_hits",
+          "parameters": [
+            "source"
+          ],
+          "artifact_hits": [],
+          "score": 25,
+          "evidence": [
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal"
+          ],
+          "output_hits": [
+            "rank",
+            "retrieve",
+            "similar"
+          ],
+          "input_hits": [],
+          "inference_hits": [
+            "kneighbors(",
+            "predict(",
+            "predict_proba(",
+            "rank(",
+            "retrieve",
+            "similarity",
+            "survival",
+            "transform("
+          ],
+          "historical_hits": [
+            "neighbor"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp07_op004_frozen_runtime_reproducibility_manifest.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [],
+          "score": 21,
+          "evidence": [
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "candidate",
+            "rank"
+          ],
+          "input_hits": [
+            "description",
+            "query",
+            "text",
+            "ticket"
+          ],
+          "inference_hits": [
+            "survival"
+          ],
+          "historical_hits": [
+            "candidate",
+            "historical",
+            "neighbor",
+            "retrieval"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r21_t6_mod010_frozen_runtime_composition_probe.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [],
+          "score": 18,
+          "evidence": [
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "candidate",
+            "rank",
+            "score"
+          ],
+          "input_hits": [
+            "query",
+            "text"
+          ],
+          "inference_hits": [
+            "transform("
+          ],
+          "historical_hits": [
+            "candidate",
+            "index"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r19_t6_semantic_component_resolution.py",
+          "function": "extract_functions",
+          "parameters": [
+            "path"
+          ],
+          "artifact_hits": [],
+          "score": 13,
+          "evidence": [
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "retrieve",
+            "score"
+          ],
+          "input_hits": [
+            "body",
+            "text"
+          ],
+          "inference_hits": [
+            "retrieve"
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r19_t6_semantic_component_resolution.py",
+          "function": "extract_functions",
+          "parameters": [
+            "path"
+          ],
+          "artifact_hits": [],
+          "score": 13,
+          "evidence": [
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "retrieve",
+            "score"
+          ],
+          "input_hits": [
+            "body",
+            "text"
+          ],
+          "inference_hits": [
+            "retrieve"
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r19_t6_semantic_component_resolution.py",
+          "function": "extract_functions",
+          "parameters": [
+            "path"
+          ],
+          "artifact_hits": [],
+          "score": 13,
+          "evidence": [
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "retrieve",
+            "score"
+          ],
+          "input_hits": [
+            "body",
+            "text"
+          ],
+          "inference_hits": [
+            "retrieve"
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r19_t6_semantic_component_resolution.py",
+          "function": "extract_functions",
+          "parameters": [
+            "path"
+          ],
+          "artifact_hits": [],
+          "score": 13,
+          "evidence": [
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "retrieve",
+            "score"
+          ],
+          "input_hits": [
+            "body",
+            "text"
+          ],
+          "inference_hits": [
+            "retrieve"
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r19_t6_semantic_component_resolution.py",
+          "function": "extract_functions",
+          "parameters": [
+            "path"
+          ],
+          "artifact_hits": [],
+          "score": 13,
+          "evidence": [
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "retrieve",
+            "score"
+          ],
+          "input_hits": [
+            "body",
+            "text"
+          ],
+          "inference_hits": [
+            "retrieve"
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r19_t6_semantic_component_resolution.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [],
+          "score": 12,
+          "evidence": [
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "score",
+            "similar"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "similarity"
+          ],
+          "historical_hits": [
+            "reference"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r19_t6_semantic_component_resolution.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [],
+          "score": 12,
+          "evidence": [
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "score",
+            "similar"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "similarity"
+          ],
+          "historical_hits": [
+            "reference"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r19_t6_semantic_component_resolution.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [],
+          "score": 12,
+          "evidence": [
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "score",
+            "similar"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "similarity"
+          ],
+          "historical_hits": [
+            "reference"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r19_t6_semantic_component_resolution.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [],
+          "score": 12,
+          "evidence": [
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "score",
+            "similar"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "similarity"
+          ],
+          "historical_hits": [
+            "reference"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r19_t6_semantic_component_resolution.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [],
+          "score": 12,
+          "evidence": [
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "score",
+            "similar"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "similarity"
+          ],
+          "historical_hits": [
+            "reference"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r18_t6_mod010_component_binding.py",
+          "function": "extract_functions",
+          "parameters": [
+            "source"
+          ],
+          "artifact_hits": [],
+          "score": 11,
+          "evidence": [
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "retrieve",
+            "score"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "retrieve"
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r18_t6_mod010_component_binding.py",
+          "function": "extract_functions",
+          "parameters": [
+            "source"
+          ],
+          "artifact_hits": [],
+          "score": 11,
+          "evidence": [
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "retrieve",
+            "score"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "retrieve"
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r18_t6_mod010_component_binding.py",
+          "function": "extract_functions",
+          "parameters": [
+            "source"
+          ],
+          "artifact_hits": [],
+          "score": 11,
+          "evidence": [
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "retrieve",
+            "score"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "retrieve"
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r20_t6_mod009_semantic_runtime_binding.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [],
+          "score": 10,
+          "evidence": [
+            "historical_reference_dependency",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "candidate",
+            "score"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [],
+          "historical_hits": [
+            "candidate",
+            "reference"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r20_t6_mod009_semantic_runtime_binding.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [],
+          "score": 10,
+          "evidence": [
+            "historical_reference_dependency",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "candidate",
+            "score"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [],
+          "historical_hits": [
+            "candidate",
+            "reference"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r18_t6_mod010_component_binding.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [],
+          "score": 8,
+          "evidence": [
+            "historical_reference_dependency",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "candidate"
+          ],
+          "input_hits": [
+            "query",
+            "text"
+          ],
+          "inference_hits": [],
+          "historical_hits": [
+            "candidate"
+          ]
+        }
+      ]
+    },
+    "T7": {
+      "frozen_artifacts": [
+        "t7_mod010_log_normal_aft_model.json"
+      ],
+      "evaluated_candidate_count": 62,
+      "strong_candidate_count": 6,
+      "top_candidates": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op019_final_t1_t7_runtime_binding_reconciliation.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [
+            "t7_mod010_log_normal_aft_model.json"
+          ],
+          "score": 45,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "prediction",
+            "resolution",
+            "survival",
+            "time"
+          ],
+          "input_hits": [
+            "query",
+            "text",
+            "ticket"
+          ],
+          "inference_hits": [
+            "survival"
+          ],
+          "historical_hits": [
+            "candidate",
+            "corpus",
+            "historical",
+            "retrieval"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r25_t7_exact_feature_builder_audit.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [
+            "t7_mod010_log_normal_aft_model.json"
+          ],
+          "score": 37,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "prediction",
+            "survival",
+            "time"
+          ],
+          "input_hits": [
+            "description",
+            "text"
+          ],
+          "inference_hits": [
+            "survival"
+          ],
+          "historical_hits": [
+            "reference"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r23_t7_final_model_parameter_binding.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [
+            "t7_mod010_log_normal_aft_model.json"
+          ],
+          "score": 35,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "prediction",
+            "survival",
+            "time"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "survival"
+          ],
+          "historical_hits": [
+            "candidate"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r23_t7_final_model_parameter_binding.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [
+            "t7_mod010_log_normal_aft_model.json"
+          ],
+          "score": 35,
+          "evidence": [
+            "frozen_artifact_reference",
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "prediction",
+            "survival",
+            "time"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "survival"
+          ],
+          "historical_hits": [
+            "candidate"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r24_t7_frozen_runtime_probe.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [
+            "t7_mod010_log_normal_aft_model.json"
+          ],
+          "score": 30,
+          "evidence": [
+            "frozen_artifact_reference",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "prediction",
+            "time"
+          ],
+          "input_hits": [
+            "description",
+            "text"
+          ],
+          "inference_hits": [],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r24_t7_frozen_runtime_probe.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [
+            "t7_mod010_log_normal_aft_model.json"
+          ],
+          "score": 30,
+          "evidence": [
+            "frozen_artifact_reference",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "prediction",
+            "time"
+          ],
+          "input_hits": [
+            "description",
+            "text"
+          ],
+          "inference_hits": [],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r24_t7_frozen_runtime_probe.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [
+            "t7_mod010_log_normal_aft_model.json"
+          ],
+          "score": 30,
+          "evidence": [
+            "frozen_artifact_reference",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "prediction",
+            "time"
+          ],
+          "input_hits": [
+            "description",
+            "text"
+          ],
+          "inference_hits": [],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r23_t7_final_model_parameter_binding.py",
+          "function": "source_model_signals",
+          "parameters": [],
+          "artifact_hits": [
+            "t7_mod010_log_normal_aft_model.json"
+          ],
+          "score": 28,
+          "evidence": [
+            "frozen_artifact_reference",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "survival"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "survival"
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r23_t7_final_model_parameter_binding.py",
+          "function": "source_model_signals",
+          "parameters": [],
+          "artifact_hits": [
+            "t7_mod010_log_normal_aft_model.json"
+          ],
+          "score": 28,
+          "evidence": [
+            "frozen_artifact_reference",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "survival"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [
+            "survival"
+          ],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp07_op004_frozen_runtime_reproducibility_manifest.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [],
+          "score": 24,
+          "evidence": [
+            "historical_reference_dependency",
+            "inference_or_retrieval_call",
+            "task_output_signal",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [
+            "prediction",
+            "survival",
+            "time"
+          ],
+          "input_hits": [
+            "description",
+            "query",
+            "text",
+            "ticket"
+          ],
+          "inference_hits": [
+            "survival"
+          ],
+          "historical_hits": [
+            "candidate",
+            "historical",
+            "neighbor",
+            "retrieval"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r24_t7_frozen_runtime_probe.py",
+          "function": "clean_text",
+          "parameters": [
+            "value"
+          ],
+          "artifact_hits": [
+            "t7_mod010_log_normal_aft_model.json"
+          ],
+          "score": 22,
+          "evidence": [
+            "frozen_artifact_reference",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r24_t7_frozen_runtime_probe.py",
+          "function": "text_chars",
+          "parameters": [
+            "value"
+          ],
+          "artifact_hits": [
+            "t7_mod010_log_normal_aft_model.json"
+          ],
+          "score": 22,
+          "evidence": [
+            "frozen_artifact_reference",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r24_t7_frozen_runtime_probe.py",
+          "function": "text_words",
+          "parameters": [
+            "value"
+          ],
+          "artifact_hits": [
+            "t7_mod010_log_normal_aft_model.json"
+          ],
+          "score": 22,
+          "evidence": [
+            "frozen_artifact_reference",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r24_t7_frozen_runtime_probe.py",
+          "function": "text_digits",
+          "parameters": [
+            "value"
+          ],
+          "artifact_hits": [
+            "t7_mod010_log_normal_aft_model.json"
+          ],
+          "score": 22,
+          "evidence": [
+            "frozen_artifact_reference",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r24_t7_frozen_runtime_probe.py",
+          "function": "text_lines",
+          "parameters": [
+            "value"
+          ],
+          "artifact_hits": [
+            "t7_mod010_log_normal_aft_model.json"
+          ],
+          "score": 22,
+          "evidence": [
+            "frozen_artifact_reference",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r24_t7_frozen_runtime_probe.py",
+          "function": "text_uppercase",
+          "parameters": [
+            "value"
+          ],
+          "artifact_hits": [
+            "t7_mod010_log_normal_aft_model.json"
+          ],
+          "score": 22,
+          "evidence": [
+            "frozen_artifact_reference",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r24_t7_frozen_runtime_probe.py",
+          "function": "clean_text",
+          "parameters": [
+            "value"
+          ],
+          "artifact_hits": [
+            "t7_mod010_log_normal_aft_model.json"
+          ],
+          "score": 22,
+          "evidence": [
+            "frozen_artifact_reference",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r24_t7_frozen_runtime_probe.py",
+          "function": "text_chars",
+          "parameters": [
+            "value"
+          ],
+          "artifact_hits": [
+            "t7_mod010_log_normal_aft_model.json"
+          ],
+          "score": 22,
+          "evidence": [
+            "frozen_artifact_reference",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r24_t7_frozen_runtime_probe.py",
+          "function": "text_words",
+          "parameters": [
+            "value"
+          ],
+          "artifact_hits": [
+            "t7_mod010_log_normal_aft_model.json"
+          ],
+          "score": 22,
+          "evidence": [
+            "frozen_artifact_reference",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [],
+          "historical_hits": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r24_t7_frozen_runtime_probe.py",
+          "function": "text_digits",
+          "parameters": [
+            "value"
+          ],
+          "artifact_hits": [
+            "t7_mod010_log_normal_aft_model.json"
+          ],
+          "score": 22,
+          "evidence": [
+            "frozen_artifact_reference",
+            "ticket_or_text_input_signal"
+          ],
+          "output_hits": [],
+          "input_hits": [
+            "text"
+          ],
+          "inference_hits": [],
+          "historical_hits": []
+        }
+      ]
+    }
+  },
+  "selection_summary": {
+    "T1": {
+      "strong_candidates": 2,
+      "unique_top_candidate": false,
+      "selection_status": "REQUIRES_INTERFACE_REVIEW"
+    },
+    "T2": {
+      "strong_candidates": 5,
+      "unique_top_candidate": false,
+      "selection_status": "REQUIRES_INTERFACE_REVIEW"
+    },
+    "T3": {
+      "strong_candidates": 5,
+      "unique_top_candidate": false,
+      "selection_status": "REQUIRES_INTERFACE_REVIEW"
+    },
+    "T4": {
+      "strong_candidates": 5,
+      "unique_top_candidate": false,
+      "selection_status": "REQUIRES_INTERFACE_REVIEW"
+    },
+    "T5": {
+      "strong_candidates": 5,
+      "unique_top_candidate": false,
+      "selection_status": "REQUIRES_INTERFACE_REVIEW"
+    },
+    "T6": {
+      "strong_candidates": 0,
+      "unique_top_candidate": false,
+      "selection_status": "REQUIRES_INTERFACE_REVIEW"
+    },
+    "T7": {
+      "strong_candidates": 5,
+      "unique_top_candidate": true,
+      "selection_status": "UNIQUE_CANDIDATE"
+    }
+  },
+  "final_candidates": {
+    "T1": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r5_t1_corrected_frozen_runtime_probe.py",
+        "function": "main",
+        "parameters": [],
+        "score": 31,
+        "artifact_hits": [
+          "t1_it_support_char_svm.joblib"
+        ],
+        "inference_hits": [
+          "predict(",
+          "transform("
+        ],
+        "input_hits": [
+          "text"
+        ],
+        "historical_hits": []
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r5_t1_corrected_frozen_runtime_probe.py",
+        "function": "main",
+        "parameters": [],
+        "score": 31,
+        "artifact_hits": [
+          "t1_it_support_char_svm.joblib"
+        ],
+        "inference_hits": [
+          "predict(",
+          "transform("
+        ],
+        "input_hits": [
+          "text"
+        ],
+        "historical_hits": []
+      }
+    ],
+    "T2": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+        "function": "probe_t5",
+        "parameters": [],
+        "score": 40,
+        "artifact_hits": [
+          "t2_class_weighted_tfidf_logreg.joblib"
+        ],
+        "inference_hits": [
+          "decision_function(",
+          "predict(",
+          "transform("
+        ],
+        "input_hits": [
+          "text",
+          "ticket"
+        ],
+        "historical_hits": [
+          "index"
+        ]
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+        "function": "probe_t5",
+        "parameters": [],
+        "score": 40,
+        "artifact_hits": [
+          "t2_class_weighted_tfidf_logreg.joblib"
+        ],
+        "inference_hits": [
+          "decision_function(",
+          "predict(",
+          "transform("
+        ],
+        "input_hits": [
+          "text",
+          "ticket"
+        ],
+        "historical_hits": [
+          "index"
+        ]
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+        "function": "probe_t5",
+        "parameters": [],
+        "score": 40,
+        "artifact_hits": [
+          "t2_class_weighted_tfidf_logreg.joblib"
+        ],
+        "inference_hits": [
+          "decision_function(",
+          "predict(",
+          "transform("
+        ],
+        "input_hits": [
+          "text",
+          "ticket"
+        ],
+        "historical_hits": [
+          "index"
+        ]
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+        "function": "probe_t5",
+        "parameters": [],
+        "score": 40,
+        "artifact_hits": [
+          "t2_class_weighted_tfidf_logreg.joblib"
+        ],
+        "inference_hits": [
+          "decision_function(",
+          "predict(",
+          "transform("
+        ],
+        "input_hits": [
+          "text",
+          "ticket"
+        ],
+        "historical_hits": [
+          "index"
+        ]
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+        "function": "probe_t5",
+        "parameters": [],
+        "score": 40,
+        "artifact_hits": [
+          "t2_class_weighted_tfidf_logreg.joblib"
+        ],
+        "inference_hits": [
+          "decision_function(",
+          "predict(",
+          "transform("
+        ],
+        "input_hits": [
+          "text",
+          "ticket"
+        ],
+        "historical_hits": [
+          "index"
+        ]
+      }
+    ],
+    "T3": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+        "function": "probe_t5",
+        "parameters": [],
+        "score": 40,
+        "artifact_hits": [
+          "t3_class_weighted_tfidf_logreg.joblib"
+        ],
+        "inference_hits": [
+          "decision_function(",
+          "predict(",
+          "transform("
+        ],
+        "input_hits": [
+          "text",
+          "ticket"
+        ],
+        "historical_hits": [
+          "index"
+        ]
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+        "function": "probe_t5",
+        "parameters": [],
+        "score": 40,
+        "artifact_hits": [
+          "t3_class_weighted_tfidf_logreg.joblib"
+        ],
+        "inference_hits": [
+          "decision_function(",
+          "predict(",
+          "transform("
+        ],
+        "input_hits": [
+          "text",
+          "ticket"
+        ],
+        "historical_hits": [
+          "index"
+        ]
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+        "function": "probe_t5",
+        "parameters": [],
+        "score": 40,
+        "artifact_hits": [
+          "t3_class_weighted_tfidf_logreg.joblib"
+        ],
+        "inference_hits": [
+          "decision_function(",
+          "predict(",
+          "transform("
+        ],
+        "input_hits": [
+          "text",
+          "ticket"
+        ],
+        "historical_hits": [
+          "index"
+        ]
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+        "function": "probe_t5",
+        "parameters": [],
+        "score": 40,
+        "artifact_hits": [
+          "t3_class_weighted_tfidf_logreg.joblib"
+        ],
+        "inference_hits": [
+          "decision_function(",
+          "predict(",
+          "transform("
+        ],
+        "input_hits": [
+          "text",
+          "ticket"
+        ],
+        "historical_hits": [
+          "index"
+        ]
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+        "function": "probe_t5",
+        "parameters": [],
+        "score": 40,
+        "artifact_hits": [
+          "t3_class_weighted_tfidf_logreg.joblib"
+        ],
+        "inference_hits": [
+          "decision_function(",
+          "predict(",
+          "transform("
+        ],
+        "input_hits": [
+          "text",
+          "ticket"
+        ],
+        "historical_hits": [
+          "index"
+        ]
+      }
+    ],
+    "T4": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r14_t4_corrected_frozen_runtime_smoke.py",
+        "function": "main",
+        "parameters": [],
+        "score": 50,
+        "artifact_hits": [
+          "t4_mod007_tfidf.joblib",
+          "t4_mod007_neighbors.joblib"
+        ],
+        "inference_hits": [
+          "kneighbors(",
+          "similarity",
+          "transform("
+        ],
+        "input_hits": [
+          "description",
+          "text",
+          "ticket"
+        ],
+        "historical_hits": [
+          "candidate",
+          "neighbor",
+          "retrieval"
+        ]
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r14_t4_corrected_frozen_runtime_smoke.py",
+        "function": "main",
+        "parameters": [],
+        "score": 50,
+        "artifact_hits": [
+          "t4_mod007_tfidf.joblib",
+          "t4_mod007_neighbors.joblib"
+        ],
+        "inference_hits": [
+          "kneighbors(",
+          "similarity",
+          "transform("
+        ],
+        "input_hits": [
+          "description",
+          "text",
+          "ticket"
+        ],
+        "historical_hits": [
+          "candidate",
+          "neighbor",
+          "retrieval"
+        ]
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r14_t4_corrected_frozen_runtime_smoke.py",
+        "function": "main",
+        "parameters": [],
+        "score": 50,
+        "artifact_hits": [
+          "t4_mod007_tfidf.joblib",
+          "t4_mod007_neighbors.joblib"
+        ],
+        "inference_hits": [
+          "kneighbors(",
+          "similarity",
+          "transform("
+        ],
+        "input_hits": [
+          "description",
+          "text",
+          "ticket"
+        ],
+        "historical_hits": [
+          "candidate",
+          "neighbor",
+          "retrieval"
+        ]
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r16_t4_exact_eval_retrieval_reproduction.py",
+        "function": "main",
+        "parameters": [],
+        "score": 44,
+        "artifact_hits": [
+          "t4_mod007_tfidf.joblib",
+          "t4_mod007_neighbors.joblib",
+          "t4_mod007_full_retrieval.npz"
+        ],
+        "inference_hits": [
+          "kneighbors(",
+          "similarity",
+          "transform("
+        ],
+        "input_hits": [
+          "description",
+          "text",
+          "ticket"
+        ],
+        "historical_hits": [
+          "index",
+          "neighbor",
+          "retrieval"
+        ]
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r16_t4_exact_eval_retrieval_reproduction.py",
+        "function": "main",
+        "parameters": [],
+        "score": 44,
+        "artifact_hits": [
+          "t4_mod007_tfidf.joblib",
+          "t4_mod007_neighbors.joblib",
+          "t4_mod007_full_retrieval.npz"
+        ],
+        "inference_hits": [
+          "kneighbors(",
+          "similarity",
+          "transform("
+        ],
+        "input_hits": [
+          "description",
+          "text",
+          "ticket"
+        ],
+        "historical_hits": [
+          "index",
+          "neighbor",
+          "retrieval"
+        ]
+      }
+    ],
+    "T5": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+        "function": "probe_t5",
+        "parameters": [],
+        "score": 43,
+        "artifact_hits": [
+          "t5_mod005_tfidf.joblib",
+          "t5_mod005_logreg.joblib",
+          "t5_mod007_calibration_models.joblib"
+        ],
+        "inference_hits": [
+          "decision_function(",
+          "predict(",
+          "transform("
+        ],
+        "input_hits": [
+          "text",
+          "ticket"
+        ],
+        "historical_hits": [
+          "index"
+        ]
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+        "function": "probe_t5",
+        "parameters": [],
+        "score": 43,
+        "artifact_hits": [
+          "t5_mod005_tfidf.joblib",
+          "t5_mod005_logreg.joblib",
+          "t5_mod007_calibration_models.joblib"
+        ],
+        "inference_hits": [
+          "decision_function(",
+          "predict(",
+          "transform("
+        ],
+        "input_hits": [
+          "text",
+          "ticket"
+        ],
+        "historical_hits": [
+          "index"
+        ]
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+        "function": "probe_t5",
+        "parameters": [],
+        "score": 43,
+        "artifact_hits": [
+          "t5_mod005_tfidf.joblib",
+          "t5_mod005_logreg.joblib",
+          "t5_mod007_calibration_models.joblib"
+        ],
+        "inference_hits": [
+          "decision_function(",
+          "predict(",
+          "transform("
+        ],
+        "input_hits": [
+          "text",
+          "ticket"
+        ],
+        "historical_hits": [
+          "index"
+        ]
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+        "function": "probe_t5",
+        "parameters": [],
+        "score": 43,
+        "artifact_hits": [
+          "t5_mod005_tfidf.joblib",
+          "t5_mod005_logreg.joblib",
+          "t5_mod007_calibration_models.joblib"
+        ],
+        "inference_hits": [
+          "decision_function(",
+          "predict(",
+          "transform("
+        ],
+        "input_hits": [
+          "text",
+          "ticket"
+        ],
+        "historical_hits": [
+          "index"
+        ]
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+        "function": "probe_t5",
+        "parameters": [],
+        "score": 43,
+        "artifact_hits": [
+          "t5_mod005_tfidf.joblib",
+          "t5_mod005_logreg.joblib",
+          "t5_mod007_calibration_models.joblib"
+        ],
+        "inference_hits": [
+          "decision_function(",
+          "predict(",
+          "transform("
+        ],
+        "input_hits": [
+          "text",
+          "ticket"
+        ],
+        "historical_hits": [
+          "index"
+        ]
+      }
+    ],
+    "T6": [],
+    "T7": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op019_final_t1_t7_runtime_binding_reconciliation.py",
+        "function": "main",
+        "parameters": [],
+        "score": 45,
+        "artifact_hits": [
+          "t7_mod010_log_normal_aft_model.json"
+        ],
+        "inference_hits": [
+          "survival"
+        ],
+        "input_hits": [
+          "query",
+          "text",
+          "ticket"
+        ],
+        "historical_hits": [
+          "candidate",
+          "corpus",
+          "historical",
+          "retrieval"
+        ]
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r25_t7_exact_feature_builder_audit.py",
+        "function": "main",
+        "parameters": [],
+        "score": 37,
+        "artifact_hits": [
+          "t7_mod010_log_normal_aft_model.json"
+        ],
+        "inference_hits": [
+          "survival"
+        ],
+        "input_hits": [
+          "description",
+          "text"
+        ],
+        "historical_hits": [
+          "reference"
+        ]
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r23_t7_final_model_parameter_binding.py",
+        "function": "main",
+        "parameters": [],
+        "score": 35,
+        "artifact_hits": [
+          "t7_mod010_log_normal_aft_model.json"
+        ],
+        "inference_hits": [
+          "survival"
+        ],
+        "input_hits": [
+          "text"
+        ],
+        "historical_hits": [
+          "candidate"
+        ]
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r23_t7_final_model_parameter_binding.py",
+        "function": "main",
+        "parameters": [],
+        "score": 35,
+        "artifact_hits": [
+          "t7_mod010_log_normal_aft_model.json"
+        ],
+        "inference_hits": [
+          "survival"
+        ],
+        "input_hits": [
+          "text"
+        ],
+        "historical_hits": [
+          "candidate"
+        ]
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r23_t7_final_model_parameter_binding.py",
+        "function": "source_model_signals",
+        "parameters": [],
+        "score": 28,
+        "artifact_hits": [
+          "t7_mod010_log_normal_aft_model.json"
+        ],
+        "inference_hits": [
+          "survival"
+        ],
+        "input_hits": [
+          "text"
+        ],
+        "historical_hits": []
+      }
+    ]
+  },
+  "controls": {
+    "model_execution": false,
+    "model_retraining": false,
+    "model_selection": false,
+    "artifact_modification": false,
+    "threshold_optimization": false,
+    "locked_test_reuse": false
+  },
+  "interpretation_boundary": "This operation identifies source-level candidates with direct frozen-artifact and inference evidence. A unique candidate is not treated as production-ready until its exact input/output contract is manually reconciled. No model execution occurs in H-OP-005.",
+  "next_operation": "H-OP-006 \u2014 exact callable source inspection and single-ticket input/output contract confirmation.",
+  "output": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/h_op005_frozen_callable_selection.json"
+}

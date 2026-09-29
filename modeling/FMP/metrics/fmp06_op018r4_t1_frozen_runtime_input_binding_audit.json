@@ -1,0 +1,271 @@
+{
+  "operation": "FMP-06 OP-018R4",
+  "operation_type": "READ_ONLY_T1_FROZEN_RUNTIME_INPUT_BINDING_AUDIT",
+  "artifact": "modeling/T1/baselines/t1_it_support_char_svm.joblib",
+  "feature_pipeline": {
+    "type": "sklearn.pipeline.FeatureUnion",
+    "transformer_list": [
+      {
+        "name": "word",
+        "type": "sklearn.feature_extraction.text.TfidfVectorizer",
+        "methods": {
+          "transform": true,
+          "fit": true
+        },
+        "analyzer": "word",
+        "ngram_range": "(1, 2)",
+        "lowercase": "True",
+        "strip_accents": "None",
+        "token_pattern": "(?u)\\b\\w\\w+\\b",
+        "binary": "False",
+        "use_idf": "True",
+        "sublinear_tf": "True"
+      },
+      {
+        "name": "char",
+        "type": "sklearn.feature_extraction.text.TfidfVectorizer",
+        "methods": {
+          "transform": true,
+          "fit": true
+        },
+        "analyzer": "char",
+        "ngram_range": "(3, 5)",
+        "lowercase": "True",
+        "strip_accents": "None",
+        "token_pattern": "(?u)\\b\\w\\w+\\b",
+        "binary": "False",
+        "use_idf": "True",
+        "sublinear_tf": "True"
+      }
+    ]
+  },
+  "candidate_sources": [
+    {
+      "source": "modeling/T1/derived/t1_dataset.csv",
+      "exists": true,
+      "status": "READ_OK",
+      "rows": 2229,
+      "columns": [
+        "id",
+        "text",
+        "category_truth",
+        "source_partition",
+        "source_row_x",
+        "source_row_y"
+      ],
+      "dtypes": {
+        "id": "int64",
+        "text": "str",
+        "category_truth": "str",
+        "source_partition": "str",
+        "source_row_x": "int64",
+        "source_row_y": "int64"
+      },
+      "non_null_counts_head": {
+        "id": 2229,
+        "text": 2229,
+        "category_truth": 2229,
+        "source_partition": 2229,
+        "source_row_x": 2229,
+        "source_row_y": 2229
+      },
+      "sample_rows": [
+        {
+          "row_index": 0,
+          "id": "10",
+          "text": "Initiated by [COMPANY][LOCATION]- Vulnerable .Net 4.5 Version on SS-E03F49869B22",
+          "category_truth": "Software",
+          "source_partition": "train",
+          "source_row_x": "367",
+          "source_row_y": "367"
+        },
+        {
+          "row_index": 1,
+          "id": "12",
+          "text": "Windows user [NAME] can use users deplewsk office 365 without password",
+          "category_truth": "O365",
+          "source_partition": "train",
+          "source_row_x": "1108",
+          "source_row_y": "1108"
+        },
+        {
+          "row_index": 2,
+          "id": "16",
+          "text": "urgent- cant receive mails from [EMAIL] into mailbox [EMAIL]we have to receive orders from our webshop [URL] in mailbox [EMAIL] from mailaddress [EMAIL]. unfortunately it seems like our system block all mails from [EMAIL].   Can you please approve this mail address urgently today. important because ...",
+          "category_truth": "Support general",
+          "source_partition": "train",
+          "source_row_x": "1435",
+          "source_row_y": "1435"
+        }
+      ]
+    },
+    {
+      "source": "modeling/T1/derived/t1_vscode_dataset.csv",
+      "exists": true,
+      "status": "READ_OK",
+      "rows": 4647,
+      "columns": [
+        "issue_id",
+        "summary",
+        "created",
+        "description_clean",
+        "issue_type",
+        "target_representation",
+        "source_row"
+      ],
+      "dtypes": {
+        "issue_id": "int64",
+        "summary": "str",
+        "created": "str",
+        "description_clean": "str",
+        "issue_type": "str",
+        "target_representation": "str",
+        "source_row": "int64"
+      },
+      "non_null_counts_head": {
+        "issue_id": 4647,
+        "summary": 4647,
+        "created": 4647,
+        "description_clean": 4647,
+        "issue_type": 4647,
+        "target_representation": 4647,
+        "source_row": 4647
+      },
+      "sample_rows": [
+        {
+          "row_index": 0,
+          "issue_id": "223582",
+          "summary": "issue reporter dropdown is too large",
+          "created": "2024-07-25 07:48:54+00:00",
+          "description_clean": "> > > 1. Open Help > Report Issue> > The dropdowns are too large....also make sure `\"issueReporter.experimental.auxWindow\": true`the issue with the dropdown seems related to the aux window service. looks like in all zoom levels, it is at `current zoom level + 1`might consider switching to the custom...",
+          "issue_type": "Bug",
+          "target_representation": "Type",
+          "source_row": "8"
+        },
+        {
+          "row_index": 1,
+          "issue_id": "223508",
+          "summary": "Endless loop for applying setting",
+          "created": "2024-07-24 15:46:15+00:00",
+          "description_clean": "1) Create a codespace in GH.com2) when the codespace is created open it in insiders using the status line remote menu-> I'm asked to reload the window to apply a setting![Image](https://github.com/user-attachments/assets/6126273d-8295-4c12-a322-b17ca95785c9)3) Press reload-> I'm asked to reload the ...",
+          "issue_type": "Bug",
+          "target_representation": "Type",
+          "source_row": "13"
+        },
+        {
+          "row_index": 2,
+          "issue_id": "223506",
+          "summary": "Layout issues with the issue reporter",
+          "created": "2024-07-24 15:41:37+00:00",
+          "description_clean": "1) Open Help > Report IssueVS Code version: Code - Insiders 1.92.0-insider (7ed4cdc56d037146b2c4c890f09e78b2ba14b49d, 2024-07-24T07:50:18.385Z)OS version: Darwin arm64 23.5.0Modes:Remote OS version: Linux x64 5.15.0-1057-azureRemote OS version: Linux x64 6.5.0-1022-azure<details><summary>System Info...",
+          "issue_type": "Bug",
+          "target_representation": "Type",
+          "source_row": "14"
+        }
+      ]
+    },
+    {
+      "source": "modeling/T1/splits/t1_split.csv",
+      "exists": true,
+      "status": "READ_OK",
+      "rows": 2229,
+      "columns": [
+        "id",
+        "text",
+        "category_truth",
+        "source_partition",
+        "source_row_x",
+        "source_row_y",
+        "modeling_split"
+      ],
+      "dtypes": {
+        "id": "int64",
+        "text": "str",
+        "category_truth": "str",
+        "source_partition": "str",
+        "source_row_x": "int64",
+        "source_row_y": "int64",
+        "modeling_split": "str"
+      },
+      "non_null_counts_head": {
+        "id": 2229,
+        "text": 2229,
+        "category_truth": 2229,
+        "source_partition": 2229,
+        "source_row_x": 2229,
+        "source_row_y": 2229,
+        "modeling_split": 2229
+      },
+      "sample_rows": [
+        {
+          "row_index": 0,
+          "id": "10",
+          "text": "Initiated by [COMPANY][LOCATION]- Vulnerable .Net 4.5 Version on SS-E03F49869B22",
+          "category_truth": "Software",
+          "source_partition": "train",
+          "source_row_x": "367",
+          "source_row_y": "367",
+          "modeling_split": "development"
+        },
+        {
+          "row_index": 1,
+          "id": "12",
+          "text": "Windows user [NAME] can use users deplewsk office 365 without password",
+          "category_truth": "O365",
+          "source_partition": "train",
+          "source_row_x": "1108",
+          "source_row_y": "1108",
+          "modeling_split": "development"
+        },
+        {
+          "row_index": 2,
+          "id": "16",
+          "text": "urgent- cant receive mails from [EMAIL] into mailbox [EMAIL]we have to receive orders from our webshop [URL] in mailbox [EMAIL] from mailaddress [EMAIL]. unfortunately it seems like our system block all mails from [EMAIL].   Can you please approve this mail address urgently today. important because ...",
+          "category_truth": "Support general",
+          "source_partition": "train",
+          "source_row_x": "1435",
+          "source_row_y": "1435",
+          "modeling_split": "development"
+        }
+      ]
+    }
+  ],
+  "binding_analysis": {
+    "feature_transformer_names": [
+      "word",
+      "char"
+    ],
+    "source_assessments": [
+      {
+        "source": "modeling/T1/derived/t1_dataset.csv",
+        "has_summary": false,
+        "has_description": false,
+        "has_text": true,
+        "candidate_runtime_representation": "TEXT_COLUMN"
+      },
+      {
+        "source": "modeling/T1/derived/t1_vscode_dataset.csv",
+        "has_summary": true,
+        "has_description": true,
+        "has_text": false,
+        "candidate_runtime_representation": "SUMMARY_AND_DESCRIPTION"
+      },
+      {
+        "source": "modeling/T1/splits/t1_split.csv",
+        "has_summary": false,
+        "has_description": false,
+        "has_text": true,
+        "candidate_runtime_representation": "TEXT_COLUMN"
+      }
+    ],
+    "conclusion": "Determine the authoritative existing T1 input representation from the frozen FeatureUnion structure and candidate source schemas before executing T1 inference."
+  },
+  "safeguards": {
+    "transform_executed": false,
+    "predict_executed": false,
+    "fit_executed": false,
+    "retraining": false,
+    "artifact_modification": false
+  },
+  "overall_status": "PASS"
+}

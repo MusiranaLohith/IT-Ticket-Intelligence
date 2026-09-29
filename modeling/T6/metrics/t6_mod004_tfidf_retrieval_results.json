@@ -1,0 +1,101 @@
+{
+  "operation": "T6 MOD-004",
+  "task": "T6 Similar-Ticket Retrieval",
+  "status": "BASELINE_COMPLETED",
+  "model": {
+    "name": "TFIDF_COSINE_RETRIEVAL",
+    "family": "lexical_information_retrieval",
+    "supervised": false,
+    "similarity": "cosine"
+  },
+  "feature_policy": {
+    "query_features": [
+      "query_creator",
+      "query_creator_detail",
+      "query_summary",
+      "query_description"
+    ],
+    "candidate_features": [
+      "candidate_creator",
+      "candidate_creator_detail",
+      "candidate_summary",
+      "candidate_description"
+    ],
+    "post_creation_information_used": false,
+    "target_ticket_information_used_as_query_feature": false
+  },
+  "vectorizer": {
+    "analyzer": "word",
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 2,
+    "max_df": 0.98,
+    "sublinear_tf": true,
+    "max_features": 100000,
+    "normalization": "l2",
+    "fit_source": "TRAIN_QUERY_AND_CANDIDATE_TEXT_ONLY",
+    "feature_count": 100000
+  },
+  "candidate_structure": {
+    "candidates_per_query": 101,
+    "positive_per_query": 1,
+    "observable_non_positive_semantics": "NOT_TRUE_NEGATIVE"
+  },
+  "train": {
+    "rows": 192506,
+    "queries": 1906,
+    "metrics": {
+      "recall_at_1": 0.6825813221406086,
+      "recall_at_3": 0.8037775445960126,
+      "recall_at_5": 0.8457502623294858,
+      "recall_at_10": 0.8950682056663168,
+      "recall_at_20": 0.9349422875131165,
+      "mrr": 0.7570528832450475,
+      "ndcg_at_5": 0.7710528634146957,
+      "ndcg_at_10": 0.7870240584017848
+    }
+  },
+  "evaluation": {
+    "rows": 82416,
+    "queries": 816,
+    "metrics": {
+      "recall_at_1": 0.6936274509803921,
+      "recall_at_3": 0.8333333333333334,
+      "recall_at_5": 0.8762254901960784,
+      "recall_at_10": 0.9105392156862745,
+      "recall_at_20": 0.9399509803921569,
+      "mrr": 0.7764268513472535,
+      "ndcg_at_5": 0.7954814890792703,
+      "ndcg_at_10": 0.8066454422871442
+    }
+  },
+  "evaluation_metrics": [
+    "Recall@1",
+    "Recall@3",
+    "Recall@5",
+    "Recall@10",
+    "Recall@20",
+    "MRR",
+    "NDCG@5",
+    "NDCG@10"
+  ],
+  "controls": {
+    "train_only_vectorizer_fit": true,
+    "evaluation_used_for_vectorizer_fit": false,
+    "labels_used_for_vectorizer_fit": false,
+    "observable_non_positive_converted_to_true_negative": false,
+    "threshold_optimization": false,
+    "probability_calibration": false,
+    "automation_threshold": false,
+    "raw_source_modified": false,
+    "accepted_dtm_artifact_modified": false
+  },
+  "artifacts": {
+    "vectorizer": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/models/t6_mod004_tfidf_vectorizer.joblib",
+    "query_rankings": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod004_query_rankings.csv",
+    "results": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod004_tfidf_retrieval_results.json"
+  },
+  "runtime_seconds": 324.62039317000017
+}

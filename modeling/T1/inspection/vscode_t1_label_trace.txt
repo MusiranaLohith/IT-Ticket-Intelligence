@@ -1,0 +1,20 @@
+/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/contracts/t1_vscode_contract.py:18:    "dataset": "GitBugs VS Code",
+/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/contracts/t1_vscode_contract.py:23:            "Classify an incoming VS Code issue by issue type "
+/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/contracts/t1_vscode_contract.py:31:            "Bug",
+/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/contracts/t1_vscode_contract.py:32:            "Feature Request",
+/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/contracts/t1_vscode_contract.py:33:            "Performance Issue",
+/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/contracts/t1_vscode_contract.py:34:            "Usability",
+/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/contracts/t1_vscode_contract.py:86:        "Do not silently merge VS Code with IT Support.",
+/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/contracts/t1_vscode_contract.json:3:  "dataset": "GitBugs VS Code",
+/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/contracts/t1_vscode_contract.json:6:    "description": "Classify an incoming VS Code issue by issue type at the Created prediction boundary."
+/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/contracts/t1_vscode_contract.json:11:      "Bug",
+/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/contracts/t1_vscode_contract.json:12:      "Feature Request",
+/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/contracts/t1_vscode_contract.json:13:      "Performance Issue",
+/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/contracts/t1_vscode_contract.json:14:      "Usability"
+/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/contracts/t1_vscode_contract.json:55:    "Do not silently merge VS Code with IT Support.",
+/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/inspection/t1_vscode_inspect.py:15:KEYWORDS = ("vscode", "vs_code", "gitbugs", "visual studio code")
+/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/inspection/t1_vscode_source_report.json:9:      "file": "/run/media/whiteblack/User 1/Datasets/GitBugs/vscode_bugs.csv.zip",
+/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/inspection/t1_vscode_source_report.json:13:        "vscode_bugs.csv",
+/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/inspection/t1_vscode_source_report.json:14:        "__MACOSX/._vscode_bugs.csv"
+/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/inspection/t1_vscode_source_report.json:18:          "member": "vscode_bugs.csv",
+/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/inspection/t1_vscode_source_report.json:29:          "member": "__MACOSX/._vscode_bugs.csv",

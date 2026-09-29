@@ -1,0 +1,238 @@
+{
+  "operation": "FMP-07 OP-001",
+  "operation_name": "REPRODUCIBILITY_FINAL_MODELING_FREEZE_INVENTORY",
+  "timestamp_utc": "2026-09-26T16:39:52.744509+00:00",
+  "status": "PASS",
+  "read_only": true,
+  "training_performed": false,
+  "fitting_performed": false,
+  "prediction_performed": false,
+  "evaluation_performed": false,
+  "locked_test_used": false,
+  "artifact_modified": false,
+  "authoritative_files": {
+    "T1_closure": {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/analysis/t1_final_closure.json",
+      "exists": true,
+      "readable": true,
+      "size_bytes": 2128,
+      "modified_utc": "2026-09-26T08:47:41.408736+00:00"
+    },
+    "T2_final_model": {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/models/t2_class_weighted_tfidf_logreg.joblib",
+      "exists": true,
+      "readable": true,
+      "size_bytes": 14317753,
+      "modified_utc": "2026-09-15T17:09:04.268468+00:00"
+    },
+    "T3_final_model": {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib",
+      "exists": true,
+      "readable": true,
+      "size_bytes": 17315561,
+      "modified_utc": "2026-09-16T09:17:51.495442+00:00"
+    },
+    "T4_closure": {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/t4_mod013_closure.json",
+      "exists": true,
+      "readable": true,
+      "size_bytes": 6363,
+      "modified_utc": "2026-09-18T05:11:04.520982+00:00"
+    },
+    "T5_closure": {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod011_final_closure.json",
+      "exists": true,
+      "readable": true,
+      "size_bytes": 5177,
+      "modified_utc": "2026-09-18T08:17:55.214071+00:00"
+    },
+    "T6_closure": {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_final_closure.json",
+      "exists": true,
+      "readable": true,
+      "size_bytes": 5819,
+      "modified_utc": "2026-09-18T14:38:51.804090+00:00"
+    },
+    "T7_closure": {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod012_final_closure.json",
+      "exists": true,
+      "readable": true,
+      "size_bytes": 4425,
+      "modified_utc": "2026-09-21T16:15:24.752476+00:00"
+    },
+    "T8_closure": {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/mod036/op026/t8_mod036_op026_decision_engine_validation.json",
+      "exists": true,
+      "readable": true,
+      "size_bytes": 2256,
+      "modified_utc": "2026-09-26T10:17:12.142096+00:00"
+    },
+    "T9_closure": {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op015_final_integrated_closure.json",
+      "exists": true,
+      "readable": true,
+      "size_bytes": 6247,
+      "modified_utc": "2026-09-23T08:53:50.672704+00:00"
+    },
+    "T10_policy_evidence": {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp05_op008_empirical_policy_boundary_audit.json",
+      "exists": true,
+      "readable": true,
+      "size_bytes": 4145,
+      "modified_utc": "2026-09-26T10:08:50.063172+00:00"
+    },
+    "FMP06_closure": {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_final_phase_closure.json",
+      "exists": true,
+      "readable": true,
+      "size_bytes": 3065,
+      "modified_utc": "2026-09-26T16:38:22.980720+00:00"
+    }
+  },
+  "frozen_model_artifacts": {
+    "T1": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/baselines/t1_it_support_char_svm.joblib",
+        "exists": true,
+        "readable": true,
+        "size_bytes": 2179887,
+        "modified_utc": "2026-09-15T11:02:22.240648+00:00"
+      }
+    ],
+    "T2": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/models/t2_class_weighted_tfidf_logreg.joblib",
+        "exists": true,
+        "readable": true,
+        "size_bytes": 14317753,
+        "modified_utc": "2026-09-15T17:09:04.268468+00:00"
+      }
+    ],
+    "T3": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib",
+        "exists": true,
+        "readable": true,
+        "size_bytes": 17315561,
+        "modified_utc": "2026-09-16T09:17:51.495442+00:00"
+      }
+    ],
+    "T4": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_tfidf.joblib",
+        "exists": true,
+        "readable": true,
+        "size_bytes": 226595,
+        "modified_utc": "2026-09-17T16:40:40.841003+00:00"
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_neighbors.joblib",
+        "exists": true,
+        "readable": true,
+        "size_bytes": 52792287,
+        "modified_utc": "2026-09-17T16:40:53.110775+00:00"
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_full_retrieval.npz",
+        "exists": true,
+        "readable": true,
+        "size_bytes": 4076925,
+        "modified_utc": "2026-09-17T16:45:32.431686+00:00"
+      }
+    ],
+    "T5": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod005_tfidf.joblib",
+        "exists": true,
+        "readable": true,
+        "size_bytes": 4041055,
+        "modified_utc": "2026-09-18T07:19:30.549535+00:00"
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod005_logreg.joblib",
+        "exists": true,
+        "readable": true,
+        "size_bytes": 800891,
+        "modified_utc": "2026-09-18T07:19:30.550535+00:00"
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod007_calibrated_tfidf.joblib",
+        "exists": true,
+        "readable": true,
+        "size_bytes": 4041492,
+        "modified_utc": "2026-09-18T08:10:39.486736+00:00"
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod007_calibration_models.joblib",
+        "exists": true,
+        "readable": true,
+        "size_bytes": 802449,
+        "modified_utc": "2026-09-18T07:40:48.765571+00:00"
+      }
+    ],
+    "T6": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod010_corrected_hybrid_results.json",
+        "exists": true,
+        "readable": true,
+        "size_bytes": 6325,
+        "modified_utc": "2026-09-18T14:16:44.833260+00:00"
+      }
+    ],
+    "T7": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod010_log_normal_aft_model.json",
+        "exists": true,
+        "readable": true,
+        "size_bytes": 2899,
+        "modified_utc": "2026-09-21T15:37:59.548413+00:00"
+      }
+    ]
+  },
+  "task_coverage": {
+    "T1": {
+      "closure_or_final_binding_present": true,
+      "frozen_artifacts_present": true,
+      "freeze_inventory_pass": true
+    },
+    "T2": {
+      "closure_or_final_binding_present": true,
+      "frozen_artifacts_present": true,
+      "freeze_inventory_pass": true
+    },
+    "T3": {
+      "closure_or_final_binding_present": true,
+      "frozen_artifacts_present": true,
+      "freeze_inventory_pass": true
+    },
+    "T4": {
+      "closure_or_final_binding_present": true,
+      "frozen_artifacts_present": true,
+      "freeze_inventory_pass": true
+    },
+    "T5": {
+      "closure_or_final_binding_present": true,
+      "frozen_artifacts_present": true,
+      "freeze_inventory_pass": true
+    },
+    "T6": {
+      "closure_or_final_binding_present": true,
+      "frozen_artifacts_present": true,
+      "freeze_inventory_pass": true
+    },
+    "T7": {
+      "closure_or_final_binding_present": true,
+      "frozen_artifacts_present": true,
+      "freeze_inventory_pass": true
+    }
+  },
+  "final_evidence_coverage": {
+    "T8": true,
+    "T9": true,
+    "T10": true,
+    "FMP06": true
+  },
+  "missing_authoritative_files": [],
+  "missing_frozen_artifacts": [],
+  "interpretation": "This operation inventories the final modeling and phase-closure evidence before reproducibility/final model freezing. It does not modify, retrain, evaluate, or replace any artifact."
+}

@@ -1,0 +1,84 @@
+{
+  "operation": "DEPLOY-OP-054",
+  "title": "Layout and Navigation Audit",
+  "status": "PASS",
+  "scope": "Read-only frontend audit",
+  "landing": {
+    "present": true,
+    "inner_present": true,
+    "project_view_rule": ".project-view {\n    width: min(\n        1180px,\n        calc(100% - 48px)\n    );\n\n    margin: 0 auto;\n}",
+    "project_landing_rule": ".project-landing {\n    min-height: calc(100vh - 150px);\n\n    display: flex;\n    align-items: center;\n\n    padding: 70px 0 90px;\n}",
+    "full_width_indicators": {
+      "width_100vw": false,
+      "max_width_none": false,
+      "viewport_margin": false,
+      "overflow_hidden": false
+    }
+  },
+  "workspace": {
+    "present": false,
+    "kicker_candidates": {
+      "workspace-kicker": false,
+      "workspace-label": false,
+      "workspace-eyebrow": false,
+      "workspace-heading": true,
+      "IT TICKET INTELLIGENCE": true
+    },
+    "css_rules": {
+      ".workspace-kicker": null,
+      ".workspace-label": null,
+      ".workspace-eyebrow": null,
+      ".workspace-heading": ".workspace-heading {\n    display: flex;\n\n    justify-content: space-between;\n    align-items: flex-end;\n\n    padding-bottom: 30px;\n\n    border-bottom: 1px solid currentColor;\n}",
+      ".workspace-home": ".workspace-home {\n    min-height: calc(100vh - 150px);\n\n    padding: 72px 0 90px;\n}"
+    },
+    "navigation_candidates": {
+      "project-overview-button": false,
+      "analysis-home-button": false,
+      "back-to-home": false,
+      "home": true
+    }
+  },
+  "navigation": {
+    "enter-system-button": {
+      "html_count": 1,
+      "js_reference_count": 1
+    },
+    "view-research-button": {
+      "html_count": 1,
+      "js_reference_count": 1
+    },
+    "open-analysis-workspace-button": {
+      "html_count": 1,
+      "js_reference_count": 1
+    },
+    "analysis-home-button": {
+      "html_count": 1,
+      "js_reference_count": 1
+    },
+    "project-overview-button": {
+      "html_count": 1,
+      "js_reference_count": 1
+    },
+    "reset-dashboard-button": {
+      "html_count": 1,
+      "js_reference_count": 1
+    }
+  },
+  "functions": {
+    "showProjectLanding": true,
+    "showWorkspaceHome": true,
+    "showAnalysisWorkspace": true,
+    "initializeProjectNavigation": true
+  },
+  "hashes_before": {
+    "index.html": "b98b320f718dbd5326252373d2a752d537e6ae9aea8ec9e4cccb858f6d3228c2",
+    "app.js": "7507f3d40e4a105dd5e87f4eb820ef9a62c7d047bedbc20ed11383d20c7018c4",
+    "style.css": "d121707747787f9a505b018c5b2fbca6cbe5459537d9a8d9f69af96a623ee792"
+  },
+  "hashes_after": {
+    "index.html": "b98b320f718dbd5326252373d2a752d537e6ae9aea8ec9e4cccb858f6d3228c2",
+    "app.js": "7507f3d40e4a105dd5e87f4eb820ef9a62c7d047bedbc20ed11383d20c7018c4",
+    "style.css": "d121707747787f9a505b018c5b2fbca6cbe5459537d9a8d9f69af96a623ee792"
+  },
+  "files_modified": false
+}

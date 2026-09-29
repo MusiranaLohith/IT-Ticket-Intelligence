@@ -1,0 +1,64 @@
+{
+  "operation": "DEPLOY-OP-048",
+  "title": "Navigation Simplification Audit",
+  "status": "PASS",
+  "read_only": true,
+  "source_files_modified": false,
+  "navigation_markers": {
+    "enter-system-button": {
+      "html_count": 1,
+      "app_js_count": 1
+    },
+    "view-research-button": {
+      "html_count": 1,
+      "app_js_count": 1
+    },
+    "open-single-ticket-button": {
+      "html_count": 1,
+      "app_js_count": 1
+    },
+    "open-batch-analysis-button": {
+      "html_count": 1,
+      "app_js_count": 1
+    },
+    "analysis-home-button": {
+      "html_count": 1,
+      "app_js_count": 1
+    },
+    "project-overview-button": {
+      "html_count": 1,
+      "app_js_count": 1
+    },
+    "reset-dashboard-button": {
+      "html_count": 1,
+      "app_js_count": 1
+    }
+  },
+  "workspace_markers": {
+    "analysis-workspace": 1,
+    "single-ticket-panel": 1,
+    "batch-file": 5,
+    "batch-results-panel": 1,
+    "results-panel": 2,
+    "batch-results-table": 4,
+    "evidence-content": 1,
+    "pipeline-content": 1,
+    "human-review-content": 2,
+    "limitations-content": 1,
+    "explanation-content": 2
+  },
+  "safety_checks": {
+    "SINGLE_API": true,
+    "BATCH_API": true,
+    "BATCH_SELECTION": true,
+    "DETAIL_RENDERER": true,
+    "FRONTEND_TICKET_PIPELINE_ABSENT": true,
+    "FRONTEND_SKLEARN_ABSENT": true,
+    "FRONTEND_PREDICT_BATCH_ABSENT": true
+  },
+  "sha256": {
+    "index.html": "25432166e781425a85fff2fc438bcfbd20ff1b219dcccf208644ba4d674fc805",
+    "app.js": "8e94eb669607c8e8abe8cc7b26e6c423e6a51b62ef2683b4c75a3e1dbbd7bd33",
+    "style.css": "160afeef8eef43ed979671ec7f18e361db45066a1cc4ee89dcbb32c54c096cd2"
+  }
+}

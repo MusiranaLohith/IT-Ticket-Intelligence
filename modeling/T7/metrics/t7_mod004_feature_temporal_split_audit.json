@@ -1,0 +1,295 @@
+{
+  "operation": "T7_MOD-004",
+  "status": "COMPLETE",
+  "input_dataset": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/derived/t7_creation_time_modeling_dataset.csv",
+  "raw_archive_accessed": false,
+  "model_trained": false,
+  "split_frozen": false,
+  "rows": 513816,
+  "unique_ids": 513816,
+  "schema": {
+    "all_columns": [
+      "ID",
+      "Creation time",
+      "Creator",
+      "Creator Detail",
+      "Summary",
+      "Description",
+      "first_resolved_time",
+      "duration_seconds",
+      "event",
+      "endpoint_type",
+      "observation_endpoint",
+      "source_row_width"
+    ],
+    "predictive_features": [
+      "Creator",
+      "Creator Detail",
+      "Summary",
+      "Description"
+    ],
+    "target_columns": [
+      "Creation time",
+      "ID",
+      "duration_seconds",
+      "endpoint_type",
+      "event",
+      "first_resolved_time",
+      "observation_endpoint",
+      "source_row_width"
+    ],
+    "unexpected_predictive_columns": []
+  },
+  "target_summary": {
+    "rows": 513816,
+    "event_1": 455762,
+    "event_0": 58054,
+    "event_rate": 0.8870140283681318,
+    "censor_rate": 0.11298597163186822
+  },
+  "feature_audit": {
+    "Creator": {
+      "rows": 513816,
+      "missing": 0,
+      "missing_rate": 0.0,
+      "non_missing": 513816,
+      "unique_non_missing": 67537,
+      "top_values": [
+        {
+          "value": "intermittent-bug-filer@mozilla.bugs",
+          "count": 50087
+        },
+        {
+          "value": "wptsync@mozilla.bugs",
+          "count": 21971
+        },
+        {
+          "value": "jruderman@gmail.com",
+          "count": 6282
+        },
+        {
+          "value": "bzbarsky@mit.edu",
+          "count": 5278
+        },
+        {
+          "value": "choller@mozilla.com",
+          "count": 4541
+        },
+        {
+          "value": "cbook@mozilla.com",
+          "count": 4123
+        },
+        {
+          "value": "ehsan.akhgari@gmail.com",
+          "count": 3410
+        },
+        {
+          "value": "dholbert@mozilla.com",
+          "count": 3365
+        },
+        {
+          "value": "emilio@crisal.io",
+          "count": 3317
+        },
+        {
+          "value": "jmuizelaar@mozilla.com",
+          "count": 3300
+        }
+      ]
+    },
+    "Creator Detail": {
+      "rows": 513816,
+      "missing": 0,
+      "missing_rate": 0.0,
+      "non_missing": 513816,
+      "unique_non_missing": 197576,
+      "top_values": [
+        {
+          "value": "{'id': 573381, 'name': 'intermittent-bug-filer@mozilla.bugs', 'real_name': 'Treeherder Bug Filer', 'nick': 'intermittent-bug-filer', 'email': 'intermittent-bug-filer@mozilla.bugs'}",
+          "count": 2082
+        },
+        {
+          "value": "{'name': 'intermittent-bug-filer@mozilla.bugs', 'id': 573381, 'nick': 'intermittent-bug-filer', 'real_name': 'Treeherder Bug Filer', 'email': 'intermittent-bug-filer@mozilla.bugs'}",
+          "count": 2077
+        },
+        {
+          "value": "{'email': 'intermittent-bug-filer@mozilla.bugs', 'real_name': 'Treeherder Bug Filer', 'nick': 'intermittent-bug-filer', 'id': 573381, 'name': 'intermittent-bug-filer@mozilla.bugs'}",
+          "count": 2058
+        },
+        {
+          "value": "{'email': 'intermittent-bug-filer@mozilla.bugs', 'nick': 'intermittent-bug-filer', 'real_name': 'Treeherder Bug Filer', 'name': 'intermittent-bug-filer@mozilla.bugs', 'id': 573381}",
+          "count": 2055
+        },
+        {
+          "value": "{'nick': 'intermittent-bug-filer', 'real_name': 'Treeherder Bug Filer', 'email': 'intermittent-bug-filer@mozilla.bugs', 'name': 'intermittent-bug-filer@mozilla.bugs', 'id': 573381}",
+          "count": 1465
+        },
+        {
+          "value": "{'email': 'intermittent-bug-filer@mozilla.bugs', 'name': 'intermittent-bug-filer@mozilla.bugs', 'nick': 'intermittent-bug-filer', 'real_name': 'Treeherder Bug Filer', 'id': 573381}",
+          "count": 1444
+        },
+        {
+          "value": "{'id': 573381, 'real_name': 'Treeherder Bug Filer', 'nick': 'intermittent-bug-filer', 'name': 'intermittent-bug-filer@mozilla.bugs', 'email': 'intermittent-bug-filer@mozilla.bugs'}",
+          "count": 1443
+        },
+        {
+          "value": "{'name': 'intermittent-bug-filer@mozilla.bugs', 'id': 573381, 'email': 'intermittent-bug-filer@mozilla.bugs', 'nick': 'intermittent-bug-filer', 'real_name': 'Treeherder Bug Filer'}",
+          "count": 1431
+        },
+        {
+          "value": "{'email': 'intermittent-bug-filer@mozilla.bugs', 'name': 'intermittent-bug-filer@mozilla.bugs', 'real_name': 'Treeherder Bug Filer', 'nick': 'intermittent-bug-filer', 'id': 573381}",
+          "count": 1413
+        },
+        {
+          "value": "{'id': 573381, 'nick': 'intermittent-bug-filer', 'real_name': 'Treeherder Bug Filer', 'name': 'intermittent-bug-filer@mozilla.bugs', 'email': 'intermittent-bug-filer@mozilla.bugs'}",
+          "count": 1413
+        }
+      ]
+    },
+    "Summary": {
+      "rows": 513816,
+      "missing": 0,
+      "missing_rate": 0.0,
+      "non_missing": 513816,
+      "unique_non_missing": 506404,
+      "top_values": [
+        {
+          "value": "Origin trial request",
+          "count": 42
+        },
+        {
+          "value": "Crash in IPCError-browser | ShutDownKill",
+          "count": 35
+        },
+        {
+          "value": "Sync servo stuff.",
+          "count": 35
+        },
+        {
+          "value": "test",
+          "count": 24
+        },
+        {
+          "value": "Merge fx-sync to mozilla-central",
+          "count": 24
+        },
+        {
+          "value": "Crash in [@ OOM | small]",
+          "count": 23
+        },
+        {
+          "value": "Assertion failure: fallibleScope_ ([OOM] Cannot allocate a new chunk in an infallible scope.), at js/src/ds/LifoAlloc.cpp:105",
+          "count": 20
+        },
+        {
+          "value": "Remove extra ;",
+          "count": 15
+        },
+        {
+          "value": "The program crashes",
+          "count": 14
+        },
+        {
+          "value": "What is causing FF to take long time for opening this page?",
+          "count": 13
+        }
+      ]
+    },
+    "Description": {
+      "rows": 513816,
+      "missing": 21303,
+      "missing_rate": 0.04146036713531692,
+      "non_missing": 492513,
+      "unique_non_missing": 489406,
+      "top_values": [
+        {
+          "value": ".",
+          "count": 79
+        },
+        {
+          "value": "See Metabug",
+          "count": 54
+        },
+        {
+          "value": "\\\\nIf the variant is not used anymore, please drop it from the [variants.yml](https://searchfox.org/mozilla-central/source/taskcluster/ci/test/variants.yml) file. If there is a need to keep the variant, please submit a patch to modify the expiration date. Variants will not be scheduled to run after the expiration date.\\\\n\\\\nThis bug will be closed automatically once the variant is dropped or the expiration date is updated in the [variants.yml](https://searchfox.org/mozilla-central/source/taskcluster/ci/test/variants.yml) file.\\\\n\\\\nMore information about variants can be found on [Firefox Source Docs](https://firefox-source-docs.mozilla.org/taskcluster/kinds/test.html#variants).\\\\n\\\\n_Note: please do not edit the bug summary or close the bug, it could break the automation._",
+          "count": 37
+        },
+        {
+          "value": "Whenever applicable, please convert HTML file to XUL file so we\\\\ncan externalize localizable resources. Also, refer to the \\\\\"XUL\\\\nCoding Style Guidelines\\\\\" in the URL above for how to make XUL\\\\nlocalizable. Thanks!",
+          "count": 36
+        },
+        {
+          "value": "Please refer to the \\\\\"XUL Coding Style Guidelines\\\\\" in the URL above\\\\nfor how to make XUL localizable. Thanks!",
+          "count": 29
+        },
+        {
+          "value": "Here are some entries: Please ensure that the entries are correct.",
+          "count": 28
+        },
+        {
+          "value": "Adding entries to OneCRL based on revoked intermediate certificates reported in the CCADB.",
+          "count": 27
+        },
+        {
+          "value": "User-Agent:       Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.3a1pre) Gecko/20091120 Minefield/3.7a1pre (.NET CLR 3.5.30729)\\\\nBuild Identifier: \\\\n\\\\nPlease see Bug #512106.\\\\n\\\\nReproducible: Always",
+          "count": 22
+        },
+        {
+          "value": "See bug 1259654 comment 0 for the detail.",
+          "count": 22
+        },
+        {
+          "value": "Patch coming up.",
+          "count": 21
+        }
+      ]
+    }
+  },
+  "temporal_summary": {
+    "min_creation": "1997-03-28T21:30:00",
+    "max_creation": "2024-11-13T03:10:32",
+    "p01_creation": "1999-07-12T07:48:59.750000",
+    "p05_creation": "2000-10-06T00:08:30",
+    "p25_creation": "2009-08-29T07:30:56.500000",
+    "p50_creation": "2015-08-21T18:36:13.500000",
+    "p75_creation": "2019-11-28T11:04:40.750000",
+    "p95_creation": "2023-10-14T09:46:41",
+    "p99_creation": "2024-09-02T06:23:13"
+  },
+  "temporal_ordering": {
+    "rows_checked": 513816,
+    "input_order_backwards_transitions": 74,
+    "exact_creation_timestamp_ties": 432,
+    "chronological_sort_available": true
+  },
+  "diagnostic_chronological_80_20": {
+    "status": "DIAGNOSTIC_ONLY_NOT_FROZEN",
+    "candidate_fraction": 0.8,
+    "candidate_train_rows": 411052,
+    "candidate_eval_rows": 102764,
+    "candidate_train_first_creation": "1997-03-28T21:30:00",
+    "candidate_train_last_creation": "2020-09-12T03:02:41",
+    "candidate_eval_first_creation": "2020-09-12T03:05:31",
+    "candidate_eval_last_creation": "2024-11-13T03:10:32",
+    "candidate_boundary_gap_seconds": 170.0,
+    "train": {
+      "rows": 411052,
+      "event_1": 374179,
+      "event_0": 36873,
+      "event_rate": 0.9102960209413894,
+      "censor_rate": 0.08970397905861059
+    },
+    "evaluation": {
+      "rows": 102764,
+      "event_1": 81583,
+      "event_0": 21181,
+      "event_rate": 0.7938869643065665,
+      "censor_rate": 0.2061130356934335
+    }
+  },
+  "leakage_name_audit": {
+    "suspicious_predictive_feature_names": [],
+    "status": "PASS"
+  },
+  "next_decision": "Freeze the chronological train/evaluation boundary after reviewing this audit. Do not treat the diagnostic 80/20 boundary as frozen."
+}

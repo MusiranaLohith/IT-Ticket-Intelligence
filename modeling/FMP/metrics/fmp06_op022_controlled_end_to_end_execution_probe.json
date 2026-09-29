@@ -1,0 +1,37 @@
+{
+  "operation": "FMP-06 OP-022",
+  "status": "REQUIRES_REVIEW",
+  "controlled_execution": true,
+  "training_performed": false,
+  "fitting_performed": false,
+  "new_evaluation_performed": false,
+  "locked_test_used_for_selection": false,
+  "artifact_modified": false,
+  "synthetic_universal_target_created": false,
+  "native_component_results": {
+    "T1": {
+      "status": "PASS",
+      "source_status": true
+    },
+    "T2_T3": {
+      "status": "REQUIRES_REVIEW",
+      "source_status": true
+    },
+    "T4": {
+      "status": "PASS",
+      "source_status": true
+    },
+    "T6": {
+      "status": "PASS",
+      "source_status": true
+    },
+    "T7": {
+      "status": "PASS",
+      "source_status": true
+    }
+  },
+  "t8_execution_composition": "PASS",
+  "t9_execution_composition": "PASS",
+  "t10_policy_boundary": "REQUIRES_REVIEW",
+  "interpretation": "Controlled composition of already-executed native runtime evidence was checked without retraining, new evaluation, synthetic targets, or artifact modification. Native task semantics remain distinct."
+}

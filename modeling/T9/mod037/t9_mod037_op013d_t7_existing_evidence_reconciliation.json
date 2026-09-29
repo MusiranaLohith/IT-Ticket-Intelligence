@@ -1,0 +1,1101 @@
+{
+  "operation": "T9_MOD-037_OP-013D",
+  "title": "T7 Existing Evaluation Evidence Reconciliation",
+  "status": "PASS",
+  "purpose": "Reconcile existing authoritative T7 survival evaluation, model-comparison, calibration-style, and final-closure evidence before performing any new T9-specific T7 analysis.",
+  "prior_operation_validation": {
+    "status": "PASS",
+    "checks": {
+      "OP-004_T7_acceptance": "PASS",
+      "OP-005": "PASS",
+      "OP-013A": "PASS",
+      "OP-013B": "PASS",
+      "OP-013C": "PASS"
+    },
+    "failed": []
+  },
+  "artifact_presence": {
+    "status": "PASS",
+    "missing": [],
+    "artifacts": {
+      "contract": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/contracts/t7_modeling_contract.json",
+        "exists": true,
+        "size_bytes": 6178
+      },
+      "split_freeze": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod005_split_freeze.json",
+        "exists": true,
+        "size_bytes": 1922
+      },
+      "survival_baseline": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod006_survival_baseline_audit.json",
+        "exists": true,
+        "size_bytes": 2226
+      },
+      "weibull_audit": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod007_predictive_survival_audit.json",
+        "exists": true,
+        "size_bytes": 2435
+      },
+      "weibull_model": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod007_weibull_aft_model.json",
+        "exists": true,
+        "size_bytes": 2985
+      },
+      "predictive_reference": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod008_predictive_vs_reference_audit.json",
+        "exists": true,
+        "size_bytes": 3629
+      },
+      "predictive_reference_csv": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod008_predictive_vs_reference.csv",
+        "exists": true,
+        "size_bytes": 800
+      },
+      "calibration": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod009_survival_calibration.csv",
+        "exists": true,
+        "size_bytes": 3609
+      },
+      "calibration_audit": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod009_survival_calibration_audit.json",
+        "exists": true,
+        "size_bytes": 11953
+      },
+      "lognormal_audit": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod010_log_normal_aft_audit.json",
+        "exists": true,
+        "size_bytes": 1843
+      },
+      "lognormal_model": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod010_log_normal_aft_model.json",
+        "exists": true,
+        "size_bytes": 2899
+      },
+      "final_comparison": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod011_final_model_comparison.csv",
+        "exists": true,
+        "size_bytes": 540
+      },
+      "final_comparison_audit": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod011_final_model_comparison_audit.json",
+        "exists": true,
+        "size_bytes": 2680
+      },
+      "final_closure": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod012_final_closure.json",
+        "exists": true,
+        "size_bytes": 4425
+      }
+    }
+  },
+  "contract": {
+    "task": "Resolution-Time Estimation",
+    "prediction_boundary": {
+      "name": "Creation time",
+      "definition": "Only information legitimately available at ticket Creation may be used as predictive input."
+    },
+    "target": {
+      "start_time": "Creation time",
+      "endpoint": "First post-Creation History event in which Status changes to RESOLVED",
+      "duration_field": "time_to_first_resolved",
+      "event_field": "event",
+      "event_definition": "event = 1 when the first qualifying post-Creation Status change adds RESOLVED.",
+      "censoring_definition": "event = 0 when no qualifying post-Creation RESOLVED event is observed through the administrative observation endpoint.",
+      "administrative_observation_endpoint": "2024-11-24 07:26:14",
+      "censored_duration_definition": "Administrative observation endpoint minus Creation time",
+      "reopening_policy": "A later REOPENED event does not replace the first RESOLVED endpoint.",
+      "re_resolution_policy": "A later RESOLVED event after reopening does not replace the original first RESOLVED endpoint.",
+      "resolution_field_policy": "Resolution changes are secondary/audit evidence and are not the primary T7 endpoint."
+    },
+    "censoring": {
+      "type": "right_censoring",
+      "treatment": "Preserve censored observations as right-censored survival records.",
+      "ordinary_negative_interpretation": false,
+      "forbidden_actions": [
+        "Do not treat censored tickets as ordinary negative labels.",
+        "Do not assign fabricated resolution times to censored tickets.",
+        "Do not drop censored observations merely because their exact resolution time is unobserved.",
+        "Do not convert censoring into binary classification."
+      ]
+    }
+  },
+  "evaluation_population": {
+    "evaluation_rows": 102764,
+    "evaluation_events": 81583,
+    "evaluation_censored": 21181,
+    "evaluation_event_rate": 0.7938869643065665,
+    "evaluation_censor_rate": 0.2061130356934335,
+    "ordering": {
+      "primary": "Creation time",
+      "secondary": "ID",
+      "tie_policy": "Creation timestamp ties are ordered deterministically by ID."
+    }
+  },
+  "survival_baseline": {
+    "task": "T7 Resolution-Time Estimation",
+    "operation": "MOD-006",
+    "status": "COMPLETE",
+    "baseline_family": "nonparametric_survival",
+    "training_source": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/splits/t7_train.csv",
+    "evaluation_source": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/splits/t7_evaluation.csv",
+    "train_rows": 411052,
+    "evaluation_rows": 102764,
+    "train_event_1": 374179,
+    "train_event_0": 36873,
+    "evaluation_event_1": 81583,
+    "evaluation_event_0": 21181,
+    "kaplan_meier": {
+      "unique_duration_times": 378467,
+      "median_survival_seconds": 2434986.0,
+      "landmark_s_0_75_seconds": 269443.0,
+      "landmark_s_0_90_seconds": 37349.0
+    },
+    "nelson_aalen": {
+      "unique_duration_times": 378467,
+      "final_cumulative_hazard": 3.4963342870114245
+    },
+    "ipcw_brier": {
+      "horizons": [
+        {
+          "horizon_seconds": 211583.0,
+          "km_predicted_survival": 0.7724253865690694,
+          "ipcw_brier_score": 0.15047031239713146
+        },
+        {
+          "horizon_seconds": 1780179.0,
+          "km_predicted_survival": 0.5448507731378873,
+          "ipcw_brier_score": 0.24631825329377932
+        },
+        {
+          "horizon_seconds": 14608619.0,
+          "km_predicted_survival": 0.31727859248955853,
+          "ipcw_brier_score": 0.19826429448128255
+        }
+      ],
+      "censoring_distribution_fitted_on": "TRAIN_ONLY"
+    },
+    "evaluation_integrity": {
+      "evaluation_fitting": false,
+      "feature_usage": false,
+      "raw_archive_access": false,
+      "chronological_split_respected": true
+    },
+    "c_index": {
+      "reported": false,
+      "reason": "Population-level KM baseline assigns the same survival trajectory to every evaluation ticket; therefore an individual risk ordering is not defined for a meaningful concordance calculation."
+    },
+    "artifacts": {
+      "kaplan_meier_curve": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/derived/t7_mod006_kaplan_meier_curve.csv",
+      "nelson_aalen_curve": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/derived/t7_mod006_nelson_aalen_curve.csv",
+      "audit": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod006_survival_baseline_audit.json"
+    }
+  },
+  "weibull_evidence": {
+    "label": "Weibull AFT",
+    "task": "T7 Resolution-Time Estimation",
+    "purpose": null,
+    "status": "COMPLETE",
+    "artifacts": {
+      "model": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod007_weibull_aft_model.json",
+      "predictions": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/derived/t7_mod007_evaluation_predictions.csv",
+      "audit": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod007_predictive_survival_audit.json"
+    },
+    "direct_metrics_found": {}
+  },
+  "lognormal_evidence": {
+    "label": "Log-Normal AFT",
+    "task": "T7 Resolution-Time Estimation",
+    "purpose": "Controlled alternative survival distribution to assess whether Weibull model-form assumptions explain the observed predictive limitations.",
+    "status": "COMPLETE",
+    "artifacts": {
+      "model": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod010_log_normal_aft_model.json",
+      "predictions": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/derived/t7_mod010_evaluation_predictions.csv",
+      "audit": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod010_log_normal_aft_audit.json"
+    },
+    "direct_metrics_found": {}
+  },
+  "predictive_reference_evidence": {
+    "audit": {
+      "task": "T7 Resolution-Time Estimation",
+      "operation": "MOD-008",
+      "status": "COMPLETE",
+      "purpose": "Compare the first predictive survival baseline against the MOD-006 nonparametric reference on the frozen evaluation population.",
+      "evaluation_population": {
+        "rows": 102764,
+        "events": 81583,
+        "right_censored": 21181
+      },
+      "alignment": {
+        "evaluation_prediction_population": true,
+        "id_order_match": true,
+        "duration_match": true,
+        "event_match": true
+      },
+      "models_compared": {
+        "reference": "MOD-006 Kaplan-Meier",
+        "predictive": "MOD-007 Weibull AFT"
+      },
+      "predictive_model": {
+        "harrell_concordance_index": 0.5549621693633812,
+        "source": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod007_predictive_survival_audit.json"
+      },
+      "horizon_results": [
+        {
+          "horizon_seconds": 211583.0,
+          "km_reference_survival": 0.7724253865690694,
+          "predictive_mean_survival": 0.18045612894999413,
+          "predictive_std_survival": 0.016544882241423874,
+          "predictive_min_survival": 0.1325360148457173,
+          "predictive_max_survival": 0.2466990474846336,
+          "km_reference_ipcw_brier": 0.15047031239713146,
+          "predictive_ipcw_brier": 0.5559985321807034,
+          "predictive_minus_reference_brier": 0.4055282197835719,
+          "relative_brier_change": 2.6950712956139435
+        },
+        {
+          "horizon_seconds": 1780179.0,
+          "km_reference_survival": 0.5448507731378873,
+          "predictive_mean_survival": 0.14962967060591312,
+          "predictive_std_survival": 0.015231329479247836,
+          "predictive_min_survival": 0.10618301810760218,
+          "predictive_max_survival": 0.21158702171196278,
+          "km_reference_ipcw_brier": 0.24631825329377932,
+          "predictive_ipcw_brier": 0.4165689714851437,
+          "predictive_minus_reference_brier": 0.1702507181913644,
+          "relative_brier_change": 0.6911818994928867
+        },
+        {
+          "horizon_seconds": 14608619.0,
+          "km_reference_survival": 0.31727859248955853,
+          "predictive_mean_survival": 0.12187165877547627,
+          "predictive_std_survival": 0.01375773520044234,
+          "predictive_min_survival": 0.08327829247449799,
+          "predictive_max_survival": 0.1788167964500643,
+          "km_reference_ipcw_brier": 0.19826429448128255,
+          "predictive_ipcw_brier": 0.2143230585981617,
+          "predictive_minus_reference_brier": 0.01605876411687915,
+          "relative_brier_change": 0.08099675314152545
+        }
+      ],
+      "integrity": {
+        "retraining": false,
+        "evaluation_fitting": false,
+        "raw_archive_access": false,
+        "new_features": false,
+        "chronological_split_changed": false,
+        "train_only_censoring_distribution": true
+      },
+      "source_artifacts": {
+        "evaluation_split": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/splits/t7_evaluation.csv",
+        "km_curve": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/derived/t7_mod006_kaplan_meier_curve.csv",
+        "mod006_audit": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod006_survival_baseline_audit.json",
+        "mod007_audit": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod007_predictive_survival_audit.json",
+        "mod007_predictions": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/derived/t7_mod007_evaluation_predictions.csv"
+      },
+      "output_artifacts": {
+        "comparison": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod008_predictive_vs_reference.csv",
+        "audit": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod008_predictive_vs_reference_audit.json"
+      }
+    },
+    "rows": [
+      {
+        "horizon_seconds": "211583.0",
+        "km_reference_survival": "0.7724253865690694",
+        "predictive_mean_survival": "0.18045612894999413",
+        "predictive_std_survival": "0.016544882241423874",
+        "predictive_min_survival": "0.1325360148457173",
+        "predictive_max_survival": "0.2466990474846336",
+        "km_reference_ipcw_brier": "0.15047031239713146",
+        "predictive_ipcw_brier": "0.5559985321807034",
+        "predictive_minus_reference_brier": "0.4055282197835719",
+        "relative_brier_change": "2.6950712956139435"
+      },
+      {
+        "horizon_seconds": "1780179.0",
+        "km_reference_survival": "0.5448507731378873",
+        "predictive_mean_survival": "0.14962967060591312",
+        "predictive_std_survival": "0.015231329479247836",
+        "predictive_min_survival": "0.10618301810760218",
+        "predictive_max_survival": "0.21158702171196278",
+        "km_reference_ipcw_brier": "0.24631825329377932",
+        "predictive_ipcw_brier": "0.4165689714851437",
+        "predictive_minus_reference_brier": "0.1702507181913644",
+        "relative_brier_change": "0.6911818994928867"
+      },
+      {
+        "horizon_seconds": "14608619.0",
+        "km_reference_survival": "0.31727859248955853",
+        "predictive_mean_survival": "0.12187165877547627",
+        "predictive_std_survival": "0.01375773520044234",
+        "predictive_min_survival": "0.08327829247449799",
+        "predictive_max_survival": "0.1788167964500643",
+        "km_reference_ipcw_brier": "0.19826429448128255",
+        "predictive_ipcw_brier": "0.2143230585981617",
+        "predictive_minus_reference_brier": "0.01605876411687915",
+        "relative_brier_change": "0.08099675314152545"
+      }
+    ]
+  },
+  "calibration_evidence": {
+    "audit": {
+      "task": "T7 Resolution-Time Estimation",
+      "operation": "MOD-009",
+      "status": "COMPLETE",
+      "purpose": "Calibration/reliability diagnostic for MOD-007 survival predictions.",
+      "evaluation_rows": 102764,
+      "prediction_alignment": {
+        "id_match": true,
+        "duration_match": true,
+        "event_match": true
+      },
+      "methodological_note": "This operation is a calibration-style diagnostic. It is not a formal IPCW survival calibration estimator. Tickets censored before the horizon are excluded from the observed-outcome proxy.",
+      "horizons": [
+        {
+          "horizon_seconds": 211583.0,
+          "evaluation_rows": 102764,
+          "observable_rows": 102764,
+          "early_censored_rows": 0,
+          "overall_predicted_survival": 0.18045612894999413,
+          "overall_observed_survival_proxy": 0.8188859912031451,
+          "overall_absolute_calibration_gap": 0.638429862253151,
+          "calibration_bins": [
+            {
+              "bin": 1,
+              "n": 10277,
+              "predicted_survival_mean": 0.1551308627637013,
+              "observed_survival_mean": 0.7702636956310207,
+              "absolute_calibration_gap": 0.6151328328673193,
+              "predicted_min": 0.1325360148457173,
+              "predicted_max": 0.16037712887175132
+            },
+            {
+              "bin": 2,
+              "n": 10276,
+              "predicted_survival_mean": 0.1630540862505342,
+              "observed_survival_mean": 0.8503308680420397,
+              "absolute_calibration_gap": 0.6872767817915055,
+              "predicted_min": 0.16037760093765785,
+              "predicted_max": 0.16545781161956946
+            },
+            {
+              "bin": 3,
+              "n": 10276,
+              "predicted_survival_mean": 0.16749662949504773,
+              "observed_survival_mean": 0.8660957571039315,
+              "absolute_calibration_gap": 0.6985991276088838,
+              "predicted_min": 0.16545846056677543,
+              "predicted_max": 0.16941640713562217
+            },
+            {
+              "bin": 4,
+              "n": 10277,
+              "predicted_survival_mean": 0.1713960643304275,
+              "observed_survival_mean": 0.8501508222243845,
+              "absolute_calibration_gap": 0.678754757893957,
+              "predicted_min": 0.16941729943880807,
+              "predicted_max": 0.17342418523337147
+            },
+            {
+              "bin": 5,
+              "n": 10276,
+              "predicted_survival_mean": 0.17584385557241405,
+              "observed_survival_mean": 0.8201634877384196,
+              "absolute_calibration_gap": 0.6443196321660056,
+              "predicted_min": 0.17342444716560296,
+              "predicted_max": 0.17851178959754757
+            },
+            {
+              "bin": 6,
+              "n": 10276,
+              "predicted_survival_mean": 0.1815123621042107,
+              "observed_survival_mean": 0.7845465161541456,
+              "absolute_calibration_gap": 0.6030341540499349,
+              "predicted_min": 0.17851284455425778,
+              "predicted_max": 0.18452555803295603
+            },
+            {
+              "bin": 7,
+              "n": 10277,
+              "predicted_survival_mean": 0.187407852417179,
+              "observed_survival_mean": 0.7696798676656612,
+              "absolute_calibration_gap": 0.5822720152484822,
+              "predicted_min": 0.18452616807748554,
+              "predicted_max": 0.19022552577833768
+            },
+            {
+              "bin": 8,
+              "n": 10276,
+              "predicted_survival_mean": 0.1931915051609861,
+              "observed_survival_mean": 0.7962242117555469,
+              "absolute_calibration_gap": 0.6030327065945609,
+              "predicted_min": 0.19022624801850277,
+              "predicted_max": 0.1962115291961879
+            },
+            {
+              "bin": 9,
+              "n": 10276,
+              "predicted_survival_mean": 0.19957818265175079,
+              "observed_survival_mean": 0.8224017127286882,
+              "absolute_calibration_gap": 0.6228235300769375,
+              "predicted_min": 0.1962143119711605,
+              "predicted_max": 0.2033170622384449
+            },
+            {
+              "bin": 10,
+              "n": 10277,
+              "predicted_survival_mean": 0.2099496882912532,
+              "observed_survival_mean": 0.859005546365671,
+              "absolute_calibration_gap": 0.6490558580744177,
+              "predicted_min": 0.20331737327387195,
+              "predicted_max": 0.2466990474846336
+            }
+          ]
+        },
+        {
+          "horizon_seconds": 1780179.0,
+          "evaluation_rows": 102764,
+          "observable_rows": 102277,
+          "early_censored_rows": 487,
+          "overall_predicted_survival": 0.14962967060591312,
+          "overall_observed_survival_proxy": 0.5634697928175445,
+          "overall_absolute_calibration_gap": 0.41384012221163136,
+          "calibration_bins": [
+            {
+              "bin": 1,
+              "n": 10228,
+              "predicted_survival_mean": 0.1264385240953614,
+              "observed_survival_mean": 0.5300156433320298,
+              "absolute_calibration_gap": 0.4035771192366684,
+              "predicted_min": 0.10618301810760218,
+              "predicted_max": 0.1311818411529572
+            },
+            {
+              "bin": 2,
+              "n": 10228,
+              "predicted_survival_mean": 0.13361770483650892,
+              "observed_survival_mean": 0.5209229565897536,
+              "absolute_calibration_gap": 0.3873052517532447,
+              "predicted_min": 0.13118189858317592,
+              "predicted_max": 0.13580422126447333
+            },
+            {
+              "bin": 3,
+              "n": 10227,
+              "predicted_survival_mean": 0.13766160815595532,
+              "observed_survival_mean": 0.5575437567224015,
+              "absolute_calibration_gap": 0.41988214856644623,
+              "predicted_min": 0.1358042877319117,
+              "predicted_max": 0.13941278394868578
+            },
+            {
+              "bin": 4,
+              "n": 10228,
+              "predicted_survival_mean": 0.14122057489676534,
+              "observed_survival_mean": 0.5848650762612436,
+              "absolute_calibration_gap": 0.4436445013644783,
+              "predicted_min": 0.13941311600681774,
+              "predicted_max": 0.1430797189037058
+            },
+            {
+              "bin": 5,
+              "n": 10227,
+              "predicted_survival_mean": 0.1453018334066424,
+              "observed_survival_mean": 0.5683973794856751,
+              "absolute_calibration_gap": 0.42309554607903277,
+              "predicted_min": 0.1430800878477223,
+              "predicted_max": 0.14775618127187806
+            },
+            {
+              "bin": 6,
+              "n": 10228,
+              "predicted_survival_mean": 0.15051558509357205,
+              "observed_survival_mean": 0.5353930387172467,
+              "absolute_calibration_gap": 0.3848774536236747,
+              "predicted_min": 0.14775650621352848,
+              "predicted_max": 0.1532901356654797
+            },
+            {
+              "bin": 7,
+              "n": 10228,
+              "predicted_survival_mean": 0.15594213943209043,
+              "observed_survival_mean": 0.5214118107156824,
+              "absolute_calibration_gap": 0.365469671283592,
+              "predicted_min": 0.15329026246070845,
+              "predicted_max": 0.1585404241706966
+            },
+            {
+              "bin": 8,
+              "n": 10227,
+              "predicted_survival_mean": 0.16128534369144434,
+              "observed_survival_mean": 0.5632150190671751,
+              "absolute_calibration_gap": 0.40192967537573077,
+              "predicted_min": 0.15854328201690943,
+              "predicted_max": 0.16407498168931145
+            },
+            {
+              "bin": 9,
+              "n": 10228,
+              "predicted_survival_mean": 0.1672116625257638,
+              "observed_survival_mean": 0.5952287837309347,
+              "absolute_calibration_gap": 0.4280171212051709,
+              "predicted_min": 0.16407565869920326,
+              "predicted_max": 0.17069112664247482
+            },
+            {
+              "bin": 10,
+              "n": 10228,
+              "predicted_survival_mean": 0.176886158981037,
+              "observed_survival_mean": 0.6577043410246383,
+              "absolute_calibration_gap": 0.48081818204360127,
+              "predicted_min": 0.1706915534196494,
+              "predicted_max": 0.21158702171196278
+            }
+          ]
+        },
+        {
+          "horizon_seconds": 14608619.0,
+          "evaluation_rows": 102764,
+          "observable_rows": 98993,
+          "early_censored_rows": 3771,
+          "overall_predicted_survival": 0.12187165877547627,
+          "overall_observed_survival_proxy": 0.2670693887446587,
+          "overall_absolute_calibration_gap": 0.1451977299691824,
+          "calibration_bins": [
+            {
+              "bin": 1,
+              "n": 9900,
+              "predicted_survival_mean": 0.1009495778183141,
+              "observed_survival_mean": 0.16070707070707071,
+              "absolute_calibration_gap": 0.05975749288875662,
+              "predicted_min": 0.08327829247449799,
+              "predicted_max": 0.1051396676512989
+            },
+            {
+              "bin": 2,
+              "n": 9899,
+              "predicted_survival_mean": 0.10727798974727168,
+              "observed_survival_mean": 0.15072229518133146,
+              "absolute_calibration_gap": 0.04344430543405978,
+              "predicted_min": 0.10514020621864702,
+              "predicted_max": 0.10921378298726532
+            },
+            {
+              "bin": 3,
+              "n": 9899,
+              "predicted_survival_mean": 0.11085472715111326,
+              "observed_survival_mean": 0.14264067077482573,
+              "absolute_calibration_gap": 0.03178594362371247,
+              "predicted_min": 0.10921476473422595,
+              "predicted_max": 0.11240984122857606
+            },
+            {
+              "bin": 4,
+              "n": 9899,
+              "predicted_survival_mean": 0.11399033358995374,
+              "observed_survival_mean": 0.17355288412971007,
+              "absolute_calibration_gap": 0.05956255053975633,
+              "predicted_min": 0.11240996856047605,
+              "predicted_max": 0.11561926723653092
+            },
+            {
+              "bin": 5,
+              "n": 9899,
+              "predicted_survival_mean": 0.11756570931589451,
+              "observed_survival_mean": 0.22477017880594,
+              "absolute_calibration_gap": 0.10720446949004549,
+              "predicted_min": 0.11562000464393865,
+              "predicted_max": 0.11971855222768199
+            },
+            {
+              "bin": 6,
+              "n": 9900,
+              "predicted_survival_mean": 0.12218954493990976,
+              "observed_survival_mean": 0.28373737373737373,
+              "absolute_calibration_gap": 0.161547828797464,
+              "predicted_min": 0.11971855635443189,
+              "predicted_max": 0.12471047044931434
+            },
+            {
+              "bin": 7,
+              "n": 9899,
+              "predicted_survival_mean": 0.12712232133110687,
+              "observed_survival_mean": 0.3221537529043338,
+              "absolute_calibration_gap": 0.19503143157322692,
+              "predicted_min": 0.12471048236909303,
+              "predicted_max": 0.12949600714444987
+            },
+            {
+              "bin": 8,
+              "n": 9899,
+              "predicted_survival_mean": 0.1319721974420233,
+              "observed_survival_mean": 0.3768057379533286,
+              "absolute_calibration_gap": 0.24483354051130532,
+              "predicted_min": 0.12949626237926046,
+              "predicted_max": 0.13453034079155538
+            },
+            {
+              "bin": 9,
+              "n": 9899,
+              "predicted_survival_mean": 0.13736097447901785,
+              "observed_survival_mean": 0.3999393878169512,
+              "absolute_calibration_gap": 0.26257841333793336,
+              "predicted_min": 0.13453068928947226,
+              "predicted_max": 0.14052197999995186
+            },
+            {
+              "bin": 10,
+              "n": 9900,
+              "predicted_survival_mean": 0.14616779288344395,
+              "observed_survival_mean": 0.43565656565656563,
+              "absolute_calibration_gap": 0.2894887727731217,
+              "predicted_min": 0.14052270052685695,
+              "predicted_max": 0.1759605451344923
+            }
+          ]
+        }
+      ],
+      "integrity": {
+        "model_refit": false,
+        "new_features": false,
+        "raw_archive_access": false,
+        "evaluation_population_changed": false
+      },
+      "artifacts": {
+        "calibration_table": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod009_survival_calibration.csv",
+        "audit": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod009_survival_calibration_audit.json"
+      }
+    },
+    "row_count": 30,
+    "columns": [
+      "horizon_seconds",
+      "bin",
+      "n",
+      "predicted_survival_mean",
+      "observed_survival_mean",
+      "absolute_calibration_gap",
+      "predicted_min",
+      "predicted_max"
+    ],
+    "rows": [
+      {
+        "horizon_seconds": "211583.0",
+        "bin": "1",
+        "n": "10277",
+        "predicted_survival_mean": "0.1551308627637013",
+        "observed_survival_mean": "0.7702636956310207",
+        "absolute_calibration_gap": "0.6151328328673193",
+        "predicted_min": "0.1325360148457173",
+        "predicted_max": "0.16037712887175132"
+      },
+      {
+        "horizon_seconds": "211583.0",
+        "bin": "2",
+        "n": "10276",
+        "predicted_survival_mean": "0.1630540862505342",
+        "observed_survival_mean": "0.8503308680420397",
+        "absolute_calibration_gap": "0.6872767817915055",
+        "predicted_min": "0.16037760093765785",
+        "predicted_max": "0.16545781161956946"
+      },
+      {
+        "horizon_seconds": "211583.0",
+        "bin": "3",
+        "n": "10276",
+        "predicted_survival_mean": "0.16749662949504773",
+        "observed_survival_mean": "0.8660957571039315",
+        "absolute_calibration_gap": "0.6985991276088838",
+        "predicted_min": "0.16545846056677543",
+        "predicted_max": "0.16941640713562217"
+      },
+      {
+        "horizon_seconds": "211583.0",
+        "bin": "4",
+        "n": "10277",
+        "predicted_survival_mean": "0.1713960643304275",
+        "observed_survival_mean": "0.8501508222243845",
+        "absolute_calibration_gap": "0.678754757893957",
+        "predicted_min": "0.16941729943880807",
+        "predicted_max": "0.17342418523337147"
+      },
+      {
+        "horizon_seconds": "211583.0",
+        "bin": "5",
+        "n": "10276",
+        "predicted_survival_mean": "0.17584385557241405",
+        "observed_survival_mean": "0.8201634877384196",
+        "absolute_calibration_gap": "0.6443196321660056",
+        "predicted_min": "0.17342444716560296",
+        "predicted_max": "0.17851178959754757"
+      },
+      {
+        "horizon_seconds": "211583.0",
+        "bin": "6",
+        "n": "10276",
+        "predicted_survival_mean": "0.1815123621042107",
+        "observed_survival_mean": "0.7845465161541456",
+        "absolute_calibration_gap": "0.6030341540499349",
+        "predicted_min": "0.17851284455425778",
+        "predicted_max": "0.18452555803295603"
+      },
+      {
+        "horizon_seconds": "211583.0",
+        "bin": "7",
+        "n": "10277",
+        "predicted_survival_mean": "0.187407852417179",
+        "observed_survival_mean": "0.7696798676656612",
+        "absolute_calibration_gap": "0.5822720152484822",
+        "predicted_min": "0.18452616807748554",
+        "predicted_max": "0.19022552577833768"
+      },
+      {
+        "horizon_seconds": "211583.0",
+        "bin": "8",
+        "n": "10276",
+        "predicted_survival_mean": "0.1931915051609861",
+        "observed_survival_mean": "0.7962242117555469",
+        "absolute_calibration_gap": "0.6030327065945609",
+        "predicted_min": "0.19022624801850277",
+        "predicted_max": "0.1962115291961879"
+      },
+      {
+        "horizon_seconds": "211583.0",
+        "bin": "9",
+        "n": "10276",
+        "predicted_survival_mean": "0.19957818265175079",
+        "observed_survival_mean": "0.8224017127286882",
+        "absolute_calibration_gap": "0.6228235300769375",
+        "predicted_min": "0.1962143119711605",
+        "predicted_max": "0.2033170622384449"
+      },
+      {
+        "horizon_seconds": "211583.0",
+        "bin": "10",
+        "n": "10277",
+        "predicted_survival_mean": "0.2099496882912532",
+        "observed_survival_mean": "0.859005546365671",
+        "absolute_calibration_gap": "0.6490558580744177",
+        "predicted_min": "0.20331737327387195",
+        "predicted_max": "0.2466990474846336"
+      },
+      {
+        "horizon_seconds": "1780179.0",
+        "bin": "1",
+        "n": "10228",
+        "predicted_survival_mean": "0.1264385240953614",
+        "observed_survival_mean": "0.5300156433320298",
+        "absolute_calibration_gap": "0.4035771192366684",
+        "predicted_min": "0.10618301810760218",
+        "predicted_max": "0.1311818411529572"
+      },
+      {
+        "horizon_seconds": "1780179.0",
+        "bin": "2",
+        "n": "10228",
+        "predicted_survival_mean": "0.13361770483650892",
+        "observed_survival_mean": "0.5209229565897536",
+        "absolute_calibration_gap": "0.3873052517532447",
+        "predicted_min": "0.13118189858317592",
+        "predicted_max": "0.13580422126447333"
+      },
+      {
+        "horizon_seconds": "1780179.0",
+        "bin": "3",
+        "n": "10227",
+        "predicted_survival_mean": "0.13766160815595532",
+        "observed_survival_mean": "0.5575437567224015",
+        "absolute_calibration_gap": "0.41988214856644623",
+        "predicted_min": "0.1358042877319117",
+        "predicted_max": "0.13941278394868578"
+      },
+      {
+        "horizon_seconds": "1780179.0",
+        "bin": "4",
+        "n": "10228",
+        "predicted_survival_mean": "0.14122057489676534",
+        "observed_survival_mean": "0.5848650762612436",
+        "absolute_calibration_gap": "0.4436445013644783",
+        "predicted_min": "0.13941311600681774",
+        "predicted_max": "0.1430797189037058"
+      },
+      {
+        "horizon_seconds": "1780179.0",
+        "bin": "5",
+        "n": "10227",
+        "predicted_survival_mean": "0.1453018334066424",
+        "observed_survival_mean": "0.5683973794856751",
+        "absolute_calibration_gap": "0.42309554607903277",
+        "predicted_min": "0.1430800878477223",
+        "predicted_max": "0.14775618127187806"
+      },
+      {
+        "horizon_seconds": "1780179.0",
+        "bin": "6",
+        "n": "10228",
+        "predicted_survival_mean": "0.15051558509357205",
+        "observed_survival_mean": "0.5353930387172467",
+        "absolute_calibration_gap": "0.3848774536236747",
+        "predicted_min": "0.14775650621352848",
+        "predicted_max": "0.1532901356654797"
+      },
+      {
+        "horizon_seconds": "1780179.0",
+        "bin": "7",
+        "n": "10228",
+        "predicted_survival_mean": "0.15594213943209043",
+        "observed_survival_mean": "0.5214118107156824",
+        "absolute_calibration_gap": "0.365469671283592",
+        "predicted_min": "0.15329026246070845",
+        "predicted_max": "0.1585404241706966"
+      },
+      {
+        "horizon_seconds": "1780179.0",
+        "bin": "8",
+        "n": "10227",
+        "predicted_survival_mean": "0.16128534369144434",
+        "observed_survival_mean": "0.5632150190671751",
+        "absolute_calibration_gap": "0.40192967537573077",
+        "predicted_min": "0.15854328201690943",
+        "predicted_max": "0.16407498168931145"
+      },
+      {
+        "horizon_seconds": "1780179.0",
+        "bin": "9",
+        "n": "10228",
+        "predicted_survival_mean": "0.1672116625257638",
+        "observed_survival_mean": "0.5952287837309347",
+        "absolute_calibration_gap": "0.4280171212051709",
+        "predicted_min": "0.16407565869920326",
+        "predicted_max": "0.17069112664247482"
+      },
+      {
+        "horizon_seconds": "1780179.0",
+        "bin": "10",
+        "n": "10228",
+        "predicted_survival_mean": "0.176886158981037",
+        "observed_survival_mean": "0.6577043410246383",
+        "absolute_calibration_gap": "0.48081818204360127",
+        "predicted_min": "0.1706915534196494",
+        "predicted_max": "0.21158702171196278"
+      },
+      {
+        "horizon_seconds": "14608619.0",
+        "bin": "1",
+        "n": "9900",
+        "predicted_survival_mean": "0.1009495778183141",
+        "observed_survival_mean": "0.16070707070707071",
+        "absolute_calibration_gap": "0.05975749288875662",
+        "predicted_min": "0.08327829247449799",
+        "predicted_max": "0.1051396676512989"
+      },
+      {
+        "horizon_seconds": "14608619.0",
+        "bin": "2",
+        "n": "9899",
+        "predicted_survival_mean": "0.10727798974727168",
+        "observed_survival_mean": "0.15072229518133146",
+        "absolute_calibration_gap": "0.04344430543405978",
+        "predicted_min": "0.10514020621864702",
+        "predicted_max": "0.10921378298726532"
+      },
+      {
+        "horizon_seconds": "14608619.0",
+        "bin": "3",
+        "n": "9899",
+        "predicted_survival_mean": "0.11085472715111326",
+        "observed_survival_mean": "0.14264067077482573",
+        "absolute_calibration_gap": "0.03178594362371247",
+        "predicted_min": "0.10921476473422595",
+        "predicted_max": "0.11240984122857606"
+      },
+      {
+        "horizon_seconds": "14608619.0",
+        "bin": "4",
+        "n": "9899",
+        "predicted_survival_mean": "0.11399033358995374",
+        "observed_survival_mean": "0.17355288412971007",
+        "absolute_calibration_gap": "0.05956255053975633",
+        "predicted_min": "0.11240996856047605",
+        "predicted_max": "0.11561926723653092"
+      },
+      {
+        "horizon_seconds": "14608619.0",
+        "bin": "5",
+        "n": "9899",
+        "predicted_survival_mean": "0.11756570931589451",
+        "observed_survival_mean": "0.22477017880594",
+        "absolute_calibration_gap": "0.10720446949004549",
+        "predicted_min": "0.11562000464393865",
+        "predicted_max": "0.11971855222768199"
+      },
+      {
+        "horizon_seconds": "14608619.0",
+        "bin": "6",
+        "n": "9900",
+        "predicted_survival_mean": "0.12218954493990976",
+        "observed_survival_mean": "0.28373737373737373",
+        "absolute_calibration_gap": "0.161547828797464",
+        "predicted_min": "0.11971855635443189",
+        "predicted_max": "0.12471047044931434"
+      },
+      {
+        "horizon_seconds": "14608619.0",
+        "bin": "7",
+        "n": "9899",
+        "predicted_survival_mean": "0.12712232133110687",
+        "observed_survival_mean": "0.3221537529043338",
+        "absolute_calibration_gap": "0.19503143157322692",
+        "predicted_min": "0.12471048236909303",
+        "predicted_max": "0.12949600714444987"
+      },
+      {
+        "horizon_seconds": "14608619.0",
+        "bin": "8",
+        "n": "9899",
+        "predicted_survival_mean": "0.1319721974420233",
+        "observed_survival_mean": "0.3768057379533286",
+        "absolute_calibration_gap": "0.24483354051130532",
+        "predicted_min": "0.12949626237926046",
+        "predicted_max": "0.13453034079155538"
+      },
+      {
+        "horizon_seconds": "14608619.0",
+        "bin": "9",
+        "n": "9899",
+        "predicted_survival_mean": "0.13736097447901785",
+        "observed_survival_mean": "0.3999393878169512",
+        "absolute_calibration_gap": "0.26257841333793336",
+        "predicted_min": "0.13453068928947226",
+        "predicted_max": "0.14052197999995186"
+      },
+      {
+        "horizon_seconds": "14608619.0",
+        "bin": "10",
+        "n": "9900",
+        "predicted_survival_mean": "0.14616779288344395",
+        "observed_survival_mean": "0.43565656565656563",
+        "absolute_calibration_gap": "0.2894887727731217",
+        "predicted_min": "0.14052270052685695",
+        "predicted_max": "0.1759605451344923"
+      }
+    ],
+    "methodological_note": "This operation is a calibration-style diagnostic. It is not a formal IPCW survival calibration estimator. Tickets censored before the horizon are excluded from the observed-outcome proxy.",
+    "formal_ipcw_calibration_estimator": false
+  },
+  "final_model_comparison": {
+    "rows": [
+      {
+        "horizon_seconds": "211583.0",
+        "kaplan_meier_ipcw_brier": "0.15047031239713146",
+        "weibull_aft_ipcw_brier": "0.5559985321807034",
+        "lognormal_aft_ipcw_brier": "0.4739882052966035",
+        "weibull_minus_km": "0.4055282197835719",
+        "lognormal_minus_km": "0.3235178928994721",
+        "lognormal_minus_weibull": "-0.08201032688409987"
+      },
+      {
+        "horizon_seconds": "1780179.0",
+        "kaplan_meier_ipcw_brier": "0.24631825329377932",
+        "weibull_aft_ipcw_brier": "0.4165689714851437",
+        "lognormal_aft_ipcw_brier": "0.3709262798833482",
+        "weibull_minus_km": "0.1702507181913644",
+        "lognormal_minus_km": "0.12460802658956888",
+        "lognormal_minus_weibull": "-0.045642691601795515"
+      },
+      {
+        "horizon_seconds": "14608619.0",
+        "kaplan_meier_ipcw_brier": "0.19826429448128255",
+        "weibull_aft_ipcw_brier": "0.2143230585981617",
+        "lognormal_aft_ipcw_brier": "0.20190683817023508",
+        "weibull_minus_km": "0.01605876411687915",
+        "lognormal_minus_km": "0.003642543688952532",
+        "lognormal_minus_weibull": "-0.012416220427926616"
+      }
+    ],
+    "audit_task": "T7 Resolution-Time Estimation",
+    "comparison": {
+      "lognormal_minus_weibull_cindex": 0.0019123855127867184,
+      "weibull_horizons_better_than_km": 0,
+      "lognormal_horizons_better_than_km": 0,
+      "lognormal_horizons_better_than_weibull": 3
+    },
+    "evidence_statement": "The evaluated predictive survival models do not show uniform improvement across the reported metrics and horizons. The evidence should therefore be carried forward as model-performance limitations.",
+    "interpretation_boundary": "The comparison describes model behavior on the frozen chronological evaluation population. It does not establish autonomous operational deployment suitability or an unsupported automation threshold."
+  },
+  "final_closure": {
+    "task": "T7 Resolution-Time Estimation",
+    "prediction_boundary": "Ticket Creation",
+    "target": "Time from Creation until first post-Creation operationally observed Status change to RESOLVED",
+    "event_definition": "First qualifying post-Creation Status change adds RESOLVED",
+    "censoring_definition": "No qualifying RESOLVED event observed through the administrative observation endpoint",
+    "censoring_treated_as": "Right-censored observation",
+    "primary_endpoint": "First post-Creation Status -> RESOLVED",
+    "administrative_endpoint": "2024-11-24 07:26:14",
+    "data_boundary": {
+      "prediction_boundary": "Creation",
+      "creation_only_features": true,
+      "post_creation_history_used": false,
+      "current_status_used": false,
+      "current_resolution_used": false,
+      "evaluation_fitting": false,
+      "raw_archive_access": false
+    },
+    "limitations": [
+      "Creation-time features provide limited discrimination.",
+      "Predictive survival models do not uniformly outperform the Kaplan-Meier reference across evaluated horizons.",
+      "The Log-Normal AFT model improves the reported comparative metrics over Weibull, but the improvement does not establish operational sufficiency.",
+      "MOD-009 is a calibration-style diagnostic rather than a formal IPCW survival calibration estimator.",
+      "No empirically validated automation threshold was established.",
+      "Right-censoring is intrinsic to the target and must be preserved in interpretation.",
+      "T7 evidence does not justify autonomous resolution-time workflow decisions."
+    ]
+  },
+  "remaining_evidence_gaps": {
+    "native_survival_evaluation": "ALREADY_ESTABLISHED",
+    "model_comparison": "ALREADY_ESTABLISHED",
+    "fixed_horizon_ipcw_brier": "ALREADY_ESTABLISHED",
+    "c_index": "ALREADY_ESTABLISHED",
+    "survival_calibration_diagnostic": "ALREADY_ESTABLISHED",
+    "formal_survival_calibration_estimator": "NOT_ESTABLISHED",
+    "calibration_uncertainty": "NOT_ESTABLISHED",
+    "uncertainty_for_model_comparison": "NOT_ESTABLISHED",
+    "additional_model_selection": "NOT_REQUIRED_FROM_THIS_RECONCILIATION",
+    "locked_test_re_evaluation": "NOT_JUSTIFIED",
+    "remaining_t9_question": "Determine whether the existing T7-native survival evidence is sufficient for T9 calibration/reliability purposes, and if not, define only the missing survival-native uncertainty/calibration evidence."
+  },
+  "controls": {
+    "artifact_read_only": true,
+    "model_fitted": false,
+    "prediction_generated": false,
+    "probability_generated": false,
+    "calibration_fitted": false,
+    "target_created": false,
+    "target_relabelled": false,
+    "censoring_relabelled": false,
+    "survival_to_binary_conversion": false,
+    "threshold_selected": false,
+    "model_selected": false,
+    "locked_test_used": false,
+    "universal_confidence_created": false,
+    "universal_risk_score_created": false,
+    "existing_t7_artifacts_modified": false,
+    "post_creation_information_used": false,
+    "native_survival_semantics_preserved": true
+  },
+  "control_validation": {
+    "status": "PASS",
+    "failed_controls": []
+  },
+  "interpretation": {
+    "existing_native_evaluation": "T7 native survival evaluation is already established in the existing T7 evidence chain.",
+    "existing_model_comparison": "T7 already contains an explicit Weibull versus Log-Normal versus Kaplan-Meier comparison.",
+    "existing_calibration": "T7 contains a calibration-style diagnostic, but the final closure explicitly limits its interpretation and does not treat it as a formal IPCW survival calibration estimator.",
+    "new_evaluation_requirement": "No generic re-computation of existing T7 metrics is justified merely to duplicate completed T7 evaluation.",
+    "remaining_t9_question": "The remaining T9-specific question is whether additional survival-native uncertainty/reliability evidence is required and defensible for the accepted T7 native outputs.",
+    "model_selection": "No new model selection is performed by this reconciliation."
+  },
+  "artifacts_generated": [
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op013d_t7_existing_evidence_reconciliation.json"
+  ]
+}

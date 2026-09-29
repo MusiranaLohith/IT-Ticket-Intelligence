@@ -1,0 +1,171 @@
+{
+  "operation": "FMP-07 OP-004",
+  "operation_name": "FROZEN_RUNTIME_REPRODUCIBILITY_MANIFEST",
+  "timestamp_utc": "2026-09-26T16:44:36.382867+00:00",
+  "status": "PASS",
+  "read_only": true,
+  "training_performed": false,
+  "fitting_performed": false,
+  "prediction_performed": false,
+  "evaluation_performed": false,
+  "locked_test_used": false,
+  "artifact_modified": false,
+  "prerequisites_pass": true,
+  "tasks": {
+    "T1": {
+      "runtime_type": "FeatureUnion word+character TF-IDF + LinearSVC",
+      "input_boundary": "Creation/incoming-ticket text",
+      "serialized_artifact": true,
+      "reconstruction_required": false,
+      "runtime_evidence": "FMP-06 OP-018R5",
+      "reproducibility_status": "RUNTIME_REPRODUCED",
+      "frozen_artifacts": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/baselines/t1_it_support_char_svm.joblib",
+          "exists": true
+        }
+      ],
+      "frozen_artifact_presence": true,
+      "status": "PASS"
+    },
+    "T2": {
+      "runtime_type": "TF-IDF + class-weighted LogisticRegression",
+      "input_boundary": "Creation-time ticket feature input",
+      "serialized_artifact": true,
+      "reconstruction_required": false,
+      "runtime_evidence": "FMP-06 OP-018R3",
+      "reproducibility_status": "RUNTIME_REPRODUCED",
+      "frozen_artifacts": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/models/t2_class_weighted_tfidf_logreg.joblib",
+          "exists": true
+        }
+      ],
+      "frozen_artifact_presence": true,
+      "status": "PASS"
+    },
+    "T3": {
+      "runtime_type": "TF-IDF + class-weighted LogisticRegression",
+      "input_boundary": "Creation-time Summary + Description",
+      "serialized_artifact": true,
+      "reconstruction_required": false,
+      "runtime_evidence": "FMP-06 OP-018R3",
+      "reproducibility_status": "RUNTIME_REPRODUCED",
+      "frozen_artifacts": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib",
+          "exists": true
+        }
+      ],
+      "frozen_artifact_presence": true,
+      "status": "PASS"
+    },
+    "T4": {
+      "runtime_type": "TF-IDF nearest-neighbor historical retrieval",
+      "input_boundary": "Creation-time Creator + Creator Detail + Summary + Description",
+      "serialized_artifact": true,
+      "reconstruction_required": false,
+      "runtime_evidence": "FMP-06 OP-018R16",
+      "reproducibility_status": "EXACT_EVAL_REPRODUCED",
+      "frozen_artifacts": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_tfidf.joblib",
+          "exists": true
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_neighbors.joblib",
+          "exists": true
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_full_retrieval.npz",
+          "exists": true
+        }
+      ],
+      "frozen_artifact_presence": true,
+      "status": "PASS"
+    },
+    "T5": {
+      "runtime_type": "TF-IDF + LogisticRegression + task-specific calibration",
+      "input_boundary": "Creation-time Creator + Creator Detail + Summary + Description",
+      "serialized_artifact": true,
+      "reconstruction_required": false,
+      "runtime_evidence": "FMP-06 OP-018R3",
+      "reproducibility_status": "RUNTIME_REPRODUCED",
+      "frozen_artifacts": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod005_tfidf.joblib",
+          "exists": true
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod005_logreg.joblib",
+          "exists": true
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod007_calibrated_tfidf.joblib",
+          "exists": true
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod007_calibration_models.joblib",
+          "exists": true
+        }
+      ],
+      "frozen_artifact_presence": true,
+      "status": "PASS"
+    },
+    "T6": {
+      "runtime_type": "0.5 lexical + 0.5 semantic retrieval/ranking",
+      "input_boundary": "Creation-time query/candidate text",
+      "serialized_artifact": false,
+      "reconstruction_required": true,
+      "runtime_evidence": "FMP-06 OP-018R21",
+      "reproducibility_status": "FROZEN_COMPOSITION_REPRODUCED",
+      "frozen_artifacts": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod010_corrected_hybrid_results.json",
+          "exists": true
+        }
+      ],
+      "frozen_artifact_presence": true,
+      "status": "PASS"
+    },
+    "T7": {
+      "runtime_type": "Log-Normal AFT survival model",
+      "input_boundary": "Creation-time ticket features",
+      "serialized_artifact": false,
+      "reconstruction_required": true,
+      "runtime_evidence": "FMP-06 OP-018R27",
+      "reproducibility_status": "RUNTIME_REPRODUCED",
+      "frozen_artifacts": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod010_log_normal_aft_model.json",
+          "exists": true
+        }
+      ],
+      "frozen_artifact_presence": true,
+      "status": "PASS"
+    }
+  },
+  "downstream_boundary": {
+    "T8": {
+      "status": "CLOSED_PASS",
+      "authoritative_runtime_evidence": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/mod036/op026/t8_mod036_op026_decision_engine_validation.json",
+      "runtime_execution_established": true,
+      "role": "Evidence integration / decision-engine architecture"
+    },
+    "T9": {
+      "status": "CLOSED_PASS",
+      "authoritative_closure": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op015_final_integrated_closure.json",
+      "runtime_execution_established": true,
+      "role": "Task-specific reliability/calibration synthesis"
+    },
+    "T10": {
+      "status": "POLICY_BOUNDARY_PRESERVED",
+      "authoritative_policy_evidence": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp05_op008_empirical_policy_boundary_audit.json",
+      "empirically_validated_universal_threshold": false,
+      "universal_confidence_created": false,
+      "universal_risk_created": false,
+      "role": "Policy layer; no empirically validated universal operating threshold established"
+    }
+  },
+  "interpretation": "This manifest records the frozen runtime reproducibility boundary for T1\u2013T7 and the downstream T8\u2013T10 integration boundary. It does not retrain, refit, select, optimize, or modify any model or artifact."
+}

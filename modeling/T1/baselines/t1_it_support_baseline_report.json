@@ -1,0 +1,204 @@
+{
+  "status": "BASELINE_COMPLETE",
+  "model": {
+    "type": "TFIDF_LOGISTIC_REGRESSION",
+    "random_state": 42,
+    "class_weight": "balanced",
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 2,
+    "max_df": 0.98,
+    "sublinear_tf": true
+  },
+  "data": {
+    "split_dataset": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/splits/t1_split.csv",
+    "development_records": 1783,
+    "evaluation_records": 446,
+    "evaluation_used_for_fit": false,
+    "split_column": "modeling_split",
+    "split_method": "GROUP_AWARE"
+  },
+  "features": {
+    "text": true,
+    "id": false,
+    "category_truth": false,
+    "source_partition": false,
+    "source_row_x": false,
+    "source_row_y": false,
+    "normalized_text": false,
+    "modeling_split": false
+  },
+  "targets": {
+    "classes": [
+      "Active Directory",
+      "Computer-Services",
+      "EOL",
+      "Fileservice",
+      "O365",
+      "Software",
+      "Support general"
+    ],
+    "evaluation_class_counts": {
+      "Active Directory": 21,
+      "Computer-Services": 10,
+      "EOL": 2,
+      "Fileservice": 183,
+      "O365": 34,
+      "Software": 44,
+      "Support general": 152
+    },
+    "evaluation_classes_without_examples": []
+  },
+  "metrics": {
+    "accuracy": 0.9170403587443946,
+    "macro_f1": 0.8770242592655446,
+    "weighted_f1": 0.9173567226204572,
+    "classification_report": {
+      "Active Directory": {
+        "precision": 0.75,
+        "recall": 0.5714285714285714,
+        "f1-score": 0.6486486486486487,
+        "support": 21.0
+      },
+      "Computer-Services": {
+        "precision": 1.0,
+        "recall": 0.9,
+        "f1-score": 0.9473684210526315,
+        "support": 10.0
+      },
+      "EOL": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 2.0
+      },
+      "Fileservice": {
+        "precision": 1.0,
+        "recall": 0.994535519125683,
+        "f1-score": 0.9972602739726028,
+        "support": 183.0
+      },
+      "O365": {
+        "precision": 0.8,
+        "recall": 0.8235294117647058,
+        "f1-score": 0.8115942028985508,
+        "support": 34.0
+      },
+      "Software": {
+        "precision": 0.7096774193548387,
+        "recall": 1.0,
+        "f1-score": 0.8301886792452831,
+        "support": 44.0
+      },
+      "Support general": {
+        "precision": 0.9428571428571428,
+        "recall": 0.868421052631579,
+        "f1-score": 0.9041095890410958,
+        "support": 152.0
+      },
+      "accuracy": 0.9170403587443946,
+      "macro avg": {
+        "precision": 0.8860763660302832,
+        "recall": 0.8797020792786484,
+        "f1-score": 0.8770242592655446,
+        "support": 446.0
+      },
+      "weighted avg": {
+        "precision": 0.924865677502015,
+        "recall": 0.9170403587443946,
+        "f1-score": 0.9173567226204572,
+        "support": 446.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        12,
+        0,
+        0,
+        0,
+        0,
+        4,
+        5
+      ],
+      [
+        0,
+        9,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        182,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        28,
+        4,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        44,
+        0
+      ],
+      [
+        4,
+        0,
+        0,
+        0,
+        7,
+        9,
+        132
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "Active Directory",
+      "Computer-Services",
+      "EOL",
+      "Fileservice",
+      "O365",
+      "Software",
+      "Support general"
+    ]
+  },
+  "probability_output": {
+    "available": true,
+    "classes": [
+      "Active Directory",
+      "Computer-Services",
+      "EOL",
+      "Fileservice",
+      "O365",
+      "Software",
+      "Support general"
+    ],
+    "probability_rows": 446
+  },
+  "raw_source_modified": false
+}

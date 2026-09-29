@@ -1,0 +1,47 @@
+{
+  "operation": "MOD-034 / OP-001",
+  "status": "PASS",
+  "population": {
+    "rows": 4716,
+    "unique_ids": 4716,
+    "duplicate_ids": 0,
+    "t5_probability_min": 0.0001000386460031,
+    "t5_probability_max": 0.7037217901144501,
+    "t5_probability_valid": true
+  },
+  "native_task_semantics": {
+    "t4": {
+      "task": "assignee ranking / retrieval",
+      "output_type": "ranked candidate assignees with native retrieval scores",
+      "target_semantics": "observed target assignee",
+      "boundary": "Creation"
+    },
+    "t5": {
+      "task": "duplicate detection",
+      "output_type": "calibrated duplicate probability",
+      "target_semantics": "frozen duplicate target",
+      "probability_field": "p_duplicate",
+      "boundary": "Creation"
+    }
+  },
+  "fusion_constraints": {
+    "synthetic_universal_target": false,
+    "universal_triage_target_present": false,
+    "direct_probability_fusion_supported": false,
+    "t4_to_probability_conversion_allowed": false,
+    "t5_to_assignment_conversion_allowed": false,
+    "arbitrary_weighting_allowed": false
+  },
+  "defensible_analyses": {
+    "conditional_error_analysis": true,
+    "evidence_stratification": true,
+    "cross_task_association": true,
+    "native_task_specific_evaluation": true,
+    "single_fused_probability": false,
+    "synthetic_triage_score": false,
+    "arbitrary_weighted_combination": false,
+    "t4_ranking_to_probability": false,
+    "t5_probability_to_assignment": false
+  },
+  "decision": "PROCEED_WITH_NATIVE_EVIDENCE_INTERACTION_ANALYSIS"
+}

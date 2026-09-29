@@ -1,0 +1,83 @@
+{
+  "operation": "MOD-036 OP-017",
+  "purpose": "Construct a T8 development evidence population from validated T2/T4/T5/T7 artifacts while preserving per-task availability and Creation-boundary semantics.",
+  "prediction_boundary": "Creation",
+  "decision_unit": "canonical Mozilla ticket",
+  "population_policy": {
+    "construction": "union_of_available_validated_task_evidence",
+    "all_task_intersection_required": false,
+    "missing_evidence": "unavailable",
+    "missing_evidence_is_negative": false
+  },
+  "sources": {
+    "T2": {
+      "path": "modeling/T8/t8_mod029_t2_oof.csv",
+      "exists": true
+    },
+    "T4": {
+      "path": "modeling/T4/derived/t4_features.csv",
+      "exists": true
+    },
+    "T5": {
+      "path": "modeling/T5/splits/t5_model_val.csv",
+      "exists": true
+    },
+    "T7": {
+      "path": "modeling/T8/t8_mod029_t7_oof.csv",
+      "exists": true
+    }
+  },
+  "source_row_counts": {
+    "T2": 16518,
+    "T4": 178127,
+    "T5": 74091,
+    "T7": 16518
+  },
+  "source_unique_id_counts": {
+    "T2": 16518,
+    "T4": 178127,
+    "T5": 74091,
+    "T7": 16518
+  },
+  "development_population": {
+    "rows": 232520,
+    "sha256": "69f3f1687dde4bb29b036f0a7f2a49812ae28fd3d9ae69a131ad724991d0e4cb"
+  },
+  "task_availability": {
+    "T2": 16518,
+    "T4": 178127,
+    "T5": 74091,
+    "T7": 16518
+  },
+  "validation": {
+    "missing_as_negative_violations": 0,
+    "creation_time_source_restricted_to_existing_artifacts": true,
+    "post_creation_features_added": false,
+    "synthetic_target_created": false,
+    "blind_all_task_intersection": false
+  },
+  "included_native_targets": [
+    "T2 target/evidence where present",
+    "T4 target_assignee where present",
+    "T5 native duplicate target/evidence where present",
+    "T7 event/survival evidence where present"
+  ],
+  "explicit_exclusions": [
+    "T1 frozen model output because no authoritative T1 model freeze exists",
+    "T3 as a target",
+    "T6 observable_non_positive as a negative label",
+    "post-Creation information",
+    "synthetic universal T8 target"
+  ],
+  "controls": {
+    "training_performed": false,
+    "prediction_generation_performed": false,
+    "model_selected": false,
+    "model_modified": false,
+    "dataset_modified": false
+  },
+  "artifacts": {
+    "development_population_csv": "modeling/T8/mod036/t8_mod036_op017_development_population.csv",
+    "manifest_json": "modeling/T8/mod036/t8_mod036_op017_development_population.json"
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "operation": "H-RUN-017R2",
+  "operation_name": "Multi-ticket runtime validation",
+  "timestamp_utc": "2026-09-27T05:00:42.749570+00:00",
+  "status": "REQUIRES_REVIEW",
+  "source_script": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/h_run015_final_ticket_orchestrator.py",
+  "source_script_modified": false,
+  "temporary_source_copies_only": true,
+  "synthetic_development_only": true,
+  "locked_test_used": false,
+  "model_retraining": false,
+  "model_modification": false,
+  "prediction_modification": false,
+  "threshold_optimization": false,
+  "ticket_count": 3,
+  "tickets": [
+    {
+      "ticket_id": "H-RUN-017-A",
+      "title": "VPN connection fails after password reset",
+      "status": "REQUIRES_REVIEW",
+      "return_code": 0,
+      "runtime_lines": [
+        "[T1]",
+        "[T2]",
+        "[T3]",
+        "[T4]",
+        "[T5]",
+        "[T6]",
+        "[T7]",
+        "[T8]",
+        "[T9]",
+        "[T10]",
+        "[T11]"
+      ],
+      "binding": {
+        "original_title": "VPN connection fails after password reset",
+        "original_description": "I reset my corporate password this morning. Since then, the VPN client connects briefly and then disconnects. I restarted the laptop and reinstalled the VPN client, but the issue persists. I need access to the internal systems for today's work.",
+        "title_entries_found": 1,
+        "description_entries_found": 1
+      },
+      "stdout_line_count": 65,
+      "stderr": ""
+    },
+    {
+      "ticket_id": "H-RUN-017-B",
+      "title": "Laptop battery replacement request",
+      "status": "REQUIRES_REVIEW",
+      "return_code": 0,
+      "runtime_lines": [
+        "[T1]",
+        "[T2]",
+        "[T3]",
+        "[T4]",
+        "[T5]",
+        "[T6]",
+        "[T7]",
+        "[T8]",
+        "[T9]",
+        "[T10]",
+        "[T11]"
+      ],
+      "binding": {
+        "original_title": "VPN connection fails after password reset",
+        "original_description": "I reset my corporate password this morning. Since then, the VPN client connects briefly and then disconnects. I restarted the laptop and reinstalled the VPN client, but the issue persists. I need access to the internal systems for today's work.",
+        "title_entries_found": 1,
+        "description_entries_found": 1
+      },
+      "stdout_line_count": 65,
+      "stderr": ""
+    },
+    {
+      "ticket_id": "H-RUN-017-C",
+      "title": "Unable to access corporate account",
+      "status": "REQUIRES_REVIEW",
+      "return_code": 0,
+      "runtime_lines": [
+        "[T1]",
+        "[T2]",
+        "[T3]",
+        "[T4]",
+        "[T5]",
+        "[T6]",
+        "[T7]",
+        "[T8]",
+        "[T9]",
+        "[T10]",
+        "[T11]"
+      ],
+      "binding": {
+        "original_title": "VPN connection fails after password reset",
+        "original_description": "I reset my corporate password this morning. Since then, the VPN client connects briefly and then disconnects. I restarted the laptop and reinstalled the VPN client, but the issue persists. I need access to the internal systems for today's work.",
+        "title_entries_found": 1,
+        "description_entries_found": 1
+      },
+      "stdout_line_count": 65,
+      "stderr": ""
+    }
+  ],
+  "preserved_boundaries": {
+    "t6_partial_native_runtime": true,
+    "t7_support_limitation": true,
+    "t8_boundary_envelope": true,
+    "t9_boundary_envelope": true,
+    "t10_policy_boundary": true,
+    "t11_specification_only": true
+  }
+}

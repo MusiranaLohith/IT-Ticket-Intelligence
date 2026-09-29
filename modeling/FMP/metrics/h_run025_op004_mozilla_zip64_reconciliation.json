@@ -1,0 +1,72 @@
+{
+  "operation": "H-RUN-025-OP-004",
+  "operation_name": "Mozilla CORE ZIP64 reconciliation",
+  "archive": {
+    "path": "/run/media/whiteblack/User 1/Datasets/Mozilla_CORE/Mozilla_CORE_dataset_issues.zip",
+    "size_bytes": 48651042600
+  },
+  "local_header": {
+    "bytes_read": 64,
+    "signature_found": true,
+    "parseable": true,
+    "version_needed": 45,
+    "flags": 0,
+    "compression_method": 9,
+    "crc32": "bb53d9b8",
+    "compressed_size_32": 4294967295,
+    "uncompressed_size_32": 4294967295,
+    "filename_length": 30,
+    "extra_length": 20,
+    "filename": "dataset_issues_TOTAL_TOTAL.csv"
+  },
+  "zip64_tail": {
+    "tail_start": 48650911528,
+    "tail_bytes": 131072,
+    "signature_positions": {
+      "zip64_locator": 48651042558,
+      "zip64_eocd": 48651042502,
+      "eocd": 48651042578
+    },
+    "zip64_locator_data": {
+      "disk_with_eocd64": 0,
+      "zip64_eocd_offset": 48651042502,
+      "total_disks": 0
+    },
+    "zip64_eocd_data": {
+      "record_size": 44,
+      "version_made": 45,
+      "version_needed": 45,
+      "disk_number": 0,
+      "central_directory_disk": 0,
+      "entries_on_disk": 1,
+      "total_entries": 1,
+      "central_directory_size": 96,
+      "central_directory_offset": 48651042406
+    }
+  },
+  "python_metadata": {
+    "opened": true,
+    "entry_count": 1,
+    "entries": [
+      {
+        "filename": "dataset_issues_TOTAL_TOTAL.csv",
+        "compress_size": 48651042326,
+        "file_size": 96449629736,
+        "header_offset": 0,
+        "compress_type": 9,
+        "flag_bits": 0,
+        "CRC": "bb53d9b8",
+        "create_system": 0,
+        "extract_version": 45
+      }
+    ],
+    "error": null
+  },
+  "controls": {
+    "archive_modified": false,
+    "archive_extracted": false,
+    "dataset_loaded": false,
+    "dataset_rewritten": false,
+    "model_execution": false
+  }
+}

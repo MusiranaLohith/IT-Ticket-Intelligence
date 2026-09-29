@@ -1,0 +1,66 @@
+[
+  {
+    "ticket_id": "DEMO-B8-001",
+    "creation_time": "2026-09-28T09:05:00",
+    "creator": "synthetic-user-01",
+    "creator_detail": "Synthetic B8 batch demonstration ticket",
+    "summary": "VPN connection failure",
+    "description": "User cannot connect to the corporate VPN from a company workstation and is unable to access internal resources."
+  },
+  {
+    "ticket_id": "DEMO-B8-002",
+    "creation_time": "2026-09-28T10:10:00",
+    "creator": "synthetic-user-02",
+    "creator_detail": "Synthetic B8 batch demonstration ticket",
+    "summary": "Cannot access internal application",
+    "description": "User receives an error while trying to access an internal business application."
+  },
+  {
+    "ticket_id": "DEMO-B8-003",
+    "creation_time": "2026-09-28T11:15:00",
+    "creator": "synthetic-user-03",
+    "creator_detail": "Synthetic B8 batch demonstration ticket",
+    "summary": "Software installation issue",
+    "description": "User reports that a required desktop application cannot be installed on the company workstation."
+  },
+  {
+    "ticket_id": "DEMO-B8-004",
+    "creation_time": "2026-09-28T12:20:00",
+    "creator": "synthetic-user-04",
+    "creator_detail": "Synthetic B8 batch demonstration ticket",
+    "summary": "Password reset request",
+    "description": "User is unable to sign in because the account password has expired and requests a password reset."
+  },
+  {
+    "ticket_id": "DEMO-B8-005",
+    "creation_time": "2026-09-28T13:25:00",
+    "creator": "synthetic-user-05",
+    "creator_detail": "Synthetic B8 batch demonstration ticket",
+    "summary": "Email synchronization problem",
+    "description": "User reports that new messages are not synchronising with the desktop email client."
+  },
+  {
+    "ticket_id": "DEMO-B8-006",
+    "creation_time": "2026-09-28T14:30:00",
+    "creator": "synthetic-user-06",
+    "creator_detail": "Synthetic B8 batch demonstration ticket",
+    "summary": "Printer not responding",
+    "description": "A network printer is visible to the user but print jobs remain queued and do not complete."
+  },
+  {
+    "ticket_id": "DEMO-B8-007",
+    "creation_time": "2026-09-28T15:35:00",
+    "creator": "synthetic-user-07",
+    "creator_detail": "Synthetic B8 batch demonstration ticket",
+    "summary": "Laptop running slowly",
+    "description": "User reports significant performance degradation when opening applications and working with several programs."
+  },
+  {
+    "ticket_id": "DEMO-B8-008",
+    "creation_time": "2026-09-28T16:40:00",
+    "creator": "synthetic-user-08",
+    "creator_detail": "Synthetic B8 batch demonstration ticket",
+    "summary": "Wi-Fi connection drops",
+    "description": "Wireless connectivity repeatedly disconnects from the office network during normal workstation use."
+  }
+]

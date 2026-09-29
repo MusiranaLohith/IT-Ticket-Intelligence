@@ -1,0 +1,35 @@
+{
+  "operation": "MOD-034 / OP-008",
+  "status": "PASS",
+  "source_evidence_rows": 4716,
+  "joined_rows": 4716,
+  "development_rows": 3537,
+  "evaluation_rows": 1179,
+  "id_overlap": 0,
+  "development_t5_positive": 14,
+  "development_t5_negative": 3523,
+  "evaluation_t5_positive": 34,
+  "evaluation_t5_negative": 1145,
+  "development_t4_unique_assignees": 450,
+  "evaluation_t4_unique_assignees": 213,
+  "checks": {
+    "population_4716": true,
+    "unique_ticket_ids": true,
+    "zero_id_overlap": true,
+    "t5_positive_in_development": true,
+    "t5_positive_in_evaluation": true,
+    "t4_classes_in_development": true,
+    "t4_classes_in_evaluation": true,
+    "native_outcomes_joined": true
+  },
+  "design": {
+    "development": "first 75% after deterministic ID ordering",
+    "evaluation": "remaining 25%",
+    "native_outcomes": [
+      "T4 target_assignee",
+      "T5 target"
+    ],
+    "locked_evaluation_used": false,
+    "synthetic_target_created": false
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "operation": "DEPLOY-OP-012",
+  "title": "Automated End-to-End HTTP Regression Validation",
+  "status": "PASS",
+  "endpoint": {
+    "method": "POST",
+    "path": "/tickets/analyze",
+    "base_url": "http://127.0.0.1:8000"
+  },
+  "test_ticket": {
+    "ticket_id": "DEPLOY-E2E-012",
+    "creation_time": "2026-09-27T10:00:00",
+    "summary": "VPN connection failure"
+  },
+  "validation": {
+    "http_status_200": true,
+    "top_level_response_contract": true,
+    "ticket_identity_preserved": true,
+    "t1_t11_preserved": true,
+    "t6_limitation_preserved": true,
+    "t7_limitation_preserved": true,
+    "t8_semantics_preserved": true,
+    "t9_no_universal_confidence_or_risk": true,
+    "t10_human_decision_boundary": true,
+    "t11_lifecycle_boundary": true,
+    "integrity_protections": true,
+    "no_absolute_project_paths_leaked": true,
+    "ticket_explanation_preserved": true
+  },
+  "runtime_semantics": {
+    "t6": {
+      "status": "PARTIAL_NATIVE_RUNTIME",
+      "semantic_score_fabricated": false
+    },
+    "t7": {
+      "status": "EXECUTED_WITH_SUPPORT_LIMITATION",
+      "temporal_support_preserved": true
+    },
+    "t8": {
+      "evidence_state": "SUPPORTED_WITH_LIMITATIONS",
+      "missing_evidence_is_not_negative": true
+    },
+    "t9": {
+      "universal_confidence": null,
+      "universal_risk": null,
+      "cross_task_probability_aggregation": false
+    },
+    "t10": {
+      "action": "HUMAN_DECISION_REQUIRED",
+      "automation": "NOT_ESTABLISHED"
+    },
+    "t11": {
+      "feedback": "AWAITING_OUTCOME",
+      "synthetic_feedback": false
+    }
+  },
+  "integrity": {
+    "model_retraining": false,
+    "model_modification": false,
+    "threshold_optimization": false,
+    "locked_test_reuse": false,
+    "prediction_modification": false,
+    "synthetic_feedback": false
+  },
+  "deployment_state": {
+    "production_ready": false,
+    "production_authorization": "NOT_ESTABLISHED",
+    "maturity": "RESEARCH / ENGINEERING PROTOTYPE"
+  },
+  "artifacts": {
+    "regression_test": "deployment/tests/deploy_op012_e2e_http.py",
+    "evidence_file": "modeling/FMP/metrics/deploy_op012_e2e_http.json"
+  },
+  "frozen_runtime_protection": {
+    "t1_t11_runtime_modified": false,
+    "models_modified": false,
+    "thresholds_modified": false,
+    "predictions_modified": false
+  }
+}

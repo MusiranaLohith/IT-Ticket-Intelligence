@@ -1,0 +1,50 @@
+{
+  "closure_id": "FMP-01-T1-FINAL-CLOSURE-v1",
+  "generated_utc": "2026-09-26T08:47:41.408467+00:00",
+  "contract_id": "T1-IT-SUPPORT-v1",
+  "contract_status_before_closure": "SUPPORTED",
+  "final_decision": {
+    "task": "T1",
+    "status": "CLOSED",
+    "selected_model": "TF-IDF word + character features -> LinearSVC",
+    "model_artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/baselines/t1_it_support_char_svm.joblib",
+    "locked_evaluation_records": 446,
+    "locked_evaluation": {
+      "accuracy": 0.946188,
+      "macro_f1": 0.899133,
+      "weighted_f1": 0.943482
+    },
+    "development_only_score_feasibility": {
+      "records": 1783,
+      "accuracy": 0.998878,
+      "decision_function_available": true,
+      "calibration_fitted": false,
+      "review_threshold_selected": false
+    },
+    "calibration": {
+      "required_by_t1_contract": false,
+      "performed": false,
+      "probability_output_available": false
+    },
+    "review_boundary": {
+      "required_by_t1_contract": false,
+      "validated": false,
+      "selected": false
+    },
+    "limitations": [
+      "Locked evaluation contains substantial repeated normalized-text structure.",
+      "Locked evaluation accuracy is not treated as proof of broad independent-ticket generalization.",
+      "Decision scores are not calibrated probabilities.",
+      "No autonomous routing or decision claim is made from T1 classification alone.",
+      "Artifact path/provenance cleanup remains part of FMP-02."
+    ],
+    "next_phase": "FMP-02 T2-T7 artifact hardening",
+    "frozen": true
+  },
+  "evidence": {
+    "comparison": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/analysis/t1_it_support_3model_compare.json",
+    "character_analysis": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/analysis/t1_it_support_char_svm_analysis.json",
+    "group_evaluation": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/analysis/t1_it_support_group_eval.json",
+    "model": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/baselines/t1_it_support_char_svm.joblib"
+  }
+}

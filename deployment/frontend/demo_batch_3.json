@@ -1,0 +1,26 @@
+[
+  {
+    "ticket_id": "DEPLOY-BATCH-001",
+    "creation_time": "2026-09-27T11:00:00",
+    "creator": "synthetic-user-01",
+    "creator_detail": "browser batch integration test",
+    "summary": "VPN connection failure",
+    "description": "User cannot connect to the corporate VPN from a company workstation."
+  },
+  {
+    "ticket_id": "DEPLOY-BATCH-002",
+    "creation_time": "2026-09-27T11:05:00",
+    "creator": "synthetic-user-02",
+    "creator_detail": "browser batch integration test",
+    "summary": "Cannot access internal application",
+    "description": "User receives an error while trying to access an internal business application."
+  },
+  {
+    "ticket_id": "DEPLOY-BATCH-003",
+    "creation_time": "2026-09-27T11:10:00",
+    "creator": "synthetic-user-03",
+    "creator_detail": "browser batch integration test",
+    "summary": "Software installation issue",
+    "description": "User reports that a required desktop application cannot be installed."
+  }
+]

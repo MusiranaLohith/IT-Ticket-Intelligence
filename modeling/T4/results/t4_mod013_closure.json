@@ -1,0 +1,205 @@
+{
+  "experiment": "T4-MOD-014",
+  "status": "COMPLETE",
+  "closure_status": "SUPPORTED_WITH_LIMITATIONS",
+  "system_role": "SECONDARY_DECISION_SUPPORT_SIGNAL",
+  "population": {
+    "train_rows": 142501,
+    "evaluation_rows": 35626,
+    "covered_rows": 32773,
+    "unseen_rows": 2853,
+    "unseen_rate": 0.08008196261157581,
+    "training_candidates": 4139
+  },
+  "experiment_summary": [
+    {
+      "metric": "Hit@1",
+      "r1": 0.28105877729747936,
+      "mod007": 0.2579015325885589,
+      "mod008": 0.21335541458485377,
+      "mod011_bm25": 0.20785381462976477
+    },
+    {
+      "metric": "Hit@3",
+      "r1": 0.36352663784876216,
+      "mod007": 0.3231909279739516,
+      "mod008": 0.30320552405546514,
+      "mod011_bm25": 0.29863021388873295
+    },
+    {
+      "metric": "Hit@5",
+      "r1": 0.40192555998428114,
+      "mod007": 0.3529725481389996,
+      "mod008": 0.3367765115365183,
+      "mod011_bm25": 0.33366080952113625
+    },
+    {
+      "metric": "Hit@10",
+      "r1": 0.4500645595913097,
+      "mod007": 0.39308370291360245,
+      "mod008": 0.3821085723909504,
+      "mod011_bm25": 0.38151911525290516
+    },
+    {
+      "metric": "Hit@20",
+      "r1": null,
+      "mod007": null,
+      "mod008": 0.4351035760399708,
+      "mod011_bm25": 0.4354404086902824
+    }
+  ],
+  "bm25_vs_mod007": {
+    "hit_at_1": {
+      "mod007": 0.2579015325885589,
+      "mod011_bm25": 0.20785381462976477,
+      "delta": -0.05004771795879415,
+      "delta_percentage_points": -5.004771795879415
+    },
+    "hit_at_3": {
+      "mod007": 0.3231909279739516,
+      "mod011_bm25": 0.29863021388873295,
+      "delta": -0.02456071408521865,
+      "delta_percentage_points": -2.456071408521865
+    },
+    "hit_at_5": {
+      "mod007": 0.3529725481389996,
+      "mod011_bm25": 0.33366080952113625,
+      "delta": -0.01931173861786334,
+      "delta_percentage_points": -1.9311738617863339
+    },
+    "hit_at_10": {
+      "mod007": 0.39308370291360245,
+      "mod011_bm25": 0.38151911525290516,
+      "delta": -0.01156458766069729,
+      "delta_percentage_points": -1.156458766069729
+    },
+    "mrr": {
+      "mod007": 0.30084030982893156,
+      "mod011_bm25": 0.26639209233350747,
+      "delta": -0.034448217495424094,
+      "delta_percentage_points": -3.4448217495424096
+    },
+    "ndcg_at_5": {
+      "mod007": 0.3082849828792247,
+      "mod011_bm25": 0.27564189731620736,
+      "delta": -0.032643085563017316,
+      "delta_percentage_points": -3.2643085563017316
+    },
+    "ndcg_at_10": {
+      "mod007": 0.32120802022972433,
+      "mod011_bm25": 0.2911261380955127,
+      "delta": -0.030081882134211646,
+      "delta_percentage_points": -3.008188213421165
+    }
+  },
+  "true_assignee_retrieval_coverage": {
+    "mod007": 0.4574497299606384,
+    "mod011_bm25": 0.47334696243859276,
+    "delta": 0.01589723247795438
+  },
+  "bm25_ranking_metrics": {
+    "mrr": 0.26639209233350747,
+    "ndcg_at_5": 0.27564189731620736,
+    "ndcg_at_10": 0.2911261380955127
+  },
+  "long_tail": {
+    "1": {
+      "rows": 983,
+      "hit_at_1": 0.012207527975584944,
+      "hit_at_5": 0.03153611393692777,
+      "hit_at_10": 0.04374364191251272,
+      "hit_at_20": 0.052899287894201424
+    },
+    "2-5": {
+      "rows": 2965,
+      "hit_at_1": 0.02900505902192243,
+      "hit_at_5": 0.08161888701517707,
+      "hit_at_10": 0.10016863406408094,
+      "hit_at_20": 0.12006745362563238
+    },
+    "6-10": {
+      "rows": 1145,
+      "hit_at_1": 0.03318777292576419,
+      "hit_at_5": 0.07510917030567686,
+      "hit_at_10": 0.0890829694323144,
+      "hit_at_20": 0.1205240174672489
+    },
+    "11-20": {
+      "rows": 1338,
+      "hit_at_1": 0.18684603886397608,
+      "hit_at_5": 0.27802690582959644,
+      "hit_at_10": 0.3101644245142003,
+      "hit_at_20": 0.35201793721973096
+    },
+    "21-50": {
+      "rows": 2752,
+      "hit_at_1": 0.13299418604651161,
+      "hit_at_5": 0.25617732558139533,
+      "hit_at_10": 0.30559593023255816,
+      "hit_at_20": 0.36191860465116277
+    },
+    "51-100": {
+      "rows": 4270,
+      "hit_at_1": 0.2306791569086651,
+      "hit_at_5": 0.41124121779859485,
+      "hit_at_10": 0.4711943793911007,
+      "hit_at_20": 0.5182669789227167
+    },
+    "101+": {
+      "rows": 19320,
+      "hit_at_1": 0.2933747412008282,
+      "hit_at_5": 0.4500517598343685,
+      "hit_at_10": 0.5114906832298136,
+      "hit_at_20": 0.5842132505175983
+    }
+  },
+  "open_world": {
+    "unseen_rows": 2853,
+    "unseen_rate": 0.08008196261157581,
+    "retrievable_by_training_history": false
+  },
+  "findings": [
+    "Historical retrieval is feasible at full scale.",
+    "BM25 provides modest improvement over the Word TF-IDF retrieval baseline on the same evaluation population.",
+    "The true-assignee retrieval coverage remains below 50% of the training-observed evaluation population.",
+    "Performance remains strongly dependent on historical assignee support.",
+    "Unseen evaluation assignees cannot be retrieved by a training-history-only candidate system.",
+    "Changing lexical retrieval representation does not remove the open-world or long-tail limitations."
+  ],
+  "unsupported_claims": [
+    "Universal automatic assignee assignment",
+    "Guaranteed correct routing",
+    "Operational assignee eligibility",
+    "Reliable routing for unseen assignees",
+    "Autonomous assignment without human review"
+  ],
+  "controls": {
+    "raw_mozilla_accessed": false,
+    "target_reconstructed": false,
+    "test_used": false,
+    "future_features_used": false,
+    "split_changed": false,
+    "operational_eligibility_established": false,
+    "unseen_targets_removed": false,
+    "target_side_fields_used": false,
+    "model_retrained": false,
+    "new_predictions_created": false
+  },
+  "source_artifacts": [
+    "t4_r1_metrics.json",
+    "t4_mod007_full_results.json",
+    "t4_mod008_full.json",
+    "t4_mod011_full.json",
+    "t4_mod012_analysis.json",
+    "t4_mod013_closure.json"
+  ],
+  "artifact_type": "Corrected final T4 closure artifact",
+  "correction": {
+    "source_artifact": "t4_mod013_closure.json",
+    "issue": "Long-tail reporting referenced a nonexistent coverage_at_20 field and produced None values.",
+    "resolution": "Replaced those values with the actual Hit@1/5/10/20 metrics from the completed MOD-011 historical-support analysis.",
+    "raw_data_accessed": false,
+    "modeling_repeated": false,
+    "retrieval_repeated": false
+  }
+}

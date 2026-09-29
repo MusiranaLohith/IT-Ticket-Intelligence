@@ -1,0 +1,82 @@
+{
+  "task": "T7 Resolution-Time Estimation",
+  "operation": "MOD-008",
+  "status": "COMPLETE",
+  "purpose": "Compare the first predictive survival baseline against the MOD-006 nonparametric reference on the frozen evaluation population.",
+  "evaluation_population": {
+    "rows": 102764,
+    "events": 81583,
+    "right_censored": 21181
+  },
+  "alignment": {
+    "evaluation_prediction_population": true,
+    "id_order_match": true,
+    "duration_match": true,
+    "event_match": true
+  },
+  "models_compared": {
+    "reference": "MOD-006 Kaplan-Meier",
+    "predictive": "MOD-007 Weibull AFT"
+  },
+  "predictive_model": {
+    "harrell_concordance_index": 0.5549621693633812,
+    "source": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod007_predictive_survival_audit.json"
+  },
+  "horizon_results": [
+    {
+      "horizon_seconds": 211583.0,
+      "km_reference_survival": 0.7724253865690694,
+      "predictive_mean_survival": 0.18045612894999413,
+      "predictive_std_survival": 0.016544882241423874,
+      "predictive_min_survival": 0.1325360148457173,
+      "predictive_max_survival": 0.2466990474846336,
+      "km_reference_ipcw_brier": 0.15047031239713146,
+      "predictive_ipcw_brier": 0.5559985321807034,
+      "predictive_minus_reference_brier": 0.4055282197835719,
+      "relative_brier_change": 2.6950712956139435
+    },
+    {
+      "horizon_seconds": 1780179.0,
+      "km_reference_survival": 0.5448507731378873,
+      "predictive_mean_survival": 0.14962967060591312,
+      "predictive_std_survival": 0.015231329479247836,
+      "predictive_min_survival": 0.10618301810760218,
+      "predictive_max_survival": 0.21158702171196278,
+      "km_reference_ipcw_brier": 0.24631825329377932,
+      "predictive_ipcw_brier": 0.4165689714851437,
+      "predictive_minus_reference_brier": 0.1702507181913644,
+      "relative_brier_change": 0.6911818994928867
+    },
+    {
+      "horizon_seconds": 14608619.0,
+      "km_reference_survival": 0.31727859248955853,
+      "predictive_mean_survival": 0.12187165877547627,
+      "predictive_std_survival": 0.01375773520044234,
+      "predictive_min_survival": 0.08327829247449799,
+      "predictive_max_survival": 0.1788167964500643,
+      "km_reference_ipcw_brier": 0.19826429448128255,
+      "predictive_ipcw_brier": 0.2143230585981617,
+      "predictive_minus_reference_brier": 0.01605876411687915,
+      "relative_brier_change": 0.08099675314152545
+    }
+  ],
+  "integrity": {
+    "retraining": false,
+    "evaluation_fitting": false,
+    "raw_archive_access": false,
+    "new_features": false,
+    "chronological_split_changed": false,
+    "train_only_censoring_distribution": true
+  },
+  "source_artifacts": {
+    "evaluation_split": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/splits/t7_evaluation.csv",
+    "km_curve": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/derived/t7_mod006_kaplan_meier_curve.csv",
+    "mod006_audit": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod006_survival_baseline_audit.json",
+    "mod007_audit": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod007_predictive_survival_audit.json",
+    "mod007_predictions": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/derived/t7_mod007_evaluation_predictions.csv"
+  },
+  "output_artifacts": {
+    "comparison": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod008_predictive_vs_reference.csv",
+    "audit": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod008_predictive_vs_reference_audit.json"
+  }
+}

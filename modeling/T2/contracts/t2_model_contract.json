@@ -1,0 +1,192 @@
+{
+  "operation": "T2-MOD-002",
+  "operation_name": "T2 MODELING CONTRACT RECONCILIATION",
+  "task": "T2",
+  "task_name": "Priority Prediction",
+  "status": "READY_FOR_CONTROLLED_MODELING",
+  "contract_status": "RECONCILED",
+  "source_authority": {
+    "dataset": "Mozilla CORE",
+    "dtm": "DTM-002",
+    "final_readiness_operation": "OP-036",
+    "task_contract_operation": "OP-024",
+    "feature_admissibility_operation": "OP-035"
+  },
+  "dataset": {
+    "name": "Mozilla CORE",
+    "role": "PRIMARY_T2_DATASET",
+    "derived_artifact": "/run/media/whiteblack/User 1/Datasets/Mozilla_CORE/DTM-002_T2_FIRST_PRIORITY_24H_derived.csv",
+    "eligible_records": 29498,
+    "derived_artifact_rows": 29498,
+    "derived_artifact_columns": 24,
+    "raw_source_immutable": true,
+    "rn136_immutable": true
+  },
+  "objective": {
+    "statement": "Predict the first valid P1-P5 Priority assigned strictly after Creation and within the following 24-hour observation window using information available at the Creation boundary.",
+    "prediction_unit": "ticket",
+    "task_type": "multiclass_classification"
+  },
+  "target": {
+    "physical_field": "target_priority",
+    "semantic_name": "priority",
+    "semantic_definition": "Earliest valid P1-P5 Priority assignment occurring strictly after Creation and within the subsequent 24-hour window.",
+    "classes": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5"
+    ],
+    "class_counts": {
+      "P1": 7325,
+      "P2": 9156,
+      "P3": 11015,
+      "P4": 784,
+      "P5": 1218
+    },
+    "target_total": 29498,
+    "target_directly_observed": true,
+    "target_semantics_frozen": true
+  },
+  "prediction_boundary": {
+    "event": "Creation",
+    "horizon_hours": 24,
+    "strictly_after_creation": true,
+    "allowed_information": "Information legitimately available at the Creation prediction boundary.",
+    "future_information_forbidden": true,
+    "post_creation_information_forbidden": true,
+    "future_target_information_forbidden": true
+  },
+  "admitted_features": {
+    "feature_sources": [
+      "Summary",
+      "Description"
+    ],
+    "Summary": {
+      "status": "ADMITTED",
+      "semantic_role": "submitted_ticket_content",
+      "coverage_records": 29498,
+      "coverage_fraction": 1.0,
+      "missing_records": 0,
+      "missingness_preserved": true
+    },
+    "Description": {
+      "status": "ADMITTED",
+      "semantic_role": "submitted_ticket_content",
+      "coverage_records": 27906,
+      "coverage_fraction": 0.946,
+      "missing_records": 1592,
+      "missing_fraction": 0.054,
+      "missingness_preserved": true,
+      "backfill_forbidden": true
+    },
+    "feature_materialization_required": true,
+    "feature_materialization_note": "The accepted 24-column T2 target artifact does not physically contain Summary and Description. The admitted modeling feature boundary therefore requires a controlled feature-materialization step using the same 29,498 frozen T2 IDs. The target artifact itself must remain unchanged."
+  },
+  "rn136_historical_features": {
+    "source": "RN136_D6_historical_features.csv",
+    "status": "FROZEN_BUT_UNAVAILABLE_FOR_T2_POPULATION",
+    "fields": [
+      "Product_historical",
+      "Component_historical",
+      "Priority_historical",
+      "Status_historical",
+      "Keywords_historical",
+      "Blocks_historical",
+      "CC_historical"
+    ],
+    "availability_all_zero": true,
+    "available_records_per_field": 0,
+    "total_t2_records": 29498,
+    "use_as_predictive_features": false,
+    "current_state_substitution_forbidden": true,
+    "final_state_substitution_forbidden": true,
+    "dataset_rebuild_forbidden": true
+  },
+  "excluded_features": {
+    "current_mutable_fields": [
+      "Product",
+      "Component",
+      "Priority",
+      "Severity",
+      "Status",
+      "Keywords",
+      "Version",
+      "Platform",
+      "Target Milestone",
+      "Classification"
+    ],
+    "future_or_post_cutoff_information": [
+      "Future Priority assignments",
+      "Post-Creation Priority changes",
+      "Post-Creation administrative changes",
+      "Post-Creation workflow information",
+      "Future events",
+      "Target-derived information"
+    ],
+    "target_related_columns": [
+      "target_priority",
+      "target_priority_time",
+      "target_elapsed_seconds",
+      "t2_target_definition"
+    ],
+    "metadata_only_columns": [
+      "ID",
+      "Creation time",
+      "t2_prediction_cutoff",
+      "t2_horizon_hours",
+      "t2_contract",
+      "t2_source_artifact"
+    ]
+  },
+  "missingness_policy": {
+    "description_missing_records": 1592,
+    "description_missing_fraction": 0.054,
+    "missing_description_must_remain_missing": true,
+    "later_value_backfill_forbidden": true,
+    "fabricated_text_forbidden": true
+  },
+  "leakage_controls": {
+    "creation_boundary_frozen": true,
+    "future_target_excluded": true,
+    "post_creation_information_excluded": true,
+    "current_mutable_backfill_forbidden": true,
+    "rn136_unavailable_features_not_substituted": true,
+    "target_derived_features_excluded": true,
+    "evaluation_data_must_not_be_used_for_fit": true
+  },
+  "modeling_policy": {
+    "baseline_required_before_advanced_model": true,
+    "model_selected": false,
+    "training_started": false,
+    "advanced_model_preselected": false,
+    "evaluation_used_for_training": false,
+    "final_architecture_frozen": false
+  },
+  "required_next_steps": [
+    "Controlled Summary/Description feature materialization",
+    "Feature materialization validation",
+    "Leakage-sensitive modeling split",
+    "Baseline model",
+    "Advanced candidate comparison",
+    "Error analysis",
+    "Candidate model selection",
+    "Task-specific calibration under T9"
+  ],
+  "downstream": {
+    "t8_evidence_fusion": "PENDING",
+    "t9_calibration": "PENDING",
+    "t10_review_automation_policy": "PENDING",
+    "t11_feedback": "PENDING"
+  },
+  "integrity": {
+    "raw_mozilla_source_modified": false,
+    "rn136_modified": false,
+    "t2_target_artifact_modified": false,
+    "labels_modified": false,
+    "target_reconstructed_during_modeling": false,
+    "fabricated_labels": false,
+    "silent_feature_substitution": false
+  }
+}

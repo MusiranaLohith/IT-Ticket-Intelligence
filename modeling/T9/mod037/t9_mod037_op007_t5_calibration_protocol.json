@@ -1,0 +1,218 @@
+{
+  "operation": "T9_MOD-037_OP-007",
+  "title": "T5 Calibration Method & Evaluation Protocol Design",
+  "status": "PASS",
+  "operation_type": "METHODOLOGY_DESIGN_ONLY",
+  "model_fitting_performed": false,
+  "calibration_fitting_performed": false,
+  "probability_generation_performed": false,
+  "target_creation_performed": false,
+  "threshold_selection_performed": false,
+  "locked_test_used_for_selection": false,
+  "universal_confidence_created": false,
+  "universal_risk_score_created": false,
+  "op005_validation": {
+    "checks": {
+      "status": {
+        "status": "PASS",
+        "observed": "PASS"
+      },
+      "T5_accepted_native_probability": {
+        "status": "PASS",
+        "observed_status": "ACCEPTED_NATIVE_PROBABILITY",
+        "observed_accepted": true
+      }
+    },
+    "status": "PASS"
+  },
+  "op006_validation": {
+    "checks": {
+      "status": {
+        "status": "PASS",
+        "observed": "PASS"
+      },
+      "population": {
+        "status": "PASS",
+        "observed_rows": 74091
+      },
+      "alignment": {
+        "status": "PASS"
+      },
+      "probability_semantics": {
+        "status": "PASS"
+      }
+    },
+    "status": "PASS"
+  },
+  "protocol_validation": {
+    "checks": {
+      "task": {
+        "status": "PASS"
+      },
+      "target": {
+        "status": "PASS"
+      },
+      "population": {
+        "status": "PASS"
+      },
+      "probability_representations": {
+        "status": "PASS"
+      },
+      "primary_calibration_metrics": {
+        "status": "PASS"
+      },
+      "threshold_policy": {
+        "status": "PASS"
+      },
+      "locked_test_isolation": {
+        "status": "PASS"
+      },
+      "cross_task_restrictions": {
+        "status": "PASS"
+      },
+      "uncertainty_required": {
+        "status": "PASS"
+      },
+      "group_structure": {
+        "status": "PASS"
+      }
+    },
+    "failed_checks": [],
+    "status": "PASS"
+  },
+  "frozen_protocol": {
+    "task": "T5",
+    "task_name": "Duplicate Detection",
+    "predictive_quantity": "Task-specific probability of the frozen T5 duplicate target.",
+    "target_column": "T5 target",
+    "target_semantics": "Frozen binary duplicate target.",
+    "population": {
+      "name": "T5 model-validation population",
+      "artifact": "modeling/T5/splits/t5_model_val.csv",
+      "expected_rows": 74091,
+      "expected_unique_ids": 74091,
+      "duplicate_ids_expected": 0
+    },
+    "native_probability_representations": {
+      "p_base": {
+        "role": "Native/base probability representation.",
+        "evaluate": true
+      },
+      "p_sigmoid": {
+        "role": "Native sigmoid-calibrated probability representation.",
+        "evaluate": true
+      },
+      "p_isotonic": {
+        "role": "Native isotonic-calibrated probability representation.",
+        "evaluate": true
+      }
+    },
+    "calibration_metrics": {
+      "primary": [
+        "Brier score",
+        "Log loss"
+      ],
+      "calibration_diagnostics": [
+        "Reliability diagram",
+        "Observed-vs-predicted calibration curve"
+      ],
+      "supporting": [
+        "Expected Calibration Error (ECE)",
+        "Maximum Calibration Error (MCE)"
+      ],
+      "discrimination_context": [
+        "ROC-AUC",
+        "Average Precision"
+      ],
+      "class_imbalance_context": "Average Precision is retained because the T5 validation population is highly imbalanced."
+    },
+    "interpretation": {
+      "Brier_score": "Measures squared probabilistic error for the binary duplicate target; lower is better.",
+      "Log_loss": "Measures logarithmic probabilistic error for the binary duplicate target; lower is better.",
+      "ECE": "Summarizes the discrepancy between predicted probability and observed event frequency across probability bins. It is a diagnostic summary, not a standalone proof of calibration.",
+      "MCE": "Captures the largest observed calibration-bin discrepancy and is treated as a supporting diagnostic.",
+      "ROC_AUC": "Measures ranking discrimination and is not a calibration metric.",
+      "Average_Precision": "Measures precision-recall ranking behavior and is not a calibration metric."
+    },
+    "class_imbalance": {
+      "positive_count": 480,
+      "negative_count": 73611,
+      "positive_rate": 0.006478519658258088,
+      "handling": "Do not alter the native target prevalence merely to make calibration appear balanced.",
+      "interpretation": "Calibration must be evaluated against the actual validation population and its observed prevalence."
+    },
+    "calibration_method_policy": {
+      "principle": "Calibration method must be selected according to the frozen protocol and evidence, not according to an outcome discovered after unrestricted experimentation.",
+      "candidate_methods": [
+        "No additional calibration / native probability",
+        "Platt-style sigmoid calibration",
+        "Isotonic regression"
+      ],
+      "selection_basis": [
+        "Proper scoring performance",
+        "Calibration diagnostics",
+        "Discrimination preservation",
+        "Population validity",
+        "Sample-size considerations"
+      ],
+      "important_constraint": "The later empirical operation must not introduce an arbitrary calibration method solely because it produces the most favorable observed metric."
+    },
+    "uncertainty": {
+      "required": true,
+      "purpose": "Quantify uncertainty around reported calibration and evaluation estimates rather than presenting single-point metrics as exact quantities.",
+      "permitted_methods": [
+        "Bootstrap confidence intervals"
+      ],
+      "bootstrap_unit": "Validation observations, with the resampling procedure preserving the binary observation structure.",
+      "minimum_requirement": "Point estimates should be accompanied by an appropriate uncertainty interval where feasible."
+    },
+    "reliability_analysis": {
+      "required": true,
+      "binning": "Use predefined probability bins for reliability analysis rather than choosing bins after inspecting the resulting calibration curve.",
+      "minimum_bin_support": "Sparse bins must be reported explicitly rather than silently treated as equally reliable.",
+      "interpretation": "Reliability diagrams are descriptive diagnostics and must not be used alone to declare a model calibrated."
+    },
+    "threshold_policy": {
+      "automation_threshold_selected": false,
+      "review_threshold_selected": false,
+      "classification_threshold_required": false,
+      "reason": "Calibration estimates the quality of probability values. It does not by itself establish an automation or human-review operating threshold."
+    },
+    "data_boundary": {
+      "calibration_population": "T5 model-validation population",
+      "locked_test_allowed_for_selection": false,
+      "locked_test_allowed_for_calibration_fitting": false,
+      "locked_test_allowed_for_method_selection": false,
+      "locked_test_allowed_for_threshold_selection": false,
+      "principle": "The locked test population remains isolated from calibration fitting and methodological selection."
+    },
+    "group_structure": {
+      "required": true,
+      "principle": "T5's established group-aware structure must remain part of the interpretation of calibration evidence.",
+      "prohibited": "Do not treat structurally dependent duplicate examples as independent evidence merely because they occupy separate rows."
+    },
+    "cross_task_restrictions": {
+      "universal_confidence_score": false,
+      "universal_risk_score": false,
+      "cross_task_probability_comparison": false,
+      "probability_averaging_with_other_tasks": false,
+      "arbitrary_cross_task_weights": false,
+      "statement": "T5 calibration produces a T5 duplicate-probability quantity only. It does not establish a confidence or risk quantity comparable to T2, T4, T6, or T7."
+    },
+    "next_operation_requirements": [
+      "Load only the frozen T5 population and native outputs.",
+      "Verify target/probability alignment before fitting.",
+      "Evaluate the predefined probability representations.",
+      "Apply only the calibration procedures permitted by the frozen protocol.",
+      "Report proper scoring metrics.",
+      "Report calibration diagnostics.",
+      "Report discrimination metrics as supporting context.",
+      "Report uncertainty estimates where feasible.",
+      "Preserve the observed validation prevalence.",
+      "Do not select an automation threshold.",
+      "Do not create a universal confidence/risk score.",
+      "Do not use locked test data for method selection."
+    ]
+  },
+  "decision": "T5 calibration/evaluation methodology is frozen for the subsequent empirical operation. The next operation may execute the predefined protocol, but may not alter the methodology opportunistically after observing calibration results."
+}

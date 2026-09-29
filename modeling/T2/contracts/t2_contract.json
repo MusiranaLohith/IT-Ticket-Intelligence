@@ -1,0 +1,126 @@
+{
+  "operation": "T2-MOD-001",
+  "task": "T2",
+  "task_name": "Priority Prediction",
+  "status": "SUPPORTED",
+  "contract_status": "ACCEPTED",
+  "dataset": {
+    "name": "Mozilla CORE",
+    "role": "PRIMARY_T2_DATASET",
+    "eligible_records": 29498,
+    "source_contract_status": "ACCEPTED",
+    "dtm_status": "COMPLETED_CLOSED"
+  },
+  "objective": {
+    "statement": "Predict the first valid P1-P5 priority assigned strictly after Creation and within the following 24-hour observation window.",
+    "prediction_boundary": "Creation",
+    "prediction_unit": "ticket",
+    "task_type": "multiclass_classification"
+  },
+  "target": {
+    "field": "priority",
+    "semantic_definition": "First valid priority in the P1-P5 vocabulary assigned strictly after Creation and within 24 hours.",
+    "classes": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5"
+    ],
+    "class_counts": {
+      "P1": 7325,
+      "P2": 9156,
+      "P3": 11015,
+      "P4": 784,
+      "P5": 1218
+    },
+    "target_total": 29498
+  },
+  "prediction_boundary": {
+    "event": "Creation",
+    "allowed_information": "Information demonstrably available at or before the Creation boundary.",
+    "future_information_forbidden": true,
+    "post_creation_information_forbidden": true,
+    "future_target_information_forbidden": true
+  },
+  "historical_feature_basis": {
+    "source": "RN136",
+    "status": "FROZEN_ACCEPTED",
+    "fields": [
+      "Product",
+      "Component",
+      "Priority",
+      "Status",
+      "Keywords",
+      "Blocks",
+      "CC"
+    ],
+    "availability_indicators": [
+      "Product_available",
+      "Component_available",
+      "Priority_available",
+      "Status_available",
+      "Keywords_available",
+      "Blocks_available",
+      "CC_available"
+    ],
+    "historical_only": true,
+    "current_state_backfill_forbidden": true,
+    "final_state_backfill_forbidden": true,
+    "future_state_backfill_forbidden": true,
+    "feature_substitution_without_contract_change": false
+  },
+  "feature_constraints": {
+    "allowed": [
+      "Accepted RN136 historical fields and their availability indicators, subject to actual historical availability at Creation."
+    ],
+    "forbidden": [
+      "Future priority",
+      "Post-Creation priority changes",
+      "Current/final priority backfill",
+      "Post-Creation status",
+      "Post-Creation workflow information",
+      "Future events",
+      "Target-derived features",
+      "Information unavailable at Creation",
+      "Unapproved feature substitution",
+      "Summary",
+      "Description",
+      "Severity"
+    ]
+  },
+  "known_feature_availability": {
+    "t2_population_records": 29498,
+    "historical_feature_availability_indicators_all_zero": true,
+    "interpretation": "The accepted T2 population has no populated historical values for the seven RN136 historical feature fields. This is an evidence finding and must not be repaired through current-state or final-state backfill."
+  },
+  "split_policy": {
+    "required": true,
+    "strategy": "A leakage-safe modeling split must be established using only information permitted by this contract.",
+    "evaluation_data_must_not_be_used_for_fit": true,
+    "target_distribution_must_be_reported": true,
+    "temporal_boundary_must_be_respected": true,
+    "future_information_must_not_cross_split": true
+  },
+  "modeling_policy": {
+    "baseline_required_before_advanced_model": true,
+    "model_selected": false,
+    "training_started": false,
+    "advanced_model_preselected": false,
+    "evaluation_used_for_training": false
+  },
+  "data_integrity": {
+    "raw_source_immutable": true,
+    "raw_source_modified": false,
+    "labels_modified": false,
+    "historical_values_backfilled": false,
+    "silent_merge_forbidden": true,
+    "fabricated_labels_forbidden": true
+  },
+  "downstream": {
+    "t8_evidence_fusion": "PENDING",
+    "t9_calibration": "PENDING",
+    "t10_review_automation_policy": "PENDING",
+    "t11_feedback": "PENDING"
+  }
+}

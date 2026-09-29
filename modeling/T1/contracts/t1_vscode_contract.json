@@ -1,0 +1,81 @@
+{
+  "dataset": "GitBugs VS Code",
+  "task": {
+    "name": "T1 Classification",
+    "objective": "Classify an incoming VS Code issue by issue type at the Created prediction boundary."
+  },
+  "source": {
+    "archive": "/run/media/whiteblack/User 1/Datasets/GitBugs/vscode_bugs.csv.zip",
+    "data_member": "vscode_bugs.csv",
+    "source_records": 32829
+  },
+  "target": {
+    "semantic_name": "issue_type",
+    "physical_source_column": null,
+    "derivation_source": "Description",
+    "historical_markers": [
+      "Issue Type:",
+      "Type:"
+    ],
+    "classes": [
+      "Bug",
+      "Feature Request",
+      "Performance Issue",
+      "Usability"
+    ],
+    "normalization": "Use the DTM-established normalization of the historical Issue Type:/Type: representations into the four frozen T1 classes. Ambiguous or non-mappable values must not be force-assigned."
+  },
+  "prediction_boundary": {
+    "field": "Created",
+    "moment": "Created"
+  },
+  "features": {
+    "primary": [
+      "Summary"
+    ],
+    "conditional": [
+      "Description"
+    ],
+    "forbidden": [
+      "Resolved",
+      "Resolution"
+    ],
+    "provenance_only": [
+      "Issue id"
+    ]
+  },
+  "description_control": {
+    "allowed": true,
+    "rule": "Description may be used only after removing the target-bearing Issue Type:/Type: material used to derive the target."
+  },
+  "split": {
+    "method": "chronological",
+    "ordering_field": "Created",
+    "random_split": false
+  },
+  "modeling_status": {
+    "derived_dataset_created": false,
+    "derived_dataset_validated": false,
+    "split_created": false,
+    "baseline_trained": false,
+    "model_selected": false,
+    "training_started": false
+  },
+  "data_integrity": {
+    "labels_modified": false,
+    "source_data_modified": false
+  },
+  "rules": [
+    "Preserve the raw source dataset unchanged.",
+    "Do not use future information relative to Created.",
+    "Do not use Resolved as a predictive feature.",
+    "Do not use Resolution as a predictive feature.",
+    "Do not use Issue id as a semantic predictive feature.",
+    "Do not silently merge VS Code with IT Support.",
+    "Do not force ambiguous target values into a class.",
+    "Preserve label provenance during target derivation.",
+    "Remove target-bearing Description material before using Description as a predictive feature.",
+    "Freeze the chronological split before model training.",
+    "Establish the baseline before advanced model selection."
+  ]
+}

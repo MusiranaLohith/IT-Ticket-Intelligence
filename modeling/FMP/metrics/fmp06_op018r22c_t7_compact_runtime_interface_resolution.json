@@ -1,0 +1,500 @@
+{
+  "operation": "FMP-06 OP-018R22C",
+  "status": "PASS",
+  "read_only": true,
+  "training": false,
+  "fitting": false,
+  "prediction": false,
+  "evaluation": false,
+  "locked_test": false,
+  "artifact_modification": false,
+  "closure_files": [
+    {
+      "path": "modeling/T7/metrics/t7_mod012_final_closure.json",
+      "keys": [
+        "task",
+        "operation",
+        "status",
+        "closure_type",
+        "task_definition",
+        "population",
+        "data_boundary",
+        "chronological_split",
+        "survival_baselines",
+        "predictive_models",
+        "final_comparison",
+        "calibration",
+        "supported_role",
+        "limitations",
+        "evidence_chain",
+        "final_project_status",
+        "source_evidence"
+      ],
+      "interesting_fields": {
+        "status": "COMPLETE"
+      }
+    }
+  ],
+  "runtime_scripts": [
+    {
+      "path": "modeling/T7/scripts/t7_mod002_feature_source_audit.py",
+      "signals": {
+        "lognormal": false,
+        "aft": false,
+        "survival": false,
+        "duration": true,
+        "event": true,
+        "censor": false,
+        "right_censor": false,
+        "predict": true,
+        "predict_survival_function": false,
+        "predict_median": false,
+        "predict_expectation": false,
+        "joblib_load": false,
+        "pickle_load": false,
+        "fit": false
+      },
+      "functions": []
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod003_build_modeling_dataset.py",
+      "signals": {
+        "lognormal": false,
+        "aft": false,
+        "survival": false,
+        "duration": true,
+        "event": true,
+        "censor": true,
+        "right_censor": false,
+        "predict": false,
+        "predict_survival_function": false,
+        "predict_median": false,
+        "predict_expectation": false,
+        "joblib_load": false,
+        "pickle_load": false,
+        "fit": false
+      },
+      "functions": [
+        "load_target_artifact",
+        "validate_feature_artifact"
+      ]
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod003_duplicate_feature_diagnostic.py",
+      "signals": {
+        "lognormal": false,
+        "aft": true,
+        "survival": false,
+        "duration": false,
+        "event": false,
+        "censor": false,
+        "right_censor": false,
+        "predict": false,
+        "predict_survival_function": false,
+        "predict_median": false,
+        "predict_expectation": false,
+        "joblib_load": false,
+        "pickle_load": false,
+        "fit": false
+      },
+      "functions": []
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod004_feature_temporal_split_audit.py",
+      "signals": {
+        "lognormal": false,
+        "aft": true,
+        "survival": false,
+        "duration": true,
+        "event": true,
+        "censor": true,
+        "right_censor": false,
+        "predict": true,
+        "predict_survival_function": false,
+        "predict_median": false,
+        "predict_expectation": false,
+        "joblib_load": false,
+        "pickle_load": false,
+        "fit": false
+      },
+      "functions": [
+        "event_summary",
+        "summarize_feature"
+      ]
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod005_freeze_chronological_split.py",
+      "signals": {
+        "lognormal": false,
+        "aft": true,
+        "survival": false,
+        "duration": false,
+        "event": true,
+        "censor": true,
+        "right_censor": false,
+        "predict": false,
+        "predict_survival_function": false,
+        "predict_median": false,
+        "predict_expectation": false,
+        "joblib_load": false,
+        "pickle_load": false,
+        "fit": false
+      },
+      "functions": [
+        "event_summary"
+      ]
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod006_survival_baselines.py",
+      "signals": {
+        "lognormal": false,
+        "aft": true,
+        "survival": true,
+        "duration": true,
+        "event": true,
+        "censor": true,
+        "right_censor": false,
+        "predict": true,
+        "predict_survival_function": false,
+        "predict_median": false,
+        "predict_expectation": false,
+        "joblib_load": false,
+        "pickle_load": false,
+        "fit": false
+      },
+      "functions": [
+        "build_censoring_survival",
+        "find_survival_landmark",
+        "load_split",
+        "survival_at_time"
+      ]
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod007_predictive_survival_baseline.py",
+      "signals": {
+        "lognormal": false,
+        "aft": true,
+        "survival": true,
+        "duration": true,
+        "event": true,
+        "censor": true,
+        "right_censor": false,
+        "predict": true,
+        "predict_survival_function": false,
+        "predict_median": false,
+        "predict_expectation": false,
+        "joblib_load": false,
+        "pickle_load": false,
+        "fit": true
+      },
+      "functions": [
+        "build_censoring_km",
+        "build_features",
+        "censor_survival_at",
+        "censor_survival_before",
+        "survival",
+        "text_features"
+      ]
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod008_predictive_vs_reference_evaluation.py",
+      "signals": {
+        "lognormal": false,
+        "aft": true,
+        "survival": true,
+        "duration": true,
+        "event": true,
+        "censor": true,
+        "right_censor": true,
+        "predict": true,
+        "predict_survival_function": false,
+        "predict_median": false,
+        "predict_expectation": false,
+        "joblib_load": false,
+        "pickle_load": false,
+        "fit": false
+      },
+      "functions": [
+        "build_censoring_km",
+        "censor_survival_at",
+        "censor_survival_before",
+        "km_survival_at",
+        "load_evaluation",
+        "load_json",
+        "load_km_curve",
+        "load_predictions"
+      ]
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod009_survival_calibration.py",
+      "signals": {
+        "lognormal": false,
+        "aft": false,
+        "survival": true,
+        "duration": true,
+        "event": true,
+        "censor": true,
+        "right_censor": false,
+        "predict": true,
+        "predict_survival_function": false,
+        "predict_median": false,
+        "predict_expectation": false,
+        "joblib_load": false,
+        "pickle_load": false,
+        "fit": false
+      },
+      "functions": [
+        "load_evaluation",
+        "load_predictions"
+      ]
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod010_log_normal_aft_baseline.py",
+      "signals": {
+        "lognormal": true,
+        "aft": true,
+        "survival": true,
+        "duration": true,
+        "event": true,
+        "censor": true,
+        "right_censor": false,
+        "predict": true,
+        "predict_survival_function": false,
+        "predict_median": false,
+        "predict_expectation": false,
+        "joblib_load": false,
+        "pickle_load": false,
+        "fit": true
+      },
+      "functions": [
+        "censoring_km",
+        "make_features",
+        "survival",
+        "text_features"
+      ]
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod011_final_model_comparison.py",
+      "signals": {
+        "lognormal": true,
+        "aft": true,
+        "survival": true,
+        "duration": false,
+        "event": false,
+        "censor": false,
+        "right_censor": false,
+        "predict": true,
+        "predict_survival_function": false,
+        "predict_median": false,
+        "predict_expectation": false,
+        "joblib_load": false,
+        "pickle_load": false,
+        "fit": false
+      },
+      "functions": [
+        "load_csv",
+        "load_json"
+      ]
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod012_final_closure.py",
+      "signals": {
+        "lognormal": true,
+        "aft": true,
+        "survival": true,
+        "duration": false,
+        "event": true,
+        "censor": true,
+        "right_censor": true,
+        "predict": true,
+        "predict_survival_function": false,
+        "predict_median": false,
+        "predict_expectation": false,
+        "joblib_load": false,
+        "pickle_load": false,
+        "fit": false
+      },
+      "functions": [
+        "load_json"
+      ]
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod013_generate_visualizations.py",
+      "signals": {
+        "lognormal": true,
+        "aft": true,
+        "survival": true,
+        "duration": true,
+        "event": true,
+        "censor": true,
+        "right_censor": false,
+        "predict": true,
+        "predict_survival_function": false,
+        "predict_median": false,
+        "predict_expectation": false,
+        "joblib_load": false,
+        "pickle_load": false,
+        "fit": false
+      },
+      "functions": [
+        "load_json"
+      ]
+    }
+  ],
+  "serialized_artifacts": [],
+  "native_csv_schemas": [
+    {
+      "path": "modeling/T7/derived/t7_creation_time_modeling_dataset.csv",
+      "columns": [
+        "ID",
+        "Creation time",
+        "Creator",
+        "Creator Detail",
+        "Summary",
+        "Description",
+        "first_resolved_time",
+        "duration_seconds",
+        "event",
+        "endpoint_type",
+        "observation_endpoint",
+        "source_row_width"
+      ],
+      "survival_relevant_columns": [
+        "Creation time",
+        "first_resolved_time",
+        "duration_seconds",
+        "event"
+      ]
+    },
+    {
+      "path": "modeling/T7/derived/t7_mod003_creation_features.tmp.csv",
+      "columns": [
+        "ID",
+        "Creation time",
+        "Creator",
+        "Creator Detail",
+        "Summary",
+        "Description"
+      ],
+      "survival_relevant_columns": [
+        "Creation time"
+      ]
+    },
+    {
+      "path": "modeling/T7/derived/t7_mod006_kaplan_meier_curve.csv",
+      "columns": [
+        "duration_seconds",
+        "event_count",
+        "censor_count",
+        "at_risk",
+        "kaplan_meier_survival"
+      ],
+      "survival_relevant_columns": [
+        "duration_seconds",
+        "event_count",
+        "censor_count"
+      ]
+    },
+    {
+      "path": "modeling/T7/derived/t7_mod006_nelson_aalen_curve.csv",
+      "columns": [
+        "duration_seconds",
+        "event_count",
+        "at_risk",
+        "nelson_aalen_cumulative_hazard"
+      ],
+      "survival_relevant_columns": [
+        "duration_seconds",
+        "event_count"
+      ]
+    },
+    {
+      "path": "modeling/T7/derived/t7_mod007_evaluation_predictions.csv",
+      "columns": [
+        "ID",
+        "duration_seconds",
+        "event",
+        "predicted_median_survival_seconds",
+        "survival_probability_at_211583_seconds",
+        "survival_probability_at_1780179_seconds",
+        "survival_probability_at_14608619_seconds"
+      ],
+      "survival_relevant_columns": [
+        "duration_seconds",
+        "event"
+      ]
+    },
+    {
+      "path": "modeling/T7/derived/t7_mod010_evaluation_predictions.csv",
+      "columns": [
+        "ID",
+        "duration_seconds",
+        "event",
+        "predicted_median_survival_seconds",
+        "survival_probability_at_211583_seconds",
+        "survival_probability_at_1780179_seconds",
+        "survival_probability_at_14608619_seconds"
+      ],
+      "survival_relevant_columns": [
+        "duration_seconds",
+        "event"
+      ]
+    },
+    {
+      "path": "modeling/T7/splits/t7_evaluation.csv",
+      "columns": [
+        "ID",
+        "Creation time",
+        "Creator",
+        "Creator Detail",
+        "Summary",
+        "Description",
+        "first_resolved_time",
+        "duration_seconds",
+        "event",
+        "endpoint_type",
+        "observation_endpoint",
+        "source_row_width"
+      ],
+      "survival_relevant_columns": [
+        "Creation time",
+        "first_resolved_time",
+        "duration_seconds",
+        "event"
+      ]
+    },
+    {
+      "path": "modeling/T7/splits/t7_train.csv",
+      "columns": [
+        "ID",
+        "Creation time",
+        "Creator",
+        "Creator Detail",
+        "Summary",
+        "Description",
+        "first_resolved_time",
+        "duration_seconds",
+        "event",
+        "endpoint_type",
+        "observation_endpoint",
+        "source_row_width"
+      ],
+      "survival_relevant_columns": [
+        "Creation time",
+        "first_resolved_time",
+        "duration_seconds",
+        "event"
+      ]
+    }
+  ],
+  "resolution": {
+    "lognormal": true,
+    "aft": true,
+    "survival": true,
+    "event_semantics": true,
+    "censor_semantics": true,
+    "right_censor_semantics": true,
+    "serialized_model_available": false,
+    "prediction_interface_candidate": true
+  }
+}

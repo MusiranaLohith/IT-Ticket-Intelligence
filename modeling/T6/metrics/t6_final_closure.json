@@ -1,0 +1,130 @@
+{
+  "task_id": "T6",
+  "task_name": "Similar-Ticket Retrieval",
+  "operational_task_name": "Duplicate-Related Ticket Retrieval",
+  "task_family": "duplicate_related_ticket_retrieval",
+  "status": "CLOSED",
+  "final_status": "SUPPORTED_WITH_LIMITATIONS",
+  "final_system_role": "SECONDARY_DECISION_SUPPORT_SIGNAL",
+  "final_model": {
+    "name": "Corrected Hybrid Lexical + Semantic Duplicate-Related Retrieval",
+    "operation": "MOD-010",
+    "lexical_component": "MOD-004 exact TF-IDF cosine retrieval",
+    "semantic_component": "all-MiniLM-L6-v2 semantic similarity",
+    "lexical_weight": 0.5,
+    "semantic_weight": 0.5,
+    "selection_split": "TRAIN"
+  },
+  "evaluation_population": {
+    "rows": 82416,
+    "queries": 816,
+    "observed_positive_queries": 816,
+    "candidates_per_query": 101
+  },
+  "final_evaluation_metrics": {
+    "recall_at_1": 0.7450980392156863,
+    "recall_at_3": 0.8517156862745098,
+    "recall_at_5": 0.8897058823529411,
+    "recall_at_10": 0.9215686274509803,
+    "recall_at_20": 0.9473039215686274,
+    "mrr": 0.8093031701244353,
+    "ndcg_at_5": 0.823910859998925,
+    "ndcg_at_10": 0.8341663767650592
+  },
+  "baseline_comparison": {
+    "recall_at_1": {
+      "tfidf": 0.6936274509803921,
+      "corrected_hybrid": 0.7450980392156863,
+      "absolute_delta": 0.05147058823529416
+    },
+    "recall_at_3": {
+      "tfidf": 0.8333333333333334,
+      "corrected_hybrid": 0.8517156862745098,
+      "absolute_delta": 0.018382352941176405
+    },
+    "recall_at_5": {
+      "tfidf": 0.8762254901960784,
+      "corrected_hybrid": 0.8897058823529411,
+      "absolute_delta": 0.013480392156862697
+    },
+    "recall_at_10": {
+      "tfidf": 0.9105392156862745,
+      "corrected_hybrid": 0.9215686274509803,
+      "absolute_delta": 0.011029411764705843
+    },
+    "recall_at_20": {
+      "tfidf": 0.9399509803921569,
+      "corrected_hybrid": 0.9473039215686274,
+      "absolute_delta": 0.007352941176470562
+    },
+    "mrr": {
+      "tfidf": 0.7764268513472535,
+      "corrected_hybrid": 0.8093031701244353,
+      "absolute_delta": 0.03287631877718178
+    },
+    "ndcg_at_5": {
+      "tfidf": 0.7954814890792703,
+      "corrected_hybrid": 0.823910859998925,
+      "absolute_delta": 0.028429370919654695
+    },
+    "ndcg_at_10": {
+      "tfidf": 0.8066454422871442,
+      "corrected_hybrid": 0.8341663767650592,
+      "absolute_delta": 0.027520934477915038
+    }
+  },
+  "completed_operations": [
+    "MOD-001 Contract Reconciliation",
+    "MOD-002 Baseline Modeling Contract",
+    "MOD-003 Group-Aware Split Construction",
+    "MOD-004 TF-IDF Retrieval Baseline",
+    "MOD-005 Baseline Error Analysis",
+    "MOD-006 Failure Case Characterization",
+    "MOD-007 BM25 Retrieval Baseline",
+    "MOD-008 Bounded Semantic Failure Experiment",
+    "MOD-009 Hybrid Lexical + Semantic Experiment",
+    "MOD-010 Corrected Lexical Reconstruction and Final Controlled Comparison"
+  ],
+  "final_evidence": {
+    "mod004_baseline": "Frozen lexical retrieval baseline",
+    "mod007_bm25": "Alternative lexical retrieval comparison",
+    "mod008_semantic": "Bounded semantic diagnostic",
+    "mod009_original": "Original hybrid artifact retained as non-final due lexical representation mismatch",
+    "mod010_corrected": "Corrected hybrid with exact MOD-004 lexical reconciliation"
+  },
+  "limitations": [
+    "T6 is duplicate-related ticket retrieval, not unrestricted generic similarity retrieval.",
+    "The retrieval target is based on subsequently observed Dupe-of relationships.",
+    "Observable non-positive candidates are not treated as true negatives.",
+    "The evaluation measures ranking/retrieval performance within the frozen 101-candidate candidate pools.",
+    "The evaluation does not establish exhaustive open-world retrieval performance.",
+    "The evaluation does not establish reliable retrieval for candidates outside the frozen candidate-pool construction.",
+    "The system should not be interpreted as guaranteeing duplicate identification.",
+    "Retrieval output is a decision-support signal and does not by itself justify autonomous routing or human-review removal.",
+    "Ranking scores are not calibrated probabilities and no candidate-level probability interpretation is established.",
+    "No automation threshold has been established."
+  ],
+  "explicit_exclusions": [
+    "No binary-classification interpretation of observable_non_positive was used.",
+    "No target-ticket pairing claim was made for missing target IDs.",
+    "No post-Creation query information was used.",
+    "No current/final Dupe-of field was used as a feature.",
+    "No post-Creation administrative fields were used as prediction features.",
+    "No evaluation-based semantic-weight selection was performed.",
+    "No raw dataset modification occurred."
+  ],
+  "controls": {
+    "lexical_reconciliation_passed": true,
+    "evaluation_population_frozen": true,
+    "candidate_pool_frozen": true,
+    "weight_selection_train_only": true,
+    "raw_dataset_modified": false,
+    "target_modified": false,
+    "candidate_pool_modified": false,
+    "evaluation_used_for_weight_selection": false,
+    "calibration_performed": false,
+    "automation_threshold_established": false,
+    "binary_classification_primary": false
+  },
+  "decision_statement": "T6 is closed as a supported-with-limitations secondary decision-support retrieval capability. The corrected 0.50 lexical / 0.50 semantic hybrid is retained as the final advanced retrieval candidate because its lexical component exactly reproduces the frozen MOD-004 baseline and its hybrid weight was selected using TRAIN only. The frozen EVAL population shows the documented retrieval metrics. These results do not establish exhaustive open-world duplicate retrieval, autonomous decision-making, calibrated probabilities, or removal of human review."
+}

@@ -1,0 +1,330 @@
+{
+  "operation": "T1_IT_SUPPORT_SUBSET_CLASS_ANALYSIS",
+  "status": "COMPLETE",
+  "evaluation_records": 446,
+  "record_level_accuracy": 0.9417040358744395,
+  "subset_summary": {
+    "repeated_text": {
+      "records": 396,
+      "correct": 383,
+      "incorrect": 13,
+      "accuracy": 0.9671717171717171
+    },
+    "single_record": {
+      "records": 50,
+      "correct": 37,
+      "incorrect": 13,
+      "accuracy": 0.74
+    }
+  },
+  "class_analysis": [
+    {
+      "class": "Active Directory",
+      "repeated_text_support": 12,
+      "repeated_text_correct": 6,
+      "repeated_text_errors": 6,
+      "repeated_text_accuracy": 0.5,
+      "single_record_support": 9,
+      "single_record_correct": 6,
+      "single_record_errors": 3,
+      "single_record_accuracy": 0.6666666666666666
+    },
+    {
+      "class": "Computer-Services",
+      "repeated_text_support": 0,
+      "repeated_text_correct": 0,
+      "repeated_text_errors": 0,
+      "repeated_text_accuracy": null,
+      "single_record_support": 10,
+      "single_record_correct": 8,
+      "single_record_errors": 2,
+      "single_record_accuracy": 0.8
+    },
+    {
+      "class": "EOL",
+      "repeated_text_support": 2,
+      "repeated_text_correct": 2,
+      "repeated_text_errors": 0,
+      "repeated_text_accuracy": 1.0,
+      "single_record_support": 0,
+      "single_record_correct": 0,
+      "single_record_errors": 0,
+      "single_record_accuracy": null
+    },
+    {
+      "class": "Fileservice",
+      "repeated_text_support": 183,
+      "repeated_text_correct": 182,
+      "repeated_text_errors": 1,
+      "repeated_text_accuracy": 0.994535519125683,
+      "single_record_support": 0,
+      "single_record_correct": 0,
+      "single_record_errors": 0,
+      "single_record_accuracy": null
+    },
+    {
+      "class": "O365",
+      "repeated_text_support": 10,
+      "repeated_text_correct": 10,
+      "repeated_text_errors": 0,
+      "repeated_text_accuracy": 1.0,
+      "single_record_support": 24,
+      "single_record_correct": 17,
+      "single_record_errors": 7,
+      "single_record_accuracy": 0.7083333333333334
+    },
+    {
+      "class": "Software",
+      "repeated_text_support": 43,
+      "repeated_text_correct": 37,
+      "repeated_text_errors": 6,
+      "repeated_text_accuracy": 0.8604651162790697,
+      "single_record_support": 1,
+      "single_record_correct": 0,
+      "single_record_errors": 1,
+      "single_record_accuracy": 0.0
+    },
+    {
+      "class": "Support general",
+      "repeated_text_support": 146,
+      "repeated_text_correct": 146,
+      "repeated_text_errors": 0,
+      "repeated_text_accuracy": 1.0,
+      "single_record_support": 6,
+      "single_record_correct": 6,
+      "single_record_errors": 0,
+      "single_record_accuracy": 1.0
+    }
+  ],
+  "error_pairs": {
+    "repeated_text": [
+      {
+        "actual": "Software",
+        "prediction": "Support general",
+        "count": 6
+      },
+      {
+        "actual": "Active Directory",
+        "prediction": "Software",
+        "count": 4
+      },
+      {
+        "actual": "Active Directory",
+        "prediction": "Support general",
+        "count": 2
+      },
+      {
+        "actual": "Fileservice",
+        "prediction": "Software",
+        "count": 1
+      }
+    ],
+    "single_record": [
+      {
+        "actual": "O365",
+        "prediction": "Software",
+        "count": 3
+      },
+      {
+        "actual": "Active Directory",
+        "prediction": "Support general",
+        "count": 2
+      },
+      {
+        "actual": "O365",
+        "prediction": "Active Directory",
+        "count": 2
+      },
+      {
+        "actual": "O365",
+        "prediction": "Support general",
+        "count": 2
+      },
+      {
+        "actual": "Active Directory",
+        "prediction": "Fileservice",
+        "count": 1
+      },
+      {
+        "actual": "Computer-Services",
+        "prediction": "Fileservice",
+        "count": 1
+      },
+      {
+        "actual": "Computer-Services",
+        "prediction": "Support general",
+        "count": 1
+      },
+      {
+        "actual": "Software",
+        "prediction": "Fileservice",
+        "count": 1
+      }
+    ]
+  },
+  "single_record_error_records": [
+    {
+      "id": "1683",
+      "actual": "O365",
+      "prediction": "Software",
+      "text": "External vendors have e3 license again (previously removed on [DRIVER_ID])"
+    },
+    {
+      "id": "971",
+      "actual": "Computer-Services",
+      "prediction": "Support general",
+      "text": "[TICKET ID] - New Support Ticket received  - Britos LapTop"
+    },
+    {
+      "id": "1441",
+      "actual": "Active Directory",
+      "prediction": "Support general",
+      "text": "[COMPANY]ify[LOCATION][SERVER]"
+    },
+    {
+      "id": "1171",
+      "actual": "O365",
+      "prediction": "Support general",
+      "text": "[TICKET ID] - New Support Ticket received  - enviar e_mail"
+    },
+    {
+      "id": "1017",
+      "actual": "Software",
+      "prediction": "Fileservice",
+      "text": "[TICKET ID] - New Support Ticket received  - Abrir pasta de arquivos do google Drive"
+    },
+    {
+      "id": "10745",
+      "actual": "Active Directory",
+      "prediction": "Fileservice",
+      "text": "Konto wird immer wieder gesperrt"
+    },
+    {
+      "id": "845",
+      "actual": "Computer-Services",
+      "prediction": "Fileservice",
+      "text": "[TICKET ID] - New Support Ticket received  - unlock my personal external[LOCATION]drive"
+    },
+    {
+      "id": "1266",
+      "actual": "O365",
+      "prediction": "Software",
+      "text": "[TICKET ID] - A Support Ticket was forwarded to your role  - Instalação do Visio"
+    },
+    {
+      "id": "2618",
+      "actual": "Active Directory",
+      "prediction": "Support general",
+      "text": "Basis User - [TICKET ID] - [NAME] ([COMPANY]. [LOCATION])Service Request: Basis User     Create Windows account for internal user  [NAME] ([COMPANY]. [LOCATION])     Firstname:  [NAME]  Lastname:  Nadj  Cost Center:  44265  Company:  [COMPANY] Seme YU D.O.O.  Department:  [COMPANY]_MA-[ADDRESS]  ZIP:  [ADDRESS]  City:  [ADDRESS]  Country:  [ADDRESS]  Office:       Important: Please set the EA10 to the following value: 13315 (leave blank. when empty)  Please create Exchange and Skype account.  The user needs at least the following access permissions:  Access to [SOFTWARE] ([SERVER])  Requestor:  [NAME] (EXTERNAL. [LOCATION])     Desired date:  Sep  3 2018 12:00AM     Additional information:  [LOCATION]Emloyee!  !!!! She also need mobile device accounts only - for A6 and iPad with [COMPANY] CRM. but this options are not existing in the Matrix shop!!!!"
+    },
+    {
+      "id": "678",
+      "actual": "O365",
+      "prediction": "Support general",
+      "text": "[TICKET ID] - New Support Ticket received  - Block email from [NAME] Enright"
+    },
+    {
+      "id": "1388",
+      "actual": "O365",
+      "prediction": "Software",
+      "text": "[TICKET ID] - A Support Ticket was forwarded to your role  - Problemas com e-mail Contas a Pagar"
+    },
+    {
+      "id": "1158",
+      "actual": "O365",
+      "prediction": "Active Directory",
+      "text": "[TICKET ID] - New Support Ticket received  -[LOCATION]on samsung J7 not working. Lost Login credentials. "
+    },
+    {
+      "id": "1390",
+      "actual": "O365",
+      "prediction": "Active Directory",
+      "text": "[TICKET ID] - New Support Ticket received  - problema con activacion de office"
+    }
+  ],
+  "repeated_text_error_records": [
+    {
+      "id": "976",
+      "actual": "Active Directory",
+      "prediction": "Software",
+      "normalized_text": "[ticket id] - new support ticket received - acesso"
+    },
+    {
+      "id": "997",
+      "actual": "Fileservice",
+      "prediction": "Software",
+      "normalized_text": "[ticket id] - new support ticket received - acesso"
+    },
+    {
+      "id": "1260",
+      "actual": "Active Directory",
+      "prediction": "Software",
+      "normalized_text": "[ticket id] - new support ticket received - acesso"
+    },
+    {
+      "id": "888",
+      "actual": "Active Directory",
+      "prediction": "Software",
+      "normalized_text": "[ticket id] - new support ticket received - acesso"
+    },
+    {
+      "id": "892",
+      "actual": "Active Directory",
+      "prediction": "Software",
+      "normalized_text": "[ticket id] - new support ticket received - acesso"
+    },
+    {
+      "id": "75",
+      "actual": "Software",
+      "prediction": "Support general",
+      "normalized_text": "initiated by [company][location]- vulnerable internet explorer on [server]"
+    },
+    {
+      "id": "3248",
+      "actual": "Software",
+      "prediction": "Support general",
+      "normalized_text": "initiated by [company][location]- vulnerable internet explorer on [server]"
+    },
+    {
+      "id": "3662",
+      "actual": "Software",
+      "prediction": "Support general",
+      "normalized_text": "initiated by [company][location]- vulnerable internet explorer on [server]"
+    },
+    {
+      "id": "3838",
+      "actual": "Software",
+      "prediction": "Support general",
+      "normalized_text": "initiated by [company][location]- vulnerable internet explorere on [server]"
+    },
+    {
+      "id": "5708",
+      "actual": "Software",
+      "prediction": "Support general",
+      "normalized_text": "initiated by [company][location]- vulnerable internet explorere on [server]"
+    },
+    {
+      "id": "8214",
+      "actual": "Software",
+      "prediction": "Support general",
+      "normalized_text": "initiated by [company][location]- vulnerable internet explorere on [server]"
+    },
+    {
+      "id": "792",
+      "actual": "Active Directory",
+      "prediction": "Support general",
+      "normalized_text": "[ticket id] - a support ticket was forwarded to you - basis user - [username] - [name] ([company]. [location])"
+    },
+    {
+      "id": "793",
+      "actual": "Active Directory",
+      "prediction": "Support general",
+      "normalized_text": "[ticket id] - a support ticket was forwarded to you - basis user - [username] - [name] ([company]. [location])"
+    }
+  ],
+  "model_retrained": false,
+  "evaluation_used_for_fit": false,
+  "frozen_split_modified": false,
+  "labels_modified": false,
+  "raw_source_modified": false
+}

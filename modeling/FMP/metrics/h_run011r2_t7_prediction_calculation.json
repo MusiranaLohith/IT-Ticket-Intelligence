@@ -1,0 +1,41 @@
+{
+  "operation": "H-RUN-011R2",
+  "operation_name": "T7 Prediction Calculation Inspection",
+  "status": "PASS",
+  "source": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/scripts/t7_mod010_log_normal_aft_baseline.py",
+  "relevant_source_blocks": [
+    "X = []",
+    "return (\n        np.asarray(X, dtype=np.float64),\n        ids,\n        np.asarray(durations, dtype=np.float64),\n        np.asarray(events, dtype=np.int8),\n        names,\n    )",
+    "mean = X.mean(axis=0)",
+    "std = X.std(axis=0)",
+    "(\n        Xtr_raw,\n        train_ids,\n        train_t,\n        train_e,\n        feature_names,\n    ) = make_features(\n        train_rows,\n        creator_counts,\n        detail_counts,\n    )",
+    "(\n        Xev_raw,\n        eval_ids,\n        eval_t,\n        eval_e,\n        _,\n    ) = make_features(\n        eval_rows,\n        creator_counts,\n        detail_counts,\n    )",
+    "mean, std = standardize_fit(\n        Xtr_raw\n    )",
+    "Xtr = (\n        Xtr_raw - mean\n    ) / std",
+    "Xev = (\n        Xev_raw - mean\n    ) / std",
+    "print(\n        f\"Feature count: {Xtr.shape[1]}\"\n    )",
+    "result = model.fit(\n        Xtr,\n        train_t,\n        train_e,\n    )",
+    "prediction_matrix = np.column_stack([\n        model.survival(\n            Xev,\n            horizon,\n        )\n        for horizon in horizons\n    ])",
+    "median_predictions = model.median(\n        Xev\n    )",
+    "model_payload = {\n        \"model_type\": \"LogNormal_AFT\",\n        \"l2\": model.l2,\n        \"sigma\": model.sigma,\n        \"beta\": {\n            name: float(value)\n            for name, value in zip(\n                feature_names,\n                model.beta,\n            )\n        },\n        \"feature_names\": feature_names,\n        \"standardization_mean\": [\n            float(x)\n            for x in mean\n        ],\n        \"standardization_std\": [\n            float(x)\n            for x in std\n        ],\n        \"optimization\": {\n            \"success\": bool(result.success),\n            \"iterations\": int(result.nit),\n            \"objective\": float(result.fun),\n            \"message\": str(result.message),\n        },\n    }",
+    "X.append([\n            math.log1p(\n                creator_counts.get(\n                    row[\"Creator\"].strip(), 0\n                )\n            ),\n\n            math.log1p(\n                detail_counts.get(\n                    row[\"Creator Detail\"].strip(), 0\n                )\n            ),\n\n            math.log1p(s[0]),\n            math.log1p(s[1]),\n            math.log1p(s[2]),\n            math.log1p(s[3]),\n            math.log1p(s[4]),\n            s[5],\n\n            math.log1p(d[0]),\n            math.log1p(d[1]),\n            math.log1p(d[2]),\n            math.log1p(d[3]),\n            math.log1p(d[4]),\n            d[5],\n\n            (dt.year - 2010.0) / 10.0,\n\n            math.sin(month),\n            math.cos(month),\n\n            math.sin(weekday),\n            math.cos(weekday),\n\n            math.sin(hour),\n            math.cos(hour),\n        ])",
+    "self.beta = None",
+    "beta = params[:-1]",
+    "mu = X @ beta",
+    "penalty = (\n            0.5\n            * self.l2\n            * np.sum(beta * beta)\n        )",
+    "initial = np.zeros(\n            X.shape[1] + 1,\n            dtype=np.float64,\n        )",
+    "result = minimize(\n            self.objective,\n            initial,\n            args=(\n                X,\n                durations,\n                events,\n            ),\n            method=\"L-BFGS-B\",\n            options={\n                \"maxiter\": 500,\n                \"ftol\": 1e-10,\n                \"gtol\": 1e-6,\n                \"maxls\": 50,\n            },\n        )",
+    "self.beta = result.x[:-1]",
+    "mu = X @ self.beta",
+    "return np.exp(\n            X @ self.beta\n        )"
+  ],
+  "controls": {
+    "training": false,
+    "retraining": false,
+    "model_execution": false,
+    "model_modification": false,
+    "locked_test_use": false,
+    "prediction": false
+  },
+  "interpretation_boundary": "Static inspection only. The output identifies the authoritative calculation used by the T7 implementation; no new-ticket prediction was executed."
+}

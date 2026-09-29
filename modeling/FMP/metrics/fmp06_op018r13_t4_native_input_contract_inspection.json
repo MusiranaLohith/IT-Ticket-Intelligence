@@ -1,0 +1,390 @@
+{
+  "operation": "FMP-06 OP-018R13",
+  "operation_name": "T4 native input contract inspection",
+  "read_only": true,
+  "training_or_fitting": false,
+  "evaluation": false,
+  "locked_test_used": false,
+  "artifact_modified": false,
+  "t4_train": {
+    "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/derived/t4_train.csv",
+    "columns": [
+      "ID",
+      "Creation time",
+      "Creator",
+      "Creator Detail",
+      "Summary",
+      "Description",
+      "target_assignee"
+    ],
+    "column_count": 7,
+    "sample_rows": [
+      {
+        "ID": 4302,
+        "Creation time": "1997-03-28T16:00:00Z",
+        "Creator": "jfriend@formerly-netscape.com.tld",
+        "Creator Detail": "{'email': 'jfriend@formerly-netscape.com.tld', 'real_name': '', 'nick': 'jfriend', 'id': 4161, 'name': 'jfriend@formerly-netscape.com.tld'}",
+        "Summary": "PgUp/PgDn in editor don't move caret/cursor (platform differences)",
+        "Description": "(This bug imported from BugSplat, Netscape's internal bugsystem.  It\\\\nwas known there as bug #53588\\\\nhttp://scopus.netscape.com/bugsplat/show_bug.cgi?id=53588\\\\nImported into Bugzilla on 03/26/99 10:35)\\\\n\\\\nFrom the champs and it annoys me too.\\\\n\\\\nUsing PgUp and PgDn keys while composing an HTML message scrolls the\\\\nwindow, but doesn't move the cursor. The cursor remains where it was.  Keyboard\\\\nnavigation in the editor is rendered fairly useless because you hit PgDn several\\\\ntimes, then hit the down arrow and it takes you right back up to one line below\\\\nwhere you were originally.",
+        "target_assignee": "brade@netscape.com"
+      },
+      {
+        "ID": 5313,
+        "Creation time": "1997-04-08T14:00:00Z",
+        "Creator": "ftang@formerly-netscape.com.tld",
+        "Creator Detail": "{'email': 'ftang@formerly-netscape.com.tld', 'nick': 'ftang', 'real_name': 'Frank Tang', 'id': 1904, 'name': 'ftang@formerly-netscape.com.tld'}",
+        "Summary": "Accept-Charset for form is not implement.",
+        "Description": "(This bug imported from BugSplat, Netscape's internal bugsystem.  It\\\\nwas known there as bug #56223\\\\nhttp://scopus.netscape.com/bugsplat/show_bug.cgi?id=56223\\\\nImported into Bugzilla on 04/20/99 12:24)\\\\n\\\\n\\\\nSplit from Bug 48964:\\\\nFrom: http://www.nagual.ru/~ache/n4w95.html#bug_list\\\\n1) Netscape not decode <FORM>s input from CP1251 (Russian Windows\\\\ndefault character set) to KOI8-R when needed. I.e. it totally\\\\nignores ACCEPT-CHARSET=\\\\\"KOI8-R\\\\\" <FORM> attribute and global HTML\\\\npage character set too for both <META> and HTTP header cases. See\\\\nInternationalization of the Hypertext Markup Language (RFC 2070)\\\\nfor details. Look at http://www.nagual.ru/~ache/main.html#form_input\\\\nto see this bug in action.",
+        "target_assignee": "bobj@netscape.com"
+      },
+      {
+        "ID": 711,
+        "Creation time": "1997-04-21T14:00:00Z",
+        "Creator": "ekrock@formerly-netscape.com.tld",
+        "Creator Detail": "{'nick': 'ekrock', 'id': 3845, 'email': 'ekrock@formerly-netscape.com.tld', 'real_name': \"ekrock's old account (dead)\", 'name': 'ekrock@formerly-netscape.com.tld'}",
+        "Summary": "CSS color: statement ignored.",
+        "Description": "View this HTML page to reproduce.  Please email directly w/ any questions;\\\\nI filter Scopus email to trash.\\\\n--- CUT HERE ---\\\\n<!DOCTYPE HTML PUBLIC \\\\\"-//W3C//DTD HTML 3.2//EN\\\\\">\\\\n<HTML>\\\\n<HEAD>\\\\n\\\\n   <!-- * Internal HTML page title for indexing use only. Not shown on page.  *\\\\n-->\\\\n   <TITLE></TITLE>\\\\n\\\\n\\\\n   <!-- * If you want to add a CSS style sheet specific to this page,\\\\n        * uncomment the next line and add your formatting commands.  * -->\\\\n   <STYLE TYPE=\\\\\"text/css\\\\\">\\\\n/* First, set attributes of BODY element.\\\\n   These will be inherited by all elements inside BODY.\\\\n   Therefore, they will become default settings within document.\\\\n*/\\\\n\\\\nBODY {\\\\n  color: red;\\\\n  background: white;\\\\n}\\\\n\\\\n\\\\n\\\\n/* Set color for links and visited links.  */\\\\n\\\\n:link {  color: #CC3300 }\\\\n:visited {  color: #666666 }\\\\n:active {  color: #000000 }\\\\n\\\\n\\\\n\\\\n/* Make sure that the table, row, and cell elements of\\\\n   the table which forms the skeleton of our presentation\\\\n   pages will have zero width margin and padding.\\\\n*/\\\\n\\\\n.page_skeleton_table {\\\\n  margin: 0 0 0 0;\\\\n  border: 0 0 0 0;\\\\n  padding: 0 0 0 0;\\\\n}\\\\n\\\\n\\\\n\\\\nH1 {\\\\n  font-size: 48\\\\n}\\\\n\\\\nP {\\\\n  font-size: 24\\\\n}\\\\n\\\\nLI {\\\\n  font-size: 24\\\\n}\\\\n\\\\n// show source code in a smaller font so more fits on the page\\\\n\\\\nPRE {\\\\n  font-size: 16\\\\n}\\\\n\\\\n// default size of text within tables\\\\n\\\\nTH {\\\\n  font-size: 24\\\\n}\\\\n\\\\nTD {\\\\n  font-size: 24\\\\n}\\\\n\\\\n   </STYLE>\\\\n\\\\n\\\\n   <META NAME=\\\\\"GENERATOR\\\\\" CONTENT=\\\\\"Mozilla/3.0Gold (Win95; I) [Netscape]\\\\\">\\\\n</HEAD>\\\\n\\\\n<BODY>\\\\n\\\\n<TABLE CLASS=page_skeleton_table>\\\\n<TR CLASS=page_skeleton_table>\\\\n<TD CLASS=page_skeleton_table>\\\\n\\\\n<!-- This 1-pixel wide invisible GIF is necessary to ensure that  -->\\\\n<!-- the height of the table's top cell matches the height of the -->\\\\n<!-- logo. Do not cut it or the top cell's height will change.    -->\\\\n\\\\n<IMG SRC=\\\\\"basefile/head_inv.gif\\\\\" HEIGHT=72 WIDTH=1 ALIGN=RIGHT>\\\\n\\\\n<!-- ******************************** -->\\\\n<!-- * Place your header text here. * -->\\\\n<!-- ******************************** -->\\\\n\\\\n<H1>All this text should be red.</H1>\\\\n\\\\n<!-- ******************************** -->\\\\n<!-- *    Header text ends here.    * -->\\\\n<!-- ******************************** -->\\\\n\\\\n</TD>\\\\n</TR>\\\\n\\\\n<TR CLASS=page_skeleton_table>\\\\n<TD CLASS=page_skeleton_table>\\\\n\\\\n<!-- ****************************** -->\\\\n<!-- * Place your body text here. * -->\\\\n<!-- ****************************** -->\\\\n\\\\n<P>What's wrong?\\\\n\\\\n\\\\n\\\\n\\\\n<!-- ****************************** -->\\\\n<!-- *    Body text ends here.    * -->\\\\n<!-- ****************************** -->\\\\n\\\\n</TD>\\\\n</TR>\\\\n</TABLE>\\\\n</BODY>\\\\n</HTML>",
+        "target_assignee": "harishd@netscape.com"
+      },
+      {
+        "ID": 31799,
+        "Creation time": "1997-05-01T14:00:00Z",
+        "Creator": "ko@formerly-netscape.com.tld",
+        "Creator Detail": "{'name': 'ko@formerly-netscape.com.tld', 'id': 13076, 'nick': 'ko', 'real_name': '', 'email': 'ko@formerly-netscape.com.tld'}",
+        "Summary": "UI: turning off ciphers is confusing; cipher may still be used",
+        "Description": "(This bug imported from BugSplat, Netscape's internal bugsystem.  It\\\\nwas known there as bug #62313\\\\nhttp://scopus.netscape.com/bugsplat/show_bug.cgi?id=62313\\\\nImported into Bugzilla on 03/14/00 10:37)\\\\n\\\\nUser A uses the en-us.zip as policy.jar file. In the Configure Ciphers dialog in \\\\nthe Messenger frame of the Security Advisor, he checks only DES EDE3 168-bit key \\\\nand RC2 128 bit key for encryption.\\\\n\\\\nUser B uses the en-export.zip as policy.jar file (default).\\\\n\\\\n1. User A sends User B a signed message.\\\\n2. User B reads User A's signed message, and send User A back an encrypted \\\\nmessage.\\\\n\\\\nThe message is encrypted with DES 56-bit key, not the way User A specified. In \\\\nfact User A sees the message is encrypted, and will falsely believe that the \\\\nmessage is encrypted better than it actually is.\\\\n\\\\nUser B should not be able to send User A any encrypted message in this case. A \\\\nwarning message should come up when User B tries to do it.\\\\n\\\\n------- Additional Comments From repka  05/02/97 13:01 ------- \\\\n\\\\nAccording to what you described, the message should have ended up\\\\nencrypted with RC2 and a 40-bit key, not with DES.  But I'll check\\\\ninto that.  The behavior of encrypting the message with RC2/40,\\\\nhowever, is correct.  Accepting this bug for b5 in the chance that\\\\nwe can find a better way to express this behavior in the UI.\\\\n\\\\n------- Additional Comments From repka  05/06/97 10:51 ------- \\\\n\\\\nWhen I followed the steps, the message ended up encrypted with\\\\nRC2 and a 40-bit key, which is the intended behavior.  I'm not\\\\nsure why Japheth got DES; that behavior would be wrong -- when\\\\nthe sender has no obvious algorithm and keysize to choose from,\\\\nit should always \\\\\"fallback\\\\\" to RC2/40.\\\\n\\\\n------- Additional Comments From repka  05/06/97 10:54 ------- \\\\n\\\\n*** Bug 62318 has been marked as a duplicate of this bug. ***\\\\n\\\\n------- Additional Comments From repka  05/06/97 11:13 ------- \\\\n\\\\nChanging the summary line and the priority/severity; the algorithm\\\\nchoosing code is behaving as it should, but the UI is broken and\\\\nconfusing.\\\\n\\\\n------- Additional Comments From repka  05/07/97 12:01 ------- \\\\n\\\\nJapheth and Lisa -- would it be appropriate to Release Note this behavior?\\\\nThe only way I can see to \\\\\"fix\\\\\" this bug is to explain to the user how\\\\nit really works, because the behavior is as expected.  I initially thought\\\\nthis could be best accomplished by adding some text to the S/MIME\\\\nCipher Selection dialog window, but changing the UI now by adding a new\\\\nstring is, as I think you know, a monumental task.  So, I think our\\\\nonly ptions are: try to add a couple of sentences to the dialog window\\\\n(convincing mtoy and mindy that this is really necessary), or add\\\\nsomething to the Release Notes, or do nothing at all for Dogbert.\\\\nI'd appreciate your input in this -- and, if you want the first option,\\\\nI'll need your help in convincing mtoy and mindy that this change is\\\\nimportant.  Thanks.\\\\n\\\\n------- Additional Comments From lchiang  05/07/97 13:41 ------- \\\\n\\\\nThis explanation could be added to the on-line help rather than release notes.  \\\\nIt appears that the Security Advisor dialog has a Help push button.  What do you \\\\nthink, Japheth?  I don't know what the deadlines for the Help contents are.\\\\n\\\\n\\\\n------- Additional Comments From ko  05/07/97 15:55 ------- \\\\n\\\\nI prefer UI change, if it is possible. Otherwise I would propose no change, and \\\\nmake sure we document the behavior in NetHelp. (We'll then make the change in \\\\n4.01/4.1 if there's one, or 5.0.) I don't think Release Notes is the place to \\\\ndocument the behavior either.\\\\n\\\\n------- Additional Comments From repka  05/07/97 17:58 ------- \\\\n\\\\nOkay, I tried to get the UI change in, but it was rejected by\\\\nmtoy and mindy.  If you still feel strongly about it, I suggest\\\\nyou try your own hand at convincing them.  They may still agree,\\\\nbut I won't try any more.  (FWIW, the change itself is very easy;\\\\nthe hardest part is choosing the right words to say it succinctly\\\\nbut clearly.)\\\\n\\\\nSo, my plan is to LATER this bug, and I will try to put the words\\\\nin the UI in whatever is the next appropriate release.  In the meantime,\\\\nhow do we go about getting something into the on-line help?  I guess\\\\nI shouldn't be so ignorant, but I actually have no idea...  \\\\n\\\\n------- Additional Comments From jsw  05/07/97 18:11 ------- \\\\n\\\\nLisa, if you have the words you want to use, you should probably add\\\\nthem to the bug so that they don't get lost.\\\\n\\\\nYou can talk to Mike Melton(melton@netscape.com) about the help content.\\\\n\\\\n------- Additional Comments From repka  05/07/97 18:40 ------- \\\\n\\\\nI had stashed away the words so I'd have them later, but no problem\\\\nputting them here for safekeeping, too.  Now that I have a little time,\\\\nI will continue to rewrite these words because I don't like them all\\\\nthat much.  In any case, they would show up on the \\\\\"Select S/MIME Ciphers\\\\\"\\\\nHTML dialog, after the checkbox-list of ciphers.\\\\n    \\\\\"The enabled ciphers are included in your signed messages as an\\\\n     indication of your preference for the method of encryption used\\\\n     for messages which are sent to you.  Disabling a particular\\\\n     cipher does not guarantee a sender will not use it anyway.\\\\\"\\\\n\\\\nI also sent mail to Mike Melton.  Once I know this is going to get\\\\nhandled in online-help, I will close this bug as LATER.\\\\n\\\\n------- Additional Comments From repka  05/09/97 11:47 ------- \\\\n\\\\nMike Melton said he would try to get this into online-help, so I'm\\\\nnow marking this as officially LATER.  We will try to make the cipher\\\\npreferences dialog more explanatory in the next release.\\\\n\\\\n------- Additional Comments From repka  07/11/97 10:08 ------- \\\\n\\\\nReopening this as a potential for being fixed in 4.02, if can get\\\\napproval for the UI change.\\\\n\\\\n------- Additional Comments From repka  07/15/97 10:25 ------- \\\\n\\\\nAdding a \\\\\"UI:\\\\\" to the front of the summary line, as per Mindy's request.\\\\n\\\\n\\\\n------- Additional Comments From repka  07/15/97 16:36 ------- \\\\n\\\\nI could tell that this fix was not going to be accepted for 4.02,\\\\nso I'm just moving it to 5.0.\\\\n\\\\n------- Additional Comments From mindy  07/15/97 23:02 ------- \\\\n\\\\nthis ui change was rejected for all 4.x releases.  This should be fixed in 5.0. \\\\n Thank you.\\\\n\\\\n------- Additional Comments From repka  08/08/97 18:52 ------- \\\\n\\\\nPassing along to Mark Welch, new owner of S/MIME.  It may actually make\\\\nsense to fix this in 4.03, not in 5.0 -- that's up to Mark and others.\\\\n(I don't know if 4.03 is going to be localized; if not, then fixing it\\\\nin 4.03 should be no problem, and it would then get moved over into\\\\n5.0 along with the rest of the 4.03 changes.)\\\\n\\\\n------- Additional Comments From repka  05/16/98 14:44 ------- \\\\n\\\\nFixing cc list and assigning this back to me.  I can fix this bug\\\\nwhenever someone will let me change some words in the UI.  That's\\\\nall this bug needs.  (Well, that and some inspiration to determine\\\\nthe right words -- there isn't a lot of space to convey the somewhat\\\\ncomplex information...)\\\\n\\\\n------- Additional Comments From paulmac  03/30/1999 11:40 ------- \\\\n\\\\nMoving all Security TFV 5.0 bugs to TFV 5.0 SF1in in preparation for moving them \\\\nto Bugzilla (per leger)\\\\n\\\\n------- Additional Comments From kristif  03/30/1999 13:45 ------- \\\\n\\\\nChanging kristif to rudman in cc: list in case release notes or other docs need \\\\nattention.\\\\n\\\\n------- Additional Comments From marek  Mar-01-2000 17:01 ------- \\\\n\\\\nmass-changing all old Communicator and Communicator Pro bugs filed for \\\\nComm. and Nav. versions older than 4.5 to WONTFIX.\\\\nIf you feel this was done in error, please reopen and reassign hong for \\\\nconsideration in 4.7x (assuming that you have a reproducible test case -- if you \\\\ndon't please don't reopen until you have one)\\\\n",
+        "target_assignee": "chrisk@netscape.com"
+      },
+      {
+        "ID": 9332,
+        "Creation time": "1997-05-08T14:00:00Z",
+        "Creator": "serhunt@flash.net",
+        "Creator Detail": "{'real_name': 'av (gone)', 'nick': 'serhunt', 'id': 4059, 'name': 'serhunt@flash.net', 'email': 'serhunt@flash.net'}",
+        "Summary": "Does not print cyrillic characters",
+        "Description": "(This bug imported from BugSplat, Netscape's internal bugsystem.  It\\\\nwas known there as bug #64027\\\\nhttp://scopus.netscape.com/bugsplat/show_bug.cgi?id=64027\\\\nImported into Bugzilla on 07/06/99 22:37)\\\\n\\\\nGo to the page containing Cyrillics and try to print it out. Characters will not\\\\nbe printed. Images are OK.",
+        "target_assignee": "erik@netscape.com"
+      }
+    ]
+  },
+  "implementation_sources": [
+    "modeling/T4/scripts/t4_baseline.py",
+    "modeling/T4/scripts/t4_baseline_contract.py",
+    "modeling/T4/scripts/t4_baseline_r1.py",
+    "modeling/T4/scripts/t4_compare_r1_mod007.py",
+    "modeling/T4/scripts/t4_materialize.py",
+    "modeling/T4/scripts/t4_mod007_retrieval_analysis.py",
+    "modeling/T4/scripts/t4_mod007_similarity_analysis.py",
+    "modeling/T4/scripts/t4_mod007_true_assignee_coverage.py",
+    "modeling/T4/scripts/t4_mod008.py",
+    "modeling/T4/scripts/t4_mod008_analysis.py",
+    "modeling/T4/scripts/t4_mod008_full.py",
+    "modeling/T4/scripts/t4_mod009.py",
+    "modeling/T4/scripts/t4_mod010.py",
+    "modeling/T4/scripts/t4_mod011.py",
+    "modeling/T4/scripts/t4_mod012.py",
+    "modeling/T4/scripts/t4_mod013.py",
+    "modeling/T4/scripts/t4_mod014.py",
+    "modeling/T4/scripts/t4_model_contract.py",
+    "modeling/T4/scripts/t4_plt001.py",
+    "modeling/T4/scripts/t4_plt002.py",
+    "modeling/T4/scripts/t4_plt003.py",
+    "modeling/T4/scripts/t4_plt004.py",
+    "modeling/T4/scripts/t4_plt005.py",
+    "modeling/T4/scripts/t4_plt006.py",
+    "modeling/T4/scripts/t4_plt007.py",
+    "modeling/T4/scripts/t4_plt008.py",
+    "modeling/T4/scripts/t4_r1_analysis.py",
+    "modeling/T4/scripts/t4_ranking_baseline.py",
+    "modeling/T4/scripts/t4_ranking_contract.py",
+    "modeling/T4/scripts/t4_split.py",
+    "modeling/T4/scripts/t4_validate.py"
+  ],
+  "function_sources": {
+    "modeling/T4/scripts/t4_mod008.py": {
+      "make_text": "def make_text(df):\n    return (\n        \"Creator=\" + df[\"Creator\"].fillna(\"\").astype(str)\n        + \" CreatorDetail=\" + df[\"Creator Detail\"].fillna(\"\").astype(str)\n        + \" Summary=\" + df[\"Summary\"].fillna(\"\").astype(str)\n        + \" Description=\" + df[\"Description\"].fillna(\"\").astype(str)\n    ).to_numpy()"
+    },
+    "modeling/T4/scripts/t4_mod008_full.py": {
+      "make_text": "def make_text(df):\n    return (\n        \"Creator=\" + df[\"Creator\"].fillna(\"\").astype(str)\n        + \" CreatorDetail=\" + df[\"Creator Detail\"].fillna(\"\").astype(str)\n        + \" Summary=\" + df[\"Summary\"].fillna(\"\").astype(str)\n        + \" Description=\" + df[\"Description\"].fillna(\"\").astype(str)\n    ).to_numpy()"
+    },
+    "modeling/T4/scripts/t4_mod011.py": {
+      "build_text": "def build_text(df):\n    return (\n        df[\"Creator\"].fillna(\"\").astype(str)\n        + \" \"\n        + df[\"Creator Detail\"].fillna(\"\").astype(str)\n        + \" \"\n        + df[\"Summary\"].fillna(\"\").astype(str)\n        + \" \"\n        + df[\"Description\"].fillna(\"\").astype(str)\n    ).to_numpy()"
+    },
+    "modeling/T4/scripts/t4_ranking_baseline.py": {
+      "build_text": "def build_text(df: pd.DataFrame) -> pd.Series:\n    columns = [\n        \"Creator\",\n        \"Creator Detail\",\n        \"Summary\",\n        \"Description\",\n    ]\n\n    text = df[columns[0]].fillna(\"\").astype(str)\n\n    for column in columns[1:]:\n        text = text + \" \" + df[column].fillna(\"\").astype(str)\n\n    return text.str.strip()",
+      "validate_data": "def validate_data(train: pd.DataFrame, evaluation: pd.DataFrame):\n    expected_columns = {\n        \"ID\",\n        \"Creation time\",\n        \"Creator\",\n        \"Creator Detail\",\n        \"Summary\",\n        \"Description\",\n        \"target_assignee\",\n    }\n\n    if len(train) != 142501:\n        raise RuntimeError(\n            f\"Unexpected training rows: {len(train)}\"\n        )\n\n    if len(evaluation) != 35626:\n        raise RuntimeError(\n            f\"Unexpected evaluation rows: {len(evaluation)}\"\n        )\n\n    if set(train.columns) != expected_columns:\n        raise RuntimeError(\n            \"Training schema does not match frozen T4 schema.\"\n        )\n\n    if set(evaluation.columns) != expected_columns:\n        raise RuntimeError(\n            \"Evaluation schema does not match frozen T4 schema.\"\n        )\n\n    if train[\"target_assignee\"].isna().any():\n        raise RuntimeError(\"Blank training target detected.\")\n\n    if evaluation[\"target_assignee\"].isna().any():\n        raise RuntimeError(\"Blank evaluation target detected.\")",
+      "rank_assignees": "def rank_assignees(\n    neighbor_indices,\n    neighbor_similarities,\n    train_targets,\n):\n    \"\"\"\n    Aggregate similarity evidence from retrieved historical tickets.\n\n    Each historical ticket contributes its cosine similarity to the\n    assignee who handled that historical ticket.\n\n    Assignees are ranked by descending summed similarity.\n    \"\"\"\n\n    scores = {}\n\n    for idx, similarity in zip(\n        neighbor_indices,\n        neighbor_similarities,\n    ):\n        assignee = train_targets[idx]\n\n        scores[assignee] = (\n            scores.get(assignee, 0.0)\n            + float(similarity)\n        )\n\n    ranked = sorted(\n        scores.items(),\n        key=lambda item: (-item[1], item[0]),\n    )\n\n    return [assignee for assignee, _ in ranked]",
+      "rank_assignees_for_row": "def rank_assignees_for_row(\n    row_idx,\n    indices,\n    similarities,\n    train_targets,\n):\n    return rank_assignees(\n        indices[row_idx],\n        similarities[row_idx],\n        train_targets,\n    )"
+    }
+  },
+  "relevant_source_hits": [
+    {
+      "file": "modeling/T4/scripts/t4_baseline.py",
+      "term": "summary"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_baseline.py",
+      "term": "description"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_baseline.py",
+      "term": "text"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_baseline.py",
+      "term": "TfidfVectorizer"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_baseline.py",
+      "term": "fit_transform"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_baseline.py",
+      "term": "transform"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_baseline.py",
+      "term": "train_text"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_baseline.py",
+      "term": "eval_text"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_baseline_contract.py",
+      "term": "text"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_baseline_r1.py",
+      "term": "description"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_baseline_r1.py",
+      "term": "text"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_baseline_r1.py",
+      "term": "TfidfVectorizer"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_baseline_r1.py",
+      "term": "fit_transform"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_baseline_r1.py",
+      "term": "transform"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_baseline_r1.py",
+      "term": "train_text"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_baseline_r1.py",
+      "term": "eval_text"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_materialize.py",
+      "term": "summary"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_materialize.py",
+      "term": "description"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_materialize.py",
+      "term": "text"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_mod007_similarity_analysis.py",
+      "term": "summary"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_mod008.py",
+      "term": "text"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_mod008.py",
+      "term": "TfidfVectorizer"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_mod008.py",
+      "term": "fit_transform"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_mod008.py",
+      "term": "transform"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_mod008.py",
+      "term": "train_text"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_mod008.py",
+      "term": "eval_text"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_mod008_full.py",
+      "term": "text"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_mod008_full.py",
+      "term": "TfidfVectorizer"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_mod008_full.py",
+      "term": "fit_transform"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_mod008_full.py",
+      "term": "transform"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_mod008_full.py",
+      "term": "train_text"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_mod008_full.py",
+      "term": "eval_text"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_mod009.py",
+      "term": "text"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_mod009.py",
+      "term": "fit_transform"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_mod009.py",
+      "term": "transform"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_mod009.py",
+      "term": "train_text"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_mod011.py",
+      "term": "build_text"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_mod011.py",
+      "term": "text"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_mod011.py",
+      "term": "fit_transform"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_mod011.py",
+      "term": "transform"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_mod011.py",
+      "term": "train_text"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_mod011.py",
+      "term": "eval_text"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_mod013.py",
+      "term": "summary"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_model_contract.py",
+      "term": "summary"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_model_contract.py",
+      "term": "description"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_model_contract.py",
+      "term": "text"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_plt002.py",
+      "term": "text"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_plt003.py",
+      "term": "text"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_plt005.py",
+      "term": "text"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_plt006.py",
+      "term": "text"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_plt007.py",
+      "term": "text"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_ranking_baseline.py",
+      "term": "build_text"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_ranking_baseline.py",
+      "term": "summary"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_ranking_baseline.py",
+      "term": "text"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_ranking_baseline.py",
+      "term": "TfidfVectorizer"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_ranking_baseline.py",
+      "term": "NearestNeighbors"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_ranking_baseline.py",
+      "term": "fit_transform"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_ranking_baseline.py",
+      "term": "transform"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_ranking_baseline.py",
+      "term": "train_text"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_ranking_baseline.py",
+      "term": "eval_text"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_ranking_baseline.py",
+      "term": "rank_assignees"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_ranking_baseline.py",
+      "term": "rank_assignees_for_row"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_ranking_contract.py",
+      "term": "text"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_split.py",
+      "term": "text"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_validate.py",
+      "term": "summary"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_validate.py",
+      "term": "description"
+    },
+    {
+      "file": "modeling/T4/scripts/t4_validate.py",
+      "term": "text"
+    }
+  ],
+  "status": "INSPECTION_COMPLETE"
+}

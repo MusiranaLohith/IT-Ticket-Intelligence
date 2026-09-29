@@ -1,0 +1,81 @@
+{
+  "operation": "T3-MOD-027",
+  "task": "T3_SEVERITY_PREDICTION",
+  "model_id": "T3-MOD-008",
+  "model_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib",
+  "test_rows": 4626,
+  "accuracy": 0.5540423692174665,
+  "macro_f1": 0.3036817032407433,
+  "weighted_f1": 0.6030788055367481,
+  "per_class": {
+    "S1": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 13
+    },
+    "S2": {
+      "precision": 0.13257575757575757,
+      "recall": 0.3115727002967359,
+      "f1": 0.18600531443755536,
+      "support": 337
+    },
+    "S3": {
+      "precision": 0.83672670321065,
+      "recall": 0.5864434687156971,
+      "f1": 0.6895772829945144,
+      "support": 3644
+    },
+    "S4": {
+      "precision": 0.25455987311657413,
+      "recall": 0.5079113924050633,
+      "f1": 0.33914421553090335,
+      "support": 632
+    }
+  },
+  "true_counts": {
+    "S1": 13,
+    "S2": 337,
+    "S3": 3644,
+    "S4": 632
+  },
+  "prediction_counts": {
+    "S1": 19,
+    "S2": 792,
+    "S3": 2554,
+    "S4": 1261
+  },
+  "confusion_matrix": [
+    [
+      0,
+      3,
+      5,
+      5
+    ],
+    [
+      2,
+      105,
+      196,
+      34
+    ],
+    [
+      16,
+      590,
+      2137,
+      901
+    ],
+    [
+      1,
+      94,
+      216,
+      321
+    ]
+  ],
+  "controls": {
+    "retrained": false,
+    "refit": false,
+    "test_used_for_selection": false,
+    "raw_mozilla_accessed": false,
+    "dataset_modified": false
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "operation": "H-RUN-015R2",
+  "operation_name": "FINAL_TICKET_FACING_ORCHESTRATOR",
+  "status": "PASS",
+  "ticket": {
+    "ticket_id": "H-RUN-015-VPN-001",
+    "creation_time": "2026-09-26T18:03:00Z",
+    "creator": "",
+    "creator_detail": "",
+    "title": "Unable to access corporate account",
+    "description": "I cannot sign in to my corporate account after changing my password. The login page rejects the new password even though it was accepted during the password change. I need access to email and internal applications."
+  },
+  "components": {
+    "T1": {
+      "status": "EXECUTED",
+      "prediction": "Active Directory",
+      "feature_shape": [
+        1,
+        29096
+      ]
+    },
+    "T2": {
+      "status": "EXECUTED",
+      "prediction": "P1",
+      "feature_shape": [
+        1,
+        212254
+      ]
+    },
+    "T3": {
+      "status": "EXECUTED",
+      "prediction": "S3",
+      "native_decision_scores": {
+        "S1": -0.8032338436691203,
+        "S2": 0.13244563922147984,
+        "S3": 0.689772893384297,
+        "S4": -0.018984688936738325
+      },
+      "decision_scores_are_probabilities": false
+    },
+    "T4": {
+      "status": "EXECUTED",
+      "retrieved_count": 5,
+      "evidence_semantics": "historical_retrieval_only",
+      "autonomous_assignment": false,
+      "neighbors": [
+        {
+          "rank": 1,
+          "population_index": 20306,
+          "distance": 0.668012261390686,
+          "ID": "86537",
+          "summary": "Mozilla crashes when I attempt to change my Mozilla password",
+          "target_assignee": "rods@netscape.com"
+        },
+        {
+          "rank": 2,
+          "population_index": 45399,
+          "distance": 0.711412787437439,
+          "ID": "358327",
+          "summary": "To login into Bugzilla, I entered the username (email) and COPIED & PASTED my Password. It is a security flaw and the Password field should not accept copied & pasted/cut & pasted Passwords.",
+          "target_assignee": "jag@tty.nl"
+        },
+        {
+          "rank": 3,
+          "population_index": 9235,
+          "distance": 0.7116817235946655,
+          "ID": "33686",
+          "summary": "Cannot login to hotmail",
+          "target_assignee": "pollmann@netscape.com"
+        },
+        {
+          "rank": 4,
+          "population_index": 24562,
+          "distance": 0.733568549156189,
+          "ID": "112079",
+          "summary": "can't login to Yahoo! (http://mail.yahoo.com)",
+          "target_assignee": "asa@mozilla.org"
+        },
+        {
+          "rank": 5,
+          "population_index": 11164,
+          "distance": 0.7421759963035583,
+          "ID": "41950",
+          "summary": "HTTP redirect to same URL fails (Login to My Yahoo! fails)",
+          "target_assignee": "pollmann@netscape.com"
+        }
+      ]
+    },
+    "T5": {
+      "status": "EXECUTED",
+      "native_decision_score": -3.013118581724539,
+      "calibrated_duplicate_evidence": 0.0,
+      "threshold_used": false,
+      "autonomous_duplicate_decision": false,
+      "semantics": "pairwise_duplicate_evidence_only"
+    },
+    "T6": {
+      "status": "PARTIAL_NATIVE_RUNTIME",
+      "semantic_score_available": false,
+      "full_mod010_hybrid_score_available": false,
+      "candidates": [
+        {
+          "ID": "358327",
+          "lexical_score": 0.18283268950426804,
+          "rank": 1
+        },
+        {
+          "ID": "86537",
+          "lexical_score": 0.172217870600043,
+          "rank": 2
+        },
+        {
+          "ID": "33686",
+          "lexical_score": 0.11265850647024053,
+          "rank": 3
+        },
+        {
+          "ID": "41950",
+          "lexical_score": 0.11112980869232315,
+          "rank": 4
+        },
+        {
+          "ID": "112079",
+          "lexical_score": 0.04495664116260947,
+          "rank": 5
+        }
+      ]
+    },
+    "T7": {
+      "status": "EXECUTED_WITH_SUPPORT_LIMITATION",
+      "predicted_median_duration_seconds": 19.63239957340959,
+      "predicted_median_duration_hours": 0.005453444325947108,
+      "predicted_median_duration_days": 0.00022722684691446284,
+      "linear_predictor": 2.977181240930218,
+      "training_year_range": [
+        1997,
+        2020
+      ],
+      "runtime_creation_year": 2026,
+      "temporal_support": "OUTSIDE_OBSERVED_TRAINING_RANGE",
+      "operational_sla_interpretation": false
+    }
+  },
+  "downstream": {
+    "T8": {
+      "status": "BOUNDARY_ENVELOPE",
+      "architecture": "CLOSED",
+      "ticket_facing_execution": false,
+      "missing_evidence_is_unavailable": true,
+      "native_task_semantics_preserved": true,
+      "universal_probability_fusion": false,
+      "synthetic_fusion_target": false
+    },
+    "T9": {
+      "status": "BOUNDARY_ENVELOPE",
+      "task_specific_reliability_only": true,
+      "universal_confidence": "NOT_CREATED",
+      "universal_risk": "NOT_CREATED",
+      "cross_task_probability_aggregation": false
+    },
+    "T10": {
+      "status": "POLICY_BOUNDARY",
+      "AUTOMATION": "NOT_ESTABLISHED",
+      "HUMAN_REVIEW": "NOT_ESTABLISHED",
+      "UNIVERSAL_THRESHOLD": "NOT_ESTABLISHED",
+      "UNIVERSAL_CONFIDENCE": "NOT_CREATED",
+      "UNIVERSAL_RISK": "NOT_CREATED"
+    },
+    "T11": {
+      "status": "SPECIFICATION_ONLY",
+      "operational_feedback_population": "NOT_AVAILABLE",
+      "production_feedback_loop": "NOT_ESTABLISHED",
+      "future_re_evaluation": "REQUIRES_REAL_OPERATIONAL_FEEDBACK"
+    }
+  },
+  "controls": {
+    "training": false,
+    "retraining": false,
+    "model_modification": false,
+    "prediction_modification": false,
+    "locked_test_use": false,
+    "threshold_optimization": false,
+    "universal_confidence_creation": false,
+    "universal_risk_creation": false,
+    "synthetic_fusion_target_creation": false
+  }
+}

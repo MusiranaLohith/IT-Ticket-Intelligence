@@ -1,0 +1,65 @@
+{
+  "operation": "FMP-06 OP-006",
+  "target_script": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/scripts/t9_mod037_op014_cross_task_evidence_synthesis.py",
+  "syntax_parse": {
+    "valid": true,
+    "statement_count": 33
+  },
+  "dependency_evidence": {
+    "t8_references": [],
+    "op025_references": [],
+    "op026_references": [],
+    "t9_references": [],
+    "path_like_strings": [
+      "/home/whiteblack/Documents/IT-Ticket-Triage-System",
+      "Candidate-space assignee retrieval/ranking",
+      "Duplicate probability/calibration evidence.",
+      "Priority probability/confidence only when native probability output is available.",
+      "Query-level candidate retrieval/ranking",
+      "Query-level retrieval/ranking evidence with native retrieval semantics.",
+      "Severity probability/confidence only when native probability output is available.",
+      "Survival / time-to-event prediction",
+      "Survival/time-to-event prediction with explicit uncertainty and censoring semantics.",
+      "T2/T3",
+      "T6 evidence chain does not preserve the observable_non_positive / true-negative distinction.",
+      "T8 may preserve and present each task's native output/uncertainty with provenance, but may not convert heterogeneous task outputs into a common numerical probability or universal risk/confidence score.",
+      "T9 cross-task empirical evidence is closed at the task-specific boundary. The evidence supports preservation and presentation of native task quantities, but does not establish cross-task numerical comparability or justify a universal confidence/risk construct.",
+      "Validating T2/T3 boundary...",
+      "t9_mod037_op005_output_semantics_lock.json",
+      "t9_mod037_op008_t5_empirical_calibration.json",
+      "t9_mod037_op009_t5_uncertainty_reliability.json",
+      "t9_mod037_op010_t5_calibration_evidence_synthesis.json",
+      "t9_mod037_op011_t4_ranking_evaluation.json",
+      "t9_mod037_op012c_t6_native_ranking_evaluation.json",
+      "t9_mod037_op012d_t6_ranking_reliability.json",
+      "t9_mod037_op013f_t7_evidence_synthesis.json",
+      "t9_mod037_op014_cross_task_evidence_synthesis.json"
+    ],
+    "keyword_hits": {
+      "op025": 0,
+      "op026": 0,
+      "t8": 7,
+      "t9": 24,
+      "decision_engine": 0,
+      "prediction": 3,
+      "evidence": 69,
+      "input": 0,
+      "output": 25
+    }
+  },
+  "interpretation": {
+    "fresh_t8_op025_consumption_established": false,
+    "t8_reference_established": false,
+    "op026_reference_established": false,
+    "t9_reference_established": false
+  },
+  "safeguards": {
+    "model_training": false,
+    "prediction_generation": false,
+    "artifact_modification": false,
+    "threshold_selection": false,
+    "calibration": false,
+    "policy_change": false
+  },
+  "status": "PASS"
+}

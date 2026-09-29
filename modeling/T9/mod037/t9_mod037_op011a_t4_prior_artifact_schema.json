@@ -1,0 +1,3270 @@
+{
+  "operation": "T9_MOD-037_OP-011A",
+  "title": "T4 Prior-Artifact Schema Resolution",
+  "status": "PASS",
+  "operation_type": "READ_ONLY_PRIOR_ARTIFACT_SCHEMA_RESOLUTION",
+  "purpose": "Resolve the actual JSON schema of the prior T9/T8 artifacts required by OP-011 before writing artifact-dependent validation logic.",
+  "artifacts_inspected": [
+    {
+      "artifact_name": "OP-004",
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op004_native_output_acceptance.json",
+      "top_level_keys": [
+        "operation",
+        "title",
+        "status",
+        "purpose",
+        "candidate_artifacts",
+        "results",
+        "accepted_tasks",
+        "rejected_tasks",
+        "unavailable_tasks",
+        "controls",
+        "methodological_constraints",
+        "interpretation"
+      ],
+      "top_level_key_count": 12,
+      "schema_summary": {
+        "type": "dict",
+        "keys": {
+          "operation": {
+            "type": "str",
+            "value": "T9_MOD-037_OP-004"
+          },
+          "title": {
+            "type": "str",
+            "value": "Native Output Acceptance Gate"
+          },
+          "status": {
+            "type": "str",
+            "value": "FAIL"
+          },
+          "purpose": {
+            "type": "str",
+            "value": "Validate the actual contents and semantics of native T2-T7 candidate outputs before empirical T9 calibration/evaluation."
+          },
+          "candidate_artifacts": {
+            "type": "dict",
+            "keys": {
+              "T2": {
+                "type": "list",
+                "length": 1,
+                "first_item": {
+                  "type": "str",
+                  "value": "modeling/T2/analysis/t2_baseline_validation_predictions.csv"
+                }
+              },
+              "T4": {
+                "type": "list",
+                "length": 1,
+                "first_item": {
+                  "type": "str",
+                  "value": "modeling/T4/results/mod011_checkpoints/t4_mod011_retrieval.npz"
+                }
+              },
+              "T5": {
+                "type": "list",
+                "length": 1,
+                "first_item": {
+                  "type": "str",
+                  "value": "modeling/T5/metrics/t5_mod007_calibrated_validation_predictions.npz"
+                }
+              },
+              "T6": {
+                "type": "list",
+                "length": 1,
+                "first_item": {
+                  "type": "str",
+                  "value": "modeling/T6/metrics/t6_mod010_corrected_hybrid_query_rankings.csv"
+                }
+              },
+              "T7": {
+                "type": "list",
+                "length": 1,
+                "first_item": {
+                  "type": "str",
+                  "value": "modeling/T7/derived/t7_mod007_evaluation_predictions.csv"
+                }
+              }
+            }
+          },
+          "results": {
+            "type": "dict",
+            "keys": {
+              "T2": {
+                "type": "dict",
+                "keys": {
+                  "task": {
+                    "type": "str",
+                    "value": "T2"
+                  },
+                  "native_quantity": {
+                    "type": "str",
+                    "value": "Priority categorical prediction / class probability"
+                  },
+                  "artifact": {
+                    "type": "dict",
+                    "keys": {
+                      "status": {
+                        "type": "str"
+                      },
+                      "path": {
+                        "type": "str"
+                      },
+                      "rows": {
+                        "type": "int"
+                      },
+                      "columns": {
+                        "type": "list"
+                      }
+                    }
+                  },
+                  "checks": {
+                    "type": "dict",
+                    "keys": {
+                      "required_columns": {
+                        "type": "dict"
+                      },
+                      "ID_integrity": {
+                        "type": "dict"
+                      },
+                      "probability_output": {
+                        "type": "dict"
+                      }
+                    }
+                  },
+                  "probability_columns": {
+                    "type": "list",
+                    "length": 0
+                  },
+                  "status": {
+                    "type": "str",
+                    "value": "FAIL"
+                  }
+                }
+              },
+              "T3": {
+                "type": "dict",
+                "keys": {
+                  "task": {
+                    "type": "str",
+                    "value": "T3"
+                  },
+                  "status": {
+                    "type": "str",
+                    "value": "NO_ACCEPTED_NATIVE_OUTPUT"
+                  },
+                  "reason": {
+                    "type": "str",
+                    "value": "OP-003 identified no native prediction/probability artifact suitable for T9 acceptance."
+                  }
+                }
+              },
+              "T4": {
+                "type": "dict",
+                "keys": {
+                  "task": {
+                    "type": "str",
+                    "value": "T4"
+                  },
+                  "native_quantity": {
+                    "type": "str",
+                    "value": "candidate-space assignee retrieval/ranking"
+                  },
+                  "artifact": {
+                    "type": "dict",
+                    "keys": {
+                      "status": {
+                        "type": "str"
+                      },
+                      "path": {
+                        "type": "str"
+                      },
+                      "keys": {
+                        "type": "list"
+                      }
+                    }
+                  },
+                  "checks": {
+                    "type": "dict",
+                    "keys": {
+                      "retrieval_keys": {
+                        "type": "dict"
+                      },
+                      "ranking_dimensions": {
+                        "type": "dict"
+                      },
+                      "neighbor_indices": {
+                        "type": "dict"
+                      },
+                      "neighbor_scores": {
+                        "type": "dict"
+                      },
+                      "candidate_space": {
+                        "type": "dict"
+                      },
+                      "unseen_target_semantics": {
+                        "type": "dict"
+                      }
+                    }
+                  },
+                  "neighbor_indices_shape": {
+                    "type": "list",
+                    "length": 2,
+                    "first_item": {
+                      "type": "int"
+                    }
+                  },
+                  "neighbor_scores_shape": {
+                    "type": "list",
+                    "length": 2,
+                    "first_item": {
+                      "type": "int"
+                    }
+                  },
+                  "invalid_neighbor_indices": {
+                    "type": "int",
+                    "value": 0
+                  },
+                  "status": {
+                    "type": "str",
+                    "value": "PASS"
+                  }
+                }
+              },
+              "T5": {
+                "type": "dict",
+                "keys": {
+                  "task": {
+                    "type": "str",
+                    "value": "T5"
+                  },
+                  "native_quantity": {
+                    "type": "str",
+                    "value": "duplicate probability"
+                  },
+                  "artifact": {
+                    "type": "dict",
+                    "keys": {
+                      "status": {
+                        "type": "str"
+                      },
+                      "path": {
+                        "type": "str"
+                      },
+                      "keys": {
+                        "type": "list"
+                      }
+                    }
+                  },
+                  "checks": {
+                    "type": "dict",
+                    "keys": {
+                      "required_keys": {
+                        "type": "dict"
+                      },
+                      "probability_alignment": {
+                        "type": "dict"
+                      },
+                      "binary_target": {
+                        "type": "dict"
+                      },
+                      "group_aware_structure": {
+                        "type": "dict"
+                      },
+                      "locked_test_boundary": {
+                        "type": "dict"
+                      }
+                    }
+                  },
+                  "probability_checks": {
+                    "type": "dict",
+                    "keys": {
+                      "p_base": {
+                        "type": "dict"
+                      },
+                      "p_sigmoid": {
+                        "type": "dict"
+                      },
+                      "p_isotonic": {
+                        "type": "dict"
+                      }
+                    }
+                  },
+                  "target_unique_values": {
+                    "type": "list",
+                    "length": 2,
+                    "first_item": {
+                      "type": "int"
+                    }
+                  },
+                  "locked_test_used": {
+                    "type": "bool",
+                    "value": false
+                  },
+                  "status": {
+                    "type": "str",
+                    "value": "PASS"
+                  }
+                }
+              },
+              "T6": {
+                "type": "dict",
+                "keys": {
+                  "task": {
+                    "type": "str",
+                    "value": "T6"
+                  },
+                  "native_quantity": {
+                    "type": "str",
+                    "value": "query-level retrieval/ranking"
+                  },
+                  "artifact": {
+                    "type": "dict",
+                    "keys": {
+                      "status": {
+                        "type": "str"
+                      },
+                      "path": {
+                        "type": "str"
+                      },
+                      "rows": {
+                        "type": "int"
+                      },
+                      "columns": {
+                        "type": "list"
+                      }
+                    }
+                  },
+                  "checks": {
+                    "type": "dict",
+                    "keys": {
+                      "query_structure": {
+                        "type": "dict"
+                      },
+                      "ranking_structure": {
+                        "type": "dict"
+                      },
+                      "binary_semantics": {
+                        "type": "dict"
+                      },
+                      "observable_non_positive": {
+                        "type": "dict"
+                      }
+                    }
+                  },
+                  "columns": {
+                    "type": "list",
+                    "length": 9,
+                    "first_item": {
+                      "type": "str"
+                    }
+                  },
+                  "query_columns": {
+                    "type": "list",
+                    "length": 1,
+                    "first_item": {
+                      "type": "str"
+                    }
+                  },
+                  "candidate_columns": {
+                    "type": "list",
+                    "length": 1,
+                    "first_item": {
+                      "type": "str"
+                    }
+                  },
+                  "rank_columns": {
+                    "type": "list",
+                    "length": 0
+                  },
+                  "score_columns": {
+                    "type": "list",
+                    "length": 5,
+                    "first_item": {
+                      "type": "str"
+                    }
+                  },
+                  "query_count": {
+                    "type": "int",
+                    "value": 2722
+                  },
+                  "row_count": {
+                    "type": "int",
+                    "value": 274922
+                  },
+                  "status": {
+                    "type": "str",
+                    "value": "PASS"
+                  }
+                }
+              },
+              "T7": {
+                "type": "dict",
+                "keys": {
+                  "task": {
+                    "type": "str",
+                    "value": "T7"
+                  },
+                  "native_quantity": {
+                    "type": "str",
+                    "value": "survival / time-to-event prediction"
+                  },
+                  "artifact": {
+                    "type": "dict",
+                    "keys": {
+                      "status": {
+                        "type": "str"
+                      },
+                      "path": {
+                        "type": "str"
+                      },
+                      "rows": {
+                        "type": "int"
+                      },
+                      "columns": {
+                        "type": "list"
+                      }
+                    }
+                  },
+                  "checks": {
+                    "type": "dict",
+                    "keys": {
+                      "outcome_columns": {
+                        "type": "dict"
+                      },
+                      "survival_columns": {
+                        "type": "dict"
+                      },
+                      "ID_integrity": {
+                        "type": "dict"
+                      },
+                      "event_semantics": {
+                        "type": "dict"
+                      },
+                      "duration": {
+                        "type": "dict"
+                      },
+                      "survival_probability_values": {
+                        "type": "dict"
+                      },
+                      "censoring": {
+                        "type": "dict"
+                      },
+                      "binary_conversion": {
+                        "type": "dict"
+                      }
+                    }
+                  },
+                  "event_values": {
+                    "type": "list",
+                    "length": 2,
+                    "first_item": {
+                      "type": "int"
+                    }
+                  },
+                  "status": {
+                    "type": "str",
+                    "value": "PASS"
+                  }
+                }
+              }
+            }
+          },
+          "accepted_tasks": {
+            "type": "list",
+            "length": 4,
+            "first_item": {
+              "type": "str",
+              "value": "T4"
+            }
+          },
+          "rejected_tasks": {
+            "type": "list",
+            "length": 1,
+            "first_item": {
+              "type": "str",
+              "value": "T2"
+            }
+          },
+          "unavailable_tasks": {
+            "type": "list",
+            "length": 1,
+            "first_item": {
+              "type": "str",
+              "value": "T3"
+            }
+          },
+          "controls": {
+            "type": "dict",
+            "keys": {
+              "model_fitting_performed": {
+                "type": "bool",
+                "value": false
+              },
+              "calibration_fitting_performed": {
+                "type": "bool",
+                "value": false
+              },
+              "model_selection_performed": {
+                "type": "bool",
+                "value": false
+              },
+              "target_creation_performed": {
+                "type": "bool",
+                "value": false
+              },
+              "threshold_selection_performed": {
+                "type": "bool",
+                "value": false
+              },
+              "universal_confidence_created": {
+                "type": "bool",
+                "value": false
+              },
+              "universal_risk_score_created": {
+                "type": "bool",
+                "value": false
+              },
+              "synthetic_target_created": {
+                "type": "bool",
+                "value": false
+              },
+              "t6_observable_non_positive_reinterpreted": {
+                "type": "bool",
+                "value": false
+              },
+              "t6_forced_into_binary_classifier": {
+                "type": "bool",
+                "value": false
+              },
+              "t7_binary_resolution_created": {
+                "type": "bool",
+                "value": false
+              },
+              "t7_censoring_relabelled": {
+                "type": "bool",
+                "value": false
+              },
+              "t7_survival_semantics_preserved": {
+                "type": "bool",
+                "value": true
+              },
+              "locked_test_used_for_calibration_selection": {
+                "type": "bool",
+                "value": false
+              }
+            }
+          },
+          "methodological_constraints": {
+            "type": "dict",
+            "keys": {
+              "task_specific_calibration": {
+                "type": "bool",
+                "value": true
+              },
+              "t4_candidate_space_restriction": {
+                "type": "bool",
+                "value": true
+              },
+              "t4_unseen_target_handling": {
+                "type": "bool",
+                "value": true
+              },
+              "t5_group_aware_structure": {
+                "type": "bool",
+                "value": true
+              },
+              "t6_query_level_structure": {
+                "type": "bool",
+                "value": true
+              },
+              "t6_observable_non_positive_not_true_negative": {
+                "type": "bool",
+                "value": true
+              },
+              "t7_right_censoring": {
+                "type": "bool",
+                "value": true
+              },
+              "t7_not_binary_resolution": {
+                "type": "bool",
+                "value": true
+              },
+              "cross_task_probability_comparability": {
+                "type": "bool",
+                "value": false
+              },
+              "universal_confidence_allowed": {
+                "type": "bool",
+                "value": false
+              }
+            }
+          },
+          "interpretation": {
+            "type": "dict",
+            "keys": {
+              "T2": {
+                "type": "str",
+                "value": "Accepted only as native categorical Priority probability output if probability values and target alignment pass."
+              },
+              "T3": {
+                "type": "str",
+                "value": "No accepted native output; no synthetic probability/confidence may be created."
+              },
+              "T4": {
+                "type": "str",
+                "value": "Accepted as native candidate-space ranking; scores are not assumed to be universal probabilities."
+              },
+              "T5": {
+                "type": "str",
+                "value": "Accepted as native duplicate probability output with frozen binary target and group-aware structure."
+              },
+              "T6": {
+                "type": "str",
+                "value": "Accepted as query-level retrieval/ranking evidence only; not ordinary binary confidence."
+              },
+              "T7": {
+                "type": "str",
+                "value": "Accepted as native survival/time-to-event output with duration/event and censoring semantics preserved."
+              }
+            }
+          }
+        }
+      },
+      "status_candidates": [
+        {
+          "key": "status",
+          "path": "status",
+          "value_type": "str",
+          "value": "FAIL"
+        },
+        {
+          "key": "status",
+          "path": "results.T2.artifact.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "results.T2.checks.required_columns.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "results.T2.checks.ID_integrity.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "results.T2.checks.probability_output.status",
+          "value_type": "str",
+          "value": "FAIL"
+        },
+        {
+          "key": "status",
+          "path": "results.T2.status",
+          "value_type": "str",
+          "value": "FAIL"
+        },
+        {
+          "key": "status",
+          "path": "results.T3.status",
+          "value_type": "str",
+          "value": "NO_ACCEPTED_NATIVE_OUTPUT"
+        },
+        {
+          "key": "status",
+          "path": "results.T4.artifact.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "results.T4.checks.retrieval_keys.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "results.T4.checks.ranking_dimensions.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "results.T4.checks.neighbor_indices.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "results.T4.checks.neighbor_scores.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "results.T4.checks.candidate_space.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "results.T4.checks.unseen_target_semantics.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "results.T4.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "results.T5.artifact.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "results.T5.checks.required_keys.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "results.T5.checks.probability_alignment.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "results.T5.checks.binary_target.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "results.T5.checks.group_aware_structure.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "results.T5.checks.locked_test_boundary.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "results.T5.probability_checks.p_base.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "results.T5.probability_checks.p_sigmoid.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "results.T5.probability_checks.p_isotonic.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "results.T5.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "results.T6.artifact.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "results.T6.checks.query_structure.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "results.T6.checks.ranking_structure.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "results.T6.checks.binary_semantics.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "results.T6.checks.observable_non_positive.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "results.T6.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "results.T7.artifact.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "results.T7.checks.outcome_columns.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "results.T7.checks.survival_columns.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "results.T7.checks.ID_integrity.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "results.T7.checks.event_semantics.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "results.T7.checks.duration.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "results.T7.checks.survival_probability_values.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "results.T7.checks.censoring.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "results.T7.checks.binary_conversion.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "results.T7.status",
+          "value_type": "str",
+          "value": "PASS"
+        }
+      ],
+      "t4_semantic_candidates": [
+        {
+          "key": "T4",
+          "path": "candidate_artifacts.T4",
+          "value_type": "list",
+          "value": null
+        },
+        {
+          "key": "T4",
+          "path": "results.T4",
+          "value_type": "dict",
+          "value": null
+        },
+        {
+          "key": "ranking_dimensions",
+          "path": "results.T4.checks.ranking_dimensions",
+          "value_type": "dict",
+          "value": null
+        },
+        {
+          "key": "ranking_structure",
+          "path": "results.T6.checks.ranking_structure",
+          "value_type": "dict",
+          "value": null
+        },
+        {
+          "key": "t4_candidate_space_restriction",
+          "path": "methodological_constraints.t4_candidate_space_restriction",
+          "value_type": "bool",
+          "value": true
+        },
+        {
+          "key": "t4_unseen_target_handling",
+          "path": "methodological_constraints.t4_unseen_target_handling",
+          "value_type": "bool",
+          "value": true
+        },
+        {
+          "key": "T4",
+          "path": "interpretation.T4",
+          "value_type": "str",
+          "value": "Accepted as native candidate-space ranking; scores are not assumed to be universal probabilities."
+        }
+      ],
+      "control_candidates": [
+        {
+          "key": "probability_output",
+          "path": "results.T2.checks.probability_output",
+          "value_type": "dict",
+          "value": null
+        },
+        {
+          "key": "probability_columns",
+          "path": "results.T2.probability_columns",
+          "value_type": "list",
+          "value": null
+        },
+        {
+          "key": "unseen_target_semantics",
+          "path": "results.T4.checks.unseen_target_semantics",
+          "value_type": "dict",
+          "value": null
+        },
+        {
+          "key": "probability_alignment",
+          "path": "results.T5.checks.probability_alignment",
+          "value_type": "dict",
+          "value": null
+        },
+        {
+          "key": "locked_test_boundary",
+          "path": "results.T5.checks.locked_test_boundary",
+          "value_type": "dict",
+          "value": null
+        },
+        {
+          "key": "probability_checks",
+          "path": "results.T5.probability_checks",
+          "value_type": "dict",
+          "value": null
+        },
+        {
+          "key": "locked_test_used",
+          "path": "results.T5.locked_test_used",
+          "value_type": "bool",
+          "value": false
+        },
+        {
+          "key": "survival_probability_values",
+          "path": "results.T7.checks.survival_probability_values",
+          "value_type": "dict",
+          "value": null
+        },
+        {
+          "key": "controls",
+          "path": "controls",
+          "value_type": "dict",
+          "value": null
+        },
+        {
+          "key": "threshold_selection_performed",
+          "path": "controls.threshold_selection_performed",
+          "value_type": "bool",
+          "value": false
+        },
+        {
+          "key": "universal_confidence_created",
+          "path": "controls.universal_confidence_created",
+          "value_type": "bool",
+          "value": false
+        },
+        {
+          "key": "synthetic_target_created",
+          "path": "controls.synthetic_target_created",
+          "value_type": "bool",
+          "value": false
+        },
+        {
+          "key": "locked_test_used_for_calibration_selection",
+          "path": "controls.locked_test_used_for_calibration_selection",
+          "value_type": "bool",
+          "value": false
+        },
+        {
+          "key": "t4_unseen_target_handling",
+          "path": "methodological_constraints.t4_unseen_target_handling",
+          "value_type": "bool",
+          "value": true
+        },
+        {
+          "key": "cross_task_probability_comparability",
+          "path": "methodological_constraints.cross_task_probability_comparability",
+          "value_type": "bool",
+          "value": false
+        },
+        {
+          "key": "universal_confidence_allowed",
+          "path": "methodological_constraints.universal_confidence_allowed",
+          "value_type": "bool",
+          "value": false
+        }
+      ]
+    },
+    {
+      "artifact_name": "OP-005",
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op005_output_semantics_lock.json",
+      "top_level_keys": [
+        "operation",
+        "title",
+        "status",
+        "purpose",
+        "previous_operation_artifacts",
+        "previous_operation_validation",
+        "task_boundary",
+        "empirical_calibration_tasks",
+        "native_evaluation_tasks",
+        "unavailable_tasks",
+        "global_restrictions",
+        "global_control_validation",
+        "closure_statement"
+      ],
+      "top_level_key_count": 13,
+      "schema_summary": {
+        "type": "dict",
+        "keys": {
+          "operation": {
+            "type": "str",
+            "value": "T9_MOD-037_OP-005"
+          },
+          "title": {
+            "type": "str",
+            "value": "Accepted Native Output Population & Semantics Lock"
+          },
+          "status": {
+            "type": "str",
+            "value": "PASS"
+          },
+          "purpose": {
+            "type": "str",
+            "value": "Freeze the empirical T9 output boundary and task-specific semantics before calibration/evaluation procedures are selected or fitted."
+          },
+          "previous_operation_artifacts": {
+            "type": "dict",
+            "keys": {
+              "OP-003": {
+                "type": "str",
+                "value": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op003_calibration_feasibility.json"
+              },
+              "OP-004": {
+                "type": "str",
+                "value": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op004_native_output_acceptance.json"
+              },
+              "OP-004A": {
+                "type": "str",
+                "value": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op004a_t2_probability_resolution.json"
+              }
+            }
+          },
+          "previous_operation_validation": {
+            "type": "dict",
+            "keys": {
+              "checks": {
+                "type": "dict",
+                "keys": {
+                  "op003_status": {
+                    "type": "dict",
+                    "keys": {
+                      "status": {
+                        "type": "str"
+                      },
+                      "observed": {
+                        "type": "str"
+                      }
+                    }
+                  },
+                  "op003_task_feasibility": {
+                    "type": "dict",
+                    "keys": {
+                      "T2": {
+                        "type": "dict"
+                      },
+                      "T3": {
+                        "type": "dict"
+                      },
+                      "T4": {
+                        "type": "dict"
+                      },
+                      "T5": {
+                        "type": "dict"
+                      },
+                      "T6": {
+                        "type": "dict"
+                      },
+                      "T7": {
+                        "type": "dict"
+                      }
+                    }
+                  },
+                  "op004_status": {
+                    "type": "dict",
+                    "keys": {
+                      "status": {
+                        "type": "str"
+                      },
+                      "observed": {
+                        "type": "str"
+                      },
+                      "reason": {
+                        "type": "str"
+                      }
+                    }
+                  },
+                  "op004_task_results": {
+                    "type": "dict",
+                    "keys": {
+                      "T2": {
+                        "type": "dict"
+                      },
+                      "T3": {
+                        "type": "dict"
+                      },
+                      "T4": {
+                        "type": "dict"
+                      },
+                      "T5": {
+                        "type": "dict"
+                      },
+                      "T6": {
+                        "type": "dict"
+                      },
+                      "T7": {
+                        "type": "dict"
+                      }
+                    }
+                  },
+                  "op004a_status": {
+                    "type": "dict",
+                    "keys": {
+                      "status": {
+                        "type": "str"
+                      },
+                      "observed": {
+                        "type": "str"
+                      }
+                    }
+                  },
+                  "op004a_exact_probability_candidates": {
+                    "type": "dict",
+                    "keys": {
+                      "status": {
+                        "type": "str"
+                      },
+                      "expected": {
+                        "type": "int"
+                      },
+                      "observed": {
+                        "type": "int"
+                      }
+                    }
+                  },
+                  "op004a_accepted_probability_artifacts": {
+                    "type": "dict",
+                    "keys": {
+                      "status": {
+                        "type": "str"
+                      },
+                      "expected": {
+                        "type": "int"
+                      },
+                      "observed": {
+                        "type": "int"
+                      }
+                    }
+                  }
+                }
+              },
+              "failed_check_paths": {
+                "type": "list",
+                "length": 0
+              },
+              "status": {
+                "type": "str",
+                "value": "PASS"
+              }
+            }
+          },
+          "task_boundary": {
+            "type": "dict",
+            "keys": {
+              "T2": {
+                "type": "dict",
+                "keys": {
+                  "status": {
+                    "type": "str",
+                    "value": "UNAVAILABLE_FOR_PROBABILITY_CALIBRATION"
+                  },
+                  "native_quantity": {
+                    "type": "str",
+                    "value": "Hard-label categorical Priority prediction"
+                  },
+                  "native_probability_output": {
+                    "type": "bool",
+                    "value": false
+                  },
+                  "accepted_for_calibration": {
+                    "type": "bool",
+                    "value": false
+                  },
+                  "reason": {
+                    "type": "str",
+                    "value": "Existing T2 prediction artifacts contain hard predictions but no native T2_probability_P1 through T2_probability_P5 probability artifact was found within the T2 evidence boundary."
+                  },
+                  "allowed_use": {
+                    "type": "list",
+                    "length": 2,
+                    "first_item": {
+                      "type": "str"
+                    }
+                  },
+                  "prohibited_use": {
+                    "type": "list",
+                    "length": 3,
+                    "first_item": {
+                      "type": "str"
+                    }
+                  }
+                }
+              },
+              "T3": {
+                "type": "dict",
+                "keys": {
+                  "status": {
+                    "type": "str",
+                    "value": "UNAVAILABLE"
+                  },
+                  "native_quantity": {
+                    "type": "str",
+                    "value": "Operational Severity prediction"
+                  },
+                  "native_probability_output": {
+                    "type": "bool",
+                    "value": false
+                  },
+                  "accepted_for_calibration": {
+                    "type": "bool",
+                    "value": false
+                  },
+                  "reason": {
+                    "type": "str",
+                    "value": "OP-003 identified no native prediction/probability artifact suitable for the T9 acceptance boundary."
+                  },
+                  "allowed_use": {
+                    "type": "list",
+                    "length": 1,
+                    "first_item": {
+                      "type": "str"
+                    }
+                  },
+                  "prohibited_use": {
+                    "type": "list",
+                    "length": 3,
+                    "first_item": {
+                      "type": "str"
+                    }
+                  }
+                }
+              },
+              "T4": {
+                "type": "dict",
+                "keys": {
+                  "status": {
+                    "type": "str",
+                    "value": "ACCEPTED_NATIVE_RANKING"
+                  },
+                  "native_quantity": {
+                    "type": "str",
+                    "value": "Candidate-space assignee retrieval/ranking"
+                  },
+                  "native_probability_output": {
+                    "type": "bool",
+                    "value": false
+                  },
+                  "accepted_for_calibration": {
+                    "type": "bool",
+                    "value": false
+                  },
+                  "accepted_for_native_evaluation": {
+                    "type": "bool",
+                    "value": true
+                  },
+                  "artifact": {
+                    "type": "str",
+                    "value": "modeling/T4/results/mod011_checkpoints/t4_mod011_retrieval.npz"
+                  },
+                  "native_outputs": {
+                    "type": "list",
+                    "length": 2,
+                    "first_item": {
+                      "type": "str"
+                    }
+                  },
+                  "population": {
+                    "type": "str",
+                    "value": "T4 native retrieval evaluation population"
+                  },
+                  "semantic_restrictions": {
+                    "type": "list",
+                    "length": 4,
+                    "first_item": {
+                      "type": "str"
+                    }
+                  },
+                  "calibration_boundary": {
+                    "type": "str",
+                    "value": "Any later confidence/calibration formulation must be defined specifically for the T4 ranking/candidate space and must not invent a universal probability."
+                  }
+                }
+              },
+              "T5": {
+                "type": "dict",
+                "keys": {
+                  "status": {
+                    "type": "str",
+                    "value": "ACCEPTED_NATIVE_PROBABILITY"
+                  },
+                  "native_quantity": {
+                    "type": "str",
+                    "value": "Duplicate probability"
+                  },
+                  "native_probability_output": {
+                    "type": "bool",
+                    "value": true
+                  },
+                  "accepted_for_calibration": {
+                    "type": "bool",
+                    "value": true
+                  },
+                  "artifact": {
+                    "type": "str",
+                    "value": "modeling/T5/metrics/t5_mod007_calibrated_validation_predictions.npz"
+                  },
+                  "native_outputs": {
+                    "type": "list",
+                    "length": 4,
+                    "first_item": {
+                      "type": "str"
+                    }
+                  },
+                  "target": {
+                    "type": "str",
+                    "value": "T5 target"
+                  },
+                  "population": {
+                    "type": "str",
+                    "value": "T5 model validation population"
+                  },
+                  "semantic_restrictions": {
+                    "type": "list",
+                    "length": 4,
+                    "first_item": {
+                      "type": "str"
+                    }
+                  },
+                  "calibration_boundary": {
+                    "type": "str",
+                    "value": "Task-specific duplicate-probability calibration may proceed using the accepted native development/validation output under the established T5 structure."
+                  }
+                }
+              },
+              "T6": {
+                "type": "dict",
+                "keys": {
+                  "status": {
+                    "type": "str",
+                    "value": "ACCEPTED_NATIVE_RANKING"
+                  },
+                  "native_quantity": {
+                    "type": "str",
+                    "value": "Query-level candidate retrieval/ranking"
+                  },
+                  "native_probability_output": {
+                    "type": "bool",
+                    "value": false
+                  },
+                  "accepted_for_calibration": {
+                    "type": "bool",
+                    "value": false
+                  },
+                  "accepted_for_native_evaluation": {
+                    "type": "bool",
+                    "value": true
+                  },
+                  "artifact": {
+                    "type": "str",
+                    "value": "modeling/T6/metrics/t6_mod010_corrected_hybrid_query_rankings.csv"
+                  },
+                  "native_outputs": {
+                    "type": "list",
+                    "length": 2,
+                    "first_item": {
+                      "type": "str"
+                    }
+                  },
+                  "semantic_restrictions": {
+                    "type": "list",
+                    "length": 4,
+                    "first_item": {
+                      "type": "str"
+                    }
+                  },
+                  "calibration_boundary": {
+                    "type": "str",
+                    "value": "Any later T6 confidence formulation must be defined around native query-level retrieval/ranking semantics rather than ordinary binary probability calibration."
+                  }
+                }
+              },
+              "T7": {
+                "type": "dict",
+                "keys": {
+                  "status": {
+                    "type": "str",
+                    "value": "ACCEPTED_NATIVE_SURVIVAL"
+                  },
+                  "native_quantity": {
+                    "type": "str",
+                    "value": "Survival / time-to-event prediction"
+                  },
+                  "native_probability_output": {
+                    "type": "bool",
+                    "value": true
+                  },
+                  "accepted_for_calibration": {
+                    "type": "bool",
+                    "value": true
+                  },
+                  "artifact": {
+                    "type": "str",
+                    "value": "modeling/T7/derived/t7_mod007_evaluation_predictions.csv"
+                  },
+                  "native_outputs": {
+                    "type": "list",
+                    "length": 4,
+                    "first_item": {
+                      "type": "str"
+                    }
+                  },
+                  "outcomes": {
+                    "type": "list",
+                    "length": 2,
+                    "first_item": {
+                      "type": "str"
+                    }
+                  },
+                  "semantic_restrictions": {
+                    "type": "list",
+                    "length": 5,
+                    "first_item": {
+                      "type": "str"
+                    }
+                  },
+                  "calibration_boundary": {
+                    "type": "str",
+                    "value": "Later T7 calibration must retain survival semantics and right censoring."
+                  }
+                }
+              }
+            }
+          },
+          "empirical_calibration_tasks": {
+            "type": "list",
+            "length": 2,
+            "first_item": {
+              "type": "str",
+              "value": "T5"
+            }
+          },
+          "native_evaluation_tasks": {
+            "type": "list",
+            "length": 2,
+            "first_item": {
+              "type": "str",
+              "value": "T4"
+            }
+          },
+          "unavailable_tasks": {
+            "type": "list",
+            "length": 2,
+            "first_item": {
+              "type": "str",
+              "value": "T2"
+            }
+          },
+          "global_restrictions": {
+            "type": "dict",
+            "keys": {
+              "task_specific_calibration_only": {
+                "type": "bool",
+                "value": true
+              },
+              "universal_confidence_score": {
+                "type": "bool",
+                "value": false
+              },
+              "universal_risk_score": {
+                "type": "bool",
+                "value": false
+              },
+              "cross_task_probability_comparability": {
+                "type": "bool",
+                "value": false
+              },
+              "synthetic_target_creation": {
+                "type": "bool",
+                "value": false
+              },
+              "synthetic_probability_creation": {
+                "type": "bool",
+                "value": false
+              },
+              "blind_probability_averaging": {
+                "type": "bool",
+                "value": false
+              },
+              "arbitrary_cross_task_weights": {
+                "type": "bool",
+                "value": false
+              },
+              "post_creation_features_allowed": {
+                "type": "bool",
+                "value": false
+              },
+              "t6_observable_non_positive_as_true_negative": {
+                "type": "bool",
+                "value": false
+              },
+              "t7_binary_resolution_conversion": {
+                "type": "bool",
+                "value": false
+              },
+              "t7_censoring_relabelling": {
+                "type": "bool",
+                "value": false
+              },
+              "locked_test_for_calibration_selection": {
+                "type": "bool",
+                "value": false
+              }
+            }
+          },
+          "global_control_validation": {
+            "type": "dict",
+            "keys": {
+              "checks": {
+                "type": "dict",
+                "keys": {
+                  "task_specific_calibration_only": {
+                    "type": "dict",
+                    "keys": {
+                      "status": {
+                        "type": "str"
+                      },
+                      "value": {
+                        "type": "bool"
+                      }
+                    }
+                  },
+                  "universal_confidence_score": {
+                    "type": "dict",
+                    "keys": {
+                      "status": {
+                        "type": "str"
+                      },
+                      "value": {
+                        "type": "bool"
+                      }
+                    }
+                  },
+                  "universal_risk_score": {
+                    "type": "dict",
+                    "keys": {
+                      "status": {
+                        "type": "str"
+                      },
+                      "value": {
+                        "type": "bool"
+                      }
+                    }
+                  },
+                  "cross_task_probability_comparability": {
+                    "type": "dict",
+                    "keys": {
+                      "status": {
+                        "type": "str"
+                      },
+                      "value": {
+                        "type": "bool"
+                      }
+                    }
+                  },
+                  "synthetic_target_creation": {
+                    "type": "dict",
+                    "keys": {
+                      "status": {
+                        "type": "str"
+                      },
+                      "value": {
+                        "type": "bool"
+                      }
+                    }
+                  },
+                  "synthetic_probability_creation": {
+                    "type": "dict",
+                    "keys": {
+                      "status": {
+                        "type": "str"
+                      },
+                      "value": {
+                        "type": "bool"
+                      }
+                    }
+                  },
+                  "blind_probability_averaging": {
+                    "type": "dict",
+                    "keys": {
+                      "status": {
+                        "type": "str"
+                      },
+                      "value": {
+                        "type": "bool"
+                      }
+                    }
+                  },
+                  "arbitrary_cross_task_weights": {
+                    "type": "dict",
+                    "keys": {
+                      "status": {
+                        "type": "str"
+                      },
+                      "value": {
+                        "type": "bool"
+                      }
+                    }
+                  },
+                  "post_creation_features_allowed": {
+                    "type": "dict",
+                    "keys": {
+                      "status": {
+                        "type": "str"
+                      },
+                      "value": {
+                        "type": "bool"
+                      }
+                    }
+                  },
+                  "t6_observable_non_positive_as_true_negative": {
+                    "type": "dict",
+                    "keys": {
+                      "status": {
+                        "type": "str"
+                      },
+                      "value": {
+                        "type": "bool"
+                      }
+                    }
+                  },
+                  "t7_binary_resolution_conversion": {
+                    "type": "dict",
+                    "keys": {
+                      "status": {
+                        "type": "str"
+                      },
+                      "value": {
+                        "type": "bool"
+                      }
+                    }
+                  },
+                  "t7_censoring_relabelling": {
+                    "type": "dict",
+                    "keys": {
+                      "status": {
+                        "type": "str"
+                      },
+                      "value": {
+                        "type": "bool"
+                      }
+                    }
+                  },
+                  "locked_test_for_calibration_selection": {
+                    "type": "dict",
+                    "keys": {
+                      "status": {
+                        "type": "str"
+                      },
+                      "value": {
+                        "type": "bool"
+                      }
+                    }
+                  }
+                }
+              },
+              "failed_checks": {
+                "type": "list",
+                "length": 0
+              },
+              "status": {
+                "type": "str",
+                "value": "PASS"
+              }
+            }
+          },
+          "closure_statement": {
+            "type": "str",
+            "value": "The T9 empirical boundary is frozen at the task-specific native-output level. T5 is the currently accepted native probability output. T4 and T6 remain native ranking quantities. T7 remains native survival/time-to-event output. T2 probability calibration is unavailable because no native probability artifact exists. T3 has no accepted native prediction artifact. No universal confidence or risk score is established."
+          }
+        }
+      },
+      "status_candidates": [
+        {
+          "key": "status",
+          "path": "status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "previous_operation_validation.checks.op003_status.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "previous_operation_validation.checks.op003_task_feasibility.T2.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "previous_operation_validation.checks.op003_task_feasibility.T3.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "previous_operation_validation.checks.op003_task_feasibility.T4.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "previous_operation_validation.checks.op003_task_feasibility.T5.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "previous_operation_validation.checks.op003_task_feasibility.T6.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "previous_operation_validation.checks.op003_task_feasibility.T7.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "previous_operation_validation.checks.op004_status.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "previous_operation_validation.checks.op004_task_results.T2.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "previous_operation_validation.checks.op004_task_results.T3.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "previous_operation_validation.checks.op004_task_results.T4.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "previous_operation_validation.checks.op004_task_results.T5.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "previous_operation_validation.checks.op004_task_results.T6.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "previous_operation_validation.checks.op004_task_results.T7.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "previous_operation_validation.checks.op004a_status.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "previous_operation_validation.checks.op004a_exact_probability_candidates.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "previous_operation_validation.checks.op004a_accepted_probability_artifacts.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "previous_operation_validation.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "task_boundary.T2.status",
+          "value_type": "str",
+          "value": "UNAVAILABLE_FOR_PROBABILITY_CALIBRATION"
+        },
+        {
+          "key": "status",
+          "path": "task_boundary.T3.status",
+          "value_type": "str",
+          "value": "UNAVAILABLE"
+        },
+        {
+          "key": "status",
+          "path": "task_boundary.T4.status",
+          "value_type": "str",
+          "value": "ACCEPTED_NATIVE_RANKING"
+        },
+        {
+          "key": "status",
+          "path": "task_boundary.T5.status",
+          "value_type": "str",
+          "value": "ACCEPTED_NATIVE_PROBABILITY"
+        },
+        {
+          "key": "status",
+          "path": "task_boundary.T6.status",
+          "value_type": "str",
+          "value": "ACCEPTED_NATIVE_RANKING"
+        },
+        {
+          "key": "status",
+          "path": "task_boundary.T7.status",
+          "value_type": "str",
+          "value": "ACCEPTED_NATIVE_SURVIVAL"
+        },
+        {
+          "key": "status",
+          "path": "global_control_validation.checks.task_specific_calibration_only.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "global_control_validation.checks.universal_confidence_score.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "global_control_validation.checks.universal_risk_score.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "global_control_validation.checks.cross_task_probability_comparability.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "global_control_validation.checks.synthetic_target_creation.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "global_control_validation.checks.synthetic_probability_creation.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "global_control_validation.checks.blind_probability_averaging.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "global_control_validation.checks.arbitrary_cross_task_weights.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "global_control_validation.checks.post_creation_features_allowed.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "global_control_validation.checks.t6_observable_non_positive_as_true_negative.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "global_control_validation.checks.t7_binary_resolution_conversion.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "global_control_validation.checks.t7_censoring_relabelling.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "global_control_validation.checks.locked_test_for_calibration_selection.status",
+          "value_type": "str",
+          "value": "PASS"
+        },
+        {
+          "key": "status",
+          "path": "global_control_validation.status",
+          "value_type": "str",
+          "value": "PASS"
+        }
+      ],
+      "t4_semantic_candidates": [
+        {
+          "key": "T4",
+          "path": "previous_operation_validation.checks.op003_task_feasibility.T4",
+          "value_type": "dict",
+          "value": null
+        },
+        {
+          "key": "T4",
+          "path": "previous_operation_validation.checks.op004_task_results.T4",
+          "value_type": "dict",
+          "value": null
+        },
+        {
+          "key": "T4",
+          "path": "task_boundary.T4",
+          "value_type": "dict",
+          "value": null
+        }
+      ],
+      "control_candidates": [
+        {
+          "key": "op004a_exact_probability_candidates",
+          "path": "previous_operation_validation.checks.op004a_exact_probability_candidates",
+          "value_type": "dict",
+          "value": null
+        },
+        {
+          "key": "op004a_accepted_probability_artifacts",
+          "path": "previous_operation_validation.checks.op004a_accepted_probability_artifacts",
+          "value_type": "dict",
+          "value": null
+        },
+        {
+          "key": "native_probability_output",
+          "path": "task_boundary.T2.native_probability_output",
+          "value_type": "bool",
+          "value": false
+        },
+        {
+          "key": "native_probability_output",
+          "path": "task_boundary.T3.native_probability_output",
+          "value_type": "bool",
+          "value": false
+        },
+        {
+          "key": "native_probability_output",
+          "path": "task_boundary.T4.native_probability_output",
+          "value_type": "bool",
+          "value": false
+        },
+        {
+          "key": "native_probability_output",
+          "path": "task_boundary.T5.native_probability_output",
+          "value_type": "bool",
+          "value": true
+        },
+        {
+          "key": "native_probability_output",
+          "path": "task_boundary.T6.native_probability_output",
+          "value_type": "bool",
+          "value": false
+        },
+        {
+          "key": "native_probability_output",
+          "path": "task_boundary.T7.native_probability_output",
+          "value_type": "bool",
+          "value": true
+        },
+        {
+          "key": "universal_confidence_score",
+          "path": "global_restrictions.universal_confidence_score",
+          "value_type": "bool",
+          "value": false
+        },
+        {
+          "key": "cross_task_probability_comparability",
+          "path": "global_restrictions.cross_task_probability_comparability",
+          "value_type": "bool",
+          "value": false
+        },
+        {
+          "key": "synthetic_target_creation",
+          "path": "global_restrictions.synthetic_target_creation",
+          "value_type": "bool",
+          "value": false
+        },
+        {
+          "key": "synthetic_probability_creation",
+          "path": "global_restrictions.synthetic_probability_creation",
+          "value_type": "bool",
+          "value": false
+        },
+        {
+          "key": "blind_probability_averaging",
+          "path": "global_restrictions.blind_probability_averaging",
+          "value_type": "bool",
+          "value": false
+        },
+        {
+          "key": "post_creation_features_allowed",
+          "path": "global_restrictions.post_creation_features_allowed",
+          "value_type": "bool",
+          "value": false
+        },
+        {
+          "key": "locked_test_for_calibration_selection",
+          "path": "global_restrictions.locked_test_for_calibration_selection",
+          "value_type": "bool",
+          "value": false
+        },
+        {
+          "key": "global_control_validation",
+          "path": "global_control_validation",
+          "value_type": "dict",
+          "value": null
+        },
+        {
+          "key": "universal_confidence_score",
+          "path": "global_control_validation.checks.universal_confidence_score",
+          "value_type": "dict",
+          "value": null
+        },
+        {
+          "key": "cross_task_probability_comparability",
+          "path": "global_control_validation.checks.cross_task_probability_comparability",
+          "value_type": "dict",
+          "value": null
+        },
+        {
+          "key": "synthetic_target_creation",
+          "path": "global_control_validation.checks.synthetic_target_creation",
+          "value_type": "dict",
+          "value": null
+        },
+        {
+          "key": "synthetic_probability_creation",
+          "path": "global_control_validation.checks.synthetic_probability_creation",
+          "value_type": "dict",
+          "value": null
+        },
+        {
+          "key": "blind_probability_averaging",
+          "path": "global_control_validation.checks.blind_probability_averaging",
+          "value_type": "dict",
+          "value": null
+        },
+        {
+          "key": "post_creation_features_allowed",
+          "path": "global_control_validation.checks.post_creation_features_allowed",
+          "value_type": "dict",
+          "value": null
+        },
+        {
+          "key": "locked_test_for_calibration_selection",
+          "path": "global_control_validation.checks.locked_test_for_calibration_selection",
+          "value_type": "dict",
+          "value": null
+        }
+      ]
+    },
+    {
+      "artifact_name": "T8 OP-020",
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/mod036/op020/t8_mod036_op020_assignment_component_baseline.json",
+      "top_level_keys": [
+        "operation",
+        "component",
+        "status",
+        "sources",
+        "population",
+        "native_semantics",
+        "alignment",
+        "metrics",
+        "outputs",
+        "controls"
+      ],
+      "top_level_key_count": 10,
+      "schema_summary": {
+        "type": "dict",
+        "keys": {
+          "operation": {
+            "type": "str",
+            "value": "MOD-036 OP-020"
+          },
+          "component": {
+            "type": "str",
+            "value": "assignment"
+          },
+          "status": {
+            "type": "str",
+            "value": "PASS"
+          },
+          "sources": {
+            "type": "dict",
+            "keys": {
+              "t4_train": {
+                "type": "str",
+                "value": "modeling/T4/derived/t4_train.csv"
+              },
+              "t4_eval": {
+                "type": "str",
+                "value": "modeling/T4/derived/t4_eval.csv"
+              },
+              "retrieval": {
+                "type": "str",
+                "value": "modeling/T4/results/mod011_checkpoints/t4_mod011_retrieval.npz"
+              }
+            }
+          },
+          "population": {
+            "type": "dict",
+            "keys": {
+              "train_rows": {
+                "type": "int",
+                "value": 142501
+              },
+              "evaluation_rows": {
+                "type": "int",
+                "value": 35626
+              },
+              "train_unique_ids": {
+                "type": "int",
+                "value": 142501
+              },
+              "evaluation_unique_ids": {
+                "type": "int",
+                "value": 35626
+              }
+            }
+          },
+          "native_semantics": {
+            "type": "dict",
+            "keys": {
+              "task_type": {
+                "type": "str",
+                "value": "candidate_ranking"
+              },
+              "target": {
+                "type": "str",
+                "value": "target_assignee"
+              },
+              "recommendation_type": {
+                "type": "str",
+                "value": "ranked_assignment_candidates"
+              },
+              "neighbor_count": {
+                "type": "int",
+                "value": 20
+              },
+              "retrieval_keys": {
+                "type": "list",
+                "length": 2,
+                "first_item": {
+                  "type": "str",
+                  "value": "neighbor_indices"
+                }
+              }
+            }
+          },
+          "alignment": {
+            "type": "dict",
+            "keys": {
+              "retrieval_rows": {
+                "type": "int",
+                "value": 35626
+              },
+              "evaluation_rows": {
+                "type": "int",
+                "value": 35626
+              },
+              "aligned": {
+                "type": "bool",
+                "value": true
+              },
+              "invalid_neighbor_indices": {
+                "type": "int",
+                "value": 0
+              }
+            }
+          },
+          "metrics": {
+            "type": "dict",
+            "keys": {
+              "top1_accuracy": {
+                "type": "float",
+                "value": 0.26626621007129625
+              },
+              "top3_recall": {
+                "type": "float",
+                "value": 0.33489586257227866
+              },
+              "top5_recall": {
+                "type": "float",
+                "value": 0.36493010722506036
+              },
+              "top10_recall": {
+                "type": "float",
+                "value": 0.40607982933812387
+              },
+              "top20_recall": {
+                "type": "float",
+                "value": 0.4354404086902824
+              },
+              "target_present_rows": {
+                "type": "int",
+                "value": 15513
+              },
+              "unseen_target_rows": {
+                "type": "int",
+                "value": 20113
+              },
+              "unseen_target_rate": {
+                "type": "float",
+                "value": 0.5645595913097177
+              },
+              "no_recommendation_rows": {
+                "type": "int",
+                "value": 0
+              },
+              "no_recommendation_rate": {
+                "type": "float",
+                "value": 0.0
+              }
+            }
+          },
+          "outputs": {
+            "type": "dict",
+            "keys": {
+              "predictions": {
+                "type": "str",
+                "value": "modeling/T8/mod036/op020/t8_mod036_op020_assignment_predictions.csv"
+              }
+            }
+          },
+          "controls": {
+            "type": "dict",
+            "keys": {
+              "post_creation_information_used": {
+                "type": "bool",
+                "value": false
+              },
+              "locked_t4_evaluation_used": {
+                "type": "bool",
+                "value": false
+              },
+              "target_converted_to_negative": {
+                "type": "bool",
+                "value": false
+              },
+              "candidate_universe_expanded": {
+                "type": "bool",
+                "value": false
+              },
+              "probability_conversion_performed": {
+                "type": "bool",
+                "value": false
+              },
+              "blind_probability_averaging": {
+                "type": "bool",
+                "value": false
+              },
+              "arbitrary_cross_task_weighting": {
+                "type": "bool",
+                "value": false
+              }
+            }
+          }
+        }
+      },
+      "status_candidates": [
+        {
+          "key": "status",
+          "path": "status",
+          "value_type": "str",
+          "value": "PASS"
+        }
+      ],
+      "t4_semantic_candidates": [
+        {
+          "key": "t4_train",
+          "path": "sources.t4_train",
+          "value_type": "str",
+          "value": "modeling/T4/derived/t4_train.csv"
+        },
+        {
+          "key": "t4_eval",
+          "path": "sources.t4_eval",
+          "value_type": "str",
+          "value": "modeling/T4/derived/t4_eval.csv"
+        },
+        {
+          "key": "locked_t4_evaluation_used",
+          "path": "controls.locked_t4_evaluation_used",
+          "value_type": "bool",
+          "value": false
+        }
+      ],
+      "control_candidates": [
+        {
+          "key": "unseen_target_rows",
+          "path": "metrics.unseen_target_rows",
+          "value_type": "int",
+          "value": 20113
+        },
+        {
+          "key": "unseen_target_rate",
+          "path": "metrics.unseen_target_rate",
+          "value_type": "float",
+          "value": 0.5645595913097177
+        },
+        {
+          "key": "controls",
+          "path": "controls",
+          "value_type": "dict",
+          "value": null
+        },
+        {
+          "key": "post_creation_information_used",
+          "path": "controls.post_creation_information_used",
+          "value_type": "bool",
+          "value": false
+        },
+        {
+          "key": "probability_conversion_performed",
+          "path": "controls.probability_conversion_performed",
+          "value_type": "bool",
+          "value": false
+        },
+        {
+          "key": "blind_probability_averaging",
+          "path": "controls.blind_probability_averaging",
+          "value_type": "bool",
+          "value": false
+        }
+      ]
+    }
+  ],
+  "candidate_key_inventory": {
+    "OP-004": [
+      {
+        "key": "status",
+        "path": "status",
+        "value_type": "str",
+        "value": "FAIL"
+      },
+      {
+        "key": "status",
+        "path": "results.T2.artifact.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "results.T2.checks.required_columns.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "results.T2.checks.ID_integrity.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "results.T2.checks.probability_output.status",
+        "value_type": "str",
+        "value": "FAIL"
+      },
+      {
+        "key": "status",
+        "path": "results.T2.status",
+        "value_type": "str",
+        "value": "FAIL"
+      },
+      {
+        "key": "status",
+        "path": "results.T3.status",
+        "value_type": "str",
+        "value": "NO_ACCEPTED_NATIVE_OUTPUT"
+      },
+      {
+        "key": "status",
+        "path": "results.T4.artifact.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "results.T4.checks.retrieval_keys.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "results.T4.checks.ranking_dimensions.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "results.T4.checks.neighbor_indices.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "results.T4.checks.neighbor_scores.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "results.T4.checks.candidate_space.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "results.T4.checks.unseen_target_semantics.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "results.T4.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "results.T5.artifact.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "results.T5.checks.required_keys.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "results.T5.checks.probability_alignment.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "results.T5.checks.binary_target.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "results.T5.checks.group_aware_structure.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "results.T5.checks.locked_test_boundary.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "results.T5.probability_checks.p_base.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "results.T5.probability_checks.p_sigmoid.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "results.T5.probability_checks.p_isotonic.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "results.T5.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "results.T6.artifact.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "results.T6.checks.query_structure.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "results.T6.checks.ranking_structure.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "results.T6.checks.binary_semantics.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "results.T6.checks.observable_non_positive.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "results.T6.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "results.T7.artifact.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "results.T7.checks.outcome_columns.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "results.T7.checks.survival_columns.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "results.T7.checks.ID_integrity.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "results.T7.checks.event_semantics.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "results.T7.checks.duration.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "results.T7.checks.survival_probability_values.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "results.T7.checks.censoring.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "results.T7.checks.binary_conversion.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "results.T7.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "T4",
+        "path": "candidate_artifacts.T4",
+        "value_type": "list",
+        "value": null
+      },
+      {
+        "key": "T4",
+        "path": "results.T4",
+        "value_type": "dict",
+        "value": null
+      },
+      {
+        "key": "ranking_dimensions",
+        "path": "results.T4.checks.ranking_dimensions",
+        "value_type": "dict",
+        "value": null
+      },
+      {
+        "key": "ranking_structure",
+        "path": "results.T6.checks.ranking_structure",
+        "value_type": "dict",
+        "value": null
+      },
+      {
+        "key": "t4_candidate_space_restriction",
+        "path": "methodological_constraints.t4_candidate_space_restriction",
+        "value_type": "bool",
+        "value": true
+      },
+      {
+        "key": "t4_unseen_target_handling",
+        "path": "methodological_constraints.t4_unseen_target_handling",
+        "value_type": "bool",
+        "value": true
+      },
+      {
+        "key": "T4",
+        "path": "interpretation.T4",
+        "value_type": "str",
+        "value": "Accepted as native candidate-space ranking; scores are not assumed to be universal probabilities."
+      },
+      {
+        "key": "probability_output",
+        "path": "results.T2.checks.probability_output",
+        "value_type": "dict",
+        "value": null
+      },
+      {
+        "key": "probability_columns",
+        "path": "results.T2.probability_columns",
+        "value_type": "list",
+        "value": null
+      },
+      {
+        "key": "unseen_target_semantics",
+        "path": "results.T4.checks.unseen_target_semantics",
+        "value_type": "dict",
+        "value": null
+      },
+      {
+        "key": "probability_alignment",
+        "path": "results.T5.checks.probability_alignment",
+        "value_type": "dict",
+        "value": null
+      },
+      {
+        "key": "locked_test_boundary",
+        "path": "results.T5.checks.locked_test_boundary",
+        "value_type": "dict",
+        "value": null
+      },
+      {
+        "key": "probability_checks",
+        "path": "results.T5.probability_checks",
+        "value_type": "dict",
+        "value": null
+      },
+      {
+        "key": "locked_test_used",
+        "path": "results.T5.locked_test_used",
+        "value_type": "bool",
+        "value": false
+      },
+      {
+        "key": "survival_probability_values",
+        "path": "results.T7.checks.survival_probability_values",
+        "value_type": "dict",
+        "value": null
+      },
+      {
+        "key": "controls",
+        "path": "controls",
+        "value_type": "dict",
+        "value": null
+      },
+      {
+        "key": "threshold_selection_performed",
+        "path": "controls.threshold_selection_performed",
+        "value_type": "bool",
+        "value": false
+      },
+      {
+        "key": "universal_confidence_created",
+        "path": "controls.universal_confidence_created",
+        "value_type": "bool",
+        "value": false
+      },
+      {
+        "key": "synthetic_target_created",
+        "path": "controls.synthetic_target_created",
+        "value_type": "bool",
+        "value": false
+      },
+      {
+        "key": "locked_test_used_for_calibration_selection",
+        "path": "controls.locked_test_used_for_calibration_selection",
+        "value_type": "bool",
+        "value": false
+      },
+      {
+        "key": "cross_task_probability_comparability",
+        "path": "methodological_constraints.cross_task_probability_comparability",
+        "value_type": "bool",
+        "value": false
+      },
+      {
+        "key": "universal_confidence_allowed",
+        "path": "methodological_constraints.universal_confidence_allowed",
+        "value_type": "bool",
+        "value": false
+      }
+    ],
+    "OP-005": [
+      {
+        "key": "status",
+        "path": "status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "previous_operation_validation.checks.op003_status.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "previous_operation_validation.checks.op003_task_feasibility.T2.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "previous_operation_validation.checks.op003_task_feasibility.T3.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "previous_operation_validation.checks.op003_task_feasibility.T4.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "previous_operation_validation.checks.op003_task_feasibility.T5.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "previous_operation_validation.checks.op003_task_feasibility.T6.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "previous_operation_validation.checks.op003_task_feasibility.T7.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "previous_operation_validation.checks.op004_status.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "previous_operation_validation.checks.op004_task_results.T2.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "previous_operation_validation.checks.op004_task_results.T3.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "previous_operation_validation.checks.op004_task_results.T4.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "previous_operation_validation.checks.op004_task_results.T5.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "previous_operation_validation.checks.op004_task_results.T6.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "previous_operation_validation.checks.op004_task_results.T7.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "previous_operation_validation.checks.op004a_status.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "previous_operation_validation.checks.op004a_exact_probability_candidates.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "previous_operation_validation.checks.op004a_accepted_probability_artifacts.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "previous_operation_validation.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "task_boundary.T2.status",
+        "value_type": "str",
+        "value": "UNAVAILABLE_FOR_PROBABILITY_CALIBRATION"
+      },
+      {
+        "key": "status",
+        "path": "task_boundary.T3.status",
+        "value_type": "str",
+        "value": "UNAVAILABLE"
+      },
+      {
+        "key": "status",
+        "path": "task_boundary.T4.status",
+        "value_type": "str",
+        "value": "ACCEPTED_NATIVE_RANKING"
+      },
+      {
+        "key": "status",
+        "path": "task_boundary.T5.status",
+        "value_type": "str",
+        "value": "ACCEPTED_NATIVE_PROBABILITY"
+      },
+      {
+        "key": "status",
+        "path": "task_boundary.T6.status",
+        "value_type": "str",
+        "value": "ACCEPTED_NATIVE_RANKING"
+      },
+      {
+        "key": "status",
+        "path": "task_boundary.T7.status",
+        "value_type": "str",
+        "value": "ACCEPTED_NATIVE_SURVIVAL"
+      },
+      {
+        "key": "status",
+        "path": "global_control_validation.checks.task_specific_calibration_only.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "global_control_validation.checks.universal_confidence_score.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "global_control_validation.checks.universal_risk_score.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "global_control_validation.checks.cross_task_probability_comparability.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "global_control_validation.checks.synthetic_target_creation.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "global_control_validation.checks.synthetic_probability_creation.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "global_control_validation.checks.blind_probability_averaging.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "global_control_validation.checks.arbitrary_cross_task_weights.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "global_control_validation.checks.post_creation_features_allowed.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "global_control_validation.checks.t6_observable_non_positive_as_true_negative.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "global_control_validation.checks.t7_binary_resolution_conversion.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "global_control_validation.checks.t7_censoring_relabelling.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "global_control_validation.checks.locked_test_for_calibration_selection.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "status",
+        "path": "global_control_validation.status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "T4",
+        "path": "previous_operation_validation.checks.op003_task_feasibility.T4",
+        "value_type": "dict",
+        "value": null
+      },
+      {
+        "key": "T4",
+        "path": "previous_operation_validation.checks.op004_task_results.T4",
+        "value_type": "dict",
+        "value": null
+      },
+      {
+        "key": "T4",
+        "path": "task_boundary.T4",
+        "value_type": "dict",
+        "value": null
+      },
+      {
+        "key": "op004a_exact_probability_candidates",
+        "path": "previous_operation_validation.checks.op004a_exact_probability_candidates",
+        "value_type": "dict",
+        "value": null
+      },
+      {
+        "key": "op004a_accepted_probability_artifacts",
+        "path": "previous_operation_validation.checks.op004a_accepted_probability_artifacts",
+        "value_type": "dict",
+        "value": null
+      },
+      {
+        "key": "native_probability_output",
+        "path": "task_boundary.T2.native_probability_output",
+        "value_type": "bool",
+        "value": false
+      },
+      {
+        "key": "native_probability_output",
+        "path": "task_boundary.T3.native_probability_output",
+        "value_type": "bool",
+        "value": false
+      },
+      {
+        "key": "native_probability_output",
+        "path": "task_boundary.T4.native_probability_output",
+        "value_type": "bool",
+        "value": false
+      },
+      {
+        "key": "native_probability_output",
+        "path": "task_boundary.T5.native_probability_output",
+        "value_type": "bool",
+        "value": true
+      },
+      {
+        "key": "native_probability_output",
+        "path": "task_boundary.T6.native_probability_output",
+        "value_type": "bool",
+        "value": false
+      },
+      {
+        "key": "native_probability_output",
+        "path": "task_boundary.T7.native_probability_output",
+        "value_type": "bool",
+        "value": true
+      },
+      {
+        "key": "universal_confidence_score",
+        "path": "global_restrictions.universal_confidence_score",
+        "value_type": "bool",
+        "value": false
+      },
+      {
+        "key": "cross_task_probability_comparability",
+        "path": "global_restrictions.cross_task_probability_comparability",
+        "value_type": "bool",
+        "value": false
+      },
+      {
+        "key": "synthetic_target_creation",
+        "path": "global_restrictions.synthetic_target_creation",
+        "value_type": "bool",
+        "value": false
+      },
+      {
+        "key": "synthetic_probability_creation",
+        "path": "global_restrictions.synthetic_probability_creation",
+        "value_type": "bool",
+        "value": false
+      },
+      {
+        "key": "blind_probability_averaging",
+        "path": "global_restrictions.blind_probability_averaging",
+        "value_type": "bool",
+        "value": false
+      },
+      {
+        "key": "post_creation_features_allowed",
+        "path": "global_restrictions.post_creation_features_allowed",
+        "value_type": "bool",
+        "value": false
+      },
+      {
+        "key": "locked_test_for_calibration_selection",
+        "path": "global_restrictions.locked_test_for_calibration_selection",
+        "value_type": "bool",
+        "value": false
+      },
+      {
+        "key": "global_control_validation",
+        "path": "global_control_validation",
+        "value_type": "dict",
+        "value": null
+      },
+      {
+        "key": "universal_confidence_score",
+        "path": "global_control_validation.checks.universal_confidence_score",
+        "value_type": "dict",
+        "value": null
+      },
+      {
+        "key": "cross_task_probability_comparability",
+        "path": "global_control_validation.checks.cross_task_probability_comparability",
+        "value_type": "dict",
+        "value": null
+      },
+      {
+        "key": "synthetic_target_creation",
+        "path": "global_control_validation.checks.synthetic_target_creation",
+        "value_type": "dict",
+        "value": null
+      },
+      {
+        "key": "synthetic_probability_creation",
+        "path": "global_control_validation.checks.synthetic_probability_creation",
+        "value_type": "dict",
+        "value": null
+      },
+      {
+        "key": "blind_probability_averaging",
+        "path": "global_control_validation.checks.blind_probability_averaging",
+        "value_type": "dict",
+        "value": null
+      },
+      {
+        "key": "post_creation_features_allowed",
+        "path": "global_control_validation.checks.post_creation_features_allowed",
+        "value_type": "dict",
+        "value": null
+      },
+      {
+        "key": "locked_test_for_calibration_selection",
+        "path": "global_control_validation.checks.locked_test_for_calibration_selection",
+        "value_type": "dict",
+        "value": null
+      }
+    ],
+    "T8 OP-020": [
+      {
+        "key": "status",
+        "path": "status",
+        "value_type": "str",
+        "value": "PASS"
+      },
+      {
+        "key": "t4_train",
+        "path": "sources.t4_train",
+        "value_type": "str",
+        "value": "modeling/T4/derived/t4_train.csv"
+      },
+      {
+        "key": "t4_eval",
+        "path": "sources.t4_eval",
+        "value_type": "str",
+        "value": "modeling/T4/derived/t4_eval.csv"
+      },
+      {
+        "key": "locked_t4_evaluation_used",
+        "path": "controls.locked_t4_evaluation_used",
+        "value_type": "bool",
+        "value": false
+      },
+      {
+        "key": "unseen_target_rows",
+        "path": "metrics.unseen_target_rows",
+        "value_type": "int",
+        "value": 20113
+      },
+      {
+        "key": "unseen_target_rate",
+        "path": "metrics.unseen_target_rate",
+        "value_type": "float",
+        "value": 0.5645595913097177
+      },
+      {
+        "key": "controls",
+        "path": "controls",
+        "value_type": "dict",
+        "value": null
+      },
+      {
+        "key": "post_creation_information_used",
+        "path": "controls.post_creation_information_used",
+        "value_type": "bool",
+        "value": false
+      },
+      {
+        "key": "probability_conversion_performed",
+        "path": "controls.probability_conversion_performed",
+        "value_type": "bool",
+        "value": false
+      },
+      {
+        "key": "blind_probability_averaging",
+        "path": "controls.blind_probability_averaging",
+        "value_type": "bool",
+        "value": false
+      }
+    ]
+  },
+  "controls": {
+    "artifact_read_only": true,
+    "model_fitted": false,
+    "prediction_generated": false,
+    "probability_generated": false,
+    "calibration_fitted": false,
+    "target_created": false,
+    "target_relabelled": false,
+    "threshold_selected": false,
+    "locked_test_used_for_selection": false,
+    "universal_confidence_created": false,
+    "universal_risk_score_created": false,
+    "existing_artifacts_modified": false
+  },
+  "control_failures": [],
+  "interpretation_boundary": [
+    "This operation only inspects existing JSON artifacts.",
+    "No model fitting or prediction generation is performed.",
+    "No calibration or probability generation is performed.",
+    "No target, threshold, confidence, or risk construct is created.",
+    "The discovered schema must be used to construct the corrected OP-011 validator."
+  ],
+  "next_operation": "Use the resolved artifact schema to construct the corrected T9 MOD-037 OP-011 T4 native ranking evaluation and calibration-readiness audit."
+}

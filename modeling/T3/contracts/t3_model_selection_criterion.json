@@ -1,0 +1,38 @@
+{
+  "task": "T3_SEVERITY_PREDICTION",
+  "evaluation_stage": "VALIDATION_ONLY",
+  "primary_metric": "macro_f1",
+  "secondary_metrics": [
+    "accuracy",
+    "weighted_f1"
+  ],
+  "per_class_metrics": {
+    "required": true,
+    "labels": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+    ],
+    "metrics": [
+      "precision",
+      "recall",
+      "f1",
+      "support"
+    ]
+  },
+  "selection_principles": [
+    "Prioritize balanced four-class performance.",
+    "Inspect minority-class S1/S2/S4 behavior.",
+    "Retain accuracy and weighted F1 as secondary measures.",
+    "Do not select solely on accuracy.",
+    "Do not use locked test results for candidate selection.",
+    "Interpret S1 results cautiously because validation support is only 20.",
+    "Do not impose an unsupported numerical acceptance threshold."
+  ],
+  "test_policy": {
+    "candidate_selection_uses_test": false,
+    "final_test_locked_until_candidate_freeze": true
+  },
+  "status": "FROZEN_FOR_T3_CANDIDATE_SELECTION"
+}

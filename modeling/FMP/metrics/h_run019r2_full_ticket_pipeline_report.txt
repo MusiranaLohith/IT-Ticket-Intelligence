@@ -1,0 +1,99 @@
+======================================================================
+IT TICKET INTELLIGENCE & TRIAGE SYSTEM
+======================================================================
+
+TICKET
+----------------------------------------------------------------------
+ID          : H-RUN-021R3-VPN-001
+TITLE       : VPN connection fails after password reset
+
+T1 — CATEGORY
+----------------------------------------------------------------------
+Prediction  : Support general
+Status      : EXECUTED
+
+T2 — PRIORITY
+----------------------------------------------------------------------
+Prediction  : P1
+Status      : EXECUTED
+
+T3 — SEVERITY
+----------------------------------------------------------------------
+Prediction  : S3
+Status      : EXECUTED
+
+T4 — HISTORICAL ASSIGNEE RETRIEVAL
+----------------------------------------------------------------------
+1. 1321841 | dd.mozilla@gmail.com | distance=0.706001
+2. 220663 | darin@meer.net | distance=0.745875
+3. 1405307 | daniel@haxx.se | distance=0.751102
+4. 125875 | darin@netscape.com | distance=0.754856
+5. 947801 | daniel@haxx.se | distance=0.764998
+
+T5 — DUPLICATE EVIDENCE
+----------------------------------------------------------------------
+Evidence    : 0.0
+Status      : EXECUTED
+
+T6 — RELATED TICKETS
+----------------------------------------------------------------------
+Runtime     : PARTIAL_NATIVE_RUNTIME
+Full MOD-010: False
+IDs         : []
+
+T7 — RESOLUTION-TIME EVIDENCE
+----------------------------------------------------------------------
+Status      : EXECUTED_WITH_SUPPORT_LIMITATION
+Median sec  : 19.629117104199928
+Temporal    : OUTSIDE_OBSERVED_TRAINING_RANGE
+
+T8 — EVIDENCE INTEGRATION
+----------------------------------------------------------------------
+Status      : EXECUTED
+Evidence    : SUPPORTED_WITH_LIMITATIONS
+Available   : ['T1', 'T2', 'T3', 'T4', 'T5']
+Partial     : ['T6', 'T7']
+Unavailable : []
+
+T9 — RELIABILITY
+----------------------------------------------------------------------
+Status      : EXECUTED
+Universal confidence: None
+Universal risk      : None
+
+T10 — POLICY
+----------------------------------------------------------------------
+Status      : EXECUTED
+Action      : HUMAN_DECISION_REQUIRED
+WARNING     : Evidence is not fully supported; missing evidence is not negative evidence.
+WARNING     : T6 full MOD-010 hybrid is unavailable for this new-ticket runtime.
+WARNING     : T7 ticket creation year is outside observed training temporal range.
+
+T11 — LIFECYCLE
+----------------------------------------------------------------------
+Status      : EXECUTED
+Feedback    : AWAITING_OUTCOME
+
+FINAL TRIAGE OUTPUT
+----------------------------------------------------------------------
+Category    : Support general
+Priority    : P1
+Severity    : S3
+Duplicate   : 0.0
+Related     : []
+Resolution  : 19.629117104199928
+Evidence    : SUPPORTED_WITH_LIMITATIONS
+Action      : HUMAN_DECISION_REQUIRED
+Lifecycle   : AWAITING_OUTCOME
+
+======================================================================
+OVERALL STATUS: PASS_WITH_LIMITATIONS
+======================================================================
+
+[INTEGRITY]
+Model retraining       : NO
+Model modification     : NO
+Threshold optimization : NO
+Locked test reuse      : NO
+Prediction modification: NO
+Synthetic feedback     : NO

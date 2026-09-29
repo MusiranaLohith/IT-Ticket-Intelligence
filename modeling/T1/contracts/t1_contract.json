@@ -1,0 +1,72 @@
+{
+  "contract_id": "T1-IT-SUPPORT-v1",
+  "task": "Incoming IT-ticket classification",
+  "dataset": "IT Support",
+  "dtm": "DTM-003",
+  "status": "SUPPORTED",
+  "source": {
+    "artifact": "7384758.zip",
+    "raw_data_immutable": true
+  },
+  "target": {
+    "field": "category_truth",
+    "type": "multiclass",
+    "classes": [
+      "Fileservice",
+      "Support general",
+      "Software",
+      "O365",
+      "Active Directory",
+      "Computer-Services",
+      "EOL"
+    ]
+  },
+  "features": {
+    "allowed": [
+      "text"
+    ],
+    "forbidden": [
+      "id",
+      "category_truth"
+    ]
+  },
+  "prediction_boundary": {
+    "input": "incoming ticket text",
+    "future_information_forbidden": true,
+    "temporal_split_claim": false
+  },
+  "text_policy": {
+    "repeated_text_is_not_duplicate_ground_truth": true,
+    "exact_text_overlap_requires_control": true,
+    "normalization_must_be_versioned": true
+  },
+  "split_policy": {
+    "split_before_model_fitting": true,
+    "normalized_text_grouping": true,
+    "identical_normalized_text_must_not_cross_evaluation_boundary": true
+  },
+  "evaluation": {
+    "metrics": [
+      "accuracy",
+      "macro_f1",
+      "weighted_f1",
+      "per_class_precision",
+      "per_class_recall",
+      "per_class_f1",
+      "confusion_matrix"
+    ]
+  },
+  "model_policy": {
+    "model_selected": false,
+    "training_started": false,
+    "baseline_required_first": true
+  },
+  "historical_reference": {
+    "supplier_accuracy": 0.79,
+    "independent_accuracy": 0.7793,
+    "gap_percentage_points": 1.07,
+    "discrepancy_cause": "UNRESOLVED",
+    "supplied_model_must_not_be_overwritten": true
+  },
+  "created_utc": "2026-09-15T06:07:04.012686+00:00"
+}

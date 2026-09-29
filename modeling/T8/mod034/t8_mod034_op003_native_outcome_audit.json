@@ -1,0 +1,56 @@
+{
+  "operation": "MOD-034 / OP-003",
+  "status": "PASS",
+  "population": {
+    "common_ids": 4716,
+    "t4_rows": 4716,
+    "t5_rows": 4716
+  },
+  "t4_native_outcome": {
+    "column": "target_assignee",
+    "non_null": 4716,
+    "unique_values": 513,
+    "missing": 0,
+    "semantics": "observed target assignee",
+    "evaluation_type": "native assignee-ranking outcome"
+  },
+  "t5_native_outcome": {
+    "column": "T5 target",
+    "non_null": 4716,
+    "missing": 0,
+    "unique_values": 2,
+    "values": [
+      0,
+      1
+    ],
+    "positive_count": 48,
+    "negative_count": 4668,
+    "semantics": "native frozen duplicate target",
+    "evaluation_type": "native duplicate-probability outcome"
+  },
+  "t5_target_candidates": {
+    "T5 target": {
+      "non_null": 4716,
+      "missing": 0,
+      "unique_values": 2,
+      "values": [
+        0,
+        1
+      ]
+    }
+  },
+  "joint_target_check": {
+    "candidate_joint_columns": [],
+    "synthetic_joint_target_present": false
+  },
+  "independent_native_outcomes": true,
+  "evaluation_directions": {
+    "evaluate_T4_against_native_assignee_target": true,
+    "evaluate_T5_against_native_duplicate_target": true,
+    "evaluate_single_joint_triage_target": false,
+    "evaluate_universal_triage_accuracy": false,
+    "evaluate_universal_triage_f1": false,
+    "evaluate_joint_probability": false
+  },
+  "decision": "NATIVE_TASK_SPECIFIC_EVALUATION_TARGETS_AVAILABLE"
+}

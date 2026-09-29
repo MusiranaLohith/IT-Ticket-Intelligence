@@ -1,0 +1,39 @@
+{
+  "operation": "MOD-033 / OP-007",
+  "status": "PASS",
+  "rows": 4716,
+  "common_development_ids": 4716,
+  "t4": {
+    "source_population": "t4_eval.csv",
+    "source_rows": 35626,
+    "implementation": "T4-MOD-011-BM25",
+    "output_semantics": "native ranked assignee candidates with retrieval scores",
+    "top_k": 20,
+    "prediction_boundary": "Creation",
+    "checkpoint": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod011_checkpoints/t4_mod011_retrieval.npz"
+  },
+  "t5": {
+    "source_population": "t5_model_val.csv",
+    "source_rows": 74091,
+    "implementation": "T5-MOD-007-SIGMOID",
+    "output_semantics": "native calibrated duplicate probability",
+    "probability_field": "p_duplicate",
+    "prediction_boundary": "Creation",
+    "checkpoint": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod007_calibrated_validation_predictions.npz"
+  },
+  "guards": {
+    "same_ticket_ids": true,
+    "t4_native_ranking_preserved": true,
+    "t4_ranking_to_probability_conversion": false,
+    "t5_native_probability_preserved": true,
+    "t5_identity_reinterpretation": false,
+    "synthetic_t8_target": false,
+    "model_training_performed": false,
+    "locked_evaluation_repurposed": false,
+    "post_creation_features_used": false
+  },
+  "artifacts": {
+    "development_evidence": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/mod033/t8_mod033_op007_t4_t5_development_evidence.csv",
+    "manifest": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/mod033/t8_mod033_op007_generation_manifest.json"
+  }
+}

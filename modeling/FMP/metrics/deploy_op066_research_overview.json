@@ -1,0 +1,65 @@
+{
+  "operation": "DEPLOY-OP-066",
+  "title": "Research Overview Structure",
+  "status": "PASS",
+  "scope": "Research-only frontend presentation layer derived from the authoritative project master record.",
+  "modified_files": [
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/index.html",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/app.js",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/style.css"
+  ],
+  "backup_files": [
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/index.html.before-deploy-op066",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/app.js.before-deploy-op066",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/style.css.before-deploy-op066"
+  ],
+  "research_sections": [
+    "Problem",
+    "Objective",
+    "Research Workflow",
+    "Dataset Investigation",
+    "T1-T11 Task Map",
+    "Controlled Modeling Results",
+    "Evidence Integration",
+    "Limitations and Boundaries",
+    "Research Conclusion"
+  ],
+  "deployment_content_in_research_view": false,
+  "analysis_workspace_preserved": true,
+  "batch_processing_preserved": true,
+  "frontend_model_logic_absent": true,
+  "backend_modified": false,
+  "frozen_runtime_modified": false,
+  "hashes_before": {
+    "index.html": "ece4de1fbbf8ccc890b8439bd4f44b898d1ec1cb07629e4b4644bf121bf9ae23",
+    "app.js": "2078b3dd784424176b6ada560c599ea6d8828945048743326995efe9f913cc14",
+    "style.css": "0b19b3c77a4e7a2514ccb84962bbc5f8c06f52e240d3ab2a8164429de5e0acfa"
+  },
+  "hashes_after": {
+    "index.html": "211670de36d406923e882cb2727daf3fbe5c370b71ddeb5971db182a9a38ac47",
+    "app.js": "2a89678c0ec40b99e35bb198b1742882d68ff54868e32f97fad65d733d3059dc",
+    "style.css": "9df85b5bb1e72f40742635bce9e8d7e33d3be451134abd4acef84b8a63d387f0"
+  },
+  "validation": {
+    "OP066_MARKER": true,
+    "RESEARCH_SECTION": true,
+    "RESEARCH_HOME_BUTTON": true,
+    "RESEARCH_FUNCTION": true,
+    "VIEW_RESEARCH_HANDLER": true,
+    "RESEARCH_HOME_HANDLER": true,
+    "RESEARCH_CSS": true,
+    "RESEARCH_CONTENT_SECTIONS": true,
+    "DEPLOYMENT_EXCLUDED": true,
+    "ANALYSIS_PRESERVED": true,
+    "API_PRESERVED": true,
+    "BATCH_SELECTION_PRESERVED": true,
+    "RENDERER_PRESERVED": true,
+    "TICKET_PIPELINE_NOT_FRONTEND": true,
+    "SKLEARN_NOT_FRONTEND": true,
+    "BACKEND_UNTOUCHED": true,
+    "FROZEN_RUNTIME_UNTOUCHED": true,
+    "INDEX_MODIFIED": true,
+    "APP_MODIFIED": true,
+    "STYLE_MODIFIED": true
+  }
+}

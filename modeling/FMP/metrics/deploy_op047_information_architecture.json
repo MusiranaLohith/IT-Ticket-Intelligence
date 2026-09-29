@@ -1,0 +1,75 @@
+{
+  "operation": "DEPLOY-OP-047",
+  "title": "FRONTEND INFORMATION ARCHITECTURE",
+  "status": "PASS",
+  "scope": "frontend architecture only",
+  "architecture": {
+    "landing_page": true,
+    "workspace_home": true,
+    "single_ticket_entry": true,
+    "multiple_ticket_entry": true,
+    "existing_analysis_workspace_reused": true,
+    "existing_batch_results_reused": true,
+    "existing_detail_view_reused": true
+  },
+  "files_modified": {
+    "index.html": "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/index.html",
+    "app.js": "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/app.js",
+    "style.css": "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/style.css"
+  },
+  "backups": {
+    "index.html": "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/index.html.before-deploy-op047",
+    "app.js": "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/app.js.before-deploy-op047",
+    "style.css": "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/style.css.before-deploy-op047"
+  },
+  "protected_components": {
+    "fastapi": true,
+    "ticket_pipeline": true,
+    "ticket_explanation": true,
+    "t1_t11_runtime": true,
+    "model_artifacts": true,
+    "single_ticket_api": true,
+    "batch_api": true,
+    "batch_selection": true,
+    "detail_renderer": true
+  },
+  "checks": {
+    "landing_view_added": true,
+    "workspace_home_added": true,
+    "analysis_workspace_preserved": true,
+    "single_ticket_panel_preserved": true,
+    "batch_input_panel_preserved": true,
+    "batch_results_preserved": true,
+    "selected_ticket_results_preserved": true,
+    "ticket_form_preserved": true,
+    "six_ticket_fields_preserved": true,
+    "batch_input_preserved": true,
+    "batch_table_preserved": true,
+    "analysis_navigation_added": true,
+    "navigation_logic_added": true,
+    "single_navigation_added": true,
+    "batch_navigation_added": true,
+    "existing_single_api_preserved": true,
+    "existing_batch_api_preserved": true,
+    "batch_selection_preserved": true,
+    "detail_renderer_preserved": true,
+    "no_ticket_pipeline_frontend": true,
+    "no_sklearn_frontend": true,
+    "visual_architecture_css_added": true
+  },
+  "hashes_before": {
+    "index.html": "ee9e540be567ec260b7866349ffd484574a6cac98b8d58bb21085700ffe80921",
+    "app.js": "a7dc4f1f943139836774c9f6bf07772463fb8b9c35d19ab4cb159dfb1a2e2c42",
+    "style.css": "26a370dc6ecfa46d949d992bd530e6c013ee82455bd9377435164db1c469b997"
+  },
+  "hashes_after": {
+    "index.html": "25432166e781425a85fff2fc438bcfbd20ff1b219dcccf208644ba4d674fc805",
+    "app.js": "8e94eb669607c8e8abe8cc7b26e6c423e6a51b62ef2683b4c75a3e1dbbd7bd33",
+    "style.css": "160afeef8eef43ed979671ec7f18e361db45066a1cc4ee89dcbb32c54c096cd2"
+  },
+  "bytes_after": {
+    "index.html": 24389,
+    "app.js": 64288,
+    "style.css": 79451
+  }
+}

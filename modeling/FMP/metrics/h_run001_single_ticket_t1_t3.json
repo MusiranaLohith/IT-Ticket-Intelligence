@@ -1,0 +1,48 @@
+{
+  "operation": "H-RUN-001",
+  "operation_name": "First Single-Ticket Frozen Runtime",
+  "status": "PASS",
+  "ticket": {
+    "title": "VPN connection fails after password reset",
+    "description": "I reset my corporate password this morning. Since then, the VPN client connects briefly and then disconnects. I restarted the laptop and reinstalled the VPN client, but the issue persists. I need access to the internal systems for today's work.",
+    "representation": "VPN connection fails after password reset\nI reset my corporate password this morning. Since then, the VPN client connects briefly and then disconnects. I restarted the laptop and reinstalled the VPN client, but the issue persists. I need access to the internal systems for today's work."
+  },
+  "results": {
+    "T1": {
+      "prediction": "Support general",
+      "feature_type": "sklearn.pipeline.FeatureUnion",
+      "model_type": "sklearn.svm._classes.LinearSVC",
+      "transformed_shape": [
+        1,
+        29096
+      ]
+    },
+    "T2": {
+      "prediction": "P1",
+      "vectorizer_type": "sklearn.feature_extraction.text.TfidfVectorizer",
+      "model_type": "sklearn.linear_model._logistic.LogisticRegression",
+      "transformed_shape": [
+        1,
+        212254
+      ]
+    },
+    "T3": {
+      "prediction": "S3",
+      "vectorizer_type": "sklearn.feature_extraction.text.TfidfVectorizer",
+      "model_type": "sklearn.linear_model._logistic.LogisticRegression",
+      "transformed_shape": [
+        1,
+        288972
+      ]
+    }
+  },
+  "controls": {
+    "model_execution": true,
+    "model_fitting": false,
+    "retraining": false,
+    "threshold_selection": false,
+    "artifact_modification": false,
+    "locked_test_use": false
+  },
+  "interpretation": "Predictions are native outputs from the frozen T1/T2/T3 artifacts. This run does not establish operational thresholds, universal confidence, universal risk, or autonomous action."
+}

@@ -1,0 +1,140 @@
+{
+  "task_id": "T7",
+  "task_name": "Resolution-Time Estimation",
+  "task_family": "time_to_event_survival",
+
+  "status": "MODELING_CONTRACT_FROZEN",
+
+  "operational_problem": "Estimate the time from ticket Creation until the first operationally observed resolution state.",
+
+  "prediction_boundary": {
+    "name": "Creation time",
+    "definition": "Only information legitimately available at ticket Creation may be used as predictive input."
+  },
+
+  "target": {
+    "start_time": "Creation time",
+    "endpoint": "First post-Creation History event in which Status changes to RESOLVED",
+    "duration_field": "time_to_first_resolved",
+    "event_field": "event",
+    "event_definition": "event = 1 when the first qualifying post-Creation Status change adds RESOLVED.",
+    "censoring_definition": "event = 0 when no qualifying post-Creation RESOLVED event is observed through the administrative observation endpoint.",
+    "administrative_observation_endpoint": "2024-11-24 07:26:14",
+    "censored_duration_definition": "Administrative observation endpoint minus Creation time",
+    "reopening_policy": "A later REOPENED event does not replace the first RESOLVED endpoint.",
+    "re_resolution_policy": "A later RESOLVED event after reopening does not replace the original first RESOLVED endpoint.",
+    "resolution_field_policy": "Resolution changes are secondary/audit evidence and are not the primary T7 endpoint."
+  },
+
+  "population": {
+    "total_rows": 513816,
+    "observed_events": 455762,
+    "right_censored": 58054,
+    "event_rate": 0.8869997427,
+    "censoring_rate": 0.1130002573
+  },
+
+  "censoring": {
+    "type": "right_censoring",
+    "treatment": "Preserve censored observations as right-censored survival records.",
+    "ordinary_negative_interpretation": false,
+    "forbidden_actions": [
+      "Do not treat censored tickets as ordinary negative labels.",
+      "Do not assign fabricated resolution times to censored tickets.",
+      "Do not drop censored observations merely because their exact resolution time is unobserved.",
+      "Do not convert censoring into binary classification."
+    ]
+  },
+
+  "feature_boundary": {
+    "principle": "Creation-time information only",
+    "status": "FEATURE_WHITELIST_TO_BE_ESTABLISHED_IN_MOD_002",
+    "allowed_information": "Fields and values demonstrably available at Creation time.",
+    "forbidden_information": [
+      "Post-Creation History",
+      "Current/final Status",
+      "Current/final Resolution",
+      "Post-Creation assignment information",
+      "Post-Creation relationship information",
+      "Post-Creation state changes",
+      "Any target-derived information",
+      "Any information unavailable at the Creation prediction boundary"
+    ],
+    "missing_value_policy": "Unavailable Creation-time information must remain explicitly unavailable and must not be silently backfilled from current/final values."
+  },
+
+  "data_artifact": {
+    "source_type": "accepted DTM-derived immutable artifact",
+    "path": "/run/media/whiteblack/User 1/Datasets/Mozilla_CORE/DTM-002_T7_TIME_TO_FIRST_RESOLVED_derived.csv",
+    "raw_source_modified": false,
+    "derived_artifact_modified": false
+  },
+
+  "modeling_formulation": {
+    "primary": "time_to_event_survival",
+    "ordinary_regression_as_primary": false,
+    "ordinary_binary_classification_as_primary": false,
+    "fixed_horizon_24h_as_primary": false,
+    "fixed_horizon_7d_as_primary": false,
+    "reason": "The target contains right-censored observations and the observed resolution process extends beyond fixed short horizons."
+  },
+
+  "evaluation": {
+    "principle": "Censoring-aware evaluation",
+    "primary_metric": "Concordance index",
+    "secondary_metrics": [
+      "Integrated Brier score",
+      "Time-dependent discrimination metrics where supported by the selected survival methodology",
+      "Calibration/reliability analysis where valid survival-specific methodology is available"
+    ],
+    "forbidden_evaluation": [
+      "Do not evaluate censored duration as if it were an observed exact resolution time.",
+      "Do not use ordinary MAE/RMSE across censored and uncensored records without an explicit censoring-aware justification.",
+      "Do not select models using the locked evaluation set."
+    ]
+  },
+
+  "split_policy": {
+    "principle": "Chronological evaluation",
+    "reason": "The prediction task is temporal and future tickets must not influence development of models evaluated on earlier tickets.",
+    "exact_boundary": "TO_BE_FROZEN_IN_MOD_003"
+  },
+
+  "model_development_policy": {
+    "baseline_first": true,
+    "advanced_model_requires_justification": true,
+    "baseline_policy": "Establish a censoring-aware non-parametric/statistical baseline before more complex predictive survival models.",
+    "candidate_model_policy": "Progress from simple survival baselines to classical predictive survival models only after data and feature contracts are validated.",
+    "deep_learning": "Not authorized by this contract; requires separate empirical justification after classical baselines."
+  },
+
+  "leakage_controls": {
+    "creation_time_boundary_enforced": true,
+    "post_creation_history_as_feature": false,
+    "current_final_status_as_feature": false,
+    "current_final_resolution_as_feature": false,
+    "target_derived_features": false,
+    "future_information": false,
+    "raw_source_modification": false
+  },
+
+  "immutable_source_controls": {
+    "raw_mozilla_core": "IMMUTABLE",
+    "accepted_t7_artifact": "IMMUTABLE",
+    "backup_storage": "NOT_USED_AS_MODELING_WORKSPACE"
+  },
+
+  "next_operations": {
+    "MOD_002": "Creation-time feature-source and feature-boundary construction",
+    "MOD_003": "Chronological train/validation/evaluation split construction",
+    "MOD_004": "Baseline survival modeling",
+    "MOD_005": "Baseline evaluation and error/survival analysis"
+  },
+
+  "decision": {
+    "status": "APPROVED_FOR_CONTROLLED_MODELING",
+    "scope": "This contract freezes the modeling formulation and controls but does not freeze the final feature whitelist, exact temporal split boundary, or final model.",
+    "no_performance_claim": true,
+    "no_automation_claim": true
+  }
+}

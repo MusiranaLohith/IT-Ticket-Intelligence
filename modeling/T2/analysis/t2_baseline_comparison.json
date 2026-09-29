@@ -1,0 +1,124 @@
+{
+  "operation": "T2-MOD-011",
+  "operation_name": "Controlled Baseline Comparison & Advancement Decision",
+  "task": "T2",
+  "task_name": "Priority Prediction",
+  "dataset": "Mozilla CORE",
+  "evaluation_partition": "validation",
+  "test_used": false,
+  "experiments_compared": [
+    {
+      "operation": "T2-MOD-006",
+      "model": "TF-IDF + Logistic Regression",
+      "accuracy": 0.4702824858757062,
+      "macro_f1": 0.2693456371367735,
+      "weighted_f1": 0.4486646541611557,
+      "P1_f1": 0.38451612903225807,
+      "P2_f1": 0.3377670294236195,
+      "P3_f1": 0.596276013143483,
+      "P4_f1": 0.0,
+      "P5_f1": 0.028169014084507043
+    },
+    {
+      "operation": "T2-MOD-007",
+      "model": "TF-IDF + Class-Weighted Logistic Regression",
+      "accuracy": 0.44610169491525425,
+      "macro_f1": 0.3104499808937769,
+      "weighted_f1": 0.44356450564378974,
+      "P1_f1": 0.39688249400479614,
+      "P2_f1": 0.34973989595838334,
+      "P3_f1": 0.5594472242077675,
+      "P4_f1": 0.10714285714285714,
+      "P5_f1": 0.13903743315508021
+    },
+    {
+      "operation": "T2-MOD-008",
+      "model": "TF-IDF + Linear SVM",
+      "accuracy": 0.4490395480225989,
+      "macro_f1": 0.26834741952883784,
+      "weighted_f1": 0.43591277551072566,
+      "P1_f1": 0.3682008368200837,
+      "P2_f1": 0.3398843930635838,
+      "P3_f1": 0.5703034514709289,
+      "P4_f1": 0.0,
+      "P5_f1": 0.06334841628959276
+    },
+    {
+      "operation": "T2-MOD-010",
+      "model": "TF-IDF + Class-Weighted Linear SVM",
+      "accuracy": 0.4433898305084746,
+      "macro_f1": 0.2912726895690139,
+      "weighted_f1": 0.43575459242497755,
+      "P1_f1": 0.3757292882147025,
+      "P2_f1": 0.3392857142857143,
+      "P3_f1": 0.5631666271628348,
+      "P4_f1": 0.09090909090909091,
+      "P5_f1": 0.08727272727272728
+    }
+  ],
+  "best_by_metric": {
+    "accuracy": {
+      "operation": "T2-MOD-006",
+      "model": "TF-IDF + Logistic Regression",
+      "value": 0.4702824858757062
+    },
+    "macro_f1": {
+      "operation": "T2-MOD-007",
+      "model": "TF-IDF + Class-Weighted Logistic Regression",
+      "value": 0.3104499808937769
+    },
+    "weighted_f1": {
+      "operation": "T2-MOD-006",
+      "model": "TF-IDF + Logistic Regression",
+      "value": 0.4486646541611557
+    },
+    "P4_f1": {
+      "operation": "T2-MOD-007",
+      "model": "TF-IDF + Class-Weighted Logistic Regression",
+      "value": 0.10714285714285714
+    },
+    "P5_f1": {
+      "operation": "T2-MOD-007",
+      "model": "TF-IDF + Class-Weighted Logistic Regression",
+      "value": 0.13903743315508021
+    }
+  },
+  "minority_class_analysis": {
+    "weighted_logistic_vs_unweighted_logistic": {
+      "P4_f1_change": 0.10714285714285714,
+      "P5_f1_change": 0.11086841907057317,
+      "macro_f1_change": 0.04110434375700339,
+      "accuracy_change": -0.024180790960451948
+    },
+    "weighted_svm_vs_unweighted_svm": {
+      "P4_f1_change": 0.09090909090909091,
+      "P5_f1_change": 0.023924310983134522,
+      "macro_f1_change": 0.022925270040176082,
+      "accuracy_change": -0.005649717514124297
+    }
+  },
+  "linear_baseline_limitation": {
+    "P4_recognition_weak": true,
+    "P5_recognition_weak": true,
+    "best_macro_f1_below_0_40": true,
+    "best_accuracy_below_0_60": true
+  },
+  "advancement_decision": {
+    "status": "ADVANCED_NLP_JUSTIFIED",
+    "advanced_model_selected": false,
+    "reason": "Across four controlled TF-IDF linear baseline experiments, the best validation accuracy remains below 60 percent and the best macro-F1 remains below 40 percent. P4 and P5 recognition remain weak even after class weighting. The linear baseline family therefore does not provide sufficient minority-class or overall performance to serve as the final T2 modeling approach. Advancement to a more capable NLP model is justified. The advanced architecture is not selected by this operation."
+  },
+  "integrity": {
+    "training_performed": false,
+    "test_loaded": false,
+    "raw_source_modified": false,
+    "split_artifacts_modified": false,
+    "previous_model_artifacts_modified": false,
+    "historical_metric_artifacts_modified": false
+  },
+  "artifacts": {
+    "comparison_csv": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/analysis/t2_baseline_comparison.csv",
+    "report": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/analysis/t2_baseline_comparison.json"
+  },
+  "status": "COMPLETE"
+}

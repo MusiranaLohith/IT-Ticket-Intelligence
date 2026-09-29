@@ -1,0 +1,42 @@
+{
+  "operation": "MOD-034 / OP-010",
+  "status": "PASS",
+  "population": {
+    "common_oos": 4716,
+    "development": 3537,
+    "held_out_evaluation": 1179
+  },
+  "native_t4_integrity": {
+    "rank_rows_monotonic": true,
+    "rank1_target_matches": 789,
+    "rank1_accuracy": 0.22307039864291772,
+    "unique_target_assignees": 450
+  },
+  "t5_evidence_variation": {
+    "min": 0.0001000386460031,
+    "max": 0.3164092372607224,
+    "mean": 0.010579079279936798,
+    "median": 0.0050145972236349,
+    "unique_values": 3537,
+    "finite": true
+  },
+  "candidate_native_features": [
+    "t5_p_duplicate",
+    "t4_rank_1_score",
+    "t4_rank_2_score",
+    "t4_rank_3_score",
+    "t4_rank_4_score",
+    "t4_rank_5_score"
+  ],
+  "design_constraints": {
+    "target": "target_assignee",
+    "baseline": "native T4 top-k ranking",
+    "added_native_evidence": "t5_p_duplicate",
+    "synthetic_target": false,
+    "arbitrary_weighting": false,
+    "direct_score_multiplication": false,
+    "ranking_to_probability_conversion": false,
+    "held_out_evaluation_used": false
+  },
+  "decision": "T4_SIDE_LEARNING_MECHANISM_FEASIBLE_FOR_DEVELOPMENT_ABLATION"
+}

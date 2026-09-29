@@ -1,0 +1,91 @@
+{
+  "operation": "FMP-06 OP-018R3",
+  "operation_type": "CORRECTED_CONTROLLED_FROZEN_RUNTIME_INFERENCE_PROBE",
+  "probe_rows": 3,
+  "tasks": {
+    "T1": {
+      "status": "FAIL",
+      "error_type": "ValueError",
+      "error": "Encountered an empty runtime ticket representation."
+    },
+    "T2": {
+      "status": "PASS",
+      "artifact": "modeling/T2/models/t2_class_weighted_tfidf_logreg.joblib",
+      "input_source": "modeling/T2/derived/t2_features.csv",
+      "input_count": 3,
+      "vectorizer_type": "sklearn.feature_extraction.text.TfidfVectorizer",
+      "model_type": "sklearn.linear_model._logistic.LogisticRegression",
+      "output_count": 3,
+      "output_preview": [
+        "P3",
+        "P3",
+        "P3"
+      ]
+    },
+    "T3": {
+      "status": "PASS",
+      "artifact": "modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib",
+      "input_source": "modeling/T3/derived/t3_features.csv",
+      "input_count": 3,
+      "vectorizer_type": "sklearn.feature_extraction.text.TfidfVectorizer",
+      "model_type": "sklearn.linear_model._logistic.LogisticRegression",
+      "output_count": 3,
+      "output_preview": [
+        "S3",
+        "S3",
+        "S3"
+      ]
+    },
+    "T5": {
+      "status": "PASS",
+      "vectorizer_artifact": "modeling/T5/models/t5_mod005_tfidf.joblib",
+      "classifier_artifact": "modeling/T5/models/t5_mod005_logreg.joblib",
+      "calibration_artifact": "modeling/T5/models/t5_mod007_calibration_models.joblib",
+      "input_source": "modeling/T5/derived/t5_train_features.csv",
+      "input_count": 3,
+      "decision_score_shape": [
+        3
+      ],
+      "calibrator_input_shape": [
+        3,
+        1
+      ],
+      "output_count": 3,
+      "calibrated_probability_preview": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold_applied": false,
+      "threshold_selection": false
+    },
+    "T4": {
+      "status": "NOT_EXECUTED_BY_THIS_PROBE",
+      "task": "T4",
+      "reason": "Historical assignee candidate-ranking runtime requires an explicit frozen candidate-population binding; no new population is invented here."
+    },
+    "T6": {
+      "status": "NOT_EXECUTED_BY_THIS_PROBE",
+      "task": "T6",
+      "reason": "Hybrid lexical-semantic retrieval requires an explicit frozen retrieval corpus binding."
+    },
+    "T7": {
+      "status": "NOT_EXECUTED_BY_THIS_PROBE",
+      "task": "T7",
+      "reason": "Native survival inference requires a frozen runtime feature binding preserving event and censoring semantics."
+    }
+  },
+  "safeguards": {
+    "inference_executed": true,
+    "retraining": false,
+    "artifact_modification": false,
+    "calibration_fitting": false,
+    "threshold_selection": false,
+    "threshold_applied": false,
+    "synthetic_target_created": false,
+    "locked_test_used_for_selection": false,
+    "universal_confidence_created": false,
+    "universal_risk_created": false
+  },
+  "overall_status": "FAIL"
+}

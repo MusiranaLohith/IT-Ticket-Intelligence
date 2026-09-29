@@ -1,0 +1,75 @@
+{
+  "candidate_creation_fields_physically_present": [
+    "source_row_width"
+  ],
+  "decision": {
+    "model_trained": false,
+    "next_action": "Review and freeze the Creation-time feature whitelist.",
+    "raw_source_scanned": false,
+    "target_modified": false
+  },
+  "feature_boundary": {
+    "creation_time_only": true,
+    "current_final_fields_allowed": false,
+    "post_creation_information_allowed": false,
+    "prediction_boundary": "Creation time",
+    "status": "FEATURES_PRESENT_IN_ACCEPTED_ARTIFACT",
+    "target_derived_fields_allowed": false
+  },
+  "identity_time_fields": [
+    "Creation time",
+    "ID"
+  ],
+  "operation_id": "MOD-002",
+  "operation_name": "Creation-Time Feature Source Audit",
+  "population": {
+    "columns": 8,
+    "duplicate_id_rows": 0,
+    "rows": 513816,
+    "unique_ids": 513816
+  },
+  "schema": {
+    "actual_columns": [
+      "ID",
+      "Creation time",
+      "first_resolved_time",
+      "duration_seconds",
+      "event",
+      "endpoint_type",
+      "observation_endpoint",
+      "source_row_width"
+    ],
+    "expected_columns": [
+      "ID",
+      "Creation time",
+      "first_resolved_time",
+      "duration_seconds",
+      "event",
+      "endpoint_type",
+      "observation_endpoint",
+      "source_row_width"
+    ],
+    "schema_valid": true,
+    "unexpected_columns": []
+  },
+  "source": {
+    "artifact": "/run/media/whiteblack/User 1/Datasets/Mozilla_CORE/DTM-002_T7_TIME_TO_FIRST_RESOLVED_derived.csv",
+    "artifact_modified": false,
+    "raw_dataset_read": false
+  },
+  "status": "COMPLETED",
+  "target_evidence_fields": [
+    "duration_seconds",
+    "endpoint_type",
+    "event",
+    "first_resolved_time",
+    "observation_endpoint"
+  ],
+  "target_mapping": {
+    "endpoint_timestamp_field": "first_resolved_time",
+    "event_field": "event",
+    "physical_duration_field": "duration_seconds",
+    "semantic_duration_field": "time_to_first_resolved"
+  },
+  "task_id": "T7"
+}

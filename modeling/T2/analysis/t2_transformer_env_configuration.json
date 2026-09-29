@@ -1,0 +1,21 @@
+{
+  "operation": "T2-MOD-017",
+  "operation_name": "Transformer Environment Configuration",
+  "current_environment": {
+    "python": "/home/whiteblack/Documents/IT-Ticket-Triage-System/.venv/bin/python",
+    "version": "Python 3.14.7"
+  },
+  "available_compatible_pythons": [
+    {
+      "executable": "/usr/bin/python3.11",
+      "version": "Python 3.11.16"
+    }
+  ],
+  "selected_python": null,
+  "environment_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/.t2-transformer-venv",
+  "environment_created": false,
+  "packages_installed": false,
+  "training_started": false,
+  "test_loaded": false,
+  "status": "PYTHON_3_12_NOT_AVAILABLE"
+}

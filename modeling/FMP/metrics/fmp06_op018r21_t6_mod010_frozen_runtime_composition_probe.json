@@ -1,0 +1,85 @@
+{
+  "operation": "FMP-06 OP-018R21",
+  "status": "PASS",
+  "read_only": true,
+  "training_performed": false,
+  "fitting_performed": false,
+  "evaluation_metrics_calculated": false,
+  "locked_test_used": false,
+  "artifact_modified": false,
+  "semantic_model_loaded": false,
+  "weight_selection_performed": false,
+  "selected_semantic_weight": 0.5,
+  "selected_lexical_weight": 0.5,
+  "runtime_status": "PASS",
+  "query_id": 1872597,
+  "probe_candidate_count": 101,
+  "lexical_component": {
+    "artifact": "modeling/T6/models/t6_mod004_tfidf_vectorizer.joblib",
+    "type": "TfidfVectorizer",
+    "transform_executed": true
+  },
+  "semantic_component": {
+    "source": "modeling/T6/metrics/t6_mod009_hybrid_query_rankings.csv",
+    "column": "semantic_score",
+    "model_not_loaded": true,
+    "scores_reused_from_MOD009": true
+  },
+  "normalization": {
+    "method": "per_query_minmax",
+    "lexical_normalized": true,
+    "semantic_normalized": true
+  },
+  "hybrid_composition": {
+    "lexical_weight": 0.5,
+    "semantic_weight": 0.5,
+    "formula": "0.50 * lexical_score_normalized + 0.50 * semantic_score_normalized"
+  },
+  "sample": [
+    {
+      "query_id": 1872597,
+      "candidate_id": 1361852,
+      "lexical_score": 0.09792387207081735,
+      "semantic_score": 0.723613440990448,
+      "lexical_score_normalized": 1.0,
+      "semantic_score_normalized": 1.0,
+      "hybrid_score": 1.0
+    },
+    {
+      "query_id": 1872597,
+      "candidate_id": 1562561,
+      "lexical_score": 0.0946303893935319,
+      "semantic_score": 0.509751558303833,
+      "lexical_score_normalized": 0.9663669071939512,
+      "semantic_score_normalized": 0.6579458357620316,
+      "hybrid_score": 0.8121563714779914
+    },
+    {
+      "query_id": 1872597,
+      "candidate_id": 1743218,
+      "lexical_score": 0.06763833931439346,
+      "semantic_score": 0.6352598667144775,
+      "lexical_score_normalized": 0.6907237008099337,
+      "semantic_score_normalized": 0.8586858601133234,
+      "hybrid_score": 0.7747047804616285
+    },
+    {
+      "query_id": 1872597,
+      "candidate_id": 1404687,
+      "lexical_score": 0.058887431305538675,
+      "semantic_score": 0.5910651683807373,
+      "lexical_score_normalized": 0.6013593014678995,
+      "semantic_score_normalized": 0.7880001427129557,
+      "hybrid_score": 0.6946797220904276
+    },
+    {
+      "query_id": 1872597,
+      "candidate_id": 503269,
+      "lexical_score": 0.06303084686054082,
+      "semantic_score": 0.5523863434791565,
+      "lexical_score_normalized": 0.6436719211323433,
+      "semantic_score_normalized": 0.7261366027533639,
+      "hybrid_score": 0.6849042619428536
+    }
+  ]
+}

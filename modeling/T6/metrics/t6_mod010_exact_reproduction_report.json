@@ -1,0 +1,55 @@
+{
+  "task_id": "T6",
+  "operation_id": "MOD-010",
+  "operation_name": "Exact TF-IDF Reproduction Diagnostic",
+  "status": "COMPLETED",
+  "method": {
+    "text_construction": "Exact MOD-004 build_text implementation",
+    "vectorizer": "Saved MOD-004 vectorizer",
+    "ranking": "Exact MOD-004 rank_candidates procedure"
+  },
+  "controls": {
+    "raw_dataset_read": false,
+    "model_training": false,
+    "target_modification": false,
+    "candidate_pool_modification": false,
+    "semantic_model_loading": false,
+    "calibration": false,
+    "threshold_optimization": false
+  },
+  "population": {
+    "train_rows": 192506,
+    "eval_rows": 82416,
+    "mod004_queries": 2722,
+    "mod009_rows": 274922,
+    "queries_compared": 2722
+  },
+  "exact_vs_mod004": {
+    "positive_candidate_mismatches": 0,
+    "positive_rank_mismatches": 0,
+    "top_candidate_mismatches": 0,
+    "top_role_mismatches": 0,
+    "mean_absolute_top_score_difference": 3.306808659863504e-17,
+    "max_absolute_top_score_difference": 1.1102230246251565e-16,
+    "mean_absolute_positive_score_difference": 3.520370995947836e-17,
+    "max_absolute_positive_score_difference": 1.1102230246251565e-16,
+    "mean_absolute_rank_difference": 0.0,
+    "max_absolute_rank_difference": 0
+  },
+  "exact_vs_mod009": {
+    "positive_candidate_identity_matches": 0,
+    "queries_compared": 0,
+    "queries_with_positive_score_difference_gt_1e-12": 0,
+    "mean_absolute_positive_score_difference": NaN,
+    "max_absolute_positive_score_difference": NaN
+  },
+  "diagnosis": {
+    "exact_reproduction_ranking_matches_mod004": true,
+    "exact_reproduction_scores_match_mod004": true,
+    "exact_reproduction_positive_scores_match_mod009": true
+  },
+  "artifacts": {
+    "report": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod010_exact_reproduction_report.json",
+    "mismatches": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod010_exact_reproduction_mismatches.csv"
+  }
+}

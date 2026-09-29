@@ -1,0 +1,27 @@
+{
+  "task": "T5 \u2014 Binary Duplicate Detection",
+  "source_artifacts": [
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod007_calibration_comparison.json",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod009_locked_evaluation_metrics.json",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod009_locked_evaluation_predictions.npz",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod010_generalization_analysis.json"
+  ],
+  "plots": [
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/plots/t5_locked_evaluation_confusion_matrix.png",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/plots/t5_locked_evaluation_probability_distribution.png",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/plots/t5_mod006_reliability_curve.png",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/plots/t5_validation_to_evaluation_generalization.png",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/plots/t5_validation_vs_evaluation_ap.png",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/plots/t5_validation_vs_evaluation_brier.png",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/plots/t5_validation_vs_evaluation_log_loss.png",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/plots/t5_validation_vs_evaluation_roc_auc.png"
+  ],
+  "threshold": 0.5,
+  "threshold_status": "descriptive_only",
+  "modeling_performed": false,
+  "training_performed": false,
+  "calibration_performed": false,
+  "threshold_optimization": false,
+  "raw_dataset_read": false,
+  "raw_dataset_modified": false
+}

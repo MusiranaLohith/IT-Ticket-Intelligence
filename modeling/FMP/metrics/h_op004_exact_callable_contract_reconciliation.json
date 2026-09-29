@@ -1,0 +1,4067 @@
+{
+  "operation": "H-OP-004",
+  "operation_name": "Exact Callable / Input / Output Contract Reconciliation",
+  "status": "PASS",
+  "purpose": "Source-driven inspection of previously validated T1-T7 runtime scripts to identify callable functions, parameters, return behavior, artifact loading, ticket/text inputs, and historical/reference-data dependencies.",
+  "task_summary": {
+    "T1": {
+      "inspected_files": 6,
+      "callable_candidates": 19,
+      "top_candidate_count": 15,
+      "strongest_runtime_score": 20
+    },
+    "T2": {
+      "inspected_files": 6,
+      "callable_candidates": 27,
+      "top_candidate_count": 15,
+      "strongest_runtime_score": 20
+    },
+    "T3": {
+      "inspected_files": 6,
+      "callable_candidates": 27,
+      "top_candidate_count": 15,
+      "strongest_runtime_score": 20
+    },
+    "T4": {
+      "inspected_files": 15,
+      "callable_candidates": 47,
+      "top_candidate_count": 15,
+      "strongest_runtime_score": 20
+    },
+    "T5": {
+      "inspected_files": 6,
+      "callable_candidates": 27,
+      "top_candidate_count": 15,
+      "strongest_runtime_score": 20
+    },
+    "T6": {
+      "inspected_files": 10,
+      "callable_candidates": 39,
+      "top_candidate_count": 15,
+      "strongest_runtime_score": 20
+    },
+    "T7": {
+      "inspected_files": 13,
+      "callable_candidates": 44,
+      "top_candidate_count": 15,
+      "strongest_runtime_score": 20
+    }
+  },
+  "task_results": {
+    "T1": {
+      "validated_operations": [
+        "OP-018R5"
+      ],
+      "inspected_file_count": 6,
+      "callable_candidate_count": 19,
+      "top_candidates": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/h_op003_exact_frozen_runtime_reconciliation.py",
+          "function": {
+            "name": "runtime_signal_hits",
+            "parameters": [
+              "source"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "[signal for signal in signals if signal.lower() in source_lower]"
+            ],
+            "input_hits": {
+              "historical": [
+                "neighbor"
+              ]
+            },
+            "artifact_loading_hits": [
+              "joblib.load",
+              "load_model",
+              "pickle.load",
+              "torch.load"
+            ],
+            "prediction_hits": [
+              "kneighbors(",
+              "lognormal",
+              "predict(",
+              "predict_proba(",
+              "rank(",
+              "retrieve",
+              "similarity",
+              "survival",
+              "transform(",
+              "weibull"
+            ],
+            "source_length": 415,
+            "runtime_score": 20
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R5",
+              "source_hits": [
+                "op-018r5"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r5_t1_corrected_frozen_runtime_probe.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "text": [
+                "text"
+              ],
+              "historical": [
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [
+              "joblib.load",
+              "read_csv"
+            ],
+            "prediction_hits": [
+              "predict(",
+              "transform("
+            ],
+            "source_length": 3228,
+            "runtime_score": 9
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R5",
+              "source_hits": [
+                "op-018r5",
+                "op018r5"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp07_op004_frozen_runtime_reproducibility_manifest.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "ticket": [
+                "ticket"
+              ],
+              "text": [
+                "description",
+                "query",
+                "text"
+              ],
+              "historical": [
+                "candidate",
+                "historical",
+                "neighbor",
+                "retrieval",
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [
+              "open("
+            ],
+            "prediction_hits": [
+              "survival"
+            ],
+            "source_length": 6276,
+            "runtime_score": 9
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R5",
+              "source_hits": [
+                "op-018r5"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/h_op003_exact_frozen_runtime_reconciliation.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "ticket": [
+                "ticket"
+              ],
+              "text": [
+                "text"
+              ],
+              "historical": [
+                "reference",
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [
+              "open("
+            ],
+            "prediction_hits": [],
+            "source_length": 4889,
+            "runtime_score": 7
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R5",
+              "source_hits": [
+                "op-018r5"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op022_controlled_end_to_end_execution_probe.py",
+          "function": {
+            "name": "text_of",
+            "parameters": [
+              "obj"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "json.dumps(obj, sort_keys=True).lower()"
+            ],
+            "input_hits": {
+              "text": [
+                "text"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [],
+            "source_length": 68,
+            "runtime_score": 5
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R5",
+              "source_hits": [
+                "op018r5"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/h_op003_exact_frozen_runtime_reconciliation.py",
+          "function": {
+            "name": "read_text",
+            "parameters": [
+              "path"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "path.read_text(encoding='utf-8', errors='replace')"
+            ],
+            "input_hits": {
+              "text": [
+                "text"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [],
+            "source_length": 82,
+            "runtime_score": 5
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R5",
+              "source_hits": [
+                "op-018r5"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op022_controlled_end_to_end_execution_probe.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "text": [
+                "text"
+              ],
+              "historical": [
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [
+              "open("
+            ],
+            "prediction_hits": [],
+            "source_length": 5615,
+            "runtime_score": 4
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R5",
+              "source_hits": [
+                "op018r5"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op022r1_corrected_controlled_execution_reconciliation.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "text": [
+                "text"
+              ],
+              "historical": [
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [
+              "open("
+            ],
+            "prediction_hits": [],
+            "source_length": 4776,
+            "runtime_score": 4
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R5",
+              "source_hits": [
+                "op018r5"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op019r1_final_t1_t7_runtime_binding_reconciliation.py",
+          "function": {
+            "name": "load_json",
+            "parameters": [
+              "path"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "json.load(f)"
+            ],
+            "input_hits": {},
+            "artifact_loading_hits": [
+              "open("
+            ],
+            "prediction_hits": [],
+            "source_length": 96,
+            "runtime_score": 3
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R5",
+              "source_hits": [
+                "op018r5"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op022_controlled_end_to_end_execution_probe.py",
+          "function": {
+            "name": "load_json",
+            "parameters": [
+              "path"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "json.load(f)"
+            ],
+            "input_hits": {},
+            "artifact_loading_hits": [
+              "open("
+            ],
+            "prediction_hits": [],
+            "source_length": 96,
+            "runtime_score": 3
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R5",
+              "source_hits": [
+                "op018r5"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op022r1_corrected_controlled_execution_reconciliation.py",
+          "function": {
+            "name": "load_json",
+            "parameters": [
+              "path"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "json.load(f)"
+            ],
+            "input_hits": {},
+            "artifact_loading_hits": [
+              "open("
+            ],
+            "prediction_hits": [],
+            "source_length": 96,
+            "runtime_score": 3
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R5",
+              "source_hits": [
+                "op018r5"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp07_op004_frozen_runtime_reproducibility_manifest.py",
+          "function": {
+            "name": "load_json",
+            "parameters": [
+              "path"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "json.load(f)"
+            ],
+            "input_hits": {},
+            "artifact_loading_hits": [
+              "open("
+            ],
+            "prediction_hits": [],
+            "source_length": 96,
+            "runtime_score": 3
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R5",
+              "source_hits": [
+                "op-018r5"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp07_op004_frozen_runtime_reproducibility_manifest.py",
+          "function": {
+            "name": "normalize",
+            "parameters": [
+              "path"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "str(Path(path).resolve())"
+            ],
+            "input_hits": {},
+            "artifact_loading_hits": [
+              "Path("
+            ],
+            "prediction_hits": [],
+            "source_length": 57,
+            "runtime_score": 3
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R5",
+              "source_hits": [
+                "op-018r5"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp07_op004_frozen_runtime_reproducibility_manifest.py",
+          "function": {
+            "name": "artifact_records",
+            "parameters": [
+              "inventory",
+              "task"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "result"
+            ],
+            "input_hits": {},
+            "artifact_loading_hits": [
+              "Path("
+            ],
+            "prediction_hits": [],
+            "source_length": 296,
+            "runtime_score": 3
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R5",
+              "source_hits": [
+                "op-018r5"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r5_t1_corrected_frozen_runtime_probe.py",
+          "function": {
+            "name": "rel",
+            "parameters": [
+              "path"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "str(path.relative_to(PROJECT_ROOT))"
+            ],
+            "input_hits": {},
+            "artifact_loading_hits": [],
+            "prediction_hits": [],
+            "source_length": 74,
+            "runtime_score": 2
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R5",
+              "source_hits": [
+                "op-018r5",
+                "op018r5"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "T2": {
+      "validated_operations": [
+        "OP-018R3"
+      ],
+      "inspected_file_count": 6,
+      "callable_candidate_count": 27,
+      "top_candidates": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/h_op003_exact_frozen_runtime_reconciliation.py",
+          "function": {
+            "name": "runtime_signal_hits",
+            "parameters": [
+              "source"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "[signal for signal in signals if signal.lower() in source_lower]"
+            ],
+            "input_hits": {
+              "historical": [
+                "neighbor"
+              ]
+            },
+            "artifact_loading_hits": [
+              "joblib.load",
+              "load_model",
+              "pickle.load",
+              "torch.load"
+            ],
+            "prediction_hits": [
+              "kneighbors(",
+              "lognormal",
+              "predict(",
+              "predict_proba(",
+              "rank(",
+              "retrieve",
+              "similarity",
+              "survival",
+              "transform(",
+              "weibull"
+            ],
+            "source_length": 415,
+            "runtime_score": 20
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": {
+            "name": "probe_t5",
+            "parameters": [],
+            "return_count": 1,
+            "return_expressions": [
+              "{'status': 'PASS', 'vectorizer_artifact': rel(vectorizer_path), 'classifier_artifact': rel(classifier_path), 'calibration_artifact': rel(calibration_path), 'input_source': rel(input_path), 'input_count': len(pairs), 'decision_score_shape': list(decision_scores.shape), 'calibrator_input_shape': list(decision_matrix.shape), 'output_count': len(calibrated_probability), 'calibrated_probability_preview': [float(value) for value in calibrated_probability], 'threshold_applied': False, 'threshold_selection': False}"
+            ],
+            "input_hits": {
+              "ticket": [
+                "ticket"
+              ],
+              "text": [
+                "text"
+              ],
+              "historical": [
+                "index"
+              ]
+            },
+            "artifact_loading_hits": [
+              "joblib.load"
+            ],
+            "prediction_hits": [
+              "decision_function(",
+              "predict(",
+              "transform("
+            ],
+            "source_length": 1742,
+            "runtime_score": 14
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3",
+                "op018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": {
+            "name": "text_from_row",
+            "parameters": [
+              "row"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "text"
+            ],
+            "input_hits": {
+              "ticket": [
+                "ticket"
+              ],
+              "text": [
+                "description",
+                "text",
+                "title"
+              ],
+              "historical": [
+                "index"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [],
+            "source_length": 759,
+            "runtime_score": 9
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3",
+                "op018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": {
+            "name": "probe_t1",
+            "parameters": [],
+            "return_count": 1,
+            "return_expressions": [
+              "{'status': 'PASS', 'artifact': rel(artifact), 'input_source': rel(input_path), 'input_count': len(texts), 'feature_type': f'{type(features).__module__}.{type(features).__name__}', 'model_type': f'{type(model).__module__}.{type(model).__name__}', 'output_count': len(predictions), 'output_preview': [str(value) for value in predictions]}"
+            ],
+            "input_hits": {
+              "text": [
+                "text"
+              ],
+              "historical": [
+                "dataset"
+              ]
+            },
+            "artifact_loading_hits": [
+              "joblib.load"
+            ],
+            "prediction_hits": [
+              "predict(",
+              "transform("
+            ],
+            "source_length": 854,
+            "runtime_score": 9
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3",
+                "op018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp07_op004_frozen_runtime_reproducibility_manifest.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "ticket": [
+                "ticket"
+              ],
+              "text": [
+                "description",
+                "query",
+                "text"
+              ],
+              "historical": [
+                "candidate",
+                "historical",
+                "neighbor",
+                "retrieval",
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [
+              "open("
+            ],
+            "prediction_hits": [
+              "survival"
+            ],
+            "source_length": 6276,
+            "runtime_score": 9
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": {
+            "name": "probe_t2",
+            "parameters": [],
+            "return_count": 1,
+            "return_expressions": [
+              "{'status': 'PASS', 'artifact': rel(artifact), 'input_source': rel(input_path), 'input_count': len(texts), 'vectorizer_type': f'{type(vectorizer).__module__}.{type(vectorizer).__name__}', 'model_type': f'{type(model).__module__}.{type(model).__name__}', 'output_count': len(predictions), 'output_preview': [str(value) for value in predictions]}"
+            ],
+            "input_hits": {
+              "text": [
+                "text"
+              ]
+            },
+            "artifact_loading_hits": [
+              "joblib.load"
+            ],
+            "prediction_hits": [
+              "predict(",
+              "transform("
+            ],
+            "source_length": 813,
+            "runtime_score": 8
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3",
+                "op018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": {
+            "name": "probe_t3",
+            "parameters": [],
+            "return_count": 1,
+            "return_expressions": [
+              "{'status': 'PASS', 'artifact': rel(artifact), 'input_source': rel(input_path), 'input_count': len(texts), 'vectorizer_type': f'{type(vectorizer).__module__}.{type(vectorizer).__name__}', 'model_type': f'{type(model).__module__}.{type(model).__name__}', 'output_count': len(predictions), 'output_preview': [str(value) for value in predictions]}"
+            ],
+            "input_hits": {
+              "text": [
+                "text"
+              ]
+            },
+            "artifact_loading_hits": [
+              "joblib.load"
+            ],
+            "prediction_hits": [
+              "predict(",
+              "transform("
+            ],
+            "source_length": 813,
+            "runtime_score": 8
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3",
+                "op018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/h_op003_exact_frozen_runtime_reconciliation.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "ticket": [
+                "ticket"
+              ],
+              "text": [
+                "text"
+              ],
+              "historical": [
+                "reference",
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [
+              "open("
+            ],
+            "prediction_hits": [],
+            "source_length": 4889,
+            "runtime_score": 7
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "text": [
+                "text"
+              ],
+              "historical": [
+                "candidate",
+                "corpus",
+                "historical",
+                "retrieval",
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [
+              "survival"
+            ],
+            "source_length": 2922,
+            "runtime_score": 5
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3",
+                "op018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op022_controlled_end_to_end_execution_probe.py",
+          "function": {
+            "name": "text_of",
+            "parameters": [
+              "obj"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "json.dumps(obj, sort_keys=True).lower()"
+            ],
+            "input_hits": {
+              "text": [
+                "text"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [],
+            "source_length": 68,
+            "runtime_score": 5
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/h_op003_exact_frozen_runtime_reconciliation.py",
+          "function": {
+            "name": "read_text",
+            "parameters": [
+              "path"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "path.read_text(encoding='utf-8', errors='replace')"
+            ],
+            "input_hits": {
+              "text": [
+                "text"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [],
+            "source_length": 82,
+            "runtime_score": 5
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": {
+            "name": "load_csv",
+            "parameters": [
+              "candidates"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "(path, df)"
+            ],
+            "input_hits": {
+              "historical": [
+                "candidate"
+              ]
+            },
+            "artifact_loading_hits": [
+              "read_csv"
+            ],
+            "prediction_hits": [],
+            "source_length": 304,
+            "runtime_score": 4
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3",
+                "op018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op022_controlled_end_to_end_execution_probe.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "text": [
+                "text"
+              ],
+              "historical": [
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [
+              "open("
+            ],
+            "prediction_hits": [],
+            "source_length": 5615,
+            "runtime_score": 4
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op022r1_corrected_controlled_execution_reconciliation.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "text": [
+                "text"
+              ],
+              "historical": [
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [
+              "open("
+            ],
+            "prediction_hits": [],
+            "source_length": 4776,
+            "runtime_score": 4
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3",
+                "op018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op022r2_t5_t10_authoritative_boundary_reconciliation.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "text": [
+                "text"
+              ],
+              "historical": [
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [
+              "open("
+            ],
+            "prediction_hits": [],
+            "source_length": 5052,
+            "runtime_score": 4
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3",
+                "op018r3"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "T3": {
+      "validated_operations": [
+        "OP-018R3"
+      ],
+      "inspected_file_count": 6,
+      "callable_candidate_count": 27,
+      "top_candidates": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/h_op003_exact_frozen_runtime_reconciliation.py",
+          "function": {
+            "name": "runtime_signal_hits",
+            "parameters": [
+              "source"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "[signal for signal in signals if signal.lower() in source_lower]"
+            ],
+            "input_hits": {
+              "historical": [
+                "neighbor"
+              ]
+            },
+            "artifact_loading_hits": [
+              "joblib.load",
+              "load_model",
+              "pickle.load",
+              "torch.load"
+            ],
+            "prediction_hits": [
+              "kneighbors(",
+              "lognormal",
+              "predict(",
+              "predict_proba(",
+              "rank(",
+              "retrieve",
+              "similarity",
+              "survival",
+              "transform(",
+              "weibull"
+            ],
+            "source_length": 415,
+            "runtime_score": 20
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": {
+            "name": "probe_t5",
+            "parameters": [],
+            "return_count": 1,
+            "return_expressions": [
+              "{'status': 'PASS', 'vectorizer_artifact': rel(vectorizer_path), 'classifier_artifact': rel(classifier_path), 'calibration_artifact': rel(calibration_path), 'input_source': rel(input_path), 'input_count': len(pairs), 'decision_score_shape': list(decision_scores.shape), 'calibrator_input_shape': list(decision_matrix.shape), 'output_count': len(calibrated_probability), 'calibrated_probability_preview': [float(value) for value in calibrated_probability], 'threshold_applied': False, 'threshold_selection': False}"
+            ],
+            "input_hits": {
+              "ticket": [
+                "ticket"
+              ],
+              "text": [
+                "text"
+              ],
+              "historical": [
+                "index"
+              ]
+            },
+            "artifact_loading_hits": [
+              "joblib.load"
+            ],
+            "prediction_hits": [
+              "decision_function(",
+              "predict(",
+              "transform("
+            ],
+            "source_length": 1742,
+            "runtime_score": 14
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3",
+                "op018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": {
+            "name": "text_from_row",
+            "parameters": [
+              "row"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "text"
+            ],
+            "input_hits": {
+              "ticket": [
+                "ticket"
+              ],
+              "text": [
+                "description",
+                "text",
+                "title"
+              ],
+              "historical": [
+                "index"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [],
+            "source_length": 759,
+            "runtime_score": 9
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3",
+                "op018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": {
+            "name": "probe_t1",
+            "parameters": [],
+            "return_count": 1,
+            "return_expressions": [
+              "{'status': 'PASS', 'artifact': rel(artifact), 'input_source': rel(input_path), 'input_count': len(texts), 'feature_type': f'{type(features).__module__}.{type(features).__name__}', 'model_type': f'{type(model).__module__}.{type(model).__name__}', 'output_count': len(predictions), 'output_preview': [str(value) for value in predictions]}"
+            ],
+            "input_hits": {
+              "text": [
+                "text"
+              ],
+              "historical": [
+                "dataset"
+              ]
+            },
+            "artifact_loading_hits": [
+              "joblib.load"
+            ],
+            "prediction_hits": [
+              "predict(",
+              "transform("
+            ],
+            "source_length": 854,
+            "runtime_score": 9
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3",
+                "op018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp07_op004_frozen_runtime_reproducibility_manifest.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "ticket": [
+                "ticket"
+              ],
+              "text": [
+                "description",
+                "query",
+                "text"
+              ],
+              "historical": [
+                "candidate",
+                "historical",
+                "neighbor",
+                "retrieval",
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [
+              "open("
+            ],
+            "prediction_hits": [
+              "survival"
+            ],
+            "source_length": 6276,
+            "runtime_score": 9
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": {
+            "name": "probe_t2",
+            "parameters": [],
+            "return_count": 1,
+            "return_expressions": [
+              "{'status': 'PASS', 'artifact': rel(artifact), 'input_source': rel(input_path), 'input_count': len(texts), 'vectorizer_type': f'{type(vectorizer).__module__}.{type(vectorizer).__name__}', 'model_type': f'{type(model).__module__}.{type(model).__name__}', 'output_count': len(predictions), 'output_preview': [str(value) for value in predictions]}"
+            ],
+            "input_hits": {
+              "text": [
+                "text"
+              ]
+            },
+            "artifact_loading_hits": [
+              "joblib.load"
+            ],
+            "prediction_hits": [
+              "predict(",
+              "transform("
+            ],
+            "source_length": 813,
+            "runtime_score": 8
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3",
+                "op018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": {
+            "name": "probe_t3",
+            "parameters": [],
+            "return_count": 1,
+            "return_expressions": [
+              "{'status': 'PASS', 'artifact': rel(artifact), 'input_source': rel(input_path), 'input_count': len(texts), 'vectorizer_type': f'{type(vectorizer).__module__}.{type(vectorizer).__name__}', 'model_type': f'{type(model).__module__}.{type(model).__name__}', 'output_count': len(predictions), 'output_preview': [str(value) for value in predictions]}"
+            ],
+            "input_hits": {
+              "text": [
+                "text"
+              ]
+            },
+            "artifact_loading_hits": [
+              "joblib.load"
+            ],
+            "prediction_hits": [
+              "predict(",
+              "transform("
+            ],
+            "source_length": 813,
+            "runtime_score": 8
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3",
+                "op018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/h_op003_exact_frozen_runtime_reconciliation.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "ticket": [
+                "ticket"
+              ],
+              "text": [
+                "text"
+              ],
+              "historical": [
+                "reference",
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [
+              "open("
+            ],
+            "prediction_hits": [],
+            "source_length": 4889,
+            "runtime_score": 7
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "text": [
+                "text"
+              ],
+              "historical": [
+                "candidate",
+                "corpus",
+                "historical",
+                "retrieval",
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [
+              "survival"
+            ],
+            "source_length": 2922,
+            "runtime_score": 5
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3",
+                "op018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op022_controlled_end_to_end_execution_probe.py",
+          "function": {
+            "name": "text_of",
+            "parameters": [
+              "obj"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "json.dumps(obj, sort_keys=True).lower()"
+            ],
+            "input_hits": {
+              "text": [
+                "text"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [],
+            "source_length": 68,
+            "runtime_score": 5
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/h_op003_exact_frozen_runtime_reconciliation.py",
+          "function": {
+            "name": "read_text",
+            "parameters": [
+              "path"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "path.read_text(encoding='utf-8', errors='replace')"
+            ],
+            "input_hits": {
+              "text": [
+                "text"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [],
+            "source_length": 82,
+            "runtime_score": 5
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": {
+            "name": "load_csv",
+            "parameters": [
+              "candidates"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "(path, df)"
+            ],
+            "input_hits": {
+              "historical": [
+                "candidate"
+              ]
+            },
+            "artifact_loading_hits": [
+              "read_csv"
+            ],
+            "prediction_hits": [],
+            "source_length": 304,
+            "runtime_score": 4
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3",
+                "op018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op022_controlled_end_to_end_execution_probe.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "text": [
+                "text"
+              ],
+              "historical": [
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [
+              "open("
+            ],
+            "prediction_hits": [],
+            "source_length": 5615,
+            "runtime_score": 4
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op022r1_corrected_controlled_execution_reconciliation.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "text": [
+                "text"
+              ],
+              "historical": [
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [
+              "open("
+            ],
+            "prediction_hits": [],
+            "source_length": 4776,
+            "runtime_score": 4
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3",
+                "op018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op022r2_t5_t10_authoritative_boundary_reconciliation.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "text": [
+                "text"
+              ],
+              "historical": [
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [
+              "open("
+            ],
+            "prediction_hits": [],
+            "source_length": 5052,
+            "runtime_score": 4
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3",
+                "op018r3"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "T4": {
+      "validated_operations": [
+        "OP-018R6",
+        "OP-018R7",
+        "OP-018R8",
+        "OP-018R9",
+        "OP-018R10",
+        "OP-018R11",
+        "OP-018R12",
+        "OP-018R13",
+        "OP-018R14",
+        "OP-018R16"
+      ],
+      "inspected_file_count": 15,
+      "callable_candidate_count": 47,
+      "top_candidates": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/h_op003_exact_frozen_runtime_reconciliation.py",
+          "function": {
+            "name": "runtime_signal_hits",
+            "parameters": [
+              "source"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "[signal for signal in signals if signal.lower() in source_lower]"
+            ],
+            "input_hits": {
+              "historical": [
+                "neighbor"
+              ]
+            },
+            "artifact_loading_hits": [
+              "joblib.load",
+              "load_model",
+              "pickle.load",
+              "torch.load"
+            ],
+            "prediction_hits": [
+              "kneighbors(",
+              "lognormal",
+              "predict(",
+              "predict_proba(",
+              "rank(",
+              "retrieve",
+              "similarity",
+              "survival",
+              "transform(",
+              "weibull"
+            ],
+            "source_length": 415,
+            "runtime_score": 20
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R6",
+              "source_hits": [
+                "op-018r6"
+              ]
+            },
+            {
+              "operation": "OP-018R7",
+              "source_hits": [
+                "op-018r7"
+              ]
+            },
+            {
+              "operation": "OP-018R8",
+              "source_hits": [
+                "op-018r8"
+              ]
+            },
+            {
+              "operation": "OP-018R9",
+              "source_hits": [
+                "op-018r9"
+              ]
+            },
+            {
+              "operation": "OP-018R10",
+              "source_hits": [
+                "op-018r10"
+              ]
+            },
+            {
+              "operation": "OP-018R11",
+              "source_hits": [
+                "op-018r11"
+              ]
+            },
+            {
+              "operation": "OP-018R12",
+              "source_hits": [
+                "op-018r12"
+              ]
+            },
+            {
+              "operation": "OP-018R13",
+              "source_hits": [
+                "op-018r13"
+              ]
+            },
+            {
+              "operation": "OP-018R14",
+              "source_hits": [
+                "op-018r14"
+              ]
+            },
+            {
+              "operation": "OP-018R16",
+              "source_hits": [
+                "op-018r16"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r16_t4_exact_eval_retrieval_reproduction.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "ticket": [
+                "ticket"
+              ],
+              "text": [
+                "description",
+                "text"
+              ],
+              "historical": [
+                "index",
+                "neighbor",
+                "retrieval",
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [
+              "joblib.load",
+              "np.load",
+              "read_csv"
+            ],
+            "prediction_hits": [
+              "kneighbors(",
+              "similarity",
+              "transform("
+            ],
+            "source_length": 6905,
+            "runtime_score": 15
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R16",
+              "source_hits": [
+                "op-018r16",
+                "op018r16"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r14_t4_corrected_frozen_runtime_smoke.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "ticket": [
+                "ticket"
+              ],
+              "text": [
+                "description",
+                "text"
+              ],
+              "historical": [
+                "candidate",
+                "neighbor",
+                "retrieval",
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [
+              "joblib.load",
+              "read_csv"
+            ],
+            "prediction_hits": [
+              "kneighbors(",
+              "similarity",
+              "transform("
+            ],
+            "source_length": 4886,
+            "runtime_score": 14
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R14",
+              "source_hits": [
+                "op-018r14",
+                "op018r14"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r8_t4_final_implementation_binding_audit.py",
+          "function": {
+            "name": "inspect_file",
+            "parameters": [
+              "path"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "{'path': rel(path), 'functions': functions, 'classes': classes, 'retrieval_functions': retrieval_functions, 'calls': sorted(set(calls)), 'path_references': path_references, 'load_save_lines': loading_lines, 'training_related_lines': training_lines, 'source_line_count': len(source.splitlines())}"
+            ],
+            "input_hits": {
+              "text": [
+                "text"
+              ],
+              "historical": [
+                "candidate",
+                "reference",
+                "retrieval",
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [
+              "joblib.load",
+              "np.load",
+              "open(",
+              "read_csv"
+            ],
+            "prediction_hits": [
+              "similarity",
+              "transform("
+            ],
+            "source_length": 2142,
+            "runtime_score": 14
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R8",
+              "source_hits": [
+                "op-018r8",
+                "op018r8"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r12_t4_frozen_runtime_smoke.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "text": [
+                "text"
+              ],
+              "historical": [
+                "candidate",
+                "neighbor",
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [
+              "joblib.load",
+              "read_csv"
+            ],
+            "prediction_hits": [
+              "kneighbors(",
+              "transform("
+            ],
+            "source_length": 3027,
+            "runtime_score": 9
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R12",
+              "source_hits": [
+                "op-018r12",
+                "op018r12"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp07_op004_frozen_runtime_reproducibility_manifest.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "ticket": [
+                "ticket"
+              ],
+              "text": [
+                "description",
+                "query",
+                "text"
+              ],
+              "historical": [
+                "candidate",
+                "historical",
+                "neighbor",
+                "retrieval",
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [
+              "open("
+            ],
+            "prediction_hits": [
+              "survival"
+            ],
+            "source_length": 6276,
+            "runtime_score": 9
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R16",
+              "source_hits": [
+                "op-018r16"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r12_t4_frozen_runtime_smoke.py",
+          "function": {
+            "name": "rank_assignees",
+            "parameters": [
+              "neighbor_indices",
+              "similarities",
+              "train_targets"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "[{'assignee': assignee, 'score': values['score'], 'neighbor_count': values['neighbor_count']} for assignee, values in ranked]"
+            ],
+            "input_hits": {
+              "historical": [
+                "index",
+                "neighbor"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [
+              "similarity"
+            ],
+            "source_length": 686,
+            "runtime_score": 8
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R12",
+              "source_hits": [
+                "op-018r12",
+                "op018r12"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r14_t4_corrected_frozen_runtime_smoke.py",
+          "function": {
+            "name": "rank_assignees",
+            "parameters": [
+              "neighbor_indices",
+              "neighbor_similarities",
+              "train_targets"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "ranked"
+            ],
+            "input_hits": {
+              "historical": [
+                "neighbor"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [
+              "similarity"
+            ],
+            "source_length": 472,
+            "runtime_score": 8
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R14",
+              "source_hits": [
+                "op-018r14",
+                "op018r14"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/h_op003_exact_frozen_runtime_reconciliation.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "ticket": [
+                "ticket"
+              ],
+              "text": [
+                "text"
+              ],
+              "historical": [
+                "reference",
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [
+              "open("
+            ],
+            "prediction_hits": [],
+            "source_length": 4889,
+            "runtime_score": 7
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R6",
+              "source_hits": [
+                "op-018r6"
+              ]
+            },
+            {
+              "operation": "OP-018R7",
+              "source_hits": [
+                "op-018r7"
+              ]
+            },
+            {
+              "operation": "OP-018R8",
+              "source_hits": [
+                "op-018r8"
+              ]
+            },
+            {
+              "operation": "OP-018R9",
+              "source_hits": [
+                "op-018r9"
+              ]
+            },
+            {
+              "operation": "OP-018R10",
+              "source_hits": [
+                "op-018r10"
+              ]
+            },
+            {
+              "operation": "OP-018R11",
+              "source_hits": [
+                "op-018r11"
+              ]
+            },
+            {
+              "operation": "OP-018R12",
+              "source_hits": [
+                "op-018r12"
+              ]
+            },
+            {
+              "operation": "OP-018R13",
+              "source_hits": [
+                "op-018r13"
+              ]
+            },
+            {
+              "operation": "OP-018R14",
+              "source_hits": [
+                "op-018r14"
+              ]
+            },
+            {
+              "operation": "OP-018R16",
+              "source_hits": [
+                "op-018r16"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r12_t4_frozen_runtime_smoke.py",
+          "function": {
+            "name": "build_text",
+            "parameters": [
+              "row"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "' '.join(parts)"
+            ],
+            "input_hits": {
+              "text": [
+                "description",
+                "text"
+              ],
+              "historical": [
+                "index"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [],
+            "source_length": 449,
+            "runtime_score": 6
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R12",
+              "source_hits": [
+                "op-018r12",
+                "op018r12"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r13_t4_native_input_contract_inspection.py",
+          "function": {
+            "name": "safe_read_text",
+            "parameters": [
+              "path"
+            ],
+            "return_count": 2,
+            "return_expressions": [
+              "path.read_text(encoding='utf-8', errors='replace')",
+              "f'<<READ_ERROR: {type(exc).__name__}: {exc}>>'"
+            ],
+            "input_hits": {
+              "text": [
+                "text"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [],
+            "source_length": 197,
+            "runtime_score": 5
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R13",
+              "source_hits": [
+                "op-018r13",
+                "op018r13"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r14_t4_corrected_frozen_runtime_smoke.py",
+          "function": {
+            "name": "build_text",
+            "parameters": [
+              "df"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "text.str.strip()"
+            ],
+            "input_hits": {
+              "text": [
+                "description",
+                "text"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [],
+            "source_length": 402,
+            "runtime_score": 5
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R14",
+              "source_hits": [
+                "op-018r14",
+                "op018r14"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r16_t4_exact_eval_retrieval_reproduction.py",
+          "function": {
+            "name": "build_text",
+            "parameters": [
+              "df"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "text.str.strip()"
+            ],
+            "input_hits": {
+              "text": [
+                "description",
+                "text"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [],
+            "source_length": 341,
+            "runtime_score": 5
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R16",
+              "source_hits": [
+                "op-018r16",
+                "op018r16"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r6_t4_runtime_interface_probe.py",
+          "function": {
+            "name": "inspect_python_file",
+            "parameters": [
+              "path"
+            ],
+            "return_count": 2,
+            "return_expressions": [
+              "result",
+              "result"
+            ],
+            "input_hits": {
+              "text": [
+                "text"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [],
+            "source_length": 825,
+            "runtime_score": 5
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R6",
+              "source_hits": [
+                "op-018r6",
+                "op018r6"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r7_t4_implementation_locator.py",
+          "function": {
+            "name": "inspect_python",
+            "parameters": [
+              "path"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "result"
+            ],
+            "input_hits": {
+              "text": [
+                "text"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [],
+            "source_length": 1105,
+            "runtime_score": 5
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R7",
+              "source_hits": [
+                "op-018r7",
+                "op018r7"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "T5": {
+      "validated_operations": [
+        "OP-018R3"
+      ],
+      "inspected_file_count": 6,
+      "callable_candidate_count": 27,
+      "top_candidates": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/h_op003_exact_frozen_runtime_reconciliation.py",
+          "function": {
+            "name": "runtime_signal_hits",
+            "parameters": [
+              "source"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "[signal for signal in signals if signal.lower() in source_lower]"
+            ],
+            "input_hits": {
+              "historical": [
+                "neighbor"
+              ]
+            },
+            "artifact_loading_hits": [
+              "joblib.load",
+              "load_model",
+              "pickle.load",
+              "torch.load"
+            ],
+            "prediction_hits": [
+              "kneighbors(",
+              "lognormal",
+              "predict(",
+              "predict_proba(",
+              "rank(",
+              "retrieve",
+              "similarity",
+              "survival",
+              "transform(",
+              "weibull"
+            ],
+            "source_length": 415,
+            "runtime_score": 20
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": {
+            "name": "probe_t5",
+            "parameters": [],
+            "return_count": 1,
+            "return_expressions": [
+              "{'status': 'PASS', 'vectorizer_artifact': rel(vectorizer_path), 'classifier_artifact': rel(classifier_path), 'calibration_artifact': rel(calibration_path), 'input_source': rel(input_path), 'input_count': len(pairs), 'decision_score_shape': list(decision_scores.shape), 'calibrator_input_shape': list(decision_matrix.shape), 'output_count': len(calibrated_probability), 'calibrated_probability_preview': [float(value) for value in calibrated_probability], 'threshold_applied': False, 'threshold_selection': False}"
+            ],
+            "input_hits": {
+              "ticket": [
+                "ticket"
+              ],
+              "text": [
+                "text"
+              ],
+              "historical": [
+                "index"
+              ]
+            },
+            "artifact_loading_hits": [
+              "joblib.load"
+            ],
+            "prediction_hits": [
+              "decision_function(",
+              "predict(",
+              "transform("
+            ],
+            "source_length": 1742,
+            "runtime_score": 14
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3",
+                "op018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": {
+            "name": "text_from_row",
+            "parameters": [
+              "row"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "text"
+            ],
+            "input_hits": {
+              "ticket": [
+                "ticket"
+              ],
+              "text": [
+                "description",
+                "text",
+                "title"
+              ],
+              "historical": [
+                "index"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [],
+            "source_length": 759,
+            "runtime_score": 9
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3",
+                "op018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": {
+            "name": "probe_t1",
+            "parameters": [],
+            "return_count": 1,
+            "return_expressions": [
+              "{'status': 'PASS', 'artifact': rel(artifact), 'input_source': rel(input_path), 'input_count': len(texts), 'feature_type': f'{type(features).__module__}.{type(features).__name__}', 'model_type': f'{type(model).__module__}.{type(model).__name__}', 'output_count': len(predictions), 'output_preview': [str(value) for value in predictions]}"
+            ],
+            "input_hits": {
+              "text": [
+                "text"
+              ],
+              "historical": [
+                "dataset"
+              ]
+            },
+            "artifact_loading_hits": [
+              "joblib.load"
+            ],
+            "prediction_hits": [
+              "predict(",
+              "transform("
+            ],
+            "source_length": 854,
+            "runtime_score": 9
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3",
+                "op018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp07_op004_frozen_runtime_reproducibility_manifest.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "ticket": [
+                "ticket"
+              ],
+              "text": [
+                "description",
+                "query",
+                "text"
+              ],
+              "historical": [
+                "candidate",
+                "historical",
+                "neighbor",
+                "retrieval",
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [
+              "open("
+            ],
+            "prediction_hits": [
+              "survival"
+            ],
+            "source_length": 6276,
+            "runtime_score": 9
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": {
+            "name": "probe_t2",
+            "parameters": [],
+            "return_count": 1,
+            "return_expressions": [
+              "{'status': 'PASS', 'artifact': rel(artifact), 'input_source': rel(input_path), 'input_count': len(texts), 'vectorizer_type': f'{type(vectorizer).__module__}.{type(vectorizer).__name__}', 'model_type': f'{type(model).__module__}.{type(model).__name__}', 'output_count': len(predictions), 'output_preview': [str(value) for value in predictions]}"
+            ],
+            "input_hits": {
+              "text": [
+                "text"
+              ]
+            },
+            "artifact_loading_hits": [
+              "joblib.load"
+            ],
+            "prediction_hits": [
+              "predict(",
+              "transform("
+            ],
+            "source_length": 813,
+            "runtime_score": 8
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3",
+                "op018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": {
+            "name": "probe_t3",
+            "parameters": [],
+            "return_count": 1,
+            "return_expressions": [
+              "{'status': 'PASS', 'artifact': rel(artifact), 'input_source': rel(input_path), 'input_count': len(texts), 'vectorizer_type': f'{type(vectorizer).__module__}.{type(vectorizer).__name__}', 'model_type': f'{type(model).__module__}.{type(model).__name__}', 'output_count': len(predictions), 'output_preview': [str(value) for value in predictions]}"
+            ],
+            "input_hits": {
+              "text": [
+                "text"
+              ]
+            },
+            "artifact_loading_hits": [
+              "joblib.load"
+            ],
+            "prediction_hits": [
+              "predict(",
+              "transform("
+            ],
+            "source_length": 813,
+            "runtime_score": 8
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3",
+                "op018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/h_op003_exact_frozen_runtime_reconciliation.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "ticket": [
+                "ticket"
+              ],
+              "text": [
+                "text"
+              ],
+              "historical": [
+                "reference",
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [
+              "open("
+            ],
+            "prediction_hits": [],
+            "source_length": 4889,
+            "runtime_score": 7
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "text": [
+                "text"
+              ],
+              "historical": [
+                "candidate",
+                "corpus",
+                "historical",
+                "retrieval",
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [
+              "survival"
+            ],
+            "source_length": 2922,
+            "runtime_score": 5
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3",
+                "op018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op022_controlled_end_to_end_execution_probe.py",
+          "function": {
+            "name": "text_of",
+            "parameters": [
+              "obj"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "json.dumps(obj, sort_keys=True).lower()"
+            ],
+            "input_hits": {
+              "text": [
+                "text"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [],
+            "source_length": 68,
+            "runtime_score": 5
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/h_op003_exact_frozen_runtime_reconciliation.py",
+          "function": {
+            "name": "read_text",
+            "parameters": [
+              "path"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "path.read_text(encoding='utf-8', errors='replace')"
+            ],
+            "input_hits": {
+              "text": [
+                "text"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [],
+            "source_length": 82,
+            "runtime_score": 5
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": {
+            "name": "load_csv",
+            "parameters": [
+              "candidates"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "(path, df)"
+            ],
+            "input_hits": {
+              "historical": [
+                "candidate"
+              ]
+            },
+            "artifact_loading_hits": [
+              "read_csv"
+            ],
+            "prediction_hits": [],
+            "source_length": 304,
+            "runtime_score": 4
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3",
+                "op018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op022_controlled_end_to_end_execution_probe.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "text": [
+                "text"
+              ],
+              "historical": [
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [
+              "open("
+            ],
+            "prediction_hits": [],
+            "source_length": 5615,
+            "runtime_score": 4
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op022r1_corrected_controlled_execution_reconciliation.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "text": [
+                "text"
+              ],
+              "historical": [
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [
+              "open("
+            ],
+            "prediction_hits": [],
+            "source_length": 4776,
+            "runtime_score": 4
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3",
+                "op018r3"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op022r2_t5_t10_authoritative_boundary_reconciliation.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "text": [
+                "text"
+              ],
+              "historical": [
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [
+              "open("
+            ],
+            "prediction_hits": [],
+            "source_length": 5052,
+            "runtime_score": 4
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R3",
+              "source_hits": [
+                "op-018r3",
+                "op018r3"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "T6": {
+      "validated_operations": [
+        "OP-018R17",
+        "OP-018R18",
+        "OP-018R19",
+        "OP-018R20",
+        "OP-018R21"
+      ],
+      "inspected_file_count": 10,
+      "callable_candidate_count": 39,
+      "top_candidates": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/h_op003_exact_frozen_runtime_reconciliation.py",
+          "function": {
+            "name": "runtime_signal_hits",
+            "parameters": [
+              "source"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "[signal for signal in signals if signal.lower() in source_lower]"
+            ],
+            "input_hits": {
+              "historical": [
+                "neighbor"
+              ]
+            },
+            "artifact_loading_hits": [
+              "joblib.load",
+              "load_model",
+              "pickle.load",
+              "torch.load"
+            ],
+            "prediction_hits": [
+              "kneighbors(",
+              "lognormal",
+              "predict(",
+              "predict_proba(",
+              "rank(",
+              "retrieve",
+              "similarity",
+              "survival",
+              "transform(",
+              "weibull"
+            ],
+            "source_length": 415,
+            "runtime_score": 20
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R17",
+              "source_hits": [
+                "op-018r17"
+              ]
+            },
+            {
+              "operation": "OP-018R18",
+              "source_hits": [
+                "op-018r18"
+              ]
+            },
+            {
+              "operation": "OP-018R19",
+              "source_hits": [
+                "op-018r19"
+              ]
+            },
+            {
+              "operation": "OP-018R20",
+              "source_hits": [
+                "op-018r20"
+              ]
+            },
+            {
+              "operation": "OP-018R21",
+              "source_hits": [
+                "op-018r21"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp07_op004_frozen_runtime_reproducibility_manifest.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "ticket": [
+                "ticket"
+              ],
+              "text": [
+                "description",
+                "query",
+                "text"
+              ],
+              "historical": [
+                "candidate",
+                "historical",
+                "neighbor",
+                "retrieval",
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [
+              "open("
+            ],
+            "prediction_hits": [
+              "survival"
+            ],
+            "source_length": 6276,
+            "runtime_score": 9
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R21",
+              "source_hits": [
+                "op-018r21"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r18_t6_mod010_component_binding.py",
+          "function": {
+            "name": "extract_functions",
+            "parameters": [
+              "source"
+            ],
+            "return_count": 2,
+            "return_expressions": [
+              "results",
+              "{'__parse_error__': f'{type(exc).__name__}: {exc}'}"
+            ],
+            "input_hits": {
+              "text": [
+                "text"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [
+              "retrieve"
+            ],
+            "source_length": 750,
+            "runtime_score": 7
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R18",
+              "source_hits": [
+                "op-018r18",
+                "op018r18"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r19_t6_semantic_component_resolution.py",
+          "function": {
+            "name": "extract_functions",
+            "parameters": [
+              "path"
+            ],
+            "return_count": 2,
+            "return_expressions": [
+              "output",
+              "{'__SYNTAX_ERROR__': str(exc)}"
+            ],
+            "input_hits": {
+              "text": [
+                "body",
+                "text"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [
+              "retrieve"
+            ],
+            "source_length": 773,
+            "runtime_score": 7
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R19",
+              "source_hits": [
+                "op-018r19",
+                "op018r19"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/h_op003_exact_frozen_runtime_reconciliation.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "ticket": [
+                "ticket"
+              ],
+              "text": [
+                "text"
+              ],
+              "historical": [
+                "reference",
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [
+              "open("
+            ],
+            "prediction_hits": [],
+            "source_length": 4889,
+            "runtime_score": 7
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R17",
+              "source_hits": [
+                "op-018r17"
+              ]
+            },
+            {
+              "operation": "OP-018R18",
+              "source_hits": [
+                "op-018r18"
+              ]
+            },
+            {
+              "operation": "OP-018R19",
+              "source_hits": [
+                "op-018r19"
+              ]
+            },
+            {
+              "operation": "OP-018R20",
+              "source_hits": [
+                "op-018r20"
+              ]
+            },
+            {
+              "operation": "OP-018R21",
+              "source_hits": [
+                "op-018r21"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r18_t6_mod010_component_binding.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "ticket": [
+                "case"
+              ],
+              "text": [
+                "query",
+                "text"
+              ],
+              "historical": [
+                "candidate",
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [],
+            "source_length": 4815,
+            "runtime_score": 6
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R18",
+              "source_hits": [
+                "op-018r18",
+                "op018r18"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r21_t6_mod010_frozen_runtime_composition_probe.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "text": [
+                "query",
+                "text"
+              ],
+              "historical": [
+                "candidate",
+                "index",
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [
+              "read_csv"
+            ],
+            "prediction_hits": [
+              "transform("
+            ],
+            "source_length": 9292,
+            "runtime_score": 6
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R21",
+              "source_hits": [
+                "op-018r21",
+                "op018r21"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r17_t6_native_runtime_input_contract_inspection.py",
+          "function": {
+            "name": "safe_read_text",
+            "parameters": [
+              "path"
+            ],
+            "return_count": 2,
+            "return_expressions": [
+              "path.read_text(encoding='utf-8', errors='replace')",
+              "f'<<READ_ERROR: {type(exc).__name__}: {exc}>>'"
+            ],
+            "input_hits": {
+              "text": [
+                "text"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [],
+            "source_length": 197,
+            "runtime_score": 5
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R17",
+              "source_hits": [
+                "op-018r17",
+                "op018r17"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r18_t6_mod010_component_binding.py",
+          "function": {
+            "name": "safe_read",
+            "parameters": [
+              "path"
+            ],
+            "return_count": 2,
+            "return_expressions": [
+              "path.read_text(encoding='utf-8', errors='replace')",
+              "f'<<READ_ERROR: {type(exc).__name__}: {exc}>>'"
+            ],
+            "input_hits": {
+              "text": [
+                "text"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [],
+            "source_length": 186,
+            "runtime_score": 5
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R18",
+              "source_hits": [
+                "op-018r18",
+                "op018r18"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r19_t6_semantic_component_resolution.py",
+          "function": {
+            "name": "read_text",
+            "parameters": [
+              "path"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "path.read_text(encoding='utf-8', errors='replace')"
+            ],
+            "input_hits": {
+              "text": [
+                "text"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [],
+            "source_length": 95,
+            "runtime_score": 5
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R19",
+              "source_hits": [
+                "op-018r19",
+                "op018r19"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r19_t6_semantic_component_resolution.py",
+          "function": {
+            "name": "extract_matching_lines",
+            "parameters": [
+              "text",
+              "terms"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "matches"
+            ],
+            "input_hits": {
+              "text": [
+                "text"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [],
+            "source_length": 327,
+            "runtime_score": 5
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R19",
+              "source_hits": [
+                "op-018r19",
+                "op018r19"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r19_t6_semantic_component_resolution.py",
+          "function": {
+            "name": "find_string_literals",
+            "parameters": [
+              "path"
+            ],
+            "return_count": 2,
+            "return_expressions": [
+              "sorted(set(values))",
+              "[]"
+            ],
+            "input_hits": {
+              "text": [
+                "text"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [],
+            "source_length": 648,
+            "runtime_score": 5
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R19",
+              "source_hits": [
+                "op-018r19",
+                "op018r19"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r19_t6_semantic_component_resolution.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "text": [
+                "content",
+                "text"
+              ],
+              "historical": [
+                "reference",
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [
+              "similarity"
+            ],
+            "source_length": 4247,
+            "runtime_score": 5
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R19",
+              "source_hits": [
+                "op-018r19",
+                "op018r19"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r20_t6_mod009_semantic_runtime_binding.py",
+          "function": {
+            "name": "read_text",
+            "parameters": [
+              "path"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "path.read_text(encoding='utf-8', errors='replace')"
+            ],
+            "input_hits": {
+              "text": [
+                "text"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [],
+            "source_length": 95,
+            "runtime_score": 5
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R20",
+              "source_hits": [
+                "op-018r20",
+                "op018r20"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r20_t6_mod009_semantic_runtime_binding.py",
+          "function": {
+            "name": "matching_lines",
+            "parameters": [
+              "text"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "results"
+            ],
+            "input_hits": {
+              "text": [
+                "text"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [],
+            "source_length": 298,
+            "runtime_score": 5
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R20",
+              "source_hits": [
+                "op-018r20",
+                "op018r20"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "T7": {
+      "validated_operations": [
+        "OP-018R22C",
+        "OP-018R23",
+        "OP-018R24",
+        "OP-018R25",
+        "OP-018R26",
+        "OP-018R27",
+        "OP-018R28"
+      ],
+      "inspected_file_count": 13,
+      "callable_candidate_count": 44,
+      "top_candidates": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/h_op003_exact_frozen_runtime_reconciliation.py",
+          "function": {
+            "name": "runtime_signal_hits",
+            "parameters": [
+              "source"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "[signal for signal in signals if signal.lower() in source_lower]"
+            ],
+            "input_hits": {
+              "historical": [
+                "neighbor"
+              ]
+            },
+            "artifact_loading_hits": [
+              "joblib.load",
+              "load_model",
+              "pickle.load",
+              "torch.load"
+            ],
+            "prediction_hits": [
+              "kneighbors(",
+              "lognormal",
+              "predict(",
+              "predict_proba(",
+              "rank(",
+              "retrieve",
+              "similarity",
+              "survival",
+              "transform(",
+              "weibull"
+            ],
+            "source_length": 415,
+            "runtime_score": 20
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R22C",
+              "source_hits": [
+                "op-018r22c"
+              ]
+            },
+            {
+              "operation": "OP-018R23",
+              "source_hits": [
+                "op-018r23"
+              ]
+            },
+            {
+              "operation": "OP-018R24",
+              "source_hits": [
+                "op-018r24"
+              ]
+            },
+            {
+              "operation": "OP-018R25",
+              "source_hits": [
+                "op-018r25"
+              ]
+            },
+            {
+              "operation": "OP-018R26",
+              "source_hits": [
+                "op-018r26"
+              ]
+            },
+            {
+              "operation": "OP-018R27",
+              "source_hits": [
+                "op-018r27"
+              ]
+            },
+            {
+              "operation": "OP-018R28",
+              "source_hits": [
+                "op-018r28"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r22c_t7_compact_runtime_interface_resolution.py",
+          "function": {
+            "name": "source_signals",
+            "parameters": [
+              "path"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "signals"
+            ],
+            "input_hits": {
+              "text": [
+                "text"
+              ]
+            },
+            "artifact_loading_hits": [
+              "joblib.load",
+              "pickle.load"
+            ],
+            "prediction_hits": [
+              "lognormal",
+              "survival"
+            ],
+            "source_length": 841,
+            "runtime_score": 11
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R22C",
+              "source_hits": [
+                "op-018r22c",
+                "op018r22c"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op019_final_t1_t7_runtime_binding_reconciliation.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "ticket": [
+                "ticket"
+              ],
+              "text": [
+                "query",
+                "text"
+              ],
+              "historical": [
+                "candidate",
+                "corpus",
+                "historical",
+                "retrieval",
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [
+              "open("
+            ],
+            "prediction_hits": [
+              "survival"
+            ],
+            "source_length": 5749,
+            "runtime_score": 9
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R28",
+              "source_hits": [
+                "op-018r28",
+                "op018r28"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp07_op004_frozen_runtime_reproducibility_manifest.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "ticket": [
+                "ticket"
+              ],
+              "text": [
+                "description",
+                "query",
+                "text"
+              ],
+              "historical": [
+                "candidate",
+                "historical",
+                "neighbor",
+                "retrieval",
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [
+              "open("
+            ],
+            "prediction_hits": [
+              "survival"
+            ],
+            "source_length": 6276,
+            "runtime_score": 9
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R27",
+              "source_hits": [
+                "op-018r27"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r24_t7_frozen_runtime_probe.py",
+          "function": {
+            "name": "text_uppercase",
+            "parameters": [
+              "value"
+            ],
+            "return_count": 1,
+            "return_expressions": [
+              "sum((ch.isupper() for ch in value))"
+            ],
+            "input_hits": {
+              "ticket": [
+                "case"
+              ],
+              "text": [
+                "text"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [],
+            "source_length": 73,
+            "runtime_score": 8
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R24",
+              "source_hits": [
+                "op-018r24",
+                "op018r24"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r24_t7_frozen_runtime_probe.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "ticket": [
+                "case"
+              ],
+              "text": [
+                "description",
+                "text"
+              ],
+              "historical": [
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [
+              "open(",
+              "read_csv"
+            ],
+            "prediction_hits": [],
+            "source_length": 7197,
+            "runtime_score": 8
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R24",
+              "source_hits": [
+                "op-018r24",
+                "op018r24"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r22c_t7_compact_runtime_interface_resolution.py",
+          "function": {
+            "name": "function_names",
+            "parameters": [
+              "path"
+            ],
+            "return_count": 2,
+            "return_expressions": [
+              "sorted(set(names))",
+              "[]"
+            ],
+            "input_hits": {
+              "text": [
+                "text"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [
+              "survival"
+            ],
+            "source_length": 557,
+            "runtime_score": 7
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R22C",
+              "source_hits": [
+                "op-018r22c",
+                "op018r22c"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r22c_t7_compact_runtime_interface_resolution.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "text": [
+                "text"
+              ],
+              "historical": [
+                "candidate",
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [
+              "lognormal",
+              "survival"
+            ],
+            "source_length": 4600,
+            "runtime_score": 7
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R22C",
+              "source_hits": [
+                "op-018r22c",
+                "op018r22c"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r23_t7_final_model_parameter_binding.py",
+          "function": {
+            "name": "source_model_signals",
+            "parameters": [],
+            "return_count": 1,
+            "return_expressions": [
+              "signals"
+            ],
+            "input_hits": {
+              "text": [
+                "text"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [
+              "lognormal",
+              "survival"
+            ],
+            "source_length": 650,
+            "runtime_score": 7
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R23",
+              "source_hits": [
+                "op-018r23",
+                "op018r23"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r23_t7_final_model_parameter_binding.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "text": [
+                "content",
+                "text"
+              ],
+              "historical": [
+                "candidate",
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [
+              "lognormal",
+              "survival"
+            ],
+            "source_length": 3341,
+            "runtime_score": 7
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R23",
+              "source_hits": [
+                "op-018r23",
+                "op018r23"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/h_op003_exact_frozen_runtime_reconciliation.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "ticket": [
+                "ticket"
+              ],
+              "text": [
+                "text"
+              ],
+              "historical": [
+                "reference",
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [
+              "open("
+            ],
+            "prediction_hits": [],
+            "source_length": 4889,
+            "runtime_score": 7
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R22C",
+              "source_hits": [
+                "op-018r22c"
+              ]
+            },
+            {
+              "operation": "OP-018R23",
+              "source_hits": [
+                "op-018r23"
+              ]
+            },
+            {
+              "operation": "OP-018R24",
+              "source_hits": [
+                "op-018r24"
+              ]
+            },
+            {
+              "operation": "OP-018R25",
+              "source_hits": [
+                "op-018r25"
+              ]
+            },
+            {
+              "operation": "OP-018R26",
+              "source_hits": [
+                "op-018r26"
+              ]
+            },
+            {
+              "operation": "OP-018R27",
+              "source_hits": [
+                "op-018r27"
+              ]
+            },
+            {
+              "operation": "OP-018R28",
+              "source_hits": [
+                "op-018r28"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r25_t7_exact_feature_builder_audit.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "text": [
+                "description",
+                "text"
+              ],
+              "historical": [
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [
+              "open("
+            ],
+            "prediction_hits": [
+              "survival"
+            ],
+            "source_length": 4536,
+            "runtime_score": 6
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R25",
+              "source_hits": [
+                "op-018r25",
+                "op018r25"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r26_t7_make_features_source_extract.py",
+          "function": {
+            "name": "main",
+            "parameters": [],
+            "return_count": 0,
+            "return_expressions": [],
+            "input_hits": {
+              "text": [
+                "text"
+              ],
+              "historical": [
+                "training"
+              ]
+            },
+            "artifact_loading_hits": [
+              "open("
+            ],
+            "prediction_hits": [
+              "survival"
+            ],
+            "source_length": 2876,
+            "runtime_score": 6
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R26",
+              "source_hits": [
+                "op-018r26",
+                "op018r26"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r22c_t7_compact_runtime_interface_resolution.py",
+          "function": {
+            "name": "json_summary",
+            "parameters": [
+              "path"
+            ],
+            "return_count": 3,
+            "return_expressions": [
+              "{'keys': keys[:80], 'interesting_fields': interesting}",
+              "{'type': type(data).__name__}",
+              "{'read_error': str(exc)}"
+            ],
+            "input_hits": {
+              "text": [
+                "text"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [],
+            "source_length": 812,
+            "runtime_score": 5
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R22C",
+              "source_hits": [
+                "op-018r22c",
+                "op018r22c"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r24_t7_frozen_runtime_probe.py",
+          "function": {
+            "name": "clean_text",
+            "parameters": [
+              "value"
+            ],
+            "return_count": 2,
+            "return_expressions": [
+              "str(value).strip()",
+              "''"
+            ],
+            "input_hits": {
+              "text": [
+                "text"
+              ]
+            },
+            "artifact_loading_hits": [],
+            "prediction_hits": [],
+            "source_length": 93,
+            "runtime_score": 5
+          },
+          "validated_operations": [
+            {
+              "operation": "OP-018R24",
+              "source_hits": [
+                "op-018r24",
+                "op018r24"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "controls": {
+    "model_execution": false,
+    "model_retraining": false,
+    "model_selection": false,
+    "artifact_modification": false,
+    "threshold_optimization": false,
+    "locked_test_reuse": false
+  },
+  "interpretation_boundary": "Runtime scores identify source-level callable candidates only. They do not establish an official production entrypoint or authorize model execution. The next operation must reconcile the strongest candidates against frozen artifact bindings and previously validated runtime behavior.",
+  "next_operation": "H-OP-005 \u2014 final frozen callable selection and single-ticket runtime contract definition.",
+  "output": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/h_op004_exact_callable_contract_reconciliation.json"
+}

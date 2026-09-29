@@ -1,0 +1,355 @@
+{
+  "operation": "FMP-06 OP-018R8",
+  "operation_type": "T4_FINAL_IMPLEMENTATION_BINDING_AUDIT",
+  "status": "PASS",
+  "target_files": [
+    "t4_ranking_baseline.py",
+    "t4_mod009.py",
+    "t4_mod011.py"
+  ],
+  "findings": [
+    {
+      "path": "modeling/T4/scripts/t4_ranking_baseline.py",
+      "functions": [
+        "build_text",
+        "validate_data",
+        "rank_assignees",
+        "reciprocal_rank",
+        "ndcg_binary",
+        "main",
+        "rank_assignees_for_row",
+        "bucket_for_support"
+      ],
+      "classes": [],
+      "retrieval_functions": [
+        "rank_assignees",
+        "reciprocal_rank",
+        "rank_assignees_for_row"
+      ],
+      "calls": [
+        "NearestNeighbors",
+        "Path",
+        "RuntimeError",
+        "TfidfVectorizer",
+        "accuracy_score",
+        "any",
+        "append",
+        "array",
+        "astype",
+        "bucket_for_support",
+        "build_text",
+        "dump",
+        "enumerate",
+        "exists",
+        "f1_score",
+        "fillna",
+        "fit",
+        "fit_transform",
+        "float",
+        "get",
+        "int",
+        "isna",
+        "items",
+        "kneighbors",
+        "len",
+        "list",
+        "load",
+        "log2",
+        "main",
+        "mean",
+        "mkdir",
+        "ndcg_binary",
+        "open",
+        "print",
+        "range",
+        "rank_assignees",
+        "rank_assignees_for_row",
+        "read_csv",
+        "reciprocal_rank",
+        "resolve",
+        "savez_compressed",
+        "set",
+        "sorted",
+        "strip",
+        "sum",
+        "time",
+        "to_numpy",
+        "tolist",
+        "transform",
+        "unique",
+        "upper",
+        "validate_data",
+        "value_counts",
+        "where",
+        "zip"
+      ],
+      "path_references": [
+        "\n    Binary relevance:\n        1 if the true historical target appears in the ranked list\n        0 otherwise.\n\n    With one relevant target, NDCG@K is:\n        1 / log2(rank + 1)\n    when the target is within K, otherwise 0.\n    ",
+        "/",
+        "t4_eval.csv",
+        "t4_mod007_full_results.json",
+        "t4_mod007_full_retrieval.npz",
+        "t4_mod007_neighbors.joblib",
+        "t4_mod007_tfidf.joblib",
+        "t4_train.csv"
+      ],
+      "load_save_lines": [
+        {
+          "line": 170,
+          "text": "train = pd.read_csv(TRAIN_PATH)"
+        },
+        {
+          "line": 171,
+          "text": "evaluation = pd.read_csv(EVAL_PATH)"
+        },
+        {
+          "line": 210,
+          "text": "vectorizer = load(VECTORIZER_PATH)"
+        },
+        {
+          "line": 229,
+          "text": "dump("
+        },
+        {
+          "line": 269,
+          "text": "nn = load(NEIGHBORS_PATH)"
+        },
+        {
+          "line": 288,
+          "text": "dump("
+        },
+        {
+          "line": 312,
+          "text": "saved = np.load("
+        },
+        {
+          "line": 726,
+          "text": "with open("
+        },
+        {
+          "line": 731,
+          "text": "json.dump("
+        }
+      ],
+      "training_related_lines": [
+        {
+          "line": 227,
+          "text": "X_train = vectorizer.fit_transform(train_text)"
+        },
+        {
+          "line": 284,
+          "text": "nn.fit(X_train)"
+        }
+      ],
+      "source_line_count": 811
+    },
+    {
+      "path": "modeling/T4/scripts/t4_mod009.py",
+      "functions": [
+        "combine_text",
+        "bm25_documents",
+        "bm25_queries",
+        "compute_idf",
+        "apply_idf",
+        "extract_top_indices",
+        "main"
+      ],
+      "classes": [],
+      "retrieval_functions": [
+        "bm25_documents",
+        "bm25_queries"
+      ],
+      "calls": [
+        "CountVectorizer",
+        "Path",
+        "agg",
+        "apply_idf",
+        "argpartition",
+        "argsort",
+        "array",
+        "asarray",
+        "astype",
+        "bincount",
+        "bm25_documents",
+        "bm25_queries",
+        "choice",
+        "combine_text",
+        "compute_idf",
+        "default_rng",
+        "dump",
+        "extract_top_indices",
+        "fillna",
+        "fit_transform",
+        "flatnonzero",
+        "float",
+        "full",
+        "getrow",
+        "int",
+        "len",
+        "log",
+        "main",
+        "maximum",
+        "mean",
+        "min",
+        "mkdir",
+        "nonzero",
+        "open",
+        "print",
+        "range",
+        "ravel",
+        "read_csv",
+        "set",
+        "sort",
+        "strip",
+        "sum",
+        "time",
+        "to_numpy",
+        "tocsr",
+        "transform"
+      ],
+      "path_references": [
+        "(?u)\\b\\w+\\b",
+        "/",
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System",
+        "modeling/T4/derived",
+        "modeling/T4/results",
+        "t4_eval.csv",
+        "t4_mod009_screen.json",
+        "t4_train.csv"
+      ],
+      "load_save_lines": [
+        {
+          "line": 184,
+          "text": "train = pd.read_csv("
+        },
+        {
+          "line": 188,
+          "text": "evaluation = pd.read_csv("
+        },
+        {
+          "line": 597,
+          "text": "with open("
+        },
+        {
+          "line": 602,
+          "text": "json.dump("
+        }
+      ],
+      "training_related_lines": [
+        {
+          "line": 285,
+          "text": "train_counts = vectorizer.fit_transform("
+        }
+      ],
+      "source_line_count": 620
+    },
+    {
+      "path": "modeling/T4/scripts/t4_mod011.py",
+      "functions": [
+        "build_text",
+        "bm25_weight_matrix",
+        "bm25_query_matrix",
+        "calculate_ranking_metrics",
+        "calculate_support_buckets",
+        "main"
+      ],
+      "classes": [],
+      "retrieval_functions": [
+        "bm25_weight_matrix",
+        "bm25_query_matrix",
+        "calculate_ranking_metrics"
+      ],
+      "calls": [
+        "CountVectorizer",
+        "Path",
+        "append",
+        "arange",
+        "argpartition",
+        "argsort",
+        "array",
+        "asarray",
+        "astype",
+        "bm25_query_matrix",
+        "bm25_weight_matrix",
+        "build_text",
+        "calculate_ranking_metrics",
+        "calculate_support_buckets",
+        "diff",
+        "dump",
+        "empty",
+        "enumerate",
+        "fillna",
+        "fit_transform",
+        "flatnonzero",
+        "float",
+        "get",
+        "int",
+        "items",
+        "len",
+        "log",
+        "log2",
+        "main",
+        "mean",
+        "min",
+        "mkdir",
+        "open",
+        "print",
+        "range",
+        "ravel",
+        "read_csv",
+        "repeat",
+        "savez_compressed",
+        "set",
+        "str",
+        "sum",
+        "take_along_axis",
+        "time",
+        "to_dict",
+        "to_numpy",
+        "toarray",
+        "tocsr",
+        "transform",
+        "upper",
+        "value_counts"
+      ],
+      "path_references": [
+        "/",
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System",
+        "t4_eval.csv",
+        "t4_mod011_full.json",
+        "t4_mod011_retrieval.npz",
+        "t4_train.csv"
+      ],
+      "load_save_lines": [
+        {
+          "line": 264,
+          "text": "train = pd.read_csv(TRAIN_PATH)"
+        },
+        {
+          "line": 265,
+          "text": "evaluation = pd.read_csv(EVAL_PATH)"
+        },
+        {
+          "line": 799,
+          "text": "with open("
+        },
+        {
+          "line": 804,
+          "text": "json.dump("
+        }
+      ],
+      "training_related_lines": [
+        {
+          "line": 340,
+          "text": "train_counts = vectorizer.fit_transform("
+        }
+      ],
+      "source_line_count": 828
+    }
+  ],
+  "runtime_execution": false,
+  "retraining": false,
+  "artifact_modification": false,
+  "test_execution": false,
+  "note": "Read-only source audit. The operation resolves implementation/data bindings and does not execute the T4 retrieval pipeline."
+}

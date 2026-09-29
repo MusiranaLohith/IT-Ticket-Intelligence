@@ -1,0 +1,217 @@
+{
+  "experiment": "T4-MOD-012",
+  "status": "COMPLETE",
+  "population": {
+    "train_rows": 142501,
+    "evaluation_rows": 35626,
+    "covered_rows": 32773,
+    "unseen_rows": 2853,
+    "training_candidates": 4139
+  },
+  "methods": {
+    "mod007": "Word TF-IDF historical retrieval",
+    "mod011": "BM25 historical retrieval"
+  },
+  "true_assignee_retrieval_coverage": {
+    "mod007": 0.4574497299606384,
+    "mod011": 0.47334696243859276,
+    "delta_mod011_minus_mod007": 0.01589723247795438
+  },
+  "true_assignee_position_counts": {
+    "mod007": {
+      "1": 7275,
+      "2": 2123,
+      "3": 911,
+      "4": 736,
+      "5": 564,
+      "6": 422,
+      "7": 362,
+      "8": 294,
+      "9": 238,
+      "10": 239,
+      "11": 233,
+      "12": 210,
+      "13": 187,
+      "14": 200,
+      "15": 186,
+      "16": 179,
+      "17": 164,
+      "18": 162,
+      "19": 140,
+      "20": 167,
+      "not_retrieved": 17781
+    },
+    "mod011": {
+      "1": 7405,
+      "2": 2182,
+      "3": 1052,
+      "4": 674,
+      "5": 574,
+      "6": 449,
+      "7": 394,
+      "8": 285,
+      "9": 307,
+      "10": 270,
+      "11": 250,
+      "12": 246,
+      "13": 211,
+      "14": 202,
+      "15": 189,
+      "16": 165,
+      "17": 187,
+      "18": 164,
+      "19": 153,
+      "20": 154,
+      "not_retrieved": 17260
+    }
+  },
+  "covered_metrics": {
+    "mod007": {
+      "hit_at_1": 0.22198150916913312,
+      "hit_at_3": 0.31455771519238396,
+      "hit_at_5": 0.3542245140817136,
+      "hit_at_10": 0.40167210813779636,
+      "hit_at_20": 0.4574497299606383,
+      "mrr": 0.2828979299388855,
+      "ndcg_at_5": 0.2930804868902647,
+      "ndcg_at_10": 0.30847317007030123
+    },
+    "mod011": {
+      "hit_at_1": 0.2259481890580661,
+      "hit_at_3": 0.3246269795258292,
+      "hit_at_5": 0.36270710645958565,
+      "hit_at_10": 0.41473163884905256,
+      "hit_at_20": 0.47334696243859276,
+      "mrr": 0.2895824209402111,
+      "ndcg_at_5": 0.2996374525916823,
+      "ndcg_at_10": 0.31646964866782823
+    }
+  },
+  "overall_metrics": {
+    "mod007": {
+      "hit_at_1": 0.20420479425138943,
+      "hit_at_3": 0.28936731600516474,
+      "hit_at_5": 0.3258575197889182,
+      "hit_at_10": 0.3695054173917925,
+      "hit_at_20": 0.420816257789255,
+      "mrr": 0.2602429084906275,
+      "ndcg_at_5": 0.2696100262969361,
+      "ndcg_at_10": 0.2837700331980571
+    },
+    "mod011": {
+      "hit_at_1": 0.20785381462976477,
+      "hit_at_3": 0.29863021388873295,
+      "hit_at_5": 0.33366080952113625,
+      "hit_at_10": 0.38151911525290516,
+      "hit_at_20": 0.4354404086902824,
+      "mrr": 0.26639209233350747,
+      "ndcg_at_5": 0.27564189731620736,
+      "ndcg_at_10": 0.2911261380955127
+    }
+  },
+  "historical_support": {
+    "mod007": {
+      "1": {
+        "rows": 983,
+        "retrieved_within_20": 45,
+        "retrieval_coverage_at_20": 0.04577822990844354,
+        "mean_rank_when_retrieved": 4.311111111111111
+      },
+      "2-5": {
+        "rows": 2965,
+        "retrieved_within_20": 324,
+        "retrieval_coverage_at_20": 0.10927487352445193,
+        "mean_rank_when_retrieved": 6.635802469135802
+      },
+      "6-10": {
+        "rows": 1145,
+        "retrieved_within_20": 149,
+        "retrieval_coverage_at_20": 0.13013100436681221,
+        "mean_rank_when_retrieved": 7.053691275167785
+      },
+      "11-20": {
+        "rows": 1338,
+        "retrieved_within_20": 336,
+        "retrieval_coverage_at_20": 0.25112107623318386,
+        "mean_rank_when_retrieved": 3.9791666666666665
+      },
+      "21-50": {
+        "rows": 2752,
+        "retrieved_within_20": 868,
+        "retrieval_coverage_at_20": 0.31540697674418605,
+        "mean_rank_when_retrieved": 4.785714285714286
+      },
+      "51-100": {
+        "rows": 4270,
+        "retrieved_within_20": 2207,
+        "retrieval_coverage_at_20": 0.5168618266978923,
+        "mean_rank_when_retrieved": 3.786588128681468
+      },
+      "101+": {
+        "rows": 19320,
+        "retrieved_within_20": 11063,
+        "retrieval_coverage_at_20": 0.5726190476190476,
+        "mean_rank_when_retrieved": 3.8323239627587453
+      }
+    },
+    "mod011": {
+      "1": {
+        "rows": 983,
+        "retrieved_within_20": 52,
+        "retrieval_coverage_at_20": 0.052899287894201424,
+        "mean_rank_when_retrieved": 5.576923076923077
+      },
+      "2-5": {
+        "rows": 2965,
+        "retrieved_within_20": 356,
+        "retrieval_coverage_at_20": 0.12006745362563238,
+        "mean_rank_when_retrieved": 5.129213483146067
+      },
+      "6-10": {
+        "rows": 1145,
+        "retrieved_within_20": 138,
+        "retrieval_coverage_at_20": 0.1205240174672489,
+        "mean_rank_when_retrieved": 6.398550724637682
+      },
+      "11-20": {
+        "rows": 1338,
+        "retrieved_within_20": 471,
+        "retrieval_coverage_at_20": 0.35201793721973096,
+        "mean_rank_when_retrieved": 3.762208067940552
+      },
+      "21-50": {
+        "rows": 2752,
+        "retrieved_within_20": 996,
+        "retrieval_coverage_at_20": 0.36191860465116277,
+        "mean_rank_when_retrieved": 4.785140562248996
+      },
+      "51-100": {
+        "rows": 4270,
+        "retrieved_within_20": 2213,
+        "retrieval_coverage_at_20": 0.5182669789227167,
+        "mean_rank_when_retrieved": 3.6963398102123812
+      },
+      "101+": {
+        "rows": 19320,
+        "retrieved_within_20": 11287,
+        "retrieval_coverage_at_20": 0.5842132505175983,
+        "mean_rank_when_retrieved": 3.972268982014707
+      }
+    }
+  },
+  "open_world": {
+    "unseen_rows": 2853,
+    "unseen_rate": 0.08008196261157581,
+    "true_assignee_retrievable": false
+  },
+  "controls": {
+    "raw_mozilla_accessed": false,
+    "target_reconstructed": false,
+    "test_used": false,
+    "future_features_used": false,
+    "split_changed": false,
+    "evaluation_used_only_for_scoring": true,
+    "training_tickets_used_for_retrieval": true,
+    "evaluation_tickets_used_for_retrieval": false
+  }
+}

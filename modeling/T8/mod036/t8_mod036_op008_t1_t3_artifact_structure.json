@@ -1,0 +1,519 @@
+{
+  "operation": "T8 / MOD-036 / OP-008",
+  "status": "PASS",
+  "purpose": "Inspect T3 serialized model structure and reconcile T1 report-referenced model artifacts with the actual project filesystem.",
+  "t3_model_structure": {
+    "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib",
+    "exists": true,
+    "status": "LOADED",
+    "structure": {
+      "type": "dict",
+      "keys": [
+        "vectorizer",
+        "model",
+        "task",
+        "target",
+        "features",
+        "model_type",
+        "class_weight"
+      ],
+      "children": {
+        "vectorizer": {
+          "type": "TfidfVectorizer",
+          "value_preview": "TfidfVectorizer(max_df=0.98, min_df=2, ngram_range=(1, 2), sublinear_tf=True)"
+        },
+        "model": {
+          "type": "LogisticRegression",
+          "value_preview": "LogisticRegression(class_weight='balanced', max_iter=2000)"
+        },
+        "task": {
+          "type": "str",
+          "value_preview": "T3_SEVERITY_PREDICTION"
+        },
+        "target": {
+          "type": "str",
+          "value_preview": "target_severity"
+        },
+        "features": {
+          "type": "list",
+          "length": 2,
+          "first_items": [
+            {
+              "type": "str",
+              "value_preview": "Summary"
+            },
+            {
+              "type": "str",
+              "value_preview": "Description"
+            }
+          ]
+        },
+        "model_type": {
+          "type": "str",
+          "value_preview": "TF-IDF + Logistic Regression"
+        },
+        "class_weight": {
+          "type": "str",
+          "value_preview": "balanced"
+        }
+      }
+    }
+  },
+  "t1_report_references": [
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/baselines/t1_it_support_baseline_report.json",
+      "status": "FOUND",
+      "references": {
+        "probability_output": {
+          "available": true,
+          "classes": [
+            "Active Directory",
+            "Computer-Services",
+            "EOL",
+            "Fileservice",
+            "O365",
+            "Software",
+            "Support general"
+          ],
+          "probability_rows": 446
+        },
+        "model": {
+          "type": "TFIDF_LOGISTIC_REGRESSION",
+          "random_state": 42,
+          "class_weight": "balanced",
+          "ngram_range": [
+            1,
+            2
+          ],
+          "min_df": 2,
+          "max_df": 0.98,
+          "sublinear_tf": true
+        },
+        "status": "BASELINE_COMPLETE"
+      }
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/baselines/t1_it_support_svm_report.json",
+      "status": "FOUND",
+      "references": {
+        "artifacts": {
+          "model_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/baselines/t1_it_support_svm.joblib",
+          "report_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/baselines/t1_it_support_svm_report.json"
+        },
+        "model": {
+          "name": "TFIDF_LINEAR_SVC",
+          "tfidf": {
+            "ngram_range": [
+              1,
+              2
+            ],
+            "min_df": 2,
+            "max_df": 0.98,
+            "sublinear_tf": true
+          },
+          "classifier": {
+            "class_weight": "balanced",
+            "random_state": 42
+          }
+        },
+        "status": "BASELINE_COMPLETE",
+        "task": {
+          "task_id": "T1",
+          "dataset": "IT Support",
+          "target": "category_truth",
+          "prediction_boundary": "incoming_ticket_text"
+        }
+      }
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/baselines/t1_it_support_char_svm_report.json",
+      "status": "FOUND",
+      "references": {
+        "model_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/baselines/t1_it_support_char_svm.joblib",
+        "analysis_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/analysis/t1_it_support_char_svm_analysis.json",
+        "model": "TFIDF_WORD_CHAR_LINEAR_SVC",
+        "status": "COMPLETE"
+      }
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/baselines/t1_vscode_baseline_report.json",
+      "status": "FOUND",
+      "references": {
+        "model": {
+          "type": "TFIDF_LOGISTIC_REGRESSION",
+          "random_state": 42,
+          "class_weight": "balanced",
+          "ngram_range": [
+            1,
+            2
+          ],
+          "min_df": 2,
+          "max_df": 0.98,
+          "sublinear_tf": true
+        },
+        "status": "BASELINE_COMPLETE"
+      }
+    }
+  ],
+  "t1_artifact_directories": [
+    {
+      "directory": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1",
+      "exists": true,
+      "files": [
+        {
+          "path": "modeling/T1/analysis/t1_it_support_3model_compare.json",
+          "suffix": ".json",
+          "size_bytes": 12213
+        },
+        {
+          "path": "modeling/T1/analysis/t1_it_support_char_svm_analysis.json",
+          "suffix": ".json",
+          "size_bytes": 6361
+        },
+        {
+          "path": "modeling/T1/analysis/t1_it_support_eval_groups.json",
+          "suffix": ".json",
+          "size_bytes": 41874
+        },
+        {
+          "path": "modeling/T1/analysis/t1_it_support_group_eval.json",
+          "suffix": ".json",
+          "size_bytes": 12889
+        },
+        {
+          "path": "modeling/T1/analysis/t1_it_support_model_subset_compare.json",
+          "suffix": ".json",
+          "size_bytes": 14312
+        },
+        {
+          "path": "modeling/T1/analysis/t1_it_support_split_check.json",
+          "suffix": ".json",
+          "size_bytes": 3014
+        },
+        {
+          "path": "modeling/T1/analysis/t1_it_support_subset_analysis.json",
+          "suffix": ".json",
+          "size_bytes": 10183
+        },
+        {
+          "path": "modeling/T1/analysis/t1_it_support_svm_error_review.txt",
+          "suffix": ".txt",
+          "size_bytes": 8573
+        },
+        {
+          "path": "modeling/T1/analysis/t1_it_support_svm_errors.json",
+          "suffix": ".json",
+          "size_bytes": 10351
+        },
+        {
+          "path": "modeling/T1/analysis  /t1_it_support_svm_error_review.py",
+          "suffix": ".py",
+          "size_bytes": 4071
+        },
+        {
+          "path": "modeling/T1/baselines/t1_it_support_baseline.joblib",
+          "suffix": ".joblib",
+          "size_bytes": 251780
+        },
+        {
+          "path": "modeling/T1/baselines/t1_it_support_baseline_report.json",
+          "suffix": ".json",
+          "size_bytes": 4021
+        },
+        {
+          "path": "modeling/T1/baselines/t1_it_support_char_svm.joblib",
+          "suffix": ".joblib",
+          "size_bytes": 2179887
+        },
+        {
+          "path": "modeling/T1/baselines/t1_it_support_char_svm_report.json",
+          "suffix": ".json",
+          "size_bytes": 7195
+        },
+        {
+          "path": "modeling/T1/baselines/t1_it_support_svm.joblib",
+          "suffix": ".joblib",
+          "size_bytes": 252176
+        },
+        {
+          "path": "modeling/T1/baselines/t1_it_support_svm_report.json",
+          "suffix": ".json",
+          "size_bytes": 4070
+        },
+        {
+          "path": "modeling/T1/baselines/t1_vscode_advanced.joblib",
+          "suffix": ".joblib",
+          "size_bytes": 4208936
+        },
+        {
+          "path": "modeling/T1/baselines/t1_vscode_advanced_report.json",
+          "suffix": ".json",
+          "size_bytes": 2361
+        },
+        {
+          "path": "modeling/T1/baselines/t1_vscode_baseline.joblib",
+          "suffix": ".joblib",
+          "size_bytes": 4209084
+        },
+        {
+          "path": "modeling/T1/baselines/t1_vscode_baseline_report.json",
+          "suffix": ".json",
+          "size_bytes": 2765
+        },
+        {
+          "path": "modeling/T1/baselines/t1_vscode_feature_compare_report.json",
+          "suffix": ".json",
+          "size_bytes": 3147
+        },
+        {
+          "path": "modeling/T1/baselines/t1_vscode_model_compare_report.json",
+          "suffix": ".json",
+          "size_bytes": 2631
+        },
+        {
+          "path": "modeling/T1/contracts/t1_contract.json",
+          "suffix": ".json",
+          "size_bytes": 1699
+        },
+        {
+          "path": "modeling/T1/contracts/t1_contract.py",
+          "suffix": ".py",
+          "size_bytes": 2640
+        },
+        {
+          "path": "modeling/T1/contracts/t1_vscode_contract.json",
+          "suffix": ".json",
+          "size_bytes": 2465
+        },
+        {
+          "path": "modeling/T1/contracts/t1_vscode_contract.py",
+          "suffix": ".py",
+          "size_bytes": 3972
+        },
+        {
+          "path": "modeling/T1/derived/t1_dataset.csv",
+          "suffix": ".csv",
+          "size_bytes": 441147
+        },
+        {
+          "path": "modeling/T1/derived/t1_dataset_manifest.json",
+          "suffix": ".json",
+          "size_bytes": 885
+        },
+        {
+          "path": "modeling/T1/derived/t1_derive.py",
+          "suffix": ".py",
+          "size_bytes": 6448
+        },
+        {
+          "path": "modeling/T1/derived/t1_group_audit.json",
+          "suffix": ".json",
+          "size_bytes": 130175
+        },
+        {
+          "path": "modeling/T1/derived/t1_group_audit.py",
+          "suffix": ".py",
+          "size_bytes": 4151
+        },
+        {
+          "path": "modeling/T1/derived/t1_overlap_report.json",
+          "suffix": ".json",
+          "size_bytes": 13913
+        },
+        {
+          "path": "modeling/T1/derived/t1_split.py",
+          "suffix": ".py",
+          "size_bytes": 3899
+        },
+        {
+          "path": "modeling/T1/derived/t1_validate.py",
+          "suffix": ".py",
+          "size_bytes": 7132
+        },
+        {
+          "path": "modeling/T1/derived/t1_vscode_dataset.csv",
+          "suffix": ".csv",
+          "size_bytes": 11049055
+        },
+        {
+          "path": "modeling/T1/derived/t1_vscode_dataset_manifest.json",
+          "suffix": ".json",
+          "size_bytes": 1878
+        },
+        {
+          "path": "modeling/T1/derived/t1_vscode_derive.py",
+          "suffix": ".py",
+          "size_bytes": 18621
+        },
+        {
+          "path": "modeling/T1/derived/t1_vscode_validate.py",
+          "suffix": ".py",
+          "size_bytes": 12706
+        },
+        {
+          "path": "modeling/T1/derived/t1_vscode_validation_report.json",
+          "suffix": ".json",
+          "size_bytes": 946
+        },
+        {
+          "path": "modeling/T1/inspection/t1_vscode_inspect.py",
+          "suffix": ".py",
+          "size_bytes": 4430
+        },
+        {
+          "path": "modeling/T1/inspection/t1_vscode_leakage_inspect.py",
+          "suffix": ".py",
+          "size_bytes": 2498
+        },
+        {
+          "path": "modeling/T1/inspection/t1_vscode_marker_inspect.py",
+          "suffix": ".py",
+          "size_bytes": 3632
+        },
+        {
+          "path": "modeling/T1/inspection/t1_vscode_source_report.json",
+          "suffix": ".json",
+          "size_bytes": 1579
+        },
+        {
+          "path": "modeling/T1/inspection/vscode_t1_label_trace.txt",
+          "suffix": ".txt",
+          "size_bytes": 2792
+        },
+        {
+          "path": "modeling/T1/splits/t1_it_support_3model_compare.py",
+          "suffix": ".py",
+          "size_bytes": 14599
+        },
+        {
+          "path": "modeling/T1/splits/t1_it_support_baseline.py",
+          "suffix": ".py",
+          "size_bytes": 12223
+        },
+        {
+          "path": "modeling/T1/splits/t1_it_support_baseline_analysis.py",
+          "suffix": ".py",
+          "size_bytes": 5920
+        },
+        {
+          "path": "modeling/T1/splits/t1_it_support_char_svm.py",
+          "suffix": ".py",
+          "size_bytes": 13201
+        },
+        {
+          "path": "modeling/T1/splits/t1_it_support_eval_groups.py",
+          "suffix": ".py",
+          "size_bytes": 7791
+        },
+        {
+          "path": "modeling/T1/splits/t1_it_support_group_eval.py",
+          "suffix": ".py",
+          "size_bytes": 14187
+        },
+        {
+          "path": "modeling/T1/splits/t1_it_support_model_subset_compare.py",
+          "suffix": ".py",
+          "size_bytes": 13783
+        },
+        {
+          "path": "modeling/T1/splits/t1_it_support_split_check.py",
+          "suffix": ".py",
+          "size_bytes": 8952
+        },
+        {
+          "path": "modeling/T1/splits/t1_it_support_subset_analysis.py",
+          "suffix": ".py",
+          "size_bytes": 8452
+        },
+        {
+          "path": "modeling/T1/splits/t1_it_support_svm.py",
+          "suffix": ".py",
+          "size_bytes": 11472
+        },
+        {
+          "path": "modeling/T1/splits/t1_it_support_svm_analysis.py",
+          "suffix": ".py",
+          "size_bytes": 4464
+        },
+        {
+          "path": "modeling/T1/splits/t1_it_support_svm_errors.py",
+          "suffix": ".py",
+          "size_bytes": 7820
+        },
+        {
+          "path": "modeling/T1/splits/t1_reconcile_status.py",
+          "suffix": ".py",
+          "size_bytes": 1408
+        },
+        {
+          "path": "modeling/T1/splits/t1_split.csv",
+          "suffix": ".csv",
+          "size_bytes": 467464
+        },
+        {
+          "path": "modeling/T1/splits/t1_split.py",
+          "suffix": ".py",
+          "size_bytes": 22508
+        },
+        {
+          "path": "modeling/T1/splits/t1_split_report.json",
+          "suffix": ".json",
+          "size_bytes": 1918
+        },
+        {
+          "path": "modeling/T1/splits/t1_vscode_advanced.py",
+          "suffix": ".py",
+          "size_bytes": 8794
+        },
+        {
+          "path": "modeling/T1/splits/t1_vscode_baseline.py",
+          "suffix": ".py",
+          "size_bytes": 11595
+        },
+        {
+          "path": "modeling/T1/splits/t1_vscode_baseline_analysis.py",
+          "suffix": ".py",
+          "size_bytes": 2924
+        },
+        {
+          "path": "modeling/T1/splits/t1_vscode_feature_compare.py",
+          "suffix": ".py",
+          "size_bytes": 11184
+        },
+        {
+          "path": "modeling/T1/splits/t1_vscode_model_compare.py",
+          "suffix": ".py",
+          "size_bytes": 9018
+        },
+        {
+          "path": "modeling/T1/splits/t1_vscode_split.csv",
+          "suffix": ".csv",
+          "size_bytes": 11103895
+        },
+        {
+          "path": "modeling/T1/splits/t1_vscode_split.py",
+          "suffix": ".py",
+          "size_bytes": 11551
+        },
+        {
+          "path": "modeling/T1/splits/t1_vscode_split_report.json",
+          "suffix": ".json",
+          "size_bytes": 1526
+        }
+      ]
+    },
+    {
+      "directory": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/baselines",
+      "exists": false,
+      "files": []
+    }
+  ],
+  "resolved_t1_references": [],
+  "controls": {
+    "training_performed": false,
+    "prediction_generation_performed": false,
+    "model_modified": false,
+    "dataset_modified": false,
+    "creation_boundary_preserved": true
+  }
+}

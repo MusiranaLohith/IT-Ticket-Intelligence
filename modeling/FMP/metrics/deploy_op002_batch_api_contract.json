@@ -1,0 +1,103 @@
+{
+  "operation": "DEPLOY-OP-002",
+  "status": "PASS",
+  "contract": {
+    "operation": "DEPLOY-OP-002",
+    "status": "CONTRACT_DEFINED",
+    "endpoint": {
+      "method": "POST",
+      "path": "/tickets/analyze-batch"
+    },
+    "input": {
+      "type": "object",
+      "required_field": "tickets",
+      "tickets_type": "array",
+      "minimum_tickets": 1,
+      "ticket_schema": [
+        "ticket_id",
+        "creation_time",
+        "creator",
+        "creator_detail",
+        "summary",
+        "description"
+      ]
+    },
+    "processing": {
+      "runtime_class": "TicketPipeline",
+      "runtime_method": "predict_batch",
+      "independent_ticket_processing": true,
+      "batch_size_agnostic": true,
+      "special_batch_sizes": []
+    },
+    "output": {
+      "one_result_per_input_ticket": true,
+      "preserve_ticket_identity": true,
+      "preserve_t1_t11_results": true,
+      "preserve_ticket_explanation": true
+    },
+    "validation": {
+      "required_ticket_fields": [
+        "ticket_id",
+        "creation_time",
+        "creator",
+        "creator_detail",
+        "summary",
+        "description"
+      ],
+      "malformed_tickets_rejected": true,
+      "empty_batch_rejected": true,
+      "extra_ticket_fields": "REJECT"
+    },
+    "single_ticket_boundary": {
+      "existing_endpoint_preserved": true,
+      "existing_endpoint": {
+        "method": "POST",
+        "path": "/tickets/analyze"
+      }
+    },
+    "runtime_protection": {
+      "frozen_runtime_modified": false,
+      "ml_logic_duplicated": false,
+      "model_artifacts_modified": false,
+      "thresholds_added": false,
+      "universal_confidence_added": false,
+      "universal_risk_added": false,
+      "t8_semantics_changed": false,
+      "t9_boundaries_changed": false,
+      "t10_autonomous_policy_added": false,
+      "t11_feedback_fabricated": false
+    },
+    "priority_severity_display": {
+      "use_class_labels_only": true,
+      "invented_english_meanings": false
+    },
+    "production_boundary": {
+      "production_ready": false,
+      "authorization": "NOT_ESTABLISHED"
+    }
+  },
+  "runtime_interface": {
+    "predict": "(self, ticket: 'dict[str, Any]')",
+    "predict_batch": "(self, tickets: 'list[dict[str, Any]]')",
+    "predict_batch_parameters": [
+      "self",
+      "tickets"
+    ]
+  },
+  "assertions": {
+    "project_root_exists": true,
+    "runtime_root_exists": true,
+    "pipeline_exists": true,
+    "predict_exists": true,
+    "predict_batch_exists": true,
+    "predict_batch_signature_valid": true,
+    "batch_endpoint_defined": true,
+    "batch_size_agnostic": true,
+    "one_result_per_input_ticket": true,
+    "single_endpoint_preserved": true,
+    "frozen_runtime_protected": true,
+    "production_not_ready": true
+  },
+  "read_only_runtime": true,
+  "frozen_runtime_modified": false
+}

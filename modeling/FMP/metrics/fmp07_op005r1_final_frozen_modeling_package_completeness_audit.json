@@ -1,0 +1,243 @@
+{
+  "operation": "FMP-07 OP-005R1",
+  "operation_name": "FINAL_FROZEN_MODELING_PACKAGE_COMPLETENESS_AUDIT",
+  "timestamp_utc": "2026-09-26T16:48:28.510063+00:00",
+  "status": "PASS",
+  "read_only": true,
+  "training_performed": false,
+  "fitting_performed": false,
+  "prediction_performed": false,
+  "evaluation_performed": false,
+  "locked_test_used": false,
+  "artifact_modified": false,
+  "correction_basis": [
+    "OP-002 is the authoritative frozen artifact manifest.",
+    "T6 runtime dependencies are not required to equal the single frozen final-result artifact.",
+    "T7 is parameter/implementation-bound.",
+    "T8 and T9 accept their authoritative PASS closure status.",
+    "FMP-06 CLOSED_PASS is retained as the final phase status."
+  ],
+  "prerequisite_status": {
+    "OP-001": "PASS",
+    "OP-002": "PASS",
+    "OP-003R1": "PASS",
+    "OP-004": "PASS"
+  },
+  "frozen_artifacts": {
+    "T1": {
+      "artifact_count": 1,
+      "artifacts": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/baselines/t1_it_support_char_svm.joblib",
+          "exists": true,
+          "readable": true,
+          "current_size_bytes": 2179887,
+          "manifest_size_bytes": 2179887,
+          "sha256_from_manifest": "2e6b4c81f1dc363edfa313e1cbd4c46b641ec017638c8e4447ba27c99f276632",
+          "status": "PASS"
+        }
+      ],
+      "status": "PASS"
+    },
+    "T2": {
+      "artifact_count": 1,
+      "artifacts": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/models/t2_class_weighted_tfidf_logreg.joblib",
+          "exists": true,
+          "readable": true,
+          "current_size_bytes": 14317753,
+          "manifest_size_bytes": 14317753,
+          "sha256_from_manifest": "19e751d7095ab2cb7bbf0b4562f3274998cc984cb3298745d6d54f51c432a4f5",
+          "status": "PASS"
+        }
+      ],
+      "status": "PASS"
+    },
+    "T3": {
+      "artifact_count": 1,
+      "artifacts": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib",
+          "exists": true,
+          "readable": true,
+          "current_size_bytes": 17315561,
+          "manifest_size_bytes": 17315561,
+          "sha256_from_manifest": "3887d73e8570a6d96c45a518ea4f5e03692e707a6d7aff463475e70f62bb371d",
+          "status": "PASS"
+        }
+      ],
+      "status": "PASS"
+    },
+    "T4": {
+      "artifact_count": 3,
+      "artifacts": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_tfidf.joblib",
+          "exists": true,
+          "readable": true,
+          "current_size_bytes": 226595,
+          "manifest_size_bytes": 226595,
+          "sha256_from_manifest": "e451476d50c0fc0edb78c30b95b5acda706fd7730aef29042763433d77af680c",
+          "status": "PASS"
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_neighbors.joblib",
+          "exists": true,
+          "readable": true,
+          "current_size_bytes": 52792287,
+          "manifest_size_bytes": 52792287,
+          "sha256_from_manifest": "08197ced826034fb6265a6b3e94fab041175f1a523c8a93d8f326588c6d1806c",
+          "status": "PASS"
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_full_retrieval.npz",
+          "exists": true,
+          "readable": true,
+          "current_size_bytes": 4076925,
+          "manifest_size_bytes": 4076925,
+          "sha256_from_manifest": "4182bcf03ae3061631d18eecf7c20fb246f3656acfef4a0208c2f9f6a8f15afb",
+          "status": "PASS"
+        }
+      ],
+      "status": "PASS"
+    },
+    "T5": {
+      "artifact_count": 4,
+      "artifacts": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod005_tfidf.joblib",
+          "exists": true,
+          "readable": true,
+          "current_size_bytes": 4041055,
+          "manifest_size_bytes": 4041055,
+          "sha256_from_manifest": "3a653b5129b63f6fbb0b8e6423724c213f67e445a9a94acfefd79c999f851029",
+          "status": "PASS"
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod005_logreg.joblib",
+          "exists": true,
+          "readable": true,
+          "current_size_bytes": 800891,
+          "manifest_size_bytes": 800891,
+          "sha256_from_manifest": "7217945fc407fa3cd0b7f06d597d56490fb4889f1992d1d6bef3503954339881",
+          "status": "PASS"
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod007_calibrated_tfidf.joblib",
+          "exists": true,
+          "readable": true,
+          "current_size_bytes": 4041492,
+          "manifest_size_bytes": 4041492,
+          "sha256_from_manifest": "9e38ce715c9b4f5213fd7a7717e4295148e5bb40b19af2bb07638edccafb63e4",
+          "status": "PASS"
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod007_calibration_models.joblib",
+          "exists": true,
+          "readable": true,
+          "current_size_bytes": 802449,
+          "manifest_size_bytes": 802449,
+          "sha256_from_manifest": "06f32a9b0fcc927f08e3f55437c3120a19a6af572335d5fdcb8890833f5cf143",
+          "status": "PASS"
+        }
+      ],
+      "status": "PASS"
+    },
+    "T6": {
+      "artifact_count": 1,
+      "artifacts": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod010_corrected_hybrid_results.json",
+          "exists": true,
+          "readable": true,
+          "current_size_bytes": 6325,
+          "manifest_size_bytes": 6325,
+          "sha256_from_manifest": "7683692b6681b6d53b299c5bd5c3eea44ca09a96ff2752b9abcb232f46025ba9",
+          "status": "PASS"
+        }
+      ],
+      "status": "PASS"
+    },
+    "T7": {
+      "artifact_count": 1,
+      "artifacts": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod010_log_normal_aft_model.json",
+          "exists": true,
+          "readable": true,
+          "current_size_bytes": 2899,
+          "manifest_size_bytes": 2899,
+          "sha256_from_manifest": "3350aefff2b724c6492f1d03fcdf811fd69544a45e27e7805ce53c6c2f9bccd0",
+          "status": "PASS"
+        }
+      ],
+      "status": "PASS"
+    }
+  },
+  "required_evidence": {
+    "op001": {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp07_op001_final_modeling_freeze_inventory.json",
+      "exists": true,
+      "readable": true,
+      "size_bytes": 8464,
+      "status": "PASS"
+    },
+    "op002": {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp07_op002_frozen_artifact_integrity_hash_manifest.json",
+      "exists": true,
+      "readable": true,
+      "size_bytes": 5959,
+      "status": "PASS"
+    },
+    "op003r1": {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp07_op003r1_frozen_artifact_closure_identity_reconciliation.json",
+      "exists": true,
+      "readable": true,
+      "size_bytes": 5514,
+      "status": "PASS"
+    },
+    "op004": {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp07_op004_frozen_runtime_reproducibility_manifest.json",
+      "exists": true,
+      "readable": true,
+      "size_bytes": 6912,
+      "status": "PASS"
+    },
+    "fmp06": {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_final_phase_closure.json",
+      "exists": true,
+      "readable": true,
+      "size_bytes": 3065,
+      "status": "PASS"
+    },
+    "t8": {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/mod036/op026/t8_mod036_op026_decision_engine_validation.json",
+      "exists": true,
+      "readable": true,
+      "size_bytes": 2256,
+      "status": "PASS"
+    },
+    "t9": {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op015_final_integrated_closure.json",
+      "exists": true,
+      "readable": true,
+      "size_bytes": 6247,
+      "status": "PASS"
+    },
+    "t10": {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp05_op008_empirical_policy_boundary_audit.json",
+      "exists": true,
+      "readable": true,
+      "size_bytes": 4145,
+      "status": "PASS"
+    }
+  },
+  "downstream_status": {
+    "T8": "PASS",
+    "T9": "PASS",
+    "T10": "PASS",
+    "FMP06": "CLOSED_PASS"
+  },
+  "interpretation": "This corrected audit reconciles package completeness against the authoritative freeze manifest and actual closure status values. It does not introduce new modeling evidence or modify any frozen artifact."
+}

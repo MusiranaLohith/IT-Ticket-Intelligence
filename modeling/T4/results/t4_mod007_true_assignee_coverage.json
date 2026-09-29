@@ -1,0 +1,207 @@
+{
+  "experiment": "T4 MOD-007 True-Assignee Retrieval Coverage",
+  "status": "COMPLETE",
+  "population": {
+    "evaluation_rows": 35626,
+    "covered_rows": 32773,
+    "unseen_rows": 2853,
+    "unseen_rate": 0.08008196261157581
+  },
+  "retrieval_coverage": {
+    "true_assignee_retrieved_rate": 0.4574497299606383,
+    "true_assignee_not_retrieved_rate": 0.5425502700393616,
+    "retrieved_rows": 14992,
+    "not_retrieved_rows": 17781
+  },
+  "retrieval_topk_coverage": {
+    "1": {
+      "rows": 7275,
+      "rate": 0.22198150916913312
+    },
+    "3": {
+      "rows": 10309,
+      "rate": 0.31455771519238396
+    },
+    "5": {
+      "rows": 11609,
+      "rate": 0.3542245140817136
+    },
+    "10": {
+      "rows": 13164,
+      "rate": 0.40167210813779636
+    },
+    "20": {
+      "rows": 14992,
+      "rate": 0.4574497299606383
+    }
+  },
+  "retrieval_rank_distribution": {
+    "1": 7275,
+    "2": 2123,
+    "3": 911,
+    "4": 736,
+    "5": 564,
+    "6": 422,
+    "7": 362,
+    "8": 294,
+    "9": 238,
+    "10": 239,
+    "11": 233,
+    "12": 210,
+    "13": 187,
+    "14": 200,
+    "15": 186,
+    "16": 179,
+    "17": 164,
+    "18": 162,
+    "19": 140,
+    "20": 167
+  },
+  "true_assignee_similarity": {
+    "mean_best_similarity": 0.5262521838326019,
+    "median_best_similarity": 0.5059188306331635,
+    "p10_best_similarity": 0.26437599658966066,
+    "p90_best_similarity": 0.8199388742446899,
+    "mean_similarity_mass": 5.100396224141535,
+    "median_similarity_mass": 3.1100752353668213
+  },
+  "true_assignee_neighbor_count": {
+    "mean": 4.07326152625637,
+    "median": 0.0,
+    "maximum": 20,
+    "distribution": {
+      "0": {
+        "rows": 17781,
+        "share": 0.5425502700393616,
+        "aggregation_hit_at_1": 0.0
+      },
+      "1": {
+        "rows": 3568,
+        "share": 0.10887010649009855,
+        "aggregation_hit_at_1": 0.005044843049327354
+      },
+      "2": {
+        "rows": 1416,
+        "share": 0.043206297867146734,
+        "aggregation_hit_at_1": 0.14901129943502825
+      },
+      "3": {
+        "rows": 732,
+        "share": 0.022335459066914837,
+        "aggregation_hit_at_1": 0.40846994535519127
+      },
+      "4": {
+        "rows": 575,
+        "share": 0.01754493027797272,
+        "aggregation_hit_at_1": 0.6243478260869565
+      },
+      "5": {
+        "rows": 588,
+        "share": 0.01794159826686602,
+        "aggregation_hit_at_1": 0.7091836734693877
+      },
+      "6": {
+        "rows": 478,
+        "share": 0.01458517682238428,
+        "aggregation_hit_at_1": 0.7489539748953975
+      },
+      "7": {
+        "rows": 304,
+        "share": 0.009275928355658622,
+        "aggregation_hit_at_1": 0.8453947368421053
+      },
+      "8": {
+        "rows": 356,
+        "share": 0.010862600311231806,
+        "aggregation_hit_at_1": 0.8932584269662921
+      },
+      "9": {
+        "rows": 270,
+        "share": 0.00823848900009154,
+        "aggregation_hit_at_1": 0.9111111111111111
+      },
+      "10": {
+        "rows": 298,
+        "share": 0.009092850822323254,
+        "aggregation_hit_at_1": 1.0
+      },
+      "11": {
+        "rows": 304,
+        "share": 0.009275928355658622,
+        "aggregation_hit_at_1": 1.0
+      },
+      "12": {
+        "rows": 344,
+        "share": 0.010496445244561071,
+        "aggregation_hit_at_1": 1.0
+      },
+      "13": {
+        "rows": 316,
+        "share": 0.009642083422329356,
+        "aggregation_hit_at_1": 1.0
+      },
+      "14": {
+        "rows": 347,
+        "share": 0.010587984011228756,
+        "aggregation_hit_at_1": 1.0
+      },
+      "15": {
+        "rows": 558,
+        "share": 0.01702621060018918,
+        "aggregation_hit_at_1": 1.0
+      },
+      "16": {
+        "rows": 963,
+        "share": 0.02938394410032649,
+        "aggregation_hit_at_1": 1.0
+      },
+      "17": {
+        "rows": 803,
+        "share": 0.024501876544716687,
+        "aggregation_hit_at_1": 1.0
+      },
+      "18": {
+        "rows": 940,
+        "share": 0.028682146889207578,
+        "aggregation_hit_at_1": 1.0
+      },
+      "19": {
+        "rows": 1024,
+        "share": 0.031245232355902725,
+        "aggregation_hit_at_1": 1.0
+      },
+      "20": {
+        "rows": 808,
+        "share": 0.024654441155829494,
+        "aggregation_hit_at_1": 1.0
+      }
+    }
+  },
+  "covered_outcome_decomposition": {
+    "covered_rows": 32773,
+    "retrieval_success_and_aggregation_success": 9188,
+    "retrieval_success_but_aggregation_failure": 5804,
+    "retrieval_failure": 17781,
+    "rates": {
+      "retrieval_success": 0.4574497299606383,
+      "retrieval_success_and_aggregation_success": 0.2803527293808928,
+      "retrieval_success_but_aggregation_failure": 0.17709700057974553,
+      "retrieval_failure": 0.5425502700393616
+    }
+  },
+  "interpretation": [
+    "This analysis separates retrieval failure from candidate-aggregation failure.",
+    "A covered target is considered retrieval-successful when at least one of its historical training tickets appears among the 20 retrieved neighbors.",
+    "Retrieval failure means the true training-observed assignee has no retrieved historical evidence within the Top-20 set.",
+    "Aggregation failure after retrieval means the true assignee was retrieved but the MOD-007 summed-similarity aggregation did not rank it first.",
+    "This decomposition determines whether a subsequent experiment should primarily modify retrieval or assignee scoring.",
+    "Unseen evaluation targets are excluded from this covered-target retrieval analysis because they have no corresponding training-period assignee evidence."
+  ],
+  "controls": {
+    "raw_mozilla_accessed": false,
+    "target_reconstructed": false,
+    "model_trained": false,
+    "new_predictions_created": false,
+    "test_used": false
+  }
+}

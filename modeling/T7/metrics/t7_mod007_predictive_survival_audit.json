@@ -1,0 +1,79 @@
+{
+  "task": "T7 Resolution-Time Estimation",
+  "operation": "MOD-007",
+  "status": "COMPLETE",
+  "model": {
+    "family": "Weibull_AFT",
+    "purpose": "First predictive survival baseline",
+    "training_rows": 411052,
+    "evaluation_rows": 102764,
+    "feature_count": 21
+  },
+  "feature_boundary": {
+    "creation_only": true,
+    "post_creation_history_used": false,
+    "current_status_used": false,
+    "current_resolution_used": false,
+    "evaluation_fitting": false,
+    "raw_archive_access": false
+  },
+  "features": [
+    "creator_frequency_log1p",
+    "creator_detail_frequency_log1p",
+    "summary_chars_log1p",
+    "summary_words_log1p",
+    "summary_digits_log1p",
+    "summary_lines_log1p",
+    "summary_uppercase_log1p",
+    "summary_missing",
+    "description_chars_log1p",
+    "description_words_log1p",
+    "description_digits_log1p",
+    "description_lines_log1p",
+    "description_uppercase_log1p",
+    "description_missing",
+    "creation_year_scaled",
+    "creation_month_sin",
+    "creation_month_cos",
+    "creation_weekday_sin",
+    "creation_weekday_cos",
+    "creation_hour_sin",
+    "creation_hour_cos"
+  ],
+  "train_event_count": 374179,
+  "train_censor_count": 36873,
+  "evaluation_event_count": 81583,
+  "evaluation_censor_count": 21181,
+  "weibull": {
+    "shape": 0.04887126343472836,
+    "optimization_success": true,
+    "iterations": 107,
+    "objective": 7046351.832968469
+  },
+  "evaluation_metrics": {
+    "harrell_concordance_index": 0.5549621693633812,
+    "comparable_pairs": 4940830150,
+    "ipcw_brier": [
+      {
+        "horizon_seconds": 211583.0,
+        "ipcw_brier_score": 0.5559985321807034,
+        "mean_predicted_survival": 0.18045612894999413
+      },
+      {
+        "horizon_seconds": 1780179.0,
+        "ipcw_brier_score": 0.4165689714851437,
+        "mean_predicted_survival": 0.14962967060591312
+      },
+      {
+        "horizon_seconds": 14608619.0,
+        "ipcw_brier_score": 0.2143230585981617,
+        "mean_predicted_survival": 0.12187165877547627
+      }
+    ]
+  },
+  "artifacts": {
+    "model": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod007_weibull_aft_model.json",
+    "predictions": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/derived/t7_mod007_evaluation_predictions.csv",
+    "audit": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod007_predictive_survival_audit.json"
+  }
+}

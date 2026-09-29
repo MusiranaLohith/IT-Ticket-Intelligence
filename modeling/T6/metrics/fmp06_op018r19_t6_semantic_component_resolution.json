@@ -1,0 +1,159 @@
+{
+  "operation": "FMP-06 OP-018R19",
+  "status": "PASS",
+  "read_only": true,
+  "training_performed": false,
+  "evaluation_performed": false,
+  "locked_test_used": false,
+  "artifact_modified": false,
+  "sources": {
+    "modeling/T6/scripts/t6_mod010_corrected_hybrid_reconstruction.py": {
+      "exists": true,
+      "size_bytes": 27856,
+      "matching_lines": [
+        "29: #   - recompute semantic embeddings",
+        "124: SEMANTIC_WEIGHTS = [",
+        "186: def minmax_normalize_within_query(",
+        "194:     normalized_parts = []",
+        "217:             normalized = (",
+        "225:             normalized = np.zeros_like(",
+        "229:         normalized_parts.append(",
+        "231:                 normalized,",
+        "240:         normalized_parts",
+        "885:         \"semantic_score\",",
+        "926:         \"no embedding recomputation.\"",
+        "945:             \"semantic_score\",",
+        "957:     rankings = minmax_normalize_within_query(",
+        "960:         \"tfidf_score_normalized\",",
+        "963:     rankings = minmax_normalize_within_query(",
+        "965:         \"semantic_score\",",
+        "966:         \"semantic_score_normalized\",",
+        "979:     for semantic_weight in SEMANTIC_WEIGHTS:",
+        "983:             - semantic_weight",
+        "989:             \"hybrid_score\"",
+        "993:                 \"tfidf_score_normalized\"",
+        "996:             semantic_weight",
+        "998:                 \"semantic_score_normalized\"",
+        "1004:             \"hybrid_score\",",
+        "1008:             \"semantic_weight\"",
+        "1009:         ] = semantic_weight",
+        "1020:             f\"  semantic={semantic_weight:.2f} \"",
+        "1033:             item[\"semantic_weight\"],",
+        "1037:     selected_semantic_weight = (",
+        "1038:         selected[\"semantic_weight\"]",
+        "1057:         f\"{selected_semantic_weight:.2f}\"",
+        "1061:         \"hybrid_score\"",
+        "1065:             \"tfidf_score_normalized\"",
+        "1068:         selected_semantic_weight",
+        "1070:             \"semantic_score_normalized\"",
+        "1085:             hybrid_score=train_rankings[",
+        "1086:                 \"tfidf_score_normalized\"",
+        "1089:         \"hybrid_score\",",
+        "1094:             hybrid_score=eval_rankings[",
+        "1095:                 \"tfidf_score_normalized\"",
+        "1098:         \"hybrid_score\",",
+        "1103:         \"semantic_score\",",
+        "1108:         \"semantic_score\",",
+        "1121:         \"hybrid_score\",",
+        "1126:         \"hybrid_score\",",
+        "1183:             \"predeclared_weights\": SEMANTIC_WEIGHTS,"
+      ],
+      "relevant_functions": {},
+      "relevant_string_literals": [
+        "Candidate IDs have multiple textual representations across the frozen modeling population. Candidate-ID-level lexical deduplication would not be an exact representation of MOD-004.",
+        "Semantic branch reused from MOD-009; no embedding recomputation.",
+        "[1/9] Loading frozen modeling artifacts...",
+        "model_training",
+        "modeling",
+        "models"
+      ]
+    },
+    "modeling/T6/scripts/t6_mod010_final_hybrid_comparison.py": {
+      "exists": true,
+      "size_bytes": 8700,
+      "matching_lines": [],
+      "relevant_functions": {},
+      "relevant_string_literals": [
+        "Corrected hybrid is retained as the advanced retrieval candidate for final T6 model-selection consideration. No autonomous-routing conclusion is made.",
+        "model",
+        "modeling"
+      ]
+    },
+    "modeling/T6/scripts/t6_mod010_exact_tfidf_reproduction.py": {
+      "exists": true,
+      "size_bytes": 14827,
+      "matching_lines": [
+        "660:             \"semantic_model_loading\": False,"
+      ],
+      "relevant_functions": {},
+      "relevant_string_literals": [
+        "T6 — MOD-010\nDirect TF-IDF Score Reconciliation\n\nPurpose:\n    Compare the exact original MOD-004 TF-IDF scores against the\n    TF-IDF scores stored inside the MOD-009 candidate-level artifact.\n\nThis is a read-only diagnostic.\n\nControls:\n    - No raw dataset access.\n    - No model training.\n    - No target modification.\n    - No candidate-pool modification.\n    - No semantic model loading.\n    - No calibration.\n    - No threshold optimization.",
+        "model_training",
+        "modeling",
+        "models",
+        "semantic_model_loading"
+      ]
+    },
+    "modeling/T6/scripts/t6_mod010_inspect_artifact_schemas.py": {
+      "exists": true,
+      "size_bytes": 16247,
+      "matching_lines": [
+        "47: def normalize_bool(series: pd.Series) -> pd.Series:",
+        "206:     mod009[\"target_observed\"] = normalize_bool(",
+        "598:             \"semantic_model_loading\": False,"
+      ],
+      "relevant_functions": {},
+      "relevant_string_literals": [
+        "model_training",
+        "modeling",
+        "semantic_model_loading"
+      ]
+    },
+    "modeling/T6/scripts/t6_final_model_selection_and_closure.py": {
+      "exists": true,
+      "size_bytes": 15245,
+      "matching_lines": [
+        "281:         f\"{selected_weight['semantic_weight']:.2f}\"",
+        "358:         \"semantic_weight\": float(",
+        "360:                 \"semantic_weight\"",
+        "607:         f\"{final_model['semantic_weight']:.2f}\""
+      ],
+      "relevant_functions": {
+        "load_json": "def load_json(path: Path) -> dict:\n    with path.open(\n        \"r\",\n        encoding=\"utf-8\",\n    ) as f:\n        return json.load(f)"
+      },
+      "relevant_string_literals": [
+        "Final model:",
+        "MOD-002 Baseline Modeling Contract",
+        "Model-selection controls: PASS",
+        "T6 FINAL MODEL SELECTION + CLOSURE: COMPLETED",
+        "T6 — FINAL MODEL SELECTION + CLOSURE",
+        "[4/7] Verifying model-selection controls...",
+        "[5/7] Consolidating final model evidence...",
+        "all-MiniLM-L6-v2 semantic similarity",
+        "final_model",
+        "modeling"
+      ]
+    }
+  },
+  "embedding_related_files": [
+    "modeling/T6/contracts/t6_modeling_contract.json",
+    "modeling/T6/metrics/t6_mod008_semantic_failure_results.json",
+    "modeling/T6/scripts/t6_final_model_selection_and_closure.py",
+    "modeling/T6/scripts/t6_mod008_semantic_failure_retrieval.py",
+    "modeling/T6/scripts/t6_mod009_hybrid_lexical_semantic_retrieval.py"
+  ],
+  "model_directory_files": [
+    {
+      "path": "modeling/T6/models/t6_mod004_tfidf_vectorizer.joblib",
+      "size_bytes": 4235872
+    }
+  ],
+  "semantic_signals": {
+    "sentence_transformers_reference": false,
+    "embedding_reference": true,
+    "encode_reference": false,
+    "cosine_similarity_reference": false,
+    "semantic_score_reference": true,
+    "semantic_weight_reference": true
+  }
+}

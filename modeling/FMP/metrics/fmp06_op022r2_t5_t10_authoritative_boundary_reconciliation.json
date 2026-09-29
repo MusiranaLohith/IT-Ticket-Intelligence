@@ -1,0 +1,24 @@
+{
+  "operation": "FMP-06 OP-022R2",
+  "status": "REQUIRES_REVIEW",
+  "read_only": true,
+  "training_performed": false,
+  "fitting_performed": false,
+  "prediction_performed": false,
+  "evaluation_performed": false,
+  "locked_test_used": false,
+  "artifact_modified": false,
+  "T5": {
+    "task_specific_pass_evidence": true,
+    "frozen_artifacts_present": true,
+    "status": "PASS"
+  },
+  "T10": {
+    "structured_fields": {},
+    "threshold_not_empirically_established": false,
+    "threshold_not_created": false,
+    "synthetic_target_not_created": false,
+    "status": "REQUIRES_REVIEW"
+  },
+  "interpretation": "T5 is reconciled using task-specific runtime evidence rather than the aggregate OP-018R3 status. T10 is reconciled using its structured policy-boundary fields rather than generic textual threshold detection."
+}

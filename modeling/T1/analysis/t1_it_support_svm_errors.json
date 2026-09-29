@@ -1,0 +1,329 @@
+{
+  "status": "ERROR_EXTRACTION_COMPLETE",
+  "task": {
+    "task_id": "T1",
+    "dataset": "IT Support",
+    "model": "TFIDF_LINEAR_SVC"
+  },
+  "data": {
+    "frozen_split": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/splits/t1_split.csv",
+    "evaluation_records": 446,
+    "misclassified_records": 26,
+    "correctly_classified_records": 420,
+    "evaluation_used_for_fit": false,
+    "model_retrained": false,
+    "raw_source_modified": false
+  },
+  "error_summary": {
+    "errors_by_actual_class": {
+      "Active Directory": 9,
+      "Computer-Services": 2,
+      "Fileservice": 1,
+      "O365": 7,
+      "Software": 7
+    },
+    "errors_by_predicted_class": {
+      "Active Directory": 2,
+      "Fileservice": 3,
+      "Software": 8,
+      "Support general": 13
+    },
+    "actual_to_predicted": [
+      {
+        "actual": "Software",
+        "predicted": "Support general",
+        "count": 6
+      },
+      {
+        "actual": "Active Directory",
+        "predicted": "Software",
+        "count": 4
+      },
+      {
+        "actual": "Active Directory",
+        "predicted": "Support general",
+        "count": 4
+      },
+      {
+        "actual": "O365",
+        "predicted": "Software",
+        "count": 3
+      },
+      {
+        "actual": "O365",
+        "predicted": "Support general",
+        "count": 2
+      },
+      {
+        "actual": "O365",
+        "predicted": "Active Directory",
+        "count": 2
+      },
+      {
+        "actual": "Computer-Services",
+        "predicted": "Support general",
+        "count": 1
+      },
+      {
+        "actual": "Fileservice",
+        "predicted": "Software",
+        "count": 1
+      },
+      {
+        "actual": "Software",
+        "predicted": "Fileservice",
+        "count": 1
+      },
+      {
+        "actual": "Active Directory",
+        "predicted": "Fileservice",
+        "count": 1
+      },
+      {
+        "actual": "Computer-Services",
+        "predicted": "Fileservice",
+        "count": 1
+      }
+    ]
+  },
+  "errors": [
+    {
+      "id": "1683",
+      "actual": "O365",
+      "predicted": "Software",
+      "text": "External vendors have e3 license again (previously removed on [DRIVER_ID])",
+      "source_partition": "train",
+      "source_row_x": "252",
+      "source_row_y": "252"
+    },
+    {
+      "id": "971",
+      "actual": "Computer-Services",
+      "predicted": "Support general",
+      "text": "[TICKET ID] - New Support Ticket received  - Britos LapTop",
+      "source_partition": "train",
+      "source_row_x": "1457",
+      "source_row_y": "1457"
+    },
+    {
+      "id": "976",
+      "actual": "Active Directory",
+      "predicted": "Software",
+      "text": "[TICKET ID] - New Support Ticket received  - acesso",
+      "source_partition": "train",
+      "source_row_x": "1561",
+      "source_row_y": "1561"
+    },
+    {
+      "id": "997",
+      "actual": "Fileservice",
+      "predicted": "Software",
+      "text": "[TICKET ID] - New Support Ticket received  - Acesso",
+      "source_partition": "train",
+      "source_row_x": "132",
+      "source_row_y": "132"
+    },
+    {
+      "id": "1260",
+      "actual": "Active Directory",
+      "predicted": "Software",
+      "text": "[TICKET ID] - New Support Ticket received  - Acesso",
+      "source_partition": "train",
+      "source_row_x": "330",
+      "source_row_y": "330"
+    },
+    {
+      "id": "888",
+      "actual": "Active Directory",
+      "predicted": "Software",
+      "text": "[TICKET ID] - New Support Ticket received  - acesso",
+      "source_partition": "test",
+      "source_row_x": "70",
+      "source_row_y": "70"
+    },
+    {
+      "id": "892",
+      "actual": "Active Directory",
+      "predicted": "Software",
+      "text": "[TICKET ID] - New Support Ticket received  - Acesso",
+      "source_partition": "test",
+      "source_row_x": "656",
+      "source_row_y": "656"
+    },
+    {
+      "id": "1441",
+      "actual": "Active Directory",
+      "predicted": "Support general",
+      "text": "[COMPANY]ify[LOCATION][SERVER]",
+      "source_partition": "test",
+      "source_row_x": "616",
+      "source_row_y": "616"
+    },
+    {
+      "id": "1171",
+      "actual": "O365",
+      "predicted": "Support general",
+      "text": "[TICKET ID] - New Support Ticket received  - enviar e_mail",
+      "source_partition": "train",
+      "source_row_x": "1539",
+      "source_row_y": "1539"
+    },
+    {
+      "id": "75",
+      "actual": "Software",
+      "predicted": "Support general",
+      "text": "Initiated by [COMPANY][LOCATION]- Vulnerable Internet Explorer on [SERVER]",
+      "source_partition": "train",
+      "source_row_x": "614",
+      "source_row_y": "614"
+    },
+    {
+      "id": "3248",
+      "actual": "Software",
+      "predicted": "Support general",
+      "text": "Initiated by [COMPANY][LOCATION]- Vulnerable Internet Explorer on [SERVER]",
+      "source_partition": "train",
+      "source_row_x": "1471",
+      "source_row_y": "1471"
+    },
+    {
+      "id": "3662",
+      "actual": "Software",
+      "predicted": "Support general",
+      "text": "Initiated by [COMPANY][LOCATION]- Vulnerable Internet Explorer on [SERVER]",
+      "source_partition": "train",
+      "source_row_x": "1571",
+      "source_row_y": "1571"
+    },
+    {
+      "id": "1017",
+      "actual": "Software",
+      "predicted": "Fileservice",
+      "text": "[TICKET ID] - New Support Ticket received  - Abrir pasta de arquivos do google Drive",
+      "source_partition": "train",
+      "source_row_x": "1260",
+      "source_row_y": "1260"
+    },
+    {
+      "id": "3838",
+      "actual": "Software",
+      "predicted": "Support general",
+      "text": "Initiated by [COMPANY][LOCATION]- Vulnerable Internet Explorere on [SERVER]",
+      "source_partition": "train",
+      "source_row_x": "800",
+      "source_row_y": "800"
+    },
+    {
+      "id": "5708",
+      "actual": "Software",
+      "predicted": "Support general",
+      "text": "Initiated by [COMPANY][LOCATION]- Vulnerable Internet Explorere on [SERVER]",
+      "source_partition": "train",
+      "source_row_x": "1500",
+      "source_row_y": "1500"
+    },
+    {
+      "id": "8214",
+      "actual": "Software",
+      "predicted": "Support general",
+      "text": "Initiated by [COMPANY][LOCATION]- Vulnerable Internet Explorere on [SERVER]",
+      "source_partition": "train",
+      "source_row_x": "1408",
+      "source_row_y": "1408"
+    },
+    {
+      "id": "10745",
+      "actual": "Active Directory",
+      "predicted": "Fileservice",
+      "text": "Konto wird immer wieder gesperrt",
+      "source_partition": "train",
+      "source_row_x": "119",
+      "source_row_y": "119"
+    },
+    {
+      "id": "845",
+      "actual": "Computer-Services",
+      "predicted": "Fileservice",
+      "text": "[TICKET ID] - New Support Ticket received  - unlock my personal external[LOCATION]drive",
+      "source_partition": "test",
+      "source_row_x": "50",
+      "source_row_y": "50"
+    },
+    {
+      "id": "1266",
+      "actual": "O365",
+      "predicted": "Software",
+      "text": "[TICKET ID] - A Support Ticket was forwarded to your role  - Instalação do Visio",
+      "source_partition": "test",
+      "source_row_x": "177",
+      "source_row_y": "177"
+    },
+    {
+      "id": "2618",
+      "actual": "Active Directory",
+      "predicted": "Support general",
+      "text": "Basis User - [TICKET ID] - [NAME] ([COMPANY]. [LOCATION])Service Request: Basis User     Create Windows account for internal user  [NAME] ([COMPANY]. [LOCATION])     Firstname:  [NAME]  Lastname:  Nadj  Cost Center:  44265  Company:  [COMPANY] Seme YU D.O.O.  Department:  [COMPANY]_MA-[ADDRESS]  ZIP:  [ADDRESS]  City:  [ADDRESS]  Country:  [ADDRESS]  Office:       Important: Please set the EA10 to the following value: 13315 (leave blank. when empty)  Please create Exchange and Skype account.  The user needs at least the following access permissions:  Access to [SOFTWARE] ([SERVER])  Requestor:  [NAME] (EXTERNAL. [LOCATION])     Desired date:  Sep  3 2018 12:00AM     Additional information:  [LOCATION]Emloyee!  !!!! She also need mobile device accounts only - for A6 and iPad with [COMPANY] CRM. but this options are not existing in the Matrix shop!!!!",
+      "source_partition": "test",
+      "source_row_x": "345",
+      "source_row_y": "345"
+    },
+    {
+      "id": "678",
+      "actual": "O365",
+      "predicted": "Support general",
+      "text": "[TICKET ID] - New Support Ticket received  - Block email from [NAME] Enright",
+      "source_partition": "train",
+      "source_row_x": "258",
+      "source_row_y": "258"
+    },
+    {
+      "id": "1388",
+      "actual": "O365",
+      "predicted": "Software",
+      "text": "[TICKET ID] - A Support Ticket was forwarded to your role  - Problemas com e-mail Contas a Pagar",
+      "source_partition": "train",
+      "source_row_x": "642",
+      "source_row_y": "642"
+    },
+    {
+      "id": "792",
+      "actual": "Active Directory",
+      "predicted": "Support general",
+      "text": "[TICKET ID] - A Support Ticket was forwarded to you  - Basis User - [USERNAME] - [NAME] ([COMPANY]. [LOCATION])",
+      "source_partition": "train",
+      "source_row_x": "1382",
+      "source_row_y": "1382"
+    },
+    {
+      "id": "793",
+      "actual": "Active Directory",
+      "predicted": "Support general",
+      "text": "[TICKET ID] - A Support Ticket was forwarded to you  - Basis User - [USERNAME] - [NAME] ([COMPANY]. [LOCATION])",
+      "source_partition": "test",
+      "source_row_x": "635",
+      "source_row_y": "635"
+    },
+    {
+      "id": "1158",
+      "actual": "O365",
+      "predicted": "Active Directory",
+      "text": "[TICKET ID] - New Support Ticket received  -[LOCATION]on samsung J7 not working. Lost Login credentials. ",
+      "source_partition": "train",
+      "source_row_x": "104",
+      "source_row_y": "104"
+    },
+    {
+      "id": "1390",
+      "actual": "O365",
+      "predicted": "Active Directory",
+      "text": "[TICKET ID] - New Support Ticket received  - problema con activacion de office",
+      "source_partition": "train",
+      "source_row_x": "1472",
+      "source_row_y": "1472"
+    }
+  ],
+  "artifacts": {
+    "model_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/baselines/t1_it_support_svm.joblib",
+    "output_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/analysis/t1_it_support_svm_errors.json"
+  }
+}

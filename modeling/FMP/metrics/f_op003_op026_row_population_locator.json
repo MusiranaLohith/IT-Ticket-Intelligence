@@ -1,0 +1,45 @@
+{
+  "operation": "F-OP-003",
+  "title": "OP-026 Row-Level Population Locator",
+  "status": "REQUIRES_REVIEW",
+  "read_only": true,
+  "models_executed": false,
+  "model_modified": false,
+  "retraining_performed": false,
+  "threshold_selection_performed": false,
+  "locked_test_reused_for_policy_selection": false,
+  "op026_directory": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/mod036/op026",
+  "json_files_discovered": 1,
+  "json_files_readable": 1,
+  "expected_row_count": 119895,
+  "row_candidates": [],
+  "exact_expected_matches": [],
+  "all_file_records": [
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/mod036/op026/t8_mod036_op026_decision_engine_validation.json",
+      "filename": "t8_mod036_op026_decision_engine_validation.json",
+      "bytes": 2256,
+      "readable": true,
+      "top_level_type": "dict",
+      "top_level_keys": [
+        "operation",
+        "operation_name",
+        "status",
+        "closure_status",
+        "validated_operations",
+        "population",
+        "observed_overall_states",
+        "observed_consistency_states",
+        "evidence_count_distribution",
+        "closure_criteria",
+        "architecture",
+        "limitations",
+        "next_phase",
+        "artifacts"
+      ],
+      "nested_row_candidates": []
+    }
+  ],
+  "authoritative_population_resolution": "NOT_UNIQUELY_RESOLVED",
+  "next_step": "Resolve population artifact before evaluation."
+}

@@ -1,0 +1,2251 @@
+{
+  "module": "T8-MOD-033",
+  "operation": "OP-002",
+  "files": [
+    {
+      "path": "modeling/T4/derived/t4_validation_report.json",
+      "exists": true,
+      "readable": true,
+      "top_level_type": "dict",
+      "prediction_like_content": [
+        {
+          "path": "root.id_integrity",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "duplicate_ids",
+              "blank_ids"
+            ]
+          }
+        },
+        {
+          "path": "root.id_integrity.duplicate_ids",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "0"
+          }
+        },
+        {
+          "path": "root.id_integrity.blank_ids",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "0"
+          }
+        },
+        {
+          "path": "root.creation_time.invalid_creation",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "0"
+          }
+        },
+        {
+          "path": "root.forbidden_columns_present",
+          "kind": "key",
+          "type": "list",
+          "summary": {
+            "kind": "list",
+            "length": 0
+          }
+        },
+        {
+          "path": "root.controls.predictions_created",
+          "kind": "key",
+          "type": "bool",
+          "summary": {
+            "kind": "bool",
+            "value": "False"
+          }
+        }
+      ],
+      "error": null
+    },
+    {
+      "path": "modeling/T4/results/t4_mod007_full_results.json",
+      "exists": true,
+      "readable": true,
+      "top_level_type": "dict",
+      "prediction_like_content": [
+        {
+          "path": "root.experiment_id",
+          "kind": "key",
+          "type": "str",
+          "summary": {
+            "kind": "str",
+            "value": "T4-MOD-007"
+          }
+        },
+        {
+          "path": "root.evaluation_rows",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "35626"
+          }
+        },
+        {
+          "path": "root.training_candidate_assignees",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "4139"
+          }
+        },
+        {
+          "path": "root.retrieval",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "k",
+              "method",
+              "aggregation"
+            ]
+          }
+        },
+        {
+          "path": "root.tfidf",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "max_features",
+              "ngram_range",
+              "min_df",
+              "max_df",
+              "sublinear_tf"
+            ]
+          }
+        },
+        {
+          "path": "root.controls.evaluation_used_only_for_scoring",
+          "kind": "key",
+          "type": "bool",
+          "summary": {
+            "kind": "bool",
+            "value": "True"
+          }
+        },
+        {
+          "path": "root.controls.training_tickets_used_for_retrieval",
+          "kind": "key",
+          "type": "bool",
+          "summary": {
+            "kind": "bool",
+            "value": "True"
+          }
+        },
+        {
+          "path": "root.controls.evaluation_tickets_used_for_retrieval",
+          "kind": "key",
+          "type": "bool",
+          "summary": {
+            "kind": "bool",
+            "value": "False"
+          }
+        },
+        {
+          "path": "root.controls.target_side_fields_used",
+          "kind": "key",
+          "type": "bool",
+          "summary": {
+            "kind": "bool",
+            "value": "False"
+          }
+        }
+      ],
+      "error": null
+    },
+    {
+      "path": "modeling/T4/results/t4_mod007_retrieval_analysis.json",
+      "exists": true,
+      "readable": true,
+      "top_level_type": "dict",
+      "prediction_like_content": [
+        {
+          "path": "root.inputs.evaluation_file",
+          "kind": "key",
+          "type": "str",
+          "summary": {
+            "kind": "str",
+            "value": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/derived/t4_eval.csv"
+          }
+        },
+        {
+          "path": "root.inputs.retrieval_checkpoint",
+          "kind": "key",
+          "type": "str",
+          "summary": {
+            "kind": "str",
+            "value": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_full_retrieval.npz"
+          }
+        },
+        {
+          "path": "root.inputs.evaluation_rows",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "35626"
+          }
+        },
+        {
+          "path": "root.inputs.neighbors_per_evaluation_row",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "20"
+          }
+        },
+        {
+          "path": "root.retrieval_diversity",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "mean_unique_assignees",
+              "median_unique_assignees",
+              "minimum_unique_assignees",
+              "maximum_unique_assignees",
+              "distribution"
+            ]
+          }
+        },
+        {
+          "path": "root.winner_similarity_evidence",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "mean_similarity_mass",
+              "median_similarity_mass",
+              "mean_strongest_similarity",
+              "median_strongest_similarity"
+            ]
+          }
+        },
+        {
+          "path": "root.controls.new_predictions_created",
+          "kind": "key",
+          "type": "bool",
+          "summary": {
+            "kind": "bool",
+            "value": "False"
+          }
+        }
+      ],
+      "error": null
+    },
+    {
+      "path": "modeling/T4/results/t4_mod007_similarity_analysis.json",
+      "exists": true,
+      "readable": true,
+      "top_level_type": "dict",
+      "prediction_like_content": [
+        {
+          "path": "root.retrieval",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "rows",
+              "neighbors_per_row"
+            ]
+          }
+        },
+        {
+          "path": "root.weak_retrieval",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "0.0",
+              "0.05",
+              "0.1",
+              "0.2",
+              "0.3",
+              "0.4",
+              "0.5"
+            ]
+          }
+        },
+        {
+          "path": "root.controls.new_predictions_created",
+          "kind": "key",
+          "type": "bool",
+          "summary": {
+            "kind": "bool",
+            "value": "False"
+          }
+        }
+      ],
+      "error": null
+    },
+    {
+      "path": "modeling/T4/results/t4_mod008_analysis.json",
+      "exists": true,
+      "readable": true,
+      "top_level_type": "dict",
+      "prediction_like_content": [
+        {
+          "path": "root.population.evaluation_rows",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "35626"
+          }
+        },
+        {
+          "path": "root.population.training_candidates",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "4139"
+          }
+        },
+        {
+          "path": "root.mod007_ranking_metrics",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "mrr",
+              "ndcg_at_5",
+              "ndcg_at_10"
+            ]
+          }
+        },
+        {
+          "path": "root.mod008_retrieval",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "covered_hit_at_20",
+              "true_assignee_retrieval_coverage_at_20",
+              "retrieved_true_assignee_rows"
+            ]
+          }
+        },
+        {
+          "path": "root.mod008_retrieval.true_assignee_retrieval_coverage_at_20",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.472980807371922"
+          }
+        },
+        {
+          "path": "root.interpretation.final_assignee_ranking_evaluation_required",
+          "kind": "key",
+          "type": "bool",
+          "summary": {
+            "kind": "bool",
+            "value": "True"
+          }
+        }
+      ],
+      "error": null
+    },
+    {
+      "path": "modeling/T4/results/t4_mod008_full.json",
+      "exists": true,
+      "readable": true,
+      "top_level_type": "dict",
+      "prediction_like_content": [
+        {
+          "path": "root.population.evaluation_rows",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "35626"
+          }
+        },
+        {
+          "path": "root.population.training_candidates",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "4139"
+          }
+        },
+        {
+          "path": "root.retrieval",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "overall",
+              "covered",
+              "retrieved_true_assignee_rows",
+              "retrieval_coverage_at_20",
+              "runtime_seconds"
+            ]
+          }
+        },
+        {
+          "path": "root.retrieval.retrieval_coverage_at_20",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.472980807371922"
+          }
+        }
+      ],
+      "error": null
+    },
+    {
+      "path": "modeling/T4/results/t4_mod010_comparison.json",
+      "exists": true,
+      "readable": true,
+      "top_level_type": "dict",
+      "prediction_like_content": [
+        {
+          "path": "root.population.r1_evaluation_rows",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "35626"
+          }
+        },
+        {
+          "path": "root.population.mod007_evaluation_rows",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "35626"
+          }
+        },
+        {
+          "path": "root.population.mod008_evaluation_rows",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "35626"
+          }
+        },
+        {
+          "path": "root.mod009_screening.population.evaluation_rows",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "35626"
+          }
+        },
+        {
+          "path": "root.mod009_screening.population.covered_evaluation_rows",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "32773"
+          }
+        },
+        {
+          "path": "root.mod009_screening.population.training_candidates",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "4139"
+          }
+        },
+        {
+          "path": "root.mod009_screening.retrieval",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "top_k",
+              "metrics",
+              "runtime_seconds"
+            ]
+          }
+        },
+        {
+          "path": "root.ranking_metrics_mod007",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "mrr",
+              "ndcg_at_5",
+              "ndcg_at_10"
+            ]
+          }
+        },
+        {
+          "path": "root.comparability.mod009_full_evaluation_completed",
+          "kind": "key",
+          "type": "bool",
+          "summary": {
+            "kind": "bool",
+            "value": "False"
+          }
+        },
+        {
+          "path": "root.comparability.mod008_full_evaluation_rows",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "35626"
+          }
+        },
+        {
+          "path": "root.comparability.mod007_full_evaluation_rows",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "35626"
+          }
+        },
+        {
+          "path": "root.controls.mod007.evaluation_used_only_for_scoring",
+          "kind": "key",
+          "type": "bool",
+          "summary": {
+            "kind": "bool",
+            "value": "True"
+          }
+        },
+        {
+          "path": "root.controls.mod007.training_tickets_used_for_retrieval",
+          "kind": "key",
+          "type": "bool",
+          "summary": {
+            "kind": "bool",
+            "value": "True"
+          }
+        },
+        {
+          "path": "root.controls.mod007.evaluation_tickets_used_for_retrieval",
+          "kind": "key",
+          "type": "bool",
+          "summary": {
+            "kind": "bool",
+            "value": "False"
+          }
+        },
+        {
+          "path": "root.controls.mod007.target_side_fields_used",
+          "kind": "key",
+          "type": "bool",
+          "summary": {
+            "kind": "bool",
+            "value": "False"
+          }
+        }
+      ],
+      "error": null
+    },
+    {
+      "path": "modeling/T4/results/t4_mod011_full.json",
+      "exists": true,
+      "readable": true,
+      "top_level_type": "dict",
+      "prediction_like_content": [
+        {
+          "path": "root.population.evaluation_rows",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "35626"
+          }
+        },
+        {
+          "path": "root.population.training_candidates",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "4139"
+          }
+        },
+        {
+          "path": "root.retrieval",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "top_k",
+              "batch_size",
+              "overall",
+              "covered",
+              "unseen",
+              "runtime_seconds"
+            ]
+          }
+        },
+        {
+          "path": "root.sampling.full_evaluation",
+          "kind": "key",
+          "type": "bool",
+          "summary": {
+            "kind": "bool",
+            "value": "True"
+          }
+        },
+        {
+          "path": "root.controls.evaluation_used_only_for_scoring",
+          "kind": "key",
+          "type": "bool",
+          "summary": {
+            "kind": "bool",
+            "value": "True"
+          }
+        },
+        {
+          "path": "root.controls.training_tickets_used_for_retrieval",
+          "kind": "key",
+          "type": "bool",
+          "summary": {
+            "kind": "bool",
+            "value": "True"
+          }
+        },
+        {
+          "path": "root.controls.evaluation_tickets_used_for_retrieval",
+          "kind": "key",
+          "type": "bool",
+          "summary": {
+            "kind": "bool",
+            "value": "False"
+          }
+        },
+        {
+          "path": "root.controls.target_side_fields_used",
+          "kind": "key",
+          "type": "bool",
+          "summary": {
+            "kind": "bool",
+            "value": "False"
+          }
+        },
+        {
+          "path": "root.artifacts.retrieval_checkpoint",
+          "kind": "key",
+          "type": "str",
+          "summary": {
+            "kind": "str",
+            "value": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod011_checkpoints/t4_mod011_retrieval.npz"
+          }
+        },
+        {
+          "path": "root.runtime.retrieval_seconds",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "280.99131655693054"
+          }
+        }
+      ],
+      "error": null
+    },
+    {
+      "path": "modeling/T4/results/t4_mod012_analysis.json",
+      "exists": true,
+      "readable": true,
+      "top_level_type": "dict",
+      "prediction_like_content": [
+        {
+          "path": "root.population.evaluation_rows",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "35626"
+          }
+        },
+        {
+          "path": "root.population.training_candidates",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "4139"
+          }
+        },
+        {
+          "path": "root.true_assignee_retrieval_coverage",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "mod007",
+              "mod011",
+              "delta_mod011_minus_mod007"
+            ]
+          }
+        },
+        {
+          "path": "root.historical_support.mod007.1.retrieval_coverage_at_20",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.04577822990844354"
+          }
+        },
+        {
+          "path": "root.historical_support.mod007.2-5.retrieval_coverage_at_20",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.10927487352445193"
+          }
+        },
+        {
+          "path": "root.historical_support.mod007.6-10.retrieval_coverage_at_20",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.13013100436681221"
+          }
+        },
+        {
+          "path": "root.historical_support.mod007.11-20.retrieval_coverage_at_20",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.25112107623318386"
+          }
+        },
+        {
+          "path": "root.historical_support.mod007.21-50.retrieval_coverage_at_20",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.31540697674418605"
+          }
+        },
+        {
+          "path": "root.historical_support.mod007.51-100.retrieval_coverage_at_20",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.5168618266978923"
+          }
+        },
+        {
+          "path": "root.historical_support.mod007.101+.retrieval_coverage_at_20",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.5726190476190476"
+          }
+        },
+        {
+          "path": "root.historical_support.mod011.1.retrieval_coverage_at_20",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.052899287894201424"
+          }
+        },
+        {
+          "path": "root.historical_support.mod011.2-5.retrieval_coverage_at_20",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.12006745362563238"
+          }
+        },
+        {
+          "path": "root.historical_support.mod011.6-10.retrieval_coverage_at_20",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.1205240174672489"
+          }
+        },
+        {
+          "path": "root.historical_support.mod011.11-20.retrieval_coverage_at_20",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.35201793721973096"
+          }
+        },
+        {
+          "path": "root.historical_support.mod011.21-50.retrieval_coverage_at_20",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.36191860465116277"
+          }
+        },
+        {
+          "path": "root.historical_support.mod011.51-100.retrieval_coverage_at_20",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.5182669789227167"
+          }
+        },
+        {
+          "path": "root.historical_support.mod011.101+.retrieval_coverage_at_20",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.5842132505175983"
+          }
+        },
+        {
+          "path": "root.controls.evaluation_used_only_for_scoring",
+          "kind": "key",
+          "type": "bool",
+          "summary": {
+            "kind": "bool",
+            "value": "True"
+          }
+        },
+        {
+          "path": "root.controls.training_tickets_used_for_retrieval",
+          "kind": "key",
+          "type": "bool",
+          "summary": {
+            "kind": "bool",
+            "value": "True"
+          }
+        },
+        {
+          "path": "root.controls.evaluation_tickets_used_for_retrieval",
+          "kind": "key",
+          "type": "bool",
+          "summary": {
+            "kind": "bool",
+            "value": "False"
+          }
+        }
+      ],
+      "error": null
+    },
+    {
+      "path": "modeling/T4/results/t4_mod013_closure.json",
+      "exists": true,
+      "readable": true,
+      "top_level_type": "dict",
+      "prediction_like_content": [
+        {
+          "path": "root.population.evaluation_rows",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "35626"
+          }
+        },
+        {
+          "path": "root.population.training_candidates",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "4139"
+          }
+        },
+        {
+          "path": "root.true_assignee_retrieval_coverage",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "mod007",
+              "mod011_bm25",
+              "delta"
+            ]
+          }
+        },
+        {
+          "path": "root.bm25_ranking_metrics",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "mrr",
+              "ndcg_at_5",
+              "ndcg_at_10"
+            ]
+          }
+        },
+        {
+          "path": "root.controls.target_side_fields_used",
+          "kind": "key",
+          "type": "bool",
+          "summary": {
+            "kind": "bool",
+            "value": "False"
+          }
+        },
+        {
+          "path": "root.controls.new_predictions_created",
+          "kind": "key",
+          "type": "bool",
+          "summary": {
+            "kind": "bool",
+            "value": "False"
+          }
+        },
+        {
+          "path": "root.correction.retrieval_repeated",
+          "kind": "key",
+          "type": "bool",
+          "summary": {
+            "kind": "bool",
+            "value": "False"
+          }
+        }
+      ],
+      "error": null
+    },
+    {
+      "path": "modeling/T4/results/t4_r1_analysis.json",
+      "exists": true,
+      "readable": true,
+      "top_level_type": "dict",
+      "prediction_like_content": [
+        {
+          "path": "root.evaluation_rows",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "35626"
+          }
+        },
+        {
+          "path": "root.candidate_classes",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "4139"
+          }
+        },
+        {
+          "path": "root.training_frequency_bucket_results.1.evaluation_rows",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "983"
+          }
+        },
+        {
+          "path": "root.training_frequency_bucket_results.2-5.evaluation_rows",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "2965"
+          }
+        },
+        {
+          "path": "root.training_frequency_bucket_results.6-10.evaluation_rows",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "1145"
+          }
+        },
+        {
+          "path": "root.training_frequency_bucket_results.11-20.evaluation_rows",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "1338"
+          }
+        },
+        {
+          "path": "root.training_frequency_bucket_results.21-50.evaluation_rows",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "2752"
+          }
+        },
+        {
+          "path": "root.training_frequency_bucket_results.51-100.evaluation_rows",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "4270"
+          }
+        },
+        {
+          "path": "root.training_frequency_bucket_results.101+.evaluation_rows",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "19320"
+          }
+        },
+        {
+          "path": "root.prediction_concentration",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "top_1_predicted_assignees",
+              "top_5_predicted_assignees",
+              "top_10_predicted_assignees",
+              "top_25_predicted_assignees",
+              "top_50_predicted_assignees",
+              "top_100_predicted_assignees"
+            ]
+          }
+        },
+        {
+          "path": "root.prediction_concentration.top_1_predicted_assignees",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "unique_assignees",
+              "prediction_count",
+              "prediction_share"
+            ]
+          }
+        },
+        {
+          "path": "root.prediction_concentration.top_1_predicted_assignees.prediction_count",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "1543"
+          }
+        },
+        {
+          "path": "root.prediction_concentration.top_1_predicted_assignees.prediction_share",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.04331106495256273"
+          }
+        },
+        {
+          "path": "root.prediction_concentration.top_5_predicted_assignees",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "unique_assignees",
+              "prediction_count",
+              "prediction_share"
+            ]
+          }
+        },
+        {
+          "path": "root.prediction_concentration.top_5_predicted_assignees.prediction_count",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "4811"
+          }
+        },
+        {
+          "path": "root.prediction_concentration.top_5_predicted_assignees.prediction_share",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.1350418233874137"
+          }
+        },
+        {
+          "path": "root.prediction_concentration.top_10_predicted_assignees",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "unique_assignees",
+              "prediction_count",
+              "prediction_share"
+            ]
+          }
+        },
+        {
+          "path": "root.prediction_concentration.top_10_predicted_assignees.prediction_count",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "7670"
+          }
+        },
+        {
+          "path": "root.prediction_concentration.top_10_predicted_assignees.prediction_share",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.21529220232414528"
+          }
+        },
+        {
+          "path": "root.prediction_concentration.top_25_predicted_assignees",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "unique_assignees",
+              "prediction_count",
+              "prediction_share"
+            ]
+          }
+        },
+        {
+          "path": "root.prediction_concentration.top_25_predicted_assignees.prediction_count",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "13673"
+          }
+        },
+        {
+          "path": "root.prediction_concentration.top_25_predicted_assignees.prediction_share",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.38379273564250826"
+          }
+        },
+        {
+          "path": "root.prediction_concentration.top_50_predicted_assignees",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "unique_assignees",
+              "prediction_count",
+              "prediction_share"
+            ]
+          }
+        },
+        {
+          "path": "root.prediction_concentration.top_50_predicted_assignees.prediction_count",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "19965"
+          }
+        },
+        {
+          "path": "root.prediction_concentration.top_50_predicted_assignees.prediction_share",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.5604053219558749"
+          }
+        },
+        {
+          "path": "root.prediction_concentration.top_100_predicted_assignees",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "unique_assignees",
+              "prediction_count",
+              "prediction_share"
+            ]
+          }
+        },
+        {
+          "path": "root.prediction_concentration.top_100_predicted_assignees.prediction_count",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "26846"
+          }
+        },
+        {
+          "path": "root.prediction_concentration.top_100_predicted_assignees.prediction_share",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.7535507775220345"
+          }
+        },
+        {
+          "path": "root.top_20_predicted_assignees",
+          "kind": "key",
+          "type": "list",
+          "summary": {
+            "kind": "list",
+            "length": 20,
+            "first_type": "dict",
+            "first_keys": [
+              "assignee",
+              "prediction_count",
+              "prediction_share",
+              "training_support",
+              "evaluation_actual_support"
+            ]
+          }
+        },
+        {
+          "path": "root.top_20_predicted_assignees[0].prediction_count",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "1543"
+          }
+        },
+        {
+          "path": "root.top_20_predicted_assignees[0].prediction_share",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.04331106495256273"
+          }
+        },
+        {
+          "path": "root.top_20_predicted_assignees[0].evaluation_actual_support",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "2151"
+          }
+        },
+        {
+          "path": "root.top_20_error_pairs[0].predicted_assignee",
+          "kind": "key",
+          "type": "str",
+          "summary": {
+            "kind": "str",
+            "value": "tlin@mozilla.com"
+          }
+        },
+        {
+          "path": "root.top_20_error_pairs[0].training_support_predicted",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "128"
+          }
+        },
+        {
+          "path": "root.predictions_created",
+          "kind": "key",
+          "type": "bool",
+          "summary": {
+            "kind": "bool",
+            "value": "False"
+          }
+        }
+      ],
+      "error": null
+    },
+    {
+      "path": "modeling/T4/results/t4_r1_metrics.json",
+      "exists": true,
+      "readable": true,
+      "top_level_type": "dict",
+      "prediction_like_content": [
+        {
+          "path": "root.evaluation_rows",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "35626"
+          }
+        },
+        {
+          "path": "root.candidate_classes",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "4139"
+          }
+        },
+        {
+          "path": "root.tfidf",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "max_features",
+              "ngram_range",
+              "min_df",
+              "max_df",
+              "sublinear_tf"
+            ]
+          }
+        },
+        {
+          "path": "root.open_world.covered_evaluation_rows",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "32773"
+          }
+        },
+        {
+          "path": "root.open_world.unseen_evaluation_rows",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "2853"
+          }
+        },
+        {
+          "path": "root.open_world.unseen_evaluation_rate",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.08008196261157581"
+          }
+        },
+        {
+          "path": "root.covered_evaluation",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "rows",
+              "top1_accuracy",
+              "top1_macro_f1",
+              "top1_weighted_f1"
+            ]
+          }
+        }
+      ],
+      "error": null
+    },
+    {
+      "path": "modeling/T4/results/t4_r1_vs_mod007_analysis.json",
+      "exists": true,
+      "readable": true,
+      "top_level_type": "dict",
+      "prediction_like_content": [
+        {
+          "path": "root.open_world.evaluation_rows",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "35626"
+          }
+        },
+        {
+          "path": "root.long_tail.1.evaluation_rows",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "983"
+          }
+        },
+        {
+          "path": "root.long_tail.2-5.evaluation_rows",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "2965"
+          }
+        },
+        {
+          "path": "root.long_tail.6-10.evaluation_rows",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "1145"
+          }
+        },
+        {
+          "path": "root.long_tail.11-20.evaluation_rows",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "1338"
+          }
+        },
+        {
+          "path": "root.long_tail.21-50.evaluation_rows",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "2752"
+          }
+        },
+        {
+          "path": "root.long_tail.51-100.evaluation_rows",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "4270"
+          }
+        },
+        {
+          "path": "root.long_tail.101+.evaluation_rows",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "19320"
+          }
+        }
+      ],
+      "error": null
+    },
+    {
+      "path": "modeling/T5/metrics/t5_mod005_validation_metrics.json",
+      "exists": true,
+      "readable": true,
+      "top_level_type": "dict",
+      "prediction_like_content": [
+        {
+          "path": "root.validation",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "rows",
+              "positive",
+              "negative"
+            ]
+          }
+        },
+        {
+          "path": "root.metrics.brier_score_loss",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.0314241207869983"
+          }
+        },
+        {
+          "path": "root.probability_output",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "column",
+              "minimum",
+              "maximum",
+              "mean"
+            ]
+          }
+        },
+        {
+          "path": "root.evaluation_set_used",
+          "kind": "key",
+          "type": "bool",
+          "summary": {
+            "kind": "bool",
+            "value": "False"
+          }
+        }
+      ],
+      "error": null
+    },
+    {
+      "path": "modeling/T5/metrics/t5_mod006_calibration_bins.json",
+      "exists": true,
+      "readable": true,
+      "top_level_type": "list",
+      "prediction_like_content": [
+        {
+          "path": "root[0].mean_predicted_probability",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.02324781562253205"
+          }
+        }
+      ],
+      "error": null
+    },
+    {
+      "path": "modeling/T5/metrics/t5_mod006_calibration_metrics.json",
+      "exists": true,
+      "readable": true,
+      "top_level_type": "dict",
+      "prediction_like_content": [
+        {
+          "path": "root.brier_score",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.0314241207869983"
+          }
+        },
+        {
+          "path": "root.probability_summary",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "0",
+              "25",
+              "50",
+              "75",
+              "90",
+              "95",
+              "99",
+              "99.5",
+              "99.9",
+              "100"
+            ]
+          }
+        },
+        {
+          "path": "root.threshold_diagnostics[0].predicted_positive",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "49871"
+          }
+        },
+        {
+          "path": "root.threshold_diagnostics[0].predicted_positive_rate",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.6731046955770607"
+          }
+        },
+        {
+          "path": "root.official_evaluation_used",
+          "kind": "key",
+          "type": "bool",
+          "summary": {
+            "kind": "bool",
+            "value": "False"
+          }
+        }
+      ],
+      "error": null
+    },
+    {
+      "path": "modeling/T5/metrics/t5_mod007_calibration_comparison.json",
+      "exists": true,
+      "readable": true,
+      "top_level_type": "dict",
+      "prediction_like_content": [
+        {
+          "path": "root.validation_partition",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "rows",
+              "positive",
+              "negative"
+            ]
+          }
+        },
+        {
+          "path": "root.base_model.brier_score",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.031018998152599814"
+          }
+        },
+        {
+          "path": "root.base_model.threshold_0_5_positive_predictions",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "2874"
+          }
+        },
+        {
+          "path": "root.sigmoid_calibrated",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "average_precision",
+              "pr_auc",
+              "roc_auc",
+              "log_loss",
+              "brier_score",
+              "threshold_0_5_precision",
+              "threshold_0_5_recall",
+              "threshold_0_5_positive_predictions"
+            ]
+          }
+        },
+        {
+          "path": "root.sigmoid_calibrated.brier_score",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.005860260617751882"
+          }
+        },
+        {
+          "path": "root.sigmoid_calibrated.threshold_0_5_positive_predictions",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "47"
+          }
+        },
+        {
+          "path": "root.isotonic_calibrated.brier_score",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.005843631923421229"
+          }
+        },
+        {
+          "path": "root.isotonic_calibrated.threshold_0_5_positive_predictions",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "41"
+          }
+        },
+        {
+          "path": "root.validation_used_for_calibrator_fit",
+          "kind": "key",
+          "type": "bool",
+          "summary": {
+            "kind": "bool",
+            "value": "False"
+          }
+        },
+        {
+          "path": "root.official_evaluation_used",
+          "kind": "key",
+          "type": "bool",
+          "summary": {
+            "kind": "bool",
+            "value": "False"
+          }
+        }
+      ],
+      "error": null
+    },
+    {
+      "path": "modeling/T5/metrics/t5_mod009_locked_evaluation_metrics.json",
+      "exists": true,
+      "readable": true,
+      "top_level_type": "dict",
+      "prediction_like_content": [
+        {
+          "path": "root.evaluation_artifact",
+          "kind": "key",
+          "type": "str",
+          "summary": {
+            "kind": "str",
+            "value": "/run/media/whiteblack/User 1/Datasets/Mozilla_CORE/DTM-002_T5_EVAL_GROUP_AWARE.csv"
+          }
+        },
+        {
+          "path": "root.evaluation_population",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "rows",
+              "positive",
+              "negative",
+              "unique_ids"
+            ]
+          }
+        },
+        {
+          "path": "root.evaluation_population.unique_ids",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "20827"
+          }
+        },
+        {
+          "path": "root.locked_pipeline.probability_output",
+          "kind": "key",
+          "type": "str",
+          "summary": {
+            "kind": "str",
+            "value": "p_duplicate"
+          }
+        },
+        {
+          "path": "root.metrics.brier_score",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.059906950851585296"
+          }
+        },
+        {
+          "path": "root.metrics.threshold_0_5.positive_predictions",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "23"
+          }
+        },
+        {
+          "path": "root.controls.evaluation_used_for_selection",
+          "kind": "key",
+          "type": "bool",
+          "summary": {
+            "kind": "bool",
+            "value": "False"
+          }
+        },
+        {
+          "path": "root.controls.evaluation_used_for_calibration",
+          "kind": "key",
+          "type": "bool",
+          "summary": {
+            "kind": "bool",
+            "value": "False"
+          }
+        }
+      ],
+      "error": null
+    },
+    {
+      "path": "modeling/T5/metrics/t5_mod010_generalization_analysis.json",
+      "exists": true,
+      "readable": true,
+      "top_level_type": "dict",
+      "prediction_like_content": [
+        {
+          "path": "root.inputs.validation_source",
+          "kind": "key",
+          "type": "str",
+          "summary": {
+            "kind": "str",
+            "value": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod007_calibration_comparison.json"
+          }
+        },
+        {
+          "path": "root.inputs.locked_evaluation_source",
+          "kind": "key",
+          "type": "str",
+          "summary": {
+            "kind": "str",
+            "value": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod009_locked_evaluation_metrics.json"
+          }
+        },
+        {
+          "path": "root.validation_metrics",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "average_precision",
+              "roc_auc",
+              "log_loss",
+              "brier_score"
+            ]
+          }
+        },
+        {
+          "path": "root.validation_metrics.brier_score",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.005860260617751882"
+          }
+        },
+        {
+          "path": "root.locked_evaluation_metrics",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "average_precision",
+              "roc_auc",
+              "log_loss",
+              "brier_score"
+            ]
+          }
+        },
+        {
+          "path": "root.locked_evaluation_metrics.brier_score",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.059906950851585296"
+          }
+        },
+        {
+          "path": "root.generalization.average_precision.validation",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.16377630768463408"
+          }
+        },
+        {
+          "path": "root.generalization.average_precision.locked_evaluation",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.12583280543036882"
+          }
+        },
+        {
+          "path": "root.generalization.roc_auc.validation",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.8969287312131792"
+          }
+        },
+        {
+          "path": "root.generalization.roc_auc.locked_evaluation",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.6781415853279965"
+          }
+        },
+        {
+          "path": "root.generalization.log_loss.validation",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.028358865729015772"
+          }
+        },
+        {
+          "path": "root.generalization.log_loss.locked_evaluation",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.27250018754800265"
+          }
+        },
+        {
+          "path": "root.generalization.brier_score",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "validation",
+              "locked_evaluation",
+              "absolute_change",
+              "relative_change_percent"
+            ]
+          }
+        },
+        {
+          "path": "root.generalization.brier_score.validation",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.005860260617751882"
+          }
+        },
+        {
+          "path": "root.generalization.brier_score.locked_evaluation",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.059906950851585296"
+          }
+        },
+        {
+          "path": "root.observed_direction.brier_score_increased",
+          "kind": "key",
+          "type": "bool",
+          "summary": {
+            "kind": "bool",
+            "value": "True"
+          }
+        },
+        {
+          "path": "root.controls.evaluation_used_for_selection",
+          "kind": "key",
+          "type": "bool",
+          "summary": {
+            "kind": "bool",
+            "value": "False"
+          }
+        },
+        {
+          "path": "root.controls.evaluation_modified",
+          "kind": "key",
+          "type": "bool",
+          "summary": {
+            "kind": "bool",
+            "value": "False"
+          }
+        }
+      ],
+      "error": null
+    },
+    {
+      "path": "modeling/T5/metrics/t5_mod011_final_closure.json",
+      "exists": true,
+      "readable": true,
+      "top_level_type": "dict",
+      "prediction_like_content": [
+        {
+          "path": "root.task_definition.canonical_population.unique_ids",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "513816"
+          }
+        },
+        {
+          "path": "root.split_definition.evaluation_rows",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "20827"
+          }
+        },
+        {
+          "path": "root.split_definition.evaluation_positive",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "1318"
+          }
+        },
+        {
+          "path": "root.split_definition.evaluation_negative",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "19509"
+          }
+        },
+        {
+          "path": "root.split_definition.train_eval_id_overlap",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "0"
+          }
+        },
+        {
+          "path": "root.selected_pipeline.probability_output",
+          "kind": "key",
+          "type": "str",
+          "summary": {
+            "kind": "str",
+            "value": "p_duplicate"
+          }
+        },
+        {
+          "path": "root.validation_evidence",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "average_precision",
+              "roc_auc",
+              "log_loss",
+              "brier_score"
+            ]
+          }
+        },
+        {
+          "path": "root.validation_evidence.brier_score",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.005860260617751882"
+          }
+        },
+        {
+          "path": "root.locked_evaluation_evidence",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "average_precision",
+              "roc_auc",
+              "log_loss",
+              "brier_score",
+              "threshold_0_5"
+            ]
+          }
+        },
+        {
+          "path": "root.locked_evaluation_evidence.brier_score",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.059906950851585296"
+          }
+        },
+        {
+          "path": "root.locked_evaluation_evidence.threshold_0_5.positive_predictions",
+          "kind": "key",
+          "type": "int",
+          "summary": {
+            "kind": "int",
+            "value": "23"
+          }
+        },
+        {
+          "path": "root.generalization_evidence",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "average_precision",
+              "roc_auc",
+              "log_loss",
+              "brier_score"
+            ]
+          }
+        },
+        {
+          "path": "root.generalization_evidence.average_precision.validation",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.16377630768463408"
+          }
+        },
+        {
+          "path": "root.generalization_evidence.average_precision.locked_evaluation",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.12583280543036882"
+          }
+        },
+        {
+          "path": "root.generalization_evidence.roc_auc.validation",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.8969287312131792"
+          }
+        },
+        {
+          "path": "root.generalization_evidence.roc_auc.locked_evaluation",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.6781415853279965"
+          }
+        },
+        {
+          "path": "root.generalization_evidence.log_loss.validation",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.028358865729015772"
+          }
+        },
+        {
+          "path": "root.generalization_evidence.log_loss.locked_evaluation",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.27250018754800265"
+          }
+        },
+        {
+          "path": "root.generalization_evidence.brier_score",
+          "kind": "key",
+          "type": "dict",
+          "summary": {
+            "kind": "dict",
+            "keys": [
+              "validation",
+              "locked_evaluation",
+              "absolute_change",
+              "relative_change_percent"
+            ]
+          }
+        },
+        {
+          "path": "root.generalization_evidence.brier_score.validation",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.005860260617751882"
+          }
+        },
+        {
+          "path": "root.generalization_evidence.brier_score.locked_evaluation",
+          "kind": "key",
+          "type": "float",
+          "summary": {
+            "kind": "float",
+            "value": "0.059906950851585296"
+          }
+        },
+        {
+          "path": "root.controls.evaluation_used_for_selection",
+          "kind": "key",
+          "type": "bool",
+          "summary": {
+            "kind": "bool",
+            "value": "False"
+          }
+        },
+        {
+          "path": "root.controls.evaluation_used_for_calibration",
+          "kind": "key",
+          "type": "bool",
+          "summary": {
+            "kind": "bool",
+            "value": "False"
+          }
+        },
+        {
+          "path": "root.controls.evaluation_modified",
+          "kind": "key",
+          "type": "bool",
+          "summary": {
+            "kind": "bool",
+            "value": "False"
+          }
+        }
+      ],
+      "error": null
+    }
+  ],
+  "locked_evaluation_used": false,
+  "fusion_model_trained": false
+}

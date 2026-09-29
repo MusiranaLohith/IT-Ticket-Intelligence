@@ -1,0 +1,59 @@
+{
+  "operation": "FMP-06 OP-018R24",
+  "status": "PASS",
+  "read_only": true,
+  "training_performed": false,
+  "fitting_performed": false,
+  "prediction_performed": true,
+  "evaluation_performed": false,
+  "locked_test_used": false,
+  "artifact_modified": false,
+  "model_type": "LogNormal_AFT",
+  "feature_count": 21,
+  "feature_names": [
+    "creator_frequency_log1p",
+    "creator_detail_frequency_log1p",
+    "summary_chars_log1p",
+    "summary_words_log1p",
+    "summary_digits_log1p",
+    "summary_lines_log1p",
+    "summary_uppercase_log1p",
+    "summary_missing",
+    "description_chars_log1p",
+    "description_words_log1p",
+    "description_digits_log1p",
+    "description_lines_log1p",
+    "description_uppercase_log1p",
+    "description_missing",
+    "creation_year_scaled",
+    "creation_month_sin",
+    "creation_month_cos",
+    "creation_weekday_sin",
+    "creation_weekday_cos",
+    "creation_hour_sin",
+    "creation_hour_cos"
+  ],
+  "sigma": 16.259349942778254,
+  "probe_ids": [
+    "1664573",
+    "1664575",
+    "1664577"
+  ],
+  "event_values": [
+    1,
+    1,
+    1
+  ],
+  "parameter_dimensions_verified": true,
+  "linear_predictor": [
+    2694.0779946181933,
+    2694.7411260247804,
+    2694.731237980134
+  ],
+  "predicted_median_duration": [
+    Infinity,
+    Infinity,
+    Infinity
+  ],
+  "interpretation": "The final T7 Log-Normal AFT parameter artifact was executed using its frozen coefficients and standardization vectors on native T7 evaluation rows. No fitting or parameter selection was performed. Event/censoring metadata remains observational."
+}

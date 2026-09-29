@@ -1,0 +1,69 @@
+{
+  "operation": "DEPLOY-OP-067",
+  "title": "Research View Structure and Navigation",
+  "status": "PASS",
+  "modified_files": [
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/index.html",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/app.js"
+  ],
+  "untouched_files": [
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/style.css",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/backend/app.py",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/deployment/runtime/ticket_pipeline.py",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/deployment/runtime/ticket_explanation.py"
+  ],
+  "backups": [
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/index.html.before-deploy-op067",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/app.js.before-deploy-op067"
+  ],
+  "scope": [
+    "Research Overview structure",
+    "VIEW RESEARCH navigation",
+    "Research Overview BACK TO HOME navigation",
+    "existing view preservation",
+    "research-only presentation content"
+  ],
+  "excluded": [
+    "deployment implementation",
+    "FastAPI implementation",
+    "batch processing changes",
+    "ticket analysis changes",
+    "frozen runtime changes",
+    "model changes",
+    "CSS changes"
+  ],
+  "hashes_before": {
+    "index.html": "ece4de1fbbf8ccc890b8439bd4f44b898d1ec1cb07629e4b4644bf121bf9ae23",
+    "app.js": "2078b3dd784424176b6ada560c599ea6d8828945048743326995efe9f913cc14",
+    "style.css": "0b19b3c77a4e7a2514ccb84962bbc5f8c06f52e240d3ab2a8164429de5e0acfa"
+  },
+  "hashes_after": {
+    "index.html": "152795b3897e9c3444ca63fe3c01cfb81adbda83675ea8ed01109b2a6df77a6b",
+    "app.js": "8de847acd04c41f181cc4628009453c24d9a4852057bf9a863303abba8cc2675",
+    "style.css": "0b19b3c77a4e7a2514ccb84962bbc5f8c06f52e240d3ab2a8164429de5e0acfa"
+  },
+  "checks": {
+    "OP067_MARKER": true,
+    "RESEARCH_SECTION": true,
+    "RESEARCH_HOME_BUTTON": true,
+    "RESEARCH_HOME_FOOTER": true,
+    "RESEARCH_FUNCTION": true,
+    "VIEW_RESEARCH_HANDLER": true,
+    "RESEARCH_HOME_HANDLER": true,
+    "RESEARCH_VIEW_STATE": true,
+    "LANDING_PRESERVED": true,
+    "WORKSPACE_PRESERVED": true,
+    "ANALYSIS_PRESERVED": true,
+    "SINGLE_TICKET_PRESERVED": true,
+    "BATCH_PRESERVED": true,
+    "API_PRESERVED": true,
+    "RENDERER_PRESERVED": true,
+    "NO_TICKET_PIPELINE_FRONTEND": true,
+    "NO_SKLEARN_FRONTEND": true,
+    "STYLE_UNTOUCHED": true,
+    "BACKEND_UNTOUCHED": true,
+    "FROZEN_RUNTIME_UNTOUCHED": true,
+    "DEPLOYMENT_EXCLUDED": true,
+    "NO_GLOBAL_VIEW_CSS_CHANGE": true
+  }
+}

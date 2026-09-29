@@ -1,0 +1,145 @@
+{
+  "operation": "H-RUN-005",
+  "operation_name": "integrated ticket runtime",
+  "status": "PASS",
+  "ticket": {
+    "title": "VPN connection fails after password reset",
+    "description": "I reset my corporate password this morning. Since then, the VPN client connects briefly and then disconnects. I restarted the laptop and reinstalled the VPN client, but the issue persists. I need access to the internal systems for today's work."
+  },
+  "tasks": {
+    "T1": {
+      "status": "PASS",
+      "prediction": "Support general",
+      "transformed_shape": [
+        1,
+        29096
+      ],
+      "artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/baselines/t1_it_support_char_svm.joblib"
+    },
+    "T2": {
+      "status": "PASS",
+      "prediction": "P1",
+      "transformed_shape": [
+        1,
+        212254
+      ],
+      "artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/models/t2_class_weighted_tfidf_logreg.joblib"
+    },
+    "T3": {
+      "status": "PASS",
+      "prediction": "S3",
+      "transformed_shape": [
+        1,
+        288972
+      ],
+      "artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib"
+    },
+    "T4": {
+      "status": "PASS",
+      "transformed_shape": [
+        1,
+        20000
+      ],
+      "neighbors": [
+        {
+          "rank": 1,
+          "neighbor_index": 118128,
+          "distance": 0.7060008645057678,
+          "ID": "1321841",
+          "Creation time": "2016-12-02T17:49:04Z",
+          "Summary": "Firefox network loss after connection to Cisco VPN.",
+          "target_assignee": "dd.mozilla@gmail.com"
+        },
+        {
+          "rank": 2,
+          "neighbor_index": 36104,
+          "distance": 0.745875358581543,
+          "ID": "220663",
+          "Creation time": "2003-09-29T14:40:28Z",
+          "Summary": "Conn: Hang when my VPN connection times out (?)",
+          "target_assignee": "darin@meer.net"
+        },
+        {
+          "rank": 3,
+          "neighbor_index": 128163,
+          "distance": 0.7511016726493835,
+          "ID": "1405307",
+          "Creation time": "2017-10-03T13:49:31Z",
+          "Summary": "After connecting to VPN Firefox is unable to navigate to sites inside the VPN but Chrome can",
+          "target_assignee": "daniel@haxx.se"
+        },
+        {
+          "rank": 4,
+          "neighbor_index": 26474,
+          "distance": 0.7548562288284302,
+          "ID": "125875",
+          "Creation time": "2002-02-16T12:37:25Z",
+          "Summary": "PAC: configured to work proxy server, but user not on work VPN",
+          "target_assignee": "darin@netscape.com"
+        },
+        {
+          "rank": 5,
+          "neighbor_index": 88540,
+          "distance": 0.7649978399276733,
+          "ID": "947801",
+          "Creation time": "2013-12-09T05:39:50Z",
+          "Summary": "DNS resolution sporadically fails in Android 4.4/5.0 when connected to a VPN",
+          "target_assignee": "daniel@haxx.se"
+        }
+      ],
+      "artifacts": {
+        "tfidf": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_tfidf.joblib",
+        "neighbors": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_neighbors.joblib",
+        "development_population": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/derived/t4_train.csv"
+      }
+    },
+    "T5": {
+      "status": "NOT_BOUND_IN_THIS_RUNTIME_STEP",
+      "native_semantics": "duplicate relationship evidence",
+      "universal_duplicate_threshold": "NOT_ESTABLISHED",
+      "note": "T5 requires pairwise ticket evidence and is not converted into an autonomous duplicate decision."
+    },
+    "T6": {
+      "status": "NOT_BOUND_IN_THIS_RUNTIME_STEP",
+      "native_semantics": "related-ticket retrieval/ranking",
+      "probability_interpretation": "NOT_ALLOWED",
+      "note": "T6 remains native retrieval/ranking evidence."
+    },
+    "T7": {
+      "status": "NOT_BOUND_IN_THIS_RUNTIME_STEP",
+      "native_semantics": "survival/resolution-time evidence",
+      "note": "T7 remains censoring-aware survival evidence and is not converted into an autonomous resolution-time decision."
+    },
+    "T8": {
+      "status": "NATIVE_EVIDENCE_BOUNDARY",
+      "variable_evidence": true,
+      "missing_evidence_is_unavailable": true,
+      "universal_probability_aggregation": false,
+      "synthetic_fusion_target": false
+    },
+    "T9": {
+      "status": "NATIVE_RELIABILITY_BOUNDARY",
+      "universal_confidence": "NOT_CREATED",
+      "universal_risk": "NOT_CREATED",
+      "automatic_action_policy": "NOT_ESTABLISHED"
+    },
+    "T10": {
+      "automation": "NOT_ESTABLISHED",
+      "human_review": "NOT_ESTABLISHED",
+      "universal_threshold": "NOT_ESTABLISHED"
+    }
+  },
+  "controls": {
+    "frozen_model_execution": true,
+    "model_fitting": false,
+    "retraining": false,
+    "new_model_selection": false,
+    "threshold_optimization": false,
+    "universal_confidence_creation": false,
+    "universal_risk_creation": false,
+    "synthetic_fusion_target_creation": false,
+    "artifact_modification": false,
+    "locked_test_use": false
+  },
+  "interpretation": "This runtime demonstrates one ticket flowing through the integrated frozen evidence architecture. T1-T4 execute their validated frozen runtime paths. T5-T7 retain their native task semantics and are not converted into fabricated universal scores or autonomous decisions."
+}

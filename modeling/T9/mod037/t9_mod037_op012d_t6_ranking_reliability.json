@@ -1,0 +1,308 @@
+{
+  "operation": "T9_MOD-037_OP-012D",
+  "title": "T6 Ranking Reliability & Evaluation Evidence Audit",
+  "status": "PASS",
+  "purpose": "Quantify query-level uncertainty around the already-established native T6 ranking metrics without changing task semantics, creating targets, or performing calibration.",
+  "previous_operation_validation": {
+    "status": "PASS",
+    "checks": {
+      "OP-004_T6_acceptance": {
+        "status": "PASS",
+        "accepted_tasks": [
+          "T4",
+          "T5",
+          "T6",
+          "T7"
+        ]
+      },
+      "OP-005_T6_boundary": {
+        "status": "PASS",
+        "boundary": {
+          "status": "ACCEPTED_NATIVE_RANKING",
+          "native_quantity": "Query-level candidate retrieval/ranking",
+          "native_probability_output": false,
+          "accepted_for_calibration": false,
+          "accepted_for_native_evaluation": true,
+          "artifact": "modeling/T6/metrics/t6_mod010_corrected_hybrid_query_rankings.csv",
+          "native_outputs": [
+            "query-level ranking",
+            "candidate-level score/ranking information"
+          ],
+          "semantic_restrictions": [
+            "T6 remains a query-level retrieval/ranking task.",
+            "observable_non_positive is not a true negative.",
+            "T6 must not be flattened into an ordinary binary classifier.",
+            "Any confidence/relevance formulation must retain native retrieval semantics."
+          ],
+          "calibration_boundary": "Any later T6 confidence formulation must be defined around native query-level retrieval/ranking semantics rather than ordinary binary probability calibration."
+        }
+      },
+      "OP-012A": {
+        "status": "PASS",
+        "observed_status": "PASS"
+      },
+      "OP-012B": {
+        "status": "PASS",
+        "observed_status": "PASS"
+      },
+      "OP-012C": {
+        "status": "PASS",
+        "observed_status": "PASS"
+      }
+    },
+    "failed_checks": []
+  },
+  "query_level_validation": {
+    "status": "PASS",
+    "checks": {
+      "query_id_uniqueness": {
+        "status": "PASS",
+        "duplicate_query_ids": 0
+      },
+      "target_presence": {
+        "status": "PASS",
+        "queries": 816,
+        "target_present_queries": 816,
+        "target_absent_queries": 0
+      },
+      "single_observed_target": {
+        "status": "PASS",
+        "non_single_target_queries": 0
+      },
+      "rank_validity": {
+        "status": "PASS",
+        "null_ranks": 0,
+        "rank_below_one": 0
+      }
+    },
+    "failed_checks": []
+  },
+  "evaluation_population": {
+    "queries": 816,
+    "all_have_observed_target": true,
+    "target_rank_min": 1,
+    "target_rank_max": 94
+  },
+  "point_estimates": {
+    "hit_at_1": 0.7450980392156863,
+    "hit_at_3": 0.8517156862745098,
+    "hit_at_5": 0.8897058823529411,
+    "hit_at_10": 0.9215686274509803,
+    "hit_at_20": 0.9473039215686274,
+    "hit_at_50": 0.9816176470588235,
+    "hit_at_100": 1.0,
+    "mrr": 0.8093031701244353
+  },
+  "rank_distribution": {
+    "queries": 816,
+    "minimum_rank": 1,
+    "maximum_rank": 94,
+    "mean_rank": 4.196078431372549,
+    "median_rank": 1.0,
+    "q25_rank": 1.0,
+    "q75_rank": 2.0,
+    "q90_rank": 7.0,
+    "q95_rank": 21.25
+  },
+  "bootstrap_configuration": {
+    "replicates": 2000,
+    "seed": 37012,
+    "confidence_level": 0.95,
+    "method": "Percentile bootstrap",
+    "unit": "query"
+  },
+  "bootstrap_summary": [
+    {
+      "metric": "hit_at_1",
+      "point_estimate": 0.7450980392156863,
+      "bootstrap_mean": 0.7455594362745098,
+      "bootstrap_std": 0.015112176521334616,
+      "ci_lower_95": 0.7144607843137255,
+      "ci_upper_95": 0.7745098039215687,
+      "replicates": 2000
+    },
+    {
+      "metric": "hit_at_3",
+      "point_estimate": 0.8517156862745098,
+      "bootstrap_mean": 0.8517665441176471,
+      "bootstrap_std": 0.012131472514463249,
+      "ci_lower_95": 0.8284313725490197,
+      "ci_upper_95": 0.875,
+      "replicates": 2000
+    },
+    {
+      "metric": "hit_at_5",
+      "point_estimate": 0.8897058823529411,
+      "bootstrap_mean": 0.8899669117647059,
+      "bootstrap_std": 0.010912457025205848,
+      "ci_lower_95": 0.8688725490196079,
+      "ci_upper_95": 0.9117647058823529,
+      "replicates": 2000
+    },
+    {
+      "metric": "hit_at_10",
+      "point_estimate": 0.9215686274509803,
+      "bootstrap_mean": 0.9217401960784314,
+      "bootstrap_std": 0.009184759667157427,
+      "ci_lower_95": 0.9043811274509804,
+      "ci_upper_95": 0.9399509803921569,
+      "replicates": 2000
+    },
+    {
+      "metric": "hit_at_20",
+      "point_estimate": 0.9473039215686274,
+      "bootstrap_mean": 0.9474534313725489,
+      "bootstrap_std": 0.00771065244920794,
+      "ci_lower_95": 0.9313725490196079,
+      "ci_upper_95": 0.9620098039215687,
+      "replicates": 2000
+    },
+    {
+      "metric": "hit_at_50",
+      "point_estimate": 0.9816176470588235,
+      "bootstrap_mean": 0.9816942401960784,
+      "bootstrap_std": 0.0047070582673338045,
+      "ci_lower_95": 0.9718137254901961,
+      "ci_upper_95": 0.9901960784313726,
+      "replicates": 2000
+    },
+    {
+      "metric": "hit_at_100",
+      "point_estimate": 1.0,
+      "bootstrap_mean": 1.0,
+      "bootstrap_std": 0.0,
+      "ci_lower_95": 1.0,
+      "ci_upper_95": 1.0,
+      "replicates": 2000
+    },
+    {
+      "metric": "mrr",
+      "point_estimate": 0.8093031701244353,
+      "bootstrap_mean": 0.8096177909504378,
+      "bootstrap_std": 0.011706849326785356,
+      "ci_lower_95": 0.7863608600614597,
+      "ci_upper_95": 0.8314924352926871,
+      "replicates": 2000
+    }
+  ],
+  "train_eval_descriptive_comparison": {
+    "TRAIN": {
+      "rows": 192506,
+      "queries": 1906,
+      "observed_target_queries": 1906,
+      "metrics": {
+        "hit_at_1": 0.7151101783840503,
+        "hit_at_3": 0.8310598111227702,
+        "hit_at_5": 0.8683105981112277,
+        "hit_at_10": 0.9087093389296957,
+        "hit_at_20": 0.9412381951731374,
+        "hit_at_50": 0.9742917103882477,
+        "hit_at_100": 0.9994753410283316,
+        "mrr": 0.78601572432888
+      },
+      "rank_distribution": {
+        "queries": 1906,
+        "minimum_rank": 1,
+        "maximum_rank": 101,
+        "mean_rank": 4.759706190975866,
+        "median_rank": 1.0,
+        "q25_rank": 1.0,
+        "q75_rank": 2.0,
+        "q90_rank": 9.0,
+        "q95_rank": 24.75
+      }
+    },
+    "EVAL": {
+      "rows": 82416,
+      "queries": 816,
+      "observed_target_queries": 816,
+      "metrics": {
+        "hit_at_1": 0.7450980392156863,
+        "hit_at_3": 0.8517156862745098,
+        "hit_at_5": 0.8897058823529411,
+        "hit_at_10": 0.9215686274509803,
+        "hit_at_20": 0.9473039215686274,
+        "hit_at_50": 0.9816176470588235,
+        "hit_at_100": 1.0,
+        "mrr": 0.8093031701244353
+      },
+      "rank_distribution": {
+        "queries": 816,
+        "minimum_rank": 1,
+        "maximum_rank": 94,
+        "mean_rank": 4.196078431372549,
+        "median_rank": 1.0,
+        "q25_rank": 1.0,
+        "q75_rank": 2.0,
+        "q90_rank": 7.0,
+        "q95_rank": 21.25
+      }
+    }
+  },
+  "reliability_interpretation": {
+    "uncertainty_method": "Query-level nonparametric bootstrap",
+    "bootstrap_replicates": 2000,
+    "confidence_interval": "Percentile 95% interval",
+    "resampling_unit": "Query",
+    "why_query_level": "T6 is a query-level retrieval/ranking task. Candidate rows belonging to the same query are therefore not treated as independent evaluation units.",
+    "point_estimates_preserved": true,
+    "method_selection_performed": false,
+    "threshold_selection_performed": false,
+    "calibration_performed": false
+  },
+  "interpretation": {
+    "native_ranking_evidence": "ESTABLISHED",
+    "ranking_uncertainty": "QUANTIFIED_AT_QUERY_LEVEL",
+    "probability_calibration": "NOT_ESTABLISHED",
+    "true_negative_semantics": "NOT_ESTABLISHED_AND_NOT_ASSUMED",
+    "model_selection": "NOT_PERFORMED",
+    "overall_method_selection": "NOT_PERFORMED",
+    "train_eval_comparison": "DESCRIPTIVE_ONLY"
+  },
+  "controls": {
+    "artifact_read_only": true,
+    "model_fitted": false,
+    "prediction_generated": false,
+    "probability_generated": false,
+    "calibration_fitted": false,
+    "target_created": false,
+    "target_relabelled": false,
+    "observable_non_positive_reinterpreted_as_true_negative": false,
+    "binary_classifier_created": false,
+    "synthetic_negative_created": false,
+    "synthetic_probability_created": false,
+    "threshold_selected": false,
+    "locked_test_used": false,
+    "universal_confidence_created": false,
+    "universal_risk_score_created": false,
+    "arbitrary_cross_task_weighting": false,
+    "native_ranking_semantics_preserved": true,
+    "query_level_bootstrap_used": true,
+    "candidate_rows_resampled_as_independent_units": false,
+    "existing_artifacts_modified": false
+  },
+  "control_validation": {
+    "status": "PASS",
+    "failed_controls": []
+  },
+  "artifacts_used": {
+    "OP-004": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op004_native_output_acceptance.json",
+    "OP-005": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op005_output_semantics_lock.json",
+    "OP-012A": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op012a_t6_prior_artifact_schema.json",
+    "OP-012B": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op012b_t6_target_observation_audit.json",
+    "OP-012C": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op012c_t6_native_ranking_evaluation.json",
+    "OP-012C_query_results": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op012c_t6_query_level_results.csv"
+  },
+  "methodological_restrictions": [
+    "The query is the bootstrap resampling unit; candidate rows are not treated as independent observations.",
+    "target_observed=False is not interpreted as a true negative.",
+    "No synthetic targets are created.",
+    "No probability is derived from hybrid_score.",
+    "No calibration model is fitted.",
+    "No threshold is selected.",
+    "No model-selection decision is made from the bootstrap results.",
+    "The TRAIN/EVAL comparison is descriptive only.",
+    "No locked test data are used."
+  ],
+  "decision": "T6 native ranking evidence is supported with query-level uncertainty estimates. The evidence remains native retrieval/ranking evidence; it does not establish ordinary binary probability calibration."
+}

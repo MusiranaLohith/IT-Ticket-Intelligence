@@ -1,0 +1,121 @@
+{
+  "operation": "T2-MOD-013",
+  "operation_name": "Advanced Model Candidate Selection",
+  "task": "T2",
+  "task_name": "Priority Prediction",
+  "dataset": "Mozilla CORE",
+  "candidate_selection": {
+    "selected": {
+      "model_family": "pretrained transformer-based text classification",
+      "model_identifier": "distilbert-base-uncased",
+      "architecture": "DistilBERT",
+      "pretrained": true,
+      "fine_tuning": true,
+      "from_scratch_training": false,
+      "selection_role": "primary advanced-model candidate"
+    },
+    "alternatives": [
+      {
+        "model_identifier": "microsoft/MiniLM-L12-H384-uncased",
+        "role": "lighter alternative",
+        "status": "not_selected_for_first_test"
+      },
+      {
+        "model_identifier": "bert-base-uncased",
+        "role": "larger conventional transformer baseline",
+        "status": "not_selected_for_first_test"
+      }
+    ],
+    "selection_reasons": [
+      "Provides contextual language representations beyond sparse TF-IDF features.",
+      "Appropriate for the Summary + Description text-only prediction boundary.",
+      "Smaller and lighter than full BERT, making it a reasonable first local transformer experiment.",
+      "Pretrained representation reduces the need for training a language model from scratch.",
+      "Creates a meaningful controlled comparison against the completed TF-IDF baselines.",
+      "The candidate is selected for experimentation, not declared the final T2 model."
+    ]
+  },
+  "compute_environment_at_selection": {
+    "python_version": "3.14.7",
+    "platform": "Linux-7.1.12-200.fc44.x86_64-x86_64-with-glibc2.43",
+    "cpu_count": 8,
+    "gpu_available": false,
+    "gpu_count": 0,
+    "gpu_name": null
+  },
+  "frozen_comparison_requirements": {
+    "target": "target_priority",
+    "classes": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5"
+    ],
+    "features": [
+      "Summary",
+      "Description"
+    ],
+    "prediction_boundary": "Creation",
+    "train_records": 20648,
+    "validation_records": 4425,
+    "test_records": 4425,
+    "split_method": "chronological",
+    "test_used_for_selection": false,
+    "test_used_for_tuning": false
+  },
+  "evaluation_requirements": {
+    "primary_metrics": [
+      "macro_f1",
+      "weighted_f1",
+      "accuracy"
+    ],
+    "minority_metrics": [
+      "P4 precision",
+      "P4 recall",
+      "P4 F1",
+      "P5 precision",
+      "P5 recall",
+      "P5 F1"
+    ],
+    "required_analysis": [
+      "confusion matrix",
+      "per-class metrics",
+      "prediction distribution",
+      "comparison against T2 baselines"
+    ]
+  },
+  "forbidden_changes": [
+    "changing the frozen target",
+    "changing the prediction boundary",
+    "changing the chronological split",
+    "using the test set for tuning",
+    "using the test set for model selection",
+    "adding post-Creation features",
+    "adding current-state administrative fields",
+    "using target-derived features",
+    "fabricating missing Description text",
+    "silently merging another dataset"
+  ],
+  "baseline_reference": {
+    "best_accuracy": {
+      "operation": "T2-MOD-006",
+      "value": 0.470282
+    },
+    "best_macro_f1": {
+      "operation": "T2-MOD-007",
+      "value": 0.31045
+    },
+    "best_weighted_f1": {
+      "operation": "T2-MOD-006",
+      "value": 0.448665
+    }
+  },
+  "training_status": {
+    "training_started": false,
+    "test_loaded": false,
+    "final_model_selected": false
+  },
+  "status": "READY_FOR_CONTROLLED_TRANSFORMER_TRAINING",
+  "selection_status": "FROZEN"
+}

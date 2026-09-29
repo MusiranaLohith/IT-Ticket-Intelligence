@@ -1,0 +1,296 @@
+{
+  "operation": "H-RUN-017R3",
+  "operation_name": "Multi-ticket runtime validation",
+  "timestamp_utc": "2026-09-27T05:02:31.770548+00:00",
+  "status": "PASS",
+  "source_script": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/h_run015_final_ticket_orchestrator.py",
+  "source_script_modified": false,
+  "temporary_source_copies_only": true,
+  "synthetic_development_only": true,
+  "locked_test_used": false,
+  "model_retraining": false,
+  "model_modification": false,
+  "prediction_modification": false,
+  "threshold_optimization": false,
+  "ticket_count": 3,
+  "tickets": [
+    {
+      "ticket_id": "H-RUN-017-A",
+      "title": "VPN connection fails after password reset",
+      "status": "PASS",
+      "return_code": 0,
+      "task_blocks": {
+        "T1": [
+          "status: EXECUTED",
+          "prediction: Support general",
+          ""
+        ],
+        "T2": [
+          "status: EXECUTED",
+          "prediction: P1",
+          ""
+        ],
+        "T3": [
+          "status: EXECUTED",
+          "prediction: S3",
+          ""
+        ],
+        "T4": [
+          "status: EXECUTED",
+          "retrieved: 5",
+          "top IDs: ['1321841', '220663', '1405307', '125875', '947801']",
+          ""
+        ],
+        "T5": [
+          "status: EXECUTED",
+          "calibrated duplicate evidence: 0.0",
+          "threshold used: False",
+          ""
+        ],
+        "T6": [
+          "status: PARTIAL_NATIVE_RUNTIME",
+          "full MOD-010 hybrid available: False",
+          "top lexical IDs: ['220663', '1321841', '1405307', '947801', '125875']",
+          ""
+        ],
+        "T7": [
+          "status: EXECUTED_WITH_SUPPORT_LIMITATION",
+          "median duration seconds: 19.629117",
+          "temporal support: OUTSIDE_OBSERVED_TRAINING_RANGE",
+          ""
+        ],
+        "T8": [
+          "status: BOUNDARY_ENVELOPE",
+          ""
+        ],
+        "T9": [
+          "status: BOUNDARY_ENVELOPE",
+          ""
+        ],
+        "T10": [
+          "automation: NOT_ESTABLISHED",
+          ""
+        ],
+        "T11": [
+          "status: SPECIFICATION_ONLY",
+          "",
+          "[OUTPUT]",
+          "written: /home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/h_run015_final_ticket_orchestrator.json",
+          "",
+          "========================================================================",
+          "H-RUN-015R2 COMPLETE",
+          "========================================================================"
+        ]
+      },
+      "compact_task_blocks": {
+        "T1": "status: EXECUTED | prediction: Support general",
+        "T2": "status: EXECUTED | prediction: P1",
+        "T3": "status: EXECUTED | prediction: S3",
+        "T4": "status: EXECUTED | retrieved: 5 | top IDs: ['1321841', '220663', '1405307', '125875', '947801']",
+        "T5": "status: EXECUTED | calibrated duplicate evidence: 0.0 | threshold used: False",
+        "T6": "status: PARTIAL_NATIVE_RUNTIME | full MOD-010 hybrid available: False | top lexical IDs: ['220663', '1321841', '1405307', '947801', '125875']",
+        "T7": "status: EXECUTED_WITH_SUPPORT_LIMITATION | median duration seconds: 19.629117 | temporal support: OUTSIDE_OBSERVED_TRAINING_RANGE",
+        "T8": "status: BOUNDARY_ENVELOPE",
+        "T9": "status: BOUNDARY_ENVELOPE",
+        "T10": "automation: NOT_ESTABLISHED",
+        "T11": "status: SPECIFICATION_ONLY | [OUTPUT] | written: /home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/h_run015_final_ticket_orchestrator.json | ======================================================================== | H-RUN-015R2 COMPLETE | ========================================================================"
+      },
+      "binding": {
+        "original_title": "VPN connection fails after password reset",
+        "original_description": "I reset my corporate password this morning. Since then, the VPN client connects briefly and then disconnects. I restarted the laptop and reinstalled the VPN client, but the issue persists. I need access to the internal systems for today's work.",
+        "title_entries_found": 1,
+        "description_entries_found": 1
+      },
+      "stdout_line_count": 65,
+      "stderr": ""
+    },
+    {
+      "ticket_id": "H-RUN-017-B",
+      "title": "Laptop battery replacement request",
+      "status": "PASS",
+      "return_code": 0,
+      "task_blocks": {
+        "T1": [
+          "status: EXECUTED",
+          "prediction: Fileservice",
+          ""
+        ],
+        "T2": [
+          "status: EXECUTED",
+          "prediction: P1",
+          ""
+        ],
+        "T3": [
+          "status: EXECUTED",
+          "prediction: S2",
+          ""
+        ],
+        "T4": [
+          "status: EXECUTED",
+          "retrieved: 5",
+          "top IDs: ['12730', '13134', '699744', '1050752', '975667']",
+          ""
+        ],
+        "T5": [
+          "status: EXECUTED",
+          "calibrated duplicate evidence: 0.0",
+          "threshold used: False",
+          ""
+        ],
+        "T6": [
+          "status: PARTIAL_NATIVE_RUNTIME",
+          "full MOD-010 hybrid available: False",
+          "top lexical IDs: ['699744', '975667', '1050752', '12730', '13134']",
+          ""
+        ],
+        "T7": [
+          "status: EXECUTED_WITH_SUPPORT_LIMITATION",
+          "median duration seconds: 16.009437",
+          "temporal support: OUTSIDE_OBSERVED_TRAINING_RANGE",
+          ""
+        ],
+        "T8": [
+          "status: BOUNDARY_ENVELOPE",
+          ""
+        ],
+        "T9": [
+          "status: BOUNDARY_ENVELOPE",
+          ""
+        ],
+        "T10": [
+          "automation: NOT_ESTABLISHED",
+          ""
+        ],
+        "T11": [
+          "status: SPECIFICATION_ONLY",
+          "",
+          "[OUTPUT]",
+          "written: /home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/h_run015_final_ticket_orchestrator.json",
+          "",
+          "========================================================================",
+          "H-RUN-015R2 COMPLETE",
+          "========================================================================"
+        ]
+      },
+      "compact_task_blocks": {
+        "T1": "status: EXECUTED | prediction: Fileservice",
+        "T2": "status: EXECUTED | prediction: P1",
+        "T3": "status: EXECUTED | prediction: S2",
+        "T4": "status: EXECUTED | retrieved: 5 | top IDs: ['12730', '13134', '699744', '1050752', '975667']",
+        "T5": "status: EXECUTED | calibrated duplicate evidence: 0.0 | threshold used: False",
+        "T6": "status: PARTIAL_NATIVE_RUNTIME | full MOD-010 hybrid available: False | top lexical IDs: ['699744', '975667', '1050752', '12730', '13134']",
+        "T7": "status: EXECUTED_WITH_SUPPORT_LIMITATION | median duration seconds: 16.009437 | temporal support: OUTSIDE_OBSERVED_TRAINING_RANGE",
+        "T8": "status: BOUNDARY_ENVELOPE",
+        "T9": "status: BOUNDARY_ENVELOPE",
+        "T10": "automation: NOT_ESTABLISHED",
+        "T11": "status: SPECIFICATION_ONLY | [OUTPUT] | written: /home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/h_run015_final_ticket_orchestrator.json | ======================================================================== | H-RUN-015R2 COMPLETE | ========================================================================"
+      },
+      "binding": {
+        "original_title": "VPN connection fails after password reset",
+        "original_description": "I reset my corporate password this morning. Since then, the VPN client connects briefly and then disconnects. I restarted the laptop and reinstalled the VPN client, but the issue persists. I need access to the internal systems for today's work.",
+        "title_entries_found": 1,
+        "description_entries_found": 1
+      },
+      "stdout_line_count": 65,
+      "stderr": ""
+    },
+    {
+      "ticket_id": "H-RUN-017-C",
+      "title": "Unable to access corporate account",
+      "status": "PASS",
+      "return_code": 0,
+      "task_blocks": {
+        "T1": [
+          "status: EXECUTED",
+          "prediction: Active Directory",
+          ""
+        ],
+        "T2": [
+          "status: EXECUTED",
+          "prediction: P1",
+          ""
+        ],
+        "T3": [
+          "status: EXECUTED",
+          "prediction: S3",
+          ""
+        ],
+        "T4": [
+          "status: EXECUTED",
+          "retrieved: 5",
+          "top IDs: ['86537', '358327', '33686', '112079', '41950']",
+          ""
+        ],
+        "T5": [
+          "status: EXECUTED",
+          "calibrated duplicate evidence: 0.0",
+          "threshold used: False",
+          ""
+        ],
+        "T6": [
+          "status: PARTIAL_NATIVE_RUNTIME",
+          "full MOD-010 hybrid available: False",
+          "top lexical IDs: ['358327', '86537', '33686', '41950', '112079']",
+          ""
+        ],
+        "T7": [
+          "status: EXECUTED_WITH_SUPPORT_LIMITATION",
+          "median duration seconds: 19.6324",
+          "temporal support: OUTSIDE_OBSERVED_TRAINING_RANGE",
+          ""
+        ],
+        "T8": [
+          "status: BOUNDARY_ENVELOPE",
+          ""
+        ],
+        "T9": [
+          "status: BOUNDARY_ENVELOPE",
+          ""
+        ],
+        "T10": [
+          "automation: NOT_ESTABLISHED",
+          ""
+        ],
+        "T11": [
+          "status: SPECIFICATION_ONLY",
+          "",
+          "[OUTPUT]",
+          "written: /home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/h_run015_final_ticket_orchestrator.json",
+          "",
+          "========================================================================",
+          "H-RUN-015R2 COMPLETE",
+          "========================================================================"
+        ]
+      },
+      "compact_task_blocks": {
+        "T1": "status: EXECUTED | prediction: Active Directory",
+        "T2": "status: EXECUTED | prediction: P1",
+        "T3": "status: EXECUTED | prediction: S3",
+        "T4": "status: EXECUTED | retrieved: 5 | top IDs: ['86537', '358327', '33686', '112079', '41950']",
+        "T5": "status: EXECUTED | calibrated duplicate evidence: 0.0 | threshold used: False",
+        "T6": "status: PARTIAL_NATIVE_RUNTIME | full MOD-010 hybrid available: False | top lexical IDs: ['358327', '86537', '33686', '41950', '112079']",
+        "T7": "status: EXECUTED_WITH_SUPPORT_LIMITATION | median duration seconds: 19.6324 | temporal support: OUTSIDE_OBSERVED_TRAINING_RANGE",
+        "T8": "status: BOUNDARY_ENVELOPE",
+        "T9": "status: BOUNDARY_ENVELOPE",
+        "T10": "automation: NOT_ESTABLISHED",
+        "T11": "status: SPECIFICATION_ONLY | [OUTPUT] | written: /home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/h_run015_final_ticket_orchestrator.json | ======================================================================== | H-RUN-015R2 COMPLETE | ========================================================================"
+      },
+      "binding": {
+        "original_title": "VPN connection fails after password reset",
+        "original_description": "I reset my corporate password this morning. Since then, the VPN client connects briefly and then disconnects. I restarted the laptop and reinstalled the VPN client, but the issue persists. I need access to the internal systems for today's work.",
+        "title_entries_found": 1,
+        "description_entries_found": 1
+      },
+      "stdout_line_count": 65,
+      "stderr": ""
+    }
+  ],
+  "preserved_boundaries": {
+    "t6_partial_native_runtime": true,
+    "t7_support_limitation": true,
+    "t8_boundary_envelope": true,
+    "t9_boundary_envelope": true,
+    "t10_policy_boundary": true,
+    "t11_specification_only": true
+  }
+}

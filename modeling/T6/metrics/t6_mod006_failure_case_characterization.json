@@ -1,0 +1,232 @@
+{
+  "operation": "T6 MOD-006",
+  "task": "T6 Similar-Ticket Retrieval",
+  "task_formulation": "Duplicate-Related Ticket Retrieval",
+  "status": "FAILURE_CASE_CHARACTERIZATION_COMPLETED",
+  "inputs": {
+    "mod005_failures": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod005_top20_failures.csv",
+    "train_modeling_split": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/splits/t6_train_group_aware.csv",
+    "eval_modeling_split": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/splits/t6_eval_group_aware.csv"
+  },
+  "controls": {
+    "model_retrained": false,
+    "vectorizer_refit": false,
+    "raw_dataset_read": false,
+    "accepted_dtm_artifact_read": false,
+    "candidate_pool_modified": false,
+    "ranking_artifact_modified": false,
+    "calibration_performed": false,
+    "threshold_optimization": false
+  },
+  "failure_population": {
+    "total": 173,
+    "train": 124,
+    "eval": 49
+  },
+  "all_failures": {
+    "failures": 173,
+    "positive_rank": {
+      "minimum": 21,
+      "median": 44.0,
+      "mean": 48.49132947976879,
+      "maximum": 101
+    },
+    "score_gap": {
+      "mean": 0.08900115428889695,
+      "median": 0.060657054663425,
+      "minimum": 0.0126268585070356,
+      "maximum": 0.545968237790035
+    },
+    "positive_score": {
+      "mean": 0.016999264077261704,
+      "median": 0.0152099406800641,
+      "minimum": 0.0,
+      "maximum": 0.0539792505256932
+    },
+    "top1_score": {
+      "mean": 0.10600041836615866,
+      "median": 0.083400369959367,
+      "minimum": 0.0190170105666629,
+      "maximum": 0.5623046965996904
+    },
+    "query_length": {
+      "mean_characters": 2131.4971098265896,
+      "median_characters": 955.0,
+      "mean_tokens": 313.2369942196532,
+      "median_tokens": 150.0
+    },
+    "candidate_length": {
+      "mean_characters": 1492.1387283236995,
+      "median_characters": 530.0,
+      "mean_tokens": 200.89595375722544,
+      "median_tokens": 81.0
+    },
+    "lexical_overlap": {
+      "mean_shared_tokens": 14.3121387283237,
+      "median_shared_tokens": 13.0,
+      "mean_query_overlap_ratio": 0.16067122662709662,
+      "median_query_overlap_ratio": 0.14563106796116504
+    },
+    "zero_similarity": {
+      "count": 2,
+      "rate": 0.011560693641618497
+    },
+    "empty_text": {
+      "query_empty": 0,
+      "query_empty_rate": 0.0,
+      "candidate_empty": 0,
+      "candidate_empty_rate": 0.0
+    },
+    "rank_bands": {
+      "21-50": 106,
+      "51-75": 43,
+      "76-100": 22,
+      "101": 2
+    }
+  },
+  "train_failures": {
+    "failures": 124,
+    "positive_rank": {
+      "minimum": 21,
+      "median": 44.5,
+      "mean": 48.92741935483871,
+      "maximum": 101
+    },
+    "score_gap": {
+      "mean": 0.082955031831027,
+      "median": 0.0568224473932583,
+      "minimum": 0.0126268585070356,
+      "maximum": 0.5322108472042382
+    },
+    "positive_score": {
+      "mean": 0.015522873281249638,
+      "median": 0.014510613017476099,
+      "minimum": 0.0,
+      "maximum": 0.0539792505256932
+    },
+    "top1_score": {
+      "mean": 0.09847790511227664,
+      "median": 0.07402703532501805,
+      "minimum": 0.0190170105666629,
+      "maximum": 0.5373194735035542
+    },
+    "query_length": {
+      "mean_characters": 1994.258064516129,
+      "median_characters": 891.0,
+      "mean_tokens": 285.9274193548387,
+      "median_tokens": 142.5
+    },
+    "candidate_length": {
+      "mean_characters": 1460.4596774193549,
+      "median_characters": 592.0,
+      "mean_tokens": 197.80645161290323,
+      "median_tokens": 86.5
+    },
+    "lexical_overlap": {
+      "mean_shared_tokens": 14.088709677419354,
+      "median_shared_tokens": 13.0,
+      "mean_query_overlap_ratio": 0.16386194756640257,
+      "median_query_overlap_ratio": 0.15579490291262135
+    },
+    "zero_similarity": {
+      "count": 2,
+      "rate": 0.016129032258064516
+    },
+    "empty_text": {
+      "query_empty": 0,
+      "query_empty_rate": 0.0,
+      "candidate_empty": 0,
+      "candidate_empty_rate": 0.0
+    },
+    "rank_bands": {
+      "21-50": 76,
+      "51-75": 30,
+      "76-100": 16,
+      "101": 2
+    }
+  },
+  "eval_failures": {
+    "failures": 49,
+    "positive_rank": {
+      "minimum": 21,
+      "median": 42.0,
+      "mean": 47.38775510204081,
+      "maximum": 99
+    },
+    "score_gap": {
+      "mean": 0.10430154581493517,
+      "median": 0.0730667361171216,
+      "minimum": 0.027731493920656,
+      "maximum": 0.545968237790035
+    },
+    "positive_score": {
+      "mean": 0.020735436703904472,
+      "median": 0.0185543742368283,
+      "minimum": 0.0015244578154712,
+      "maximum": 0.049105050945703
+    },
+    "top1_score": {
+      "mean": 0.12503698251883966,
+      "median": 0.0935896635078248,
+      "minimum": 0.0443879887376155,
+      "maximum": 0.5623046965996904
+    },
+    "query_length": {
+      "mean_characters": 2478.795918367347,
+      "median_characters": 1033.0,
+      "mean_tokens": 382.3469387755102,
+      "median_tokens": 161.0
+    },
+    "candidate_length": {
+      "mean_characters": 1572.3061224489795,
+      "median_characters": 498.0,
+      "mean_tokens": 208.71428571428572,
+      "median_tokens": 78.0
+    },
+    "lexical_overlap": {
+      "mean_shared_tokens": 14.877551020408163,
+      "median_shared_tokens": 14.0,
+      "mean_query_overlap_ratio": 0.15259674914803675,
+      "median_query_overlap_ratio": 0.14
+    },
+    "zero_similarity": {
+      "count": 0,
+      "rate": 0.0
+    },
+    "empty_text": {
+      "query_empty": 0,
+      "query_empty_rate": 0.0,
+      "candidate_empty": 0,
+      "candidate_empty_rate": 0.0
+    },
+    "rank_bands": {
+      "21-50": 30,
+      "51-75": 13,
+      "76-100": 6,
+      "101": 0
+    }
+  },
+  "train_eval_failure_comparison": {
+    "failure_count_eval_minus_train": -75,
+    "mean_failure_rank_eval_minus_train": -1.5396642527978983,
+    "median_failure_rank_eval_minus_train": -2.5,
+    "mean_score_gap_eval_minus_train": 0.021346513983908175,
+    "mean_positive_score_eval_minus_train": 0.005212563422654835,
+    "mean_query_tokens_eval_minus_train": 96.41951942067146,
+    "mean_candidate_tokens_eval_minus_train": 10.907834101382491,
+    "mean_lexical_overlap_eval_minus_train": 0.7888413429888086
+  },
+  "interpretation_notes": [
+    "Failure cases are queries whose observed Dupe-of target ranked below Top-20 under the MOD-004 TF-IDF baseline.",
+    "Similarity scores are native cosine-similarity scores and are not probabilities or calibrated confidence.",
+    "Lexical overlap is a descriptive diagnostic and is not treated as a duplicate ground-truth signal.",
+    "Observable non-positive candidates are not converted into true-negative labels.",
+    "Failure characteristics are descriptive and do not establish causality.",
+    "TRAIN/EVAL differences are recorded for characterization and do not constitute a model-selection claim."
+  ],
+  "artifacts": {
+    "failure_cases": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod006_failure_cases.csv",
+    "rank_distribution": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod006_failure_rank_distribution.csv",
+    "analysis_results": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod006_failure_case_characterization.json"
+  }
+}

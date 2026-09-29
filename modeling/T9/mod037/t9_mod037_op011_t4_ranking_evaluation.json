@@ -1,0 +1,265 @@
+{
+  "operation": "T9_MOD-037_OP-011",
+  "title": "T4 Native Ranking Evaluation & Calibration-Readiness Audit",
+  "status": "PASS",
+  "operation_type": "NATIVE_RANKING_EVALUATION_AND_CALIBRATION_READINESS_AUDIT",
+  "OP-011A_validation": {
+    "status": "PASS",
+    "observed_status": "PASS",
+    "artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op011a_t4_prior_artifact_schema.json"
+  },
+  "previous_operation_validation": {
+    "status": "PASS",
+    "checks": {
+      "OP-004_T4_accepted": {
+        "status": "PASS",
+        "overall_operation_status": "FAIL",
+        "accepted_tasks": [
+          "T4",
+          "T5",
+          "T6",
+          "T7"
+        ],
+        "rejected_tasks": [
+          "T2"
+        ],
+        "unavailable_tasks": [
+          "T3"
+        ]
+      },
+      "OP-004_controls": {
+        "status": "PASS",
+        "failed_controls": []
+      },
+      "OP-005_status": {
+        "status": "PASS",
+        "observed": "PASS"
+      },
+      "OP-005_T4_native_evaluation": {
+        "status": "PASS",
+        "native_evaluation_tasks": [
+          "T4",
+          "T6"
+        ]
+      },
+      "OP-005_T4_semantic_boundary": {
+        "status": "PASS",
+        "observed": {
+          "status": "ACCEPTED_NATIVE_RANKING",
+          "native_quantity": "Candidate-space assignee retrieval/ranking",
+          "native_probability_output": false,
+          "accepted_for_calibration": false,
+          "accepted_for_native_evaluation": true,
+          "artifact": "modeling/T4/results/mod011_checkpoints/t4_mod011_retrieval.npz",
+          "native_outputs": [
+            "neighbor_indices",
+            "neighbor_scores"
+          ],
+          "population": "T4 native retrieval evaluation population",
+          "semantic_restrictions": [
+            "Scores remain native candidate-space ranking quantities.",
+            "Scores must not be interpreted as universally calibrated ticket-level probabilities.",
+            "Candidate-space restriction must be preserved.",
+            "Unseen assignee targets remain unavailable rather than being treated as ordinary negatives."
+          ],
+          "calibration_boundary": "Any later confidence/calibration formulation must be defined specifically for the T4 ranking/candidate space and must not invent a universal probability."
+        }
+      },
+      "OP-005_global_controls": {
+        "status": "PASS",
+        "observed_status": "PASS"
+      },
+      "OP-020_status": {
+        "status": "PASS",
+        "observed": "PASS"
+      },
+      "OP-020_component": {
+        "status": "PASS",
+        "observed": "assignment"
+      },
+      "OP-020_native_semantics": {
+        "status": "PASS",
+        "observed": {
+          "task_type": "candidate_ranking",
+          "target": "target_assignee",
+          "recommendation_type": "ranked_assignment_candidates",
+          "neighbor_count": 20,
+          "retrieval_keys": [
+            "neighbor_indices",
+            "neighbor_scores"
+          ]
+        }
+      },
+      "OP-020_alignment": {
+        "status": "PASS",
+        "observed": {
+          "retrieval_rows": 35626,
+          "evaluation_rows": 35626,
+          "aligned": true,
+          "invalid_neighbor_indices": 0
+        }
+      },
+      "OP-020_controls": {
+        "status": "PASS",
+        "failed_controls": []
+      }
+    },
+    "failed_checks": []
+  },
+  "native_source_population": {
+    "T4_features_rows": 178127,
+    "T4_train_rows": 142501,
+    "T4_evaluation_rows": 35626,
+    "T4_prediction_rows": 35626
+  },
+  "source_schema": {
+    "status": "PASS",
+    "columns": {
+      "features_id": "ID",
+      "train_id": "ID",
+      "train_target": "target_assignee",
+      "evaluation_id": "ID",
+      "evaluation_target": "target_assignee",
+      "prediction_id": "id",
+      "prediction_assignee": "recommended_assignee",
+      "prediction_true_assignee": "true_assignee",
+      "prediction_score": "recommended_score",
+      "target_rank": "target_rank",
+      "target_present": "target_present",
+      "top20_candidates": "top20_candidates",
+      "prediction_status": "status"
+    }
+  },
+  "population_identity_audit": {
+    "status": "PASS",
+    "details": {
+      "train": {
+        "rows": 142501,
+        "unique_ids": 142501,
+        "duplicate_ids": 0,
+        "blank_ids": 0,
+        "status": "PASS"
+      },
+      "evaluation": {
+        "rows": 35626,
+        "unique_ids": 35626,
+        "duplicate_ids": 0,
+        "blank_ids": 0,
+        "status": "PASS"
+      },
+      "predictions": {
+        "rows": 35626,
+        "unique_ids": 35626,
+        "duplicate_ids": 0,
+        "blank_ids": 0,
+        "status": "PASS"
+      },
+      "train_eval_overlap": {
+        "rows": 0,
+        "status": "PASS"
+      },
+      "eval_prediction_alignment": {
+        "evaluation_rows": 35626,
+        "prediction_rows": 35626,
+        "intersection": 35626,
+        "evaluation_only": 0,
+        "prediction_only": 0,
+        "status": "PASS"
+      }
+    },
+    "failed_checks": []
+  },
+  "candidate_space_audit": {
+    "status": "PASS",
+    "training_candidate_assignee_count": 4139,
+    "evaluation_distinct_target_assignees": 1161,
+    "evaluation_targets_seen_in_training": 491,
+    "evaluation_targets_unseen_in_training": 670,
+    "predicted_distinct_assignees": 891,
+    "predictions_outside_training_candidate_space": 0
+  },
+  "target_availability": {
+    "rows": 35626,
+    "target_present_in_training_candidate_space": 32773,
+    "target_unseen_in_training_candidate_space": 2853,
+    "target_present_rate": 0.9199180373884241,
+    "target_unseen_rate": 0.08008196261157581
+  },
+  "native_top1_evaluation": {
+    "rows_evaluated": 35626,
+    "top1_correct": 9486,
+    "top1_incorrect": 26140,
+    "top1_accuracy": 0.26626621007129625,
+    "native_target_present_rows": 15513,
+    "native_target_unseen_rows": 20113,
+    "native_no_recommendation_rows": 35626,
+    "target_rank_available_rows": 15513,
+    "recommended_score_available_rows": 35626
+  },
+  "native_output_semantics": {
+    "verified_native_columns": {
+      "id": "id",
+      "true_assignee": "true_assignee",
+      "recommended_assignee": "recommended_assignee",
+      "recommended_score": "recommended_score",
+      "target_rank": "target_rank",
+      "target_present": "target_present",
+      "top20_candidates": "top20_candidates",
+      "status": "status"
+    },
+    "native_ranking_output_established": true,
+    "native_probability_artifact_established": false,
+    "score_semantics": "recommended_score remains a native candidate-ranking score. It is not converted into a calibrated probability.",
+    "probability_like_columns_observed": [],
+    "interpretation": "T4 remains a candidate-space ranking task. The native recommendation score is preserved as a ranking quantity."
+  },
+  "calibration_readiness": {
+    "native_ranking_evaluation": "READY",
+    "probability_calibration": "NOT_ESTABLISHED",
+    "reason": "The accepted T4 artifact provides native candidate-ranking outputs including recommended_assignee, recommended_score, target_rank and top20_candidates. It does not establish a calibrated probability distribution over candidates."
+  },
+  "controls": {
+    "new_model_fitted": false,
+    "new_prediction_generated": false,
+    "new_probability_generated": false,
+    "new_calibration_fitted": false,
+    "synthetic_target_created": false,
+    "target_relabelled": false,
+    "unseen_target_reinterpreted_as_negative": false,
+    "ranking_converted_to_classification": false,
+    "threshold_selected": false,
+    "locked_test_used_for_selection": false,
+    "universal_confidence_created": false,
+    "universal_risk_score_created": false,
+    "arbitrary_cross_task_weights_used": false,
+    "native_t4_ranking_semantics_preserved": true,
+    "candidate_space_preserved": true,
+    "unseen_targets_preserved_as_unavailable": true
+  },
+  "control_validation": {
+    "status": "PASS",
+    "failures": []
+  },
+  "artifacts_used": {
+    "OP-004": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op004_native_output_acceptance.json",
+    "OP-005": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op005_output_semantics_lock.json",
+    "OP-011A": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op011a_t4_prior_artifact_schema.json",
+    "T8_OP-020": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/mod036/op020/t8_mod036_op020_assignment_component_baseline.json",
+    "T8_OP-020_predictions": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/mod036/op020/t8_mod036_op020_assignment_predictions.csv",
+    "T4_features": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/derived/t4_features.csv",
+    "T4_train": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/derived/t4_train.csv",
+    "T4_eval": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/derived/t4_eval.csv"
+  },
+  "interpretation_boundary": [
+    "T4 is evaluated as a specific-assignee candidate-space ranking task.",
+    "The training-observed assignee set defines the evaluated candidate space.",
+    "Unseen evaluation targets are unavailable rather than ordinary negative examples.",
+    "recommended_assignee is treated as the native Top-1 assignment recommendation.",
+    "recommended_score remains a native ranking score and is not converted into a calibrated probability.",
+    "target_rank is retained as native candidate-ranking evidence.",
+    "Top-1 accuracy is native ranking evidence and is not probability calibration.",
+    "Historical assignment is not interpreted as universal routing correctness.",
+    "No universal confidence or risk score is created."
+  ],
+  "decision": "T4 native assignment-ranking evidence is validated for native evaluation under the frozen candidate-space semantics. Probability calibration is not established by the accepted native artifact."
+}

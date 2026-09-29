@@ -1,0 +1,1771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>IT Ticket Intelligence System</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="topbar-brand">
+
+        <div class="brand-title">
+            IT Ticket Intelligence System
+        </div>
+
+        <div class="brand-subtitle">
+            Evidence-first ticket triage and human decision support
+        </div>
+
+    </div>
+
+    <div class="prototype-status">
+        RESEARCH / ENGINEERING PROTOTYPE
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     DEPLOY-OP-047 — PROJECT LANDING
+     ========================================================= -->
+
+<section
+    id="project-landing"
+    class="project-view project-landing"
+>
+
+    <div class="project-landing-inner">
+
+        
+
+        <h1>
+            IT Ticket<br>
+            <span>Intelligence</span>
+        </h1>
+
+        <p class="project-motto">
+            Evidence-first ticket triage and human decision support.
+        </p>
+
+        <p class="project-introduction">
+            A research and engineering system for analysing IT support
+            tickets through a traceable T1–T11 evidence pipeline.
+            The system combines task-level evidence, historical
+            retrieval, duplicate analysis, resolution evidence,
+            evidence integration and an explicit human decision boundary.
+        </p>
+
+
+        <div class="project-actions">
+
+            <button
+                type="button"
+                id="enter-system-button"
+                class="project-primary-action"
+            >
+                ENTER SYSTEM
+            </button>
+
+            <button
+                type="button"
+                id="view-research-button"
+                class="project-secondary-action"
+            >
+                VIEW RESEARCH
+            </button>
+
+        </div>
+
+
+        <div
+            id="project-research-strip"
+            class="project-research-strip"
+        >
+
+            <article class="project-feature">
+                <span class="project-feature-index">
+                    01
+                </span>
+
+                <div>
+                    <h3>
+                        DATASET INVESTIGATION
+                    </h3>
+
+                    <p>
+                        Dataset integrity and feasibility were investigated
+                        before the deployed analysis workflow was defined.
+                    </p>
+                </div>
+            </article>
+
+
+            <article class="project-feature">
+                <span class="project-feature-index">
+                    02
+                </span>
+
+                <div>
+                    <h3>
+                        T1–T11 EVIDENCE CHAIN
+                    </h3>
+
+                    <p>
+                        Ticket analysis is exposed as a traceable sequence
+                        of task-level evidence rather than a single opaque result.
+                    </p>
+                </div>
+            </article>
+
+
+            <article class="project-feature">
+                <span class="project-feature-index">
+                    03
+                </span>
+
+                <div>
+                    <h3>
+                        HUMAN DECISION BOUNDARY
+                    </h3>
+
+                    <p>
+                        The system provides evidence and explicitly preserves
+                        human review as the operational decision boundary.
+                    </p>
+                </div>
+            </article>
+
+
+            <article class="project-feature">
+                <span class="project-feature-index">
+                    04
+                </span>
+
+                <div>
+                    <h3>
+                        DEPLOYMENT INTEGRITY
+                    </h3>
+
+                    <p>
+                        The deployment preserves the documented runtime
+                        contracts and known evidence limitations.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     DEPLOY-OP-047 — WORKSPACE HOME
+     ========================================================= -->
+
+<section
+    id="workspace-home"
+    class="project-view workspace-home hidden"
+>
+
+    <div class="workspace-home-inner">
+
+        <div class="workspace-heading">
+
+            <div class="workspace-heading-copy">
+
+                <h2>
+                    Research Workspace
+                </h2>
+
+                <p>
+                    Select how you want to investigate ticket data.
+                    The same evidence-first T1–T11 pipeline is used
+                    for both input modes.
+                </p>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="workspace-home-button"
+                class="workspace-home-button"
+            >
+                BACK TO HOME
+            </button>
+
+        </div>
+
+
+        <div class="workspace-entry-grid">
+
+            <article class="workspace-entry workspace-entry-single">
+
+                <div class="workspace-entry-index">
+                    01
+                </div>
+
+                <div class="workspace-entry-content">
+
+                    <span class="workspace-entry-label">
+                        SINGLE TICKET
+                    </span>
+
+                    <h3>
+                        Investigate one ticket
+                    </h3>
+
+                    <p>
+                        Enter one ticket manually and inspect its
+                        complete T1–T11 evidence chain.
+                    </p>
+
+
+                </div>
+
+            </article>
+
+
+            <article class="workspace-entry workspace-entry-batch">
+
+                <div class="workspace-entry-index">
+                    02
+                </div>
+
+                <div class="workspace-entry-content">
+
+                    <span class="workspace-entry-label">
+                        MULTIPLE TICKETS
+                    </span>
+
+                    <h3>
+                        Analyse existing ticket data
+                    </h3>
+
+                    <p>
+                        Upload structured JSON or CSV data and
+                        analyse each ticket independently.
+                    </p>
+
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <div class="workspace-entry-shared-action">
+
+            <button
+                type="button"
+                id="open-analysis-workspace-button"
+                class="workspace-entry-action workspace-entry-action-primary"
+            >
+                OPEN ANALYSIS WORKSPACE
+            </button>
+
+        </div>
+
+
+        <div class="workspace-information-grid">
+
+            <article class="workspace-information">
+
+                <span>
+                    PIPELINE
+                </span>
+
+                <strong>
+                    T1–T11
+                </strong>
+
+                <p>
+                    Traceable task-level evidence.
+                </p>
+
+            </article>
+
+
+            <article class="workspace-information">
+
+                <span>
+                    DECISION BOUNDARY
+                </span>
+
+                <strong>
+                    HUMAN REVIEW
+                </strong>
+
+                <p>
+                    Operational decisions remain external to the system.
+                </p>
+
+            </article>
+
+
+            <article class="workspace-information">
+
+                <span>
+                    RUNTIME
+                </span>
+
+                <strong>
+                    RESEARCH PROTOTYPE
+                </strong>
+
+                <p>
+                    Evidence-first deployment with documented limitations.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     DEPLOY-OP-067 — RESEARCH OVERVIEW
+     ---------------------------------------------------------
+     Research presentation structure only.
+     Deployment implementation is intentionally excluded.
+     ========================================================= -->
+
+<section
+    id="research-overview"
+    class="project-view research-overview hidden"
+>
+
+    <div class="research-overview-inner">
+
+        <div class="research-overview-header">
+
+            <div class="project-kicker">
+                RESEARCH OVERVIEW
+            </div>
+
+            <h2>
+                Intelligent IT Ticket
+                Decision Support and Triage System
+            </h2>
+
+            <p>
+                Evidence-first research and engineering work
+                for traceable IT ticket decision support.
+            </p>
+
+            <button
+                type="button"
+                id="research-home-button"
+                class="research-home-button"
+            >
+                BACK TO HOME
+            </button>
+
+        </div>
+
+
+        <section class="research-section">
+
+            <span class="research-section-label">
+                01 / PROBLEM
+            </span>
+
+            <h3>
+                IT Support Ticket Triage
+            </h3>
+
+            <p>
+                IT support and software-maintenance teams receive
+                large numbers of partially structured, noisy and
+                historically evolving tickets. Triage requires
+                understanding tickets, estimating priority and
+                severity, supporting routing, identifying duplicates,
+                retrieving related historical tickets and estimating
+                time to resolution.
+            </p>
+
+            <p>
+                These signals do not all have the same semantics,
+                timestamp, reliability, missingness or provenance.
+                The research therefore treats ticket intelligence
+                as a collection of task-specific evidence problems
+                rather than as one universal prediction problem.
+            </p>
+
+        </section>
+
+
+        <section class="research-section">
+
+            <span class="research-section-label">
+                02 / OBJECTIVE
+            </span>
+
+            <h3>
+                Evidence-First Decision Support
+            </h3>
+
+            <p>
+                The project develops an evidence-first,
+                leakage-controlled and confidence-aware IT ticket
+                decision-support system using task-specific
+                predictive and retrieval models.
+            </p>
+
+            <p>
+                Native output meaning is preserved for each task.
+                The system does not assume a universal probability,
+                confidence or risk quantity across all tasks.
+            </p>
+
+        </section>
+
+
+        <section class="research-section">
+
+            <span class="research-section-label">
+                03 / RESEARCH WORKFLOW
+            </span>
+
+            <h3>
+                From Dataset Investigation to Controlled Modeling
+            </h3>
+
+            <ol class="research-workflow-list">
+
+                <li>
+                    Source discovery and provenance
+                </li>
+
+                <li>
+                    Dataset audit and integrity investigation
+                </li>
+
+                <li>
+                    Field and temporal characterization
+                </li>
+
+                <li>
+                    Formal Dataset Contract and Dataset Task Map
+                </li>
+
+                <li>
+                    Task-specific modeling contracts
+                </li>
+
+                <li>
+                    Controlled baselines and modeling
+                </li>
+
+                <li>
+                    Evidence integration and decision-support
+                    boundaries
+                </li>
+
+            </ol>
+
+        </section>
+
+
+        <section class="research-section">
+
+            <span class="research-section-label">
+                04 / DATASET INVESTIGATION
+            </span>
+
+            <h3>
+                Multiple Evidence Sources
+            </h3>
+
+            <div class="research-dataset-grid">
+
+                <article class="research-card">
+
+                    <strong>
+                        Eclipse
+                    </strong>
+
+                    <span>
+                        311,464 audited tickets
+                    </span>
+
+                    <p>
+                        Historical software-support ticket
+                        population used for dataset investigation
+                        and task-specific evidence.
+                    </p>
+
+                </article>
+
+
+                <article class="research-card">
+
+                    <strong>
+                        Mozilla CORE
+                    </strong>
+
+                    <span>
+                        522,352 raw tickets
+                    </span>
+
+                    <p>
+                        513,817 parseable histories were identified
+                        for the controlled Mozilla CORE research
+                        population.
+                    </p>
+
+                </article>
+
+
+                <article class="research-card">
+
+                    <strong>
+                        IT Support
+                    </strong>
+
+                    <span>
+                        2,229 tickets / 7 categories
+                    </span>
+
+                    <p>
+                        Independently sourced support-ticket
+                        classification population.
+                    </p>
+
+                </article>
+
+
+                <article class="research-card">
+
+                    <strong>
+                        GitBugs Cassandra
+                    </strong>
+
+                    <span>
+                        4,612 records
+                    </span>
+
+                    <p>
+                        3,413 resolved durations were available
+                        for time-to-resolution investigation.
+                    </p>
+
+                </article>
+
+
+                <article class="research-card">
+
+                    <strong>
+                        GitBugs VS Code
+                    </strong>
+
+                    <span>
+                        32,829 records
+                    </span>
+
+                    <p>
+                        32,828 distinct IDs were identified in
+                        the investigated population.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section class="research-section">
+
+            <span class="research-section-label">
+                05 / T1–T11 TASK MAP
+            </span>
+
+            <h3>
+                Task-Specific Intelligence
+            </h3>
+
+            <div class="research-task-grid">
+
+                <article class="research-card">
+                    <strong>T1</strong>
+                    <span>Classification</span>
+                    <p>
+                        Ticket/domain classification.
+                    </p>
+                </article>
+
+                <article class="research-card">
+                    <strong>T2</strong>
+                    <span>Priority</span>
+                    <p>
+                        Creation-time priority prediction.
+                    </p>
+                </article>
+
+                <article class="research-card">
+                    <strong>T3</strong>
+                    <span>Severity</span>
+                    <p>
+                        Creation-time operational severity.
+                    </p>
+                </article>
+
+                <article class="research-card">
+                    <strong>T4</strong>
+                    <span>Routing / Assignment</span>
+                    <p>
+                        Historical assignee evidence.
+                    </p>
+                </article>
+
+                <article class="research-card">
+                    <strong>T5</strong>
+                    <span>Duplicate Detection</span>
+                    <p>
+                        Creation-time duplicate evidence.
+                    </p>
+                </article>
+
+                <article class="research-card">
+                    <strong>T6</strong>
+                    <span>Similar-ticket Retrieval</span>
+                    <p>
+                        Historical related-ticket retrieval.
+                    </p>
+                </article>
+
+                <article class="research-card">
+                    <strong>T7</strong>
+                    <span>Resolution Time</span>
+                    <p>
+                        Survival and time-to-event prediction.
+                    </p>
+                </article>
+
+                <article class="research-card">
+                    <strong>T8</strong>
+                    <span>Evidence Fusion</span>
+                    <p>
+                        Evidence integration and decision-support
+                        presentation.
+                    </p>
+                </article>
+
+                <article class="research-card">
+                    <strong>T9</strong>
+                    <span>Calibration / Confidence</span>
+                    <p>
+                        Task-specific reliability where supported.
+                    </p>
+                </article>
+
+                <article class="research-card">
+                    <strong>T10</strong>
+                    <span>Human Review</span>
+                    <p>
+                        Explicit human decision boundary.
+                    </p>
+                </article>
+
+                <article class="research-card">
+                    <strong>T11</strong>
+                    <span>Feedback / Active Learning</span>
+                    <p>
+                        Future lifecycle specification without
+                        claiming current operational feedback.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section class="research-section">
+
+            <span class="research-section-label">
+                06 / CONTROLLED MODELING RESULTS
+            </span>
+
+            <h3>
+                Documented Task Results
+            </h3>
+
+            <div class="research-results-grid">
+
+                <article class="research-result-card">
+
+                    <strong>
+                        T1
+                    </strong>
+
+                    <span>
+                        Word + Character TF-IDF + Linear SVM
+                    </span>
+
+                    <p>
+                        Accuracy: 0.946188
+                    </p>
+
+                    <p>
+                        Macro F1: 0.899133
+                    </p>
+
+                    <p>
+                        Weighted F1: 0.943482
+                    </p>
+
+                </article>
+
+
+                <article class="research-result-card">
+
+                    <strong>
+                        T2
+                    </strong>
+
+                    <span>
+                        Priority
+                    </span>
+
+                    <p>
+                        Accuracy: 42.0113%
+                    </p>
+
+                    <p>
+                        Macro F1: 26.4960%
+                    </p>
+
+                </article>
+
+
+                <article class="research-result-card">
+
+                    <strong>
+                        T3
+                    </strong>
+
+                    <span>
+                        Severity
+                    </span>
+
+                    <p>
+                        Accuracy: 55.4042%
+                    </p>
+
+                    <p>
+                        Macro F1: 30.3682%
+                    </p>
+
+                </article>
+
+
+                <article class="research-result-card">
+
+                    <strong>
+                        T5
+                    </strong>
+
+                    <span>
+                        Duplicate Detection
+                    </span>
+
+                    <p>
+                        AP: 0.125833
+                    </p>
+
+                    <p>
+                        ROC-AUC: 0.678142
+                    </p>
+
+                    <p>
+                        Log Loss: 0.272500
+                    </p>
+
+                    <p>
+                        Brier: 0.059907
+                    </p>
+
+                </article>
+
+
+                <article class="research-result-card">
+
+                    <strong>
+                        T6
+                    </strong>
+
+                    <span>
+                        Similar-ticket Retrieval
+                    </span>
+
+                    <p>
+                        R@1: 0.745098
+                    </p>
+
+                    <p>
+                        R@20: 0.947304
+                    </p>
+
+                    <p>
+                        MRR: 0.809303
+                    </p>
+
+                    <p>
+                        NDCG@10: 0.834166
+                    </p>
+
+                </article>
+
+
+                <article class="research-result-card">
+
+                    <strong>
+                        T7
+                    </strong>
+
+                    <span>
+                        Resolution Time
+                    </span>
+
+                    <p>
+                        Harrell C:
+                        0.554962 / 0.556875
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section class="research-section">
+
+            <span class="research-section-label">
+                07 / EVIDENCE INTEGRATION
+            </span>
+
+            <h3>
+                Preserve Native Evidence Meaning
+            </h3>
+
+            <p>
+                Evidence integration is designed as a presentation
+                and decision-support layer while preserving each
+                task's native semantics, grain, confidence or
+                uncertainty, missingness and provenance.
+            </p>
+
+            <div class="research-principles-grid">
+
+                <article class="research-card">
+                    <strong>
+                        Missing Evidence
+                    </strong>
+                    <p>
+                        Unavailable evidence is not treated as
+                        negative evidence.
+                    </p>
+                </article>
+
+                <article class="research-card">
+                    <strong>
+                        Native Grain
+                    </strong>
+                    <p>
+                        Task-specific output meaning is preserved.
+                    </p>
+                </article>
+
+                <article class="research-card">
+                    <strong>
+                        No Universal Confidence
+                    </strong>
+                    <p>
+                        Cross-task confidence normalization is
+                        not established.
+                    </p>
+                </article>
+
+                <article class="research-card">
+                    <strong>
+                        No Universal Risk
+                    </strong>
+                    <p>
+                        A universal cross-task risk score is not
+                        established.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section class="research-section">
+
+            <span class="research-section-label">
+                08 / LIMITATIONS & BOUNDARIES
+            </span>
+
+            <h3>
+                What the Research Does Not Claim
+            </h3>
+
+            <ul class="research-limitations-list">
+
+                <li>
+                    Historical assignment is not proof of current
+                    routing correctness.
+                </li>
+
+                <li>
+                    T6 observable non-positive retrieval evidence
+                    is not a true negative.
+                </li>
+
+                <li>
+                    T7 censoring must not be treated as ordinary
+                    unresolved negatives.
+                </li>
+
+                <li>
+                    T5 retains a documented provenance limitation.
+                </li>
+
+                <li>
+                    No universal confidence or risk score has
+                    been established.
+                </li>
+
+                <li>
+                    No empirically validated autonomous automation
+                    threshold has been established.
+                </li>
+
+                <li>
+                    T11 does not claim an operational feedback
+                    population where none currently exists.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <section class="research-section">
+
+            <span class="research-section-label">
+                09 / RESEARCH CONCLUSION
+            </span>
+
+            <h3>
+                Evidence Before Automation
+            </h3>
+
+            <p>
+                The resulting system is structured around
+                task-specific evidence rather than a single
+                universal prediction or risk score.
+            </p>
+
+            <p>
+                The research establishes a traceable chain from
+                dataset investigation through task-specific
+                modeling and evidence integration, while retaining
+                explicit limitations and a human decision boundary.
+            </p>
+
+        </section>
+
+
+        <div class="research-overview-footer">
+
+            <button
+                type="button"
+                id="research-home-button-footer"
+                class="research-home-button"
+            >
+                BACK TO HOME
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<main id="analysis-workspace" class="dashboard-shell">
+
+    <!-- =========================================================
+         DEPLOY-OP-047 — ANALYSIS NAVIGATION
+         ========================================================= -->
+
+    <div
+        id="analysis-navigation"
+        class="analysis-navigation"
+    >
+
+        <button
+            type="button"
+            id="analysis-home-button"
+            class="analysis-nav-button"
+        >
+            WORKSPACE HOME
+        </button>
+
+        <button
+            type="button"
+            id="project-overview-button"
+            class="analysis-nav-button"
+        >
+            PROJECT OVERVIEW
+        </button>
+
+    </div>
+
+
+
+    <!-- =========================================================
+         SINGLE TICKET INPUT
+         ========================================================= -->
+
+    <section class="panel" id="single-ticket-panel">
+
+        <div class="section-header">
+
+            <div>
+
+                <span class="section-tag">
+                    SINGLE TICKET
+                </span>
+
+                <h1>
+                    Analyze One Ticket
+                </h1>
+
+                <p>
+                    Enter one ticket manually and inspect the complete
+                    T1–T11 evidence chain.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <form
+            id="ticket-form"
+            novalidate
+        >
+
+            <div class="form-grid">
+
+
+                <div class="form-group">
+
+                    <label for="ticket_id">
+                        Ticket ID
+                    </label>
+
+                    <input
+                        type="text"
+                        id="ticket_id"
+                        name="ticket_id"
+                        placeholder="e.g. DEPLOY-001"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="creation_time">
+                        Creation Time
+                    </label>
+
+                    <input
+                        type="text"
+                        id="creation_time"
+                        name="creation_time"
+                        placeholder="e.g. 2026-09-27T10:40:00"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="creator">
+                        Creator
+                    </label>
+
+                    <input
+                        type="text"
+                        id="creator"
+                        name="creator"
+                        placeholder="e.g. synthetic-user"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="creator_detail">
+                        Creator Detail
+                    </label>
+
+                    <input
+                        type="text"
+                        id="creator_detail"
+                        name="creator_detail"
+                        placeholder="e.g. deployment test"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="summary">
+                        Summary
+                    </label>
+
+                    <input
+                        type="text"
+                        id="summary"
+                        name="summary"
+                        placeholder="e.g. VPN connection failure"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="description">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="description"
+                        name="description"
+                        placeholder="Describe the ticket issue..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="form-actions">
+
+                <button
+                    type="submit"
+                    id="analyze-ticket-button"
+                >
+                    ANALYZE TICKET
+                </button>
+
+            </div>
+
+
+            <div
+                id="error-message"
+                class="error-message hidden"
+                role="alert"
+            ></div>
+
+        </form>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         BATCH INPUT
+         ========================================================= -->
+
+    <section
+        class="panel"
+        id="batch-input-panel"
+    >
+
+        <div class="section-header">
+
+            <div>
+
+                <span class="section-tag">
+                    MULTIPLE TICKETS
+                </span>
+
+                <h2>
+                    Load Existing Ticket Data
+                </h2>
+
+                <p>
+                    Upload an existing structured JSON or CSV file.
+                    The interface is batch-size agnostic.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="batch-input-layout">
+
+
+            <div class="batch-file-area">
+
+                <div class="form-group">
+
+                    <label for="batch-file">
+                        Ticket File
+                    </label>
+
+                    <input
+                        type="file"
+                        id="batch-file"
+                        name="batch-file"
+                        accept=".json,.csv,application/json,text/csv"
+                    >
+
+                    <p
+                        id="batch-file-name"
+                        class="evidence-note"
+                    >
+                        No file selected.
+                    </p>
+
+                </div>
+
+
+                <div
+                    id="batch-error-message"
+                    class="error-message hidden"
+                    role="alert"
+                ></div>
+
+
+                <div class="form-actions">
+
+                    <button
+                        type="button"
+                        id="batch-validate-button"
+                        disabled
+                    >
+                        VALIDATE BATCH
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="batch-input-information">
+
+                <p class="evidence-note">
+                    <strong>Supported input:</strong>
+                    JSON array of ticket objects, JSON object containing
+                    a tickets array, or CSV with the six required ticket fields.
+                </p>
+
+                <p class="evidence-note">
+                    <strong>Required fields:</strong>
+                    ticket_id, creation_time, creator, creator_detail,
+                    summary, description.
+                </p>
+
+                <p class="evidence-note">
+                    Each ticket remains an independent ticket.
+                    No special batch size is assumed by the UI.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="batch-validation-summary"
+            class="result-card hidden"
+        >
+
+            <strong id="batch-validation-count">
+                0
+            </strong>
+
+            <span>
+                tickets validated and ready for batch analysis.
+            </span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         BATCH RESULTS
+         ========================================================= -->
+
+    <section
+        class="panel hidden"
+        id="batch-results-panel"
+    >
+
+        <div class="section-header">
+
+            <div>
+
+                <span class="section-tag">
+                    BATCH RESULTS
+                </span>
+
+                <h2>
+                    Ticket Analysis Results
+                </h2>
+
+                <p>
+                    Each row represents one independently analyzed ticket.
+                    Select a ticket to inspect its complete evidence chain.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="batch-results-summary"
+            class="result-card"
+        >
+
+            <strong id="batch-results-analyzed">
+                0
+            </strong>
+
+            <span id="batch-results-summary-text">
+                tickets analyzed.
+            </span>
+
+        </div>
+
+
+        <div class="batch-results-table-wrapper">
+
+            <table
+                id="batch-results-table"
+                class="batch-results-table"
+            >
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Ticket ID
+                        </th>
+
+                        <th>
+                            Category
+                        </th>
+
+                        <th>
+                            Priority
+                        </th>
+
+                        <th>
+                            Severity
+                        </th>
+
+                        <th>
+                            Evidence State
+                        </th>
+
+                        <th>
+                            Action
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody
+                    id="batch-results-table-body"
+                ></tbody>
+
+            </table>
+
+        </div>
+
+
+        <p
+            id="batch-results-empty"
+            class="evidence-note hidden"
+        >
+            No batch results are available.
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         SINGLE / SELECTED TICKET RESULTS
+         ========================================================= -->
+
+    <section
+        class="panel hidden"
+        id="results-panel"
+    >
+
+        <div class="section-header">
+
+            <div>
+
+                <span class="section-tag">
+                    SYSTEM FINDINGS
+                </span>
+
+                <h2>
+                    Ticket Analysis
+                </h2>
+
+                <p>
+                    The system provides evidence. Human review remains
+                    the operational decision boundary.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="summary-grid">
+
+
+            <article class="result-card">
+
+                <span>
+                    Category Evidence
+                </span>
+
+                <strong id="summary-category">
+                    —
+                </strong>
+
+            </article>
+
+
+            <article class="result-card">
+
+                <span>
+                    Priority Evidence
+                </span>
+
+                <strong id="summary-priority">
+                    —
+                </strong>
+
+            </article>
+
+
+            <article class="result-card">
+
+                <span>
+                    Severity Evidence
+                </span>
+
+                <strong id="summary-severity">
+                    —
+                </strong>
+
+            </article>
+
+
+            <article class="result-card">
+
+                <span>
+                    Evidence State
+                </span>
+
+                <strong id="summary-evidence-state">
+                    —
+                </strong>
+
+            </article>
+
+
+            <article class="result-card">
+
+                <span>
+                    System Action
+                </span>
+
+                <strong id="summary-action">
+                    —
+                </strong>
+
+            </article>
+
+
+            <article class="result-card">
+
+                <span>
+                    Lifecycle State
+                </span>
+
+                <strong id="summary-lifecycle">
+                    —
+                </strong>
+
+            </article>
+
+
+        </div>
+
+
+
+        <!-- =====================================================
+             SUPPORTING EVIDENCE
+             ===================================================== -->
+
+        <section class="subpanel">
+
+            <div class="section-header">
+
+                <div>
+
+                    <span class="section-tag">
+                        EVIDENCE
+                    </span>
+
+                    <h3>
+                        Supporting Evidence
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="evidence-content"
+                class="evidence-list"
+            ></div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             T1-T11 PIPELINE
+             ===================================================== -->
+
+        <section class="subpanel">
+
+            <div class="section-header">
+
+                <div>
+
+                    <span class="section-tag">
+                        PIPELINE
+                    </span>
+
+                    <h3>
+                        T1–T11 Pipeline Trace
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="pipeline-content"
+                class="pipeline-list"
+            ></div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             HUMAN DECISION BOUNDARY
+             ===================================================== -->
+
+        <section class="subpanel">
+
+            <div class="section-header">
+
+                <div>
+
+                    <span class="section-tag">
+                        HUMAN REVIEW
+                    </span>
+
+                    <h3>
+                        Human Review Boundary
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="human-review-content"
+                class="human-review-content"
+            >
+
+                <div class="decision-boundary-message">
+
+                    <strong>
+                        System provides evidence.
+                    </strong>
+
+                    <span>
+                        Human reviews the evidence and makes the
+                        operational decision.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             LIMITATIONS
+             ===================================================== -->
+
+        <section class="subpanel">
+
+            <div class="section-header">
+
+                <div>
+
+                    <span class="section-tag">
+                        LIMITATIONS
+                    </span>
+
+                    <h3>
+                        Runtime Limitations
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="limitations-content"
+                class="evidence-list"
+            ></div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             EXPLANATION
+             ===================================================== -->
+
+        <section class="subpanel">
+
+            <div class="section-header">
+
+                <div>
+
+                    <span class="section-tag">
+                        EXPLANATION
+                    </span>
+
+                    <h3>
+                        Ticket Explanation
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="explanation-content"
+                class="explanation-content"
+            ></div>
+
+        </section>
+
+
+        <div class="form-actions">
+
+            <button
+                type="button"
+                id="reset-dashboard-button"
+            >
+                RESET VIEW
+            </button>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<footer class="footer">
+
+    IT Ticket Intelligence System
+    Research / engineering prototype —
+    NOT PRODUCTION READY
+
+</footer>
+
+
+<script
+    src="app.js"
+></script>
+
+</body>
+</html>

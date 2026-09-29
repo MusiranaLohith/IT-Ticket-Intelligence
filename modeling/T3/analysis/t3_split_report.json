@@ -1,0 +1,84 @@
+{
+  "input": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/derived/t3_features.csv",
+  "total_rows": 30839,
+  "split_method": "chronological Creation time with deterministic ID tie-break",
+  "fractions": {
+    "train": 0.7,
+    "validation": 0.15,
+    "test": 0.15
+  },
+  "splits": {
+    "train": {
+      "rows": 21587,
+      "creation_min": "1999-05-20T16:26:21+00:00",
+      "creation_max": "2023-03-13T18:13:05+00:00",
+      "distribution": {
+        "S1": {
+          "count": 194,
+          "percentage": 0.8987
+        },
+        "S2": {
+          "count": 2062,
+          "percentage": 9.552
+        },
+        "S3": {
+          "count": 13891,
+          "percentage": 64.3489
+        },
+        "S4": {
+          "count": 5440,
+          "percentage": 25.2004
+        }
+      }
+    },
+    "validation": {
+      "rows": 4626,
+      "creation_min": "2023-03-13T18:55:36+00:00",
+      "creation_max": "2024-01-17T17:06:50+00:00",
+      "distribution": {
+        "S1": {
+          "count": 20,
+          "percentage": 0.4323
+        },
+        "S2": {
+          "count": 487,
+          "percentage": 10.5275
+        },
+        "S3": {
+          "count": 3420,
+          "percentage": 73.93
+        },
+        "S4": {
+          "count": 699,
+          "percentage": 15.1102
+        }
+      }
+    },
+    "test": {
+      "rows": 4626,
+      "creation_min": "2024-01-17T17:44:01+00:00",
+      "creation_max": "2024-11-12T15:16:12+00:00",
+      "distribution": {
+        "S1": {
+          "count": 13,
+          "percentage": 0.281
+        },
+        "S2": {
+          "count": 337,
+          "percentage": 7.2849
+        },
+        "S3": {
+          "count": 3644,
+          "percentage": 78.7722
+        },
+        "S4": {
+          "count": 632,
+          "percentage": 13.6619
+        }
+      }
+    }
+  },
+  "id_overlap": false,
+  "temporal_order_valid": true,
+  "status": "PASS"
+}

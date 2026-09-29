@@ -1,0 +1,252 @@
+{
+  "operation": "H-RUN-019",
+  "operation_name": "FULL_TICKET_PIPELINE_RUNTIME",
+  "runtime_timestamp": "2026-09-27T05:28:39.888224+00:00",
+  "ticket": {
+    "ticket_id": "H-RUN-019-VPN-001",
+    "creation_time": "2026-09-27T05:20:00Z",
+    "creator": "",
+    "creator_detail": "",
+    "title": "VPN connection fails after password reset",
+    "description": "I reset my corporate password this morning. Since then, the VPN client connects briefly and then disconnects. I restarted the laptop and reinstalled the VPN client, but the issue persists. I need access to the internal systems for today's work."
+  },
+  "pipeline": {
+    "order": [
+      "T1",
+      "T2",
+      "T3",
+      "T4",
+      "T5",
+      "T6",
+      "T7",
+      "T8",
+      "T9",
+      "T10",
+      "T11"
+    ],
+    "stage_statuses": {
+      "T1": "FAILED",
+      "T2": "FAILED",
+      "T3": "FAILED",
+      "T4": "EXECUTED",
+      "T5": "FAILED",
+      "T6": "PARTIAL_NATIVE_RUNTIME",
+      "T7": "FAILED",
+      "T8": "EXECUTED",
+      "T9": "EXECUTED",
+      "T10": "EXECUTED",
+      "T11": "EXECUTED"
+    }
+  },
+  "task_outputs": {
+    "T1": {
+      "status": "FAILED",
+      "error": "'dict' object has no attribute 'predict'"
+    },
+    "T2": {
+      "status": "FAILED",
+      "error": "'dict' object has no attribute 'predict'"
+    },
+    "T3": {
+      "status": "FAILED",
+      "error": "'dict' object has no attribute 'predict'"
+    },
+    "T4": {
+      "status": "EXECUTED",
+      "retrieved_count": 5,
+      "results": [
+        {
+          "index": 118128,
+          "distance": 0.7060008645057678,
+          "ticket_id": "1321841",
+          "summary": "Firefox network loss after connection to Cisco VPN.",
+          "historical_assignee": "dd.mozilla@gmail.com"
+        },
+        {
+          "index": 36104,
+          "distance": 0.745875358581543,
+          "ticket_id": "220663",
+          "summary": "Conn: Hang when my VPN connection times out (?)",
+          "historical_assignee": "darin@meer.net"
+        },
+        {
+          "index": 128163,
+          "distance": 0.7511016726493835,
+          "ticket_id": "1405307",
+          "summary": "After connecting to VPN Firefox is unable to navigate to sites inside the VPN but Chrome can",
+          "historical_assignee": "daniel@haxx.se"
+        },
+        {
+          "index": 26474,
+          "distance": 0.7548562288284302,
+          "ticket_id": "125875",
+          "summary": "PAC: configured to work proxy server, but user not on work VPN",
+          "historical_assignee": "darin@netscape.com"
+        },
+        {
+          "index": 88540,
+          "distance": 0.7649978399276733,
+          "ticket_id": "947801",
+          "summary": "DNS resolution sporadically fails in Android 4.4/5.0 when connected to a VPN",
+          "historical_assignee": "daniel@haxx.se"
+        }
+      ],
+      "semantics": "historical retrieval evidence",
+      "automatic_assignment": false
+    },
+    "T5": {
+      "status": "FAILED",
+      "error": "[Errno 2] No such file or directory: '/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/results/t5_mod005_tfidf.joblib'"
+    },
+    "T6": {
+      "status": "PARTIAL_NATIVE_RUNTIME",
+      "full_mod010_hybrid_available": false,
+      "lexical_query_text_length": 286,
+      "top_lexical_ticket_ids": [
+        "T6",
+        "MOD-010",
+        "274922",
+        "False"
+      ],
+      "semantics": "lexical retrieval evidence only; full frozen MOD-010 semantic+lexical composition is unavailable for a genuinely new ticket because its semantic evidence depends on stored evaluation-population evidence"
+    },
+    "T7": {
+      "status": "FAILED",
+      "error": "only 0-dimensional arrays can be converted to Python scalars"
+    }
+  },
+  "T8_evidence_integration": {
+    "status": "EXECUTED",
+    "evidence_state": "PARTIAL",
+    "available_components": [
+      "T4"
+    ],
+    "partial_components": [
+      "T6"
+    ],
+    "unavailable_components": [
+      "T1",
+      "T2",
+      "T3",
+      "T5",
+      "T7"
+    ],
+    "missing_evidence_is_not_negative": true,
+    "native_task_semantics_preserved": true,
+    "universal_probability_fusion": false,
+    "universal_confidence_created": false,
+    "validation_reference": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/mod036/op026/t8_mod036_op026_decision_engine_validation.json",
+    "validation_closure_status": "T8_DECISION_ENGINE_CLOSED"
+  },
+  "T9_reliability": {
+    "status": "EXECUTED",
+    "task_reliability": {
+      "T1": {
+        "reliability_type": "native_classifier_decision_output",
+        "calibration_available": false,
+        "probability": null
+      },
+      "T2": {
+        "reliability_type": "native_classifier_decision_output",
+        "calibration_available": false,
+        "probability": null
+      },
+      "T3": {
+        "reliability_type": "native_classifier_decision_output",
+        "calibration_available": false,
+        "probability": null
+      },
+      "T4": {
+        "reliability_type": "retrieval_evidence",
+        "probability": null
+      },
+      "T5": {
+        "reliability_type": "task_specific_calibrated_evidence",
+        "calibration_available": true,
+        "universal_probability": false
+      },
+      "T6": {
+        "reliability_type": "retrieval_evidence",
+        "probability": null
+      },
+      "T7": {
+        "reliability_type": "survival_model_output",
+        "temporal_support": null,
+        "probability": null
+      }
+    },
+    "universal_confidence": null,
+    "universal_risk": null,
+    "synthetic_fusion_target": false,
+    "closure_reference": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op015_final_integrated_closure.json",
+    "closure_status": "PASS"
+  },
+  "T10_policy": {
+    "status": "EXECUTED",
+    "automation": "NOT_ESTABLISHED",
+    "human_review": "NOT_ESTABLISHED",
+    "universal_threshold": "NOT_ESTABLISHED",
+    "universal_confidence": "NOT_CREATED",
+    "universal_risk": "NOT_CREATED",
+    "action_state": "HUMAN_DECISION_REQUIRED",
+    "warnings": [
+      "Evidence is partial; unsupported components must not be treated as negative evidence.",
+      "T6 full MOD-010 hybrid is unavailable for this new-ticket runtime."
+    ],
+    "policy_evidence_reference": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp05_op008_empirical_policy_boundary_audit.json",
+    "policy_evidence_status": "PASS"
+  },
+  "T11_lifecycle": {
+    "status": "EXECUTED",
+    "feedback_status": "AWAITING_OUTCOME",
+    "feedback_available": false,
+    "future_feedback_fields": [
+      "actual_category",
+      "actual_priority",
+      "actual_severity",
+      "actual_assignee",
+      "duplicate_confirmed",
+      "actual_resolution_time"
+    ],
+    "lifecycle_event": {
+      "ticket_id": "H-RUN-019-VPN-001",
+      "run_timestamp": "2026-09-27T05:28:39.888176+00:00",
+      "outcome_status": "AWAITING_OUTCOME"
+    },
+    "interpretation": "Lifecycle specification is instantiated for this runtime ticket without fabricating operational feedback."
+  },
+  "final_triage": {
+    "category": null,
+    "priority": null,
+    "severity": null,
+    "historical_assignee_candidates": [
+      "dd.mozilla@gmail.com",
+      "darin@meer.net",
+      "daniel@haxx.se",
+      "darin@netscape.com",
+      "daniel@haxx.se"
+    ],
+    "duplicate_evidence": null,
+    "related_ticket_ids": [
+      "T6",
+      "MOD-010",
+      "274922",
+      "False"
+    ],
+    "resolution_time_seconds": null,
+    "evidence_state": "PARTIAL",
+    "action_state": "HUMAN_DECISION_REQUIRED",
+    "lifecycle_state": "AWAITING_OUTCOME"
+  },
+  "integrity": {
+    "model_retraining": false,
+    "model_modification": false,
+    "threshold_optimization": false,
+    "locked_evaluation_data_used": false,
+    "prediction_modification": false,
+    "synthetic_feedback_created": false,
+    "universal_confidence_created": false,
+    "universal_risk_created": false
+  },
+  "overall_status": "PASS"
+}

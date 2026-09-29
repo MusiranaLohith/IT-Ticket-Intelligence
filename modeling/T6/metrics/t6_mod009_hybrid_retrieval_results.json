@@ -1,0 +1,237 @@
+{
+  "task_id": "T6",
+  "operation_id": "MOD-009",
+  "operation_name": "Hybrid Lexical + Semantic Retrieval",
+  "status": "COMPLETED",
+  "semantic_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "device": "cpu",
+  "embedding_dimension": 384,
+  "candidate_pool": {
+    "candidates_per_query": 101,
+    "same_frozen_train_eval_splits": true,
+    "candidate_pool_modified": false
+  },
+  "query_features": [
+    "Creator",
+    "Creator Detail",
+    "Summary",
+    "Description"
+  ],
+  "candidate_features": [
+    "Creator",
+    "Creator Detail",
+    "Summary",
+    "Description"
+  ],
+  "target_policy": {
+    "observable_non_positive_is_true_negative": false,
+    "binary_classification": false,
+    "target_modified": false
+  },
+  "population": {
+    "total_queries": 2722,
+    "total_rows": 274922,
+    "train_queries": 1906,
+    "eval_queries": 816,
+    "train_rows": 192506,
+    "eval_rows": 82416
+  },
+  "predeclared_semantic_weights": [
+    0.1,
+    0.25,
+    0.5,
+    0.75,
+    0.9
+  ],
+  "training_weight_selection": {
+    "selection_split": "TRAIN",
+    "primary_criterion": "recall_at_20",
+    "secondary_criterion": "mrr",
+    "tertiary_criterion": "recall_at_10",
+    "candidate_results": [
+      {
+        "recall_at_1": 0.6883525708289612,
+        "recall_at_3": 0.8069254984260231,
+        "recall_at_5": 0.8504721930745016,
+        "recall_at_10": 0.8992654774396642,
+        "recall_at_20": 0.9365162644281217,
+        "mrr": 0.7628480931759335,
+        "ndcg_at_5": 0.7764881060376467,
+        "ndcg_at_10": 0.7925040073964277,
+        "semantic_weight": 0.1,
+        "lexical_weight": 0.9
+      },
+      {
+        "recall_at_1": 0.6967471143756558,
+        "recall_at_3": 0.8184679958027282,
+        "recall_at_5": 0.8604407135362014,
+        "recall_at_10": 0.9102833158447009,
+        "recall_at_20": 0.9386149003147953,
+        "mrr": 0.7708192758570916,
+        "ndcg_at_5": 0.7857103421715153,
+        "ndcg_at_10": 0.8016705608422395,
+        "semantic_weight": 0.25,
+        "lexical_weight": 0.75
+      },
+      {
+        "recall_at_1": 0.7151101783840503,
+        "recall_at_3": 0.8315844700944386,
+        "recall_at_5": 0.8693599160545645,
+        "recall_at_10": 0.9081846799580273,
+        "recall_at_20": 0.9417628541448059,
+        "mrr": 0.7856979908070156,
+        "ndcg_at_5": 0.7999867644171109,
+        "ndcg_at_10": 0.8125328828344354,
+        "semantic_weight": 0.5,
+        "lexical_weight": 0.5
+      },
+      {
+        "recall_at_1": 0.7187827911857293,
+        "recall_at_3": 0.8189926547743966,
+        "recall_at_5": 0.8551941238195173,
+        "recall_at_10": 0.8929695697796433,
+        "recall_at_20": 0.9291710388247639,
+        "mrr": 0.7809985936678279,
+        "ndcg_at_5": 0.7924447326499723,
+        "ndcg_at_10": 0.8047261592026144,
+        "semantic_weight": 0.75,
+        "lexical_weight": 0.25
+      },
+      {
+        "recall_at_1": 0.6799580272822665,
+        "recall_at_3": 0.7796432318992654,
+        "recall_at_5": 0.8205666316894019,
+        "recall_at_10": 0.869884575026233,
+        "recall_at_20": 0.9108079748163693,
+        "mrr": 0.7459499677364438,
+        "ndcg_at_5": 0.7558942586476975,
+        "ndcg_at_10": 0.771773402350674,
+        "semantic_weight": 0.9,
+        "lexical_weight": 0.09999999999999998
+      }
+    ],
+    "selected": {
+      "recall_at_1": 0.7151101783840503,
+      "recall_at_3": 0.8315844700944386,
+      "recall_at_5": 0.8693599160545645,
+      "recall_at_10": 0.9081846799580273,
+      "recall_at_20": 0.9417628541448059,
+      "mrr": 0.7856979908070156,
+      "ndcg_at_5": 0.7999867644171109,
+      "ndcg_at_10": 0.8125328828344354,
+      "semantic_weight": 0.5,
+      "lexical_weight": 0.5
+    }
+  },
+  "metrics": {
+    "train": {
+      "tfidf": {
+        "recall_at_1": 0.6810073452256034,
+        "recall_at_3": 0.8027282266526757,
+        "recall_at_5": 0.8467995802728226,
+        "recall_at_10": 0.8950682056663168,
+        "recall_at_20": 0.9312696747114375,
+        "mrr": 0.7560487094470019,
+        "ndcg_at_5": 0.7705993483200267,
+        "ndcg_at_10": 0.7863726393182985
+      },
+      "semantic": {
+        "recall_at_1": 0.6138509968520461,
+        "recall_at_3": 0.7376705141657922,
+        "recall_at_5": 0.776495278069255,
+        "recall_at_10": 0.8410283315844701,
+        "recall_at_20": 0.8924449108079748,
+        "mrr": 0.6920960794185801,
+        "ndcg_at_5": 0.7019579608095231,
+        "ndcg_at_10": 0.7228845362233872
+      },
+      "hybrid": {
+        "recall_at_1": 0.7151101783840503,
+        "recall_at_3": 0.8315844700944386,
+        "recall_at_5": 0.8693599160545645,
+        "recall_at_10": 0.9081846799580273,
+        "recall_at_20": 0.9417628541448059,
+        "mrr": 0.7856979908070156,
+        "ndcg_at_5": 0.7999867644171109,
+        "ndcg_at_10": 0.8125328828344354
+      }
+    },
+    "eval": {
+      "tfidf": {
+        "recall_at_1": 0.6924019607843137,
+        "recall_at_3": 0.8308823529411765,
+        "recall_at_5": 0.8725490196078431,
+        "recall_at_10": 0.9117647058823529,
+        "recall_at_20": 0.9362745098039216,
+        "mrr": 0.775372728942635,
+        "ndcg_at_5": 0.7933833281689464,
+        "ndcg_at_10": 0.806165391245381
+      },
+      "semantic": {
+        "recall_at_1": 0.6372549019607843,
+        "recall_at_3": 0.7328431372549019,
+        "recall_at_5": 0.7916666666666666,
+        "recall_at_10": 0.8529411764705882,
+        "recall_at_20": 0.9080882352941176,
+        "mrr": 0.7083441457211728,
+        "ndcg_at_5": 0.7181874509411946,
+        "ndcg_at_10": 0.7380812408732352
+      },
+      "hybrid": {
+        "recall_at_1": 0.7450980392156863,
+        "recall_at_3": 0.8529411764705882,
+        "recall_at_5": 0.8884803921568627,
+        "recall_at_10": 0.9203431372549019,
+        "recall_at_20": 0.9497549019607843,
+        "mrr": 0.8099649688861205,
+        "ndcg_at_5": 0.8238956791088867,
+        "ndcg_at_10": 0.8342907227524592
+      }
+    }
+  },
+  "rank_movement": {
+    "train": {
+      "mean_rank_movement": 0.5587618048268626,
+      "median_rank_movement": 0.0,
+      "improved": 349,
+      "worsened": 172,
+      "unchanged": 1385
+    },
+    "eval": {
+      "mean_rank_movement": 0.5931372549019608,
+      "median_rank_movement": 0.0,
+      "improved": 151,
+      "worsened": 65,
+      "unchanged": 600
+    }
+  },
+  "tfidf_top20_failure_population": {
+    "queries": 183,
+    "hybrid_metrics": {
+      "recall_at_1": 0.0,
+      "recall_at_3": 0.03278688524590164,
+      "recall_at_5": 0.08743169398907104,
+      "recall_at_10": 0.15846994535519127,
+      "recall_at_20": 0.3551912568306011,
+      "mrr": 0.06324499302465451,
+      "ndcg_at_5": 0.04016123679607972,
+      "ndcg_at_10": 0.06356916154148183
+    }
+  },
+  "controls": {
+    "raw_dataset_read": false,
+    "target_reconstruction": false,
+    "target_modification": false,
+    "candidate_pool_modification": false,
+    "evaluation_weight_selection": false,
+    "threshold_optimization": false,
+    "calibration": false,
+    "binary_classification": false
+  },
+  "artifacts": {
+    "rankings": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod009_hybrid_query_rankings.csv",
+    "results": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod009_hybrid_retrieval_results.json",
+    "tfidf_vectorizer": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/models/t6_mod004_tfidf_vectorizer.joblib"
+  },
+  "runtime_seconds": 6131.27
+}

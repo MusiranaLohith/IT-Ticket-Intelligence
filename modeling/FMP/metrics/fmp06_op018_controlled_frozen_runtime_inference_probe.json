@@ -1,0 +1,64 @@
+{
+  "operation": "FMP-06 OP-018",
+  "operation_type": "CONTROLLED_FROZEN_RUNTIME_INFERENCE_PROBE",
+  "probe_rows": 3,
+  "tasks": {
+    "T1": {
+      "task": "T1",
+      "status": "FAIL",
+      "error_type": "AttributeError",
+      "error": "'dict' object has no attribute 'predict'"
+    },
+    "T2": {
+      "task": "T2",
+      "status": "FAIL",
+      "error_type": "AttributeError",
+      "error": "'dict' object has no attribute 'predict'"
+    },
+    "T3": {
+      "task": "T3",
+      "status": "FAIL",
+      "error_type": "AttributeError",
+      "error": "'dict' object has no attribute 'predict'"
+    },
+    "T4": {
+      "task": "T4",
+      "status": "NOT_EXECUTED_BY_THIS_PROBE",
+      "reason": "T4 is a native historical candidate-ranking task rather than a single frozen joblib inference interface. This probe does not invent a new candidate-population runtime.",
+      "closure": "modeling/T4/results/t4_mod013_closure.json",
+      "implementation": "modeling/T4/scripts/t4_mod013.py"
+    },
+    "T5": {
+      "task": "T5",
+      "status": "FAIL",
+      "error_type": "ValueError",
+      "error": "Expected 2D array, got 1D array instead:\narray=[2.23054052 1.88156229 1.55866897].\nReshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample."
+    },
+    "T6": {
+      "task": "T6",
+      "status": "NOT_EXECUTED_BY_THIS_PROBE",
+      "reason": "T6 requires a retrieval corpus and native hybrid lexical/semantic ranking execution. This probe does not invent a corpus binding or substitute an arbitrary ranking runtime.",
+      "closure": "modeling/T6/metrics/t6_final_closure.json",
+      "result_artifact": "modeling/T6/metrics/t6_mod010_corrected_hybrid_results.json"
+    },
+    "T7": {
+      "task": "T7",
+      "status": "NOT_EXECUTED_BY_THIS_PROBE",
+      "reason": "T7 is a native survival-analysis task with event/censoring semantics. This probe does not construct a new survival runtime or relabel censored observations.",
+      "closure": "modeling/T7/metrics/t7_mod012_final_closure.json",
+      "implementation": "modeling/T7/scripts/t7_mod010_log_normal_aft_baseline.py"
+    }
+  },
+  "safeguards": {
+    "retraining": false,
+    "artifact_modification": false,
+    "calibration_fitting": false,
+    "threshold_selection": false,
+    "synthetic_ticket_creation": false,
+    "synthetic_target_creation": false,
+    "locked_test_used_for_selection": false,
+    "universal_confidence_created": false,
+    "universal_risk_created": false
+  },
+  "overall_status": "FAIL"
+}

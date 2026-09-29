@@ -1,0 +1,50 @@
+{
+  "operation": "H-RUN-007",
+  "operation_name": "T2/T3 Prediction Variation Probe",
+  "status": "PASS",
+  "runtime_controls": {
+    "training": false,
+    "retraining": false,
+    "model_modification": false,
+    "threshold_selection": false,
+    "locked_test_use": false,
+    "new_model_selection": false
+  },
+  "artifacts": {
+    "t2": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/models/t2_class_weighted_tfidf_logreg.joblib",
+    "t3": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib"
+  },
+  "tickets": [
+    {
+      "ticket_id": "H-RUN-007-A",
+      "title": "VPN connection fails after password reset",
+      "t2_prediction": "P1",
+      "t3_prediction": "S3"
+    },
+    {
+      "ticket_id": "H-RUN-007-B",
+      "title": "Monitor replacement request",
+      "t2_prediction": "P3",
+      "t3_prediction": "S3"
+    },
+    {
+      "ticket_id": "H-RUN-007-C",
+      "title": "Password reset instructions",
+      "t2_prediction": "P2",
+      "t3_prediction": "S3"
+    }
+  ],
+  "variation": {
+    "t2_unique_predictions": [
+      "P1",
+      "P2",
+      "P3"
+    ],
+    "t3_unique_predictions": [
+      "S3"
+    ],
+    "t2_variation": "OBSERVED",
+    "t3_variation": "NOT_OBSERVED"
+  },
+  "interpretation_boundary": "This operation tests runtime prediction variation only. It does not establish model quality, calibration, operational thresholds, or production decision policy."
+}

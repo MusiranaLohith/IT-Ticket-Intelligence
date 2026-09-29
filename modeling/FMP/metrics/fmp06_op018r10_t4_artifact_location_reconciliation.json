@@ -1,0 +1,167 @@
+{
+  "operation": "FMP-06 OP-018R10",
+  "operation_type": "T4_ARTIFACT_LOCATION_RECONCILIATION",
+  "status": "FOUND",
+  "t4_root": "modeling/T4",
+  "expected_artifacts": [
+    "t4_mod007_tfidf.joblib",
+    "t4_mod007_neighbors.joblib",
+    "t4_mod007_full_retrieval.npz"
+  ],
+  "exact_matches": {
+    "t4_mod007_tfidf.joblib": [
+      {
+        "path": "modeling/T4/results/mod007_checkpoints/t4_mod007_tfidf.joblib",
+        "size_bytes": 226595,
+        "sha256": "e451476d50c0fc0edb78c30b95b5acda706fd7730aef29042763433d77af680c"
+      }
+    ],
+    "t4_mod007_neighbors.joblib": [
+      {
+        "path": "modeling/T4/results/mod007_checkpoints/t4_mod007_neighbors.joblib",
+        "size_bytes": 52792287,
+        "sha256": "08197ced826034fb6265a6b3e94fab041175f1a523c8a93d8f326588c6d1806c"
+      }
+    ],
+    "t4_mod007_full_retrieval.npz": [
+      {
+        "path": "modeling/T4/results/mod007_checkpoints/t4_mod007_full_retrieval.npz",
+        "size_bytes": 4076925,
+        "sha256": "4182bcf03ae3061631d18eecf7c20fb246f3656acfef4a0208c2f9f6a8f15afb"
+      }
+    ]
+  },
+  "found_exact": [
+    "t4_mod007_tfidf.joblib",
+    "t4_mod007_neighbors.joblib",
+    "t4_mod007_full_retrieval.npz"
+  ],
+  "missing_exact": [],
+  "ambiguous_exact": [],
+  "all_serialized_t4_files": [
+    {
+      "path": "modeling/T4/results/mod007_checkpoints/t4_mod007_full_retrieval.npz",
+      "size_bytes": 4076925,
+      "sha256": "4182bcf03ae3061631d18eecf7c20fb246f3656acfef4a0208c2f9f6a8f15afb"
+    },
+    {
+      "path": "modeling/T4/results/mod007_checkpoints/t4_mod007_neighbors.joblib",
+      "size_bytes": 52792287,
+      "sha256": "08197ced826034fb6265a6b3e94fab041175f1a523c8a93d8f326588c6d1806c"
+    },
+    {
+      "path": "modeling/T4/results/mod007_checkpoints/t4_mod007_smoke_results.npz",
+      "size_bytes": 116673,
+      "sha256": "6d57fb6f107bd45f80a49477df66d4180491f60c2dc47f43023ba87a77ab7380"
+    },
+    {
+      "path": "modeling/T4/results/mod007_checkpoints/t4_mod007_tfidf.joblib",
+      "size_bytes": 226595,
+      "sha256": "e451476d50c0fc0edb78c30b95b5acda706fd7730aef29042763433d77af680c"
+    },
+    {
+      "path": "modeling/T4/results/mod011_checkpoints/t4_mod011_retrieval.npz",
+      "size_bytes": 4151643,
+      "sha256": "c38e07217e0b285bcf0fec5d3d168b7390a3811a4af71abd83dac90043b7a706"
+    },
+    {
+      "path": "modeling/T4/results/r1_checkpoints/t4_r1_linear_svc.joblib",
+      "size_bytes": 638805252,
+      "sha256": "f2148c98afcc0685c02d9f0cd2279cb88639ad5220444722e5aa6b1757ba6d9d"
+    },
+    {
+      "path": "modeling/T4/results/r1_checkpoints/t4_r1_tfidf.joblib",
+      "size_bytes": 226595,
+      "sha256": "94434ba93019b8c115b7367ee26e8be2c53ef11c32fdb746c3a72634eb550c8e"
+    },
+    {
+      "path": "modeling/T4/results/r1_checkpoints/t4_r1_topk_predictions.npz",
+      "size_bytes": 1838611,
+      "sha256": "2de14eab07874b3c422e9336a12f3f27a6fbaabe760b6fc67062fea84f775bed"
+    }
+  ],
+  "closure_reference_reconciliation": [
+    {
+      "referenced_name": "t4_r1_metrics.json",
+      "found": true,
+      "matches": [
+        {
+          "path": "modeling/T4/results/t4_r1_metrics.json",
+          "size_bytes": 1227,
+          "sha256": "197fd17f5ed4be75e4cdd642d1a7e17ad3f9ad3f0cd3acce642eaeaa9b5250bb"
+        }
+      ]
+    },
+    {
+      "referenced_name": "t4_mod007_full_results.json",
+      "found": true,
+      "matches": [
+        {
+          "path": "modeling/T4/results/t4_mod007_full_results.json",
+          "size_bytes": 3387,
+          "sha256": "b8c7e16b0a2a55b014215c836dbb5914cbd8c378c9f936d40d1081831b9b6568"
+        }
+      ]
+    },
+    {
+      "referenced_name": "t4_mod007_full_retrieval.npz",
+      "found": true,
+      "matches": [
+        {
+          "path": "modeling/T4/results/mod007_checkpoints/t4_mod007_full_retrieval.npz",
+          "size_bytes": 4076925,
+          "sha256": "4182bcf03ae3061631d18eecf7c20fb246f3656acfef4a0208c2f9f6a8f15afb"
+        }
+      ]
+    },
+    {
+      "referenced_name": "t4_mod007_neighbors.joblib",
+      "found": true,
+      "matches": [
+        {
+          "path": "modeling/T4/results/mod007_checkpoints/t4_mod007_neighbors.joblib",
+          "size_bytes": 52792287,
+          "sha256": "08197ced826034fb6265a6b3e94fab041175f1a523c8a93d8f326588c6d1806c"
+        }
+      ]
+    },
+    {
+      "referenced_name": "t4_mod007_tfidf.joblib",
+      "found": true,
+      "matches": [
+        {
+          "path": "modeling/T4/results/mod007_checkpoints/t4_mod007_tfidf.joblib",
+          "size_bytes": 226595,
+          "sha256": "e451476d50c0fc0edb78c30b95b5acda706fd7730aef29042763433d77af680c"
+        }
+      ]
+    },
+    {
+      "referenced_name": "t4_mod008_full.json",
+      "found": true,
+      "matches": [
+        {
+          "path": "modeling/T4/results/t4_mod008_full.json",
+          "size_bytes": 1336,
+          "sha256": "ef39df89815f9f0e9295f335c5763b107086b26d68196c98bf17c1947c325534"
+        }
+      ]
+    },
+    {
+      "referenced_name": "t4_mod011_full.json",
+      "found": true,
+      "matches": [
+        {
+          "path": "modeling/T4/results/t4_mod011_full.json",
+          "size_bytes": 3811,
+          "sha256": "a2e50edb0ef80f5a8cfb90d38ba5ca648b0199cf8e564315fe4224708373138d"
+        }
+      ]
+    }
+  ],
+  "runtime_execution": false,
+  "retraining": false,
+  "artifact_creation": false,
+  "artifact_modification": false,
+  "note": "Read-only artifact reconciliation. No T4 inference, fitting, retraining, or artifact creation was performed."
+}

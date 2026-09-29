@@ -1,0 +1,220 @@
+{
+  "operation": "FMP-02-OP-005",
+  "title": "Final Inference-Component Completeness Audit",
+  "read_only": true,
+  "prediction_generated": false,
+  "retraining_performed": false,
+  "evaluation_selection_performed": false,
+  "artifact_modified": false,
+  "tasks": {
+    "T2": {
+      "required_components": [
+        {
+          "label": "final_model",
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/models/t2_class_weighted_tfidf_logreg.joblib",
+          "exists": true,
+          "size_bytes": 14317753
+        },
+        {
+          "label": "closure",
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/analysis/t2_final_closure.json",
+          "exists": true,
+          "size_bytes": 6544
+        },
+        {
+          "label": "test_metrics",
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/analysis/t2_final_test_metrics.json",
+          "exists": true,
+          "size_bytes": 2588
+        }
+      ],
+      "missing_required_components": [],
+      "targeted_candidate_files": []
+    },
+    "T3": {
+      "required_components": [
+        {
+          "label": "final_model",
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib",
+          "exists": true,
+          "size_bytes": 17315561
+        },
+        {
+          "label": "closure",
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/analysis/t3_final_closure.json",
+          "exists": true,
+          "size_bytes": 3048
+        },
+        {
+          "label": "test_metrics",
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/metrics/t3_final_test_metrics.json",
+          "exists": true,
+          "size_bytes": 1493
+        }
+      ],
+      "missing_required_components": [],
+      "targeted_candidate_files": []
+    },
+    "T4": {
+      "required_components": [
+        {
+          "label": "mod007_tfidf",
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_tfidf.joblib",
+          "exists": true,
+          "size_bytes": 226595
+        },
+        {
+          "label": "mod007_neighbors",
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_neighbors.joblib",
+          "exists": true,
+          "size_bytes": 52792287
+        },
+        {
+          "label": "r1_tfidf",
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/r1_checkpoints/t4_r1_tfidf.joblib",
+          "exists": true,
+          "size_bytes": 226595
+        },
+        {
+          "label": "r1_linear_svc",
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/r1_checkpoints/t4_r1_linear_svc.joblib",
+          "exists": true,
+          "size_bytes": 638805252
+        },
+        {
+          "label": "closure",
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/t4_mod013_closure.json",
+          "exists": true,
+          "size_bytes": 6363
+        }
+      ],
+      "missing_required_components": [],
+      "targeted_candidate_files": []
+    },
+    "T5": {
+      "required_components": [
+        {
+          "label": "tfidf",
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod005_tfidf.joblib",
+          "exists": true,
+          "size_bytes": 4041055
+        },
+        {
+          "label": "logreg",
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod005_logreg.joblib",
+          "exists": true,
+          "size_bytes": 800891
+        },
+        {
+          "label": "calibrated_pipeline",
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod007_calibrated_tfidf.joblib",
+          "exists": true,
+          "size_bytes": 4041492
+        },
+        {
+          "label": "calibration_models",
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod007_calibration_models.joblib",
+          "exists": true,
+          "size_bytes": 802449
+        },
+        {
+          "label": "closure",
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod011_final_closure.json",
+          "exists": true,
+          "size_bytes": 5177
+        }
+      ],
+      "missing_required_components": [],
+      "targeted_candidate_files": []
+    },
+    "T6": {
+      "required_components": [
+        {
+          "label": "lexical_tfidf",
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/models/t6_mod004_tfidf_vectorizer.joblib",
+          "exists": true,
+          "size_bytes": 4235872
+        },
+        {
+          "label": "corrected_hybrid_results",
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod010_corrected_hybrid_results.json",
+          "exists": true,
+          "size_bytes": 6325
+        },
+        {
+          "label": "corrected_hybrid_rankings",
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod010_corrected_hybrid_query_rankings.csv",
+          "exists": true,
+          "size_bytes": 34283752
+        },
+        {
+          "label": "direct_score_reconciliation",
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod010_direct_score_reconciliation.json",
+          "exists": true,
+          "size_bytes": 1073
+        },
+        {
+          "label": "closure",
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_final_closure.json",
+          "exists": true,
+          "size_bytes": 5819
+        }
+      ],
+      "missing_required_components": [],
+      "targeted_candidate_files": [
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/logs/t6_mod008_semantic_failure_retrieval.log",
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod008_semantic_failure_rankings.csv",
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod008_semantic_failure_results.json",
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/scripts/t6_mod008_semantic_failure_retrieval.py",
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/scripts/t6_mod009_hybrid_lexical_semantic_retrieval.py"
+      ]
+    },
+    "T7": {
+      "required_components": [
+        {
+          "label": "lognormal_model_spec",
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod010_log_normal_aft_model.json",
+          "exists": true,
+          "size_bytes": 2899
+        },
+        {
+          "label": "weibull_model_spec",
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod007_weibull_aft_model.json",
+          "exists": true,
+          "size_bytes": 2985
+        },
+        {
+          "label": "final_model_comparison",
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod011_final_model_comparison_audit.json",
+          "exists": true,
+          "size_bytes": 2680
+        },
+        {
+          "label": "evaluation_predictions",
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/derived/t7_mod010_evaluation_predictions.csv",
+          "exists": true,
+          "size_bytes": 10097325
+        },
+        {
+          "label": "closure",
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod012_final_closure.json",
+          "exists": true,
+          "size_bytes": 4425
+        }
+      ],
+      "missing_required_components": [],
+      "targeted_candidate_files": [
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/contracts/t7_modeling_contract.json",
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/derived/t7_creation_time_modeling_dataset.csv",
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod007_weibull_aft_model.json",
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod010_log_normal_aft_audit.json",
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod010_log_normal_aft_model.json",
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod011_final_model_comparison.csv",
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod011_final_model_comparison_audit.json",
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/scripts/t7_mod003_build_modeling_dataset.py",
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/scripts/t7_mod010_log_normal_aft_baseline.py",
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/scripts/t7_mod011_final_model_comparison.py"
+      ]
+    }
+  }
+}

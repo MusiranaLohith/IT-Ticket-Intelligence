@@ -1,0 +1,33 @@
+{
+  "operation": "FMP-06 OP-018R5",
+  "operation_type": "T1_CORRECTED_FROZEN_RUNTIME_INFERENCE_PROBE",
+  "status": "PASS",
+  "artifact": "modeling/T1/baselines/t1_it_support_char_svm.joblib",
+  "input_source": "modeling/T1/derived/t1_dataset.csv",
+  "input_field": "text",
+  "input_available_rows": 2229,
+  "probe_rows": 3,
+  "feature_type": "sklearn.pipeline.FeatureUnion",
+  "model_type": "sklearn.svm._classes.LinearSVC",
+  "transformed_shape": [
+    3,
+    29096
+  ],
+  "prediction_count": 3,
+  "prediction_preview": [
+    "Software",
+    "O365",
+    "Support general"
+  ],
+  "safeguards": {
+    "inference_executed": true,
+    "fit_called": false,
+    "fit_transform_called": false,
+    "retraining": false,
+    "artifact_modification": false,
+    "threshold_selection": false,
+    "calibration_fitting": false,
+    "synthetic_input_created": false,
+    "synthetic_target_created": false
+  }
+}

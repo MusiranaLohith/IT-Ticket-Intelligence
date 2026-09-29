@@ -1,0 +1,82 @@
+{
+  "operation": "MOD-034 / OP-006",
+  "status": "PASS",
+  "population": 4716,
+  "t4_performance_by_conservative_t5_band": [
+    {
+      "t5_band": "<=0.01",
+      "n": 2957,
+      "t4_top1": 0.26445722015556306,
+      "t4_top5": 0.4020967196482922,
+      "t4_top20": 0.4957727426445722
+    },
+    {
+      "t5_band": "0.01-0.05",
+      "n": 1352,
+      "t4_top1": 0.14127218934911243,
+      "t4_top5": 0.2640532544378698,
+      "t4_top20": 0.3661242603550296
+    },
+    {
+      "t5_band": "0.05-0.10",
+      "n": 212,
+      "t4_top1": 0.06132075471698113,
+      "t4_top5": 0.1509433962264151,
+      "t4_top20": 0.2641509433962264
+    },
+    {
+      "t5_band": ">0.10",
+      "n": 195,
+      "t4_top1": 0.02564102564102564,
+      "t4_top5": 0.09743589743589744,
+      "t4_top20": 0.28717948717948716
+    }
+  ],
+  "t5_performance_by_t4_quartile": [
+    {
+      "t4_quartile": "Q1",
+      "n": 1179,
+      "positives": 14,
+      "positive_rate": 0.011874469889737066,
+      "roc_auc": 0.65340282035561,
+      "average_precision": 0.07252915282551547
+    },
+    {
+      "t4_quartile": "Q2",
+      "n": 1179,
+      "positives": 9,
+      "positive_rate": 0.007633587786259542,
+      "roc_auc": 0.6829059829059829,
+      "average_precision": 0.042287047633480984
+    },
+    {
+      "t4_quartile": "Q3",
+      "n": 1179,
+      "positives": 10,
+      "positive_rate": 0.008481764206955046,
+      "roc_auc": 0.7214713430282292,
+      "average_precision": 0.0320523595020775
+    },
+    {
+      "t4_quartile": "Q4",
+      "n": 1179,
+      "positives": 15,
+      "positive_rate": 0.01272264631043257,
+      "roc_auc": 0.8366552119129439,
+      "average_precision": 0.18133095471387115
+    }
+  ],
+  "robust_large_band_comparison": {
+    "low_band_n": 2957,
+    "mid_band_n": 1352,
+    "low_band_t4_top1": 0.26445722015556306,
+    "mid_band_t4_top1": 0.14127218934911243
+  },
+  "constraints": {
+    "sparse_upper_tail_used_for_primary_comparison": false,
+    "synthetic_target": false,
+    "fusion_score": false,
+    "causal_claim": false
+  },
+  "decision": "ROBUST_STRATIFICATION_CHECK_COMPLETE"
+}

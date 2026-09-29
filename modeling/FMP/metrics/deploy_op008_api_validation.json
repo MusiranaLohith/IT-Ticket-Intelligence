@@ -1,0 +1,136 @@
+{
+  "operation": "DEPLOY-OP-008",
+  "title": "API Boundary Validation Evidence",
+  "status": "PASS",
+  "scope": {
+    "purpose": "Record the completed DEPLOY-OP-007 API boundary validation as permanent deployment evidence.",
+    "inference_executed_by_this_operation": false,
+    "runtime_modified": false,
+    "models_modified": false,
+    "frozen_artifacts_modified": false
+  },
+  "validation": {
+    "total_tests": 8,
+    "passed": 8,
+    "failed": 0,
+    "validation_failures": 0,
+    "tests": [
+      {
+        "id": "TEST-01",
+        "name": "Missing required description",
+        "expected_http_status": 422,
+        "result": "PASS"
+      },
+      {
+        "id": "TEST-02",
+        "name": "Unknown extra field",
+        "expected_http_status": 422,
+        "result": "PASS"
+      },
+      {
+        "id": "TEST-03",
+        "name": "Empty required summary",
+        "expected_http_status": 422,
+        "result": "PASS"
+      },
+      {
+        "id": "TEST-04",
+        "name": "Valid ticket analysis",
+        "expected_http_status": 200,
+        "result": "PASS"
+      },
+      {
+        "id": "TEST-05",
+        "name": "T1-T11 preservation",
+        "expected": [
+          "T1",
+          "T2",
+          "T3",
+          "T4",
+          "T5",
+          "T6",
+          "T7",
+          "T8",
+          "T9",
+          "T10",
+          "T11"
+        ],
+        "result": "PASS"
+      },
+      {
+        "id": "TEST-06",
+        "name": "Critical task boundary semantics",
+        "validated": {
+          "T6": "PARTIAL_NATIVE_RUNTIME",
+          "T7": "EXECUTED_WITH_SUPPORT_LIMITATION",
+          "T10": "HUMAN_DECISION_REQUIRED",
+          "T11": "AWAITING_OUTCOME"
+        },
+        "result": "PASS"
+      },
+      {
+        "id": "TEST-07",
+        "name": "Absolute filesystem path leakage",
+        "absolute_project_path_exposed": false,
+        "result": "PASS"
+      },
+      {
+        "id": "TEST-08",
+        "name": "Integrity boundary",
+        "flags": {
+          "model_retraining": false,
+          "model_modification": false,
+          "threshold_optimization": false,
+          "locked_test_reuse": false,
+          "prediction_modification": false,
+          "synthetic_feedback": false
+        },
+        "result": "PASS"
+      }
+    ]
+  },
+  "api_boundary": {
+    "valid_request_status": 200,
+    "invalid_request_status": 422,
+    "t1_to_t11_preserved": true,
+    "critical_semantics_preserved": true,
+    "absolute_project_path_leakage": false
+  },
+  "runtime_semantics": {
+    "T6": "PARTIAL_NATIVE_RUNTIME",
+    "T7": "EXECUTED_WITH_SUPPORT_LIMITATION",
+    "T8": "SUPPORTED_WITH_LIMITATIONS",
+    "T9_universal_confidence": null,
+    "T9_universal_risk": null,
+    "T10_action": "HUMAN_DECISION_REQUIRED",
+    "T10_automation": "NOT_ESTABLISHED",
+    "T11_feedback": "AWAITING_OUTCOME",
+    "T11_synthetic_feedback": false
+  },
+  "integrity": {
+    "model_retraining": false,
+    "model_modification": false,
+    "threshold_optimization": false,
+    "locked_test_reuse": false,
+    "prediction_modification": false,
+    "synthetic_feedback": false
+  },
+  "maturity": {
+    "state": "RESEARCH_ENGINEERING_PROTOTYPE",
+    "production_ready": false,
+    "production_authorization": "NOT_ESTABLISHED",
+    "purpose": "Decision-support evidence, not autonomous operational ticket disposition."
+  },
+  "source_operations": [
+    "DEPLOY-OP-003",
+    "DEPLOY-OP-004",
+    "DEPLOY-OP-005",
+    "DEPLOY-OP-006",
+    "DEPLOY-OP-007"
+  ],
+  "source_evidence": {
+    "api_validation_script": "deployment/tests/deploy_op007_api_validation.py",
+    "application": "deployment/backend/app.py",
+    "packaged_runtime": "modeling/FMP/deployment/runtime/"
+  }
+}

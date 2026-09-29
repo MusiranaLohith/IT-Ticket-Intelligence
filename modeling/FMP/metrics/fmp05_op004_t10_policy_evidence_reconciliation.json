@@ -1,0 +1,285 @@
+{
+  "operation": "FMP-05-OP-004",
+  "operation_type": "READ_ONLY_T10_POLICY_EVIDENCE_RECONCILIATION",
+  "status": "PASS",
+  "artifact_status": {
+    "T2": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/analysis/t2_final_closure.json",
+        "exists": true
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/analysis/t2_final_test_metrics.json",
+        "exists": true
+      }
+    ],
+    "T3": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/analysis/t3_final_closure.json",
+        "exists": true
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/analysis/t3_locked_test_evaluation.json",
+        "exists": true
+      }
+    ],
+    "T4": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/t4_mod014_final_closure.json",
+        "exists": false
+      }
+    ],
+    "T5": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_final_closure.json",
+        "exists": false
+      }
+    ],
+    "T6": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_final_closure.json",
+        "exists": true
+      }
+    ],
+    "T7": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_final_closure.json",
+        "exists": false
+      }
+    ],
+    "T9": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/op015_final_integrated_closure.json",
+        "exists": false
+      }
+    ],
+    "T10_SOURCE": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/project_consolidation.py",
+        "exists": true
+      }
+    ]
+  },
+  "term_results": {
+    "T2": [
+      {
+        "artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/analysis/t2_final_closure.json",
+        "matches": [
+          {
+            "path": "system_role.decision",
+            "value": "SECONDARY_DECISION_SUPPORT_SIGNAL",
+            "matched_terms": [
+              "decision_support"
+            ]
+          },
+          {
+            "path": "limitations[4]",
+            "value": "The evidence does not justify treating the model as a fully autonomous priority assignment system.",
+            "matched_terms": [
+              "autonomous"
+            ]
+          },
+          {
+            "path": "limitations[5]",
+            "value": "A universal automated confidence threshold has not been empirically established.",
+            "matched_terms": [
+              "threshold"
+            ]
+          },
+          {
+            "path": "unsupported_claims[0]",
+            "value": "T2 does not support claiming highly accurate autonomous five-class priority assignment.",
+            "matched_terms": [
+              "autonomous"
+            ]
+          },
+          {
+            "path": "unsupported_claims[2]",
+            "value": "T2 does not support automatic action at a fixed confidence threshold without further empirical calibration and policy evaluation.",
+            "matched_terms": [
+              "threshold",
+              "calibration"
+            ]
+          },
+          {
+            "path": "final_conclusion",
+            "value": "Mozilla CORE is suitable for T2 priority-prediction modeling under the frozen Creation-time target and feature boundary. The final TF-IDF + Class-Weighted Logistic Regression model demonstrates measurable but limited predictive performance on the locked chronological test period. Because minority-class performance is weak and generalization degrades on the later period, T2 is closed as a supported secondary decision-support signal rather than an autonomous priority assignment component.",
+            "matched_terms": [
+              "autonomous"
+            ]
+          }
+        ]
+      },
+      {
+        "artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/analysis/t2_final_test_metrics.json",
+        "matches": []
+      }
+    ],
+    "T3": [
+      {
+        "artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/analysis/t3_final_closure.json",
+        "matches": [
+          {
+            "path": "system_role",
+            "value": "SECONDARY_DECISION_SUPPORT_SIGNAL",
+            "matched_terms": [
+              "decision_support"
+            ]
+          },
+          {
+            "path": "recommended_use",
+            "value": "Use T3 severity prediction as a secondary decision-support signal for downstream triage or human review. Do not treat the prediction as an autonomous or authoritative severity assignment.",
+            "matched_terms": [
+              "autonomous"
+            ]
+          },
+          {
+            "path": "closure_statement",
+            "value": "T3 — Severity Prediction is CLOSED as a SUPPORTED_WITH_LIMITATIONS secondary decision-support signal. The selected candidate is T3-MOD-008 under the pre-frozen macro-F1 criterion. Locked test evaluation and final generalization analysis are complete. The task is not treated as an autonomous severity assignment capability.",
+            "matched_terms": [
+              "autonomous"
+            ]
+          }
+        ]
+      },
+      {
+        "artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/analysis/t3_locked_test_evaluation.json",
+        "matches": []
+      }
+    ],
+    "T4": [],
+    "T5": [],
+    "T6": [
+      {
+        "artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_final_closure.json",
+        "matches": [
+          {
+            "path": "final_system_role",
+            "value": "SECONDARY_DECISION_SUPPORT_SIGNAL",
+            "matched_terms": [
+              "decision_support"
+            ]
+          },
+          {
+            "path": "final_evidence.mod007_bm25",
+            "value": "Alternative lexical retrieval comparison",
+            "matched_terms": [
+              "native"
+            ]
+          },
+          {
+            "path": "limitations[3]",
+            "value": "The evaluation measures ranking/retrieval performance within the frozen 101-candidate candidate pools.",
+            "matched_terms": [
+              "ranking"
+            ]
+          },
+          {
+            "path": "limitations[7]",
+            "value": "Retrieval output is a decision-support signal and does not by itself justify autonomous routing or human-review removal.",
+            "matched_terms": [
+              "autonomous"
+            ]
+          },
+          {
+            "path": "limitations[8]",
+            "value": "Ranking scores are not calibrated probabilities and no candidate-level probability interpretation is established.",
+            "matched_terms": [
+              "ranking",
+              "probability"
+            ]
+          },
+          {
+            "path": "limitations[9]",
+            "value": "No automation threshold has been established.",
+            "matched_terms": [
+              "automation",
+              "threshold"
+            ]
+          },
+          {
+            "path": "decision_statement",
+            "value": "T6 is closed as a supported-with-limitations secondary decision-support retrieval capability. The corrected 0.50 lexical / 0.50 semantic hybrid is retained as the final advanced retrieval candidate because its lexical component exactly reproduces the frozen MOD-004 baseline and its hybrid weight was selected using TRAIN only. The frozen EVAL population shows the documented retrieval metrics. These results do not establish exhaustive open-world duplicate retrieval, autonomous decision-making, calibrated probabilities, or removal of human review.",
+            "matched_terms": [
+              "autonomous"
+            ]
+          }
+        ]
+      }
+    ],
+    "T7": [],
+    "T9": []
+  },
+  "native_semantics": {
+    "T2": "task-specific priority classification/probability evidence",
+    "T3": "task-specific severity classification/probability evidence",
+    "T4": "historical assignee retrieval/ranking evidence",
+    "T5": "task-specific calibrated duplicate probability evidence",
+    "T6": "similar/duplicate-related ticket ranking evidence",
+    "T7": "right-censored survival/resolution-time evidence"
+  },
+  "policy_boundaries": {
+    "universal_confidence_score": false,
+    "universal_risk_score": false,
+    "arbitrary_cross_task_probability_fusion": false,
+    "synthetic_universal_target": false,
+    "autonomous_deployment_claim": false,
+    "unsupported_operational_threshold_claim": false,
+    "task_specific_semantics_preserved": true,
+    "missing_evidence_is_negative": false
+  },
+  "policy_support_matrix": {
+    "T2": {
+      "evidence_type": "probability/classification",
+      "automation": "NOT ESTABLISHED",
+      "human_review": "REQUIRES TASK-SPECIFIC VALIDATION",
+      "defer": "REQUIRES TASK-SPECIFIC VALIDATION",
+      "operational_threshold": "NOT VALIDATED"
+    },
+    "T3": {
+      "evidence_type": "probability/classification",
+      "automation": "NOT ESTABLISHED",
+      "human_review": "REQUIRES TASK-SPECIFIC VALIDATION",
+      "defer": "REQUIRES TASK-SPECIFIC VALIDATION",
+      "operational_threshold": "NOT VALIDATED"
+    },
+    "T4": {
+      "evidence_type": "ranking",
+      "automation": "NOT ESTABLISHED",
+      "human_review": "REQUIRES TASK-SPECIFIC VALIDATION",
+      "defer": "REQUIRES TASK-SPECIFIC VALIDATION",
+      "operational_threshold": "NOT VALIDATED"
+    },
+    "T5": {
+      "evidence_type": "calibrated probability",
+      "automation": "NOT ESTABLISHED",
+      "human_review": "REQUIRES TASK-SPECIFIC VALIDATION",
+      "defer": "REQUIRES TASK-SPECIFIC VALIDATION",
+      "operational_threshold": "NOT VALIDATED"
+    },
+    "T6": {
+      "evidence_type": "ranking",
+      "automation": "NOT ESTABLISHED",
+      "human_review": "REQUIRES TASK-SPECIFIC VALIDATION",
+      "defer": "REQUIRES TASK-SPECIFIC VALIDATION",
+      "operational_threshold": "NOT VALIDATED"
+    },
+    "T7": {
+      "evidence_type": "survival/right-censored",
+      "automation": "NOT ESTABLISHED",
+      "human_review": "REQUIRES TASK-SPECIFIC VALIDATION",
+      "defer": "REQUIRES TASK-SPECIFIC VALIDATION",
+      "operational_threshold": "NOT VALIDATED"
+    }
+  },
+  "interpretation": "Existing T10 material establishes a decision-support, non-autonomous policy boundary. T2-T7 evidence retains native task semantics. The existing evidence does not by itself establish validated operational automation, human-review, defer, or universal threshold boundaries. Those require task-specific empirical validation where such validation is supportable.",
+  "read_only_safeguards": {
+    "models_loaded": false,
+    "predictions_generated": false,
+    "retraining_performed": false,
+    "calibration_fitted": false,
+    "threshold_selected": false,
+    "policy_modified": false,
+    "artifacts_modified": false
+  }
+}

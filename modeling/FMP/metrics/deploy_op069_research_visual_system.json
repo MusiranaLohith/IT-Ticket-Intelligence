@@ -1,0 +1,66 @@
+{
+  "operation": "DEPLOY-OP-069",
+  "title": "Research View Visual System",
+  "status": "PASS",
+  "modified_files": [
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/style.css"
+  ],
+  "untouched_files": [
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/index.html",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/app.js",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/backend/app.py",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/deployment/runtime/ticket_pipeline.py",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/deployment/runtime/ticket_explanation.py"
+  ],
+  "scope": [
+    "Research View viewport",
+    "Research View header",
+    "Research section hierarchy",
+    "blue research accents",
+    "green result accents",
+    "amber limitation accents",
+    "Research navigation controls",
+    "Research footer",
+    "responsive Research View styling"
+  ],
+  "excluded": [
+    "HTML changes",
+    "JavaScript changes",
+    "API changes",
+    "backend changes",
+    "frozen runtime changes",
+    "model changes",
+    "T1-T11 semantic changes"
+  ],
+  "hashes_before": {
+    "index.html": "152795b3897e9c3444ca63fe3c01cfb81adbda83675ea8ed01109b2a6df77a6b",
+    "app.js": "8de847acd04c41f181cc4628009453c24d9a4852057bf9a863303abba8cc2675",
+    "style.css": "0b19b3c77a4e7a2514ccb84962bbc5f8c06f52e240d3ab2a8164429de5e0acfa"
+  },
+  "hashes_after": {
+    "index.html": "152795b3897e9c3444ca63fe3c01cfb81adbda83675ea8ed01109b2a6df77a6b",
+    "app.js": "8de847acd04c41f181cc4628009453c24d9a4852057bf9a863303abba8cc2675",
+    "style.css": "4daf4d1d56f0b61ab3586166e05a45887062e0f5c3dde7631ca611901d1926e6"
+  },
+  "checks": {
+    "OP069_MARKER": true,
+    "RESEARCH_VIEW_STATE": true,
+    "RESEARCH_OVERVIEW": true,
+    "RESEARCH_HEADER": true,
+    "RESEARCH_SECTION": true,
+    "RESEARCH_LABEL": true,
+    "RESEARCH_NAVIGATION": true,
+    "RESEARCH_FOOTER": true,
+    "GREEN_RESULT_ACCENT": true,
+    "AMBER_BOUNDARY_ACCENT": true,
+    "BLUE_RESEARCH_ACCENT": true,
+    "RESEARCH_RESPONSIVE": true,
+    "INDEX_UNCHANGED": true,
+    "APP_UNCHANGED": true,
+    "RESEARCH_HTML_PRESERVED": true,
+    "RESEARCH_JS_PRESERVED": true,
+    "API_PRESERVED": true,
+    "NO_TICKET_PIPELINE_FRONTEND": true,
+    "NO_SKLEARN_FRONTEND": true
+  }
+}

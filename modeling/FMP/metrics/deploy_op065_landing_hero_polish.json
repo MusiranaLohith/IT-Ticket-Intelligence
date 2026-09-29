@@ -1,0 +1,53 @@
+{
+  "operation": "DEPLOY-OP-065",
+  "title": "Landing Hero + Research Strip Polish",
+  "status": "PASS",
+  "scope": [
+    "hero heading clipping prevention",
+    "landing hero overflow safety",
+    "research strip stronger boundary",
+    "research strip translucent border",
+    "research strip depth",
+    "research strip internal dividers",
+    "responsive safety"
+  ],
+  "modified_files": [
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/style.css"
+  ],
+  "backup": [
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/style.css.before-deploy-op065"
+  ],
+  "untouched": [
+    "deployment/frontend/index.html",
+    "deployment/frontend/app.js",
+    "deployment/backend/app.py",
+    "frozen deployment runtime",
+    "frozen modeling artifacts",
+    "T1-T11 semantics",
+    "single-ticket API contract",
+    "batch API contract"
+  ],
+  "hashes": {
+    "before": "cb16e5a7b7292990a5e339e3bcb41aea43063ee6a084a9771fbd23231ea03cf3",
+    "after": "0b19b3c77a4e7a2514ccb84962bbc5f8c06f52e240d3ab2a8164429de5e0acfa"
+  },
+  "checks": {
+    "OP065_MARKER": true,
+    "LANDING_OVERFLOW_SAFE": true,
+    "LANDING_INNER_OVERFLOW_SAFE": true,
+    "HERO_LINE_HEIGHT": true,
+    "HERO_PADDING": true,
+    "HERO_OVERFLOW": true,
+    "RESEARCH_STRIP_BORDER": true,
+    "RESEARCH_STRIP_TRANSPARENCY": true,
+    "RESEARCH_STRIP_DEPTH": true,
+    "RESEARCH_INTERNAL_DIVIDERS": true,
+    "RESPONSIVE_RULES": true,
+    "OP057_PRESERVED": true,
+    "OP058_PRESERVED": true,
+    "OP059_PRESERVED": true,
+    "OP060_PRESERVED": true,
+    "OP061_PRESERVED": true,
+    "OP064_PRESERVED": true
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "status": "GROUP_INTEGRITY_CHECK_COMPLETE",
+  "input": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/splits/t1_split.csv",
+  "summary": {
+    "total_records": 2229,
+    "development_records": 1783,
+    "evaluation_records": 446,
+    "normalized_text_groups": 1471,
+    "repeated_normalized_text_groups": 87,
+    "cross_split_groups": 0,
+    "cross_split_integrity_valid": true
+  },
+  "checked_ids": [
+    {
+      "id": "888",
+      "text": "[TICKET ID] - New Support Ticket received  - acesso",
+      "normalized_text": "[ticket id] - new support ticket received - acesso",
+      "category_truth": "Active Directory",
+      "source_partition": "test",
+      "modeling_split": "evaluation"
+    },
+    {
+      "id": "892",
+      "text": "[TICKET ID] - New Support Ticket received  - Acesso",
+      "normalized_text": "[ticket id] - new support ticket received - acesso",
+      "category_truth": "Active Directory",
+      "source_partition": "test",
+      "modeling_split": "evaluation"
+    },
+    {
+      "id": "976",
+      "text": "[TICKET ID] - New Support Ticket received  - acesso",
+      "normalized_text": "[ticket id] - new support ticket received - acesso",
+      "category_truth": "Active Directory",
+      "source_partition": "train",
+      "modeling_split": "evaluation"
+    },
+    {
+      "id": "997",
+      "text": "[TICKET ID] - New Support Ticket received  - Acesso",
+      "normalized_text": "[ticket id] - new support ticket received - acesso",
+      "category_truth": "Fileservice",
+      "source_partition": "train",
+      "modeling_split": "evaluation"
+    },
+    {
+      "id": "1260",
+      "text": "[TICKET ID] - New Support Ticket received  - Acesso",
+      "normalized_text": "[ticket id] - new support ticket received - acesso",
+      "category_truth": "Active Directory",
+      "source_partition": "train",
+      "modeling_split": "evaluation"
+    }
+  ],
+  "checked_id_groups": [
+    {
+      "normalized_text": "[ticket id] - new support ticket received - acesso",
+      "records": [
+        {
+          "id": "976",
+          "modeling_split": "evaluation",
+          "category_truth": "Active Directory",
+          "source_partition": "train"
+        },
+        {
+          "id": "997",
+          "modeling_split": "evaluation",
+          "category_truth": "Fileservice",
+          "source_partition": "train"
+        },
+        {
+          "id": "1260",
+          "modeling_split": "evaluation",
+          "category_truth": "Active Directory",
+          "source_partition": "train"
+        },
+        {
+          "id": "888",
+          "modeling_split": "evaluation",
+          "category_truth": "Active Directory",
+          "source_partition": "test"
+        },
+        {
+          "id": "892",
+          "modeling_split": "evaluation",
+          "category_truth": "Active Directory",
+          "source_partition": "test"
+        }
+      ]
+    }
+  ],
+  "cross_split_groups": [],
+  "raw_source_modified": false,
+  "split_modified": false,
+  "labels_modified": false
+}

@@ -1,0 +1,179 @@
+{
+  "operation": "DEPLOY-OP-003",
+  "title": "API/Application Boundary Contract",
+  "status": "CONTRACT_DEFINED",
+  "project_root": "/home/whiteblack/Documents/IT-Ticket-Triage-System",
+  "deployment_root": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/deployment",
+  "runtime_root": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/deployment/runtime",
+  "frozen_runtime_policy": {
+    "runtime_is_frozen": true,
+    "runtime_files": [
+      "runtime/ticket_pipeline.py",
+      "runtime/ticket_explanation.py"
+    ],
+    "application_layer_may_wrap_runtime": true,
+    "application_layer_must_not_duplicate_model_logic": true,
+    "application_layer_must_not_modify_runtime": true,
+    "application_layer_must_not_retrain": true,
+    "application_layer_must_not_recalibrate": true,
+    "application_layer_must_not_reoptimize_thresholds": true
+  },
+  "input_contract": {
+    "required_fields": [
+      "ticket_id",
+      "creation_time",
+      "creator",
+      "creator_detail",
+      "summary",
+      "description"
+    ],
+    "additional_fields_policy": "REJECT_OR_EXPLICITLY_CONTROL; DO_NOT_SILENTLY_INTERPRET",
+    "validation_owner": "API_APPLICATION_LAYER",
+    "runtime_input_type": "dict[str, Any]"
+  },
+  "endpoints": {
+    "health": {
+      "method": "GET",
+      "path": "/health",
+      "purpose": "Report application and packaged-runtime availability.",
+      "must_not_execute_ticket_prediction": true
+    },
+    "analyze_ticket": {
+      "method": "POST",
+      "path": "/tickets/analyze",
+      "purpose": "Validate a public ticket payload, execute the frozen TicketPipeline, generate TicketExplanation output, and return stable ticket-facing evidence.",
+      "runtime_call": "TicketPipeline.predict(ticket)",
+      "explanation_call": "TicketExplanation.explain(result)"
+    }
+  },
+  "response_contract": {
+    "analyze_ticket": {
+      "required_top_level_sections": [
+        "ticket",
+        "tasks",
+        "final",
+        "integrity",
+        "explanation"
+      ],
+      "tasks_required": [
+        "T1",
+        "T2",
+        "T3",
+        "T4",
+        "T5",
+        "T6",
+        "T7",
+        "T8",
+        "T9",
+        "T10",
+        "T11"
+      ],
+      "preserve_runtime_semantics": true,
+      "preserve_task_specific_fields": true,
+      "preserve_integrity_flags": true,
+      "preserve_ticket_explanation": true
+    }
+  },
+  "task_semantics": {
+    "T1": "Category prediction",
+    "T2": "Priority prediction",
+    "T3": "Severity prediction",
+    "T4": "Historical assignee retrieval evidence",
+    "T5": "Duplicate evidence",
+    "T6": "Related-ticket retrieval evidence with native runtime limitation preserved",
+    "T7": "Resolution-time evidence with temporal-support limitation preserved",
+    "T8": "Evidence integration",
+    "T9": "Reliability/evidence boundary",
+    "T10": "Decision/policy boundary",
+    "T11": "Lifecycle/feedback state"
+  },
+  "mandatory_boundary_semantics": {
+    "T6": {
+      "required": true,
+      "full_mod010_hybrid_may_not_be_fabricated": true,
+      "new_ticket_semantic_score_may_not_be_invented": true
+    },
+    "T7": {
+      "required": true,
+      "temporal_support_limitation_must_be_preserved": true,
+      "out_of_training_range_must_not_be_silently_hidden": true
+    },
+    "T8": {
+      "required": true,
+      "missing_evidence_is_not_negative": true,
+      "native_evidence_semantics_must_be_preserved": true
+    },
+    "T9": {
+      "required": true,
+      "universal_confidence_must_not_be_created": true,
+      "universal_risk_must_not_be_created": true,
+      "cross_task_probability_aggregation_must_not_be_created": true
+    },
+    "T10": {
+      "required": true,
+      "human_decision_required_must_be_preserved": true,
+      "automation_must_remain_not_established": true,
+      "universal_threshold_must_not_be_invented": true
+    },
+    "T11": {
+      "required": true,
+      "awaiting_outcome_semantics_must_be_preserved": true,
+      "synthetic_feedback_must_not_be_created": true
+    }
+  },
+  "artifact_path_policy": {
+    "runtime_may_return_internal_artifact_paths": true,
+    "absolute_filesystem_paths_must_not_be_exposed_to_clients": true,
+    "frozen_runtime_must_not_be_modified_to_remove_paths": true,
+    "api_layer_must_sanitize_or_transform_internal_paths": true,
+    "client_facing_artifact_reference_policy": "Expose stable non-sensitive artifact identifiers or omit internal filesystem locations."
+  },
+  "prohibited_application_behavior": [
+    "Do not duplicate T1-T11 model logic in FastAPI.",
+    "Do not create universal confidence.",
+    "Do not create universal risk.",
+    "Do not invent automation thresholds.",
+    "Do not invent human-review thresholds.",
+    "Do not fabricate T6 semantic scores for genuinely new tickets.",
+    "Do not hide T7 temporal-support limitations.",
+    "Do not interpret missing evidence as negative evidence.",
+    "Do not create synthetic feedback.",
+    "Do not modify frozen model artifacts.",
+    "Do not retrain frozen models.",
+    "Do not recalibrate frozen models.",
+    "Do not optimize thresholds during deployment.",
+    "Do not claim production authorization."
+  ],
+  "persistence": {
+    "postgresql_selected": false,
+    "reason": "Persistence has not yet been justified by an identified deployment requirement. No history endpoint is defined until persistence is explicitly selected."
+  },
+  "health_contract": {
+    "status_values": [
+      "OK",
+      "DEGRADED",
+      "ERROR"
+    ],
+    "minimum_information": [
+      "application availability",
+      "packaged runtime availability"
+    ],
+    "must_not_claim": [
+      "production authorization",
+      "model quality",
+      "business performance",
+      "autonomous operational readiness"
+    ]
+  },
+  "maturity_boundary": {
+    "current_state": "RESEARCH_ENGINEERING_PROTOTYPE",
+    "production_ready": false,
+    "production_authorization": "NOT_ESTABLISHED",
+    "purpose": "Decision-support evidence, not autonomous ticket disposition."
+  },
+  "contract_proof": {
+    "source_runtime_contract": "DEPLOY-OP-002 packaged TicketPipeline/TicketExplanation inspection",
+    "source_runtime_validation": "H-RUN-026-OP-005 packaged deployment runtime validation",
+    "design_rule": "The application layer wraps the frozen runtime without changing its modeling semantics."
+  }
+}

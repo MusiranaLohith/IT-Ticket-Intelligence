@@ -1,0 +1,229 @@
+{
+  "operation": "FMP-06 OP-018R23",
+  "status": "PASS",
+  "read_only": true,
+  "training": false,
+  "fitting": false,
+  "prediction": false,
+  "evaluation": false,
+  "locked_test": false,
+  "artifact_modification": false,
+  "files": {
+    "modeling/T7/metrics/t7_mod012_final_closure.json": {
+      "exists": true,
+      "size_bytes": 4425,
+      "top_level_type": "dict",
+      "top_level_keys": [
+        "task",
+        "operation",
+        "status",
+        "closure_type",
+        "task_definition",
+        "population",
+        "data_boundary",
+        "chronological_split",
+        "survival_baselines",
+        "predictive_models",
+        "final_comparison",
+        "calibration",
+        "supported_role",
+        "limitations",
+        "evidence_chain",
+        "final_project_status",
+        "source_evidence"
+      ],
+      "relevant_paths": [
+        "$.task_definition.prediction_boundary",
+        "$.task_definition.event_definition",
+        "$.task_definition.censoring_definition",
+        "$.task_definition.censoring_treated_as",
+        "$.population.evaluation_event_count",
+        "$.population.evaluation_censor_count",
+        "$.data_boundary.prediction_boundary",
+        "$.data_boundary.creation_only_features",
+        "$.predictive_models",
+        "$.predictive_models.weibull_aft",
+        "$.predictive_models.lognormal_aft",
+        "$.final_comparison.lognormal_minus_weibull_cindex",
+        "$.final_comparison.lognormal_horizons_better_than_km",
+        "$.final_comparison.lognormal_horizons_better_than_weibull",
+        "$.final_project_status.T7_modeling"
+      ],
+      "compact_relevant_content": {
+        "predictive_models": {
+          "weibull_aft": {},
+          "lognormal_aft": {}
+        }
+      }
+    },
+    "modeling/T7/metrics/t7_mod011_final_model_comparison_audit.json": {
+      "exists": true,
+      "size_bytes": 2680,
+      "top_level_type": "dict",
+      "top_level_keys": [
+        "task",
+        "operation",
+        "status",
+        "operation_purpose",
+        "raw_archive_access",
+        "model_refitting",
+        "new_feature_engineering",
+        "evaluation_population",
+        "models_compared",
+        "source_schema",
+        "weibull_aft",
+        "lognormal_aft",
+        "kaplan_meier_reference",
+        "comparison",
+        "evidence_statement",
+        "interpretation_boundary",
+        "artifacts"
+      ],
+      "relevant_paths": [
+        "$.model_refitting",
+        "$.new_feature_engineering",
+        "$.models_compared",
+        "$.weibull_aft",
+        "$.lognormal_aft",
+        "$.comparison.lognormal_minus_weibull_cindex",
+        "$.comparison.lognormal_horizons_better_than_km",
+        "$.comparison.lognormal_horizons_better_than_weibull"
+      ],
+      "compact_relevant_content": {
+        "model_refitting": false,
+        "new_feature_engineering": false,
+        "models_compared": [
+          "Kaplan-Meier reference",
+          "Weibull AFT",
+          "Log-Normal AFT"
+        ],
+        "weibull_aft": {},
+        "lognormal_aft": {}
+      }
+    },
+    "modeling/T7/metrics/t7_mod010_log_normal_aft_model.json": {
+      "exists": true,
+      "size_bytes": 2899,
+      "top_level_type": "dict",
+      "top_level_keys": [
+        "model_type",
+        "l2",
+        "sigma",
+        "beta",
+        "feature_names",
+        "standardization_mean",
+        "standardization_std",
+        "optimization"
+      ],
+      "relevant_paths": [
+        "$.model_type",
+        "$.sigma",
+        "$.beta.creation_year_scaled",
+        "$.feature_names"
+      ],
+      "compact_relevant_content": {
+        "model_type": "LogNormal_AFT",
+        "sigma": 16.259349942778254,
+        "feature_names": {
+          "type": "list",
+          "length": 21,
+          "first_items": [
+            "creator_frequency_log1p",
+            "creator_detail_frequency_log1p",
+            "summary_chars_log1p"
+          ]
+        }
+      }
+    }
+  },
+  "source_model_signals": {
+    "modeling/T7/scripts/t7_mod003_duplicate_feature_diagnostic.py": {
+      "predict_survival_function": false,
+      "predict_expectation": false,
+      "predict_median": false,
+      "coefficients": false,
+      "formula": false,
+      "fit": false
+    },
+    "modeling/T7/scripts/t7_mod004_feature_temporal_split_audit.py": {
+      "predict_survival_function": false,
+      "predict_expectation": false,
+      "predict_median": false,
+      "coefficients": false,
+      "formula": false,
+      "fit": false
+    },
+    "modeling/T7/scripts/t7_mod005_freeze_chronological_split.py": {
+      "predict_survival_function": false,
+      "predict_expectation": false,
+      "predict_median": false,
+      "coefficients": false,
+      "formula": false,
+      "fit": false
+    },
+    "modeling/T7/scripts/t7_mod006_survival_baselines.py": {
+      "predict_survival_function": false,
+      "predict_expectation": false,
+      "predict_median": false,
+      "coefficients": false,
+      "formula": false,
+      "fit": false
+    },
+    "modeling/T7/scripts/t7_mod007_predictive_survival_baseline.py": {
+      "predict_survival_function": false,
+      "predict_expectation": false,
+      "predict_median": false,
+      "coefficients": false,
+      "formula": false,
+      "fit": true
+    },
+    "modeling/T7/scripts/t7_mod008_predictive_vs_reference_evaluation.py": {
+      "predict_survival_function": false,
+      "predict_expectation": false,
+      "predict_median": false,
+      "coefficients": false,
+      "formula": false,
+      "fit": false
+    },
+    "modeling/T7/scripts/t7_mod010_log_normal_aft_baseline.py": {
+      "predict_survival_function": false,
+      "predict_expectation": false,
+      "predict_median": false,
+      "coefficients": false,
+      "formula": true,
+      "fit": true
+    },
+    "modeling/T7/scripts/t7_mod011_final_model_comparison.py": {
+      "predict_survival_function": false,
+      "predict_expectation": false,
+      "predict_median": false,
+      "coefficients": false,
+      "formula": true,
+      "fit": false
+    },
+    "modeling/T7/scripts/t7_mod012_final_closure.py": {
+      "predict_survival_function": false,
+      "predict_expectation": false,
+      "predict_median": false,
+      "coefficients": false,
+      "formula": false,
+      "fit": false
+    },
+    "modeling/T7/scripts/t7_mod013_generate_visualizations.py": {
+      "predict_survival_function": false,
+      "predict_expectation": false,
+      "predict_median": false,
+      "coefficients": false,
+      "formula": false,
+      "fit": false
+    }
+  },
+  "binding_summary": {
+    "lognormal_evidence": true,
+    "aft_evidence": true,
+    "coefficient_evidence": true,
+    "feature_evidence": true,
+    "prediction_interface_evidence": true,
+    "parameter_artifact_candidate": true
+  }
+}

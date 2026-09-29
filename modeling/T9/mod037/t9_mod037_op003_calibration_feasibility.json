@@ -1,0 +1,1157 @@
+{
+  "operation": "T9_MOD-037_OP-003",
+  "title": "Calibration / Evaluation Population Feasibility",
+  "status": "PASS",
+  "purpose": "Determine whether existing native T2-T7 outputs have admissible evaluation populations and outcome structures for later task-specific T9 calibration/evaluation.",
+  "project_root": "/home/whiteblack/Documents/IT-Ticket-Triage-System",
+  "expected_authoritative_populations": {
+    "T2": 29498,
+    "T3": 30839,
+    "T4": 178127,
+    "T5": 513816,
+    "T6": 274922,
+    "T7": 513816
+  },
+  "candidate_paths": {
+    "T2": [
+      "modeling/T2/analysis/t2_baseline_validation_predictions.csv",
+      "modeling/T2/analysis/t2_final_test_predictions.csv"
+    ],
+    "T3": [],
+    "T4": [
+      "modeling/T4/results/mod011_checkpoints/t4_mod011_retrieval.npz",
+      "modeling/T4/results/mod007_checkpoints/t4_mod007_full_retrieval.npz",
+      "modeling/T4/results/r1_checkpoints/t4_r1_topk_predictions.npz"
+    ],
+    "T5": [
+      "modeling/T5/metrics/t5_mod005_validation_predictions.npz",
+      "modeling/T5/metrics/t5_mod007_calibrated_validation_predictions.npz",
+      "modeling/T5/metrics/t5_mod009_locked_evaluation_predictions.npz"
+    ],
+    "T6": [
+      "modeling/T6/metrics/t6_mod004_query_rankings.csv",
+      "modeling/T6/metrics/t6_mod007_bm25_query_rankings.csv",
+      "modeling/T6/metrics/t6_mod008_semantic_failure_rankings.csv",
+      "modeling/T6/metrics/t6_mod009_hybrid_query_rankings.csv",
+      "modeling/T6/metrics/t6_mod010_corrected_hybrid_query_rankings.csv"
+    ],
+    "T7": [
+      "modeling/T7/derived/t7_mod007_evaluation_predictions.csv",
+      "modeling/T7/derived/t7_mod010_evaluation_predictions.csv"
+    ]
+  },
+  "inspected_artifacts": {
+    "T2": [
+      {
+        "path": "modeling/T2/analysis/t2_baseline_validation_predictions.csv",
+        "format": "csv",
+        "exists": true,
+        "status": "PASS",
+        "rows": 4425,
+        "columns": [
+          "ID",
+          "target_priority",
+          "predicted_priority",
+          "correct"
+        ],
+        "column_count": 4,
+        "unique_IDs": 4425,
+        "duplicate_IDs": 0,
+        "has_target_priority": true,
+        "probability_columns": [],
+        "prediction_columns": [
+          "predicted_priority"
+        ],
+        "locked_test_candidate": false
+      },
+      {
+        "path": "modeling/T2/analysis/t2_final_test_predictions.csv",
+        "format": "csv",
+        "exists": true,
+        "status": "PASS",
+        "rows": 4425,
+        "columns": [
+          "ID",
+          "Creation time",
+          "actual_priority",
+          "predicted_priority"
+        ],
+        "column_count": 4,
+        "unique_IDs": 4425,
+        "duplicate_IDs": 0,
+        "has_target_priority": false,
+        "probability_columns": [],
+        "prediction_columns": [
+          "predicted_priority"
+        ],
+        "locked_test_candidate": true
+      }
+    ],
+    "T3": [],
+    "T4": [
+      {
+        "path": "modeling/T4/results/mod011_checkpoints/t4_mod011_retrieval.npz",
+        "format": "npz",
+        "exists": true,
+        "status": "PASS",
+        "keys": [
+          "neighbor_indices",
+          "neighbor_scores"
+        ],
+        "key_summaries": {
+          "neighbor_indices": {
+            "shape": [
+              35626,
+              20
+            ],
+            "dtype": "int32",
+            "size": 712520
+          },
+          "neighbor_scores": {
+            "shape": [
+              35626,
+              20
+            ],
+            "dtype": "float32",
+            "size": 712520
+          }
+        }
+      },
+      {
+        "path": "modeling/T4/results/mod007_checkpoints/t4_mod007_full_retrieval.npz",
+        "format": "npz",
+        "exists": true,
+        "status": "PASS",
+        "keys": [
+          "neighbor_indices",
+          "neighbor_similarities"
+        ],
+        "key_summaries": {
+          "neighbor_indices": {
+            "shape": [
+              35626,
+              20
+            ],
+            "dtype": "int32",
+            "size": 712520
+          },
+          "neighbor_similarities": {
+            "shape": [
+              35626,
+              20
+            ],
+            "dtype": "float32",
+            "size": 712520
+          }
+        }
+      },
+      {
+        "path": "modeling/T4/results/r1_checkpoints/t4_r1_topk_predictions.npz",
+        "format": "npz",
+        "exists": true,
+        "status": "ERROR",
+        "keys": [
+          "top_indices",
+          "top_scores",
+          "candidate_labels"
+        ],
+        "error": "ValueError('Object arrays cannot be loaded when allow_pickle=False')"
+      }
+    ],
+    "T5": [
+      {
+        "path": "modeling/T5/metrics/t5_mod005_validation_predictions.npz",
+        "format": "npz",
+        "exists": true,
+        "status": "PASS",
+        "keys": [
+          "y_true",
+          "p_duplicate",
+          "y_pred_0_5"
+        ],
+        "key_summaries": {
+          "y_true": {
+            "shape": [
+              74091
+            ],
+            "dtype": "int8",
+            "size": 74091
+          },
+          "p_duplicate": {
+            "shape": [
+              74091
+            ],
+            "dtype": "float64",
+            "size": 74091
+          },
+          "y_pred_0_5": {
+            "shape": [
+              74091
+            ],
+            "dtype": "int8",
+            "size": 74091
+          }
+        }
+      },
+      {
+        "path": "modeling/T5/metrics/t5_mod007_calibrated_validation_predictions.npz",
+        "format": "npz",
+        "exists": true,
+        "status": "PASS",
+        "keys": [
+          "y_true",
+          "p_base",
+          "p_sigmoid",
+          "p_isotonic"
+        ],
+        "key_summaries": {
+          "y_true": {
+            "shape": [
+              74091
+            ],
+            "dtype": "int8",
+            "size": 74091
+          },
+          "p_base": {
+            "shape": [
+              74091
+            ],
+            "dtype": "float64",
+            "size": 74091
+          },
+          "p_sigmoid": {
+            "shape": [
+              74091
+            ],
+            "dtype": "float64",
+            "size": 74091
+          },
+          "p_isotonic": {
+            "shape": [
+              74091
+            ],
+            "dtype": "float64",
+            "size": 74091
+          }
+        }
+      },
+      {
+        "path": "modeling/T5/metrics/t5_mod009_locked_evaluation_predictions.npz",
+        "format": "npz",
+        "exists": true,
+        "status": "PASS",
+        "keys": [
+          "y_true",
+          "p_duplicate",
+          "p_base"
+        ],
+        "key_summaries": {
+          "y_true": {
+            "shape": [
+              20827
+            ],
+            "dtype": "int8",
+            "size": 20827
+          },
+          "p_duplicate": {
+            "shape": [
+              20827
+            ],
+            "dtype": "float64",
+            "size": 20827
+          },
+          "p_base": {
+            "shape": [
+              20827
+            ],
+            "dtype": "float64",
+            "size": 20827
+          }
+        }
+      }
+    ],
+    "T6": [
+      {
+        "path": "modeling/T6/metrics/t6_mod004_query_rankings.csv",
+        "format": "csv",
+        "exists": true,
+        "status": "PASS",
+        "rows": 2722,
+        "columns": [
+          "split",
+          "query_id",
+          "positive_candidate_id",
+          "positive_rank",
+          "top_candidate_id",
+          "top_candidate_role",
+          "top_score",
+          "positive_score"
+        ],
+        "column_count": 8,
+        "query_like_columns": [
+          "query_id"
+        ],
+        "candidate_like_columns": [
+          "positive_candidate_id",
+          "top_candidate_id",
+          "top_candidate_role"
+        ],
+        "score_like_columns": [
+          "positive_rank",
+          "top_score",
+          "positive_score"
+        ]
+      },
+      {
+        "path": "modeling/T6/metrics/t6_mod007_bm25_query_rankings.csv",
+        "format": "csv",
+        "exists": true,
+        "status": "PASS",
+        "rows": 2722,
+        "columns": [
+          "split",
+          "query_id",
+          "query_creation_time",
+          "positive_candidate_id",
+          "positive_rank",
+          "top_candidate_id",
+          "top_candidate_role",
+          "top_score",
+          "positive_score",
+          "score_gap_top1_minus_positive",
+          "query_token_count"
+        ],
+        "column_count": 11,
+        "query_like_columns": [
+          "query_id",
+          "query_creation_time",
+          "query_token_count"
+        ],
+        "candidate_like_columns": [
+          "positive_candidate_id",
+          "top_candidate_id",
+          "top_candidate_role"
+        ],
+        "score_like_columns": [
+          "positive_rank",
+          "top_score",
+          "positive_score",
+          "score_gap_top1_minus_positive"
+        ]
+      },
+      {
+        "path": "modeling/T6/metrics/t6_mod008_semantic_failure_rankings.csv",
+        "format": "csv",
+        "exists": true,
+        "status": "PASS",
+        "rows": 173,
+        "columns": [
+          "split",
+          "query_id",
+          "positive_candidate_id",
+          "original_tfidf_rank",
+          "semantic_positive_rank",
+          "semantic_top_candidate_id",
+          "semantic_top_score",
+          "semantic_positive_score",
+          "semantic_score_gap_top1_minus_positive"
+        ],
+        "column_count": 9,
+        "query_like_columns": [
+          "query_id"
+        ],
+        "candidate_like_columns": [
+          "positive_candidate_id",
+          "semantic_top_candidate_id"
+        ],
+        "score_like_columns": [
+          "original_tfidf_rank",
+          "semantic_positive_rank",
+          "semantic_top_score",
+          "semantic_positive_score",
+          "semantic_score_gap_top1_minus_positive"
+        ]
+      },
+      {
+        "path": "modeling/T6/metrics/t6_mod009_hybrid_query_rankings.csv",
+        "format": "csv",
+        "exists": true,
+        "status": "PASS",
+        "rows": 274922,
+        "columns": [
+          "split",
+          "query_id",
+          "candidate_id",
+          "target_observed",
+          "tfidf_score",
+          "semantic_score",
+          "tfidf_score_normalized",
+          "semantic_score_normalized",
+          "hybrid_score"
+        ],
+        "column_count": 9,
+        "query_like_columns": [
+          "query_id"
+        ],
+        "candidate_like_columns": [
+          "candidate_id"
+        ],
+        "score_like_columns": [
+          "tfidf_score",
+          "semantic_score",
+          "tfidf_score_normalized",
+          "semantic_score_normalized",
+          "hybrid_score"
+        ]
+      },
+      {
+        "path": "modeling/T6/metrics/t6_mod010_corrected_hybrid_query_rankings.csv",
+        "format": "csv",
+        "exists": true,
+        "status": "PASS",
+        "rows": 274922,
+        "columns": [
+          "split",
+          "query_id",
+          "candidate_id",
+          "target_observed",
+          "semantic_score",
+          "tfidf_score",
+          "tfidf_score_normalized",
+          "semantic_score_normalized",
+          "hybrid_score"
+        ],
+        "column_count": 9,
+        "query_like_columns": [
+          "query_id"
+        ],
+        "candidate_like_columns": [
+          "candidate_id"
+        ],
+        "score_like_columns": [
+          "semantic_score",
+          "tfidf_score",
+          "tfidf_score_normalized",
+          "semantic_score_normalized",
+          "hybrid_score"
+        ]
+      }
+    ],
+    "T7": [
+      {
+        "path": "modeling/T7/derived/t7_mod007_evaluation_predictions.csv",
+        "format": "csv",
+        "exists": true,
+        "status": "PASS",
+        "rows": 102764,
+        "columns": [
+          "ID",
+          "duration_seconds",
+          "event",
+          "predicted_median_survival_seconds",
+          "survival_probability_at_211583_seconds",
+          "survival_probability_at_1780179_seconds",
+          "survival_probability_at_14608619_seconds"
+        ],
+        "column_count": 7,
+        "unique_IDs": 102764,
+        "duplicate_IDs": 0,
+        "has_survival_outcomes": true,
+        "has_survival_prediction": true
+      },
+      {
+        "path": "modeling/T7/derived/t7_mod010_evaluation_predictions.csv",
+        "format": "csv",
+        "exists": true,
+        "status": "PASS",
+        "rows": 102764,
+        "columns": [
+          "ID",
+          "duration_seconds",
+          "event",
+          "predicted_median_survival_seconds",
+          "survival_probability_at_211583_seconds",
+          "survival_probability_at_1780179_seconds",
+          "survival_probability_at_14608619_seconds"
+        ],
+        "column_count": 7,
+        "unique_IDs": 102764,
+        "duplicate_IDs": 0,
+        "has_survival_outcomes": true,
+        "has_survival_prediction": true
+      }
+    ]
+  },
+  "population_checks": {
+    "T2": [
+      {
+        "path": "modeling/T2/analysis/t2_baseline_validation_predictions.csv",
+        "rows": 4425,
+        "expected_authoritative_population": 29498,
+        "matches_expected_population": false
+      },
+      {
+        "path": "modeling/T2/analysis/t2_final_test_predictions.csv",
+        "rows": 4425,
+        "expected_authoritative_population": 29498,
+        "matches_expected_population": false
+      }
+    ],
+    "T3": [],
+    "T4": [],
+    "T5": [],
+    "T6": [
+      {
+        "path": "modeling/T6/metrics/t6_mod004_query_rankings.csv",
+        "rows": 2722,
+        "expected_authoritative_population": 274922,
+        "matches_expected_population": false
+      },
+      {
+        "path": "modeling/T6/metrics/t6_mod007_bm25_query_rankings.csv",
+        "rows": 2722,
+        "expected_authoritative_population": 274922,
+        "matches_expected_population": false
+      },
+      {
+        "path": "modeling/T6/metrics/t6_mod008_semantic_failure_rankings.csv",
+        "rows": 173,
+        "expected_authoritative_population": 274922,
+        "matches_expected_population": false
+      },
+      {
+        "path": "modeling/T6/metrics/t6_mod009_hybrid_query_rankings.csv",
+        "rows": 274922,
+        "expected_authoritative_population": 274922,
+        "matches_expected_population": true
+      },
+      {
+        "path": "modeling/T6/metrics/t6_mod010_corrected_hybrid_query_rankings.csv",
+        "rows": 274922,
+        "expected_authoritative_population": 274922,
+        "matches_expected_population": true
+      }
+    ],
+    "T7": [
+      {
+        "path": "modeling/T7/derived/t7_mod007_evaluation_predictions.csv",
+        "rows": 102764,
+        "expected_authoritative_population": 513816,
+        "matches_expected_population": false
+      },
+      {
+        "path": "modeling/T7/derived/t7_mod010_evaluation_predictions.csv",
+        "rows": 102764,
+        "expected_authoritative_population": 513816,
+        "matches_expected_population": false
+      }
+    ]
+  },
+  "task_feasibility": {
+    "T2": {
+      "task": "T2",
+      "target": "target_priority",
+      "native_quantity": "categorical Priority prediction / class probability where actually present",
+      "candidates": [
+        {
+          "path": "modeling/T2/analysis/t2_baseline_validation_predictions.csv",
+          "format": "csv",
+          "exists": true,
+          "status": "PASS",
+          "rows": 4425,
+          "columns": [
+            "ID",
+            "target_priority",
+            "predicted_priority",
+            "correct"
+          ],
+          "column_count": 4,
+          "unique_IDs": 4425,
+          "duplicate_IDs": 0,
+          "has_target_priority": true,
+          "probability_columns": [],
+          "prediction_columns": [
+            "predicted_priority"
+          ],
+          "locked_test_candidate": false
+        },
+        {
+          "path": "modeling/T2/analysis/t2_final_test_predictions.csv",
+          "format": "csv",
+          "exists": true,
+          "status": "PASS",
+          "rows": 4425,
+          "columns": [
+            "ID",
+            "Creation time",
+            "actual_priority",
+            "predicted_priority"
+          ],
+          "column_count": 4,
+          "unique_IDs": 4425,
+          "duplicate_IDs": 0,
+          "has_target_priority": false,
+          "probability_columns": [],
+          "prediction_columns": [
+            "predicted_priority"
+          ],
+          "locked_test_candidate": true
+        }
+      ],
+      "feasible_candidate_count": 1,
+      "locked_test_candidates": 0,
+      "development_candidates": 1,
+      "development_population_available": true,
+      "locked_test_present": false,
+      "status": "FEASIBLE_CANDIDATE_PRESENT"
+    },
+    "T3": {
+      "task": "T3",
+      "target": "severity",
+      "native_quantity": "categorical operational Severity prediction and task-specific probability/confidence",
+      "candidates": [],
+      "feasible_candidate_count": 0,
+      "status": "NO_FEASIBLE_CANDIDATE_IDENTIFIED"
+    },
+    "T4": {
+      "task": "T4",
+      "target": "target_assignee",
+      "native_quantity": "candidate-space assignee retrieval/ranking",
+      "candidates": [
+        {
+          "path": "modeling/T4/results/mod011_checkpoints/t4_mod011_retrieval.npz",
+          "format": "npz",
+          "exists": true,
+          "status": "PASS",
+          "keys": [
+            "neighbor_indices",
+            "neighbor_scores"
+          ],
+          "key_summaries": {
+            "neighbor_indices": {
+              "shape": [
+                35626,
+                20
+              ],
+              "dtype": "int32",
+              "size": 712520
+            },
+            "neighbor_scores": {
+              "shape": [
+                35626,
+                20
+              ],
+              "dtype": "float32",
+              "size": 712520
+            }
+          }
+        },
+        {
+          "path": "modeling/T4/results/mod007_checkpoints/t4_mod007_full_retrieval.npz",
+          "format": "npz",
+          "exists": true,
+          "status": "PASS",
+          "keys": [
+            "neighbor_indices",
+            "neighbor_similarities"
+          ],
+          "key_summaries": {
+            "neighbor_indices": {
+              "shape": [
+                35626,
+                20
+              ],
+              "dtype": "int32",
+              "size": 712520
+            },
+            "neighbor_similarities": {
+              "shape": [
+                35626,
+                20
+              ],
+              "dtype": "float32",
+              "size": 712520
+            }
+          }
+        },
+        {
+          "path": "modeling/T4/results/r1_checkpoints/t4_r1_topk_predictions.npz",
+          "format": "npz",
+          "exists": true,
+          "status": "ERROR",
+          "keys": [
+            "top_indices",
+            "top_scores",
+            "candidate_labels"
+          ],
+          "error": "ValueError('Object arrays cannot be loaded when allow_pickle=False')"
+        }
+      ],
+      "retrieval_candidates": 1,
+      "score_keys": [
+        {
+          "path": "modeling/T4/results/mod011_checkpoints/t4_mod011_retrieval.npz",
+          "score_key": "neighbor_scores",
+          "index_key": "neighbor_indices"
+        }
+      ],
+      "target_population_verified": true,
+      "evaluation_rows": 35626,
+      "evaluation_unique_IDs": 35626,
+      "target_assignee_non_null": 35626,
+      "candidate_space_restriction_required": true,
+      "unseen_target_handling_required": true,
+      "status": "FEASIBLE_NATIVE_RANKING_PRESENT"
+    },
+    "T5": {
+      "task": "T5",
+      "target": "T5 target",
+      "native_quantity": "duplicate probability / binary probability",
+      "candidates": [
+        {
+          "path": "modeling/T5/metrics/t5_mod005_validation_predictions.npz",
+          "format": "npz",
+          "exists": true,
+          "status": "PASS",
+          "keys": [
+            "y_true",
+            "p_duplicate",
+            "y_pred_0_5"
+          ],
+          "key_summaries": {
+            "y_true": {
+              "shape": [
+                74091
+              ],
+              "dtype": "int8",
+              "size": 74091
+            },
+            "p_duplicate": {
+              "shape": [
+                74091
+              ],
+              "dtype": "float64",
+              "size": 74091
+            },
+            "y_pred_0_5": {
+              "shape": [
+                74091
+              ],
+              "dtype": "int8",
+              "size": 74091
+            }
+          }
+        },
+        {
+          "path": "modeling/T5/metrics/t5_mod007_calibrated_validation_predictions.npz",
+          "format": "npz",
+          "exists": true,
+          "status": "PASS",
+          "keys": [
+            "y_true",
+            "p_base",
+            "p_sigmoid",
+            "p_isotonic"
+          ],
+          "key_summaries": {
+            "y_true": {
+              "shape": [
+                74091
+              ],
+              "dtype": "int8",
+              "size": 74091
+            },
+            "p_base": {
+              "shape": [
+                74091
+              ],
+              "dtype": "float64",
+              "size": 74091
+            },
+            "p_sigmoid": {
+              "shape": [
+                74091
+              ],
+              "dtype": "float64",
+              "size": 74091
+            },
+            "p_isotonic": {
+              "shape": [
+                74091
+              ],
+              "dtype": "float64",
+              "size": 74091
+            }
+          }
+        },
+        {
+          "path": "modeling/T5/metrics/t5_mod009_locked_evaluation_predictions.npz",
+          "format": "npz",
+          "exists": true,
+          "status": "PASS",
+          "keys": [
+            "y_true",
+            "p_duplicate",
+            "p_base"
+          ],
+          "key_summaries": {
+            "y_true": {
+              "shape": [
+                20827
+              ],
+              "dtype": "int8",
+              "size": 20827
+            },
+            "p_duplicate": {
+              "shape": [
+                20827
+              ],
+              "dtype": "float64",
+              "size": 20827
+            },
+            "p_base": {
+              "shape": [
+                20827
+              ],
+              "dtype": "float64",
+              "size": 20827
+            }
+          }
+        }
+      ],
+      "probability_candidates": [
+        {
+          "path": "modeling/T5/metrics/t5_mod007_calibrated_validation_predictions.npz",
+          "probability_keys": [
+            "p_base",
+            "p_sigmoid",
+            "p_isotonic"
+          ],
+          "keys": [
+            "y_true",
+            "p_base",
+            "p_sigmoid",
+            "p_isotonic"
+          ]
+        },
+        {
+          "path": "modeling/T5/metrics/t5_mod009_locked_evaluation_predictions.npz",
+          "probability_keys": [
+            "p_base"
+          ],
+          "keys": [
+            "y_true",
+            "p_duplicate",
+            "p_base"
+          ]
+        }
+      ],
+      "native_probability_available": true,
+      "group_aware_evaluation_required": true,
+      "status": "FEASIBLE_NATIVE_PROBABILITY_PRESENT"
+    },
+    "T6": {
+      "task": "T6",
+      "native_quantity": "query-level candidate retrieval/ranking",
+      "candidates": [
+        {
+          "path": "modeling/T6/metrics/t6_mod004_query_rankings.csv",
+          "format": "csv",
+          "exists": true,
+          "status": "PASS",
+          "rows": 2722,
+          "columns": [
+            "split",
+            "query_id",
+            "positive_candidate_id",
+            "positive_rank",
+            "top_candidate_id",
+            "top_candidate_role",
+            "top_score",
+            "positive_score"
+          ],
+          "column_count": 8,
+          "query_like_columns": [
+            "query_id"
+          ],
+          "candidate_like_columns": [
+            "positive_candidate_id",
+            "top_candidate_id",
+            "top_candidate_role"
+          ],
+          "score_like_columns": [
+            "positive_rank",
+            "top_score",
+            "positive_score"
+          ]
+        },
+        {
+          "path": "modeling/T6/metrics/t6_mod007_bm25_query_rankings.csv",
+          "format": "csv",
+          "exists": true,
+          "status": "PASS",
+          "rows": 2722,
+          "columns": [
+            "split",
+            "query_id",
+            "query_creation_time",
+            "positive_candidate_id",
+            "positive_rank",
+            "top_candidate_id",
+            "top_candidate_role",
+            "top_score",
+            "positive_score",
+            "score_gap_top1_minus_positive",
+            "query_token_count"
+          ],
+          "column_count": 11,
+          "query_like_columns": [
+            "query_id",
+            "query_creation_time",
+            "query_token_count"
+          ],
+          "candidate_like_columns": [
+            "positive_candidate_id",
+            "top_candidate_id",
+            "top_candidate_role"
+          ],
+          "score_like_columns": [
+            "positive_rank",
+            "top_score",
+            "positive_score",
+            "score_gap_top1_minus_positive"
+          ]
+        },
+        {
+          "path": "modeling/T6/metrics/t6_mod008_semantic_failure_rankings.csv",
+          "format": "csv",
+          "exists": true,
+          "status": "PASS",
+          "rows": 173,
+          "columns": [
+            "split",
+            "query_id",
+            "positive_candidate_id",
+            "original_tfidf_rank",
+            "semantic_positive_rank",
+            "semantic_top_candidate_id",
+            "semantic_top_score",
+            "semantic_positive_score",
+            "semantic_score_gap_top1_minus_positive"
+          ],
+          "column_count": 9,
+          "query_like_columns": [
+            "query_id"
+          ],
+          "candidate_like_columns": [
+            "positive_candidate_id",
+            "semantic_top_candidate_id"
+          ],
+          "score_like_columns": [
+            "original_tfidf_rank",
+            "semantic_positive_rank",
+            "semantic_top_score",
+            "semantic_positive_score",
+            "semantic_score_gap_top1_minus_positive"
+          ]
+        },
+        {
+          "path": "modeling/T6/metrics/t6_mod009_hybrid_query_rankings.csv",
+          "format": "csv",
+          "exists": true,
+          "status": "PASS",
+          "rows": 274922,
+          "columns": [
+            "split",
+            "query_id",
+            "candidate_id",
+            "target_observed",
+            "tfidf_score",
+            "semantic_score",
+            "tfidf_score_normalized",
+            "semantic_score_normalized",
+            "hybrid_score"
+          ],
+          "column_count": 9,
+          "query_like_columns": [
+            "query_id"
+          ],
+          "candidate_like_columns": [
+            "candidate_id"
+          ],
+          "score_like_columns": [
+            "tfidf_score",
+            "semantic_score",
+            "tfidf_score_normalized",
+            "semantic_score_normalized",
+            "hybrid_score"
+          ]
+        },
+        {
+          "path": "modeling/T6/metrics/t6_mod010_corrected_hybrid_query_rankings.csv",
+          "format": "csv",
+          "exists": true,
+          "status": "PASS",
+          "rows": 274922,
+          "columns": [
+            "split",
+            "query_id",
+            "candidate_id",
+            "target_observed",
+            "semantic_score",
+            "tfidf_score",
+            "tfidf_score_normalized",
+            "semantic_score_normalized",
+            "hybrid_score"
+          ],
+          "column_count": 9,
+          "query_like_columns": [
+            "query_id"
+          ],
+          "candidate_like_columns": [
+            "candidate_id"
+          ],
+          "score_like_columns": [
+            "semantic_score",
+            "tfidf_score",
+            "tfidf_score_normalized",
+            "semantic_score_normalized",
+            "hybrid_score"
+          ]
+        }
+      ],
+      "ranking_candidates": 5,
+      "query_like_columns": [
+        "query_creation_time",
+        "query_id",
+        "query_token_count"
+      ],
+      "candidate_like_columns": [
+        "candidate_id",
+        "positive_candidate_id",
+        "semantic_top_candidate_id",
+        "top_candidate_id",
+        "top_candidate_role"
+      ],
+      "score_like_columns": [
+        "hybrid_score",
+        "original_tfidf_rank",
+        "positive_rank",
+        "positive_score",
+        "score_gap_top1_minus_positive",
+        "semantic_positive_rank",
+        "semantic_positive_score",
+        "semantic_score",
+        "semantic_score_gap_top1_minus_positive",
+        "semantic_score_normalized",
+        "semantic_top_score",
+        "tfidf_score",
+        "tfidf_score_normalized",
+        "top_score"
+      ],
+      "observable_non_positive_preserved": true,
+      "ordinary_binary_calibration_allowed": false,
+      "status": "FEASIBLE_NATIVE_RANKING_PRESENT"
+    },
+    "T7": {
+      "task": "T7",
+      "outcomes": [
+        "duration_seconds",
+        "event"
+      ],
+      "native_quantity": "survival / time-to-event prediction",
+      "candidates": [
+        {
+          "path": "modeling/T7/derived/t7_mod007_evaluation_predictions.csv",
+          "format": "csv",
+          "exists": true,
+          "status": "PASS",
+          "rows": 102764,
+          "columns": [
+            "ID",
+            "duration_seconds",
+            "event",
+            "predicted_median_survival_seconds",
+            "survival_probability_at_211583_seconds",
+            "survival_probability_at_1780179_seconds",
+            "survival_probability_at_14608619_seconds"
+          ],
+          "column_count": 7,
+          "unique_IDs": 102764,
+          "duplicate_IDs": 0,
+          "has_survival_outcomes": true,
+          "has_survival_prediction": true
+        },
+        {
+          "path": "modeling/T7/derived/t7_mod010_evaluation_predictions.csv",
+          "format": "csv",
+          "exists": true,
+          "status": "PASS",
+          "rows": 102764,
+          "columns": [
+            "ID",
+            "duration_seconds",
+            "event",
+            "predicted_median_survival_seconds",
+            "survival_probability_at_211583_seconds",
+            "survival_probability_at_1780179_seconds",
+            "survival_probability_at_14608619_seconds"
+          ],
+          "column_count": 7,
+          "unique_IDs": 102764,
+          "duplicate_IDs": 0,
+          "has_survival_outcomes": true,
+          "has_survival_prediction": true
+        }
+      ],
+      "survival_candidates": 2,
+      "censoring_preserved": true,
+      "binary_resolution_conversion": false,
+      "status": "FEASIBLE_NATIVE_SURVIVAL_PRESENT"
+    }
+  },
+  "task_statuses": {
+    "T2": "FEASIBLE_CANDIDATE_PRESENT",
+    "T3": "NO_FEASIBLE_CANDIDATE_IDENTIFIED",
+    "T4": "FEASIBLE_NATIVE_RANKING_PRESENT",
+    "T5": "FEASIBLE_NATIVE_PROBABILITY_PRESENT",
+    "T6": "FEASIBLE_NATIVE_RANKING_PRESENT",
+    "T7": "FEASIBLE_NATIVE_SURVIVAL_PRESENT"
+  },
+  "methodological_constraints": {
+    "task_specific_calibration_required": true,
+    "t4_candidate_space_restriction_required": true,
+    "t4_unseen_target_handling_required": true,
+    "t5_group_aware_structure_required": true,
+    "t6_query_level_semantics_required": true,
+    "t6_observable_non_positive_is_not_true_negative": true,
+    "t7_right_censoring_preserved": true,
+    "t7_not_ordinary_binary_classification": true,
+    "cross_task_probability_comparability_assumed": false,
+    "universal_confidence_score_allowed": false
+  },
+  "controls": {
+    "model_fitting_performed": false,
+    "calibration_fitting_performed": false,
+    "target_creation_performed": false,
+    "model_selection_performed": false,
+    "threshold_selection_performed": false,
+    "universal_confidence_created": false,
+    "universal_risk_score_created": false,
+    "synthetic_target_created": false,
+    "t6_observable_non_positive_reinterpreted": false,
+    "t6_forced_into_ordinary_binary_calibration": false,
+    "t7_binary_resolution_created": false,
+    "t7_censoring_relabelled": false,
+    "t7_survival_semantics_preserved": true,
+    "locked_test_selected_for_calibration": false
+  },
+  "interpretation": {
+    "t2": "Priority probability/confidence can only be evaluated where a valid prediction-output and target linkage is established.",
+    "t3": "Severity calibration requires an actual native prediction/probability artifact aligned to the frozen severity outcome.",
+    "t4": "Assignment confidence must remain restricted to the explicitly observed candidate output space; unseen targets are not treated as ordinary negative predictions.",
+    "t5": "Duplicate probability may be evaluated using the frozen binary target with the established group-aware structure.",
+    "t6": "Retrieval confidence must retain query-level ranking semantics; observable_non_positive is not a true negative.",
+    "t7": "Resolution confidence must retain survival/time-to-event semantics and right censoring."
+  }
+}

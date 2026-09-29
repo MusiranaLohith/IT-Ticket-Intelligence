@@ -1,0 +1,328 @@
+{
+  "operation": "H-RUN-019R1",
+  "operation_name": "FULL_TICKET_PIPELINE_RUNTIME",
+  "runtime_timestamp": "2026-09-27T05:29:15.168049+00:00",
+  "ticket": {
+    "ticket_id": "H-RUN-019R1-VPN-001",
+    "creation_time": "2026-09-27T05:20:00Z",
+    "creator": "",
+    "creator_detail": "",
+    "title": "VPN connection fails after password reset",
+    "description": "I reset my corporate password this morning. Since then, the VPN client connects briefly and then disconnects. I restarted the laptop and reinstalled the VPN client, but the issue persists. I need access to the internal systems for today's work."
+  },
+  "pipeline_order": [
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "T5",
+    "T6",
+    "T7",
+    "T8",
+    "T9",
+    "T10",
+    "T11"
+  ],
+  "stage_statuses": {
+    "T1": "FAILED",
+    "T2": "EXECUTED",
+    "T3": "EXECUTED",
+    "T4": "EXECUTED",
+    "T5": "FAILED",
+    "T6": "PARTIAL_NATIVE_RUNTIME",
+    "T7": "EXECUTED_WITH_SUPPORT_LIMITATION",
+    "T8": "EXECUTED",
+    "T9": "EXECUTED",
+    "T10": "EXECUTED",
+    "T11": "EXECUTED"
+  },
+  "task_outputs": {
+    "T1": {
+      "status": "FAILED",
+      "error": "Expected 2D array, got 1D array instead:\narray=[\"VPN connection fails after password reset\\nI reset my corporate password this morning. Since then, the VPN client connects briefly and then disconnects. I restarted the laptop and reinstalled the VPN client, but the issue persists. I need access to the internal systems for today's work.\"].\nReshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample."
+    },
+    "T2": {
+      "status": "EXECUTED",
+      "prediction": "P1",
+      "native_score": [
+        [
+          0.9055252359426262,
+          0.5907475120089553,
+          -0.07699042642725995,
+          -0.7030968471190514,
+          -0.7161854744446252
+        ]
+      ],
+      "artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/models/t2_class_weighted_tfidf_logreg.joblib",
+      "bundle_structure": {
+        "type": "dict",
+        "keys": [
+          "task",
+          "task_name",
+          "dataset",
+          "model_type",
+          "vectorizer_type",
+          "feature_sources",
+          "target",
+          "classes",
+          "class_weight",
+          "vectorizer",
+          "model"
+        ]
+      },
+      "probability_reinterpreted_as_confidence": false
+    },
+    "T3": {
+      "status": "EXECUTED",
+      "prediction": "S3",
+      "native_score": [
+        [
+          -0.6421021418053453,
+          -0.22495507173253498,
+          0.4841659586088237,
+          0.3828912549289762
+        ]
+      ],
+      "artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib",
+      "bundle_structure": {
+        "type": "dict",
+        "keys": [
+          "vectorizer",
+          "model",
+          "task",
+          "target",
+          "features",
+          "model_type",
+          "class_weight"
+        ]
+      },
+      "probability_reinterpreted_as_confidence": false
+    },
+    "T4": {
+      "status": "EXECUTED",
+      "retrieved_count": 5,
+      "results": [
+        {
+          "index": 118128,
+          "distance": 0.7060008645057678,
+          "ticket_id": "1321841",
+          "summary": "Firefox network loss after connection to Cisco VPN.",
+          "historical_assignee": "dd.mozilla@gmail.com"
+        },
+        {
+          "index": 36104,
+          "distance": 0.745875358581543,
+          "ticket_id": "220663",
+          "summary": "Conn: Hang when my VPN connection times out (?)",
+          "historical_assignee": "darin@meer.net"
+        },
+        {
+          "index": 128163,
+          "distance": 0.7511016726493835,
+          "ticket_id": "1405307",
+          "summary": "After connecting to VPN Firefox is unable to navigate to sites inside the VPN but Chrome can",
+          "historical_assignee": "daniel@haxx.se"
+        },
+        {
+          "index": 26474,
+          "distance": 0.7548562288284302,
+          "ticket_id": "125875",
+          "summary": "PAC: configured to work proxy server, but user not on work VPN",
+          "historical_assignee": "darin@netscape.com"
+        },
+        {
+          "index": 88540,
+          "distance": 0.7649978399276733,
+          "ticket_id": "947801",
+          "summary": "DNS resolution sporadically fails in Android 4.4/5.0 when connected to a VPN",
+          "historical_assignee": "daniel@haxx.se"
+        }
+      ],
+      "semantics": "historical retrieval evidence",
+      "automatic_assignment": false
+    },
+    "T5": {
+      "status": "FAILED",
+      "error": "Expected 2D array, got 1D array instead:\narray=[-3.19769235].\nReshape your data either using array.reshape(-1, 1) if your data has a single feature or array.reshape(1, -1) if it contains a single sample."
+    },
+    "T6": {
+      "status": "PARTIAL_NATIVE_RUNTIME",
+      "full_mod010_hybrid_available": false,
+      "top_lexical_ticket_ids": [],
+      "reason": "Frozen MOD-010 semantic evidence is tied to the evaluation population. No valid new-ticket semantic component was fabricated.",
+      "frozen_result_reference": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod010_corrected_hybrid_results.json"
+    },
+    "T7": {
+      "status": "EXECUTED_WITH_SUPPORT_LIMITATION",
+      "model": "T7-MOD-010 Log-Normal AFT",
+      "predicted_median_seconds": 21.51431658896209,
+      "predicted_median_hours": 0.005976199052489469,
+      "predicted_median_days": 0.00024900829385372786,
+      "linear_predictor": 3.0687186013873693,
+      "feature_count": 21,
+      "feature_names": [
+        "creator_frequency_log1p",
+        "creator_detail_frequency_log1p",
+        "summary_chars_log1p",
+        "summary_words_log1p",
+        "summary_digits_log1p",
+        "summary_lines_log1p",
+        "summary_uppercase_log1p",
+        "summary_missing",
+        "description_chars_log1p",
+        "description_words_log1p",
+        "description_digits_log1p",
+        "description_lines_log1p",
+        "description_uppercase_log1p",
+        "description_missing",
+        "creation_year_scaled",
+        "creation_month_sin",
+        "creation_month_cos",
+        "creation_weekday_sin",
+        "creation_weekday_cos",
+        "creation_hour_sin",
+        "creation_hour_cos"
+      ],
+      "temporal_support": "OUTSIDE_OBSERVED_TRAINING_RANGE",
+      "training_year_range": [
+        1997,
+        2020
+      ],
+      "runtime_creation_year": 2026,
+      "interpretation": "Model output is evidence only; it is not an SLA or guaranteed resolution time."
+    }
+  },
+  "T8_evidence_integration": {
+    "status": "EXECUTED",
+    "evidence_state": "INSUFFICIENT_EVIDENCE",
+    "available_components": [
+      "T2",
+      "T3",
+      "T4",
+      "T7"
+    ],
+    "partial_components": [
+      "T6"
+    ],
+    "unavailable_components": [
+      "T1",
+      "T5"
+    ],
+    "missing_evidence_is_not_negative": true,
+    "native_task_semantics_preserved": true,
+    "universal_probability_fusion": false,
+    "universal_confidence_created": false,
+    "validation_reference": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/mod036/op026/t8_mod036_op026_decision_engine_validation.json",
+    "validation_closure_status": "T8_DECISION_ENGINE_CLOSED"
+  },
+  "T9_reliability": {
+    "status": "EXECUTED",
+    "task_reliability": {
+      "T1": {
+        "reliability_type": "native_classifier_decision_output",
+        "calibration_available": false,
+        "probability": null
+      },
+      "T2": {
+        "reliability_type": "native_classifier_decision_output",
+        "calibration_available": false,
+        "probability": null
+      },
+      "T3": {
+        "reliability_type": "native_classifier_decision_output",
+        "calibration_available": false,
+        "probability": null
+      },
+      "T4": {
+        "reliability_type": "retrieval_evidence",
+        "probability": null
+      },
+      "T5": {
+        "reliability_type": "task_specific_calibrated_evidence",
+        "calibration_available": false,
+        "universal_probability": false
+      },
+      "T6": {
+        "reliability_type": "retrieval_evidence",
+        "probability": null
+      },
+      "T7": {
+        "reliability_type": "survival_model_output",
+        "temporal_support": "OUTSIDE_OBSERVED_TRAINING_RANGE",
+        "probability": null
+      }
+    },
+    "universal_confidence": null,
+    "universal_risk": null,
+    "synthetic_fusion_target": false,
+    "closure_reference": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op015_final_integrated_closure.json",
+    "closure_status": "PASS"
+  },
+  "T10_policy": {
+    "status": "EXECUTED",
+    "automation": "NOT_ESTABLISHED",
+    "human_review": "NOT_ESTABLISHED",
+    "universal_threshold": "NOT_ESTABLISHED",
+    "universal_confidence": "NOT_CREATED",
+    "universal_risk": "NOT_CREATED",
+    "action_state": "HUMAN_DECISION_REQUIRED",
+    "warnings": [
+      "Evidence is not fully supported; missing evidence is not negative evidence.",
+      "T6 full MOD-010 hybrid is unavailable for this new-ticket runtime.",
+      "T7 ticket creation year is outside observed training temporal range."
+    ],
+    "policy_evidence_reference": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp05_op008_empirical_policy_boundary_audit.json",
+    "policy_evidence_status": "PASS"
+  },
+  "T11_lifecycle": {
+    "status": "EXECUTED",
+    "feedback_status": "AWAITING_OUTCOME",
+    "feedback_available": false,
+    "future_feedback_fields": [
+      "actual_category",
+      "actual_priority",
+      "actual_severity",
+      "actual_assignee",
+      "duplicate_confirmed",
+      "actual_resolution_time"
+    ],
+    "lifecycle_event": {
+      "ticket_id": "H-RUN-019R1-VPN-001",
+      "run_timestamp": "2026-09-27T05:29:15.168019+00:00",
+      "outcome_status": "AWAITING_OUTCOME"
+    }
+  },
+  "final_triage": {
+    "category": null,
+    "priority": "P1",
+    "severity": "S3",
+    "historical_assignee_candidates": [
+      "dd.mozilla@gmail.com",
+      "darin@meer.net",
+      "daniel@haxx.se",
+      "darin@netscape.com",
+      "daniel@haxx.se"
+    ],
+    "duplicate_evidence": null,
+    "related_ticket_ids": [],
+    "resolution_time_seconds": 21.51431658896209,
+    "evidence_state": "INSUFFICIENT_EVIDENCE",
+    "action_state": "HUMAN_DECISION_REQUIRED",
+    "lifecycle_state": "AWAITING_OUTCOME"
+  },
+  "integrity": {
+    "model_retraining": false,
+    "model_modification": false,
+    "threshold_optimization": false,
+    "locked_evaluation_data_used": false,
+    "prediction_modification": false,
+    "synthetic_feedback_created": false,
+    "universal_confidence_created": false,
+    "universal_risk_created": false
+  },
+  "hard_failures": [
+    "T1",
+    "T5"
+  ],
+  "overall_status": "FAIL"
+}

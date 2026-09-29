@@ -1,0 +1,219 @@
+from pathlib import Path
+import json
+
+
+ROOT = Path("/home/whiteblack/Documents/IT-Ticket-Triage-System")
+OUT_DIR = ROOT / "modeling/T8/mod036"
+OUT_DIR.mkdir(parents=True, exist_ok=True)
+
+OUTPUT = OUT_DIR / "t8_mod036_op012_decision_engine_architecture.json"
+
+
+def main():
+    print("=" * 80)
+    print("T8 DECISION ENGINE — MOD-036 OP-012")
+    print("Decision Engine Architecture")
+    print("=" * 80)
+
+    architecture = {
+        "operation": "MOD-036 OP-012",
+        "purpose": (
+            "Define the architecture for transforming heterogeneous native "
+            "T1-T7 evidence into structured machine-generated triage "
+            "recommendations."
+        ),
+
+        "architecture": {
+            "stage_1_native_evidence": {
+                "description": (
+                    "Receive validated task-specific outputs without "
+                    "changing their native semantics."
+                ),
+                "sources": ["T1", "T2", "T3", "T4", "T5", "T6", "T7"],
+            },
+
+            "stage_2_semantic_adapters": {
+                "description": (
+                    "Convert each task's native output into a structured "
+                    "evidence representation while preserving its meaning."
+                ),
+                "adapters": {
+                    "T1": "category_evidence",
+                    "T2": "priority_evidence",
+                    "T3": "severity_evidence",
+                    "T4": "assignment_retrieval_evidence",
+                    "T5": "duplicate_evidence",
+                    "T6": "query_ranking_evidence",
+                    "T7": "resolution_time_evidence",
+                },
+                "rule": (
+                    "An adapter may restructure evidence but must not "
+                    "invent a new target or reinterpret the native task."
+                ),
+            },
+
+            "stage_3_task_specific_decision_modules": {
+                "description": (
+                    "Generate recommendation candidates separately for "
+                    "each decision dimension."
+                ),
+                "modules": {
+                    "priority_module": {
+                        "primary_evidence": ["T2"],
+                        "supporting_evidence": ["T3"],
+                    },
+                    "assignment_module": {
+                        "primary_evidence": ["T1", "T4"],
+                        "supporting_evidence": ["T6"],
+                    },
+                    "duplicate_module": {
+                        "primary_evidence": ["T5"],
+                        "supporting_evidence": ["T4", "T6"],
+                    },
+                    "resolution_module": {
+                        "primary_evidence": ["T7"],
+                        "supporting_evidence": ["T2", "T3"],
+                    },
+                },
+            },
+
+            "stage_4_cross_task_consistency": {
+                "description": (
+                    "Check whether evidence sources agree, conflict, "
+                    "or are unavailable before producing the final "
+                    "recommendation."
+                ),
+                "states": [
+                    "SUPPORTED",
+                    "CONFLICTING",
+                    "INSUFFICIENT_EVIDENCE",
+                    "UNAVAILABLE",
+                ],
+                "rules": [
+                    "Conflict must be represented explicitly.",
+                    "Missing evidence is unavailable, not negative.",
+                    "No arbitrary task weighting.",
+                    "No incompatible probability averaging.",
+                    "No blind concatenation.",
+                ],
+            },
+
+            "stage_5_decision_engine": {
+                "description": (
+                    "Produce structured machine-generated recommendations "
+                    "from task-specific candidates and their supporting "
+                    "evidence."
+                ),
+                "required_outputs": [
+                    "priority_recommendation",
+                    "assignment_recommendation",
+                    "duplicate_recommendation",
+                    "resolution_context",
+                    "overall_triage_recommendation",
+                ],
+                "universal_scalar_required": False,
+            },
+
+            "stage_6_human_control": {
+                "description": (
+                    "Present the machine recommendation for human review "
+                    "and possible override."
+                ),
+                "human_role": "review_and_override",
+                "human_replaces_machine_recommendation": False,
+            },
+        },
+
+        "recommendation_structure": {
+            "priority_recommendation": [
+                "recommended_priority",
+                "supporting_evidence",
+                "conflict_state",
+            ],
+            "assignment_recommendation": [
+                "recommended_assignee_or_group",
+                "supporting_retrieval_evidence",
+                "conflict_state",
+            ],
+            "duplicate_recommendation": [
+                "duplicate_assessment",
+                "supporting_evidence",
+                "conflict_state",
+            ],
+            "resolution_context": [
+                "predicted_resolution_time_context",
+                "survival_evidence",
+                "censoring_state",
+            ],
+            "overall_triage_recommendation": [
+                "recommended_triage_action",
+                "supporting_decisions",
+                "evidence_summary",
+                "conflict_summary",
+            ],
+        },
+
+        "native_semantics_protection": {
+            "T1": "category classification",
+            "T2": "priority classification",
+            "T3": "secondary severity decision-support signal",
+            "T4": "retrieval/assignee evidence",
+            "T5": "duplicate probability/evidence",
+            "T6": "query ranking evidence",
+            "T7": "survival/time-to-resolution evidence",
+        },
+
+        "prohibited_architectures": [
+            "single universal scalar score",
+            "blind concatenation of all task outputs",
+            "arbitrary manually chosen task weights",
+            "simple averaging of heterogeneous probabilities",
+            "synthetic universal triage target",
+            "treating missing evidence as negative evidence",
+            "converting T6 ranking into probability without native justification",
+            "converting T7 survival output into ordinary regression output",
+            "using post-Creation information",
+            "causal interpretation of predictive evidence",
+        ],
+
+        "development_boundary": {
+            "training_performed": False,
+            "prediction_generation_performed": False,
+            "new_model_selected": False,
+            "dataset_modified": False,
+            "prediction_boundary": "Creation",
+        },
+    }
+
+    OUTPUT.write_text(
+        json.dumps(architecture, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+    print("\nArchitecture stages:")
+    for key in architecture["architecture"]:
+        print(f"  {key}")
+
+    print("\nDecision modules:")
+    for key in architecture["architecture"][
+        "stage_3_task_specific_decision_modules"
+    ]["modules"]:
+        print(f"  {key}")
+
+    print("\nRequired T8 outputs:")
+    for output in architecture["architecture"]["stage_5_decision_engine"][
+        "required_outputs"
+    ]:
+        print(f"  {output}")
+
+    print("\nDevelopment controls:")
+    for key, value in architecture["development_boundary"].items():
+        print(f"  {key}: {value}")
+
+    print(f"\nArtifact: {OUTPUT}")
+    print("\nStatus: PASS")
+    print("=" * 80)
+
+
+if __name__ == "__main__":
+    main()

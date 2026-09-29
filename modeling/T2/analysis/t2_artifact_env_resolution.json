@@ -1,0 +1,136 @@
+{
+  "operation": "T2-MOD-015",
+  "operation_name": "T2 Artifact & Environment Resolution",
+  "task": "T2",
+  "dataset": "Mozilla CORE",
+  "python_environment": {
+    "python_executable": "/home/whiteblack/Documents/IT-Ticket-Triage-System/.venv/bin/python",
+    "python_version": "3.14.7",
+    "platform": "Linux-7.1.12-200.fc44.x86_64-x86_64-with-glibc2.43",
+    "virtual_environment": null,
+    "executable_exists": true
+  },
+  "packages": {
+    "torch": {
+      "installed": false,
+      "version": null,
+      "error": "No module named 'torch'"
+    },
+    "transformers": {
+      "installed": false,
+      "version": null,
+      "error": "No module named 'transformers'"
+    },
+    "tokenizers": {
+      "installed": false,
+      "version": null,
+      "error": "No module named 'tokenizers'"
+    },
+    "datasets": {
+      "installed": false,
+      "version": null,
+      "error": "No module named 'datasets'"
+    }
+  },
+  "gpu": {
+    "nvidia_smi_available": false,
+    "gpu_detected": false,
+    "nvidia_smi_output": null,
+    "nvidia_smi_error": "[Errno 2] No such file or directory: 'nvidia-smi'"
+  },
+  "expected_paths": {
+    "feature_file": {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/derived/t2_features.csv",
+      "exists": true
+    },
+    "expected_train": {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/splits/t2_train.csv",
+      "exists": false
+    },
+    "expected_validation": {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/splits/t2_validation.csv",
+      "exists": false
+    },
+    "expected_test": {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/splits/t2_test.csv",
+      "exists": false
+    }
+  },
+  "t2_file_inventory": {
+    "total_files": 64,
+    "split_candidates": [
+      {
+        "relative_path": "analysis/t2_baseline_validation_predictions.csv",
+        "size_bytes": 86465
+      },
+      {
+        "relative_path": "derived/t2_validation_report.json",
+        "size_bytes": 1828
+      },
+      {
+        "relative_path": "scripts/__pycache__/t2_split.cpython-314.pyc",
+        "size_bytes": 13336
+      },
+      {
+        "relative_path": "scripts/__pycache__/t2_validate.cpython-314.pyc",
+        "size_bytes": 11122
+      },
+      {
+        "relative_path": "scripts/t2_split.py",
+        "size_bytes": 13296
+      },
+      {
+        "relative_path": "scripts/t2_validate.py",
+        "size_bytes": 12092
+      },
+      {
+        "relative_path": "splits/t2_split_report.json",
+        "size_bytes": 2178
+      },
+      {
+        "relative_path": "splits/test.csv",
+        "size_bytes": 7485706
+      },
+      {
+        "relative_path": "splits/train.csv",
+        "size_bytes": 22396127
+      },
+      {
+        "relative_path": "splits/validation.csv",
+        "size_bytes": 7065639
+      }
+    ],
+    "materialization_files": [
+      {
+        "relative_path": "derived/t2_features.csv",
+        "size_bytes": 36829375
+      },
+      {
+        "relative_path": "derived/t2_materialize_report.json",
+        "size_bytes": 1304
+      },
+      {
+        "relative_path": "scripts/__pycache__/t2_materialize.cpython-314.pyc",
+        "size_bytes": 10502
+      },
+      {
+        "relative_path": "scripts/t2_materialize.py",
+        "size_bytes": 9116
+      }
+    ]
+  },
+  "expected_partition_sizes": {
+    "train": 20648,
+    "validation": 4425,
+    "test": 4425
+  },
+  "resolution": {
+    "feature_materialization_found": true,
+    "split_candidates_found": true,
+    "environment_packages_ready": false,
+    "training_started": false,
+    "test_loaded": false,
+    "packages_installed": false
+  },
+  "status": "READY_FOR_ENVIRONMENT_CONFIGURATION"
+}

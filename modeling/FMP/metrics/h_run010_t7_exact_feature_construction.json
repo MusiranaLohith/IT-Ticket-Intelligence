@@ -1,0 +1,18 @@
+{
+  "operation": "H-RUN-010",
+  "operation_name": "T7 Exact Feature Construction",
+  "status": "PASS",
+  "source": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/scripts/t7_mod010_log_normal_aft_baseline.py",
+  "function": "make_features",
+  "make_features_source": "def make_features(\n    rows,\n    creator_counts,\n    detail_counts,\n):\n\n    names = [\n        \"creator_frequency_log1p\",\n        \"creator_detail_frequency_log1p\",\n        \"summary_chars_log1p\",\n        \"summary_words_log1p\",\n        \"summary_digits_log1p\",\n        \"summary_lines_log1p\",\n        \"summary_uppercase_log1p\",\n        \"summary_missing\",\n        \"description_chars_log1p\",\n        \"description_words_log1p\",\n        \"description_digits_log1p\",\n        \"description_lines_log1p\",\n        \"description_uppercase_log1p\",\n        \"description_missing\",\n        \"creation_year_scaled\",\n        \"creation_month_sin\",\n        \"creation_month_cos\",\n        \"creation_weekday_sin\",\n        \"creation_weekday_cos\",\n        \"creation_hour_sin\",\n        \"creation_hour_cos\",\n    ]\n\n    X = []\n    ids = []\n    durations = []\n    events = []\n\n    for row in rows:\n\n        dt = parse_creation(\n            row[\"Creation time\"]\n        )\n\n        s = text_features(row[\"Summary\"])\n        d = text_features(row[\"Description\"])\n\n        month = (\n            2 * math.pi * (dt.month - 1) / 12\n        )\n\n        weekday = (\n            2 * math.pi * dt.weekday() / 7\n        )\n\n        hour = (\n            2 * math.pi * dt.hour / 24\n        )\n\n        X.append([\n            math.log1p(\n                creator_counts.get(\n                    row[\"Creator\"].strip(), 0\n                )\n            ),\n\n            math.log1p(\n                detail_counts.get(\n                    row[\"Creator Detail\"].strip(), 0\n                )\n            ),\n\n            math.log1p(s[0]),\n            math.log1p(s[1]),\n            math.log1p(s[2]),\n            math.log1p(s[3]),\n            math.log1p(s[4]),\n            s[5],\n\n            math.log1p(d[0]),\n            math.log1p(d[1]),\n            math.log1p(d[2]),\n            math.log1p(d[3]),\n            math.log1p(d[4]),\n            d[5],\n\n            (dt.year - 2010.0) / 10.0,\n\n            math.sin(month),\n            math.cos(month),\n\n            math.sin(weekday),\n            math.cos(weekday),\n\n            math.sin(hour),\n            math.cos(hour),\n        ])\n\n        ids.append(row[\"ID\"])\n        durations.append(float(row[\"duration_seconds\"]))\n        events.append(int(row[\"event\"]))\n\n    return (\n        np.asarray(X, dtype=np.float64),\n        ids,\n        np.asarray(durations, dtype=np.float64),\n        np.asarray(events, dtype=np.int8),\n        names,\n    )",
+  "controls": {
+    "training": false,
+    "retraining": false,
+    "model_execution": false,
+    "artifact_modification": false,
+    "locked_test_use": false,
+    "synthetic_target_creation": false,
+    "threshold_selection": false
+  },
+  "interpretation_boundary": "Exact source extraction only. No feature values were generated and no model prediction was performed."
+}

@@ -1,0 +1,97 @@
+{
+  "operation": "FMP-07 OP-003",
+  "operation_name": "FROZEN_ARTIFACT_CLOSURE_IDENTITY_RECONCILIATION",
+  "timestamp_utc": "2026-09-26T16:42:33.359052+00:00",
+  "status": "REQUIRES_REVIEW",
+  "read_only": true,
+  "training_performed": false,
+  "fitting_performed": false,
+  "prediction_performed": false,
+  "evaluation_performed": false,
+  "locked_test_used": false,
+  "artifact_modified": false,
+  "inventory_manifest_match": true,
+  "artifact_integrity_pass": true,
+  "runtime_binding_results": {
+    "T1": {
+      "runtime_binding_paths": [
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/baselines/t1_it_support_char_svm.joblib"
+      ],
+      "frozen_paths": [
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/baselines/t1_it_support_char_svm.joblib"
+      ],
+      "binding_resolved_within_frozen_inventory": true
+    },
+    "T2": {
+      "runtime_binding_paths": [
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/models/t2_class_weighted_tfidf_logreg.joblib"
+      ],
+      "frozen_paths": [
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/models/t2_class_weighted_tfidf_logreg.joblib"
+      ],
+      "binding_resolved_within_frozen_inventory": true
+    },
+    "T3": {
+      "runtime_binding_paths": [
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib"
+      ],
+      "frozen_paths": [
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib"
+      ],
+      "binding_resolved_within_frozen_inventory": true
+    },
+    "T4": {
+      "runtime_binding_paths": [
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_tfidf.joblib",
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_neighbors.joblib"
+      ],
+      "frozen_paths": [
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_full_retrieval.npz",
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_neighbors.joblib",
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_tfidf.joblib"
+      ],
+      "binding_resolved_within_frozen_inventory": true
+    },
+    "T5": {
+      "runtime_binding_paths": [
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod005_tfidf.joblib",
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod005_logreg.joblib",
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod007_calibrated_tfidf.joblib",
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod007_calibration_models.joblib"
+      ],
+      "frozen_paths": [
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod005_logreg.joblib",
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod005_tfidf.joblib",
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod007_calibrated_tfidf.joblib",
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod007_calibration_models.joblib"
+      ],
+      "binding_resolved_within_frozen_inventory": true
+    },
+    "T6": {
+      "runtime_binding_paths": [
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/models/t6_mod004_tfidf_vectorizer.joblib"
+      ],
+      "frozen_paths": [
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod010_corrected_hybrid_results.json"
+      ],
+      "binding_resolved_within_frozen_inventory": false
+    },
+    "T7": {
+      "runtime_binding_paths": [],
+      "frozen_paths": [
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod010_log_normal_aft_model.json"
+      ],
+      "binding_resolved_within_frozen_inventory": "NOT_EXPRESSED_AS_EXPLICIT_ARTIFACT_PATH"
+    }
+  },
+  "explicit_binding_tasks": [
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "T5",
+    "T6"
+  ],
+  "explicit_binding_pass": false,
+  "interpretation": "The operation reconciles the final frozen artifact inventory, SHA-256 manifest, and authoritative runtime binding evidence without executing or modifying any model artifact."
+}

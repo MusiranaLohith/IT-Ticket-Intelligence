@@ -1,0 +1,59 @@
+{
+  "operation": "T5-MOD-005",
+  "operation_name": "Baseline Model Training",
+  "task": "T5 Binary Duplicate Detection",
+  "model": {
+    "representation": "word_tfidf",
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 2,
+    "max_features": 100000,
+    "sublinear_tf": true,
+    "classifier": "LogisticRegression",
+    "solver": "liblinear",
+    "class_weight": "balanced",
+    "max_iter": 1000,
+    "random_state": 42
+  },
+  "training": {
+    "rows": 418898,
+    "positive": 2893,
+    "negative": 416005
+  },
+  "validation": {
+    "rows": 74091,
+    "positive": 480,
+    "negative": 73611
+  },
+  "metrics": {
+    "average_precision": 0.16393359116287273,
+    "pr_auc": 0.16393359116287273,
+    "roc_auc": 0.8982772615505836,
+    "log_loss": 0.12063087777467868,
+    "brier_score_loss": 0.0314241207869983,
+    "precision_at_0_5": 0.09474768280123584,
+    "recall_at_0_5": 0.575,
+    "f1_at_0_5": 0.16268788682581786
+  },
+  "confusion_matrix_at_0_5": {
+    "labels": [
+      0,
+      1
+    ],
+    "true_negative": 70974,
+    "false_positive": 2637,
+    "false_negative": 204,
+    "true_positive": 276
+  },
+  "probability_output": {
+    "column": "p_duplicate",
+    "minimum": 1.804229767896597e-05,
+    "maximum": 0.9993552073275289,
+    "mean": 0.08249473009725622
+  },
+  "evaluation_set_used": false,
+  "threshold_optimization": false,
+  "status": "BASELINE_VALIDATION_COMPLETE"
+}

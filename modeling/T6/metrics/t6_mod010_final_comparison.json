@@ -1,0 +1,85 @@
+{
+  "task_id": "T6",
+  "operation_id": "MOD-010",
+  "operation_name": "Final Controlled Hybrid Comparison",
+  "status": "COMPLETED",
+  "baseline": {
+    "operation": "T6 MOD-004",
+    "model": "TFIDF_COSINE_RETRIEVAL",
+    "evaluation_rows": 82416,
+    "evaluation_queries": 816
+  },
+  "corrected_hybrid": {
+    "operation": "T6 MOD-010",
+    "evaluation_rows": 82416,
+    "evaluation_queries": 816,
+    "selected_weight": {
+      "recall_at_1": 0.7151101783840503,
+      "recall_at_3": 0.8310598111227702,
+      "recall_at_5": 0.8683105981112277,
+      "recall_at_10": 0.9087093389296957,
+      "recall_at_20": 0.9412381951731374,
+      "mrr": 0.78601572432888,
+      "ndcg_at_5": 0.7997962430147244,
+      "ndcg_at_10": 0.8129118924678418,
+      "semantic_weight": 0.5,
+      "lexical_weight": 0.5
+    }
+  },
+  "metric_comparison": {
+    "recall_at_1": {
+      "tfidf": 0.6936274509803921,
+      "corrected_hybrid": 0.7450980392156863,
+      "absolute_delta": 0.05147058823529416
+    },
+    "recall_at_3": {
+      "tfidf": 0.8333333333333334,
+      "corrected_hybrid": 0.8517156862745098,
+      "absolute_delta": 0.018382352941176405
+    },
+    "recall_at_5": {
+      "tfidf": 0.8762254901960784,
+      "corrected_hybrid": 0.8897058823529411,
+      "absolute_delta": 0.013480392156862697
+    },
+    "recall_at_10": {
+      "tfidf": 0.9105392156862745,
+      "corrected_hybrid": 0.9215686274509803,
+      "absolute_delta": 0.011029411764705843
+    },
+    "recall_at_20": {
+      "tfidf": 0.9399509803921569,
+      "corrected_hybrid": 0.9473039215686274,
+      "absolute_delta": 0.007352941176470562
+    },
+    "mrr": {
+      "tfidf": 0.7764268513472535,
+      "corrected_hybrid": 0.8093031701244353,
+      "absolute_delta": 0.03287631877718178
+    },
+    "ndcg_at_5": {
+      "tfidf": 0.7954814890792703,
+      "corrected_hybrid": 0.823910859998925,
+      "absolute_delta": 0.028429370919654695
+    },
+    "ndcg_at_10": {
+      "tfidf": 0.8066454422871442,
+      "corrected_hybrid": 0.8341663767650592,
+      "absolute_delta": 0.027520934477915038
+    }
+  },
+  "controls": {
+    "same_evaluation_population": true,
+    "same_candidate_pool": true,
+    "same_observed_positive_definition": true,
+    "lexical_branch_reconciled_to_mod004": true,
+    "lexical_max_absolute_difference": 0.0,
+    "semantic_branch_recomputed": false,
+    "weight_selection_split": "TRAIN",
+    "evaluation_weight_selection": false,
+    "raw_dataset_read": false,
+    "target_modification": false,
+    "candidate_pool_modification": false
+  },
+  "decision": "Corrected hybrid is retained as the advanced retrieval candidate for final T6 model-selection consideration. No autonomous-routing conclusion is made."
+}

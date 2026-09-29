@@ -1,0 +1,111 @@
+{
+  "operation": "MOD-036 OP-024",
+  "operation_name": "Decision Engine Input Composition",
+  "status": "PASS",
+  "component_inventory": {
+    "priority": {
+      "path": "modeling/T8/mod036/op019/t8_mod036_op019_priority_predictions.csv",
+      "rows": 4425,
+      "columns": [
+        "id",
+        "true_priority",
+        "predicted_priority",
+        "probability_P1",
+        "probability_P2",
+        "probability_P3",
+        "probability_P4",
+        "probability_P5"
+      ],
+      "id_column": "id"
+    },
+    "assignment": {
+      "path": "modeling/T8/mod036/op020/t8_mod036_op020_assignment_predictions.csv",
+      "rows": 35626,
+      "columns": [
+        "id",
+        "true_assignee",
+        "recommended_assignee",
+        "recommended_score",
+        "target_rank",
+        "target_present",
+        "top20_candidates",
+        "status"
+      ],
+      "id_column": "id"
+    },
+    "duplicate": {
+      "path": "modeling/T8/mod036/op021/t8_mod036_op021_duplicate_component_predictions.csv",
+      "rows": 74091,
+      "columns": [
+        "id",
+        "true_duplicate",
+        "p_duplicate",
+        "descriptive_threshold_0_5_prediction"
+      ],
+      "id_column": "id"
+    },
+    "resolution": {
+      "path": "modeling/T8/mod036/op023/t8_mod036_op023_resolution_predictions.csv",
+      "rows": 16518,
+      "columns": [
+        "id",
+        "predicted_median_survival_seconds",
+        "survival_probability_at_211583_seconds",
+        "survival_probability_at_1780179_seconds",
+        "survival_probability_at_14608619_seconds",
+        "resolution_context",
+        "prediction_boundary"
+      ],
+      "id_column": "id"
+    }
+  },
+  "population_sizes": {
+    "priority": 4425,
+    "assignment": 35626,
+    "duplicate": 74091,
+    "resolution": 16518
+  },
+  "pairwise_intersections": {
+    "priority__assignment": 2201,
+    "priority__duplicate": 649,
+    "priority__resolution": 0,
+    "assignment__duplicate": 4716,
+    "assignment__resolution": 1241,
+    "duplicate__resolution": 2477
+  },
+  "higher_order_population": {
+    "all_four_components": 0,
+    "union": 119895
+  },
+  "evidence_availability": {
+    "duplicate": 66768,
+    "resolution": 12983,
+    "assignment": 27987,
+    "priority+assignment": 1865,
+    "assignment+resolution": 1058,
+    "duplicate+resolution": 2294,
+    "assignment+duplicate": 4197,
+    "priority": 1911,
+    "priority+assignment+duplicate": 336,
+    "assignment+duplicate+resolution": 183,
+    "priority+duplicate": 313
+  },
+  "architecture": {
+    "decision_engine_population": "UNION_OF_AVAILABLE_TASK_EVIDENCE",
+    "forced_common_supervised_population": false,
+    "four_way_intersection_required": false,
+    "missing_component_means_unavailable": true,
+    "component_outputs_retain_native_semantics": true,
+    "blind_probability_averaging": false,
+    "arbitrary_cross_task_weights": false,
+    "synthetic_universal_target": false
+  },
+  "controls": {
+    "no_model_fitted": true,
+    "no_target_created": true,
+    "no_probability_combination": true,
+    "no_task_relabeling": true,
+    "no_post_creation_feature_injection": true
+  },
+  "next_operation": "MOD-036 OP-025 — Decision Engine Composition Baseline"
+}

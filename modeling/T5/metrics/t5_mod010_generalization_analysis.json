@@ -1,0 +1,68 @@
+{
+  "operation": "T5-MOD-010",
+  "operation_name": "Generalization Analysis",
+  "timestamp_utc": "2026-09-18T08:15:50.516651+00:00",
+  "inputs": {
+    "validation_source": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod007_calibration_comparison.json",
+    "locked_evaluation_source": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod009_locked_evaluation_metrics.json"
+  },
+  "selected_model": {
+    "classifier": "balanced LogisticRegression",
+    "calibration": "sigmoid",
+    "threshold": null
+  },
+  "validation_metrics": {
+    "average_precision": 0.16377630768463408,
+    "roc_auc": 0.8969287312131792,
+    "log_loss": 0.028358865729015772,
+    "brier_score": 0.005860260617751882
+  },
+  "locked_evaluation_metrics": {
+    "average_precision": 0.12583280543036882,
+    "roc_auc": 0.6781415853279965,
+    "log_loss": 0.27250018754800265,
+    "brier_score": 0.059906950851585296
+  },
+  "generalization": {
+    "average_precision": {
+      "validation": 0.16377630768463408,
+      "locked_evaluation": 0.12583280543036882,
+      "absolute_change": -0.037943502254265266,
+      "relative_change_percent": -23.167882333340224
+    },
+    "roc_auc": {
+      "validation": 0.8969287312131792,
+      "locked_evaluation": 0.6781415853279965,
+      "absolute_change": -0.21878714588518267,
+      "relative_change_percent": -24.392924239281843
+    },
+    "log_loss": {
+      "validation": 0.028358865729015772,
+      "locked_evaluation": 0.27250018754800265,
+      "absolute_change": 0.24414132181898687,
+      "relative_change_percent": 860.899459632443
+    },
+    "brier_score": {
+      "validation": 0.005860260617751882,
+      "locked_evaluation": 0.059906950851585296,
+      "absolute_change": 0.05404669023383341,
+      "relative_change_percent": 922.2574516586405
+    }
+  },
+  "observed_direction": {
+    "discrimination_decreased": true,
+    "log_loss_increased": true,
+    "brier_score_increased": true
+  },
+  "interpretation": "The locked evaluation shows lower discrimination and higher probabilistic loss than the training-derived validation results. This is an observed validation-to-temporal-evaluation difference. No model, calibrator, threshold, or evaluation data was changed.",
+  "controls": {
+    "model_refit": false,
+    "calibrator_refit": false,
+    "vectorizer_refit": false,
+    "threshold_optimization": false,
+    "evaluation_used_for_selection": false,
+    "evaluation_modified": false,
+    "raw_dataset_read": false
+  },
+  "status": "GENERALIZATION_ANALYSIS_COMPLETE"
+}

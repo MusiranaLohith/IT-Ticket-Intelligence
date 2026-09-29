@@ -1,0 +1,53 @@
+{
+  "operation": "T3-MOD-025",
+  "task": "T3_SEVERITY_PREDICTION",
+  "model": "distilbert-base-uncased",
+  "device": "cpu",
+  "train_rows": 21587,
+  "validation_rows": 4626,
+  "max_length": 128,
+  "batch_size": 4,
+  "gradient_accumulation_steps": 4,
+  "epochs": 1,
+  "learning_rate": 2e-05,
+  "accuracy": 0.7220060527453523,
+  "macro_f1": 0.29663315276577507,
+  "weighted_f1": 0.6689419070240422,
+  "per_class": {
+    "S1": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 20
+    },
+    "S2": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 487
+    },
+    "S3": {
+      "precision": 0.7659051830017195,
+      "recall": 0.9116959064327486,
+      "f1": 0.8324656254171673,
+      "support": 3420
+    },
+    "S4": {
+      "precision": 0.4,
+      "recall": 0.31759656652360513,
+      "f1": 0.35406698564593303,
+      "support": 699
+    }
+  },
+  "prediction_counts": {
+    "S1": 0,
+    "S2": 0,
+    "S3": 4071,
+    "S4": 555
+  },
+  "training_seconds": 10036.816281080246,
+  "validation_seconds": 228.445725440979,
+  "test_used": false,
+  "raw_mozilla_accessed": false,
+  "dataset_modified": false
+}

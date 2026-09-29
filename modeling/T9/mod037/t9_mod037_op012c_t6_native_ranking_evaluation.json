@@ -1,0 +1,216 @@
+{
+  "operation": "T9_MOD-037_OP-012C",
+  "title": "T6 Native Query-Level Ranking Evaluation",
+  "status": "PASS",
+  "purpose": "Evaluate native T6 query-level retrieval ranking using hybrid_score while preserving the established target-observation semantics.",
+  "previous_operation_validation": {
+    "status": "PASS",
+    "checks": {
+      "OP-004_T6_acceptance": {
+        "status": "PASS",
+        "accepted_tasks": [
+          "T4",
+          "T5",
+          "T6",
+          "T7"
+        ]
+      },
+      "OP-005_T6_boundary": {
+        "status": "PASS",
+        "boundary": {
+          "status": "ACCEPTED_NATIVE_RANKING",
+          "native_quantity": "Query-level candidate retrieval/ranking",
+          "native_probability_output": false,
+          "accepted_for_calibration": false,
+          "accepted_for_native_evaluation": true,
+          "artifact": "modeling/T6/metrics/t6_mod010_corrected_hybrid_query_rankings.csv",
+          "native_outputs": [
+            "query-level ranking",
+            "candidate-level score/ranking information"
+          ],
+          "semantic_restrictions": [
+            "T6 remains a query-level retrieval/ranking task.",
+            "observable_non_positive is not a true negative.",
+            "T6 must not be flattened into an ordinary binary classifier.",
+            "Any confidence/relevance formulation must retain native retrieval semantics."
+          ],
+          "calibration_boundary": "Any later T6 confidence formulation must be defined around native query-level retrieval/ranking semantics rather than ordinary binary probability calibration."
+        }
+      },
+      "OP-012A": {
+        "status": "PASS",
+        "observed_status": "PASS"
+      },
+      "OP-012B": {
+        "status": "PASS",
+        "observed_status": "PASS"
+      }
+    },
+    "failed_checks": []
+  },
+  "input_validation": {
+    "status": "PASS",
+    "checks": {
+      "required_nulls": {
+        "status": "PASS",
+        "null_counts": {
+          "split": 0,
+          "query_id": 0,
+          "candidate_id": 0,
+          "target_observed": 0,
+          "hybrid_score": 0
+        }
+      },
+      "query_candidate_uniqueness": {
+        "status": "PASS",
+        "duplicate_pairs": 0
+      },
+      "target_observed_boolean": {
+        "status": "PASS",
+        "observed_values": [
+          "False",
+          "True"
+        ]
+      },
+      "hybrid_score_numeric": {
+        "status": "PASS",
+        "non_numeric_rows": 0
+      }
+    },
+    "failed_checks": []
+  },
+  "source": {
+    "artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod010_corrected_hybrid_query_rankings.csv",
+    "rows": 274922,
+    "columns": [
+      "split",
+      "query_id",
+      "candidate_id",
+      "target_observed",
+      "semantic_score",
+      "tfidf_score",
+      "tfidf_score_normalized",
+      "semantic_score_normalized",
+      "hybrid_score"
+    ]
+  },
+  "ranking_construction": {
+    "score_column": "hybrid_score",
+    "direction": "descending",
+    "tie_breaker": "candidate_id ascending",
+    "row_order_used_as_rank": false
+  },
+  "evaluation_population": {
+    "evaluation_rows": 82416,
+    "evaluation_queries": 816,
+    "queries_with_observed_target": 816,
+    "queries_without_observed_target": 0,
+    "query_results_rows": 816
+  },
+  "split_results": {
+    "TRAIN": {
+      "status": "EVALUATED",
+      "rows": 192506,
+      "metrics": {
+        "total_queries": 1906,
+        "queries_with_observed_target": 1906,
+        "queries_without_observed_target": 0,
+        "target_observed_query_rate": 1.0,
+        "hit_at_1": 0.7151101783840503,
+        "hit_at_3": 0.8310598111227702,
+        "hit_at_5": 0.8683105981112277,
+        "hit_at_10": 0.9087093389296957,
+        "hit_at_20": 0.9412381951731374,
+        "hit_at_50": 0.9742917103882477,
+        "hit_at_100": 0.9994753410283316,
+        "mrr_observed_target_queries": 0.78601572432888,
+        "target_rank_min": 1,
+        "target_rank_median": 1.0,
+        "target_rank_mean": 4.759706190975866,
+        "target_rank_max": 101
+      }
+    },
+    "EVAL": {
+      "status": "EVALUATED",
+      "rows": 82416,
+      "metrics": {
+        "total_queries": 816,
+        "queries_with_observed_target": 816,
+        "queries_without_observed_target": 0,
+        "target_observed_query_rate": 1.0,
+        "hit_at_1": 0.7450980392156863,
+        "hit_at_3": 0.8517156862745098,
+        "hit_at_5": 0.8897058823529411,
+        "hit_at_10": 0.9215686274509803,
+        "hit_at_20": 0.9473039215686274,
+        "hit_at_50": 0.9816176470588235,
+        "hit_at_100": 1.0,
+        "mrr_observed_target_queries": 0.8093031701244353,
+        "target_rank_min": 1,
+        "target_rank_median": 1.0,
+        "target_rank_mean": 4.196078431372549,
+        "target_rank_max": 94
+      }
+    }
+  },
+  "evaluation_query_results_artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op012c_t6_query_level_results.csv",
+  "calibration_boundary": {
+    "native_ranking_evaluation": "ESTABLISHED",
+    "native_probability": "NOT_ESTABLISHED",
+    "probability_calibration": "NOT_PERFORMED",
+    "reason": "hybrid_score is retained as a native query-level ranking score. No probability interpretation is introduced."
+  },
+  "controls": {
+    "artifact_read_only": true,
+    "model_fitted": false,
+    "prediction_generated": false,
+    "probability_generated": false,
+    "calibration_fitted": false,
+    "target_created": false,
+    "target_relabelled": false,
+    "observable_non_positive_reinterpreted_as_true_negative": false,
+    "binary_classifier_created": false,
+    "synthetic_negative_created": false,
+    "synthetic_probability_created": false,
+    "threshold_selected": false,
+    "locked_test_used": false,
+    "universal_confidence_created": false,
+    "universal_risk_score_created": false,
+    "existing_artifacts_modified": false,
+    "native_query_ranking_preserved": true,
+    "ranking_constructed_from_native_score": true,
+    "row_order_used_as_rank": false,
+    "candidate_space_expanded": false
+  },
+  "control_validation": {
+    "status": "PASS",
+    "failed_controls": []
+  },
+  "interpretation": {
+    "task_semantics": "Query-level candidate retrieval/ranking.",
+    "ranking_quantity": "hybrid_score",
+    "target_observation": "target_observed=True identifies the observed target relationship used to locate the target within the ranked candidate set.",
+    "non_observed_semantics": "target_observed=False is not treated as a true-negative class.",
+    "ranking_construction": "Candidates are explicitly ordered within each query by hybrid_score descending. CSV row order is not used as rank.",
+    "metric_population": "Queries with an observed target are used for target-rank retrieval metrics. Queries without an observed target are reported separately rather than assigned an artificial negative rank.",
+    "probability_boundary": "hybrid_score is not interpreted as a calibrated probability."
+  },
+  "artifacts_used": {
+    "OP-004": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op004_native_output_acceptance.json",
+    "OP-005": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op005_output_semantics_lock.json",
+    "OP-012A": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op012a_t6_prior_artifact_schema.json",
+    "OP-012B": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op012b_t6_target_observation_audit.json",
+    "T6_rankings": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod010_corrected_hybrid_query_rankings.csv"
+  },
+  "methodological_restrictions": [
+    "Do not interpret target_observed=False as a true-negative class.",
+    "Do not create synthetic negative targets.",
+    "Do not convert hybrid_score into probability.",
+    "Do not fit calibration.",
+    "Do not select thresholds.",
+    "Do not use locked test data for selection.",
+    "Do not use CSV row order as ranking order.",
+    "Preserve native query-level retrieval semantics."
+  ],
+  "decision": "T6 native query-level ranking is evaluated from the native hybrid_score ordering while preserving target-observation semantics. The operation does not establish probability calibration."
+}

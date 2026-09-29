@@ -1,0 +1,107 @@
+{
+  "task": "T7 Resolution-Time Estimation",
+  "operation": "MOD-012",
+  "status": "COMPLETE",
+  "closure_type": "FINAL_T7_CLOSURE",
+  "task_definition": {
+    "prediction_boundary": "Ticket Creation",
+    "target": "Time from Creation until first post-Creation operationally observed Status change to RESOLVED",
+    "event_definition": "First qualifying post-Creation Status change adds RESOLVED",
+    "censoring_definition": "No qualifying RESOLVED event observed through the administrative observation endpoint",
+    "censoring_treated_as": "Right-censored observation",
+    "primary_endpoint": "First post-Creation Status -> RESOLVED",
+    "administrative_endpoint": "2024-11-24 07:26:14"
+  },
+  "population": {
+    "training_rows": 411052,
+    "evaluation_rows": 102764,
+    "evaluation_event_count": 81583,
+    "evaluation_censor_count": 21181
+  },
+  "data_boundary": {
+    "prediction_boundary": "Creation",
+    "creation_only_features": true,
+    "post_creation_history_used": false,
+    "current_status_used": false,
+    "current_resolution_used": false,
+    "evaluation_fitting": false,
+    "raw_archive_access": false
+  },
+  "chronological_split": {
+    "method": "Frozen chronological split",
+    "training_rows": 411052,
+    "evaluation_rows": 102764,
+    "id_overlap": 0,
+    "population_coverage": "PASS"
+  },
+  "survival_baselines": {
+    "kaplan_meier": "Established non-parametric survival reference",
+    "nelson_aalen": "Established cumulative-hazard reference"
+  },
+  "predictive_models": {
+    "weibull_aft": {
+      "harrell_concordance_index": 0.5549621693633812,
+      "role": "First predictive survival baseline"
+    },
+    "lognormal_aft": {
+      "harrell_concordance_index": 0.5568745548761679,
+      "role": "Controlled alternative survival baseline"
+    }
+  },
+  "final_comparison": {
+    "lognormal_minus_weibull_cindex": 0.0019123855127867184,
+    "weibull_horizons_better_than_km": 0,
+    "lognormal_horizons_better_than_km": 0,
+    "lognormal_horizons_better_than_weibull": 3,
+    "evidence_statement": "The evaluated predictive survival models do not show uniform improvement across the reported metrics and horizons. The evidence should therefore be carried forward as model-performance limitations."
+  },
+  "calibration": {
+    "mod009_completed": true,
+    "interpretation": "Calibration-style reliability diagnostic; not a formal IPCW survival calibration estimator.",
+    "automation_threshold": "NOT_ESTABLISHED"
+  },
+  "supported_role": {
+    "role": "SECONDARY_DECISION_SUPPORT_SIGNAL",
+    "autonomous_resolution_time_decision": false,
+    "autonomous_workflow_automation": false,
+    "validated_human_review_threshold": false
+  },
+  "limitations": [
+    "Creation-time features provide limited discrimination.",
+    "Predictive survival models do not uniformly outperform the Kaplan-Meier reference across evaluated horizons.",
+    "The Log-Normal AFT model improves the reported comparative metrics over Weibull, but the improvement does not establish operational sufficiency.",
+    "MOD-009 is a calibration-style diagnostic rather than a formal IPCW survival calibration estimator.",
+    "No empirically validated automation threshold was established.",
+    "Right-censoring is intrinsic to the target and must be preserved in interpretation.",
+    "T7 evidence does not justify autonomous resolution-time workflow decisions."
+  ],
+  "evidence_chain": {
+    "MOD-001": "Modeling contract",
+    "MOD-002": "Feature source audit",
+    "MOD-003": "Feature construction",
+    "MOD-004": "Feature temporal split audit",
+    "MOD-005": "Frozen chronological split",
+    "MOD-006": "Kaplan-Meier / Nelson-Aalen survival baselines",
+    "MOD-007": "Weibull AFT predictive baseline",
+    "MOD-008": "Predictive versus reference evaluation",
+    "MOD-009": "Survival calibration / reliability diagnostic",
+    "MOD-010": "Log-Normal AFT alternative",
+    "MOD-011": "Final model comparison"
+  },
+  "final_project_status": {
+    "T7_modeling": "COMPLETE",
+    "T7_closure": "CLOSED",
+    "supported_as": "SECONDARY_DECISION_SUPPORT_SIGNAL",
+    "not_supported_as": [
+      "Autonomous resolution-time decision",
+      "Autonomous workflow automation",
+      "Validated human-review threshold",
+      "Production-grade calibrated survival service"
+    ]
+  },
+  "source_evidence": {
+    "MOD-009_status": "COMPLETE",
+    "MOD-010_status": "COMPLETE",
+    "MOD-011_status": "COMPLETE"
+  }
+}

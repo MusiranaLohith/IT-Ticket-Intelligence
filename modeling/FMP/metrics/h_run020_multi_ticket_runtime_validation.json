@@ -1,0 +1,91 @@
+{
+  "operation": "H-RUN-020",
+  "operation_name": "Multi-ticket runtime validation",
+  "ticket_count": 3,
+  "tickets": [
+    {
+      "ticket": {
+        "id": "H-RUN-020-VPN-001",
+        "title": "VPN connection fails after password reset",
+        "description": "I reset my corporate password this morning. Since then, the VPN client connects briefly and then disconnects. I restarted the laptop and reinstalled the VPN client, but the issue persists. I need access to the internal systems for today's work."
+      },
+      "process_status": "PASS",
+      "return_code": 0,
+      "task_status_lines": {
+        "T1": "[T1] EXECUTED -> Support general",
+        "T2": "[T2] EXECUTED -> P1",
+        "T3": "[T3] EXECUTED -> S3",
+        "T4": "[T4] EXECUTED -> ['1321841', '220663', '1405307', '125875', '947801']",
+        "T5": "[T5] EXECUTED -> 0.0",
+        "T6": "[T6] PARTIAL_NATIVE_RUNTIME -> []",
+        "T7": "[T7] EXECUTED_WITH_SUPPORT_LIMITATION -> 19.629117104199928",
+        "T8": "[T8] EXECUTED -> SUPPORTED_WITH_LIMITATIONS",
+        "T9": "[T9] EXECUTED",
+        "T10": "[T10] EXECUTED -> HUMAN_DECISION_REQUIRED",
+        "T11": "[T11] EXECUTED -> AWAITING_OUTCOME"
+      },
+      "overall_status": "PASS_WITH_LIMITATIONS",
+      "stderr": ""
+    },
+    {
+      "ticket": {
+        "id": "H-RUN-020-HW-001",
+        "title": "Laptop does not detect external monitor",
+        "description": "My laptop stopped detecting the external monitor connected through the docking station. I restarted the laptop and reconnected the dock, but the monitor is still not detected."
+      },
+      "process_status": "PASS",
+      "return_code": 0,
+      "task_status_lines": {
+        "T1": "[T1] EXECUTED -> Computer-Services",
+        "T2": "[T2] EXECUTED -> P2",
+        "T3": "[T3] EXECUTED -> S3",
+        "T4": "[T4] EXECUTED -> ['396614', '138905', '1245442', '1254019', '635089']",
+        "T5": "[T5] EXECUTED -> 0.0",
+        "T6": "[T6] PARTIAL_NATIVE_RUNTIME -> []",
+        "T7": "[T7] EXECUTED_WITH_SUPPORT_LIMITATION -> 20.878617273422876",
+        "T8": "[T8] EXECUTED -> SUPPORTED_WITH_LIMITATIONS",
+        "T9": "[T9] EXECUTED",
+        "T10": "[T10] EXECUTED -> HUMAN_DECISION_REQUIRED",
+        "T11": "[T11] EXECUTED -> AWAITING_OUTCOME"
+      },
+      "overall_status": "PASS_WITH_LIMITATIONS",
+      "stderr": ""
+    },
+    {
+      "ticket": {
+        "id": "H-RUN-020-ACC-001",
+        "title": "Unable to access corporate account",
+        "description": "I cannot sign in to my corporate account after changing my password. The new password is accepted on one service but access to the internal account portal continues to fail."
+      },
+      "process_status": "PASS",
+      "return_code": 0,
+      "task_status_lines": {
+        "T1": "[T1] EXECUTED -> Active Directory",
+        "T2": "[T2] EXECUTED -> P1",
+        "T3": "[T3] EXECUTED -> S3",
+        "T4": "[T4] EXECUTED -> ['86537', '358327', '573238', '27559', '752982']",
+        "T5": "[T5] EXECUTED -> 0.0",
+        "T6": "[T6] PARTIAL_NATIVE_RUNTIME -> []",
+        "T7": "[T7] EXECUTED_WITH_SUPPORT_LIMITATION -> 18.045111691441516",
+        "T8": "[T8] EXECUTED -> SUPPORTED_WITH_LIMITATIONS",
+        "T9": "[T9] EXECUTED",
+        "T10": "[T10] EXECUTED -> HUMAN_DECISION_REQUIRED",
+        "T11": "[T11] EXECUTED -> AWAITING_OUTCOME"
+      },
+      "overall_status": "PASS_WITH_LIMITATIONS",
+      "stderr": ""
+    }
+  ],
+  "validation": {
+    "all_processes_pass": true,
+    "no_overall_failures": true,
+    "frozen_orchestrator_unchanged": true,
+    "model_retraining": false,
+    "model_modification": false,
+    "threshold_optimization": false,
+    "locked_test_reuse": false,
+    "prediction_modification": false,
+    "synthetic_feedback": false
+  },
+  "final_status": "PASS_WITH_LIMITATIONS"
+}

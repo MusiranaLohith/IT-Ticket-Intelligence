@@ -1,0 +1,63 @@
+{
+  "operation": "T7_MOD-005",
+  "rn": "T7 RN #006",
+  "status": "COMPLETE",
+  "input_dataset": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/derived/t7_creation_time_modeling_dataset.csv",
+  "raw_archive_accessed": false,
+  "model_trained": false,
+  "split_frozen": true,
+  "ordering": {
+    "primary": "Creation time",
+    "secondary": "ID",
+    "tie_policy": "Creation timestamp ties are ordered deterministically by ID."
+  },
+  "split_rule": {
+    "type": "chronological",
+    "train_rows": 411052,
+    "evaluation_rows": 102764,
+    "train_fraction": 0.7999984430224049,
+    "evaluation_fraction": 0.20000155697759509
+  },
+  "boundary": {
+    "train_last_creation": "2020-09-12T03:02:41",
+    "train_last_id": "1664571",
+    "evaluation_first_creation": "2020-09-12T03:05:31",
+    "evaluation_first_id": "1664573",
+    "gap_seconds": 170.0
+  },
+  "population": {
+    "total_rows": 513816,
+    "total_unique_ids": 513816,
+    "train_rows": 411052,
+    "evaluation_rows": 102764,
+    "id_overlap": 0
+  },
+  "event_accounting": {
+    "full": {
+      "rows": 513816,
+      "event_1": 455762,
+      "event_0": 58054,
+      "event_rate": 0.8870140283681318,
+      "censor_rate": 0.11298597163186822
+    },
+    "train": {
+      "rows": 411052,
+      "event_1": 374179,
+      "event_0": 36873,
+      "event_rate": 0.9102960209413894,
+      "censor_rate": 0.08970397905861059
+    },
+    "evaluation": {
+      "rows": 102764,
+      "event_1": 81583,
+      "event_0": 21181,
+      "event_rate": 0.7938869643065665,
+      "censor_rate": 0.2061130356934335
+    }
+  },
+  "artifacts": {
+    "train": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/splits/t7_train.csv",
+    "evaluation": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/splits/t7_evaluation.csv",
+    "audit": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod005_split_freeze.json"
+  }
+}

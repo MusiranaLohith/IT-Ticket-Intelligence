@@ -1,0 +1,81 @@
+{
+  "operation": "T2-MOD-007",
+  "operation_name": "Class-Weighted Baseline",
+  "task": "T2",
+  "task_name": "Priority Prediction",
+  "dataset": "Mozilla CORE",
+  "comparison_reference": "T2-MOD-006",
+  "intentional_change": "LogisticRegression class_weight=\"balanced\"",
+  "model": {
+    "type": "TF-IDF + class-weighted Logistic Regression",
+    "solver": "lbfgs",
+    "max_iter": 2000,
+    "class_weight": "balanced",
+    "random_state": 42
+  },
+  "features": {
+    "sources": [
+      "Summary",
+      "Description"
+    ],
+    "description_missingness": "retained as empty text; no information was fabricated",
+    "tfidf_ngram_range": [
+      1,
+      2
+    ],
+    "tfidf_min_df": 2,
+    "tfidf_max_df": 0.98,
+    "tfidf_sublinear_tf": true
+  },
+  "evaluation": {
+    "split": "validation",
+    "test_used": false,
+    "accuracy": 0.44610169491525425,
+    "macro_f1": 0.3104499808937769,
+    "weighted_f1": 0.44356450564378974,
+    "probability_shape": [
+      4425,
+      5
+    ],
+    "per_class": {
+      "P1": {
+        "precision": 0.3839907192575406,
+        "recall": 0.4106699751861042,
+        "f1": 0.39688249400479614,
+        "support": 806
+      },
+      "P2": {
+        "precision": 0.3697123519458545,
+        "recall": 0.33181473044798787,
+        "f1": 0.34973989595838334,
+        "support": 1317
+      },
+      "P3": {
+        "precision": 0.5478301446570228,
+        "recall": 0.5715676728334956,
+        "f1": 0.5594472242077675,
+        "support": 2054
+      },
+      "P4": {
+        "precision": 0.08450704225352113,
+        "recall": 0.14634146341463414,
+        "f1": 0.10714285714285714,
+        "support": 41
+      },
+      "P5": {
+        "precision": 0.15568862275449102,
+        "recall": 0.12560386473429952,
+        "f1": 0.13903743315508021,
+        "support": 207
+      }
+    }
+  },
+  "train": {
+    "rows": 20648,
+    "features": 212254
+  },
+  "validation": {
+    "rows": 4425,
+    "features": 212254
+  }
+}

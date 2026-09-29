@@ -1,0 +1,58 @@
+{
+  "task": "T3_SEVERITY_PREDICTION",
+  "model_id": "T3-MOD-016",
+  "model_family": "LinearSVC",
+  "class_weight": "balanced",
+  "parameters": {
+    "C": 1.0
+  },
+  "features": {
+    "fields": [
+      "Summary",
+      "Description"
+    ],
+    "representation": "TF-IDF",
+    "analyzer": "word",
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 2,
+    "max_df": 0.98,
+    "sublinear_tf": true
+  },
+  "train_rows": 21587,
+  "validation_rows": 4626,
+  "feature_dimensions": 288972,
+  "accuracy": 0.688715953307393,
+  "macro_f1": 0.34726687295671177,
+  "weighted_f1": 0.6760446770597749,
+  "per_class": {
+    "S1": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 20
+    },
+    "S2": {
+      "precision": 0.288135593220339,
+      "recall": 0.17453798767967146,
+      "f1": 0.21739130434782608,
+      "support": 487
+    },
+    "S3": {
+      "precision": 0.7884668699750486,
+      "recall": 0.8315789473684211,
+      "f1": 0.8094492671125658,
+      "support": 3420
+    },
+    "S4": {
+      "precision": 0.35694444444444445,
+      "recall": 0.3676680972818312,
+      "f1": 0.36222692036645526,
+      "support": 699
+    }
+  },
+  "test_used": false,
+  "status": "CLASS_WEIGHTED_LINEAR_SVM_VALIDATION_COMPLETE"
+}

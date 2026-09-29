@@ -1,0 +1,467 @@
+{
+  "task": "T3_SEVERITY_PREDICTION",
+  "source": "T3-MOD-012 validation error analysis",
+  "test_used": false,
+  "pairs": {
+    "S4_TO_S3": [
+      {
+        "ID": "1822173",
+        "Creation time": "2023-03-13 20:27:50+00:00",
+        "actual": "S4",
+        "predicted": "S3",
+        "Summary": "push_official_branch.sh runs in the wrong working directory",
+        "Description": "Per [the wiki](https://wiki.mozilla.org/Media/WebRTC/libwebrtc_Update_Process#Post-merge_Steps):\\\\n> - After the merge from elm to mozilla-central is complete, the moz-libwebrtc github repo should be updated with the new branch of the commit stack for the new release. There is script that will make the proper branch name and do the push:\\\\n> \\\\n> `bash dom/media/webrtc/third_party_build/push_official_branch.sh`\\\\n\\\\nThis is a relative path so it assumes to be run from the `elm` checkout. The [script itself confirms](https://searchfox.org/mozilla-central/rev/af78418c4b5f2c8721d1a06486cf4cf0b33e...[TRUNCATED]",
+        "text_length": 1490
+      },
+      {
+        "ID": "1822189",
+        "Creation time": "2023-03-13 21:36:07+00:00",
+        "actual": "S4",
+        "predicted": "S3",
+        "Summary": "filter: drop-shadow() causes image stretching and shadow clipping",
+        "Description": "Created attachment 9322850\\\\nfirefox_drop_shadow_bug.zip\\\\n\\\\nSteps to reproduce:\\\\n\\\\nI have an image with filter: drop-shadow() applied to it and a separate div that animates in drop shadow.\\\\n\\\\n\\\\nActual results:\\\\n\\\\nDuring the animation, the image gets stretched on some sides and the drop shadow gets clipped around the animated div.\\\\n\\\\n\\\\nExpected results:\\\\n\\\\nBoth the image and the drop shadow applied to the image should not have any render issues during animations.",
+        "text_length": 545
+      },
+      {
+        "ID": "1822409",
+        "Creation time": "2023-03-14 20:54:22+00:00",
+        "actual": "S4",
+        "predicted": "S3",
+        "Summary": "Crash in [@ gmpopenh264.dll | mozilla::gmp::GMPRunnable::Run]",
+        "Description": "Crash report: https://crash-stats.mozilla.org/report/index/dd2e79a1-41ee-4759-ae44-fe8510230311\\\\n\\\\nReason: ```EXCEPTION_BREAKPOINT```\\\\n\\\\nTop 10 frames of crashing thread:\\\\n```\\\\n0  gmpopenh264.dll  gmpopenh264.dll@0xe1b94  \\\\n1  gmpopenh264.dll  gmpopenh264.dll@0xe22df  \\\\n2  gmpopenh264.dll  gmpopenh264.dll@0xf81f  \\\\n3  gmpopenh264.dll  gmpopenh264.dll@0x100f0  \\\\n4  gmpopenh264.dll  gmpopenh264.dll@0xc581  \\\\n5  xul.dll  mozilla::gmp::GMPRunnable::Run  dom/media/gmp/GMPPlatform.cpp:35\\\\n6  xul.dll  mozilla::detail::RunnableMethodArguments<>::applyImpl  xpcom/threads/nsThreadUtils.h:116...[TRUNCATED]",
+        "text_length": 962
+      },
+      {
+        "ID": "1822432",
+        "Creation time": "2023-03-14 23:55:53+00:00",
+        "actual": "S4",
+        "predicted": "S3",
+        "Summary": "Pseudo-elements do not change style when parent ::part() attribute name is changed",
+        "Description": "Steps to reproduce:\\\\n\\\\nI've created a custom element using part attributes to allow for styling different parts of the element. To indicate state in the element I change the part attribute for a node, and style these states using the ::part() selector. Additionally I use an ::after pseudo element to hold an icon.\\\\n\\\\nThis jsfiddle recreates the bug: https://jsfiddle.net/epvz1ot8/1/\\\\n\\\\nSpecifically clicking the colored rectangle alternates the part attribute in the custom element between \\\\\"a\\\\\" and \\\\\"b\\\\\". As a result the background of the pseudo element should be red when the attribute ...[TRUNCATED]",
+        "text_length": 1151
+      },
+      {
+        "ID": "1822476",
+        "Creation time": "2023-03-15 08:21:43+00:00",
+        "actual": "S4",
+        "predicted": "S3",
+        "Summary": "[wpt-sync] Sync PR 39005 - [@scope] Enable nesting features within @scope's body",
+        "Description": "Sync web-platform-tests PR 39005 into mozilla-central (this bug is closed when the sync is complete).\\\\n\\\\nPR: https://github.com/web-platform-tests/wpt/pull/39005\\\\nDetails from upstream follow.\\\\n\\\\nAnders Hartvoll Ruud <andruud@chromium.org> wrote:\\\\n>  [@scope] Enable nesting features within @scope's body\\\\n>  \\\\n>  This CL passes a parent rule and accompanying CSSNestingType\\\\n>  to the ConsumeRuleList call which handles @scope's body. This has\\\\n>  the following effects:\\\\n>  \\\\n>   - A :scope descendant compound is implicitly inserted if the selector\\\\n>     is not scope-containing.\\\\n>...[TRUNCATED]",
+        "text_length": 1280
+      },
+      {
+        "ID": "1822510",
+        "Creation time": "2023-03-15 10:28:21+00:00",
+        "actual": "S4",
+        "predicted": "S3",
+        "Summary": "The cache fills slowly over time in permanent private browsing mode",
+        "Description": "User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:111.0) Gecko/20100101 Firefox/111.0\\\\n\\\\nSteps to reproduce:\\\\n\\\\n1. Enable permanent private browsing mode in about:preferences#privacy .\\\\n2. Delete the entire history in about:preferences#privacy and restart Firefox.\\\\n3. Use Firefox normally for a while.\\\\n\\\\n\\\\nActual results:\\\\n\\\\nabout:preferences#privacy shows for Cookies and Website-data that they use around a few hundred KB (per day - which accumulates even more over time and persists after Firefox is restarted). Clicking the button in about:preferences#privacy to manage this d...[TRUNCATED]",
+        "text_length": 1402
+      },
+      {
+        "ID": "1822710",
+        "Creation time": "2023-03-15 23:16:06+00:00",
+        "actual": "S4",
+        "predicted": "S3",
+        "Summary": "Assertion failure: totalPathsRecorded < totalMaxPathsToRecord, at js/UbiNodeShortestPaths.h:112",
+        "Description": "Steps to reproduce:\\\\n\\\\nOn git commit 8ed22fcd56968c95a73a6c82b42f732f01a4bdae the attached sample asserts in the js shell with the following stack trace when invoked via `obj-x86_64-pc-linux-gnu/dist/bin/js --fuzzing-safe crash.js`\\\\n\\\\n```\\\\n#0  JS::ubi::ShortestPaths::Handler::operator() (this=0x7fffffffd008, traversal=..., origin=..., edge=..., back=back@entry=0x7fffffffcf88, \\\\n    first=true) at obj-x86_64-pc-linux-gnu/dist/include/js/UbiNodeShortestPaths.h:112\\\\n#1  0x0000555557510074 in JS::ubi::BreadthFirst<JS::ubi::ShortestPaths::Handler>::traverse (this=this@entry=0x7fffffffd020)\\\\...[TRUNCATED]",
+        "text_length": 4148
+      },
+      {
+        "ID": "1822800",
+        "Creation time": "2023-03-16 12:21:24+00:00",
+        "actual": "S4",
+        "predicted": "S3",
+        "Summary": "Intermittent [tier 2] Main app process exited normally | application crashed [@ fetch_add] AFTER WARNING: Process XX hanging at shutdown; attempting crash report (fatal error).: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/process_wa",
+        "Description": "**Filed by:** nfay [at] mozilla.com\\\\n**Parsed log:** https://treeherder.mozilla.org/logviewer?job_id=409116065&repo=mozilla-central\\\\n**Full log:** https://firefox-ci-tc.services.mozilla.com/api/queue/v1/task/HKBsCRviQz6tyGjcd6qtRg/runs/0/artifacts/public/logs/live_backing.log\\\\n\\\\n---\\\\n```\\\\n[task 2023-03-16T10:51:02.811Z] 10:51:02     INFO - mozcrash Downloading symbols from: https://firefox-ci-tc.services.mozilla.com/api/queue/v1/task/VrHqhfJ5TXG0iLuBBscBlg/artifacts/public/build/target.crashreporter-symbols.zip\\\\n[task 2023-03-16T10:51:13.151Z] 10:51:13     INFO - mozcrash Copy/paste: /b...[TRUNCATED]",
+        "text_length": 16962
+      },
+      {
+        "ID": "1822845",
+        "Creation time": "2023-03-16 15:27:08+00:00",
+        "actual": "S4",
+        "predicted": "S3",
+        "Summary": "macOS Automator workflow on selected text stopped working in Firefox 111.0 release",
+        "Description": "Created attachment 9323506\\\\nScreenshot 2023-03-16 at 17.23.04.png\\\\n\\\\nSteps to reproduce:\\\\n\\\\nI use automator workflow in macOS which translates selected text. It stopped working on Firefox v111.0\\\\n\\\\n\\\\nActual results:\\\\n\\\\nI get error message saying that service could not be used \\\\n\\\\n\\\\nExpected results:\\\\n\\\\nSelected text should be supplied to automator workflow. Workflow opens Safari popup window with selected text",
+        "text_length": 510
+      },
+      {
+        "ID": "1822916",
+        "Creation time": "2023-03-16 21:13:10+00:00",
+        "actual": "S4",
+        "predicted": "S3",
+        "Summary": "Crash in [@ <unknown in nvwgf2um.dll> | OpenAdapter10]",
+        "Description": "All reports are from 32-bit Windows.\\\\n\\\\nCrash report: https://crash-stats.mozilla.org/report/index/c486e03a-04bb-4f44-b515-3c1d30230314\\\\n\\\\nReason: ```EXCEPTION_ACCESS_VIOLATION_READ```\\\\n\\\\nTop 10 frames of crashing thread:\\\\n```\\\\n0  nvwgf2um.dll  <unknown in nvwgf2um.dll>  \\\\n1  nvwgf2um.dll  <unknown in nvwgf2um.dll>  \\\\n2  nvwgf2um.dll  <unknown in nvwgf2um.dll>  \\\\n3  nvwgf2um.dll  <unknown in nvwgf2um.dll>  \\\\n4  nvwgf2um.dll  <unknown in nvwgf2um.dll>  \\\\n5  nvwgf2um.dll  <unknown in nvwgf2um.dll>  \\\\n6  nvwgf2um.dll  <unknown in nvwgf2um.dll>  \\\\n7  nvwgf2um.dll  <unknown in nvwgf2...[TRUNCATED]",
+        "text_length": 751
+      }
+    ],
+    "S2_TO_S3": [
+      {
+        "ID": "1822170",
+        "Creation time": "2023-03-13 20:04:00+00:00",
+        "actual": "S2",
+        "predicted": "S3",
+        "Summary": "[Fx View] Tabbing from Tab Pickup header with VoiceOver on causing browser to freeze up",
+        "Description": "I'm not sure when this was introduced, but it's occurring in latest central and Nightly builds. It is not occurring on the latest release build (111).\\\\n\\\\nSTR:\\\\n* Open the browser to Firefox View\\\\n* The window needs to be wide enough to where the “Firefox View” text is visible on the left-hand side of the Fx View page\\\\n* VoiceOver needs to be on\\\\n* Tab to focus from the entire main content area, down to the Tab Pickup header, then down to anything right after the Tab Pickup header (different based on if you’re synced/signed in), but it doesn’t seem to matter what comes after the header.\\\\...[TRUNCATED]",
+        "text_length": 737
+      },
+      {
+        "ID": "1822350",
+        "Creation time": "2023-03-14 15:43:41+00:00",
+        "actual": "S2",
+        "predicted": "S3",
+        "Summary": "Intermittent /webrtc/RTCPeerConnection-getStats.https.html | single tracking bug",
+        "Description": "The fail summary in treeherder is missing due to \\\\\"Log parsing was skipped since the log exceeds the size limit.\\\\\"\\\\n\\\\n* [Push with failures](https://treeherder.mozilla.org/jobs?repo=autoland&group_state=expanded&selectedTaskRun=awVHhdyFSqy0ZyuKKMU9Vw.0&resultStatus=testfailed%2Cbusted%2Cexception%2Cusercancel&revision=73fca811cf6ef5a9ed1ec3ac8c83b42e75366c38)\\\\n* [Raw failure log](https://firefox-ci-tc.services.mozilla.com/api/queue/v1/task/awVHhdyFSqy0ZyuKKMU9Vw/runs/0/artifacts/public/logs/live_backing.log)\\\\n\\\\n```\\\\n[task 2023-03-14T14:32:17.264Z] 14:32:17     INFO - TEST-PASS | /webrt...[TRUNCATED]",
+        "text_length": 3145
+      },
+      {
+        "ID": "1822383",
+        "Creation time": "2023-03-14 17:39:42+00:00",
+        "actual": "S2",
+        "predicted": "S3",
+        "Summary": "Use the One Weird Trick for IPC Shmem allocations",
+        "Description": "https://bugzilla.mozilla.org/show_bug.cgi?id=1794059#c8",
+        "text_length": 104
+      },
+      {
+        "ID": "1822502",
+        "Creation time": "2023-03-15 10:08:41+00:00",
+        "actual": "S2",
+        "predicted": "S3",
+        "Summary": "Firefox 111.0 freezes on startup",
+        "Description": "User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/110.0\\\\n\\\\nSteps to reproduce:\\\\n\\\\nAfter an update from v110.0.1 as well as after deinstalling 110.0.1 and installing 111.0 Firefox freezes on startup.\\\\n\\\\n\\\\nActual results:\\\\n\\\\nWindow skeleton is build, no minimize/maximize/close button, mouse in hourglass mode, nothing else happens",
+        "text_length": 407
+      },
+      {
+        "ID": "1822519",
+        "Creation time": "2023-03-15 11:02:23+00:00",
+        "actual": "S2",
+        "predicted": "S3",
+        "Summary": "startup Crash in [@ qcms::c_bindings::qcms_profile_get_data]",
+        "Description": "81 crashes from 9 installations, all on Windows with Firefox 113.0a1 20230314094139 or newer, most on startup.\\\\n\\\\nCrash report: https://crash-stats.mozilla.org/report/index/41758c3a-a2c9-4e6b-84f8-9b7290230315\\\\n\\\\nReason: ```EXCEPTION_ACCESS_VIOLATION_READ```\\\\n\\\\nTop 10 frames of crashing thread:\\\\n```\\\\n0  xul.dll  qcms::c_bindings::qcms_profile_get_data  gfx/qcms/src/c_bindings.rs:423\\\\n1  xul.dll  mozilla::color::ColorProfileDesc::From  gfx/gl/Colorspaces.cpp:350\\\\n2  xul.dll  mozilla::wr::DCLayerTree::QueryOutputColorProfile  gfx/webrender_bindings/DCLayerTree.cpp:1756\\\\n3  xul.dll  mo...[TRUNCATED]",
+        "text_length": 1461
+      },
+      {
+        "ID": "1822541",
+        "Creation time": "2023-03-15 12:40:24+00:00",
+        "actual": "S2",
+        "predicted": "S3",
+        "Summary": "Perma /workers | /service-workers | /html/semantics/scripting-1 -  SyntaxError: import declarations may only appear at top level of a module when Gecko 113 merges to Beta on 2023-04-10",
+        "Description": "[Central-as-beta-simulation](https://treeherder.mozilla.org/jobs?repo=try&group_state=expanded&resultStatus=testfailed%2Cbusted%2Cexception&revision=59457b78d691b59a3823b65d45fec141cd245ed9&searchStr=wpt&selectedTaskRun=Q-wKQI8RQ3KF4lfI4qpo1w.0)\\\\n\\\\n [How to run these simulations](https://wiki.mozilla.org/Sheriffing/How_To/Beta_simulations#TRUNK_AS_EARLY_BETA)\\\\n\\\\nFailure logs: \\\\n- https://treeherder.mozilla.org/logviewer?job_id=408989617&repo=try\\\\n- https://treeherder.mozilla.org/logviewer?job_id=408988247&repo=try\\\\n- https://treeherder.mozilla.org/logviewer?job_id=408990388&repo=try\\\\n\\...[TRUNCATED]",
+        "text_length": 1093
+      },
+      {
+        "ID": "1822652",
+        "Creation time": "2023-03-15 18:50:45+00:00",
+        "actual": "S2",
+        "predicted": "S3",
+        "Summary": "[wmfme] Assertion failure: false (Failed to create video bridge), at /builds/worker/checkouts/gecko/ipc/glue/UtilityProcessManager.cpp:354",
+        "Description": "Found while fuzzing m-c 20230216-1a6c81eba852 (--enable-debug --enable-fuzzing)\\\\n\\\\nThis has been reported frequently by fuzzers since it was initially reported. It is not reliably reproducible, so a test case is not available.\\\\n\\\\nAssertion failure: false (Failed to create video bridge), at /builds/worker/checkouts/gecko/ipc/glue/UtilityProcessManager.cpp:354\\\\n```\\\\nr10 = 0x0000000000000000    r11 = 0x000000e0099fd800    r12 = 0x0000023f2ac716a0\\\\nr13 = 0x0000000000000000    r14 = 0x000000e0099fdec0    r15 = 0xaaaaaaaaaaaaaaaa\\\\n r8 = 0x000000e0099ff810     r9 = 0x00007fffb2c20000    rax =...[TRUNCATED]",
+        "text_length": 5241
+      },
+      {
+        "ID": "1822677",
+        "Creation time": "2023-03-15 20:34:38+00:00",
+        "actual": "S2",
+        "predicted": "S3",
+        "Summary": "Hit MOZ_CRASH(called `Option::unwrap()` on a `None` value) at gfx/wr/webrender/src/clip.rs:1137",
+        "Description": "Created attachment 9323337\\\\ntestcase.html\\\\n\\\\nFound while fuzzing m-c 20230215-d07a18cd4ca2 (--enable-address-sanitizer --enable-fuzzing)\\\\n\\\\nTo reproduce via Grizzly Replay:\\\\n```\\\\n$ pip install fuzzfetch grizzly-framework\\\\n$ python -m fuzzfetch -a --fuzzing -n firefox\\\\n$ python -m grizzly.replay ./firefox/firefox testcase.html\\\\n```\\\\n\\\\nHit MOZ_CRASH(called `Option::unwrap()` on a `None` value) at gfx/wr/webrender/src/clip.rs:1137\\\\n```\\\\n#0 0x7fd604e4a8d9 in MOZ_Crash /builds/worker/workspace/obj-build/dist/include/mozilla/Assertions.h:261:3\\\\n#1 0x7fd604e4a8d9 in RustMozCrash /gecko...[TRUNCATED]",
+        "text_length": 5481
+      },
+      {
+        "ID": "1822801",
+        "Creation time": "2023-03-16 12:29:13+00:00",
+        "actual": "S2",
+        "predicted": "S3",
+        "Summary": "Crash in [@ mozilla::net::nsHttpChannel::OnTransportStatus]",
+        "Description": "High volume on Nightly today.\\\\n\\\\nCrash report: https://crash-stats.mozilla.org/report/index/da71fd3b-661d-4d12-8cf4-5e8be0230316\\\\n\\\\nMOZ_CRASH Reason: ```MOZ_DIAGNOSTIC_ASSERT(false) (NS_SUCCEEDED(socketTransport->GetEffectiveTRRMode(&mEffectiveTRRMode)))```\\\\n\\\\nTop 10 frames of crashing thread:\\\\n```\\\\n0  xul.dll  mozilla::net::nsHttpChannel::OnTransportStatus  netwerk/protocol/http/nsHttpChannel.cpp:8196\\\\n1  xul.dll  nsTransportStatusEvent::Run  netwerk/base/nsTransportUtils.cpp:75\\\\n2  xul.dll  mozilla::RunnableTask::Run  xpcom/threads/TaskController.cpp:553\\\\n2  xul.dll  mozilla::Task...[TRUNCATED]",
+        "text_length": 1407
+      },
+      {
+        "ID": "1822811",
+        "Creation time": "2023-03-16 13:30:40+00:00",
+        "actual": "S2",
+        "predicted": "S3",
+        "Summary": "macOS Crash in [@ mozilla::a11y::LegacyTextMarkerRange::Length]",
+        "Description": "For 112.0b1 and 112.0b3, there are 80 crash reports from 30 installations.\\\\n\\\\nCrash report: https://crash-stats.mozilla.org/report/index/28da3faf-7bc8-4515-a0ad-a1a250230316\\\\n\\\\nReason: ```EXC_BAD_ACCESS / KERN_INVALID_ADDRESS```\\\\n\\\\nTop 10 frames of crashing thread:\\\\n```\\\\n0  XUL  mozilla::a11y::LegacyTextMarkerRange::Length const  accessible/mac/LegacyTextMarker.mm:317\\\\n1  XUL  mozilla::a11y::GeckoTextMarkerRange::Length const  accessible/mac/GeckoTextMarker.h:186\\\\n1  XUL  -[MOXTextMarkerDelegate moxLengthForTextMarkerRange:]  accessible/mac/MOXTextMarkerDelegate.mm:259\\\\n2  XUL  -[MO...[TRUNCATED]",
+        "text_length": 1142
+      }
+    ],
+    "S3_TO_S4": [
+      {
+        "ID": "1822712",
+        "Creation time": "2023-03-15 23:29:47+00:00",
+        "actual": "S3",
+        "predicted": "S4",
+        "Summary": "Assertion failure: !id.isPrivateName(), at proxy/Proxy.cpp:191",
+        "Description": "Steps to reproduce:\\\\n\\\\nOn git commit 8ed22fcd56968c95a73a6c82b42f732f01a4bdae the attached sample asserts in the js-shell when invoked via  `obj-x86_64-pc-linux-gnu/dist/bin/js --fuzzing-safe crash.js`. The issue doesn't appear to be a recent regressor, a version from end of 2021 is affected as well. I'm not sure whether this is s-s, on release builds there is no segfault/exception.\\\\n\\\\n```\\\\n#0  js::Proxy::getOwnPropertyDescriptor (cx=cx@entry=0x7ffff7430100, proxy=proxy@entry=..., id=id@entry=..., desc=desc@entry=...)\\\\n    at js/src/proxy/Proxy.cpp:190\\\\n#1  0x00005555571c4e36 in js::Get...[TRUNCATED]",
+        "text_length": 3776
+      },
+      {
+        "ID": "1822727",
+        "Creation time": "2023-03-16 01:53:52+00:00",
+        "actual": "S3",
+        "predicted": "S4",
+        "Summary": "random-hex.js is faster in V8 than SM",
+        "Description": "Created attachment 9323388\\\\nrandom-hex.js\\\\n\\\\nThis is extracted from the polyfill that I'm using to run the todomvc tests in the shell.\\\\nIt's an example of V8 doing a lot better on code that only runs 100 times but has heavy usage of builtins.\\\\n\\\\nV8 runs it in 0.42ms, SM takes 0.88ms\\\\n\\\\nHere are profiles of SM: https://share.firefox.dev/3mXsdM7 and V8: https://share.firefox.dev/3Th6vPi\\\\n\\\\nThe profiles have a lot of overhead, so the sample counts may not be directly comparable. However, they do give insight into what each engine is doing.",
+        "text_length": 589
+      },
+      {
+        "ID": "1822962",
+        "Creation time": "2023-03-17 04:10:34+00:00",
+        "actual": "S3",
+        "predicted": "S4",
+        "Summary": "Gecko Assertion failure: gcMarker->tracingZone == zone || zone->isAtomsZone()",
+        "Description": "Run following javascript code, gecko faile at gc\\\\n```\\\\nconst o1 = {\\\\n    \\\\\"newCompartment\\\\\": true,\\\\n};\\\\nnewGlobal(o1).help(/(a+|b+|c+)*c/);\\\\ngc();\\\\n/*\\\\nAssertion failure: gcMarker->tracingZone == zone || zone->isAtomsZone(), at /home/s/gecko-dev/js/src/gc/Marking.cpp:216\\\\n#01: ???[/home/s/gecko-dev/obj-fuzzbuild/dist/bin/js +0x2496337]\\\\n#02: ???[/home/s/gecko-dev/obj-fuzzbuild/dist/bin/js +0x24aafd1]\\\\n#03: ???[/home/s/gecko-dev/obj-fuzzbuild/dist/bin/js +0x1dd8ffb]\\\\n#04: ???[/home/s/gecko-dev/obj-fuzzbuild/dist/bin/js +0x24c339a]\\\\n#05: ???[/home/s/gecko-dev/obj-fuzzbuild/dist/bi...[TRUNCATED]",
+        "text_length": 9813
+      },
+      {
+        "ID": "1822995",
+        "Creation time": "2023-03-17 10:12:15+00:00",
+        "actual": "S3",
+        "predicted": "S4",
+        "Summary": "Assertion failure: CurrentThreadIsGCSweeping() || CurrentThreadIsGCFinalizing(), at gc/Barrier.h:616",
+        "Description": "Steps to reproduce:\\\\n\\\\nOn git commit 585fe519f14ca8f241370573a902fc6d53cf8ac6 the attached sample asserts in the js-shell when invoked as `obj-x86_64-pc-linux-gnu/dist/bin/js --baseline-warmup-threshold=10 --fuzzing-safe --ion-warmup-threshold=100 crash.js`\\\\nBisecting the issue points to commit cc0a423c96d6ffc5d0d6ea1fabdb0f62b7d534bf related to bug 1816890.\\\\nMight not actually be s-s, just flagging as a precaution.\\\\n\\\\n```\\\\nfunction f0(a1, a2, a3) {\\\\n    try {\\\\n        a2(a1, a2);\\\\n    } catch(e5) {\\\\n        const v7 = new Set();\\\\n        const v8 = v7.add();\\\\n        function f9(...[TRUNCATED]",
+        "text_length": 5148
+      },
+      {
+        "ID": "1823081",
+        "Creation time": "2023-03-17 18:13:57+00:00",
+        "actual": "S3",
+        "predicted": "S4",
+        "Summary": "WPT failure in /dom/xslt/functions.tentative.window.html",
+        "Description": "Syncing wpt [PR 39057](https://github.com/web-platform-tests/wpt/pull/39057) found new untriaged test failures in CI\\\\n\\\\n# Tests Affected\\\\n\\\\n### Firefox-only failures\\\\n* [/dom/xslt/functions.tentative.window.html](https://wpt.live/dom/xslt/functions.tentative.window.html) [[wpt.fyi](https://wpt.fyi/results/dom/xslt/functions.tentative.window.html)]\\\\n  * unparsed-entity-uri: `FAIL`\\\\n\\\\n\\\\n# CI Results\\\\n\\\\n[Gecko CI (Treeherder)](https://treeherder.mozilla.org/#/jobs?repo=try&revision=f17682001188c92bb3ef6865984c489b0c75a188)\\\\n[GitHub PR Head](https://wpt.fyi/results/?sha=f9e521edcbae1ba...[TRUNCATED]",
+        "text_length": 1374
+      },
+      {
+        "ID": "1823886",
+        "Creation time": "2023-03-22 11:07:43+00:00",
+        "actual": "S3",
+        "predicted": "S4",
+        "Summary": "New wpt failures in /css/css-nesting/cssom.html",
+        "Description": "Syncing wpt [PR 39109](https://github.com/web-platform-tests/wpt/pull/39109) found new untriaged test failures in CI\\\\n\\\\n# Tests Affected\\\\n\\\\n### New Tests That Don't Pass\\\\n* [/css/css-nesting/cssom.html](https://wpt.live/css/css-nesting/cssom.html) [[wpt.fyi](https://wpt.fyi/results/css/css-nesting/cssom.html)]\\\\n  * Simple CSSOM manipulation of subrules 9: `FAIL` (Chrome: `PASS`, Safari: `FAIL`)\\\\n  * Simple CSSOM manipulation of subrules 10: `FAIL` (Chrome: `PASS`, Safari: `FAIL`)\\\\n\\\\n\\\\n# CI Results\\\\n\\\\n[Gecko CI (Treeherder)](https://treeherder.mozilla.org/#/jobs?repo=try&revision=ed...[TRUNCATED]",
+        "text_length": 1468
+      },
+      {
+        "ID": "1824740",
+        "Creation time": "2023-03-27 14:00:23+00:00",
+        "actual": "S3",
+        "predicted": "S4",
+        "Summary": "DataTransfer.setData is adding the data in the wrong order when the format already exists",
+        "Description": "Created attachment 9325178\\\\ndragtypes-orderbug.html\\\\n\\\\nTo reproduce:  Open the testcase, select the 'Drag Me' text and drag it.\\\\n\\\\nThe testcase calls setData three times:\\\\n\\\\n  event.dataTransfer.setData('text/plain', 'There is some text here.');\\\\n  event.dataTransfer.setData('text/horse', 'There is some horse here.');\\\\n  event.dataTransfer.setData('text/plain', 'There is some elephant here.');\\\\n\\\\nThe last line adds data of the same format that already exists. The spec says that setData should remove the existing item first and then add the new data. This is what other browsers do. F...[TRUNCATED]",
+        "text_length": 751
+      },
+      {
+        "ID": "1825140",
+        "Creation time": "2023-03-28 21:02:11+00:00",
+        "actual": "S3",
+        "predicted": "S4",
+        "Summary": "New wpt failures in /css/css-text/parsing/white-space-shorthand-text-wrap.html",
+        "Description": "Syncing wpt [PR 39244](https://github.com/web-platform-tests/wpt/pull/39244) found new untriaged test failures in CI\\\\n\\\\n# Tests Affected\\\\n\\\\n### New Tests That Don't Pass\\\\n* [/css/css-text/parsing/white-space-shorthand-text-wrap.html](https://wpt.live/css/css-text/parsing/white-space-shorthand-text-wrap.html) [[wpt.fyi](https://wpt.fyi/results/css/css-text/parsing/white-space-shorthand-text-wrap.html)]\\\\n  * `text-wrap: balance` should be set: `FAIL` (Chrome: `PASS`, Safari: `FAIL`)\\\\n  * `text-wrap` should not be affected by previous `white-space`: `FAIL` (Chrome: `PASS`, Safari: `FAIL`)\\...[TRUNCATED]",
+        "text_length": 1923
+      },
+      {
+        "ID": "1825220",
+        "Creation time": "2023-03-29 08:45:39+00:00",
+        "actual": "S3",
+        "predicted": "S4",
+        "Summary": "Crash [@ void js::jit::CodeGenerator::emitGetInlinedArgument] or Assertion failure: numActuals > 0 && numActuals <= ArgumentsObject::MaxInlinedArgs, at jit/CodeGenerator.cpp:7597",
+        "Description": "The following testcase crashes on mozilla-central revision 20230329-ff84e2935cc3 (opt build, run with --fuzzing-safe --ion-offthread-compile=off --ion-gvn=off --fast-warmup):\\\\n\\\\n    typedArrayConstructors = Object([ Int8Array, Uint8Array, Uint8ClampedArray ]);\\\\n    anyTypedArrayConstructors = Object([ ...typedArrayConstructors ]);\\\\n    for (constructor of anyTypedArrayConstructors) {\\\\n      [undefined, null, 1, false, \\\\\"\\\\\", Symbol, [], {}, /./, ({})].forEach(invalidReceiver => {\\\\n        try {\\\\n          (() => {\\\\n            constructor.prototype.lastIndexOf()\\\\n          })()\\\\n   ...[TRUNCATED]",
+        "text_length": 2835
+      },
+      {
+        "ID": "1825907",
+        "Creation time": "2023-04-01 02:33:31+00:00",
+        "actual": "S3",
+        "predicted": "S4",
+        "Summary": "Gecko fail at: Assertion failure: isShared(), at firefox/js/src/vm/Shape.h:753",
+        "Description": "Run following javascript code\\\\n```\\\\nfunction f2(a3, a4) {\\\\n    for (let v8 = 0; v8 < 2; v8++) {\\\\n        const v9 = `var y = 1;function f() {return delete y;};f();`;\\\\n        arguments[0] =arguments[1];\\\\n        eval(v9);\\\\n    }\\\\n}\\\\nf2(f2);\\\\n```\\\\nGecko fail at Assertion failure: isShared(), at firefox/js/src/vm/Shape.h:753\\\\nBacktrace\\\\n```\\\\nThread 1 \\\\\"js\\\\\" received signal SIGSEGV, Segmentation fault.\\\\njs::Shape::asShared (this=0x3f36e7964600) at /home/builder/firefox/js/src/vm/Shape.h:753\\\\n753\t/home/builder/firefox/js/src/vm/Shape.h: No such file or directory.\\\\n(gdb) bt\\\\n#0 ...[TRUNCATED]",
+        "text_length": 4066
+      }
+    ],
+    "S1_TO_S3": [
+      {
+        "ID": "1822548",
+        "Creation time": "2023-03-15 13:08:15+00:00",
+        "actual": "S1",
+        "predicted": "S3",
+        "Summary": "Missing media controls, including Picture-in-Picture (PiP) controls",
+        "Description": "Created attachment 9323209\\\\nYouTube.PNG\\\\n\\\\nUser Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0\\\\n\\\\nSteps to reproduce:\\\\n\\\\nMajor sites such as Reddit, Youtube, and Twitch's video players are missing control buttons.",
+        "text_length": 328
+      },
+      {
+        "ID": "1822567",
+        "Creation time": "2023-03-15 14:24:11+00:00",
+        "actual": "S1",
+        "predicted": "S3",
+        "Summary": "cursor disappearing in Google Docs",
+        "Description": "The cursor can disappear in Google Docs documents with Firefox 113.0a1 20230315092641. Observed by RyanVM, and me (Windows 10).",
+        "text_length": 161
+      },
+      {
+        "ID": "1824644",
+        "Creation time": "2023-03-27 02:09:06+00:00",
+        "actual": "S1",
+        "predicted": "S3",
+        "Summary": "Crash in [@ nsClipboard::SaveIStorage]",
+        "Description": "First reports from the 20230322211554 nightly.\\\\n\\\\nCrash report: https://crash-stats.mozilla.org/report/index/fe9ab1b3-4ba6-4333-9ed8-657170230324\\\\n\\\\nReason: ```EXCEPTION_ACCESS_VIOLATION_READ```\\\\n\\\\nTop 10 frames of crashing thread:\\\\n```\\\\n0  xul.dll  nsClipboard::SaveIStorage  widget/windows/nsClipboard.cpp:1427\\\\n1  xul.dll  nsClipboard::GetNativeDataOffClipboard  widget/windows/nsClipboard.cpp:817\\\\n2  xul.dll  nsClipboard::FindURLFromLocalFile  widget/windows/nsClipboard.cpp:1157\\\\n3  xul.dll  nsClipboard::GetDataFromDataObject  widget/windows/nsClipboard.cpp:953\\\\n4  xul.dll  nsClip...[TRUNCATED]",
+        "text_length": 1068
+      },
+      {
+        "ID": "1827258",
+        "Creation time": "2023-04-10 18:47:48+00:00",
+        "actual": "S1",
+        "predicted": "S3",
+        "Summary": "Fast path Array.prototype.concat",
+        "Description": "This shows up on preact:\\\\n```js\\\\nfunction addItem(title) {\\\\n      todos = todos.concat({\\\\n        id: uuid(),\\\\n        title,\\\\n        completed: false\\\\n      });\\\\n      inform();\\\\n    }\\\\n```\\\\nJSC is 2x faster at this than SM: https://share.firefox.dev/3zMGcra vs https://share.firefox.dev/3zNb0bq\\\\n\\\\nEliminating the perf difference on this function would gain us 1.9% on this benchmark.\\\\n\\\\nJSC has a fast path that the code above hits:\\\\nhttps://searchfox.org/wubkat/rev/226c809b2e6b2461435b10075fdd24410dce2cea/Source/JavaScriptCore/builtins/ArrayPrototype.js#643\\\\n\\\\nhttps://search...[TRUNCATED]",
+        "text_length": 745
+      },
+      {
+        "ID": "1827512",
+        "Creation time": "2023-04-11 22:16:34+00:00",
+        "actual": "S1",
+        "predicted": "S3",
+        "Summary": "script with only whitespace between opening and closing tags is not run if its src and type change, unlike in Blink and WebKit",
+        "Description": "In the attached test-case, a script element has a non-JS type attribute, and whitespace in between its opening and closing tags. Its src and type are then dynamically set to JS and a console.log statement, but the new script is never run.\\\\n\\\\nIn WebKit and Blink, the script is run, seemingly as long as its type was non-JS, but changed to JS when the src changes.\\\\n\\\\nThis is causing a webcompat issue which breaks page load at www.legorafi.fr, where their rocket loader script loading relies on such a script change to fire either `onload` or `onerror` on such a change. This ultimately causes li...[TRUNCATED]",
+        "text_length": 854
+      },
+      {
+        "ID": "1828271",
+        "Creation time": "2023-04-15 14:02:38+00:00",
+        "actual": "S1",
+        "predicted": "S3",
+        "Summary": "WebGPU: Add JS console UI tests for shader module creation diagnostics",
+        "Description": "The patch stack starting with https://phabricator.services.mozilla.com/D175303 introduced JS console printing for shader module creation without tests. It is/was fine to not thoroughly test this while in a prototypical stage of WebGPU implementation, but we'll need this to be firmed up before we have a \\\\\"robust\\\\\" implementation.",
+        "text_length": 402
+      },
+      {
+        "ID": "1829462",
+        "Creation time": "2023-04-22 06:31:06+00:00",
+        "actual": "S1",
+        "predicted": "S3",
+        "Summary": "VAAPI/Intel: Video corruption on Twitter user pages",
+        "Description": "Created attachment 9329790\\\\nScreenshot from 2023-04-22 02-18-22.png\\\\n\\\\nJust noticed this in the latest build.\\\\n\\\\nSteps to reproduce:\\\\n\\\\n1. Navigate to https://twitter.com/_B___S\\\\n2. Scroll down to put a video into view\\\\n\\\\nWhat happens:\\\\n\\\\nVideo corruption (see screenshot).\\\\n\\\\nExpected result:\\\\n\\\\nAs before regression.\\\\n\\\\n 8:56.49 INFO: No more integration revisions, bisection finished.\\\\n 8:56.49 INFO: Last good revision: 76e531fbcedb941aa8951a0c3a027cd5bfe18af1\\\\n 8:56.49 INFO: First bad revision: 9c6ea77a90eb8b7127fd5e3dc5c1c2109ebe8f13\\\\n 8:56.49 INFO: Pushlog:\\\\nhttps://hg...[TRUNCATED]",
+        "text_length": 798
+      },
+      {
+        "ID": "1831017",
+        "Creation time": "2023-05-03 03:27:34+00:00",
+        "actual": "S1",
+        "predicted": "S3",
+        "Summary": "Zombie process that continuously increases memory use after shutting down and restarting Nightly",
+        "Description": "1.Create new Nightly profile\\\\n2. Go to Youtube.com\\\\n3. Hover over the videos a bit so that they start playing, or in general wait for 30-45 seconds on the page\\\\n4. Close Firefox\\\\n5. Start Firefox\\\\n6. Click on \\\\\"Restore previous session\\\\\"\\\\nMay need to repeat 2-5 a few times to get it to repro\\\\n\\\\nAR: When you shutdown Firefox or restart Firefox, a process remains open. And it continuoulsy increases the memory use at 10MB/s. This process is not detected by Firefox itself (i.e. it is not shown under about:processes or about:memory)\\\\nER: Not so\\\\n\\\\nI saw this only on the latest Nightly,...[TRUNCATED]",
+        "text_length": 738
+      },
+      {
+        "ID": "1832315",
+        "Creation time": "2023-05-10 13:52:09+00:00",
+        "actual": "S1",
+        "predicted": "S3",
+        "Summary": "With third-party management SW Firefox 113 Update Preventing 2nd, or 3rd Tabs from Loading",
+        "Description": "https://old.reddit.com/r/firefox/comments/13dfmwj/firefox_113_update_preventing_2nd_or_3rd_tabs/?ref=share&ref_source=link\\\\n\\\\n\\\\n> Really pretty lost here...\\\\n>\\\\n> This afternoon, anyone at my company who updated Firefox to 113 is having really bizarre symptoms with the browser.\\\\n> \\\\n> When you open Firefox, everything appears fine. However, after opening 2 or 3 tabs and visiting different sites, the site suddenly hangs.\\\\n> \\\\n> For example, if I opened Firefox and made 6 tabs and went to youtube, amazon, wikipedia, reddit, office, okta... youtube, amazon, and wikipedia would load but t...[TRUNCATED]",
+        "text_length": 1860
+      },
+      {
+        "ID": "1833876",
+        "Creation time": "2023-05-18 14:22:56+00:00",
+        "actual": "S1",
+        "predicted": "S3",
+        "Summary": "Manipulation with Offscreen Canvas allows bypassing tainting restrictions",
+        "Description": "Created attachment 9334823\\\\nThe working demos of the Canvas restriction bypassing\\\\n\\\\nThe attached demo (A modified example from the demo page https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas ) tries to overcome the restriction that doesn't allow accessing the canvas pixel data when a locally accessed image was drawn on it.\\\\n\\\\nSteps to reproduce:\\\\n *  Extract the archive locally (Windows 7 in my case). \\\\n *  Open file .... main_entry\\\\UntaintingFFDemo.htm\\\\n *  Click at Grayscale/Invated/Sepia. \\\\n\\\\nWhat happened:\\\\n* the switching work...[TRUNCATED]",
+        "text_length": 1774
+      }
+    ],
+    "S2_TO_S4": [
+      {
+        "ID": "1825759",
+        "Creation time": "2023-03-31 11:48:17+00:00",
+        "actual": "S2",
+        "predicted": "S4",
+        "Summary": "Perma Late beta bustage /builds/worker/checkouts/gecko/dom/media/gmp/GMPChild.cpp:243:5: error: use of undeclared identifier 'GMP_DIAGNOSTIC_CRASH' when Gecko 113 switches to Late Beta on 2023-04-21",
+        "Description": "[Central-as-beta simulation](https://treeherder.mozilla.org/jobs?repo=try&group_state=expanded&resultStatus=testfailed%2Cbusted%2Cexception&revision=478ca62a29e5992d61e276bb39b528f7b123d3c3&searchStr=build&selectedTaskRun=OcKkUONmScuvtiaMWkE-tg.0)\\\\n\\\\n[How to run these simulations](https://wiki.mozilla.org/Sheriffing/How_To/Beta_simulations#TRUNK_AS_LATE_BETA)\\\\n\\\\n[Failure log:](https://treeherder.mozilla.org/logviewer?job_id=410931590&repo=try&lineNumber=9029)\\\\n\\\\n```\\\\n[task 2023-03-31T11:04:24.352Z] 11:04:24     INFO -  gmake[4]: Entering directory '/builds/worker/workspace/obj-build/dom...[TRUNCATED]",
+        "text_length": 7345
+      },
+      {
+        "ID": "1827557",
+        "Creation time": "2023-04-12 06:29:29+00:00",
+        "actual": "S2",
+        "predicted": "S4",
+        "Summary": "[CTW][Mac][New Text Impl] Regressions in text navigation announcements",
+        "Description": "In both single-line and multi-line text fields, there are some related regressions since the new text implementation for MacOS.\\\\n\\\\nSteps to reproduce:\\\\n\\\\n1. Open data:text/html,<button>Before</button><textarea></textarea>\\\\n2. Tab to the text field and enter some text. Make sure to get several lines of text out of it so you have room to maneuver.\\\\n3. With VoiceOver turned on, read line by line by navigating up and down with arrow keys.\\\\n   * Expected: Every line should be read on its own.\\\\n   * Actual: The last line is only read if the cursor doesn't land at the end of the line, past th...[TRUNCATED]",
+        "text_length": 2196
+      },
+      {
+        "ID": "1828045",
+        "Creation time": "2023-04-14 05:28:03+00:00",
+        "actual": "S2",
+        "predicted": "S4",
+        "Summary": "Copying image from RTF Editor eg. (macOS Notes app) pastes the Object Replacement character instead in Firefox",
+        "Description": "Created attachment 9328503\\\\nScreen Recording 2023-04-14 at 3.22.05 pm.gif\\\\n\\\\nSteps to reproduce:\\\\n\\\\n1. Copy an image from macOS Notes app\\\\n2. Paste in a web text editor (e.g. Atlaskit editor or Lexical Playground)\\\\n\\\\n\\\\nActual results:\\\\n\\\\nThe Object Replacement character is pasted instead of the image\\\\n\\\\n\\\\nExpected results:\\\\n\\\\nThe image should be pasted.\\\\n\\\\n(Additional notes: copying other types of content from the Notes app such as headings / tables also paste incorrectly in Firefox, where it is pasted correctly when using Chrome or Safari.",
+        "text_length": 674
+      },
+      {
+        "ID": "1832582",
+        "Creation time": "2023-05-11 14:25:14+00:00",
+        "actual": "S2",
+        "predicted": "S4",
+        "Summary": "Crash in [@ js::jit::AnalyzeBytecodeForIon]",
+        "Description": "Crash report: https://crash-stats.mozilla.org/report/index/5127780f-32a4-4fa5-abed-4fdbb0230511\\\\n\\\\nReason: ```EXCEPTION_ACCESS_VIOLATION_READ```\\\\n\\\\nTop 10 frames of crashing thread:\\\\n```\\\\n0  xul.dll  js::jit::AnalyzeBytecodeForIon  js/src/jit/BytecodeAnalysis.cpp:253\\\\n1  xul.dll  js::jit::JitScript::ensureHasCachedIonData  js/src/jit/JitScript.cpp:465\\\\n2  xul.dll  WarpScriptOracle::createScriptSnapshot  js/src/jit/WarpOracle.cpp:305\\\\n3  xul.dll  js::jit::WarpOracle::createSnapshot  js/src/jit/WarpOracle.cpp:154\\\\n4  xul.dll  js::jit::CreateWarpSnapshot  js/src/jit/Ion.cpp:1586\\\\n4  xu...[TRUNCATED]",
+        "text_length": 1010
+      },
+      {
+        "ID": "1837408",
+        "Creation time": "2023-06-08 14:15:18+00:00",
+        "actual": "S2",
+        "predicted": "S4",
+        "Summary": "Crash in [@ mozilla::LinkedListElement<T>::getNext]",
+        "Description": "This crash signature existed before but got more frequent with Firefox 114.0. All crashes are reported for Windows with ~40% in the first minute after launch. 32 crashes from 32 installations after 1 day of rollout to 25% of users (4% effective update rate).\\\\n\\\\nCrash report: https://crash-stats.mozilla.org/report/index/0a2d49e9-3270-4759-8986-3350f0230608\\\\n\\\\nReason: ```EXCEPTION_ACCESS_VIOLATION_READ```\\\\n\\\\nTop 10 frames of crashing thread:\\\\n```\\\\n0  xul.dll  mozilla::LinkedListElement<js::jit::IonCompileTask>::getNext  mfbt/LinkedList.h:208\\\\n0  xul.dll  mozilla::LinkedList<js::jit::Ion...[TRUNCATED]",
+        "text_length": 1289
+      },
+      {
+        "ID": "1838587",
+        "Creation time": "2023-06-15 08:12:50+00:00",
+        "actual": "S2",
+        "predicted": "S4",
+        "Summary": "Assertion failure: slotIndex <= (255), at jit/CacheIRWriter.h:469",
+        "Description": "The following testcase crashes on mozilla-central revision 20230613-e974af195c98 (debug build, run with --fuzzing-safe --cpu-count=2 --ion-offthread-compile=off --baseline-eager):\\\\n\\\\nSee attachment.\\\\n\\\\n\\\\nBacktrace:\\\\n\\\\n    received signal SIGSEGV, Segmentation fault.\\\\n    #0  0x0000555557b56617 in js::jit::CacheIRWriter::loadArgumentFixedSlot(js::jit::ArgumentKind, unsigned int, js::jit::CallFlags) ()\\\\n    #1  0x0000555557b83bb2 in js::jit::CallIRGenerator::tryAttachBoundFunction(JS::Handle<js::BoundFunctionObject*>) ()\\\\n    #2  0x0000555557b84849 in js::jit::CallIRGenerator::tryAttac...[TRUNCATED]",
+        "text_length": 1918
+      },
+      {
+        "ID": "1840144",
+        "Creation time": "2023-06-23 18:25:42+00:00",
+        "actual": "S2",
+        "predicted": "S4",
+        "Summary": "AddressSanitizer: heap-use-after-free on PR_GetIdentitiesLayer after SSL_SetURL PORT_Strdup(url) allocation failure",
+        "Description": "Created attachment 9340751\\\\nssl-seturl-failure-heap-use-after-free-4.txt\\\\n\\\\nWhen launching Firefox with `--disable-e10s` and fillMemory code, then when contacting with URL, at rare time Firefox able to crash with `AddressSanitizer: heap-use-after-free` on `PR_GetIdentitiesLayer`. \\\\n\\\\nIt happen when allocation failure on `SSL_SetURL` malloc at [`ss->url = (const char *)PORT_Strdup(url);`](https://searchfox.org/mozilla-central/source/security/nss/lib/ssl/sslsecur.c#1157)",
+        "text_length": 593
+      },
+      {
+        "ID": "1841682",
+        "Creation time": "2023-07-04 19:25:29+00:00",
+        "actual": "S2",
+        "predicted": "S4",
+        "Summary": "Assertion failure: this->flags() == 0, at gc/Cell.h:832",
+        "Description": "The following testcase crashes on mozilla-central revision 20230629-c93a9e0ad90d (debug build, run with --fuzzing-safe --cpu-count=2 --ion-offthread-compile=off --ion-warmup-threshold=0 --fast-warmup --blinterp-warmup-threshold=1):\\\\n\\\\n    gczeal(12,9);\\\\n    function clone_object_check(b, desc) {\\\\n      function ownProperties(obj) {\\\\n        return Object.getOwnPropertyNames(obj).\\\\n          map(function (p) { return [p, Object.getOwnPropertyDescriptor(obj, p)]; });\\\\n      }\\\\n      function isArrayLength(obj, pair) {\\\\n        return Array.isArray(obj) && pair[0] == \\\\\"length\\\\\";\\\\n    ...[TRUNCATED]",
+        "text_length": 4577
+      },
+      {
+        "ID": "1842617",
+        "Creation time": "2023-07-10 15:02:01+00:00",
+        "actual": "S2",
+        "predicted": "S4",
+        "Summary": "Crash [@ js::NativeObject::allocDictionarySlot(JSContext*, JS::Handle<js::NativeObject*>, unsigned int*)] or Assertion failure: isInt32(), at js/Value.h:914",
+        "Description": "The following testcase crashes on mozilla-central revision 20230710-aaa3698312c5 (opt build, run with --fuzzing-safe --cpu-count=2 --ion-offthread-compile=off --baseline-eager):\\\\n\\\\n    loadFile(``);\\\\n    loadFile(``);\\\\n    loadFile(`\\\\n      var lfClass = new LFC1695437225();\\\\n    `);\\\\n    loadFile(`\\\\n      (function(global) {\\\\n        global.assertDeepEq = (function(){})();\\\\n      })(this);\\\\n    `);\\\\n    loadFile(`\\\\n      log = \\\\\"\\\\\";\\\\n    `);\\\\n    loadFile(`\\\\n      for (let invalid of (log(\\\\\"lhs before name a\\\\\"), \\\\\"a\\\\\")) {}\\\\n    `);\\\\n    loadFile(`}`);\\\\n    loadFile(`\\...[TRUNCATED]",
+        "text_length": 4183
+      },
+      {
+        "ID": "1847397",
+        "Creation time": "2023-08-05 20:40:29+00:00",
+        "actual": "S2",
+        "predicted": "S4",
+        "Summary": "Assertion failure: kind == JS::TracerKind::Tenuring || kind == JS::TracerKind::MinorSweeping || kind == JS::TracerKind::Moving, at gc/Marking.cpp:137",
+        "Description": "Steps to reproduce:\\\\n\\\\nOn git commit 0816653c3ab851fa0e362eaec48c643fb764eaf4 the attached (flaky) sample crashes with one of two assertion violation.\\\\nI observed `js::Mutex::assertOwnedByCurrentThread at js/src/threading/Mutex.cpp:73` when reproducing with rr --chaos and\\\\n`Assertion failure: kind == JS::TracerKind::Tenuring || kind == JS::TracerKind::MinorSweeping || kind == JS::TracerKind::Moving, at gc/Marking.cpp:137` when running without an attached debugger.\\\\nThe sample is invoked as `obj-x86_64-pc-linux-gnu/dist/bin/js --baseline-warmup-threshold=10 --ion-warmup-threshold=100 --fuz...[TRUNCATED]",
+        "text_length": 5900
+      }
+    ]
+  }
+}

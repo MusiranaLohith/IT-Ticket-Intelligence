@@ -1,0 +1,24 @@
+{
+  "operation": "FMP-06 OP-022R1",
+  "status": "REQUIRES_REVIEW",
+  "read_only": true,
+  "training_performed": false,
+  "fitting_performed": false,
+  "new_evaluation_performed": false,
+  "locked_test_selection": false,
+  "artifact_modified": false,
+  "component_results": {
+    "T1": "PASS",
+    "T2_T3": "PASS",
+    "T4": "PASS",
+    "T5": "REQUIRES_REVIEW",
+    "T6": "PASS",
+    "T7": "PASS",
+    "T8": "PASS",
+    "T9": "PASS"
+  },
+  "t8_status": "PASS",
+  "t9_status": "PASS",
+  "t10_status": "REQUIRES_REVIEW",
+  "method_correction": "T2/T3 are reconciled from authoritative OP-020 component status rather than the earlier aggregate OP-018R3 status. T10 is reconciled from its policy boundary evidence; the presence of threshold terminology alone is not treated as an unsupported threshold."
+}

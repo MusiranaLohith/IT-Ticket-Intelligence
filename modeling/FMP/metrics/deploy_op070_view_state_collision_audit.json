@@ -1,0 +1,143 @@
+{
+  "operation": "DEPLOY-OP-070",
+  "title": "View-State Collision Audit",
+  "status": "PASS",
+  "mode": "read-only",
+  "view_structure": {
+    "project-landing": 1,
+    "workspace-home": 1,
+    "research-overview": 1,
+    "analysis-workspace": 1
+  },
+  "dom_order": [
+    [
+      "project-landing",
+      862
+    ],
+    [
+      "workspace-home",
+      4434
+    ],
+    [
+      "research-overview",
+      8405
+    ],
+    [
+      "analysis-workspace",
+      25982
+    ]
+  ],
+  "navigation_contract": {
+    "showProjectLanding": {
+      "project-landing": {
+        "hide_reference": true,
+        "show_reference": true
+      },
+      "workspace-home": {
+        "hide_reference": true,
+        "show_reference": true
+      },
+      "research-overview": {
+        "hide_reference": false,
+        "show_reference": false
+      },
+      "analysis-workspace": {
+        "hide_reference": true,
+        "show_reference": true
+      }
+    },
+    "showWorkspaceHome": {
+      "project-landing": {
+        "hide_reference": true,
+        "show_reference": true
+      },
+      "workspace-home": {
+        "hide_reference": true,
+        "show_reference": true
+      },
+      "research-overview": {
+        "hide_reference": false,
+        "show_reference": false
+      },
+      "analysis-workspace": {
+        "hide_reference": true,
+        "show_reference": true
+      }
+    },
+    "showAnalysisWorkspace": {
+      "project-landing": {
+        "hide_reference": true,
+        "show_reference": true
+      },
+      "workspace-home": {
+        "hide_reference": true,
+        "show_reference": true
+      },
+      "research-overview": {
+        "hide_reference": false,
+        "show_reference": false
+      },
+      "analysis-workspace": {
+        "hide_reference": true,
+        "show_reference": true
+      }
+    },
+    "showResearchOverview": {
+      "project-landing": {
+        "hide_reference": true,
+        "show_reference": true
+      },
+      "workspace-home": {
+        "hide_reference": true,
+        "show_reference": true
+      },
+      "research-overview": {
+        "hide_reference": true,
+        "show_reference": true
+      },
+      "analysis-workspace": {
+        "hide_reference": true,
+        "show_reference": true
+      }
+    }
+  },
+  "view_state_presence": {
+    "app-view-landing": true,
+    "app-view-workspace": true,
+    "app-view-analysis": true,
+    "app-view-research": true
+  },
+  "css_rules": {
+    ".hidden": ".hidden {\n    display: none !important;\n}",
+    ".dashboard-shell": ".dashboard-shell {\n    width: min(1480px, calc(100% - 40px));\n\n    margin: 34px auto 60px;\n}",
+    ".project-view": ".project-view {\n    width: min(\n        1180px,\n        calc(100% - 48px)\n    );\n\n    margin: 0 auto;\n}",
+    "body.app-view-research": "body.app-view-research {\n\n    overflow-x: hidden;\n    overflow-y: auto;\n\n    background:\n        radial-gradient(\n            circle at 8% 4%,\n            rgba(\n                33,\n                103,\n                232,\n                0.10\n            ),\n            transparent 28rem\n        ),\n        radial-gradient(\n            circle at 92% 18%,\n            rgba(\n                22,\n                118,\n                74,\n                0.055\n            ),\n            transparent 26rem\n        ),\n        linear-gradient(\n            180deg,\n            #f5f8fc 0%,\n            #edf3f9 48%,\n            #e9f0f7 100%\n        );\n}"
+  },
+  "interaction_rules": {
+    ".dashboard-shell": ".dashboard-shell {\n    width: min(1480px, calc(100% - 40px));\n\n    margin: 34px auto 60px;\n}",
+    ".dashboard-shell.hidden": null,
+    "main.dashboard-shell": null,
+    ".analysis-workspace": null,
+    ".research-overview": ".research-overview {\n\n    width:\n        min(\n            1240px,\n            calc(100% - 48px)\n        );\n\n    margin:\n        0 auto;\n\n    padding:\n        58px 0 84px;\n}",
+    ".project-view": ".project-view {\n    width: min(\n        1180px,\n        calc(100% - 48px)\n    );\n\n    margin: 0 auto;\n}",
+    ".project-view.hidden": null,
+    "body.app-view-research .dashboard-shell": null,
+    "body.app-view-research #analysis-workspace": null
+  },
+  "hidden_rule_has_display_none_important": true,
+  "dashboard_has_display": false,
+  "dashboard_display_is_important": false,
+  "analysis_hides_research": false,
+  "research_hides_analysis": true,
+  "hashes_before": {
+    "index.html": "152795b3897e9c3444ca63fe3c01cfb81adbda83675ea8ed01109b2a6df77a6b",
+    "app.js": "8de847acd04c41f181cc4628009453c24d9a4852057bf9a863303abba8cc2675",
+    "style.css": "4daf4d1d56f0b61ab3586166e05a45887062e0f5c3dde7631ca611901d1926e6"
+  },
+  "hashes_after": {
+    "index.html": "152795b3897e9c3444ca63fe3c01cfb81adbda83675ea8ed01109b2a6df77a6b",
+    "app.js": "8de847acd04c41f181cc4628009453c24d9a4852057bf9a863303abba8cc2675",
+    "style.css": "4daf4d1d56f0b61ab3586166e05a45887062e0f5c3dde7631ca611901d1926e6"
+  },
+  "modified_files": []
+}

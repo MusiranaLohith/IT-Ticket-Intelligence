@@ -1,0 +1,139 @@
+{
+  "operation": "T9_MOD-037_OP-015",
+  "title": "Final Integrated Evidence Synthesis & Closure",
+  "status": "PASS",
+  "purpose": "Perform the final read-only integration of completed T9 evidence and close the T9 empirical confidence/calibration boundary.",
+  "prior_operations": [
+    "OP-001",
+    "OP-005",
+    "OP-010",
+    "OP-011",
+    "OP-012D",
+    "OP-013F",
+    "OP-014"
+  ],
+  "contract_validation": {
+    "status": "PASS",
+    "role": "T9 confidence/calibration contract",
+    "model_fitting": "NOT_PERFORMED",
+    "universal_score": "NOT_CREATED"
+  },
+  "semantic_lock_validation": {
+    "status": "PASS",
+    "semantic_boundary": "FROZEN",
+    "cross_task_probability_comparability": "PROHIBITED",
+    "universal_confidence": "PROHIBITED",
+    "universal_risk": "PROHIBITED",
+    "synthetic_target": "PROHIBITED",
+    "T6_binary_reinterpretation": "PROHIBITED",
+    "T7_binary_conversion": "PROHIBITED",
+    "T7_censoring_relabelling": "PROHIBITED"
+  },
+  "task_evidence": {
+    "T2": {
+      "status": "UNAVAILABLE_FOR_PROBABILITY_CALIBRATION"
+    },
+    "T3": {
+      "status": "UNAVAILABLE"
+    },
+    "T4": {
+      "status": "NATIVE_RANKING_EVALUATION_ESTABLISHED",
+      "probability_calibration": "NOT_ESTABLISHED"
+    },
+    "T5": {
+      "status": "EMPIRICAL_CALIBRATION_EVIDENCE_ESTABLISHED",
+      "formal_method_selection": "NOT_FORMALLY_SELECTED"
+    },
+    "T6": {
+      "status": "NATIVE_RETRIEVAL_EVALUATION_ESTABLISHED",
+      "binary_probability_calibration": "NOT_ESTABLISHED"
+    },
+    "T7": {
+      "status": "NATIVE_SURVIVAL_EVIDENCE_CLOSED",
+      "formal_survival_calibration": "NOT_ESTABLISHED",
+      "formal_calibration_uncertainty": "NOT_ESTABLISHED"
+    }
+  },
+  "final_evidence_statement": {
+    "T2": "No accepted native probability artifact for probability calibration.",
+    "T3": "No accepted native probability artifact for probability calibration.",
+    "T4": "Native candidate-space ranking evaluation is established. Universal probability calibration is not established.",
+    "T5": "Empirical calibration improvement evidence is established. No formal calibration method winner was selected.",
+    "T6": "Native query-level retrieval/ranking evaluation and reliability evidence are established. Ordinary binary probability calibration is not established.",
+    "T7": "Native survival evaluation, uncertainty, and descriptive reliability are established. Formal survival calibration and formal calibration uncertainty are not established.",
+    "cross_task": "Task-specific quantities cannot be treated as numerically comparable probabilities. No universal confidence/risk construct is empirically established or created."
+  },
+  "OP014_boundary": {
+    "status": "PASS",
+    "cross_task_status": "TASK_SPECIFIC_EVIDENCE_BOUNDARY_CLOSED",
+    "T8_interface": "ACCEPTED_TASK_SPECIFIC_INTERFACE",
+    "universal_confidence": "NOT_CREATED",
+    "universal_risk": "NOT_CREATED",
+    "synthetic_fusion_target": "NOT_CREATED",
+    "automatic_action_label": "NOT_CREATED"
+  },
+  "controls": {
+    "all_prior_T9_operations_validated": true,
+    "new_model_fitted": false,
+    "new_predictions_generated": false,
+    "new_probability_generated": false,
+    "new_calibration_fitted": false,
+    "new_target_created": false,
+    "synthetic_target_created": false,
+    "synthetic_probability_created": false,
+    "cross_task_probability_aggregation": false,
+    "cross_task_probability_comparison": false,
+    "universal_confidence_created": false,
+    "universal_risk_score_created": false,
+    "automatic_action_label_created": false,
+    "threshold_selected": false,
+    "model_selected": false,
+    "locked_test_used": false,
+    "post_creation_information_used": false,
+    "existing_artifacts_modified": false,
+    "native_semantics_preserved": true,
+    "task_specific_evidence_preserved": true,
+    "provenance_preserved": true,
+    "missing_evidence_preserved": true,
+    "T6_observation_semantics_preserved": true,
+    "T7_right_censoring_preserved": true
+  },
+  "control_validation": {
+    "status": "PASS",
+    "failed_controls": []
+  },
+  "closure": {
+    "status": "T9_MOD-037_CLOSED",
+    "scope": "T9 confidence, calibration, native evaluation, uncertainty, reliability, and cross-task evidence boundary.",
+    "empirical_boundary": "T9 establishes task-specific empirical evidence only. Heterogeneous task outputs remain tied to their native predictive quantities and observation structures.",
+    "calibration_boundary": "T5 has empirical calibration improvement evidence without formal method selection. T2 and T3 lack accepted native probability artifacts. T4 and T6 remain native ranking/retrieval quantities. T7 remains a survival quantity with censoring-aware uncertainty.",
+    "cross_task_boundary": "Cross-task numerical probability comparability is not established and is prohibited by the frozen methodology.",
+    "universal_confidence": "NOT_ESTABLISHED_AND_NOT_CREATED",
+    "universal_risk": "NOT_ESTABLISHED_AND_NOT_CREATED",
+    "synthetic_fusion_target": "NOT_CREATED",
+    "automatic_action_policy": "NOT_ESTABLISHED",
+    "human_review_boundary": "NOT_ESTABLISHED_BY_T9",
+    "locked_test": "NOT_USED_FOR_CALIBRATION_SELECTION",
+    "final_interpretation": "T9 is closed as an evidence and calibration boundary. It does not create a universal confidence/risk score or an autonomous decision policy. The resulting T8 interface remains task-specific, provenance-preserving, and uncertainty-aware."
+  },
+  "methodological_restrictions": [
+    "No universal confidence score.",
+    "No universal risk score.",
+    "No synthetic fusion target.",
+    "No automatic-action label.",
+    "No cross-task probability aggregation.",
+    "No cross-task numerical probability comparison.",
+    "No arbitrary cross-task weighting.",
+    "No new model fitting.",
+    "No new prediction generation.",
+    "No new probability generation.",
+    "No new calibration fitting.",
+    "No threshold selection.",
+    "No model selection.",
+    "No locked-test calibration selection.",
+    "T4 candidate-space semantics preserved.",
+    "T6 observable_non_positive is not treated as a true negative.",
+    "T7 right censoring is preserved.",
+    "Unavailable evidence remains unavailable."
+  ]
+}

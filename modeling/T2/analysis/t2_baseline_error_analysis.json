@@ -1,0 +1,304 @@
+{
+  "operation": "T2-MOD-009",
+  "operation_name": "Baseline Error and Distribution Analysis",
+  "task": "T2",
+  "task_name": "Priority Prediction",
+  "dataset": "Mozilla CORE",
+  "reference_model": "T2-MOD-006 TF-IDF + Logistic Regression",
+  "test_used": false,
+  "train_rows": 20648,
+  "validation_rows": 4425,
+  "class_distribution": {
+    "train": {
+      "P1": {
+        "count": 5894,
+        "percentage": 28.545137543587757
+      },
+      "P2": {
+        "count": 6298,
+        "percentage": 30.50174351026734
+      },
+      "P3": {
+        "count": 6884,
+        "percentage": 33.33979077876792
+      },
+      "P4": {
+        "count": 710,
+        "percentage": 3.4385896939170864
+      },
+      "P5": {
+        "count": 862,
+        "percentage": 4.174738473459899
+      }
+    },
+    "validation": {
+      "P1": {
+        "count": 806,
+        "percentage": 18.214689265536723
+      },
+      "P2": {
+        "count": 1317,
+        "percentage": 29.762711864406782
+      },
+      "P3": {
+        "count": 2054,
+        "percentage": 46.4180790960452
+      },
+      "P4": {
+        "count": 41,
+        "percentage": 0.9265536723163843
+      },
+      "P5": {
+        "count": 207,
+        "percentage": 4.677966101694915
+      }
+    },
+    "predicted_validation": {
+      "P1": {
+        "count": 744,
+        "percentage": 16.8135593220339
+      },
+      "P2": {
+        "count": 1164,
+        "percentage": 26.305084745762713
+      },
+      "P3": {
+        "count": 2511,
+        "percentage": 56.74576271186441
+      },
+      "P4": {
+        "count": 0,
+        "percentage": 0.0
+      },
+      "P5": {
+        "count": 6,
+        "percentage": 0.13559322033898305
+      }
+    }
+  },
+  "distribution_shift": {
+    "P1": {
+      "train_percentage": 28.545137543587757,
+      "validation_percentage": 18.214689265536723,
+      "percentage_point_change": -10.330448278051033
+    },
+    "P2": {
+      "train_percentage": 30.50174351026734,
+      "validation_percentage": 29.762711864406782,
+      "percentage_point_change": -0.7390316458605568
+    },
+    "P3": {
+      "train_percentage": 33.33979077876792,
+      "validation_percentage": 46.4180790960452,
+      "percentage_point_change": 13.078288317277277
+    },
+    "P4": {
+      "train_percentage": 3.4385896939170864,
+      "validation_percentage": 0.9265536723163843,
+      "percentage_point_change": -2.512036021600702
+    },
+    "P5": {
+      "train_percentage": 4.174738473459899,
+      "validation_percentage": 4.677966101694915,
+      "percentage_point_change": 0.5032276282350159
+    }
+  },
+  "per_class_error_analysis": {
+    "P1": {
+      "actual_support": 806,
+      "correct": 298,
+      "errors": 508,
+      "error_rate": 0.630272952853598,
+      "predicted_as": {
+        "P1": 298,
+        "P2": 202,
+        "P3": 306,
+        "P4": 0,
+        "P5": 0
+      }
+    },
+    "P2": {
+      "actual_support": 1317,
+      "correct": 419,
+      "errors": 898,
+      "error_rate": 0.6818526955201215,
+      "predicted_as": {
+        "P1": 222,
+        "P2": 419,
+        "P3": 675,
+        "P4": 0,
+        "P5": 1
+      }
+    },
+    "P3": {
+      "actual_support": 2054,
+      "correct": 1361,
+      "errors": 693,
+      "error_rate": 0.3373904576436222,
+      "predicted_as": {
+        "P1": 191,
+        "P2": 500,
+        "P3": 1361,
+        "P4": 0,
+        "P5": 2
+      }
+    },
+    "P4": {
+      "actual_support": 41,
+      "correct": 0,
+      "errors": 41,
+      "error_rate": 1.0,
+      "predicted_as": {
+        "P1": 3,
+        "P2": 4,
+        "P3": 34,
+        "P4": 0,
+        "P5": 0
+      }
+    },
+    "P5": {
+      "actual_support": 207,
+      "correct": 3,
+      "errors": 204,
+      "error_rate": 0.9855072463768116,
+      "predicted_as": {
+        "P1": 30,
+        "P2": 39,
+        "P3": 135,
+        "P4": 0,
+        "P5": 3
+      }
+    }
+  },
+  "error_pairs_ranked": [
+    {
+      "actual": "P2",
+      "predicted": "P3",
+      "count": 675
+    },
+    {
+      "actual": "P3",
+      "predicted": "P2",
+      "count": 500
+    },
+    {
+      "actual": "P1",
+      "predicted": "P3",
+      "count": 306
+    },
+    {
+      "actual": "P2",
+      "predicted": "P1",
+      "count": 222
+    },
+    {
+      "actual": "P1",
+      "predicted": "P2",
+      "count": 202
+    },
+    {
+      "actual": "P3",
+      "predicted": "P1",
+      "count": 191
+    },
+    {
+      "actual": "P5",
+      "predicted": "P3",
+      "count": 135
+    },
+    {
+      "actual": "P5",
+      "predicted": "P2",
+      "count": 39
+    },
+    {
+      "actual": "P4",
+      "predicted": "P3",
+      "count": 34
+    },
+    {
+      "actual": "P5",
+      "predicted": "P1",
+      "count": 30
+    },
+    {
+      "actual": "P4",
+      "predicted": "P2",
+      "count": 4
+    },
+    {
+      "actual": "P4",
+      "predicted": "P1",
+      "count": 3
+    },
+    {
+      "actual": "P3",
+      "predicted": "P5",
+      "count": 2
+    },
+    {
+      "actual": "P2",
+      "predicted": "P5",
+      "count": 1
+    }
+  ],
+  "confusion_matrix": {
+    "labels": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5"
+    ],
+    "rows_actual_columns_predicted": [
+      [
+        298,
+        202,
+        306,
+        0,
+        0
+      ],
+      [
+        222,
+        419,
+        675,
+        0,
+        1
+      ],
+      [
+        191,
+        500,
+        1361,
+        0,
+        2
+      ],
+      [
+        3,
+        4,
+        34,
+        0,
+        0
+      ],
+      [
+        30,
+        39,
+        135,
+        0,
+        3
+      ]
+    ]
+  },
+  "artifacts": {
+    "predictions": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/analysis/t2_baseline_validation_predictions.csv",
+    "confusion_matrix": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/analysis/t2_baseline_confusion_matrix.csv"
+  },
+  "integrity": {
+    "model_retrained": false,
+    "train_validation_overlap": false,
+    "test_loaded": false,
+    "raw_source_modified": false,
+    "split_artifacts_modified": false,
+    "model_artifact_modified": false
+  },
+  "status": "COMPLETE"
+}

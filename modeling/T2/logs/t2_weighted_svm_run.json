@@ -1,0 +1,17 @@
+{
+  "operation": "T2-MOD-010",
+  "status": "COMPLETE",
+  "train_rows": 20648,
+  "validation_rows": 4425,
+  "test_used": false,
+  "model_retrained": true,
+  "class_weight": "balanced",
+  "raw_source_modified": false,
+  "split_artifacts_modified": false,
+  "previous_model_artifacts_modified": false,
+  "outputs": {
+    "model": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/models/t2_weighted_tfidf_linear_svm.joblib",
+    "metrics": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/metrics/t2_weighted_svm_metrics.json",
+    "confusion_matrix": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/metrics/t2_weighted_svm_confusion_matrix.csv"
+  }
+}

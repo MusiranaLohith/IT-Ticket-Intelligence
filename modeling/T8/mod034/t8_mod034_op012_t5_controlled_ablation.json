@@ -1,0 +1,46 @@
+{
+  "operation": "MOD-034 / OP-012",
+  "status": "PASS",
+  "population": {
+    "development": 3537,
+    "held_out_evaluation": 1179,
+    "development_positive": 14,
+    "evaluation_positive": 34
+  },
+  "native_t5": {
+    "roc_auc": 0.6836629848445929,
+    "average_precision": 0.09606564955851334,
+    "log_loss": 0.14023629744195584
+  },
+  "t5_only_learned": {
+    "roc_auc": 0.6836629848445929,
+    "average_precision": 0.09606564955851334,
+    "log_loss": 0.8200003975474399
+  },
+  "t5_plus_t4_evidence": {
+    "roc_auc": 0.6926791677369637,
+    "average_precision": 0.08641891233404293,
+    "log_loss": 0.770924975644328
+  },
+  "delta_fused_vs_t5_only": {
+    "roc_auc": 0.009016182892370828,
+    "average_precision": -0.009646737224470403,
+    "log_loss": -0.04907542190311187
+  },
+  "added_t4_evidence": [
+    "t4_top1_score",
+    "t4_top5_mean",
+    "t4_top20_mean",
+    "t4_top20_max",
+    "t4_top20_min",
+    "t4_top20_score_std"
+  ],
+  "controls": {
+    "synthetic_target": false,
+    "arbitrary_manual_weighting": false,
+    "t4_probability_conversion": false,
+    "locked_evaluation_used_for_training": false,
+    "development_statistics_used_for_scaling": true
+  },
+  "interpretation_rule": "Results concern native T5 duplicate prediction only. They do not establish a universal triage fusion benefit."
+}

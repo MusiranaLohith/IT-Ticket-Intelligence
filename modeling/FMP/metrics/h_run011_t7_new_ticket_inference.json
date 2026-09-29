@@ -1,0 +1,76 @@
+{
+  "operation": "H-RUN-011R3",
+  "operation_name": "T7 New-Ticket Inference",
+  "status": "PASS",
+  "ticket": {
+    "id": "H-RUN-011-NEW-TICKET",
+    "creation_time": "2026-09-26T18:03:00Z",
+    "summary": "VPN connection fails after password reset",
+    "description": "I reset my corporate password this morning. Since then, the VPN client connects briefly and then disconnects. I restarted the laptop and reinstalled the VPN client, but the issue persists. I need access to the internal systems for today's work."
+  },
+  "model": {
+    "artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod010_log_normal_aft_model.json",
+    "model_type": "LogNormal_AFT",
+    "feature_count": 21,
+    "feature_order_verified": true,
+    "beta_alignment_verified": true,
+    "standardization_verified": true,
+    "sigma": 16.259349942778254
+  },
+  "training_derived_context": {
+    "population": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/splits/t7_train.csv",
+    "rows": 411052,
+    "creator_frequency_entries": 57187,
+    "creator_detail_frequency_entries": 173039
+  },
+  "inference": {
+    "raw_feature_shape": [
+      1,
+      21
+    ],
+    "standardized_feature_shape": [
+      1,
+      21
+    ],
+    "feature_names": [
+      "creator_frequency_log1p",
+      "creator_detail_frequency_log1p",
+      "summary_chars_log1p",
+      "summary_words_log1p",
+      "summary_digits_log1p",
+      "summary_lines_log1p",
+      "summary_uppercase_log1p",
+      "summary_missing",
+      "description_chars_log1p",
+      "description_words_log1p",
+      "description_digits_log1p",
+      "description_lines_log1p",
+      "description_uppercase_log1p",
+      "description_missing",
+      "creation_year_scaled",
+      "creation_month_sin",
+      "creation_month_cos",
+      "creation_weekday_sin",
+      "creation_weekday_cos",
+      "creation_hour_sin",
+      "creation_hour_cos"
+    ],
+    "linear_predictor": 2.9770140304149306,
+    "predicted_median_duration_seconds": 19.629117104199928,
+    "predicted_median_duration_hours": 0.005452532528944424,
+    "predicted_median_duration_days": 0.00022718885537268435
+  },
+  "outcomes": {
+    "duration_seconds_supplied": false,
+    "event_supplied": false
+  },
+  "controls": {
+    "training": false,
+    "retraining": false,
+    "model_modification": false,
+    "locked_test_use": false,
+    "synthetic_target_creation": false,
+    "threshold_selection": false
+  },
+  "interpretation_boundary": "Frozen T7 Log-Normal AFT inference only. The output is the model-derived median duration estimate using the frozen feature standardization and frozen coefficients. It is not an autonomous workflow decision, SLA guarantee, calibrated universal risk score, or human-review threshold."
+}

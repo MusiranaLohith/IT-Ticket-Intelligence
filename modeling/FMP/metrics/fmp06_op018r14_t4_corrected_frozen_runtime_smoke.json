@@ -1,0 +1,112 @@
+{
+  "operation": "FMP-06 OP-018R14",
+  "operation_name": "T4 corrected frozen runtime smoke",
+  "status": "PASS",
+  "native_text_contract": {
+    "columns": [
+      "Creator",
+      "Creator Detail",
+      "Summary",
+      "Description"
+    ],
+    "construction": "Creator + Creator Detail + Summary + Description",
+    "strip": true
+  },
+  "frozen_artifacts": {
+    "tfidf": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_tfidf.joblib",
+    "nearest_neighbors": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_neighbors.joblib"
+  },
+  "training_or_fitting": false,
+  "evaluation": false,
+  "locked_test_used": false,
+  "threshold_selection": false,
+  "training_rows_loaded": 142501,
+  "probe_rows": 3,
+  "transformed_shape": [
+    3,
+    20000
+  ],
+  "nearest_neighbors_metric": "cosine",
+  "nearest_neighbors_algorithm": "brute",
+  "nearest_neighbors_n_neighbors": 20,
+  "results": [
+    {
+      "probe_row": 0,
+      "ticket_id": "4302",
+      "top5": [
+        {
+          "assignee": "rogerl@netscape.com",
+          "aggregated_similarity": 1.0914965867996216
+        },
+        {
+          "assignee": "brade@netscape.com",
+          "aggregated_similarity": 0.9999999403953552
+        },
+        {
+          "assignee": "ftang@netscape.com",
+          "aggregated_similarity": 0.6930649280548096
+        },
+        {
+          "assignee": "phil@netscape.com",
+          "aggregated_similarity": 0.4375244379043579
+        },
+        {
+          "assignee": "mang@subcarrier.org",
+          "aggregated_similarity": 0.38194161653518677
+        }
+      ]
+    },
+    {
+      "probe_row": 1,
+      "ticket_id": "5313",
+      "top5": [
+        {
+          "assignee": "jbetak@netscape.com",
+          "aggregated_similarity": 1.3242871165275574
+        },
+        {
+          "assignee": "bobj@netscape.com",
+          "aggregated_similarity": 0.9999998211860657
+        },
+        {
+          "assignee": "ftang@netscape.com",
+          "aggregated_similarity": 0.9092779755592346
+        },
+        {
+          "assignee": "bstell@netscape.com",
+          "aggregated_similarity": 0.8987696170806885
+        },
+        {
+          "assignee": "simon@softel.co.il",
+          "aggregated_similarity": 0.8933059573173523
+        }
+      ]
+    },
+    {
+      "probe_row": 2,
+      "ticket_id": "711",
+      "top5": [
+        {
+          "assignee": "karnaze@netscape.com",
+          "aggregated_similarity": 1.3673380017280579
+        },
+        {
+          "assignee": "kipp@netscape.com",
+          "aggregated_similarity": 1.0010789632797241
+        },
+        {
+          "assignee": "harishd@netscape.com",
+          "aggregated_similarity": 0.9999999403953552
+        },
+        {
+          "assignee": "block-and-inline@layout.bugs",
+          "aggregated_similarity": 0.34969866275787354
+        },
+        {
+          "assignee": "table@layout.bugs",
+          "aggregated_similarity": 0.3458816409111023
+        }
+      ]
+    }
+  ]
+}

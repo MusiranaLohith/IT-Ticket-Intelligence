@@ -1,0 +1,268 @@
+{
+  "operation": "FMP-06 OP-018R25",
+  "status": "PASS",
+  "read_only": true,
+  "training_performed": false,
+  "fitting_performed": false,
+  "prediction_performed": false,
+  "evaluation_performed": false,
+  "locked_test_used": false,
+  "artifact_modified": false,
+  "source": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/scripts/t7_mod010_log_normal_aft_baseline.py",
+  "frozen_model": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod010_log_normal_aft_model.json",
+  "relevant_functions": [
+    "make_features",
+    "survival",
+    "text_features"
+  ],
+  "feature_names": [
+    "creator_frequency_log1p",
+    "creator_detail_frequency_log1p",
+    "summary_chars_log1p",
+    "summary_words_log1p",
+    "summary_digits_log1p",
+    "summary_lines_log1p",
+    "summary_uppercase_log1p",
+    "summary_missing",
+    "description_chars_log1p",
+    "description_words_log1p",
+    "description_digits_log1p",
+    "description_lines_log1p",
+    "description_uppercase_log1p",
+    "description_missing",
+    "creation_year_scaled",
+    "creation_month_sin",
+    "creation_month_cos",
+    "creation_weekday_sin",
+    "creation_weekday_cos",
+    "creation_hour_sin",
+    "creation_hour_cos"
+  ],
+  "feature_hits": {
+    "creator_frequency_log1p": [
+      127
+    ],
+    "creator_detail_frequency_log1p": [
+      128
+    ],
+    "summary_chars_log1p": [
+      129
+    ],
+    "summary_words_log1p": [
+      130
+    ],
+    "summary_digits_log1p": [
+      131
+    ],
+    "summary_lines_log1p": [
+      132
+    ],
+    "summary_uppercase_log1p": [
+      133
+    ],
+    "summary_missing": [
+      134
+    ],
+    "description_chars_log1p": [
+      135
+    ],
+    "description_words_log1p": [
+      136
+    ],
+    "description_digits_log1p": [
+      137
+    ],
+    "description_lines_log1p": [
+      138
+    ],
+    "description_uppercase_log1p": [
+      139
+    ],
+    "description_missing": [
+      140
+    ],
+    "creation_year_scaled": [
+      141
+    ],
+    "creation_month_sin": [
+      142
+    ],
+    "creation_month_cos": [
+      143
+    ],
+    "creation_weekday_sin": [
+      144
+    ],
+    "creation_weekday_cos": [
+      145
+    ],
+    "creation_hour_sin": [
+      146
+    ],
+    "creation_hour_cos": [
+      147
+    ]
+  },
+  "transformation_term_hits": {
+    "log1p": [
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      135,
+      136,
+      137,
+      138,
+      139,
+      177,
+      183,
+      189,
+      190,
+      191,
+      192,
+      193,
+      196,
+      197,
+      198,
+      199,
+      200
+    ],
+    "value_counts": [],
+    "StandardScaler": [],
+    "mean": [
+      229,
+      232,
+      733,
+      738,
+      742,
+      868,
+      869,
+      882,
+      945,
+      947
+    ],
+    "std": [
+      230,
+      231,
+      232,
+      733,
+      739,
+      743,
+      949,
+      951
+    ],
+    "sin": [
+      62,
+      64,
+      66,
+      134,
+      140,
+      142,
+      144,
+      146,
+      205,
+      208,
+      211
+    ],
+    "cos": [
+      143,
+      145,
+      147,
+      206,
+      209,
+      212
+    ],
+    "month": [
+      142,
+      143,
+      164,
+      165,
+      205,
+      206
+    ],
+    "weekday": [
+      144,
+      145,
+      168,
+      169,
+      208,
+      209
+    ],
+    "hour": [
+      146,
+      147,
+      172,
+      173,
+      211,
+      212
+    ],
+    "Creator": [
+      42,
+      43,
+      111,
+      112,
+      114,
+      115,
+      179,
+      185
+    ],
+    "Creator Detail": [
+      43,
+      114,
+      115,
+      185
+    ],
+    "Summary": [
+      44,
+      161
+    ],
+    "Description": [
+      45,
+      162
+    ],
+    "creation_year_scaled": [
+      141
+    ],
+    "creation_month_sin": [
+      142
+    ],
+    "creation_month_cos": [
+      143
+    ],
+    "creation_weekday_sin": [
+      144
+    ],
+    "creation_weekday_cos": [
+      145
+    ],
+    "creation_hour_sin": [
+      146
+    ],
+    "creation_hour_cos": [
+      147
+    ]
+  },
+  "beta_missing_features": [],
+  "extra_beta_features": [],
+  "extracted_functions": {
+    "make_features": {
+      "start_line": 120,
+      "end_line": 225,
+      "source": "def make_features(\n    rows,\n    creator_counts,\n    detail_counts,\n):\n\n    names = [\n        \"creator_frequency_log1p\",\n        \"creator_detail_frequency_log1p\",\n        \"summary_chars_log1p\",\n        \"summary_words_log1p\",\n        \"summary_digits_log1p\",\n        \"summary_lines_log1p\",\n        \"summary_uppercase_log1p\",\n        \"summary_missing\",\n        \"description_chars_log1p\",\n        \"description_words_log1p\",\n        \"description_digits_log1p\",\n        \"description_lines_log1p\",\n        \"description_uppercase_log1p\",\n        \"description_missing\",\n        \"creation_year_scaled\",\n        \"creation_month_sin\",\n        \"creation_month_cos\",\n        \"creation_weekday_sin\",\n        \"creation_weekday_cos\",\n        \"creation_hour_sin\",\n        \"creation_hour_cos\",\n    ]\n\n    X = []\n    ids = []\n    durations = []\n    events = []\n\n    for row in rows:\n\n        dt = parse_creation(\n            row[\"Creation time\"]\n        )\n\n        s = text_features(row[\"Summary\"])\n        d = text_features(row[\"Description\"])\n\n        month = (\n            2 * math.pi * (dt.month - 1) / 12\n        )\n\n        weekday = (\n            2 * math.pi * dt.weekday() / 7\n        )\n\n        hour = (\n            2 * math.pi * dt.hour / 24\n        )\n\n        X.append([\n            math.log1p(\n                creator_counts.get(\n                    row[\"Creator\"].strip(), 0\n                )\n            ),\n\n            math.log1p(\n                detail_counts.get(\n                    row[\"Creator Detail\"].strip(), 0\n                )\n            ),\n\n            math.log1p(s[0]),\n            math.log1p(s[1]),\n            math.log1p(s[2]),\n            math.log1p(s[3]),\n            math.log1p(s[4]),\n            s[5],\n\n            math.log1p(d[0]),\n            math.log1p(d[1]),\n            math.log1p(d[2]),\n            math.log1p(d[3]),\n            math.log1p(d[4]),\n            d[5],\n\n            (dt.year - 2010.0) / 10.0,\n\n            math.sin(month),\n            math.cos(month),\n\n            math.sin(weekday),\n            math.cos(weekday),\n\n            math.sin(hour),\n            math.cos(hour),\n        ])\n\n        ids.append(row[\"ID\"])\n        durations.append(float(row[\"duration_seconds\"]))\n        events.append(int(row[\"event\"]))\n\n    return (\n        np.asarray(X, dtype=np.float64),\n        ids,\n        np.asarray(durations, dtype=np.float64),\n        np.asarray(events, dtype=np.int8),\n        names,\n    )"
+    },
+    "survival": {
+      "start_line": 353,
+      "end_line": 367,
+      "source": "    def survival(\n        self,\n        X,\n        time,\n    ):\n\n        mu = X @ self.beta\n\n        z = (\n            math.log(time) - mu\n        ) / self.sigma\n\n        return np.exp(\n            log_ndtr(-z)\n        )"
+    },
+    "text_features": {
+      "start_line": 91,
+      "end_line": 101,
+      "source": "def text_features(text):\n    text = \"\" if text is None else str(text)\n\n    return (\n        len(text),\n        len(text.split()),\n        sum(c.isdigit() for c in text),\n        text.count(\"\\n\"),\n        sum(c.isupper() for c in text),\n        1.0 if not text else 0.0,\n    )"
+    }
+  },
+  "purpose": "Establish the exact native MOD-010 feature construction and model-interface implementation before accepting a reconstructed frozen runtime prediction."
+}

@@ -1,0 +1,6334 @@
+{
+  "operation": "T8 / MOD-036 / OP-003",
+  "status": "PASS",
+  "purpose": "Resolve candidate T1/T3/T6/T7 artifacts for the T8 Decision Engine input interface without declaring authority from filename alone.",
+  "established_native_inputs": {
+    "T2": {
+      "task": "T2",
+      "native_role": "Priority Prediction",
+      "authoritative_prediction_evidence": [
+        "T2 chronological OoF predictions generated under MOD-029",
+        "T2 frozen model contract preserved"
+      ],
+      "important_note": "The T2 test.csv inspected during OP-002 is a split/target artifact, not by itself the prediction interface."
+    },
+    "T4": {
+      "task": "T4",
+      "native_role": "Assignee Retrieval",
+      "authoritative_prediction_evidence": [
+        "modeling/T4/results/mod011_checkpoints/t4_mod011_retrieval.npz"
+      ],
+      "important_note": "Checkpoint row order corresponds to t4_eval.csv row order."
+    },
+    "T5": {
+      "task": "T5",
+      "native_role": "Duplicate Prediction",
+      "authoritative_prediction_evidence": [
+        "modeling/T5/metrics/t5_mod007_calibrated_validation_predictions.npz",
+        "modeling/T5/metrics/t5_mod011_final_closure.json"
+      ],
+      "important_note": "p_sigmoid is the accepted calibrated probability output for the native T5 pipeline."
+    }
+  },
+  "candidate_resolution": {
+    "T1": {
+      "candidate_count": 69,
+      "candidates": [
+        {
+          "path": "modeling/T1/analysis/t1_it_support_eval_groups.json",
+          "filename": "t1_it_support_eval_groups.json",
+          "suffix": ".json",
+          "size_bytes": 41874,
+          "score": 6,
+          "score_reasons": [
+            "+eval",
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "status",
+              "task",
+              "evaluation",
+              "largest_repeated_groups",
+              "multi_label_groups",
+              "integrity"
+            ],
+            "interesting_keys": []
+          }
+        },
+        {
+          "path": "modeling/project_consolidation/t1_t5_consolidated_evidence.json",
+          "filename": "t1_t5_consolidated_evidence.json",
+          "suffix": ".json",
+          "size_bytes": 26914,
+          "score": 6,
+          "score_reasons": [
+            "+evidence",
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "project",
+              "consolidation_status",
+              "t1",
+              "t2",
+              "t3",
+              "t4",
+              "t5",
+              "project_level_interpretation",
+              "integrity_controls"
+            ],
+            "interesting_keys": [
+              "consolidation_status"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T1/analysis/t1_it_support_group_eval.json",
+          "filename": "t1_it_support_group_eval.json",
+          "suffix": ".json",
+          "size_bytes": 12889,
+          "score": 6,
+          "score_reasons": [
+            "+eval",
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "operation",
+              "status",
+              "split_path",
+              "model_path",
+              "evaluation_records",
+              "record_correct",
+              "record_incorrect",
+              "record_accuracy",
+              "unique_normalized_text_groups",
+              "repeated_normalized_text_groups",
+              "records_in_repeated_groups",
+              "repeated_record_rate",
+              "single_record_groups",
+              "fully_correct_groups",
+              "fully_correct_group_rate",
+              "prediction_consistent_groups",
+              "prediction_consistent_group_rate",
+              "homogeneous_label_groups",
+              "homogeneous_group_correct",
+              "homogeneous_group_accuracy",
+              "multi_label_normalized_text_groups",
+              "records_in_multi_label_groups",
+              "repeated_group_record_count",
+              "repeated_group_record_correct",
+              "repeated_group_record_accuracy",
+              "repeated_groups_fully_correct",
+              "repeated_group_fully_correct_rate",
+              "single_record_group_count",
+              "single_record_group_correct",
+              "single_record_group_accuracy",
+              "largest_groups",
+              "multi_label_group_details",
+              "model_retrained",
+              "evaluation_used_for_fit",
+              "frozen_split_modified",
+              "labels_modified",
+              "raw_source_modified"
+            ],
+            "interesting_keys": [
+              "prediction_consistent_groups",
+              "prediction_consistent_group_rate"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T1/splits/t1_vscode_split.csv",
+          "filename": "t1_vscode_split.csv",
+          "suffix": ".csv",
+          "size_bytes": 11103895,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "issue_id",
+              "summary",
+              "created",
+              "description_clean",
+              "issue_type",
+              "target_representation",
+              "source_row",
+              "split"
+            ],
+            "interesting_columns": [
+              "issue_id",
+              "target_representation"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T1/derived/t1_vscode_dataset.csv",
+          "filename": "t1_vscode_dataset.csv",
+          "suffix": ".csv",
+          "size_bytes": 11049055,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "issue_id",
+              "summary",
+              "created",
+              "description_clean",
+              "issue_type",
+              "target_representation",
+              "source_row"
+            ],
+            "interesting_columns": [
+              "issue_id",
+              "target_representation"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T1/splits/t1_split.csv",
+          "filename": "t1_split.csv",
+          "suffix": ".csv",
+          "size_bytes": 467464,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "id",
+              "text",
+              "category_truth",
+              "source_partition",
+              "source_row_x",
+              "source_row_y",
+              "modeling_split"
+            ],
+            "interesting_columns": [
+              "id"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T1/derived/t1_dataset.csv",
+          "filename": "t1_dataset.csv",
+          "suffix": ".csv",
+          "size_bytes": 441147,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "id",
+              "text",
+              "category_truth",
+              "source_partition",
+              "source_row_x",
+              "source_row_y"
+            ],
+            "interesting_columns": [
+              "id"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T1/derived/t1_group_audit.json",
+          "filename": "t1_group_audit.json",
+          "suffix": ".json",
+          "size_bytes": 130175,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "operation",
+              "status",
+              "normalization",
+              "total_records",
+              "total_normalized_text_groups",
+              "group_size_distribution",
+              "repeated_group_count",
+              "cross_supplier_partition_group_count",
+              "multi_label_group_count",
+              "multi_label_groups",
+              "repeated_groups"
+            ],
+            "interesting_keys": []
+          }
+        },
+        {
+          "path": "modeling/T1/analysis/t1_it_support_model_subset_compare.json",
+          "filename": "t1_it_support_model_subset_compare.json",
+          "suffix": ".json",
+          "size_bytes": 14312,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "operation",
+              "status",
+              "evaluation_records",
+              "logistic",
+              "svm",
+              "subset_accuracy_deltas",
+              "model_agreement",
+              "subset_model_agreement",
+              "model_retrained",
+              "evaluation_used_for_fit",
+              "frozen_split_modified",
+              "labels_modified",
+              "raw_source_modified"
+            ],
+            "interesting_keys": []
+          }
+        },
+        {
+          "path": "modeling/T1/derived/t1_overlap_report.json",
+          "filename": "t1_overlap_report.json",
+          "suffix": ".json",
+          "size_bytes": 13913,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "operation",
+              "status",
+              "normalization",
+              "total_rows",
+              "train_rows",
+              "test_rows",
+              "train_unique_normalized_texts",
+              "test_unique_normalized_texts",
+              "overlapping_normalized_text_count",
+              "overlapping_test_record_count",
+              "overlap_rate_of_test_records",
+              "overlap_details"
+            ],
+            "interesting_keys": []
+          }
+        },
+        {
+          "path": "modeling/T1/analysis/t1_it_support_3model_compare.json",
+          "filename": "t1_it_support_3model_compare.json",
+          "suffix": ".json",
+          "size_bytes": 12213,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "operation",
+              "status",
+              "evaluation_records",
+              "evaluation_used_for_fit",
+              "models_retrained",
+              "frozen_split_modified",
+              "labels_modified",
+              "raw_source_modified",
+              "results",
+              "rankings",
+              "pairwise_deltas",
+              "class_comparison"
+            ],
+            "interesting_keys": [
+              "rankings"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T1/analysis/t1_it_support_svm_errors.json",
+          "filename": "t1_it_support_svm_errors.json",
+          "suffix": ".json",
+          "size_bytes": 10351,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "status",
+              "task",
+              "data",
+              "error_summary",
+              "errors",
+              "artifacts"
+            ],
+            "interesting_keys": []
+          }
+        },
+        {
+          "path": "modeling/T1/analysis/t1_it_support_subset_analysis.json",
+          "filename": "t1_it_support_subset_analysis.json",
+          "suffix": ".json",
+          "size_bytes": 10183,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "operation",
+              "status",
+              "evaluation_records",
+              "record_level_accuracy",
+              "subset_summary",
+              "class_analysis",
+              "error_pairs",
+              "single_record_error_records",
+              "repeated_text_error_records",
+              "model_retrained",
+              "evaluation_used_for_fit",
+              "frozen_split_modified",
+              "labels_modified",
+              "raw_source_modified"
+            ],
+            "interesting_keys": []
+          }
+        },
+        {
+          "path": "modeling/T1/baselines/t1_it_support_char_svm_report.json",
+          "filename": "t1_it_support_char_svm_report.json",
+          "suffix": ".json",
+          "size_bytes": 7195,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "operation",
+              "status",
+              "development_records",
+              "evaluation_records",
+              "evaluation_used_for_fit",
+              "model",
+              "overall",
+              "subset_summary",
+              "class_analysis",
+              "error_pairs",
+              "feature_design",
+              "classifier",
+              "model_retrained",
+              "frozen_split_modified",
+              "labels_modified",
+              "raw_source_modified",
+              "model_path",
+              "analysis_path"
+            ],
+            "interesting_keys": [
+              "feature_design"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T1/analysis/t1_it_support_char_svm_analysis.json",
+          "filename": "t1_it_support_char_svm_analysis.json",
+          "suffix": ".json",
+          "size_bytes": 6361,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "operation",
+              "status",
+              "evaluation_records",
+              "overall_accuracy",
+              "subset_summary",
+              "class_analysis",
+              "error_pairs",
+              "model_retrained",
+              "evaluation_used_for_fit",
+              "frozen_split_modified",
+              "labels_modified",
+              "raw_source_modified"
+            ],
+            "interesting_keys": []
+          }
+        },
+        {
+          "path": "modeling/T1/baselines/t1_it_support_svm_report.json",
+          "filename": "t1_it_support_svm_report.json",
+          "suffix": ".json",
+          "size_bytes": 4070,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "status",
+              "task",
+              "data",
+              "model",
+              "metrics",
+              "targets",
+              "integrity",
+              "artifacts"
+            ],
+            "interesting_keys": [
+              "metrics",
+              "targets"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T1/baselines/t1_it_support_baseline_report.json",
+          "filename": "t1_it_support_baseline_report.json",
+          "suffix": ".json",
+          "size_bytes": 4021,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "status",
+              "model",
+              "data",
+              "features",
+              "targets",
+              "metrics",
+              "probability_output",
+              "raw_source_modified"
+            ],
+            "interesting_keys": [
+              "features",
+              "targets",
+              "metrics",
+              "probability_output"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T1/baselines/t1_vscode_feature_compare_report.json",
+          "filename": "t1_vscode_feature_compare_report.json",
+          "suffix": ".json",
+          "size_bytes": 3147,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "status",
+              "dataset",
+              "model",
+              "summary_only",
+              "summary_plus_description",
+              "delta_combined_minus_summary",
+              "evaluation_class_counts",
+              "unavailable_evaluation_classes",
+              "raw_source_modified"
+            ],
+            "interesting_keys": []
+          }
+        },
+        {
+          "path": "modeling/T1/analysis/t1_it_support_split_check.json",
+          "filename": "t1_it_support_split_check.json",
+          "suffix": ".json",
+          "size_bytes": 3014,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "status",
+              "input",
+              "summary",
+              "checked_ids",
+              "checked_id_groups",
+              "cross_split_groups",
+              "raw_source_modified",
+              "split_modified",
+              "labels_modified"
+            ],
+            "interesting_keys": [
+              "checked_ids",
+              "checked_id_groups"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T1/baselines/t1_vscode_baseline_report.json",
+          "filename": "t1_vscode_baseline_report.json",
+          "suffix": ".json",
+          "size_bytes": 2765,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "status",
+              "model",
+              "data",
+              "features",
+              "targets",
+              "metrics",
+              "model_classes",
+              "raw_source_modified"
+            ],
+            "interesting_keys": [
+              "features",
+              "targets",
+              "metrics"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T1/baselines/t1_vscode_model_compare_report.json",
+          "filename": "t1_vscode_model_compare_report.json",
+          "suffix": ".json",
+          "size_bytes": 2631,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "status",
+              "evaluation",
+              "models",
+              "linear_svc_minus_logistic_regression",
+              "per_class",
+              "macro_f1_winner",
+              "decision_status",
+              "raw_source_modified"
+            ],
+            "interesting_keys": []
+          }
+        },
+        {
+          "path": "modeling/T1/contracts/t1_vscode_contract.json",
+          "filename": "t1_vscode_contract.json",
+          "suffix": ".json",
+          "size_bytes": 2465,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "dataset",
+              "task",
+              "source",
+              "target",
+              "prediction_boundary",
+              "features",
+              "description_control",
+              "split",
+              "modeling_status",
+              "data_integrity",
+              "rules"
+            ],
+            "interesting_keys": [
+              "target",
+              "prediction_boundary",
+              "features"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T1/baselines/t1_vscode_advanced_report.json",
+          "filename": "t1_vscode_advanced_report.json",
+          "suffix": ".json",
+          "size_bytes": 2361,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "status",
+              "model",
+              "data",
+              "features",
+              "metrics",
+              "evaluation_class_counts",
+              "unavailable_evaluation_classes",
+              "raw_source_modified"
+            ],
+            "interesting_keys": [
+              "features",
+              "metrics"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T1/splits/t1_split_report.json",
+          "filename": "t1_split_report.json",
+          "suffix": ".json",
+          "size_bytes": 1918,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "operation",
+              "status",
+              "seed",
+              "search_restarts",
+              "total_records",
+              "development_records",
+              "evaluation_records",
+              "development_fraction",
+              "evaluation_fraction",
+              "total_normalized_text_groups",
+              "evaluation_groups",
+              "cross_split_groups",
+              "missing_evaluation_classes",
+              "evaluation_class_counts",
+              "evaluation_target_class_counts",
+              "evaluation_class_percentages",
+              "eol_evaluation_records",
+              "eol_evaluation_group_size",
+              "eol_development_group_size",
+              "eol_structure",
+              "grouping_key",
+              "source_partition_role",
+              "source_partition_preserved",
+              "labels_modified",
+              "text_modified",
+              "raw_source_modified",
+              "objective_score",
+              "methodological_note"
+            ],
+            "interesting_keys": [
+              "evaluation_target_class_counts",
+              "objective_score"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T1/derived/t1_vscode_dataset_manifest.json",
+          "filename": "t1_vscode_dataset_manifest.json",
+          "suffix": ".json",
+          "size_bytes": 1878,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "status",
+              "source",
+              "derived",
+              "target",
+              "prediction_boundary",
+              "normalization_policy",
+              "source_quality",
+              "observed_marker_counts",
+              "accepted_target_counts",
+              "accepted_representation_counts",
+              "status_counts",
+              "conflicting_records",
+              "raw_source_modified"
+            ],
+            "interesting_keys": [
+              "target",
+              "prediction_boundary",
+              "accepted_target_counts"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T1/contracts/t1_contract.json",
+          "filename": "t1_contract.json",
+          "suffix": ".json",
+          "size_bytes": 1699,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "contract_id",
+              "task",
+              "dataset",
+              "dtm",
+              "status",
+              "source",
+              "target",
+              "features",
+              "prediction_boundary",
+              "text_policy",
+              "split_policy",
+              "evaluation",
+              "model_policy",
+              "historical_reference",
+              "created_utc"
+            ],
+            "interesting_keys": [
+              "contract_id",
+              "target",
+              "features",
+              "prediction_boundary"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T1/splits/t1_vscode_split_report.json",
+          "filename": "t1_vscode_split_report.json",
+          "suffix": ".json",
+          "size_bytes": 1526,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "status",
+              "input_dataset",
+              "output_dataset",
+              "total_records",
+              "development_records",
+              "evaluation_records",
+              "development_fraction",
+              "evaluation_fraction",
+              "split_method",
+              "ordering_key",
+              "tie_breakers",
+              "development_min_created",
+              "development_max_created",
+              "evaluation_min_created",
+              "evaluation_max_created",
+              "chronology_valid",
+              "boundary_same_created_timestamp",
+              "total_class_counts",
+              "development_class_counts",
+              "evaluation_class_counts",
+              "missing_development_classes",
+              "missing_evaluation_classes",
+              "stratification_applied",
+              "labels_modified",
+              "text_modified",
+              "raw_source_modified"
+            ],
+            "interesting_keys": [
+              "output_dataset",
+              "chronology_valid"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T1/derived/t1_vscode_validation_report.json",
+          "filename": "t1_vscode_validation_report.json",
+          "suffix": ".json",
+          "size_bytes": 946,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "status",
+              "dataset",
+              "total_records",
+              "manifest_records",
+              "manifest_records_match",
+              "manifest_source_records",
+              "manifest_source_expected",
+              "duplicate_ids",
+              "duplicate_source_rows",
+              "missing_summary",
+              "missing_created",
+              "missing_description",
+              "missing_target",
+              "invalid_targets",
+              "invalid_representations",
+              "target_marker_in_clean_description",
+              "source_row_parse_errors",
+              "created_parse_errors",
+              "created_min",
+              "created_max",
+              "target_counts",
+              "representation_counts",
+              "target_sum_matches",
+              "raw_source_modified"
+            ],
+            "interesting_keys": [
+              "duplicate_ids",
+              "missing_target",
+              "invalid_targets",
+              "invalid_representations",
+              "target_marker_in_clean_description",
+              "target_counts",
+              "target_sum_matches"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T1/derived/t1_dataset_manifest.json",
+          "filename": "t1_dataset_manifest.json",
+          "suffix": ".json",
+          "size_bytes": 885,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "operation",
+              "status",
+              "source_archive",
+              "source_members",
+              "join_key",
+              "output_dataset",
+              "record_count",
+              "train_count",
+              "test_count",
+              "feature_column",
+              "target_column",
+              "identifier_column",
+              "class_count",
+              "class_counts",
+              "supplier_model_used",
+              "supplier_tokenizer_used",
+              "supplier_encoder_used",
+              "raw_source_modified"
+            ],
+            "interesting_keys": [
+              "output_dataset",
+              "feature_column",
+              "target_column",
+              "identifier_column"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T1/baselines/t1_vscode_baseline.joblib",
+          "filename": "t1_vscode_baseline.joblib",
+          "suffix": ".joblib",
+          "size_bytes": 4209084,
+          "score": 1,
+          "score_reasons": [
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/baselines/t1_vscode_advanced.joblib",
+          "filename": "t1_vscode_advanced.joblib",
+          "suffix": ".joblib",
+          "size_bytes": 4208936,
+          "score": 1,
+          "score_reasons": [
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/baselines/t1_it_support_char_svm.joblib",
+          "filename": "t1_it_support_char_svm.joblib",
+          "suffix": ".joblib",
+          "size_bytes": 2179887,
+          "score": 1,
+          "score_reasons": [
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/baselines/t1_it_support_svm.joblib",
+          "filename": "t1_it_support_svm.joblib",
+          "suffix": ".joblib",
+          "size_bytes": 252176,
+          "score": 1,
+          "score_reasons": [
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/baselines/t1_it_support_baseline.joblib",
+          "filename": "t1_it_support_baseline.joblib",
+          "suffix": ".joblib",
+          "size_bytes": 251780,
+          "score": 1,
+          "score_reasons": [
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/analysis/t1_it_support_svm_error_review.txt",
+          "filename": "t1_it_support_svm_error_review.txt",
+          "suffix": ".txt",
+          "size_bytes": 8573,
+          "score": 1,
+          "score_reasons": [
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/inspection/vscode_t1_label_trace.txt",
+          "filename": "vscode_t1_label_trace.txt",
+          "suffix": ".txt",
+          "size_bytes": 2792,
+          "score": 1,
+          "score_reasons": [
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/inspection/t1_vscode_source_report.json",
+          "filename": "t1_vscode_source_report.json",
+          "suffix": ".json",
+          "size_bytes": 1579,
+          "score": 1,
+          "score_reasons": [
+            "-source",
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "status",
+              "data_root",
+              "read_only",
+              "raw_source_modified",
+              "candidate_count",
+              "candidates"
+            ],
+            "interesting_keys": [
+              "candidate_count",
+              "candidates"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T1/splits/t1_it_support_group_eval.py",
+          "filename": "t1_it_support_group_eval.py",
+          "suffix": ".py",
+          "size_bytes": 14187,
+          "score": -2,
+          "score_reasons": [
+            "+eval",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/splits/t1_it_support_eval_groups.py",
+          "filename": "t1_it_support_eval_groups.py",
+          "suffix": ".py",
+          "size_bytes": 7791,
+          "score": -2,
+          "score_reasons": [
+            "+eval",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/splits/t1_split.py",
+          "filename": "t1_split.py",
+          "suffix": ".py",
+          "size_bytes": 22508,
+          "score": -4,
+          "score_reasons": [
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/derived/t1_vscode_derive.py",
+          "filename": "t1_vscode_derive.py",
+          "suffix": ".py",
+          "size_bytes": 18621,
+          "score": -4,
+          "score_reasons": [
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/splits/t1_it_support_3model_compare.py",
+          "filename": "t1_it_support_3model_compare.py",
+          "suffix": ".py",
+          "size_bytes": 14599,
+          "score": -4,
+          "score_reasons": [
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/splits/t1_it_support_model_subset_compare.py",
+          "filename": "t1_it_support_model_subset_compare.py",
+          "suffix": ".py",
+          "size_bytes": 13783,
+          "score": -4,
+          "score_reasons": [
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/splits/t1_it_support_char_svm.py",
+          "filename": "t1_it_support_char_svm.py",
+          "suffix": ".py",
+          "size_bytes": 13201,
+          "score": -4,
+          "score_reasons": [
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/derived/t1_vscode_validate.py",
+          "filename": "t1_vscode_validate.py",
+          "suffix": ".py",
+          "size_bytes": 12706,
+          "score": -4,
+          "score_reasons": [
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/splits/t1_it_support_baseline.py",
+          "filename": "t1_it_support_baseline.py",
+          "suffix": ".py",
+          "size_bytes": 12223,
+          "score": -4,
+          "score_reasons": [
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/splits/t1_vscode_baseline.py",
+          "filename": "t1_vscode_baseline.py",
+          "suffix": ".py",
+          "size_bytes": 11595,
+          "score": -4,
+          "score_reasons": [
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/splits/t1_vscode_split.py",
+          "filename": "t1_vscode_split.py",
+          "suffix": ".py",
+          "size_bytes": 11551,
+          "score": -4,
+          "score_reasons": [
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/splits/t1_it_support_svm.py",
+          "filename": "t1_it_support_svm.py",
+          "suffix": ".py",
+          "size_bytes": 11472,
+          "score": -4,
+          "score_reasons": [
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/splits/t1_vscode_feature_compare.py",
+          "filename": "t1_vscode_feature_compare.py",
+          "suffix": ".py",
+          "size_bytes": 11184,
+          "score": -4,
+          "score_reasons": [
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/splits/t1_vscode_model_compare.py",
+          "filename": "t1_vscode_model_compare.py",
+          "suffix": ".py",
+          "size_bytes": 9018,
+          "score": -4,
+          "score_reasons": [
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/splits/t1_it_support_split_check.py",
+          "filename": "t1_it_support_split_check.py",
+          "suffix": ".py",
+          "size_bytes": 8952,
+          "score": -4,
+          "score_reasons": [
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/splits/t1_vscode_advanced.py",
+          "filename": "t1_vscode_advanced.py",
+          "suffix": ".py",
+          "size_bytes": 8794,
+          "score": -4,
+          "score_reasons": [
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/splits/t1_it_support_subset_analysis.py",
+          "filename": "t1_it_support_subset_analysis.py",
+          "suffix": ".py",
+          "size_bytes": 8452,
+          "score": -4,
+          "score_reasons": [
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/splits/t1_it_support_svm_errors.py",
+          "filename": "t1_it_support_svm_errors.py",
+          "suffix": ".py",
+          "size_bytes": 7820,
+          "score": -4,
+          "score_reasons": [
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/derived/t1_validate.py",
+          "filename": "t1_validate.py",
+          "suffix": ".py",
+          "size_bytes": 7132,
+          "score": -4,
+          "score_reasons": [
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/derived/t1_derive.py",
+          "filename": "t1_derive.py",
+          "suffix": ".py",
+          "size_bytes": 6448,
+          "score": -4,
+          "score_reasons": [
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/splits/t1_it_support_baseline_analysis.py",
+          "filename": "t1_it_support_baseline_analysis.py",
+          "suffix": ".py",
+          "size_bytes": 5920,
+          "score": -4,
+          "score_reasons": [
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/splits/t1_it_support_svm_analysis.py",
+          "filename": "t1_it_support_svm_analysis.py",
+          "suffix": ".py",
+          "size_bytes": 4464,
+          "score": -4,
+          "score_reasons": [
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/inspection/t1_vscode_inspect.py",
+          "filename": "t1_vscode_inspect.py",
+          "suffix": ".py",
+          "size_bytes": 4430,
+          "score": -4,
+          "score_reasons": [
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/derived/t1_group_audit.py",
+          "filename": "t1_group_audit.py",
+          "suffix": ".py",
+          "size_bytes": 4151,
+          "score": -4,
+          "score_reasons": [
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/analysis  /t1_it_support_svm_error_review.py",
+          "filename": "t1_it_support_svm_error_review.py",
+          "suffix": ".py",
+          "size_bytes": 4071,
+          "score": -4,
+          "score_reasons": [
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/contracts/t1_vscode_contract.py",
+          "filename": "t1_vscode_contract.py",
+          "suffix": ".py",
+          "size_bytes": 3972,
+          "score": -4,
+          "score_reasons": [
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/derived/t1_split.py",
+          "filename": "t1_split.py",
+          "suffix": ".py",
+          "size_bytes": 3899,
+          "score": -4,
+          "score_reasons": [
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/inspection/t1_vscode_marker_inspect.py",
+          "filename": "t1_vscode_marker_inspect.py",
+          "suffix": ".py",
+          "size_bytes": 3632,
+          "score": -4,
+          "score_reasons": [
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/splits/t1_vscode_baseline_analysis.py",
+          "filename": "t1_vscode_baseline_analysis.py",
+          "suffix": ".py",
+          "size_bytes": 2924,
+          "score": -4,
+          "score_reasons": [
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/contracts/t1_contract.py",
+          "filename": "t1_contract.py",
+          "suffix": ".py",
+          "size_bytes": 2640,
+          "score": -4,
+          "score_reasons": [
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/inspection/t1_vscode_leakage_inspect.py",
+          "filename": "t1_vscode_leakage_inspect.py",
+          "suffix": ".py",
+          "size_bytes": 2498,
+          "score": -4,
+          "score_reasons": [
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T1/splits/t1_reconcile_status.py",
+          "filename": "t1_reconcile_status.py",
+          "suffix": ".py",
+          "size_bytes": 1408,
+          "score": -4,
+          "score_reasons": [
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        }
+      ]
+    },
+    "T3": {
+      "candidate_count": 66,
+      "candidates": [
+        {
+          "path": "modeling/T3/analysis/t3_locked_test_evaluation.json",
+          "filename": "t3_locked_test_evaluation.json",
+          "suffix": ".json",
+          "size_bytes": 807,
+          "score": 5,
+          "score_reasons": [
+            "+eval",
+            "+evaluation",
+            "-test_",
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "operation",
+              "status",
+              "selected_model",
+              "selection_basis",
+              "test_metrics",
+              "test_rows",
+              "controls",
+              "artifacts"
+            ],
+            "interesting_keys": [
+              "test_metrics"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T3/derived/t3_features.csv",
+          "filename": "t3_features.csv",
+          "suffix": ".csv",
+          "size_bytes": 69577458,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "ID",
+              "Creation time",
+              "Summary",
+              "Description",
+              "target_severity"
+            ],
+            "interesting_columns": [
+              "ID",
+              "Creation time",
+              "target_severity"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T3/splits/t3_train.csv",
+          "filename": "t3_train.csv",
+          "suffix": ".csv",
+          "size_bytes": 45666371,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "ID",
+              "Creation time",
+              "Summary",
+              "Description",
+              "target_severity"
+            ],
+            "interesting_columns": [
+              "ID",
+              "Creation time",
+              "target_severity"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T3/splits/t3_validation.csv",
+          "filename": "t3_validation.csv",
+          "suffix": ".csv",
+          "size_bytes": 12153706,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "ID",
+              "Creation time",
+              "Summary",
+              "Description",
+              "target_severity"
+            ],
+            "interesting_columns": [
+              "ID",
+              "Creation time",
+              "target_severity"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T3/splits/t3_test.csv",
+          "filename": "t3_test.csv",
+          "suffix": ".csv",
+          "size_bytes": 11911682,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "ID",
+              "Creation time",
+              "Summary",
+              "Description",
+              "target_severity"
+            ],
+            "interesting_columns": [
+              "ID",
+              "Creation time",
+              "target_severity"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T3/models/t3_distilbert_feasibility/tokenizer.json",
+          "filename": "tokenizer.json",
+          "suffix": ".json",
+          "size_bytes": 711661,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "version",
+              "truncation",
+              "padding",
+              "added_tokens",
+              "normalizer",
+              "pre_tokenizer",
+              "post_processor",
+              "decoder",
+              "model"
+            ],
+            "interesting_keys": []
+          }
+        },
+        {
+          "path": "modeling/T3/analysis/t3_advanced_branch_decision.json",
+          "filename": "t3_advanced_branch_decision.json",
+          "suffix": ".json",
+          "size_bytes": 165450,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "task",
+              "operation",
+              "classical_candidate",
+              "classical_candidate_validation_macro_f1",
+              "evidence",
+              "justification_conditions",
+              "advanced_nlp_branch",
+              "constraints",
+              "status"
+            ],
+            "interesting_keys": [
+              "classical_candidate",
+              "classical_candidate_validation_macro_f1",
+              "evidence"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T3/analysis/t3_error_analysis.json",
+          "filename": "t3_error_analysis.json",
+          "suffix": ".json",
+          "size_bytes": 164054,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "task",
+              "model",
+              "analysis_type",
+              "validation_rows",
+              "feature_count",
+              "test_used",
+              "confusion_matrix",
+              "labels",
+              "prediction_counts",
+              "confusion_pairs",
+              "representative_errors"
+            ],
+            "interesting_keys": [
+              "validation_rows",
+              "feature_count",
+              "prediction_counts"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T3/analysis/t3_error_inspection.json",
+          "filename": "t3_error_inspection.json",
+          "suffix": ".json",
+          "size_bytes": 45024,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "task",
+              "source",
+              "test_used",
+              "pairs"
+            ],
+            "interesting_keys": []
+          }
+        },
+        {
+          "path": "modeling/T3/analysis/t3_model_comparison.json",
+          "filename": "t3_model_comparison.json",
+          "suffix": ".json",
+          "size_bytes": 4540,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "task",
+              "evaluation_split",
+              "test_used",
+              "models",
+              "feature_details",
+              "pairwise_changes"
+            ],
+            "interesting_keys": [
+              "feature_details"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T3/analysis/t3_final_generalization_analysis.json",
+          "filename": "t3_final_generalization_analysis.json",
+          "suffix": ".json",
+          "size_bytes": 4281,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "operation",
+              "task",
+              "model",
+              "evaluation_design",
+              "overall_generalization",
+              "per_class_generalization",
+              "test_confusion_pairs",
+              "test_prediction_distribution",
+              "observations",
+              "interpretation",
+              "controls",
+              "status"
+            ],
+            "interesting_keys": [
+              "test_prediction_distribution"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T3/analysis/t3_classical_model_comparison.json",
+          "filename": "t3_classical_model_comparison.json",
+          "suffix": ".json",
+          "size_bytes": 3995,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "task",
+              "operation",
+              "selection_criterion",
+              "models",
+              "ranking_by_frozen_criterion",
+              "selected_classical_candidate",
+              "selection_note",
+              "status"
+            ],
+            "interesting_keys": [
+              "ranking_by_frozen_criterion",
+              "selected_classical_candidate"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T3/contracts/t3_model_contract.json",
+          "filename": "t3_model_contract.json",
+          "suffix": ".json",
+          "size_bytes": 3731,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "operation",
+              "task",
+              "task_name",
+              "dataset",
+              "status",
+              "target",
+              "prediction_boundary",
+              "horizon",
+              "features",
+              "migration_policy",
+              "eligibility",
+              "class_distribution",
+              "validated_artifact",
+              "validation_status",
+              "modeling_constraints",
+              "integrity",
+              "source_decision"
+            ],
+            "interesting_keys": [
+              "target",
+              "prediction_boundary",
+              "features",
+              "validated_artifact",
+              "validation_status"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T3/analysis/t3_baseline_comparison.json",
+          "filename": "t3_baseline_comparison.json",
+          "suffix": ".json",
+          "size_bytes": 3473,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "task",
+              "baseline",
+              "comparison_model",
+              "controlled_conditions",
+              "overall_metrics",
+              "per_class_changes",
+              "confusion_matrices"
+            ],
+            "interesting_keys": [
+              "overall_metrics"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T3/contracts/t3_advanced_model_contract.json",
+          "filename": "t3_advanced_model_contract.json",
+          "suffix": ".json",
+          "size_bytes": 3057,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "task",
+              "operation",
+              "advanced_branch_status",
+              "candidate_model",
+              "data_contract",
+              "split_contract",
+              "training_contract",
+              "evaluation_contract",
+              "comparison_contract",
+              "environment_contract",
+              "resource_constraints",
+              "forbidden",
+              "status"
+            ],
+            "interesting_keys": [
+              "candidate_model",
+              "forbidden"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T3/analysis/t3_final_closure.json",
+          "filename": "t3_final_closure.json",
+          "suffix": ".json",
+          "size_bytes": 3048,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "operation",
+              "task",
+              "status",
+              "final_candidate",
+              "test_per_class",
+              "generalization",
+              "advanced_branch",
+              "limitations",
+              "suitability",
+              "system_role",
+              "recommended_use",
+              "evidence_controls",
+              "closure_statement",
+              "next_task"
+            ],
+            "interesting_keys": [
+              "final_candidate",
+              "evidence_controls"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T3/analysis/t3_advanced_branch_closure.json",
+          "filename": "t3_advanced_branch_closure.json",
+          "suffix": ".json",
+          "size_bytes": 2436,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "operation",
+              "task",
+              "decision_basis",
+              "classical_candidate",
+              "advanced_candidate",
+              "metric_changes_advanced_minus_classical",
+              "interpretation",
+              "decision",
+              "controls",
+              "next_stage",
+              "status"
+            ],
+            "interesting_keys": [
+              "classical_candidate",
+              "advanced_candidate",
+              "metric_changes_advanced_minus_classical"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T3/analysis/t3_split_report.json",
+          "filename": "t3_split_report.json",
+          "suffix": ".json",
+          "size_bytes": 1902,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "input",
+              "total_rows",
+              "split_method",
+              "fractions",
+              "splits",
+              "id_overlap",
+              "temporal_order_valid",
+              "status"
+            ],
+            "interesting_keys": [
+              "id_overlap",
+              "temporal_order_valid"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T3/metrics/t3_word_char_validation_metrics.json",
+          "filename": "t3_word_char_validation_metrics.json",
+          "suffix": ".json",
+          "size_bytes": 1300,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "task",
+              "model",
+              "class_weight",
+              "train_rows",
+              "validation_rows",
+              "word_feature_count",
+              "char_feature_count",
+              "combined_feature_count",
+              "accuracy",
+              "macro_f1",
+              "weighted_f1",
+              "per_class",
+              "confusion_matrix",
+              "labels",
+              "test_used",
+              "status"
+            ],
+            "interesting_keys": [
+              "validation_rows",
+              "word_feature_count",
+              "char_feature_count",
+              "combined_feature_count"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T3/plots/t3_visualization_manifest.json",
+          "filename": "t3_visualization_manifest.json",
+          "suffix": ".json",
+          "size_bytes": 1265,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "operation",
+              "task",
+              "source_artifacts",
+              "plots",
+              "visualizations",
+              "modeling_performed",
+              "training_performed",
+              "test_selection_performed",
+              "raw_mozilla_accessed",
+              "dataset_modified",
+              "status"
+            ],
+            "interesting_keys": []
+          }
+        },
+        {
+          "path": "modeling/T3/metrics/t3_svm_class_weighted_validation_metrics.json",
+          "filename": "t3_svm_class_weighted_validation_metrics.json",
+          "suffix": ".json",
+          "size_bytes": 1244,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "task",
+              "model_id",
+              "model_family",
+              "class_weight",
+              "parameters",
+              "features",
+              "train_rows",
+              "validation_rows",
+              "feature_dimensions",
+              "accuracy",
+              "macro_f1",
+              "weighted_f1",
+              "per_class",
+              "test_used",
+              "status"
+            ],
+            "interesting_keys": [
+              "model_id",
+              "features",
+              "validation_rows",
+              "feature_dimensions"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T3/metrics/t3_class_weighted_validation_metrics.json",
+          "filename": "t3_class_weighted_validation_metrics.json",
+          "suffix": ".json",
+          "size_bytes": 1209,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "task",
+              "model",
+              "class_weight",
+              "train_rows",
+              "validation_rows",
+              "feature_count",
+              "accuracy",
+              "macro_f1",
+              "weighted_f1",
+              "per_class",
+              "confusion_matrix",
+              "labels",
+              "test_used",
+              "status"
+            ],
+            "interesting_keys": [
+              "validation_rows",
+              "feature_count"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T3/metrics/t3_baseline_validation_metrics.json",
+          "filename": "t3_baseline_validation_metrics.json",
+          "suffix": ".json",
+          "size_bytes": 1179,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "task",
+              "model",
+              "class_weight",
+              "train_rows",
+              "validation_rows",
+              "feature_count",
+              "accuracy",
+              "macro_f1",
+              "weighted_f1",
+              "per_class",
+              "confusion_matrix",
+              "labels",
+              "test_used",
+              "status"
+            ],
+            "interesting_keys": [
+              "validation_rows",
+              "feature_count"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T3/metrics/t3_linear_svm_validation_metrics.json",
+          "filename": "t3_linear_svm_validation_metrics.json",
+          "suffix": ".json",
+          "size_bytes": 1176,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "task",
+              "model_id",
+              "model_family",
+              "class_weight",
+              "features",
+              "train_rows",
+              "validation_rows",
+              "feature_dimensions",
+              "accuracy",
+              "macro_f1",
+              "weighted_f1",
+              "per_class",
+              "test_used",
+              "status"
+            ],
+            "interesting_keys": [
+              "model_id",
+              "features",
+              "validation_rows",
+              "feature_dimensions"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T3/metrics/t3_distilbert_feasibility_validation_metrics.json",
+          "filename": "t3_distilbert_feasibility_validation_metrics.json",
+          "suffix": ".json",
+          "size_bytes": 1157,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "operation",
+              "task",
+              "model",
+              "device",
+              "train_rows",
+              "validation_rows",
+              "max_length",
+              "batch_size",
+              "gradient_accumulation_steps",
+              "epochs",
+              "learning_rate",
+              "accuracy",
+              "macro_f1",
+              "weighted_f1",
+              "per_class",
+              "prediction_counts",
+              "training_seconds",
+              "validation_seconds",
+              "test_used",
+              "raw_mozilla_accessed",
+              "dataset_modified"
+            ],
+            "interesting_keys": [
+              "validation_rows",
+              "prediction_counts",
+              "validation_seconds"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T3/contracts/t3_model_selection_criterion.json",
+          "filename": "t3_model_selection_criterion.json",
+          "suffix": ".json",
+          "size_bytes": 997,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "task",
+              "evaluation_stage",
+              "primary_metric",
+              "secondary_metrics",
+              "per_class_metrics",
+              "selection_principles",
+              "test_policy",
+              "status"
+            ],
+            "interesting_keys": [
+              "primary_metric",
+              "secondary_metrics",
+              "per_class_metrics"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T3/models/t3_distilbert_feasibility/config.json",
+          "filename": "config.json",
+          "suffix": ".json",
+          "size_bytes": 794,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "activation",
+              "architectures",
+              "attention_dropout",
+              "bos_token_id",
+              "dim",
+              "dropout",
+              "dtype",
+              "eos_token_id",
+              "hidden_dim",
+              "id2label",
+              "initializer_range",
+              "label2id",
+              "max_position_embeddings",
+              "model_type",
+              "n_heads",
+              "n_layers",
+              "pad_token_id",
+              "problem_type",
+              "qa_dropout",
+              "seq_classif_dropout",
+              "sinusoidal_pos_embds",
+              "tie_weights_",
+              "tie_word_embeddings",
+              "transformers_version",
+              "vocab_size"
+            ],
+            "interesting_keys": [
+              "bos_token_id",
+              "eos_token_id",
+              "hidden_dim",
+              "id2label",
+              "label2id",
+              "pad_token_id",
+              "problem_type",
+              "sinusoidal_pos_embds"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T3/analysis/t3_validation_report.json",
+          "filename": "t3_validation_report.json",
+          "suffix": ".json",
+          "size_bytes": 551,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "input",
+              "rows",
+              "columns",
+              "unique_ids",
+              "duplicate_ids",
+              "invalid_target_values",
+              "invalid_creation_times",
+              "summary_blank",
+              "description_blank",
+              "no_usable_text",
+              "target_counts",
+              "forbidden_columns_present",
+              "status"
+            ],
+            "interesting_keys": [
+              "unique_ids",
+              "duplicate_ids",
+              "invalid_target_values",
+              "invalid_creation_times",
+              "target_counts",
+              "forbidden_columns_present"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T3/analysis/t3_distilbert_feasibility.json",
+          "filename": "t3_distilbert_feasibility.json",
+          "suffix": ".json",
+          "size_bytes": 540,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "operation",
+              "status",
+              "model",
+              "training_seconds",
+              "validation_seconds",
+              "total_seconds",
+              "validation_macro_f1",
+              "validation_accuracy",
+              "validation_weighted_f1",
+              "classical_reference_macro_f1",
+              "classical_reference_model",
+              "test_used",
+              "raw_mozilla_accessed",
+              "dataset_modified"
+            ],
+            "interesting_keys": [
+              "validation_seconds",
+              "validation_macro_f1",
+              "validation_accuracy",
+              "validation_weighted_f1"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T3/analysis/t3_transformer_smoke_test.json",
+          "filename": "t3_transformer_smoke_test.json",
+          "suffix": ".json",
+          "size_bytes": 471,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "task",
+              "operation",
+              "model",
+              "torch_version",
+              "device",
+              "cuda_available",
+              "tokenizer_loaded",
+              "model_loaded",
+              "forward_pass",
+              "hidden_state_shape",
+              "dataset_accessed",
+              "training_started",
+              "test_used",
+              "raw_mozilla_accessed",
+              "status"
+            ],
+            "interesting_keys": [
+              "hidden_state_shape"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T3/models/t3_distilbert_feasibility/tokenizer_config.json",
+          "filename": "tokenizer_config.json",
+          "suffix": ".json",
+          "size_bytes": 351,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "backend",
+              "cls_token",
+              "do_lower_case",
+              "is_local",
+              "local_files_only",
+              "mask_token",
+              "model_max_length",
+              "pad_token",
+              "sep_token",
+              "strip_accents",
+              "tokenize_chinese_chars",
+              "tokenizer_class",
+              "unk_token"
+            ],
+            "interesting_keys": []
+          }
+        },
+        {
+          "path": "modeling/T3/models/t3_distilbert_feasibility/model.safetensors",
+          "filename": "model.safetensors",
+          "suffix": ".safetensors",
+          "size_bytes": 267838720,
+          "score": 1,
+          "score_reasons": [
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T3/models/t3_svm_class_weighted.joblib",
+          "filename": "t3_svm_class_weighted.joblib",
+          "suffix": ".joblib",
+          "size_bytes": 17315277,
+          "score": 1,
+          "score_reasons": [
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T3/models/t3_linear_svm.joblib",
+          "filename": "t3_linear_svm.joblib",
+          "suffix": ".joblib",
+          "size_bytes": 17315261,
+          "score": 1,
+          "score_reasons": [
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T3/plots/t3_validation_vs_test.png",
+          "filename": "t3_validation_vs_test.png",
+          "suffix": ".png",
+          "size_bytes": 51348,
+          "score": 1,
+          "score_reasons": [
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T3/metrics/t3_final_test_metrics.json",
+          "filename": "t3_final_test_metrics.json",
+          "suffix": ".json",
+          "size_bytes": 1493,
+          "score": 1,
+          "score_reasons": [
+            "-test_",
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "operation",
+              "task",
+              "model_id",
+              "model_path",
+              "test_rows",
+              "accuracy",
+              "macro_f1",
+              "weighted_f1",
+              "per_class",
+              "true_counts",
+              "prediction_counts",
+              "confusion_matrix",
+              "controls"
+            ],
+            "interesting_keys": [
+              "model_id",
+              "prediction_counts"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T3/models/t3_word_char_tfidf_logreg.joblib",
+          "filename": "t3_word_char_tfidf_logreg.joblib",
+          "suffix": ".joblib",
+          "size_bytes": 80837857,
+          "score": -2,
+          "score_reasons": [
+            "-log",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib",
+          "filename": "t3_class_weighted_tfidf_logreg.joblib",
+          "suffix": ".joblib",
+          "size_bytes": 17315561,
+          "score": -2,
+          "score_reasons": [
+            "-log",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T3/models/t3_baseline_tfidf_logreg.joblib",
+          "filename": "t3_baseline_tfidf_logreg.joblib",
+          "suffix": ".joblib",
+          "size_bytes": 17315557,
+          "score": -2,
+          "score_reasons": [
+            "-log",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T3/plots/t3_test_confusion_matrix.png",
+          "filename": "t3_test_confusion_matrix.png",
+          "suffix": ".png",
+          "size_bytes": 82036,
+          "score": -2,
+          "score_reasons": [
+            "-test_",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T3/plots/t3_test_true_vs_predicted_distribution.png",
+          "filename": "t3_test_true_vs_predicted_distribution.png",
+          "suffix": ".png",
+          "size_bytes": 53197,
+          "score": -2,
+          "score_reasons": [
+            "-test_",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T3/plots/t3_test_per_class_f1.png",
+          "filename": "t3_test_per_class_f1.png",
+          "suffix": ".png",
+          "size_bytes": 37233,
+          "score": -2,
+          "score_reasons": [
+            "-test_",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T3/scripts/t3_distilbert_feasibility.py",
+          "filename": "t3_distilbert_feasibility.py",
+          "suffix": ".py",
+          "size_bytes": 12579,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T3/scripts/t3_final_closure.py",
+          "filename": "t3_final_closure.py",
+          "suffix": ".py",
+          "size_bytes": 10076,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T3/scripts/t3_locked_test.py",
+          "filename": "t3_locked_test.py",
+          "suffix": ".py",
+          "size_bytes": 8866,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T3/scripts/t3_generalization_analysis.py",
+          "filename": "t3_generalization_analysis.py",
+          "suffix": ".py",
+          "size_bytes": 8649,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T3/scripts/t3_advanced_branch_decision.py",
+          "filename": "t3_advanced_branch_decision.py",
+          "suffix": ".py",
+          "size_bytes": 7784,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T3/scripts/t3_model_contract.py",
+          "filename": "t3_model_contract.py",
+          "suffix": ".py",
+          "size_bytes": 7777,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T3/scripts/t3_word_char.py",
+          "filename": "t3_word_char.py",
+          "suffix": ".py",
+          "size_bytes": 6749,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T3/scripts/t3_model_comparison.py",
+          "filename": "t3_model_comparison.py",
+          "suffix": ".py",
+          "size_bytes": 6035,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T3/scripts/t3_split.py",
+          "filename": "t3_split.py",
+          "suffix": ".py",
+          "size_bytes": 5945,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T3/scripts/t3_generate_plots.py",
+          "filename": "t3_generate_plots.py",
+          "suffix": ".py",
+          "size_bytes": 5821,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T3/scripts/t3_advanced_model_contract.py",
+          "filename": "t3_advanced_model_contract.py",
+          "suffix": ".py",
+          "size_bytes": 5510,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T3/scripts/t3_class_weighted.py",
+          "filename": "t3_class_weighted.py",
+          "suffix": ".py",
+          "size_bytes": 4995,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T3/scripts/t3_svm_class_weighted.py",
+          "filename": "t3_svm_class_weighted.py",
+          "suffix": ".py",
+          "size_bytes": 4917,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T3/scripts/t3_error_analysis.py",
+          "filename": "t3_error_analysis.py",
+          "suffix": ".py",
+          "size_bytes": 4872,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T3/scripts/t3_linear_svm.py",
+          "filename": "t3_linear_svm.py",
+          "suffix": ".py",
+          "size_bytes": 4800,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T3/scripts/t3_baseline.py",
+          "filename": "t3_baseline.py",
+          "suffix": ".py",
+          "size_bytes": 4798,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T3/scripts/t3_baseline_comparison.py",
+          "filename": "t3_baseline_comparison.py",
+          "suffix": ".py",
+          "size_bytes": 4778,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T3/scripts/t3_validate.py",
+          "filename": "t3_validate.py",
+          "suffix": ".py",
+          "size_bytes": 3946,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T3/scripts/t3_classical_comparison.py",
+          "filename": "t3_classical_comparison.py",
+          "suffix": ".py",
+          "size_bytes": 3777,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T3/scripts/t3_inspect_errors.py",
+          "filename": "t3_inspect_errors.py",
+          "suffix": ".py",
+          "size_bytes": 3406,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T3/scripts/t3_materialize.py",
+          "filename": "t3_materialize.py",
+          "suffix": ".py",
+          "size_bytes": 3196,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T3/scripts/t3_environment_check.py",
+          "filename": "t3_environment_check.py",
+          "suffix": ".py",
+          "size_bytes": 2780,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T3/scripts/t3_transformer_smoke_test.py",
+          "filename": "t3_transformer_smoke_test.py",
+          "suffix": ".py",
+          "size_bytes": 2331,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T3/scripts/t3_selection_criterion.py",
+          "filename": "t3_selection_criterion.py",
+          "suffix": ".py",
+          "size_bytes": 2105,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        }
+      ]
+    },
+    "T6": {
+      "candidate_count": 58,
+      "candidates": [
+        {
+          "path": "modeling/T6/metrics/t6_mod009_hybrid_retrieval_results.json",
+          "filename": "t6_mod009_hybrid_retrieval_results.json",
+          "suffix": ".json",
+          "size_bytes": 7442,
+          "score": 12,
+          "score_reasons": [
+            "+result",
+            "+results",
+            "+eval",
+            "+retrieval",
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "task_id",
+              "operation_id",
+              "operation_name",
+              "status",
+              "semantic_model",
+              "device",
+              "embedding_dimension",
+              "candidate_pool",
+              "query_features",
+              "candidate_features",
+              "target_policy",
+              "population",
+              "predeclared_semantic_weights",
+              "training_weight_selection",
+              "metrics",
+              "rank_movement",
+              "tfidf_top20_failure_population",
+              "controls",
+              "artifacts",
+              "runtime_seconds"
+            ],
+            "interesting_keys": [
+              "task_id",
+              "operation_id",
+              "candidate_pool",
+              "query_features",
+              "candidate_features",
+              "target_policy",
+              "metrics",
+              "rank_movement",
+              "tfidf_top20_failure_population"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T6/metrics/t6_mod007_bm25_retrieval_results.json",
+          "filename": "t6_mod007_bm25_retrieval_results.json",
+          "suffix": ".json",
+          "size_bytes": 3228,
+          "score": 12,
+          "score_reasons": [
+            "+result",
+            "+results",
+            "+eval",
+            "+retrieval",
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "operation",
+              "task",
+              "task_formulation",
+              "status",
+              "method",
+              "candidate_pool",
+              "target_handling",
+              "controls",
+              "train",
+              "eval",
+              "train_eval_deltas",
+              "artifacts",
+              "interpretation_notes"
+            ],
+            "interesting_keys": [
+              "candidate_pool",
+              "target_handling"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T6/metrics/t6_mod004_tfidf_retrieval_results.json",
+          "filename": "t6_mod004_tfidf_retrieval_results.json",
+          "suffix": ".json",
+          "size_bytes": 2932,
+          "score": 12,
+          "score_reasons": [
+            "+result",
+            "+results",
+            "+eval",
+            "+retrieval",
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "operation",
+              "task",
+              "status",
+              "model",
+              "feature_policy",
+              "vectorizer",
+              "candidate_structure",
+              "train",
+              "evaluation",
+              "evaluation_metrics",
+              "controls",
+              "artifacts",
+              "runtime_seconds"
+            ],
+            "interesting_keys": [
+              "feature_policy",
+              "candidate_structure",
+              "evaluation_metrics"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T6/metrics/t6_mod010_corrected_hybrid_results.json",
+          "filename": "t6_mod010_corrected_hybrid_results.json",
+          "suffix": ".json",
+          "size_bytes": 6325,
+          "score": 8,
+          "score_reasons": [
+            "+result",
+            "+results",
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "task_id",
+              "operation_id",
+              "operation_name",
+              "status",
+              "lexical_reconciliation",
+              "semantic_branch",
+              "population",
+              "weight_selection",
+              "metrics",
+              "controls",
+              "artifacts",
+              "runtime_seconds"
+            ],
+            "interesting_keys": [
+              "task_id",
+              "operation_id",
+              "metrics"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T6/metrics/t6_mod008_semantic_failure_results.json",
+          "filename": "t6_mod008_semantic_failure_results.json",
+          "suffix": ".json",
+          "size_bytes": 4429,
+          "score": 8,
+          "score_reasons": [
+            "+result",
+            "+results",
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "operation",
+              "task",
+              "task_formulation",
+              "status",
+              "experiment_scope",
+              "semantic_model",
+              "overall",
+              "train_failure_subset",
+              "eval_failure_subset",
+              "eval_minus_train",
+              "recovery_of_tfidf_top20_failures",
+              "rank_movement",
+              "controls",
+              "interpretation_notes",
+              "artifacts",
+              "runtime_seconds"
+            ],
+            "interesting_keys": [
+              "recovery_of_tfidf_top20_failures",
+              "rank_movement"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T6/splits/t6_eval_group_aware.csv",
+          "filename": "t6_eval_group_aware.csv",
+          "suffix": ".csv",
+          "size_bytes": 445145499,
+          "score": 6,
+          "score_reasons": [
+            "+eval",
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "query_id",
+              "query_creation_time",
+              "query_creator",
+              "query_creator_detail",
+              "query_summary",
+              "query_description",
+              "candidate_id",
+              "candidate_creation_time",
+              "candidate_creator",
+              "candidate_creator_detail",
+              "candidate_summary",
+              "candidate_description",
+              "candidate_role",
+              "target_observed",
+              "target_type",
+              "sampling_protocol",
+              "sampling_seed"
+            ],
+            "interesting_columns": [
+              "query_id",
+              "query_creation_time",
+              "query_creator",
+              "query_creator_detail",
+              "query_summary",
+              "query_description",
+              "candidate_id",
+              "candidate_creation_time",
+              "candidate_creator",
+              "candidate_creator_detail",
+              "candidate_summary",
+              "candidate_description",
+              "candidate_role",
+              "target_observed",
+              "target_type"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T6/metrics/t6_mod009_hybrid_query_rankings.csv",
+          "filename": "t6_mod009_hybrid_query_rankings.csv",
+          "suffix": ".csv",
+          "size_bytes": 34390351,
+          "score": 6,
+          "score_reasons": [
+            "+ranking",
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "split",
+              "query_id",
+              "candidate_id",
+              "target_observed",
+              "tfidf_score",
+              "semantic_score",
+              "tfidf_score_normalized",
+              "semantic_score_normalized",
+              "hybrid_score"
+            ],
+            "interesting_columns": [
+              "query_id",
+              "candidate_id",
+              "target_observed",
+              "tfidf_score",
+              "semantic_score",
+              "tfidf_score_normalized",
+              "semantic_score_normalized",
+              "hybrid_score"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T6/metrics/t6_mod010_corrected_hybrid_query_rankings.csv",
+          "filename": "t6_mod010_corrected_hybrid_query_rankings.csv",
+          "suffix": ".csv",
+          "size_bytes": 34283752,
+          "score": 6,
+          "score_reasons": [
+            "+ranking",
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "split",
+              "query_id",
+              "candidate_id",
+              "target_observed",
+              "semantic_score",
+              "tfidf_score",
+              "tfidf_score_normalized",
+              "semantic_score_normalized",
+              "hybrid_score"
+            ],
+            "interesting_columns": [
+              "query_id",
+              "candidate_id",
+              "target_observed",
+              "semantic_score",
+              "tfidf_score",
+              "tfidf_score_normalized",
+              "semantic_score_normalized",
+              "hybrid_score"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T6/metrics/t6_mod007_bm25_query_rankings.csv",
+          "filename": "t6_mod007_bm25_query_rankings.csv",
+          "suffix": ".csv",
+          "size_bytes": 319524,
+          "score": 6,
+          "score_reasons": [
+            "+ranking",
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "split",
+              "query_id",
+              "query_creation_time",
+              "positive_candidate_id",
+              "positive_rank",
+              "top_candidate_id",
+              "top_candidate_role",
+              "top_score",
+              "positive_score",
+              "score_gap_top1_minus_positive",
+              "query_token_count"
+            ],
+            "interesting_columns": [
+              "query_id",
+              "query_creation_time",
+              "positive_candidate_id",
+              "positive_rank",
+              "top_candidate_id",
+              "top_candidate_role",
+              "top_score",
+              "positive_score",
+              "score_gap_top1_minus_positive",
+              "query_token_count"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T6/metrics/t6_mod004_query_rankings.csv",
+          "filename": "t6_mod004_query_rankings.csv",
+          "suffix": ".csv",
+          "size_bytes": 230404,
+          "score": 6,
+          "score_reasons": [
+            "+ranking",
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "split",
+              "query_id",
+              "positive_candidate_id",
+              "positive_rank",
+              "top_candidate_id",
+              "top_candidate_role",
+              "top_score",
+              "positive_score"
+            ],
+            "interesting_columns": [
+              "query_id",
+              "positive_candidate_id",
+              "positive_rank",
+              "top_candidate_id",
+              "top_candidate_role",
+              "top_score",
+              "positive_score"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T6/metrics/t6_mod008_semantic_failure_rankings.csv",
+          "filename": "t6_mod008_semantic_failure_rankings.csv",
+          "suffix": ".csv",
+          "size_bytes": 15876,
+          "score": 6,
+          "score_reasons": [
+            "+ranking",
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "split",
+              "query_id",
+              "positive_candidate_id",
+              "original_tfidf_rank",
+              "semantic_positive_rank",
+              "semantic_top_candidate_id",
+              "semantic_top_score",
+              "semantic_positive_score",
+              "semantic_score_gap_top1_minus_positive"
+            ],
+            "interesting_columns": [
+              "query_id",
+              "positive_candidate_id",
+              "original_tfidf_rank",
+              "semantic_positive_rank",
+              "semantic_top_candidate_id",
+              "semantic_top_score",
+              "semantic_positive_score",
+              "semantic_score_gap_top1_minus_positive"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T6/splits/t6_train_group_aware.csv",
+          "filename": "t6_train_group_aware.csv",
+          "suffix": ".csv",
+          "size_bytes": 1081172293,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "query_id",
+              "query_creation_time",
+              "query_creator",
+              "query_creator_detail",
+              "query_summary",
+              "query_description",
+              "candidate_id",
+              "candidate_creation_time",
+              "candidate_creator",
+              "candidate_creator_detail",
+              "candidate_summary",
+              "candidate_description",
+              "candidate_role",
+              "target_observed",
+              "target_type",
+              "sampling_protocol",
+              "sampling_seed"
+            ],
+            "interesting_columns": [
+              "query_id",
+              "query_creation_time",
+              "query_creator",
+              "query_creator_detail",
+              "query_summary",
+              "query_description",
+              "candidate_id",
+              "candidate_creation_time",
+              "candidate_creator",
+              "candidate_creator_detail",
+              "candidate_summary",
+              "candidate_description",
+              "candidate_role",
+              "target_observed",
+              "target_type"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T6/metrics/t6_mod010_corrected_lexical_reconciliation.csv",
+          "filename": "t6_mod010_corrected_lexical_reconciliation.csv",
+          "suffix": ".csv",
+          "size_bytes": 18264341,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "split",
+              "query_id",
+              "candidate_id",
+              "exact_mod004_score",
+              "corrected_tfidf_score",
+              "absolute_difference"
+            ],
+            "interesting_columns": [
+              "query_id",
+              "candidate_id",
+              "exact_mod004_score",
+              "corrected_tfidf_score"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T6/metrics/t6_mod010_tfidf_query_mismatches.csv",
+          "filename": "t6_mod010_tfidf_query_mismatches.csv",
+          "suffix": ".csv",
+          "size_bytes": 711439,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "split",
+              "query_id",
+              "positive_candidate_id",
+              "positive_rank",
+              "top_candidate_id",
+              "top_candidate_role",
+              "top_score",
+              "positive_score",
+              "positive_candidate_id_reconstructed",
+              "positive_rank_reconstructed",
+              "top_candidate_id_reconstructed",
+              "top_candidate_role_reconstructed",
+              "top_score_reconstructed",
+              "positive_score_reconstructed",
+              "positive_candidate_match",
+              "positive_rank_match",
+              "top_candidate_match",
+              "top_role_match",
+              "top_score_difference",
+              "positive_score_difference",
+              "absolute_top_score_difference",
+              "absolute_positive_score_difference",
+              "rank_difference"
+            ],
+            "interesting_columns": [
+              "query_id",
+              "positive_candidate_id",
+              "positive_rank",
+              "top_candidate_id",
+              "top_candidate_role",
+              "top_score",
+              "positive_score",
+              "positive_candidate_id_reconstructed",
+              "positive_rank_reconstructed",
+              "top_candidate_id_reconstructed",
+              "top_candidate_role_reconstructed",
+              "top_score_reconstructed",
+              "positive_score_reconstructed",
+              "positive_candidate_match",
+              "positive_rank_match",
+              "top_candidate_match",
+              "top_score_difference",
+              "positive_score_difference",
+              "absolute_top_score_difference",
+              "absolute_positive_score_difference",
+              "rank_difference"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T6/derived/t6_content_group_assignments.csv",
+          "filename": "t6_content_group_assignments.csv",
+          "suffix": ".csv",
+          "size_bytes": 298653,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "query_id",
+              "query_creation_time",
+              "creation_year",
+              "content_group_hash",
+              "assigned_side"
+            ],
+            "interesting_columns": [
+              "query_id",
+              "query_creation_time",
+              "assigned_side"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T6/metrics/t6_mod006_failure_cases.csv",
+          "filename": "t6_mod006_failure_cases.csv",
+          "suffix": ".csv",
+          "size_bytes": 42751,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "split",
+              "query_id",
+              "positive_candidate_id",
+              "positive_rank",
+              "rank_band",
+              "top_candidate_id",
+              "top_candidate_role",
+              "top_score",
+              "positive_score",
+              "score_gap_top1_minus_positive",
+              "query_characters",
+              "query_tokens",
+              "candidate_characters",
+              "candidate_tokens",
+              "lexical_overlap_tokens",
+              "query_token_overlap_ratio",
+              "positive_similarity_zero",
+              "query_text_empty",
+              "candidate_text_empty",
+              "query_creation_time",
+              "candidate_creation_time",
+              "target_observed",
+              "target_type"
+            ],
+            "interesting_columns": [
+              "query_id",
+              "positive_candidate_id",
+              "positive_rank",
+              "rank_band",
+              "top_candidate_id",
+              "top_candidate_role",
+              "top_score",
+              "positive_score",
+              "score_gap_top1_minus_positive",
+              "query_characters",
+              "query_tokens",
+              "candidate_characters",
+              "candidate_tokens",
+              "query_token_overlap_ratio",
+              "query_text_empty",
+              "candidate_text_empty",
+              "query_creation_time",
+              "candidate_creation_time",
+              "target_observed",
+              "target_type"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T6/metrics/t6_mod005_top20_failures.csv",
+          "filename": "t6_mod005_top20_failures.csv",
+          "suffix": ".csv",
+          "size_bytes": 19738,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "split",
+              "query_id",
+              "positive_candidate_id",
+              "positive_rank",
+              "top_candidate_id",
+              "top_candidate_role",
+              "top_score",
+              "positive_score",
+              "score_gap_top1_minus_positive"
+            ],
+            "interesting_columns": [
+              "query_id",
+              "positive_candidate_id",
+              "positive_rank",
+              "top_candidate_id",
+              "top_candidate_role",
+              "top_score",
+              "positive_score",
+              "score_gap_top1_minus_positive"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T6/metrics/t6_mod006_failure_case_characterization.json",
+          "filename": "t6_mod006_failure_case_characterization.json",
+          "suffix": ".json",
+          "size_bytes": 7295,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "operation",
+              "task",
+              "task_formulation",
+              "status",
+              "inputs",
+              "controls",
+              "failure_population",
+              "all_failures",
+              "train_failures",
+              "eval_failures",
+              "train_eval_failure_comparison",
+              "interpretation_notes",
+              "artifacts"
+            ],
+            "interesting_keys": []
+          }
+        },
+        {
+          "path": "modeling/T6/metrics/t6_mod005_baseline_error_analysis.json",
+          "filename": "t6_mod005_baseline_error_analysis.json",
+          "suffix": ".json",
+          "size_bytes": 5898,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "operation",
+              "task",
+              "status",
+              "input_artifact",
+              "analysis_only",
+              "controls",
+              "train",
+              "eval",
+              "train_eval_comparison",
+              "failure_concentration",
+              "top20_failures",
+              "score_gap_definition",
+              "interpretation_notes",
+              "artifacts"
+            ],
+            "interesting_keys": [
+              "score_gap_definition"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T6/metrics/t6_final_closure.json",
+          "filename": "t6_final_closure.json",
+          "suffix": ".json",
+          "size_bytes": 5819,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "task_id",
+              "task_name",
+              "operational_task_name",
+              "task_family",
+              "status",
+              "final_status",
+              "final_system_role",
+              "final_model",
+              "evaluation_population",
+              "final_evaluation_metrics",
+              "baseline_comparison",
+              "completed_operations",
+              "final_evidence",
+              "limitations",
+              "explicit_exclusions",
+              "controls",
+              "decision_statement"
+            ],
+            "interesting_keys": [
+              "task_id",
+              "final_evaluation_metrics",
+              "final_evidence"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T6/contracts/t6_modeling_contract.json",
+          "filename": "t6_modeling_contract.json",
+          "suffix": ".json",
+          "size_bytes": 5389,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "task_id",
+              "task_name",
+              "task_family",
+              "status",
+              "source_dataset",
+              "accepted_source_artifact",
+              "operational_problem",
+              "prediction_boundary",
+              "query_definition",
+              "candidate_definition",
+              "relationship_direction",
+              "positive_definition",
+              "observable_non_positive_definition",
+              "observable_non_positive_semantics",
+              "candidate_pool",
+              "feature_policy",
+              "missing_target_policy",
+              "task_formulation",
+              "evaluation",
+              "split_policy",
+              "modeling_policy",
+              "data_integrity",
+              "prohibitions"
+            ],
+            "interesting_keys": [
+              "task_id",
+              "operational_problem",
+              "prediction_boundary",
+              "candidate_definition",
+              "candidate_pool",
+              "feature_policy",
+              "missing_target_policy"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T6/metrics/t6_mod010_final_comparison.json",
+          "filename": "t6_mod010_final_comparison.json",
+          "suffix": ".json",
+          "size_bytes": 2690,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "task_id",
+              "operation_id",
+              "operation_name",
+              "status",
+              "baseline",
+              "corrected_hybrid",
+              "metric_comparison",
+              "controls",
+              "decision"
+            ],
+            "interesting_keys": [
+              "task_id",
+              "operation_id",
+              "corrected_hybrid",
+              "metric_comparison"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T6/metrics/t6_group_aware_split_audit.json",
+          "filename": "t6_group_aware_split_audit.json",
+          "suffix": ".json",
+          "size_bytes": 2672,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "operation",
+              "task",
+              "status",
+              "source_artifact",
+              "source_artifact_modified",
+              "split_policy",
+              "source_accounting",
+              "content_groups",
+              "final_split",
+              "temporal_displacement",
+              "temporal_purity",
+              "leakage_controls",
+              "immutability_controls",
+              "artifacts",
+              "overall_control",
+              "decision"
+            ],
+            "interesting_keys": []
+          }
+        },
+        {
+          "path": "modeling/T6/metrics/t6_mod005_rank_distribution.csv",
+          "filename": "t6_mod005_rank_distribution.csv",
+          "suffix": ".csv",
+          "size_bytes": 2389,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "split",
+              "metric",
+              "value",
+              "successful_queries",
+              "total_queries"
+            ],
+            "interesting_columns": []
+          }
+        },
+        {
+          "path": "modeling/T6/metrics/t6_mod010_direct_score_differences.csv",
+          "filename": "t6_mod010_direct_score_differences.csv",
+          "suffix": ".csv",
+          "size_bytes": 2109,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "split",
+              "query_id",
+              "candidate_id",
+              "exact_tfidf_score",
+              "tfidf_score",
+              "score_difference",
+              "absolute_score_difference"
+            ],
+            "interesting_columns": [
+              "query_id",
+              "candidate_id",
+              "exact_tfidf_score",
+              "tfidf_score",
+              "score_difference",
+              "absolute_score_difference"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T6/metrics/t6_mod010_exact_reproduction_report.json",
+          "filename": "t6_mod010_exact_reproduction_report.json",
+          "suffix": ".json",
+          "size_bytes": 1992,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "task_id",
+              "operation_id",
+              "operation_name",
+              "status",
+              "method",
+              "controls",
+              "population",
+              "exact_vs_mod004",
+              "exact_vs_mod009",
+              "diagnosis",
+              "artifacts"
+            ],
+            "interesting_keys": [
+              "task_id",
+              "operation_id"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T6/metrics/t6_mod010_tfidf_reproducibility_report.json",
+          "filename": "t6_mod010_tfidf_reproducibility_report.json",
+          "suffix": ".json",
+          "size_bytes": 1830,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "task_id",
+              "operation_id",
+              "operation_name",
+              "status",
+              "population",
+              "ranking_identity",
+              "score_difference",
+              "rank_difference",
+              "top20_failure_sets",
+              "controls",
+              "artifacts"
+            ],
+            "interesting_keys": [
+              "task_id",
+              "operation_id",
+              "ranking_identity",
+              "score_difference",
+              "rank_difference"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T6/plots/t6_visualization_manifest.json",
+          "filename": "t6_visualization_manifest.json",
+          "suffix": ".json",
+          "size_bytes": 1572,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "task_id",
+              "visualization_only",
+              "source_artifacts",
+              "controls",
+              "evaluation_population",
+              "plots"
+            ],
+            "interesting_keys": [
+              "task_id"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T6/metrics/t6_mod010_direct_score_reconciliation.json",
+          "filename": "t6_mod010_direct_score_reconciliation.json",
+          "suffix": ".json",
+          "size_bytes": 1073,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "task_id",
+              "operation_id",
+              "operation_name",
+              "status",
+              "population",
+              "score_comparison",
+              "controls",
+              "artifacts"
+            ],
+            "interesting_keys": [
+              "task_id",
+              "operation_id",
+              "score_comparison"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T6/metrics/t6_mod010_exact_reproduction_mismatches.csv",
+          "filename": "t6_mod010_exact_reproduction_mismatches.csv",
+          "suffix": ".csv",
+          "size_bytes": 507,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "split",
+              "query_id",
+              "positive_candidate_id_original",
+              "positive_rank_original",
+              "top_candidate_id_original",
+              "top_candidate_role_original",
+              "top_score_original",
+              "positive_score_original",
+              "positive_candidate_id_exact",
+              "positive_rank_exact",
+              "top_candidate_id_exact",
+              "top_candidate_role_exact",
+              "top_score_exact",
+              "positive_score_exact",
+              "positive_candidate_match",
+              "positive_rank_match",
+              "top_candidate_match",
+              "top_role_match",
+              "top_score_difference",
+              "positive_score_difference",
+              "absolute_top_score_difference",
+              "absolute_positive_score_difference",
+              "rank_difference"
+            ],
+            "interesting_columns": [
+              "query_id",
+              "positive_candidate_id_original",
+              "positive_rank_original",
+              "top_candidate_id_original",
+              "top_candidate_role_original",
+              "top_score_original",
+              "positive_score_original",
+              "positive_candidate_id_exact",
+              "positive_rank_exact",
+              "top_candidate_id_exact",
+              "top_candidate_role_exact",
+              "top_score_exact",
+              "positive_score_exact",
+              "positive_candidate_match",
+              "positive_rank_match",
+              "top_candidate_match",
+              "top_score_difference",
+              "positive_score_difference",
+              "absolute_top_score_difference",
+              "absolute_positive_score_difference",
+              "rank_difference"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T6/metrics/t6_mod006_failure_rank_distribution.csv",
+          "filename": "t6_mod006_failure_rank_distribution.csv",
+          "suffix": ".csv",
+          "size_bytes": 429,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "split",
+              "rank_band",
+              "count",
+              "proportion_of_failures"
+            ],
+            "interesting_columns": [
+              "rank_band"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T6/logs/t6_mod007_bm25_retrieval.log",
+          "filename": "t6_mod007_bm25_retrieval.log",
+          "suffix": ".log",
+          "size_bytes": 2726,
+          "score": 2,
+          "score_reasons": [
+            "+eval",
+            "+retrieval",
+            "-log",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T6/logs/t6_mod008_semantic_failure_retrieval.log",
+          "filename": "t6_mod008_semantic_failure_retrieval.log",
+          "suffix": ".log",
+          "size_bytes": 2503,
+          "score": 2,
+          "score_reasons": [
+            "+eval",
+            "+retrieval",
+            "-log",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T6/logs/t6_mod004_tfidf_retrieval.log",
+          "filename": "t6_mod004_tfidf_retrieval.log",
+          "suffix": ".log",
+          "size_bytes": 2457,
+          "score": 2,
+          "score_reasons": [
+            "+eval",
+            "+retrieval",
+            "-log",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T6/models/t6_mod004_tfidf_vectorizer.joblib",
+          "filename": "t6_mod004_tfidf_vectorizer.joblib",
+          "suffix": ".joblib",
+          "size_bytes": 4235872,
+          "score": 1,
+          "score_reasons": [
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T6/plots/t6_final_metric_comparison.png",
+          "filename": "t6_final_metric_comparison.png",
+          "suffix": ".png",
+          "size_bytes": 69906,
+          "score": 1,
+          "score_reasons": [
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T6/plots/t6_recall_at_k_comparison.png",
+          "filename": "t6_recall_at_k_comparison.png",
+          "suffix": ".png",
+          "size_bytes": 62984,
+          "score": 1,
+          "score_reasons": [
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T6/plots/t6_train_hybrid_weight_selection.png",
+          "filename": "t6_train_hybrid_weight_selection.png",
+          "suffix": ".png",
+          "size_bytes": 58136,
+          "score": 1,
+          "score_reasons": [
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T6/plots/t6_positive_rank_distribution.png",
+          "filename": "t6_positive_rank_distribution.png",
+          "suffix": ".png",
+          "size_bytes": 55165,
+          "score": 1,
+          "score_reasons": [
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T6/plots/t6_positive_rank_movement.png",
+          "filename": "t6_positive_rank_movement.png",
+          "suffix": ".png",
+          "size_bytes": 47972,
+          "score": 1,
+          "score_reasons": [
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T6/logs/t6_mod006_failure_case_characterization.log",
+          "filename": "t6_mod006_failure_case_characterization.log",
+          "suffix": ".log",
+          "size_bytes": 2874,
+          "score": -2,
+          "score_reasons": [
+            "-log",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T6/logs/t6_mod005_baseline_error_analysis.log",
+          "filename": "t6_mod005_baseline_error_analysis.log",
+          "suffix": ".log",
+          "size_bytes": 2164,
+          "score": -2,
+          "score_reasons": [
+            "-log",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T6/logs/t6_mod003_split_construction.log",
+          "filename": "t6_mod003_split_construction.log",
+          "suffix": ".log",
+          "size_bytes": 2102,
+          "score": -2,
+          "score_reasons": [
+            "-log",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T6/scripts/t6_mod008_semantic_failure_retrieval.py",
+          "filename": "t6_mod008_semantic_failure_retrieval.py",
+          "suffix": ".py",
+          "size_bytes": 32585,
+          "score": -6,
+          "score_reasons": [
+            "+eval",
+            "+retrieval",
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T6/scripts/t6_mod009_hybrid_lexical_semantic_retrieval.py",
+          "filename": "t6_mod009_hybrid_lexical_semantic_retrieval.py",
+          "suffix": ".py",
+          "size_bytes": 29868,
+          "score": -6,
+          "score_reasons": [
+            "+eval",
+            "+retrieval",
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T6/scripts/t6_mod007_bm25_retrieval.py",
+          "filename": "t6_mod007_bm25_retrieval.py",
+          "suffix": ".py",
+          "size_bytes": 26158,
+          "score": -6,
+          "score_reasons": [
+            "+eval",
+            "+retrieval",
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T6/scripts/t6_baseline_tfidf_retrieval.py",
+          "filename": "t6_baseline_tfidf_retrieval.py",
+          "suffix": ".py",
+          "size_bytes": 24168,
+          "score": -6,
+          "score_reasons": [
+            "+eval",
+            "+retrieval",
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T6/scripts/t6_mod006_failure_case_characterization.py",
+          "filename": "t6_mod006_failure_case_characterization.py",
+          "suffix": ".py",
+          "size_bytes": 31815,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T6/scripts/t6_mod010_corrected_hybrid_reconstruction.py",
+          "filename": "t6_mod010_corrected_hybrid_reconstruction.py",
+          "suffix": ".py",
+          "size_bytes": 27856,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T6/scripts/t6_construct_group_aware_split.py",
+          "filename": "t6_construct_group_aware_split.py",
+          "suffix": ".py",
+          "size_bytes": 26661,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T6/scripts/t6_mod005_baseline_error_analysis.py",
+          "filename": "t6_mod005_baseline_error_analysis.py",
+          "suffix": ".py",
+          "size_bytes": 20818,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T6/scripts/t6_mod010_inspect_artifact_schemas.py",
+          "filename": "t6_mod010_inspect_artifact_schemas.py",
+          "suffix": ".py",
+          "size_bytes": 16247,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T6/scripts/t6_final_model_selection_and_closure.py",
+          "filename": "t6_final_model_selection_and_closure.py",
+          "suffix": ".py",
+          "size_bytes": 15245,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T6/scripts/t6_visualization.py",
+          "filename": "t6_visualization.py",
+          "suffix": ".py",
+          "size_bytes": 14925,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T6/scripts/t6_mod010_exact_tfidf_reproduction.py",
+          "filename": "t6_mod010_exact_tfidf_reproduction.py",
+          "suffix": ".py",
+          "size_bytes": 14827,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T6/scripts/t6_mod010_diagnose_mod009_lexical_reconstruction.py",
+          "filename": "t6_mod010_diagnose_mod009_lexical_reconstruction.py",
+          "suffix": ".py",
+          "size_bytes": 13197,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T6/scripts/t6_mod010_final_hybrid_comparison.py",
+          "filename": "t6_mod010_final_hybrid_comparison.py",
+          "suffix": ".py",
+          "size_bytes": 8700,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T6/scripts/t6_mod010_tfidf_reproducibility_check.py",
+          "filename": "t6_mod010_tfidf_reproducibility_check.py",
+          "suffix": ".py",
+          "size_bytes": 0,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        }
+      ]
+    },
+    "T7": {
+      "candidate_count": 59,
+      "candidates": [
+        {
+          "path": "modeling/T7/derived/t7_mod007_evaluation_predictions.csv",
+          "filename": "t7_mod007_evaluation_predictions.csv",
+          "suffix": ".csv",
+          "size_bytes": 10437926,
+          "score": 12,
+          "score_reasons": [
+            "+prediction",
+            "+predictions",
+            "+eval",
+            "+evaluation",
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "ID",
+              "duration_seconds",
+              "event",
+              "predicted_median_survival_seconds",
+              "survival_probability_at_211583_seconds",
+              "survival_probability_at_1780179_seconds",
+              "survival_probability_at_14608619_seconds"
+            ],
+            "interesting_columns": [
+              "ID",
+              "event",
+              "predicted_median_survival_seconds",
+              "survival_probability_at_211583_seconds",
+              "survival_probability_at_1780179_seconds",
+              "survival_probability_at_14608619_seconds"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T7/derived/t7_mod010_evaluation_predictions.csv",
+          "filename": "t7_mod010_evaluation_predictions.csv",
+          "suffix": ".csv",
+          "size_bytes": 10097325,
+          "score": 12,
+          "score_reasons": [
+            "+prediction",
+            "+predictions",
+            "+eval",
+            "+evaluation",
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "ID",
+              "duration_seconds",
+              "event",
+              "predicted_median_survival_seconds",
+              "survival_probability_at_211583_seconds",
+              "survival_probability_at_1780179_seconds",
+              "survival_probability_at_14608619_seconds"
+            ],
+            "interesting_columns": [
+              "ID",
+              "event",
+              "predicted_median_survival_seconds",
+              "survival_probability_at_211583_seconds",
+              "survival_probability_at_1780179_seconds",
+              "survival_probability_at_14608619_seconds"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T7/splits/t7_evaluation.csv",
+          "filename": "t7_evaluation.csv",
+          "suffix": ".csv",
+          "size_bytes": 341170947,
+          "score": 8,
+          "score_reasons": [
+            "+eval",
+            "+evaluation",
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "ID",
+              "Creation time",
+              "Creator",
+              "Creator Detail",
+              "Summary",
+              "Description",
+              "first_resolved_time",
+              "duration_seconds",
+              "event",
+              "endpoint_type",
+              "observation_endpoint",
+              "source_row_width"
+            ],
+            "interesting_columns": [
+              "ID",
+              "Creation time",
+              "first_resolved_time",
+              "event",
+              "source_row_width"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T8/t8_mod029_t7_oof.csv",
+          "filename": "t8_mod029_t7_oof.csv",
+          "suffix": ".csv",
+          "size_bytes": 2943969,
+          "score": 6,
+          "score_reasons": [
+            "+oof",
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "ID",
+              "predicted_median_survival_seconds",
+              "survival_probability_at_211583_seconds",
+              "survival_probability_at_1780179_seconds",
+              "survival_probability_at_14608619_seconds",
+              "prediction_block",
+              "prediction_creation_time",
+              "model_task",
+              "implementation_identifier",
+              "preprocessing_scope",
+              "prediction_boundary"
+            ],
+            "interesting_columns": [
+              "ID",
+              "predicted_median_survival_seconds",
+              "survival_probability_at_211583_seconds",
+              "survival_probability_at_1780179_seconds",
+              "survival_probability_at_14608619_seconds",
+              "prediction_block",
+              "prediction_creation_time",
+              "implementation_identifier",
+              "prediction_boundary"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T7/metrics/t7_mod009_survival_calibration_audit.json",
+          "filename": "t7_mod009_survival_calibration_audit.json",
+          "suffix": ".json",
+          "size_bytes": 11953,
+          "score": 6,
+          "score_reasons": [
+            "+survival",
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "task",
+              "operation",
+              "status",
+              "purpose",
+              "evaluation_rows",
+              "prediction_alignment",
+              "methodological_note",
+              "horizons",
+              "integrity",
+              "artifacts"
+            ],
+            "interesting_keys": [
+              "prediction_alignment"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T7/metrics/t7_mod009_survival_calibration.csv",
+          "filename": "t7_mod009_survival_calibration.csv",
+          "suffix": ".csv",
+          "size_bytes": 3609,
+          "score": 6,
+          "score_reasons": [
+            "+survival",
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "horizon_seconds",
+              "bin",
+              "n",
+              "predicted_survival_mean",
+              "observed_survival_mean",
+              "absolute_calibration_gap",
+              "predicted_min",
+              "predicted_max"
+            ],
+            "interesting_columns": [
+              "predicted_survival_mean",
+              "observed_survival_mean"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T7/metrics/t7_mod007_predictive_survival_audit.json",
+          "filename": "t7_mod007_predictive_survival_audit.json",
+          "suffix": ".json",
+          "size_bytes": 2435,
+          "score": 6,
+          "score_reasons": [
+            "+survival",
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "task",
+              "operation",
+              "status",
+              "model",
+              "feature_boundary",
+              "features",
+              "train_event_count",
+              "train_censor_count",
+              "evaluation_event_count",
+              "evaluation_censor_count",
+              "weibull",
+              "evaluation_metrics",
+              "artifacts"
+            ],
+            "interesting_keys": [
+              "feature_boundary",
+              "features",
+              "evaluation_metrics"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T7/metrics/t7_mod006_survival_baseline_audit.json",
+          "filename": "t7_mod006_survival_baseline_audit.json",
+          "suffix": ".json",
+          "size_bytes": 2226,
+          "score": 6,
+          "score_reasons": [
+            "+survival",
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "task",
+              "operation",
+              "status",
+              "baseline_family",
+              "training_source",
+              "evaluation_source",
+              "train_rows",
+              "evaluation_rows",
+              "train_event_1",
+              "train_event_0",
+              "evaluation_event_1",
+              "evaluation_event_0",
+              "kaplan_meier",
+              "nelson_aalen",
+              "ipcw_brier",
+              "evaluation_integrity",
+              "c_index",
+              "artifacts"
+            ],
+            "interesting_keys": []
+          }
+        },
+        {
+          "path": "modeling/T7/derived/t7_creation_time_modeling_dataset.csv",
+          "filename": "t7_creation_time_modeling_dataset.csv",
+          "suffix": ".csv",
+          "size_bytes": 1009699100,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "ID",
+              "Creation time",
+              "Creator",
+              "Creator Detail",
+              "Summary",
+              "Description",
+              "first_resolved_time",
+              "duration_seconds",
+              "event",
+              "endpoint_type",
+              "observation_endpoint",
+              "source_row_width"
+            ],
+            "interesting_columns": [
+              "ID",
+              "Creation time",
+              "first_resolved_time",
+              "event",
+              "source_row_width"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T7/derived/t7_mod003_creation_features.tmp.csv",
+          "filename": "t7_mod003_creation_features.tmp.csv",
+          "suffix": ".csv",
+          "size_bytes": 974831971,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "ID",
+              "Creation time",
+              "Creator",
+              "Creator Detail",
+              "Summary",
+              "Description"
+            ],
+            "interesting_columns": [
+              "ID",
+              "Creation time"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T7/splits/t7_train.csv",
+          "filename": "t7_train.csv",
+          "suffix": ".csv",
+          "size_bytes": 669042126,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "ID",
+              "Creation time",
+              "Creator",
+              "Creator Detail",
+              "Summary",
+              "Description",
+              "first_resolved_time",
+              "duration_seconds",
+              "event",
+              "endpoint_type",
+              "observation_endpoint",
+              "source_row_width"
+            ],
+            "interesting_columns": [
+              "ID",
+              "Creation time",
+              "first_resolved_time",
+              "event",
+              "source_row_width"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T7/baselines/t7_nelson_aalen_baseline.csv",
+          "filename": "t7_nelson_aalen_baseline.csv",
+          "suffix": ".csv",
+          "size_bytes": 23215601,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "time_seconds",
+              "at_risk",
+              "events",
+              "censored",
+              "hazard_increment",
+              "cumulative_hazard"
+            ],
+            "interesting_columns": [
+              "time_seconds",
+              "events"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T7/derived/t7_mod006_kaplan_meier_curve.csv",
+          "filename": "t7_mod006_kaplan_meier_curve.csv",
+          "suffix": ".csv",
+          "size_bytes": 15537395,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "duration_seconds",
+              "event_count",
+              "censor_count",
+              "at_risk",
+              "kaplan_meier_survival"
+            ],
+            "interesting_columns": [
+              "event_count",
+              "kaplan_meier_survival"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T7/baselines/t7_kaplan_meier_baseline.csv",
+          "filename": "t7_kaplan_meier_baseline.csv",
+          "suffix": ".csv",
+          "size_bytes": 15537381,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "time_seconds",
+              "at_risk",
+              "events",
+              "censored",
+              "survival_probability"
+            ],
+            "interesting_columns": [
+              "time_seconds",
+              "events",
+              "survival_probability"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T7/derived/t7_mod006_nelson_aalen_curve.csv",
+          "filename": "t7_mod006_nelson_aalen_curve.csv",
+          "suffix": ".csv",
+          "size_bytes": 14699233,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "duration_seconds",
+              "event_count",
+              "at_risk",
+              "nelson_aalen_cumulative_hazard"
+            ],
+            "interesting_columns": [
+              "event_count"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T8/mod032/t8_mod032_op005_t7_priority_association.json",
+          "filename": "t8_mod032_op005_t7_priority_association.json",
+          "suffix": ".json",
+          "size_bytes": 29141,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "module",
+              "operation",
+              "purpose",
+              "global_class_conditional_distributions",
+              "global_one_vs_rest_auc",
+              "block_one_vs_rest_auc",
+              "direction_stability",
+              "discrimination_stability",
+              "locked_evaluation_used",
+              "fusion_model_trained",
+              "final_candidate_selected"
+            ],
+            "interesting_keys": [
+              "final_candidate_selected"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T7/metrics/t7_mod004_feature_temporal_split_audit.json",
+          "filename": "t7_mod004_feature_temporal_split_audit.json",
+          "suffix": ".json",
+          "size_bytes": 10306,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "operation",
+              "status",
+              "input_dataset",
+              "raw_archive_accessed",
+              "model_trained",
+              "split_frozen",
+              "rows",
+              "unique_ids",
+              "schema",
+              "target_summary",
+              "feature_audit",
+              "temporal_summary",
+              "temporal_ordering",
+              "diagnostic_chronological_80_20",
+              "leakage_name_audit",
+              "next_decision"
+            ],
+            "interesting_keys": [
+              "unique_ids",
+              "target_summary",
+              "feature_audit"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T7/contracts/t7_modeling_contract.json",
+          "filename": "t7_modeling_contract.json",
+          "suffix": ".json",
+          "size_bytes": 6178,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "task_id",
+              "task_name",
+              "task_family",
+              "status",
+              "operational_problem",
+              "prediction_boundary",
+              "target",
+              "population",
+              "censoring",
+              "feature_boundary",
+              "data_artifact",
+              "modeling_formulation",
+              "evaluation",
+              "split_policy",
+              "model_development_policy",
+              "leakage_controls",
+              "immutable_source_controls",
+              "next_operations",
+              "decision"
+            ],
+            "interesting_keys": [
+              "task_id",
+              "operational_problem",
+              "prediction_boundary",
+              "target",
+              "feature_boundary"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T7/metrics/t7_mod012_final_closure.json",
+          "filename": "t7_mod012_final_closure.json",
+          "suffix": ".json",
+          "size_bytes": 4425,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "task",
+              "operation",
+              "status",
+              "closure_type",
+              "task_definition",
+              "population",
+              "data_boundary",
+              "chronological_split",
+              "survival_baselines",
+              "predictive_models",
+              "final_comparison",
+              "calibration",
+              "supported_role",
+              "limitations",
+              "evidence_chain",
+              "final_project_status",
+              "source_evidence"
+            ],
+            "interesting_keys": [
+              "survival_baselines",
+              "evidence_chain",
+              "source_evidence"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T7/metrics/t7_mod008_predictive_vs_reference_audit.json",
+          "filename": "t7_mod008_predictive_vs_reference_audit.json",
+          "suffix": ".json",
+          "size_bytes": 3629,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "task",
+              "operation",
+              "status",
+              "purpose",
+              "evaluation_population",
+              "alignment",
+              "models_compared",
+              "predictive_model",
+              "horizon_results",
+              "integrity",
+              "source_artifacts",
+              "output_artifacts"
+            ],
+            "interesting_keys": [
+              "output_artifacts"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T7/metrics/t7_mod007_weibull_aft_model.json",
+          "filename": "t7_mod007_weibull_aft_model.json",
+          "suffix": ".json",
+          "size_bytes": 2985,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "model_type",
+              "l2",
+              "shape",
+              "beta",
+              "feature_names",
+              "standardization_mean",
+              "standardization_std",
+              "creator_frequency_mapping_size",
+              "creator_detail_frequency_mapping_size",
+              "optimization"
+            ],
+            "interesting_keys": [
+              "feature_names"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T7/metrics/t7_mod011_final_model_comparison_audit.json",
+          "filename": "t7_mod011_final_model_comparison_audit.json",
+          "suffix": ".json",
+          "size_bytes": 2680,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "task",
+              "operation",
+              "status",
+              "operation_purpose",
+              "raw_archive_access",
+              "model_refitting",
+              "new_feature_engineering",
+              "evaluation_population",
+              "models_compared",
+              "source_schema",
+              "weibull_aft",
+              "lognormal_aft",
+              "kaplan_meier_reference",
+              "comparison",
+              "evidence_statement",
+              "interpretation_boundary",
+              "artifacts"
+            ],
+            "interesting_keys": [
+              "new_feature_engineering",
+              "evidence_statement"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T7/metrics/t7_mod005_split_freeze.json",
+          "filename": "t7_mod005_split_freeze.json",
+          "suffix": ".json",
+          "size_bytes": 1922,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "operation",
+              "rn",
+              "status",
+              "input_dataset",
+              "raw_archive_accessed",
+              "model_trained",
+              "split_frozen",
+              "ordering",
+              "split_rule",
+              "boundary",
+              "population",
+              "event_accounting",
+              "artifacts"
+            ],
+            "interesting_keys": []
+          }
+        },
+        {
+          "path": "modeling/T7/metrics/t7_mod003_feature_construction_audit.json",
+          "filename": "t7_mod003_feature_construction_audit.json",
+          "suffix": ".json",
+          "size_bytes": 1721,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "operation",
+              "status",
+              "task",
+              "target_artifact",
+              "creation_feature_artifact",
+              "final_output",
+              "feature_boundary",
+              "population",
+              "timezone_contract",
+              "feature_audit",
+              "join_audit",
+              "final_audit",
+              "controls",
+              "known_duplicate_id",
+              "elapsed_seconds"
+            ],
+            "interesting_keys": [
+              "target_artifact",
+              "creation_feature_artifact",
+              "final_output",
+              "feature_boundary",
+              "feature_audit",
+              "known_duplicate_id"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T7/metrics/t7_mod013_visualization_manifest.json",
+          "filename": "t7_mod013_visualization_manifest.json",
+          "suffix": ".json",
+          "size_bytes": 1158,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "operation",
+              "purpose",
+              "model_refit",
+              "raw_archive_access",
+              "target_reconstruction",
+              "source_artifacts",
+              "plots",
+              "status"
+            ],
+            "interesting_keys": [
+              "target_reconstruction"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T7/metrics/t7_mod008_predictive_vs_reference.csv",
+          "filename": "t7_mod008_predictive_vs_reference.csv",
+          "suffix": ".csv",
+          "size_bytes": 800,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "horizon_seconds",
+              "km_reference_survival",
+              "predictive_mean_survival",
+              "predictive_std_survival",
+              "predictive_min_survival",
+              "predictive_max_survival",
+              "km_reference_ipcw_brier",
+              "predictive_ipcw_brier",
+              "predictive_minus_reference_brier",
+              "relative_brier_change"
+            ],
+            "interesting_columns": [
+              "km_reference_survival",
+              "predictive_mean_survival",
+              "predictive_std_survival",
+              "predictive_min_survival",
+              "predictive_max_survival"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T7/metrics/t7_mod011_final_model_comparison.csv",
+          "filename": "t7_mod011_final_model_comparison.csv",
+          "suffix": ".csv",
+          "size_bytes": 540,
+          "score": 4,
+          "score_reasons": [
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "columns": [
+              "horizon_seconds",
+              "kaplan_meier_ipcw_brier",
+              "weibull_aft_ipcw_brier",
+              "lognormal_aft_ipcw_brier",
+              "weibull_minus_km",
+              "lognormal_minus_km",
+              "lognormal_minus_weibull"
+            ],
+            "interesting_columns": []
+          }
+        },
+        {
+          "path": "modeling/T7/plots/t7_mod013_survival_calibration_style.png",
+          "filename": "t7_mod013_survival_calibration_style.png",
+          "suffix": ".png",
+          "size_bytes": 127090,
+          "score": 3,
+          "score_reasons": [
+            "+survival",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T7/plots/t7_mod013_kaplan_meier_survival_curve.png",
+          "filename": "t7_mod013_kaplan_meier_survival_curve.png",
+          "suffix": ".png",
+          "size_bytes": 93593,
+          "score": 3,
+          "score_reasons": [
+            "+survival",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T7/plots/t7_mod013_ipcw_brier_comparison.png",
+          "filename": "t7_mod013_ipcw_brier_comparison.png",
+          "suffix": ".png",
+          "size_bytes": 155400,
+          "score": 1,
+          "score_reasons": [
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T7/plots/t7_mod013_nelson_aalen_cumulative_hazard.png",
+          "filename": "t7_mod013_nelson_aalen_cumulative_hazard.png",
+          "suffix": ".png",
+          "size_bytes": 92033,
+          "score": 1,
+          "score_reasons": [
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T7/plots/t7_mod013_cindex_comparison.png",
+          "filename": "t7_mod013_cindex_comparison.png",
+          "suffix": ".png",
+          "size_bytes": 62320,
+          "score": 1,
+          "score_reasons": [
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T7/metrics/t7_mod010_log_normal_aft_model.json",
+          "filename": "t7_mod010_log_normal_aft_model.json",
+          "suffix": ".json",
+          "size_bytes": 2899,
+          "score": 1,
+          "score_reasons": [
+            "-log",
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "model_type",
+              "l2",
+              "sigma",
+              "beta",
+              "feature_names",
+              "standardization_mean",
+              "standardization_std",
+              "optimization"
+            ],
+            "interesting_keys": [
+              "feature_names"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T7/metrics/t7_mod002_feature_source_audit.json",
+          "filename": "t7_mod002_feature_source_audit.json",
+          "suffix": ".json",
+          "size_bytes": 1937,
+          "score": 1,
+          "score_reasons": [
+            "-source",
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "candidate_creation_fields_physically_present",
+              "decision",
+              "feature_boundary",
+              "identity_time_fields",
+              "operation_id",
+              "operation_name",
+              "population",
+              "schema",
+              "source",
+              "status",
+              "target_evidence_fields",
+              "target_mapping",
+              "task_id"
+            ],
+            "interesting_keys": [
+              "candidate_creation_fields_physically_present",
+              "feature_boundary",
+              "identity_time_fields",
+              "operation_id",
+              "target_evidence_fields",
+              "target_mapping",
+              "task_id"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T7/metrics/t7_mod010_log_normal_aft_audit.json",
+          "filename": "t7_mod010_log_normal_aft_audit.json",
+          "suffix": ".json",
+          "size_bytes": 1843,
+          "score": 1,
+          "score_reasons": [
+            "-log",
+            "+artifact_format",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": true,
+            "type": "dict",
+            "keys": [
+              "task",
+              "operation",
+              "status",
+              "purpose",
+              "model",
+              "feature_boundary",
+              "optimization",
+              "evaluation_metrics",
+              "horizons_seconds",
+              "artifacts"
+            ],
+            "interesting_keys": [
+              "feature_boundary",
+              "evaluation_metrics"
+            ]
+          }
+        },
+        {
+          "path": "modeling/T7/scripts/t7_mod008_predictive_vs_reference_evaluation.py",
+          "filename": "t7_mod008_predictive_vs_reference_evaluation.py",
+          "suffix": ".py",
+          "size_bytes": 21910,
+          "score": -6,
+          "score_reasons": [
+            "+eval",
+            "+evaluation",
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T7/scripts/t7_mod007_predictive_survival_baseline.py",
+          "filename": "t7_mod007_predictive_survival_baseline.py",
+          "suffix": ".py",
+          "size_bytes": 28598,
+          "score": -8,
+          "score_reasons": [
+            "+survival",
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T8/scripts/t8_mod028_joint_t2_t7_oof_protocol_audit.py",
+          "filename": "t8_mod028_joint_t2_t7_oof_protocol_audit.py",
+          "suffix": ".py",
+          "size_bytes": 24768,
+          "score": -8,
+          "score_reasons": [
+            "+oof",
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T7/scripts/t7_mod006_survival_baselines.py",
+          "filename": "t7_mod006_survival_baselines.py",
+          "suffix": ".py",
+          "size_bytes": 18039,
+          "score": -8,
+          "score_reasons": [
+            "+survival",
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T8/scripts/t8_mod022_joint_t2_t7_oof_design_audit.py",
+          "filename": "t8_mod022_joint_t2_t7_oof_design_audit.py",
+          "suffix": ".py",
+          "size_bytes": 17605,
+          "score": -8,
+          "score_reasons": [
+            "+oof",
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T8/scripts/t8_mod017_t2_t7_evidence_association.py",
+          "filename": "t8_mod017_t2_t7_evidence_association.py",
+          "suffix": ".py",
+          "size_bytes": 15733,
+          "score": -8,
+          "score_reasons": [
+            "+evidence",
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T8/scripts/t8_mod021_t7_oof_design_audit.py",
+          "filename": "t8_mod021_t7_oof_design_audit.py",
+          "suffix": ".py",
+          "size_bytes": 14017,
+          "score": -8,
+          "score_reasons": [
+            "+oof",
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T7/scripts/t7_mod009_survival_calibration.py",
+          "filename": "t7_mod009_survival_calibration.py",
+          "suffix": ".py",
+          "size_bytes": 12270,
+          "score": -8,
+          "score_reasons": [
+            "+survival",
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T7/scripts/t7_mod003_build_modeling_dataset.py",
+          "filename": "t7_mod003_build_modeling_dataset.py",
+          "suffix": ".py",
+          "size_bytes": 28253,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T7/scripts/t7_mod004_feature_temporal_split_audit.py",
+          "filename": "t7_mod004_feature_temporal_split_audit.py",
+          "suffix": ".py",
+          "size_bytes": 20872,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T7/scripts/t7_mod011_final_model_comparison.py",
+          "filename": "t7_mod011_final_model_comparison.py",
+          "suffix": ".py",
+          "size_bytes": 16006,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T8/scripts/t8_mod020_t7_development_generation_audit.py",
+          "filename": "t8_mod020_t7_development_generation_audit.py",
+          "suffix": ".py",
+          "size_bytes": 14794,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T8/scripts/t8_mod025_t7_frozen_contract_discovery.py",
+          "filename": "t8_mod025_t7_frozen_contract_discovery.py",
+          "suffix": ".py",
+          "size_bytes": 14510,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T8/scripts/t8_mod026_t7_final_model_contract_audit.py",
+          "filename": "t8_mod026_t7_final_model_contract_audit.py",
+          "suffix": ".py",
+          "size_bytes": 14087,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T7/scripts/t7_mod012_final_closure.py",
+          "filename": "t7_mod012_final_closure.py",
+          "suffix": ".py",
+          "size_bytes": 13889,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T7/scripts/t7_mod013_generate_visualizations.py",
+          "filename": "t7_mod013_generate_visualizations.py",
+          "suffix": ".py",
+          "size_bytes": 12553,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T8/scripts/t8_mod032_op005_t7_priority_association_audit.py",
+          "filename": "t8_mod032_op005_t7_priority_association_audit.py",
+          "suffix": ".py",
+          "size_bytes": 11687,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T7/scripts/t7_mod003_duplicate_feature_diagnostic.py",
+          "filename": "t7_mod003_duplicate_feature_diagnostic.py",
+          "suffix": ".py",
+          "size_bytes": 7715,
+          "score": -10,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T7/scripts/t7_mod010_log_normal_aft_baseline.py",
+          "filename": "t7_mod010_log_normal_aft_baseline.py",
+          "suffix": ".py",
+          "size_bytes": 19916,
+          "score": -13,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-log",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T8/scripts/t8_mod027_t7_lognormal_feature_preprocessing_audit.py",
+          "filename": "t8_mod027_t7_lognormal_feature_preprocessing_audit.py",
+          "suffix": ".py",
+          "size_bytes": 13651,
+          "score": -13,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-log",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T7/scripts/t7_mod005_freeze_chronological_split.py",
+          "filename": "t7_mod005_freeze_chronological_split.py",
+          "suffix": ".py",
+          "size_bytes": 12075,
+          "score": -13,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-log",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T7/scripts/t7_mod002_feature_source_audit.py",
+          "filename": "t7_mod002_feature_source_audit.py",
+          "suffix": ".py",
+          "size_bytes": 9694,
+          "score": -13,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-source",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T7/scripts/t7_mod003_identify_mozilla_source.py",
+          "filename": "t7_mod003_identify_mozilla_source.py",
+          "suffix": ".py",
+          "size_bytes": 3892,
+          "score": -13,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-source",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        },
+        {
+          "path": "modeling/T7/scripts/t7_mod003_inspect_source_archives.py",
+          "filename": "t7_mod003_inspect_source_archives.py",
+          "suffix": ".py",
+          "size_bytes": 1968,
+          "score": -13,
+          "score_reasons": [
+            "-script",
+            "-scripts",
+            "-source",
+            "-executable_source",
+            "+modeling"
+          ],
+          "content_inspection": {
+            "readable": false,
+            "inspection": "header inspection not applicable"
+          }
+        }
+      ]
+    }
+  },
+  "resolution_rules": {
+    "authoritative_definition": "An artifact is not declared authoritative solely by filename. It must be traceable to the frozen task contract and its generation/evaluation provenance.",
+    "prediction_preference": "Prefer actual inference/OoF prediction or evidence artifacts over training data, targets, scripts, logs, and documentation.",
+    "boundary": "Creation",
+    "post_creation_information": false,
+    "semantic_conversion": false,
+    "synthetic_fusion_output": false
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "operation": "FMP-06 OP-020",
+  "status": "PASS",
+  "read_only": true,
+  "training_performed": false,
+  "fitting_performed": false,
+  "prediction_performed": false,
+  "evaluation_performed": false,
+  "locked_test_used": false,
+  "artifact_modified": false,
+  "source_evidence": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op011d_frozen_t2_t3_artifact_binding.json",
+  "t2": {
+    "artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/models/t2_class_weighted_tfidf_logreg.joblib",
+    "exact_reference_in_op011d": true,
+    "exists": true,
+    "size_bytes": 14317753,
+    "readable_nonempty": true,
+    "status": "PASS"
+  },
+  "t3": {
+    "artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib",
+    "exact_reference_in_op011d": true,
+    "exists": true,
+    "size_bytes": 17315561,
+    "readable_nonempty": true,
+    "status": "PASS"
+  },
+  "interpretation": "T2 and T3 are reconciled using the authoritative OP-011D exact artifact-binding evidence rather than assuming a particular closure-file path."
+}

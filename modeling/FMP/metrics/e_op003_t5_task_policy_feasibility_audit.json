@@ -1,0 +1,207 @@
+{
+  "operation": "E-OP-003",
+  "title": "T5 Task-Specific Policy Feasibility Audit",
+  "status": "PASS",
+  "read_only": true,
+  "model_modified": false,
+  "retraining_performed": false,
+  "threshold_selection_performed": false,
+  "threshold_optimization_performed": false,
+  "locked_test_reused_for_selection": false,
+  "source": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod011_final_closure.json",
+  "keyword_presence": {
+    "calibrat": true,
+    "probability": true,
+    "threshold": true,
+    "validation": true,
+    "development": false,
+    "locked": true,
+    "test": false,
+    "precision": true,
+    "recall": true,
+    "f1": true,
+    "brier": true,
+    "log loss": false,
+    "average precision": false,
+    "roc": true,
+    "human": true,
+    "review": true,
+    "automation": false,
+    "operational": true,
+    "policy": false
+  },
+  "relevant_fields": [
+    {
+      "path": "selected_pipeline.calibration",
+      "value": "Sigmoid"
+    },
+    {
+      "path": "selected_pipeline.probability_output",
+      "value": "p_duplicate"
+    },
+    {
+      "path": "selected_pipeline.threshold",
+      "value": {
+        "value": 0.5,
+        "status": "descriptive_only",
+        "optimized": false
+      }
+    },
+    {
+      "path": "validation_evidence",
+      "value": {
+        "average_precision": 0.16377630768463408,
+        "roc_auc": 0.8969287312131792,
+        "log_loss": 0.028358865729015772,
+        "brier_score": 0.005860260617751882
+      }
+    },
+    {
+      "path": "validation_evidence.average_precision",
+      "value": 0.16377630768463408
+    },
+    {
+      "path": "validation_evidence.roc_auc",
+      "value": 0.8969287312131792
+    },
+    {
+      "path": "validation_evidence.brier_score",
+      "value": 0.005860260617751882
+    },
+    {
+      "path": "locked_evaluation_evidence",
+      "value": {
+        "average_precision": 0.12583280543036882,
+        "roc_auc": 0.6781415853279965,
+        "log_loss": 0.27250018754800265,
+        "brier_score": 0.059906950851585296,
+        "threshold_0_5": {
+          "precision": 0.4782608695652174,
+          "recall": 0.00834597875569044,
+          "f1": 0.01640566741237882,
+          "positive_predictions": 23
+        }
+      }
+    },
+    {
+      "path": "locked_evaluation_evidence.average_precision",
+      "value": 0.12583280543036882
+    },
+    {
+      "path": "locked_evaluation_evidence.roc_auc",
+      "value": 0.6781415853279965
+    },
+    {
+      "path": "locked_evaluation_evidence.brier_score",
+      "value": 0.059906950851585296
+    },
+    {
+      "path": "locked_evaluation_evidence.threshold_0_5",
+      "value": {
+        "precision": 0.4782608695652174,
+        "recall": 0.00834597875569044,
+        "f1": 0.01640566741237882,
+        "positive_predictions": 23
+      }
+    },
+    {
+      "path": "locked_evaluation_evidence.threshold_0_5.precision",
+      "value": 0.4782608695652174
+    },
+    {
+      "path": "locked_evaluation_evidence.threshold_0_5.recall",
+      "value": 0.00834597875569044
+    },
+    {
+      "path": "locked_evaluation_evidence.threshold_0_5.f1",
+      "value": 0.01640566741237882
+    },
+    {
+      "path": "generalization_evidence.average_precision",
+      "value": {
+        "validation": 0.16377630768463408,
+        "locked_evaluation": 0.12583280543036882,
+        "absolute_change": -0.037943502254265266,
+        "relative_change_percent": -23.167882333340224
+      }
+    },
+    {
+      "path": "generalization_evidence.average_precision.validation",
+      "value": 0.16377630768463408
+    },
+    {
+      "path": "generalization_evidence.average_precision.locked_evaluation",
+      "value": 0.12583280543036882
+    },
+    {
+      "path": "generalization_evidence.roc_auc",
+      "value": {
+        "validation": 0.8969287312131792,
+        "locked_evaluation": 0.6781415853279965,
+        "absolute_change": -0.21878714588518267,
+        "relative_change_percent": -24.392924239281843
+      }
+    },
+    {
+      "path": "generalization_evidence.roc_auc.validation",
+      "value": 0.8969287312131792
+    },
+    {
+      "path": "generalization_evidence.roc_auc.locked_evaluation",
+      "value": 0.6781415853279965
+    },
+    {
+      "path": "generalization_evidence.log_loss.validation",
+      "value": 0.028358865729015772
+    },
+    {
+      "path": "generalization_evidence.log_loss.locked_evaluation",
+      "value": 0.27250018754800265
+    },
+    {
+      "path": "generalization_evidence.brier_score",
+      "value": {
+        "validation": 0.005860260617751882,
+        "locked_evaluation": 0.059906950851585296,
+        "absolute_change": 0.05404669023383341,
+        "relative_change_percent": 922.2574516586405
+      }
+    },
+    {
+      "path": "generalization_evidence.brier_score.validation",
+      "value": 0.005860260617751882
+    },
+    {
+      "path": "generalization_evidence.brier_score.locked_evaluation",
+      "value": 0.059906950851585296
+    },
+    {
+      "path": "controls.calibrator_refit",
+      "value": false
+    },
+    {
+      "path": "controls.threshold_optimization",
+      "value": false
+    },
+    {
+      "path": "controls.evaluation_used_for_calibration",
+      "value": false
+    }
+  ],
+  "evidence_checks": {
+    "calibration_evidence": true,
+    "descriptive_threshold_evidence": false,
+    "operational_threshold_evidence": true,
+    "human_review_evidence": false,
+    "automation_evidence": false,
+    "locked_test_evidence": true
+  },
+  "feasibility": "TASK_SPECIFIC_POLICY_NOT_ESTABLISHED",
+  "interpretation": {
+    "calibration_does_not_equal_policy_validation": true,
+    "descriptive_threshold_does_not_equal_operational_threshold": true,
+    "this_operation_does_not_select_a_threshold": true,
+    "this_operation_does_not_authorize_automation": true,
+    "this_operation_does_not_authorize_human_review_boundary": true
+  }
+}

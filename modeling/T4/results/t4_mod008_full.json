@@ -1,0 +1,55 @@
+{
+  "experiment": "T4-MOD-008",
+  "status": "COMPLETE",
+  "representation": {
+    "type": "word_plus_character_tfidf",
+    "word_features": 20000,
+    "character_features": 20000,
+    "total_features": 40000,
+    "word_ngrams": [
+      1,
+      1
+    ],
+    "character_ngrams": [
+      3,
+      5
+    ]
+  },
+  "population": {
+    "train_rows": 142501,
+    "evaluation_rows": 35626,
+    "covered_rows": 32773,
+    "unseen_rows": 2853,
+    "training_candidates": 4139
+  },
+  "retrieval": {
+    "overall": {
+      "hit_at_1": 0.21335541458485377,
+      "hit_at_3": 0.30320552405546514,
+      "hit_at_5": 0.3367765115365183,
+      "hit_at_10": 0.3821085723909504,
+      "hit_at_20": 0.4351035760399708
+    },
+    "covered": {
+      "hit_at_1": 0.2319287218136881,
+      "hit_at_3": 0.3296005858481067,
+      "hit_at_5": 0.36609404082628993,
+      "hit_at_10": 0.41537241021572635,
+      "hit_at_20": 0.472980807371922
+    },
+    "retrieved_true_assignee_rows": 15501,
+    "retrieval_coverage_at_20": 0.472980807371922,
+    "runtime_seconds": 4296.120690107346
+  },
+  "comparison": {
+    "mod007_full_hit_at_20": 0.45745,
+    "mod008_screen_hit_at_20": 0.584
+  },
+  "controls": {
+    "raw_mozilla_accessed": false,
+    "target_reconstructed": false,
+    "test_used": false,
+    "future_features_used": false,
+    "split_changed": false
+  }
+}

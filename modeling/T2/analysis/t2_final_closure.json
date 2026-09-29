@@ -1,0 +1,150 @@
+{
+  "operation": "T2-MOD-022",
+  "operation_name": "Final T2 Task Suitability & Closure",
+  "task": "T2",
+  "task_name": "Priority Prediction",
+  "dataset": {
+    "name": "Mozilla CORE",
+    "eligible_population": 29498,
+    "target": "first valid P1-P5 Priority assigned strictly after Creation and within following 24 hours",
+    "target_field": "target_priority",
+    "semantic_target": "priority",
+    "classes": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5"
+    ],
+    "class_counts": {
+      "P1": 7325,
+      "P2": 9156,
+      "P3": 11015,
+      "P4": 784,
+      "P5": 1218
+    }
+  },
+  "prediction_boundary": "Creation",
+  "admitted_features": [
+    "Summary",
+    "Description"
+  ],
+  "excluded_features": [
+    "post-Creation administrative information",
+    "current mutable state",
+    "final-state backfill",
+    "target-derived information",
+    "future information",
+    "fabricated historical information"
+  ],
+  "final_model": {
+    "operation": "T2-MOD-007",
+    "name": "TF-IDF + Class-Weighted Logistic Regression",
+    "selection_basis": "validation macro-F1 with minority-class performance considered",
+    "final_model_selected": true
+  },
+  "final_test": {
+    "rows": 4425,
+    "accuracy": 0.4201129943502825,
+    "macro_f1": 0.26495957519937885,
+    "weighted_f1": 0.42540851125365187,
+    "per_class": {
+      "P1": {
+        "precision": 0.2560728744939271,
+        "recall": 0.4048,
+        "f1": 0.3137011779293242,
+        "support": 625
+      },
+      "P2": {
+        "precision": 0.4161988773055333,
+        "recall": 0.33679428942245293,
+        "f1": 0.37230989956958394,
+        "support": 1541
+      },
+      "P3": {
+        "precision": 0.5434782608695652,
+        "recall": 0.5175734232065479,
+        "f1": 0.530209617755857,
+        "support": 2077
+      },
+      "P4": {
+        "precision": 0.03125,
+        "recall": 0.06060606060606061,
+        "f1": 0.041237113402061855,
+        "support": 33
+      },
+      "P5": {
+        "precision": 0.06756756756756757,
+        "recall": 0.06711409395973154,
+        "f1": 0.06734006734006734,
+        "support": 149
+      }
+    }
+  },
+  "generalization": {
+    "validation_accuracy": 0.446102,
+    "test_accuracy": 0.4201129943502825,
+    "accuracy_change_pp": -2.598900564971751,
+    "validation_macro_f1": 0.31045,
+    "test_macro_f1": 0.26495957519937885,
+    "macro_f1_change_pp": -4.549042480062115,
+    "validation_weighted_f1": 0.443565,
+    "test_weighted_f1": 0.42540851125365187,
+    "weighted_f1_change_pp": -1.815648874634812
+  },
+  "system_role": {
+    "decision": "SECONDARY_DECISION_SUPPORT_SIGNAL",
+    "description": "T2 is suitable as a secondary, confidence-aware priority prediction signal within the integrated IT Ticket Intelligence system. It should assist triage and downstream evidence fusion, but should not independently determine final ticket priority."
+  },
+  "suitability_decision": "SUPPORTED_WITH_LIMITATIONS",
+  "strengths": [
+    "The T2 target has an explicit temporal definition: first valid P1-P5 Priority assigned after Creation and within the following 24 hours.",
+    "The prediction boundary is Creation, preserving the intended incoming-ticket decision boundary.",
+    "The modeling features are restricted to Creation-time Summary and Description.",
+    "A chronological train/validation/test split was used.",
+    "The locked test set was evaluated only after model selection.",
+    "The final evaluation was performed without retraining or refitting.",
+    "The model provides measurable signal for priority prediction, especially for the more represented classes."
+  ],
+  "limitations": [
+    "Overall five-class predictive performance is limited: final test accuracy is 42.0113% and macro-F1 is 26.4960%.",
+    "Minority-class performance is very weak, with P4 F1=4.1237% and P5 F1=6.7340%.",
+    "Performance decreases from validation to the later locked test period.",
+    "The dominant error paths involve confusion among P1, P2, and P3.",
+    "The evidence does not justify treating the model as a fully autonomous priority assignment system.",
+    "A universal automated confidence threshold has not been empirically established."
+  ],
+  "supported_claims": [
+    "A leakage-controlled five-class priority prediction experiment can be performed on Mozilla CORE.",
+    "Creation-time Summary and Description contain predictive signal for the subsequent 24-hour priority outcome.",
+    "The selected model generalizes to a later chronological test period, although with degraded performance.",
+    "Priority prediction is substantially harder for P4 and P5 than for the more represented priority classes.",
+    "T2 can contribute one evidence channel to a larger confidence-aware triage system."
+  ],
+  "unsupported_claims": [
+    "T2 does not support claiming highly accurate autonomous five-class priority assignment.",
+    "T2 does not support claiming reliable prediction of P4 or P5.",
+    "T2 does not support automatic action at a fixed confidence threshold without further empirical calibration and policy evaluation.",
+    "T2 does not establish that predicted priority should replace human priority judgment."
+  ],
+  "integrity": {
+    "training_in_closure": false,
+    "refitting_in_closure": false,
+    "test_tuning_in_closure": false,
+    "dataset_modified": false,
+    "new_labels_created": false,
+    "future_features_added": false,
+    "target_derived_features_added": false,
+    "advanced_branch_reopened": false
+  },
+  "evidence_dependencies": {
+    "model_contract": "READY_FOR_CONTROLLED_MODELING",
+    "baseline_comparison": "COMPLETE",
+    "advanced_branch": "ADVANCED_MODEL_BRANCH_CLOSED",
+    "final_model_selection": "FINAL_MODEL_SELECTED",
+    "generalization_analysis": "GENERALIZATION_ANALYSIS_COMPLETE"
+  },
+  "final_conclusion": "Mozilla CORE is suitable for T2 priority-prediction modeling under the frozen Creation-time target and feature boundary. The final TF-IDF + Class-Weighted Logistic Regression model demonstrates measurable but limited predictive performance on the locked chronological test period. Because minority-class performance is weak and generalization degrades on the later period, T2 is closed as a supported secondary decision-support signal rather than an autonomous priority assignment component.",
+  "closure_status": "CLOSED",
+  "next_system_use": "Retain the T2 prediction as one evidence channel for later confidence-aware fusion and human-review policy development. Do not independently automate final priority assignment from T2."
+}

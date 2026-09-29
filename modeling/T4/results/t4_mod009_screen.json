@@ -1,0 +1,42 @@
+{
+  "experiment": "T4-MOD-009",
+  "status": "COMPLETE",
+  "method": "BM25",
+  "population": {
+    "train_rows": 142501,
+    "evaluation_rows": 35626,
+    "covered_evaluation_rows": 32773,
+    "screen_sample": 2000,
+    "training_candidates": 4139
+  },
+  "bm25": {
+    "max_features": 50000,
+    "min_df": 2,
+    "k1": 1.5,
+    "b": 0.75,
+    "vocabulary_size": 50000
+  },
+  "retrieval": {
+    "top_k": 20,
+    "metrics": {
+      "hit_at_1": 0.2175,
+      "hit_at_3": 0.321,
+      "hit_at_5": 0.3615,
+      "hit_at_10": 0.4135,
+      "hit_at_20": 0.466
+    },
+    "runtime_seconds": 13.609824419021606
+  },
+  "sampling": {
+    "seed": 42,
+    "deterministic": true,
+    "covered_only": true
+  },
+  "controls": {
+    "raw_mozilla_accessed": false,
+    "target_reconstructed": false,
+    "test_used": false,
+    "future_features_used": false,
+    "split_changed": false
+  }
+}

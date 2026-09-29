@@ -1,0 +1,196 @@
+{
+  "operation": "T8 / MOD-036 / OP-007",
+  "status": "PASS",
+  "purpose": "Validate the inference interfaces and provenance of the identified T1/T3 model artifacts without training or generating predictions.",
+  "model_interfaces": {
+    "T1_svm": {
+      "name": "T1_svm",
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/baselines/t1_it_support_svm.joblib",
+      "exists": false,
+      "status": "MISSING"
+    },
+    "T3_final": {
+      "name": "T3_final",
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib",
+      "exists": true,
+      "status": "LOADED",
+      "python_type": "dict",
+      "module": "builtins",
+      "has_predict": false,
+      "has_predict_proba": false,
+      "has_decision_function": false,
+      "pipeline_steps": []
+    }
+  },
+  "provenance": {
+    "T1_baseline_report": {
+      "status": "FOUND",
+      "selected_fields": {
+        "status": "BASELINE_COMPLETE",
+        "model": {
+          "type": "TFIDF_LOGISTIC_REGRESSION",
+          "random_state": 42,
+          "class_weight": "balanced",
+          "ngram_range": [
+            1,
+            2
+          ],
+          "min_df": 2,
+          "max_df": 0.98,
+          "sublinear_tf": true
+        },
+        "probability_output": {
+          "available": true,
+          "classes": [
+            "Active Directory",
+            "Computer-Services",
+            "EOL",
+            "Fileservice",
+            "O365",
+            "Software",
+            "Support general"
+          ],
+          "probability_rows": 446
+        },
+        "features": {
+          "text": true,
+          "id": false,
+          "category_truth": false,
+          "source_partition": false,
+          "source_row_x": false,
+          "source_row_y": false,
+          "normalized_text": false,
+          "modeling_split": false
+        }
+      }
+    },
+    "T1_svm_report": {
+      "status": "FOUND",
+      "selected_fields": {
+        "status": "BASELINE_COMPLETE",
+        "task": {
+          "task_id": "T1",
+          "dataset": "IT Support",
+          "target": "category_truth",
+          "prediction_boundary": "incoming_ticket_text"
+        },
+        "model": {
+          "name": "TFIDF_LINEAR_SVC",
+          "tfidf": {
+            "ngram_range": [
+              1,
+              2
+            ],
+            "min_df": 2,
+            "max_df": 0.98,
+            "sublinear_tf": true
+          },
+          "classifier": {
+            "class_weight": "balanced",
+            "random_state": 42
+          }
+        },
+        "artifacts": {
+          "model_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/baselines/t1_it_support_svm.joblib",
+          "report_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/baselines/t1_it_support_svm_report.json"
+        }
+      }
+    },
+    "T1_char_svm_report": {
+      "status": "FOUND",
+      "selected_fields": {
+        "status": "COMPLETE",
+        "model": "TFIDF_WORD_CHAR_LINEAR_SVC",
+        "model_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/baselines/t1_it_support_char_svm.joblib"
+      }
+    },
+    "T3_final_closure": {
+      "status": "FOUND",
+      "selected_fields": {
+        "status": "CLOSED",
+        "task": "T3_SEVERITY_PREDICTION",
+        "final_candidate": {
+          "model_id": "T3-MOD-008",
+          "selection_primary_metric": "macro_f1",
+          "validation_metrics": {
+            "accuracy": 0.5845222654561176,
+            "macro_f1": 0.3480174180281372,
+            "weighted_f1": 0.6148412546447116
+          },
+          "locked_test_metrics": {
+            "accuracy": 0.5540423692174665,
+            "macro_f1": 0.3036817032407433,
+            "weighted_f1": 0.6030788055367481
+          }
+        },
+        "system_role": "SECONDARY_DECISION_SUPPORT_SIGNAL",
+        "recommended_use": "Use T3 severity prediction as a secondary decision-support signal for downstream triage or human review. Do not treat the prediction as an autonomous or authoritative severity assignment."
+      }
+    },
+    "T3_final_metrics": {
+      "status": "FOUND",
+      "selected_fields": {
+        "task": "T3_SEVERITY_PREDICTION",
+        "model_id": "T3-MOD-008",
+        "model_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib"
+      }
+    },
+    "T3_model_contract": {
+      "status": "FOUND",
+      "selected_fields": {
+        "status": "READY_FOR_CONTROLLED_MODELING",
+        "task": "T3",
+        "prediction_boundary": {
+          "name": "Creation",
+          "type": "Creation-time cutoff",
+          "post_creation_information": "FORBIDDEN",
+          "current_state_backfill": "FORBIDDEN"
+        },
+        "target": {
+          "name": "first operational post-Creation Severity",
+          "classes": [
+            "S1",
+            "S2",
+            "S3",
+            "S4"
+          ],
+          "selection_rule": "First post-Creation History event containing a Severity change; use the first Severity change within that event.",
+          "admissible_added_values": [
+            "S1",
+            "S2",
+            "S3",
+            "S4"
+          ],
+          "excluded_target_values": [
+            "S3 S3"
+          ],
+          "historical_severity_mapping": "FORBIDDEN",
+          "current_final_severity": "FORBIDDEN_AS_CREATION_TARGET"
+        },
+        "features": {
+          "admitted": [
+            "Summary",
+            "Description"
+          ],
+          "boundary": "Creation-time ticket content",
+          "forbidden": [
+            "post-Creation History",
+            "target-event information",
+            "current/final Severity",
+            "current mutable state",
+            "future information",
+            "target-derived features",
+            "historical Severity relabeling"
+          ]
+        }
+      }
+    }
+  },
+  "decision": {
+    "T1_model_interface_validated": false,
+    "T3_model_interface_validated": false,
+    "T3_final_model_explicitly_identified": true,
+    "prediction_generation_performed": false,
+    "training_performed": false
+  }
+}

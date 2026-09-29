@@ -1,0 +1,131 @@
+{
+  "experiment": "T4 R1 vs MOD-007 Comparative Analysis",
+  "status": "COMPLETE",
+  "overall": {
+    "R1": {
+      "top1_accuracy": 0.28105877729747936,
+      "top3_accuracy": 0.36352663784876216,
+      "top5_accuracy": 0.40192555998428114,
+      "top10_accuracy": 0.4500645595913097,
+      "macro_f1": 0.017470540759012658,
+      "weighted_f1": 0.29970512009180017
+    },
+    "MOD-007": {
+      "hit_at_1": 0.2579015325885589,
+      "hit_at_3": 0.3231909279739516,
+      "hit_at_5": 0.3529725481389996,
+      "hit_at_10": 0.39308370291360245,
+      "mrr": 0.30084030982893156,
+      "ndcg_at_5": 0.3082849828792247,
+      "ndcg_at_10": 0.32120802022972433
+    },
+    "MOD-007_minus_R1": {
+      "hit_at_1": -0.023157244708920444,
+      "hit_at_3": -0.040335709874810555,
+      "hit_at_5": -0.04895301184528156,
+      "hit_at_10": -0.05698085667770725
+    }
+  },
+  "covered_targets": {
+    "R1": {
+      "top1_accuracy": 0.3055258902145058,
+      "top3_accuracy": 0.3951728557043908,
+      "top5_accuracy": 0.4369145333048546,
+      "top10_accuracy": 0.48924419491654714
+    },
+    "MOD-007": {
+      "hit_at_1": 0.2803527293808928,
+      "hit_at_3": 0.3513257864705703,
+      "hit_at_5": 0.38369999694870777,
+      "hit_at_10": 0.42730296280474783,
+      "mrr": 0.32702947175923824,
+      "ndcg_at_5": 0.3351222286655252,
+      "ndcg_at_10": 0.3491702599305575
+    },
+    "MOD-007_minus_R1": {
+      "hit_at_1": -0.02517316083361304,
+      "hit_at_3": -0.043847069233820535,
+      "hit_at_5": -0.05321453635614681,
+      "hit_at_10": -0.061941232111799305
+    }
+  },
+  "open_world": {
+    "evaluation_rows": 35626,
+    "covered_rows": 32773,
+    "unseen_rows": 2853,
+    "unseen_rate": 0.08008196261157581,
+    "R1_unseen_top1_accuracy": 0.0,
+    "MOD007_unseen_rows": 2853,
+    "MOD007_unseen_rate": 0.08008196261157581,
+    "MOD007_unseen_hit_at_1": 0.0
+  },
+  "long_tail": {
+    "1": {
+      "evaluation_rows": 983,
+      "R1_top1": 0.002034587995930824,
+      "MOD007_hit_at_1": 0.0,
+      "MOD007_hit_at_5": 0.029501525940996948,
+      "MOD007_hit_at_10": 0.044760935910478125,
+      "MOD007_minus_R1_top1": -0.002034587995930824
+    },
+    "2-5": {
+      "evaluation_rows": 2965,
+      "R1_top1": 0.01045531197301855,
+      "MOD007_hit_at_1": 0.006745362563237774,
+      "MOD007_hit_at_5": 0.059359190556492414,
+      "MOD007_hit_at_10": 0.09005059021922428,
+      "MOD007_minus_R1_top1": -0.003709949409780776
+    },
+    "6-10": {
+      "evaluation_rows": 1145,
+      "R1_top1": 0.01834061135371179,
+      "MOD007_hit_at_1": 0.023580786026200874,
+      "MOD007_hit_at_5": 0.07336244541484715,
+      "MOD007_hit_at_10": 0.11441048034934498,
+      "MOD007_minus_R1_top1": 0.0052401746724890855
+    },
+    "11-20": {
+      "evaluation_rows": 1338,
+      "R1_top1": 0.13602391629297458,
+      "MOD007_hit_at_1": 0.10239162929745889,
+      "MOD007_hit_at_5": 0.20254110612855009,
+      "MOD007_hit_at_10": 0.23094170403587444,
+      "MOD007_minus_R1_top1": -0.033632286995515695
+    },
+    "21-50": {
+      "evaluation_rows": 2752,
+      "R1_top1": 0.14861918604651161,
+      "MOD007_hit_at_1": 0.14970930232558138,
+      "MOD007_hit_at_5": 0.2376453488372093,
+      "MOD007_hit_at_10": 0.2914244186046512,
+      "MOD007_minus_R1_top1": 0.0010901162790697694
+    },
+    "51-100": {
+      "evaluation_rows": 4270,
+      "R1_top1": 0.30515222482435594,
+      "MOD007_hit_at_1": 0.3009367681498829,
+      "MOD007_hit_at_5": 0.45081967213114754,
+      "MOD007_hit_at_10": 0.4932084309133489,
+      "MOD007_minus_R1_top1": -0.004215456674473039
+    },
+    "101+": {
+      "evaluation_rows": 19320,
+      "R1_top1": 0.4174430641821946,
+      "MOD007_hit_at_1": 0.37820910973084887,
+      "MOD007_hit_at_5": 0.48840579710144927,
+      "MOD007_hit_at_10": 0.535455486542443,
+      "MOD007_minus_R1_top1": -0.039233954451345754
+    }
+  },
+  "interpretation": [
+    "Both experiments use the same frozen chronological training/evaluation population.",
+    "R1 achieves higher Top-K accuracy than the current MOD-007 historical-similarity ranking formulation at K=1, 3, 5, and 10.",
+    "MOD-007 provides ranking-native MRR and NDCG metrics, which R1 does not provide.",
+    "Both approaches show strong historical-support dependence: performance increases substantially as the target assignee has more training-period examples.",
+    "Singleton and low-support assignees remain difficult for both approaches, while high-support assignees account for substantially stronger performance.",
+    "The current MOD-007 result does not justify selecting the current similarity-plus-assignee-aggregation formulation over R1 on Hit@K.",
+    "The evidence does justify investigating a modified ranking scoring or aggregation strategy rather than repeating the same MOD-007 formulation.",
+    "Unseen evaluation targets remain genuine open-world cases and are not converted into ordinary negatives.",
+    "No conclusion about operational assignee eligibility or universal routing correctness is made from these historical evaluation results."
+  ]
+}

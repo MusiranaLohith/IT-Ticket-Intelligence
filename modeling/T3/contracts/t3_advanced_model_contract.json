@@ -1,0 +1,98 @@
+{
+  "task": "T3_SEVERITY_PREDICTION",
+  "operation": "T3-MOD-019",
+  "advanced_branch_status": "JUSTIFIED",
+  "candidate_model": {
+    "primary": "DistilBERT",
+    "alternatives": [
+      "MiniLM",
+      "BERT"
+    ],
+    "selection_status": "PRIMARY_CANDIDATE_DEFINED",
+    "reason": "Use a pretrained transformer encoder to test whether contextual language representations improve severity separation beyond classical TF-IDF models."
+  },
+  "data_contract": {
+    "dataset": "Mozilla_CORE",
+    "supervised_population": 30839,
+    "target": "target_severity",
+    "target_labels": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+    ],
+    "prediction_boundary": "Creation",
+    "features": [
+      "Summary",
+      "Description"
+    ],
+    "feature_rule": "Only Creation-time Summary and Description may be provided to the model."
+  },
+  "split_contract": {
+    "train_rows": 21587,
+    "validation_rows": 4626,
+    "test_rows": 4626,
+    "split_type": "chronological",
+    "ordering": "Creation time with deterministic ID tie-break",
+    "test_status": "LOCKED"
+  },
+  "training_contract": {
+    "pretrained_model": true,
+    "fine_tuning": true,
+    "training_from_scratch": false,
+    "class_weighting": false,
+    "data_augmentation": false,
+    "feature_engineering": false,
+    "post_creation_features": false,
+    "target_derived_features": false
+  },
+  "evaluation_contract": {
+    "primary_metric": "macro_f1",
+    "secondary_metrics": [
+      "accuracy",
+      "weighted_f1"
+    ],
+    "per_class_metrics_required": true,
+    "labels": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+    ],
+    "s1_support_caution": true,
+    "test_use_for_candidate_selection": false
+  },
+  "comparison_contract": {
+    "classical_reference": "T3-MOD-008",
+    "comparison_basis": "Validation macro F1 under the frozen chronological evaluation design.",
+    "no_unsupported_acceptance_threshold": true
+  },
+  "environment_contract": {
+    "python": "3.14.7",
+    "cuda_available": false,
+    "transformers_installed": false,
+    "pytorch_installed": false,
+    "tokenizers_installed": false,
+    "datasets_installed": false,
+    "installation_status": "NOT_STARTED",
+    "installation_must_be_verified_before_training": true
+  },
+  "resource_constraints": {
+    "gpu": false,
+    "large_dependency_installation": "Requires explicit environment verification before proceeding.",
+    "training_resource_assessment_required": true,
+    "fallback": "If the primary advanced model cannot be executed reliably in the available environment, record the advanced branch as operationally infeasible rather than silently substituting another methodology."
+  },
+  "forbidden": [
+    "Locked test access before final candidate selection",
+    "Post-Creation information",
+    "Current mutable fields",
+    "Target-derived features",
+    "Raw Mozilla archive rescanning",
+    "Dataset modification",
+    "Training from scratch",
+    "Unsupported acceptance threshold",
+    "Claiming improvement before measurement"
+  ],
+  "status": "ADVANCED_EXPERIMENT_CONTRACT_FROZEN"
+}

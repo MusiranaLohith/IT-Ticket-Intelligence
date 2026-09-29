@@ -1,0 +1,26 @@
+{
+  "operation": "T3-MOD-027",
+  "status": "LOCKED_TEST_EVALUATION_COMPLETE",
+  "selected_model": "T3-MOD-008",
+  "selection_basis": {
+    "primary_metric": "macro_f1",
+    "validation_macro_f1": 0.348017
+  },
+  "test_metrics": {
+    "accuracy": 0.5540423692174665,
+    "macro_f1": 0.3036817032407433,
+    "weighted_f1": 0.6030788055367481
+  },
+  "test_rows": 4626,
+  "controls": {
+    "model_retrained": false,
+    "model_refit": false,
+    "test_used_for_selection": false,
+    "raw_mozilla_accessed": false,
+    "dataset_modified": false
+  },
+  "artifacts": {
+    "metrics": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/metrics/t3_final_test_metrics.json",
+    "model": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib"
+  }
+}

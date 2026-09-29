@@ -1,0 +1,105 @@
+{
+  "operation": "FMP-06 OP-019",
+  "status": "REQUIRES_REVIEW",
+  "read_only": true,
+  "training_performed": false,
+  "fitting_performed": false,
+  "prediction_performed": false,
+  "evaluation_performed": false,
+  "locked_test_used": false,
+  "artifact_modified": false,
+  "reconciled_task_count": 5,
+  "task_matrix": {
+    "T1": {
+      "status": "PATHS_PRESENT",
+      "filesystem_paths_complete": true,
+      "prior_binding_evidence_present": true,
+      "native_role": "ticket classification",
+      "interface": "single ticket text -> class prediction",
+      "existing_paths": [
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/analysis/t1_final_closure.json"
+      ],
+      "missing_paths": []
+    },
+    "T2": {
+      "status": "REQUIRES_REVIEW",
+      "filesystem_paths_complete": false,
+      "prior_binding_evidence_present": true,
+      "native_role": "priority classification",
+      "interface": "ticket text -> priority decision-support output",
+      "existing_paths": [
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/models/t2_class_weighted_tfidf_logreg.joblib"
+      ],
+      "missing_paths": [
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/metrics/t2_final_closure.json"
+      ]
+    },
+    "T3": {
+      "status": "REQUIRES_REVIEW",
+      "filesystem_paths_complete": false,
+      "prior_binding_evidence_present": true,
+      "native_role": "severity classification",
+      "interface": "ticket text -> severity decision-support output",
+      "existing_paths": [
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib"
+      ],
+      "missing_paths": [
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/metrics/t3_final_closure.json"
+      ]
+    },
+    "T4": {
+      "status": "PATHS_PRESENT",
+      "filesystem_paths_complete": true,
+      "prior_binding_evidence_present": true,
+      "native_role": "historical assignee retrieval",
+      "interface": "ticket/query -> ranked historical assignee candidates",
+      "existing_paths": [
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/t4_mod013_closure.json",
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_tfidf.joblib",
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_neighbors.joblib"
+      ],
+      "missing_paths": []
+    },
+    "T5": {
+      "status": "PATHS_PRESENT",
+      "filesystem_paths_complete": true,
+      "prior_binding_evidence_present": true,
+      "native_role": "duplicate relationship detection",
+      "interface": "ticket pair -> duplicate score",
+      "existing_paths": [
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod011_final_closure.json",
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod005_tfidf.joblib",
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod005_logreg.joblib"
+      ],
+      "missing_paths": []
+    },
+    "T6": {
+      "status": "PATHS_PRESENT",
+      "filesystem_paths_complete": true,
+      "prior_binding_evidence_present": true,
+      "native_role": "similar historical ticket retrieval",
+      "interface": "query + candidate corpus -> ranked candidates",
+      "existing_paths": [
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_final_closure.json",
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/models/t6_mod004_tfidf_vectorizer.joblib",
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod009_hybrid_query_rankings.csv"
+      ],
+      "missing_paths": []
+    },
+    "T7": {
+      "status": "RECONCILED",
+      "filesystem_paths_complete": true,
+      "prior_binding_evidence_present": true,
+      "native_role": "time-to-resolution survival modeling",
+      "interface": "ticket features -> Log-Normal AFT survival prediction",
+      "existing_paths": [
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod012_final_closure.json",
+        "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod010_log_normal_aft_model.json"
+      ],
+      "missing_paths": []
+    }
+  },
+  "t7_runtime_reconciliation": "PASS",
+  "boundary_statement": "T1\u2013T7 native task interfaces are reconciled to their frozen artifacts or authoritative implementations for downstream integration. This operation does not assert that all tasks share a common prediction type or common probability semantics.",
+  "t8_handoff_boundary": "Downstream integration must preserve each task's native output semantics and must not convert ranking, retrieval, survival, or duplicate scores into universal probabilities or a universal target without separate empirical evidence."
+}

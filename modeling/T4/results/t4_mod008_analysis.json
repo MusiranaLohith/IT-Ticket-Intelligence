@@ -1,0 +1,99 @@
+{
+  "experiment": "T4-MOD-008",
+  "status": "COMPLETE",
+  "population": {
+    "train_rows": 142501,
+    "evaluation_rows": 35626,
+    "covered_rows": 32773,
+    "unseen_rows": 2853,
+    "training_candidates": 4139
+  },
+  "overall_comparison": {
+    "r1": {
+      "top1": 0.28105877729747936,
+      "top3": 0.36352663784876216,
+      "top5": 0.40192555998428114,
+      "top10": 0.4500645595913097,
+      "top20": null
+    },
+    "mod007": {
+      "top1": 0.2579015325885589,
+      "top3": 0.3231909279739516,
+      "top5": 0.3529725481389996,
+      "top10": 0.39308370291360245,
+      "top20": null
+    },
+    "mod008": {
+      "top1": 0.21335541458485377,
+      "top3": 0.30320552405546514,
+      "top5": 0.3367765115365183,
+      "top10": 0.3821085723909504,
+      "top20": 0.4351035760399708
+    }
+  },
+  "covered_comparison": {
+    "r1": {
+      "top1": 0.3055258902145058,
+      "top3": null,
+      "top5": null,
+      "top10": null,
+      "top20": null
+    },
+    "mod007": {
+      "top1": 0.2803527293808928,
+      "top3": 0.3513257864705703,
+      "top5": 0.38369999694870777,
+      "top10": 0.42730296280474783,
+      "top20": null
+    },
+    "mod008": {
+      "hit_at_1": 0.2319287218136881,
+      "hit_at_3": 0.3296005858481067,
+      "hit_at_5": 0.36609404082628993,
+      "hit_at_10": 0.41537241021572635,
+      "hit_at_20": 0.472980807371922
+    }
+  },
+  "mod008_minus_mod007": {
+    "overall_comparable": {
+      "hit_at_1": -0.04454611800370514,
+      "hit_at_3": -0.019985403918486466,
+      "hit_at_5": -0.016196036602481312,
+      "hit_at_10": -0.010975130522652032
+    },
+    "covered_comparable": {
+      "hit_at_1": -0.04842400756720469,
+      "hit_at_3": -0.02172520062246358,
+      "hit_at_5": -0.017605956122417832,
+      "hit_at_10": -0.011930552589021481
+    }
+  },
+  "mod007_ranking_metrics": {
+    "mrr": 0.30084030982893156,
+    "ndcg_at_5": 0.3082849828792247,
+    "ndcg_at_10": 0.32120802022972433
+  },
+  "mod008_retrieval": {
+    "covered_hit_at_20": 0.472980807371922,
+    "true_assignee_retrieval_coverage_at_20": 0.472980807371922,
+    "retrieved_true_assignee_rows": 15501
+  },
+  "screening_vs_full": {
+    "screen_hit_at_20": 0.584,
+    "full_covered_hit_at_20": 0.472980807371922,
+    "difference": -0.11101919262807797
+  },
+  "interpretation": {
+    "mod008_top1_lower_than_mod007": true,
+    "mod008_top10_lower_than_mod007": true,
+    "mod007_hit20_directly_comparable": false,
+    "final_assignee_ranking_evaluation_required": true
+  },
+  "controls": {
+    "raw_mozilla_accessed": false,
+    "target_reconstructed": false,
+    "test_used": false,
+    "future_features_used": false,
+    "split_changed": false
+  }
+}

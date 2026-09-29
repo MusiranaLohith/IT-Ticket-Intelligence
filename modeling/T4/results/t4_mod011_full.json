@@ -1,0 +1,133 @@
+{
+  "experiment": "T4-MOD-011",
+  "status": "COMPLETE",
+  "method": "BM25 historical lexical retrieval",
+  "population": {
+    "train_rows": 142501,
+    "evaluation_rows": 35626,
+    "covered_rows": 32773,
+    "unseen_rows": 2853,
+    "training_candidates": 4139
+  },
+  "bm25": {
+    "max_features": 50000,
+    "min_df": 2,
+    "k1": 1.5,
+    "b": 0.75,
+    "vocabulary_size": 50000,
+    "mean_document_length": 155.20636346411604
+  },
+  "retrieval": {
+    "top_k": 20,
+    "batch_size": 100,
+    "overall": {
+      "hit_at_1": 0.20785381462976477,
+      "hit_at_3": 0.29863021388873295,
+      "hit_at_5": 0.33366080952113625,
+      "hit_at_10": 0.38151911525290516,
+      "hit_at_20": 0.4354404086902824,
+      "mrr": 0.26639209233350747,
+      "ndcg_at_5": 0.27564189731620736,
+      "ndcg_at_10": 0.2911261380955127
+    },
+    "covered": {
+      "hit_at_1": 0.2259481890580661,
+      "hit_at_3": 0.3246269795258292,
+      "hit_at_5": 0.36270710645958565,
+      "hit_at_10": 0.41473163884905256,
+      "hit_at_20": 0.47334696243859276,
+      "mrr": 0.2895824209402111,
+      "ndcg_at_5": 0.2996374525916823,
+      "ndcg_at_10": 0.31646964866782823
+    },
+    "unseen": {
+      "rows": 2853,
+      "hit_at_1": 0.0,
+      "hit_at_3": 0.0,
+      "hit_at_5": 0.0,
+      "hit_at_10": 0.0,
+      "hit_at_20": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_5": 0.0,
+      "ndcg_at_10": 0.0
+    },
+    "runtime_seconds": 280.99131655693054
+  },
+  "historical_support_stratification": {
+    "1": {
+      "rows": 983,
+      "hit_at_1": 0.012207527975584944,
+      "hit_at_5": 0.03153611393692777,
+      "hit_at_10": 0.04374364191251272,
+      "hit_at_20": 0.052899287894201424
+    },
+    "2-5": {
+      "rows": 2965,
+      "hit_at_1": 0.02900505902192243,
+      "hit_at_5": 0.08161888701517707,
+      "hit_at_10": 0.10016863406408094,
+      "hit_at_20": 0.12006745362563238
+    },
+    "6-10": {
+      "rows": 1145,
+      "hit_at_1": 0.03318777292576419,
+      "hit_at_5": 0.07510917030567686,
+      "hit_at_10": 0.0890829694323144,
+      "hit_at_20": 0.1205240174672489
+    },
+    "11-20": {
+      "rows": 1338,
+      "hit_at_1": 0.18684603886397608,
+      "hit_at_5": 0.27802690582959644,
+      "hit_at_10": 0.3101644245142003,
+      "hit_at_20": 0.35201793721973096
+    },
+    "21-50": {
+      "rows": 2752,
+      "hit_at_1": 0.13299418604651161,
+      "hit_at_5": 0.25617732558139533,
+      "hit_at_10": 0.30559593023255816,
+      "hit_at_20": 0.36191860465116277
+    },
+    "51-100": {
+      "rows": 4270,
+      "hit_at_1": 0.2306791569086651,
+      "hit_at_5": 0.41124121779859485,
+      "hit_at_10": 0.4711943793911007,
+      "hit_at_20": 0.5182669789227167
+    },
+    "101+": {
+      "rows": 19320,
+      "hit_at_1": 0.2933747412008282,
+      "hit_at_5": 0.4500517598343685,
+      "hit_at_10": 0.5114906832298136,
+      "hit_at_20": 0.5842132505175983
+    }
+  },
+  "sampling": {
+    "full_evaluation": true,
+    "deterministic": true
+  },
+  "controls": {
+    "raw_mozilla_accessed": false,
+    "target_reconstructed": false,
+    "test_used": false,
+    "future_features_used": false,
+    "split_changed": false,
+    "evaluation_used_only_for_scoring": true,
+    "training_tickets_used_for_retrieval": true,
+    "evaluation_tickets_used_for_retrieval": false,
+    "target_side_fields_used": false,
+    "unseen_targets_removed": false
+  },
+  "artifacts": {
+    "retrieval_checkpoint": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod011_checkpoints/t4_mod011_retrieval.npz",
+    "results": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/t4_mod011_full.json"
+  },
+  "runtime": {
+    "vectorization_seconds": 19.46135663986206,
+    "document_weighting_seconds": 0.28318166732788086,
+    "retrieval_seconds": 280.99131655693054,
+    "total_seconds": 305.04641366004944
+  }
+}

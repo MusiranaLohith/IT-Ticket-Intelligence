@@ -1,0 +1,319 @@
+{
+  "operation": "H-OP-008",
+  "operation_name": "FMP-06 Validated Runtime Reconciliation",
+  "status": "PASS",
+  "purpose": "Reconcile H-OP-006 source candidates against the exact scripts associated with previously validated FMP-06 frozen-runtime executions.",
+  "validated_operations": {
+    "T1": [
+      "OP-018R5"
+    ],
+    "T2": [
+      "OP-018R3"
+    ],
+    "T3": [
+      "OP-018R3"
+    ],
+    "T4": [
+      "OP-018R6",
+      "OP-018R7",
+      "OP-018R8",
+      "OP-018R9",
+      "OP-018R10",
+      "OP-018R11",
+      "OP-018R12",
+      "OP-018R13",
+      "OP-018R14",
+      "OP-018R16"
+    ],
+    "T5": [
+      "OP-018R3"
+    ],
+    "T6": [
+      "OP-018R17",
+      "OP-018R18",
+      "OP-018R19",
+      "OP-018R20",
+      "OP-018R21"
+    ],
+    "T7": [
+      "OP-018R22C",
+      "OP-018R23",
+      "OP-018R24",
+      "OP-018R25",
+      "OP-018R26",
+      "OP-018R27",
+      "OP-018R28"
+    ]
+  },
+  "fmp06_binding_file": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op019r1_final_t1_t7_runtime_binding_reconciliation.json",
+  "fmp06_closure_file": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_final_phase_closure.json",
+  "task_results": {
+    "T1": {
+      "validated_operations": [
+        "OP-018R5"
+      ],
+      "operation_results": [
+        {
+          "operation": "OP-018R5",
+          "binding_records_found": 0,
+          "source_paths": []
+        }
+      ],
+      "validated_script_count": 0,
+      "validated_scripts": [],
+      "h006_candidate_matches": [],
+      "validated_script_function_inventory": [],
+      "deduplicated_candidate_count": 0
+    },
+    "T2": {
+      "validated_operations": [
+        "OP-018R3"
+      ],
+      "operation_results": [
+        {
+          "operation": "OP-018R3",
+          "binding_records_found": 0,
+          "source_paths": []
+        }
+      ],
+      "validated_script_count": 0,
+      "validated_scripts": [],
+      "h006_candidate_matches": [],
+      "validated_script_function_inventory": [],
+      "deduplicated_candidate_count": 0
+    },
+    "T3": {
+      "validated_operations": [
+        "OP-018R3"
+      ],
+      "operation_results": [
+        {
+          "operation": "OP-018R3",
+          "binding_records_found": 0,
+          "source_paths": []
+        }
+      ],
+      "validated_script_count": 0,
+      "validated_scripts": [],
+      "h006_candidate_matches": [],
+      "validated_script_function_inventory": [],
+      "deduplicated_candidate_count": 0
+    },
+    "T4": {
+      "validated_operations": [
+        "OP-018R6",
+        "OP-018R7",
+        "OP-018R8",
+        "OP-018R9",
+        "OP-018R10",
+        "OP-018R11",
+        "OP-018R12",
+        "OP-018R13",
+        "OP-018R14",
+        "OP-018R16"
+      ],
+      "operation_results": [
+        {
+          "operation": "OP-018R6",
+          "binding_records_found": 0,
+          "source_paths": []
+        },
+        {
+          "operation": "OP-018R7",
+          "binding_records_found": 0,
+          "source_paths": []
+        },
+        {
+          "operation": "OP-018R8",
+          "binding_records_found": 0,
+          "source_paths": []
+        },
+        {
+          "operation": "OP-018R9",
+          "binding_records_found": 0,
+          "source_paths": []
+        },
+        {
+          "operation": "OP-018R10",
+          "binding_records_found": 0,
+          "source_paths": []
+        },
+        {
+          "operation": "OP-018R11",
+          "binding_records_found": 0,
+          "source_paths": []
+        },
+        {
+          "operation": "OP-018R12",
+          "binding_records_found": 0,
+          "source_paths": []
+        },
+        {
+          "operation": "OP-018R13",
+          "binding_records_found": 0,
+          "source_paths": []
+        },
+        {
+          "operation": "OP-018R14",
+          "binding_records_found": 0,
+          "source_paths": []
+        },
+        {
+          "operation": "OP-018R16",
+          "binding_records_found": 0,
+          "source_paths": []
+        }
+      ],
+      "validated_script_count": 0,
+      "validated_scripts": [],
+      "h006_candidate_matches": [],
+      "validated_script_function_inventory": [],
+      "deduplicated_candidate_count": 0
+    },
+    "T5": {
+      "validated_operations": [
+        "OP-018R3"
+      ],
+      "operation_results": [
+        {
+          "operation": "OP-018R3",
+          "binding_records_found": 0,
+          "source_paths": []
+        }
+      ],
+      "validated_script_count": 0,
+      "validated_scripts": [],
+      "h006_candidate_matches": [],
+      "validated_script_function_inventory": [],
+      "deduplicated_candidate_count": 0
+    },
+    "T6": {
+      "validated_operations": [
+        "OP-018R17",
+        "OP-018R18",
+        "OP-018R19",
+        "OP-018R20",
+        "OP-018R21"
+      ],
+      "operation_results": [
+        {
+          "operation": "OP-018R17",
+          "binding_records_found": 0,
+          "source_paths": []
+        },
+        {
+          "operation": "OP-018R18",
+          "binding_records_found": 0,
+          "source_paths": []
+        },
+        {
+          "operation": "OP-018R19",
+          "binding_records_found": 0,
+          "source_paths": []
+        },
+        {
+          "operation": "OP-018R20",
+          "binding_records_found": 0,
+          "source_paths": []
+        },
+        {
+          "operation": "OP-018R21",
+          "binding_records_found": 0,
+          "source_paths": []
+        }
+      ],
+      "validated_script_count": 0,
+      "validated_scripts": [],
+      "h006_candidate_matches": [],
+      "validated_script_function_inventory": [],
+      "deduplicated_candidate_count": 0
+    },
+    "T7": {
+      "validated_operations": [
+        "OP-018R22C",
+        "OP-018R23",
+        "OP-018R24",
+        "OP-018R25",
+        "OP-018R26",
+        "OP-018R27",
+        "OP-018R28"
+      ],
+      "operation_results": [
+        {
+          "operation": "OP-018R22C",
+          "binding_records_found": 0,
+          "source_paths": []
+        },
+        {
+          "operation": "OP-018R23",
+          "binding_records_found": 0,
+          "source_paths": []
+        },
+        {
+          "operation": "OP-018R24",
+          "binding_records_found": 0,
+          "source_paths": []
+        },
+        {
+          "operation": "OP-018R25",
+          "binding_records_found": 0,
+          "source_paths": []
+        },
+        {
+          "operation": "OP-018R26",
+          "binding_records_found": 0,
+          "source_paths": []
+        },
+        {
+          "operation": "OP-018R27",
+          "binding_records_found": 0,
+          "source_paths": []
+        },
+        {
+          "operation": "OP-018R28",
+          "binding_records_found": 0,
+          "source_paths": []
+        }
+      ],
+      "validated_script_count": 0,
+      "validated_scripts": [],
+      "h006_candidate_matches": [],
+      "validated_script_function_inventory": [],
+      "deduplicated_candidate_count": 0
+    }
+  },
+  "final_candidates": {
+    "T1": {
+      "status": "NO_H006_CANDIDATE_IN_VALIDATED_SCRIPT"
+    },
+    "T2": {
+      "status": "NO_H006_CANDIDATE_IN_VALIDATED_SCRIPT"
+    },
+    "T3": {
+      "status": "NO_H006_CANDIDATE_IN_VALIDATED_SCRIPT"
+    },
+    "T4": {
+      "status": "NO_H006_CANDIDATE_IN_VALIDATED_SCRIPT"
+    },
+    "T5": {
+      "status": "NO_H006_CANDIDATE_IN_VALIDATED_SCRIPT"
+    },
+    "T6": {
+      "status": "NO_H006_CANDIDATE_IN_VALIDATED_SCRIPT"
+    },
+    "T7": {
+      "status": "NO_H006_CANDIDATE_IN_VALIDATED_SCRIPT"
+    }
+  },
+  "controls": {
+    "model_execution": false,
+    "model_retraining": false,
+    "model_selection": false,
+    "artifact_modification": false,
+    "threshold_optimization": false,
+    "locked_test_reuse": false
+  },
+  "interpretation_boundary": "FMP-06 validated runtime evidence is treated as stronger evidence than generic source heuristics. This operation does not itself execute a model or declare a production orchestrator.",
+  "next_operation": "H-OP-009 \u2014 inspect the exact validated runtime source paths and reconcile callable roles.",
+  "output": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/h_op008_fmp06_validated_runtime_reconciliation.json"
+}

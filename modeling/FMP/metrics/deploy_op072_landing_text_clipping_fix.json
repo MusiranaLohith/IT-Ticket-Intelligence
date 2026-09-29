@@ -1,0 +1,43 @@
+{
+  "operation": "DEPLOY-OP-072",
+  "title": "Landing Text Clipping Fix",
+  "status": "PASS",
+  "purpose": "Remove visual clipping from the landing-page hero title and feature-card text without changing navigation, application logic, Research View structure, APIs, or runtime.",
+  "modified_files": [
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/style.css"
+  ],
+  "unmodified_files": [
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/index.html",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/app.js",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/backend/app.py",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/deployment/runtime/ticket_pipeline.py",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/deployment/runtime/ticket_explanation.py"
+  ],
+  "backup": "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/style.css.before-deploy-op072",
+  "checks": {
+    "OP072_MARKER": true,
+    "HERO_OVERFLOW_VISIBLE": true,
+    "HERO_LINE_HEIGHT": true,
+    "HERO_SPAN_PROTECTED": true,
+    "RESEARCH_STRIP_AUTO_HEIGHT": true,
+    "FEATURE_OVERFLOW_VISIBLE": true,
+    "FEATURE_MIN_HEIGHT": true,
+    "FEATURE_HEADING_LINE_HEIGHT": true,
+    "FEATURE_BODY_LINE_HEIGHT": true,
+    "INDEX_UNCHANGED": true,
+    "APP_UNCHANGED": true,
+    "STYLE_CHANGED": true,
+    "NO_BACKEND_CHANGE": true,
+    "NO_FROZEN_RUNTIME_CHANGE": true
+  },
+  "hashes_before": {
+    "style.css": "4daf4d1d56f0b61ab3586166e05a45887062e0f5c3dde7631ca611901d1926e6",
+    "index.html": "152795b3897e9c3444ca63fe3c01cfb81adbda83675ea8ed01109b2a6df77a6b",
+    "app.js": "87ce98e9a925c8e0d436c2a0ca96c033a0ce39df61218431a1a8fd4063cacdf3"
+  },
+  "hashes_after": {
+    "style.css": "c3de4b686df3fed8669d93d85c1475c4c39e19e6901bf6694d6bd9cd256b84a5",
+    "index.html": "152795b3897e9c3444ca63fe3c01cfb81adbda83675ea8ed01109b2a6df77a6b",
+    "app.js": "87ce98e9a925c8e0d436c2a0ca96c033a0ce39df61218431a1a8fd4063cacdf3"
+  }
+}

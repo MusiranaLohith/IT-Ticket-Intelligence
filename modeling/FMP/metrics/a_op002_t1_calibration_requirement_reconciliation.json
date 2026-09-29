@@ -1,0 +1,331 @@
+{
+  "operation": "A-OP-002",
+  "title": "T1 Calibration Requirement Reconciliation",
+  "status": "PASS",
+  "read_only": true,
+  "model_modified": false,
+  "retraining_performed": false,
+  "threshold_optimization_performed": false,
+  "locked_test_reused": false,
+  "files_expected": 4,
+  "files_readable": 4,
+  "missing_files": [],
+  "t1_closure": {
+    "probability_language_present": true,
+    "calibration_language_present": true
+  },
+  "downstream_requirement_checks": {
+    "explicit_t1_probability_requirement": false,
+    "explicit_t1_confidence_requirement": false,
+    "explicit_t1_threshold_requirement": false
+  },
+  "decision": "NO_DOWNSTREAM_T1_CALIBRATION_REQUIREMENT_IDENTIFIED",
+  "calibration_not_performed": true,
+  "calibration_authorization": "NOT_AUTHORIZED_BY_THIS_OPERATION",
+  "evidence": {
+    "t1_final_closure": {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/analysis/t1_final_closure.json",
+      "readable": true,
+      "relevant_fields": [
+        {
+          "path": "final_decision",
+          "value": {
+            "task": "T1",
+            "status": "CLOSED",
+            "selected_model": "TF-IDF word + character features -> LinearSVC",
+            "model_artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/baselines/t1_it_support_char_svm.joblib",
+            "locked_evaluation_records": 446,
+            "locked_evaluation": {
+              "accuracy": 0.946188,
+              "macro_f1": 0.899133,
+              "weighted_f1": 0.943482
+            },
+            "development_only_score_feasibility": {
+              "records": 1783,
+              "accuracy": 0.998878,
+              "decision_function_available": true,
+              "calibration_fitted": false,
+              "review_threshold_selected": false
+            },
+            "calibration": {
+              "required_by_t1_contract": false,
+              "performed": false,
+              "probability_output_available": false
+            },
+            "review_boundary": {
+              "required_by_t1_contract": false,
+              "validated": false,
+              "selected": false
+            },
+            "limitations": [
+              "Locked evaluation contains substantial repeated normalized-text structure.",
+              "Locked evaluation accuracy is not treated as proof of broad independent-ticket generalization.",
+              "Decision scores are not calibrated probabilities.",
+              "No autonomous routing or decision claim is made from T1 classification alone.",
+              "Artifact path/provenance cleanup remains part of FMP-02."
+            ],
+            "next_phase": "FMP-02 T2-T7 artifact hardening",
+            "frozen": true
+          }
+        },
+        {
+          "path": "final_decision.task",
+          "value": "T1"
+        },
+        {
+          "path": "final_decision.status",
+          "value": "CLOSED"
+        },
+        {
+          "path": "final_decision.selected_model",
+          "value": "TF-IDF word + character features -> LinearSVC"
+        },
+        {
+          "path": "final_decision.model_artifact",
+          "value": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/baselines/t1_it_support_char_svm.joblib"
+        },
+        {
+          "path": "final_decision.locked_evaluation_records",
+          "value": 446
+        },
+        {
+          "path": "final_decision.locked_evaluation",
+          "value": {
+            "accuracy": 0.946188,
+            "macro_f1": 0.899133,
+            "weighted_f1": 0.943482
+          }
+        },
+        {
+          "path": "final_decision.locked_evaluation.accuracy",
+          "value": 0.946188
+        },
+        {
+          "path": "final_decision.locked_evaluation.macro_f1",
+          "value": 0.899133
+        },
+        {
+          "path": "final_decision.locked_evaluation.weighted_f1",
+          "value": 0.943482
+        },
+        {
+          "path": "final_decision.development_only_score_feasibility",
+          "value": {
+            "records": 1783,
+            "accuracy": 0.998878,
+            "decision_function_available": true,
+            "calibration_fitted": false,
+            "review_threshold_selected": false
+          }
+        },
+        {
+          "path": "final_decision.development_only_score_feasibility.records",
+          "value": 1783
+        },
+        {
+          "path": "final_decision.development_only_score_feasibility.accuracy",
+          "value": 0.998878
+        },
+        {
+          "path": "final_decision.development_only_score_feasibility.decision_function_available",
+          "value": true
+        },
+        {
+          "path": "final_decision.development_only_score_feasibility.calibration_fitted",
+          "value": false
+        },
+        {
+          "path": "final_decision.development_only_score_feasibility.review_threshold_selected",
+          "value": false
+        },
+        {
+          "path": "final_decision.calibration",
+          "value": {
+            "required_by_t1_contract": false,
+            "performed": false,
+            "probability_output_available": false
+          }
+        },
+        {
+          "path": "final_decision.calibration.required_by_t1_contract",
+          "value": false
+        },
+        {
+          "path": "final_decision.calibration.performed",
+          "value": false
+        },
+        {
+          "path": "final_decision.calibration.probability_output_available",
+          "value": false
+        },
+        {
+          "path": "final_decision.review_boundary",
+          "value": {
+            "required_by_t1_contract": false,
+            "validated": false,
+            "selected": false
+          }
+        },
+        {
+          "path": "final_decision.review_boundary.required_by_t1_contract",
+          "value": false
+        },
+        {
+          "path": "final_decision.review_boundary.validated",
+          "value": false
+        },
+        {
+          "path": "final_decision.review_boundary.selected",
+          "value": false
+        },
+        {
+          "path": "final_decision.limitations",
+          "value": [
+            "Locked evaluation contains substantial repeated normalized-text structure.",
+            "Locked evaluation accuracy is not treated as proof of broad independent-ticket generalization.",
+            "Decision scores are not calibrated probabilities.",
+            "No autonomous routing or decision claim is made from T1 classification alone.",
+            "Artifact path/provenance cleanup remains part of FMP-02."
+          ]
+        },
+        {
+          "path": "final_decision.limitations[0]",
+          "value": "Locked evaluation contains substantial repeated normalized-text structure."
+        },
+        {
+          "path": "final_decision.limitations[1]",
+          "value": "Locked evaluation accuracy is not treated as proof of broad independent-ticket generalization."
+        },
+        {
+          "path": "final_decision.limitations[2]",
+          "value": "Decision scores are not calibrated probabilities."
+        },
+        {
+          "path": "final_decision.limitations[3]",
+          "value": "No autonomous routing or decision claim is made from T1 classification alone."
+        },
+        {
+          "path": "final_decision.limitations[4]",
+          "value": "Artifact path/provenance cleanup remains part of FMP-02."
+        },
+        {
+          "path": "final_decision.next_phase",
+          "value": "FMP-02 T2-T7 artifact hardening"
+        },
+        {
+          "path": "final_decision.frozen",
+          "value": true
+        }
+      ]
+    },
+    "t1_model_comparison": {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/analysis/t1_it_support_3model_compare.json",
+      "readable": true,
+      "relevant_fields": []
+    },
+    "t8_final_validation": {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/mod036/op026/t8_mod036_op026_decision_engine_validation.json",
+      "readable": true,
+      "relevant_fields": [
+        {
+          "path": "population.decision_engine_union",
+          "value": 119895
+        },
+        {
+          "path": "closure_criteria.decision_population_composed",
+          "value": true
+        },
+        {
+          "path": "closure_criteria.arbitrary_probability_fusion_avoided",
+          "value": true
+        },
+        {
+          "path": "architecture.blind_probability_averaging",
+          "value": false
+        },
+        {
+          "path": "artifacts.decision_predictions",
+          "value": "modeling/T8/mod036/op025/t8_mod036_op025_decision_engine_predictions.csv"
+        }
+      ]
+    },
+    "t9_final_closure": {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op015_final_integrated_closure.json",
+      "readable": true,
+      "relevant_fields": [
+        {
+          "path": "contract_validation.universal_score",
+          "value": "NOT_CREATED"
+        },
+        {
+          "path": "semantic_lock_validation.cross_task_probability_comparability",
+          "value": "PROHIBITED"
+        },
+        {
+          "path": "semantic_lock_validation.universal_confidence",
+          "value": "PROHIBITED"
+        },
+        {
+          "path": "task_evidence.T4.probability_calibration",
+          "value": "NOT_ESTABLISHED"
+        },
+        {
+          "path": "task_evidence.T6.binary_probability_calibration",
+          "value": "NOT_ESTABLISHED"
+        },
+        {
+          "path": "task_evidence.T7.formal_survival_calibration",
+          "value": "NOT_ESTABLISHED"
+        },
+        {
+          "path": "task_evidence.T7.formal_calibration_uncertainty",
+          "value": "NOT_ESTABLISHED"
+        },
+        {
+          "path": "OP014_boundary.universal_confidence",
+          "value": "NOT_CREATED"
+        },
+        {
+          "path": "controls.new_probability_generated",
+          "value": false
+        },
+        {
+          "path": "controls.new_calibration_fitted",
+          "value": false
+        },
+        {
+          "path": "controls.synthetic_probability_created",
+          "value": false
+        },
+        {
+          "path": "controls.cross_task_probability_aggregation",
+          "value": false
+        },
+        {
+          "path": "controls.cross_task_probability_comparison",
+          "value": false
+        },
+        {
+          "path": "controls.universal_confidence_created",
+          "value": false
+        },
+        {
+          "path": "controls.universal_risk_score_created",
+          "value": false
+        },
+        {
+          "path": "controls.threshold_selected",
+          "value": false
+        },
+        {
+          "path": "closure.calibration_boundary",
+          "value": "T5 has empirical calibration improvement evidence without formal method selection. T2 and T3 lack accepted native probability artifacts. T4 and T6 remain native ranking/retrieval quantities. T7 remains a survival quantity with censoring-aware uncertainty."
+        },
+        {
+          "path": "closure.universal_confidence",
+          "value": "NOT_ESTABLISHED_AND_NOT_CREATED"
+        }
+      ]
+    }
+  }
+}

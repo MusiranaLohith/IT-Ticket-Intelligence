@@ -1,0 +1,996 @@
+{
+  "operation": "FMP-06 OP-015",
+  "operation_type": "READ_ONLY_RUNTIME_SOURCE_SEMANTIC_VALIDATION",
+  "project_root": "/home/whiteblack/Documents/IT-Ticket-Triage-System",
+  "tasks": {
+    "T1": {
+      "candidate_count": 2,
+      "sources": [
+        {
+          "file": "modeling/T1/derived/t1_dataset.csv",
+          "exists": true,
+          "readable": true,
+          "columns": [
+            "id",
+            "text",
+            "category_truth",
+            "source_partition",
+            "source_row_x",
+            "source_row_y"
+          ],
+          "row_count": 2229,
+          "semantic_columns": {
+            "id": [
+              "id"
+            ],
+            "text": [
+              "text"
+            ],
+            "assignee": [],
+            "priority": [],
+            "severity": [],
+            "duplicate_label": [
+              "category_truth",
+              "source_row_y"
+            ],
+            "resolution": [],
+            "time": [],
+            "event": [],
+            "query": [],
+            "candidate": []
+          },
+          "sample_rows": [
+            {
+              "id": "10",
+              "text": "Initiated by [COMPANY][LOCATION]- Vulnerable .Net 4.5 Version on SS-E03F49869B22",
+              "category_truth": "Software",
+              "source_row_y": "367"
+            },
+            {
+              "id": "12",
+              "text": "Windows user [NAME] can use users deplewsk office 365 without password",
+              "category_truth": "O365",
+              "source_row_y": "1108"
+            },
+            {
+              "id": "16",
+              "text": "urgent- cant receive mails from [EMAIL] into mailbox [EMAIL]we have to receive orders from our webshop [URL] in mailbox [EMAIL] from mailaddress [EMAIL]. unfort",
+              "category_truth": "Support general",
+              "source_row_y": "1435"
+            }
+          ],
+          "classification": {
+            "source_role": "TICKET_TEXT_SOURCE_CANDIDATE",
+            "positive_evidence": [
+              "ticket text present",
+              "ticket identifier present"
+            ],
+            "warnings": [
+              "source also contains outcome/label-like columns"
+            ]
+          }
+        },
+        {
+          "file": "modeling/T1/derived/t1_vscode_dataset.csv",
+          "exists": true,
+          "readable": true,
+          "columns": [
+            "issue_id",
+            "summary",
+            "created",
+            "description_clean",
+            "issue_type",
+            "target_representation",
+            "source_row"
+          ],
+          "row_count": null,
+          "semantic_columns": {
+            "id": [
+              "issue_id"
+            ],
+            "text": [
+              "description_clean",
+              "summary"
+            ],
+            "assignee": [],
+            "priority": [],
+            "severity": [],
+            "duplicate_label": [
+              "issue_type",
+              "summary",
+              "target_representation"
+            ],
+            "resolution": [],
+            "time": [],
+            "event": [],
+            "query": [],
+            "candidate": []
+          },
+          "sample_rows": [
+            {
+              "issue_id": "223582",
+              "description_clean": "> > > 1. Open Help > Report Issue> > The dropdowns are too large....also make sure `\"issueReporter.experimental.auxWindow\": true`the issue with the dropdown see",
+              "summary": "issue reporter dropdown is too large",
+              "issue_type": "Bug",
+              "target_representation": "Type"
+            },
+            {
+              "issue_id": "223508",
+              "description_clean": "1) Create a codespace in GH.com2) when the codespace is created open it in insiders using the status line remote menu-> I'm asked to reload the window to apply ",
+              "summary": "Endless loop for applying setting",
+              "issue_type": "Bug",
+              "target_representation": "Type"
+            },
+            {
+              "issue_id": "223506",
+              "description_clean": "1) Open Help > Report IssueVS Code version: Code - Insiders 1.92.0-insider (7ed4cdc56d037146b2c4c890f09e78b2ba14b49d, 2024-07-24T07:50:18.385Z)OS version: Darwi",
+              "summary": "Layout issues with the issue reporter",
+              "issue_type": "Bug",
+              "target_representation": "Type"
+            }
+          ],
+          "error": "field larger than field limit (131072)",
+          "classification": {
+            "source_role": "TICKET_TEXT_SOURCE_CANDIDATE",
+            "positive_evidence": [
+              "ticket text present",
+              "ticket identifier present"
+            ],
+            "warnings": [
+              "source also contains outcome/label-like columns"
+            ]
+          }
+        }
+      ]
+    },
+    "T2": {
+      "candidate_count": 1,
+      "sources": [
+        {
+          "file": "modeling/T2/derived/t2_features.csv",
+          "exists": true,
+          "readable": true,
+          "columns": [
+            "ID",
+            "Creation time",
+            "Summary",
+            "Description",
+            "target_priority"
+          ],
+          "row_count": 29498,
+          "semantic_columns": {
+            "id": [
+              "ID"
+            ],
+            "text": [
+              "Description",
+              "Summary"
+            ],
+            "assignee": [],
+            "priority": [
+              "target_priority"
+            ],
+            "severity": [],
+            "duplicate_label": [
+              "Summary",
+              "target_priority"
+            ],
+            "resolution": [],
+            "time": [
+              "Creation time"
+            ],
+            "event": [],
+            "query": [],
+            "candidate": []
+          },
+          "sample_rows": [
+            {
+              "ID": "1819206",
+              "Description": "Created attachment 9320146\\\\ndrop.html\\\\n\\\\nUser Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/110.0\\\\n\\\\nSteps to reproduce:\\",
+              "Summary": "With Firefox 110, dropdown menus disappear when the mouse moves",
+              "target_priority": "P3",
+              "Creation time": "2023-02-27T22:53:05Z"
+            },
+            {
+              "ID": "1882705",
+              "Description": "User Agent: Mozilla/5.0 (X11; Linux x86_64; rv:123.0) Gecko/20100101 Firefox/123.0\\\\n\\\\nSteps to reproduce:\\\\n\\\\nOpen a lot of websites for a while and close al",
+              "Summary": "[flatpak] Gnome Inhibitors not Released by Firefox, which prevents OS from sleeping",
+              "target_priority": "P2",
+              "Creation time": "2024-02-29T08:06:58Z"
+            },
+            {
+              "ID": "1783163",
+              "Description": "User Agent: Mozilla/5.0 (X11; Linux x86_64; rv:104.0) Gecko/20100101 Firefox/104.0\\\\n\\\\nSteps to reproduce:\\\\n\\\\n use Firefox Beta and launch it from the termin",
+              "Summary": "Sandbox: attempt to open unexpected file /sys/devices/system/cpu/cpu0/cache/index2/size",
+              "target_priority": "P2",
+              "Creation time": "2022-08-04T09:58:00Z"
+            }
+          ],
+          "classification": {
+            "source_role": "TICKET_TEXT_SOURCE_CANDIDATE",
+            "positive_evidence": [
+              "ticket text present",
+              "ticket identifier present"
+            ],
+            "warnings": [
+              "source also contains outcome/label-like columns"
+            ]
+          }
+        }
+      ]
+    },
+    "T3": {
+      "candidate_count": 1,
+      "sources": [
+        {
+          "file": "modeling/T3/derived/t3_features.csv",
+          "exists": true,
+          "readable": true,
+          "columns": [
+            "ID",
+            "Creation time",
+            "Summary",
+            "Description",
+            "target_severity"
+          ],
+          "row_count": 30839,
+          "semantic_columns": {
+            "id": [
+              "ID"
+            ],
+            "text": [
+              "Description",
+              "Summary"
+            ],
+            "assignee": [],
+            "priority": [],
+            "severity": [
+              "target_severity"
+            ],
+            "duplicate_label": [
+              "Summary",
+              "target_severity"
+            ],
+            "resolution": [],
+            "time": [
+              "Creation time"
+            ],
+            "event": [],
+            "query": [],
+            "candidate": []
+          },
+          "sample_rows": [
+            {
+              "ID": "1798074",
+              "Description": "Created attachment 9300873\\\\nmemory-report.json.gz\\\\n\\\\nUser Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:106.0) Gecko/20100101 Firefox/106.0\\\\n\\\\nSteps ",
+              "Summary": "High commit, leading to system instability",
+              "target_severity": "S3",
+              "Creation time": "2022-10-28T20:57:23Z"
+            },
+            {
+              "ID": "1903641",
+              "Description": "Created attachment 9408505\\\\nScreenshot 2024-06-19 152141.png\\\\n\\\\nWhen Windows 11 Auto Color Management is enabled (\\\\\"Automatically manage color for apps\\\\\"),",
+              "Summary": "Incorrect gamma for background color alpha when Windows ACM is enabled",
+              "target_severity": "S3",
+              "Creation time": "2024-06-19T19:25:57Z"
+            },
+            {
+              "ID": "1675866",
+              "Description": "User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36\\\\n\\\\nSteps to reproduce:\\\\n\\\\nht",
+              "Summary": "drawElementsInstanced and generateMipmap create errors for video frames",
+              "target_severity": "S3",
+              "Creation time": "2020-11-06T20:33:52Z"
+            }
+          ],
+          "classification": {
+            "source_role": "TICKET_TEXT_SOURCE_CANDIDATE",
+            "positive_evidence": [
+              "ticket text present",
+              "ticket identifier present"
+            ],
+            "warnings": [
+              "source also contains outcome/label-like columns"
+            ]
+          }
+        }
+      ]
+    },
+    "T4": {
+      "candidate_count": 3,
+      "sources": [
+        {
+          "file": "modeling/T4/derived/t4_features.csv",
+          "exists": true,
+          "readable": true,
+          "columns": [
+            "ID",
+            "Creation time",
+            "Creator",
+            "Creator Detail",
+            "Summary",
+            "Description",
+            "target_assignee"
+          ],
+          "row_count": null,
+          "semantic_columns": {
+            "id": [
+              "ID"
+            ],
+            "text": [
+              "Description",
+              "Summary"
+            ],
+            "assignee": [
+              "target_assignee"
+            ],
+            "priority": [],
+            "severity": [],
+            "duplicate_label": [
+              "Summary",
+              "target_assignee"
+            ],
+            "resolution": [],
+            "time": [
+              "Creation time"
+            ],
+            "event": [],
+            "query": [],
+            "candidate": []
+          },
+          "sample_rows": [
+            {
+              "ID": "1798074",
+              "Description": "Created attachment 9300873\\\\nmemory-report.json.gz\\\\n\\\\nUser Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:106.0) Gecko/20100101 Firefox/106.0\\\\n\\\\nSteps ",
+              "Summary": "High commit, leading to system instability",
+              "target_assignee": "ahale@mozilla.com",
+              "Creation time": "2022-10-28T20:57:23Z"
+            },
+            {
+              "ID": "1903641",
+              "Description": "Created attachment 9408505\\\\nScreenshot 2024-06-19 152141.png\\\\n\\\\nWhen Windows 11 Auto Color Management is enabled (\\\\\"Automatically manage color for apps\\\\\"),",
+              "Summary": "Incorrect gamma for background color alpha when Windows ACM is enabled",
+              "target_assignee": "ahale@mozilla.com",
+              "Creation time": "2024-06-19T19:25:57Z"
+            },
+            {
+              "ID": "1793477",
+              "Description": "User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5026.0 Safari/537.36 Edg/103.0.1254.0\\\\n\\\\nSteps to re",
+              "Summary": "AV1 Decoding in YouTube Stutters on AMD Windows Laptop",
+              "target_assignee": "alwu@mozilla.com",
+              "Creation time": "2022-10-03T18:26:55Z"
+            }
+          ],
+          "error": "field larger than field limit (131072)",
+          "classification": {
+            "source_role": "HISTORICAL_ASSIGNEE_SOURCE_CANDIDATE",
+            "positive_evidence": [
+              "ticket/query text present",
+              "historical assignee field present"
+            ],
+            "warnings": []
+          }
+        },
+        {
+          "file": "modeling/T4/derived/t4_train.csv",
+          "exists": true,
+          "readable": true,
+          "columns": [
+            "ID",
+            "Creation time",
+            "Creator",
+            "Creator Detail",
+            "Summary",
+            "Description",
+            "target_assignee"
+          ],
+          "row_count": null,
+          "semantic_columns": {
+            "id": [
+              "ID"
+            ],
+            "text": [
+              "Description",
+              "Summary"
+            ],
+            "assignee": [
+              "target_assignee"
+            ],
+            "priority": [],
+            "severity": [],
+            "duplicate_label": [
+              "Summary",
+              "target_assignee"
+            ],
+            "resolution": [],
+            "time": [
+              "Creation time"
+            ],
+            "event": [],
+            "query": [],
+            "candidate": []
+          },
+          "sample_rows": [
+            {
+              "ID": "4302",
+              "Description": "(This bug imported from BugSplat, Netscape's internal bugsystem.  It\\\\nwas known there as bug #53588\\\\nhttp://scopus.netscape.com/bugsplat/show_bug.cgi?id=53588",
+              "Summary": "PgUp/PgDn in editor don't move caret/cursor (platform differences)",
+              "target_assignee": "brade@netscape.com",
+              "Creation time": "1997-03-28T16:00:00Z"
+            },
+            {
+              "ID": "5313",
+              "Description": "(This bug imported from BugSplat, Netscape's internal bugsystem.  It\\\\nwas known there as bug #56223\\\\nhttp://scopus.netscape.com/bugsplat/show_bug.cgi?id=56223",
+              "Summary": "Accept-Charset for form is not implement.",
+              "target_assignee": "bobj@netscape.com",
+              "Creation time": "1997-04-08T14:00:00Z"
+            },
+            {
+              "ID": "711",
+              "Description": "View this HTML page to reproduce.  Please email directly w/ any questions;\\\\nI filter Scopus email to trash.\\\\n--- CUT HERE ---\\\\n<!DOCTYPE HTML PUBLIC \\\\\"-//W3",
+              "Summary": "CSS color: statement ignored.",
+              "target_assignee": "harishd@netscape.com",
+              "Creation time": "1997-04-21T14:00:00Z"
+            }
+          ],
+          "error": "field larger than field limit (131072)",
+          "classification": {
+            "source_role": "HISTORICAL_ASSIGNEE_SOURCE_CANDIDATE",
+            "positive_evidence": [
+              "ticket/query text present",
+              "historical assignee field present"
+            ],
+            "warnings": []
+          }
+        },
+        {
+          "file": "modeling/T4/derived/t4_eval.csv",
+          "exists": true,
+          "readable": true,
+          "columns": [
+            "ID",
+            "Creation time",
+            "Creator",
+            "Creator Detail",
+            "Summary",
+            "Description",
+            "target_assignee"
+          ],
+          "row_count": 35626,
+          "semantic_columns": {
+            "id": [
+              "ID"
+            ],
+            "text": [
+              "Description",
+              "Summary"
+            ],
+            "assignee": [
+              "target_assignee"
+            ],
+            "priority": [],
+            "severity": [],
+            "duplicate_label": [
+              "Summary",
+              "target_assignee"
+            ],
+            "resolution": [],
+            "time": [
+              "Creation time"
+            ],
+            "event": [],
+            "query": [],
+            "candidate": []
+          },
+          "sample_rows": [
+            {
+              "ID": "1551410",
+              "Description": "I'm on Nightly 68 build 20190513215004 on Linux. When I enable origin telemetry test mode, I can reliably cause Firefox to exceed system memory (thus locking th",
+              "Summary": "Firefox reliably exceeds memory when origin telemetry test mode is active",
+              "target_assignee": "xeonchen@gmail.com",
+              "Creation time": "2019-05-14T05:15:41Z"
+            },
+            {
+              "ID": "1551425",
+              "Description": "Created attachment 9064683\\\\nbug select textContent.zip\\\\n\\\\nUser Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0\\\\n\\\\nSteps to repr",
+              "Summary": "Javascript inconsistancy changing select options textContent",
+              "target_assignee": "mbrodesser@mozilla.com",
+              "Creation time": "2019-05-14T07:41:27Z"
+            },
+            {
+              "ID": "1551452",
+              "Description": "[Affected versions]: \\\\nNightly 68.0a1\\\\n\\\\n[Affected platforms]:\\\\nPlatforms: ALL\\\\n\\\\n\\\\nSteps : \\\\n\\\\n1. Launch the Firefox browser and reach https://mozilla",
+              "Summary": "The Firefox Tab will crash when revoking Temporary Permissions for screen sharing",
+              "target_assignee": "dminor@mozilla.com",
+              "Creation time": "2019-05-14T08:40:19Z"
+            }
+          ],
+          "classification": {
+            "source_role": "HISTORICAL_ASSIGNEE_SOURCE_CANDIDATE",
+            "positive_evidence": [
+              "ticket/query text present",
+              "historical assignee field present"
+            ],
+            "warnings": []
+          }
+        }
+      ]
+    },
+    "T5": {
+      "candidate_count": 1,
+      "sources": [
+        {
+          "file": "modeling/T5/derived/t5_train_features.csv",
+          "exists": true,
+          "readable": true,
+          "columns": [
+            "ID",
+            "Creation time",
+            "Creator",
+            "Creator Detail",
+            "Summary",
+            "Description",
+            "T5 target"
+          ],
+          "row_count": null,
+          "semantic_columns": {
+            "id": [
+              "ID"
+            ],
+            "text": [
+              "Description",
+              "Summary"
+            ],
+            "assignee": [],
+            "priority": [],
+            "severity": [],
+            "duplicate_label": [
+              "Summary",
+              "T5 target"
+            ],
+            "resolution": [],
+            "time": [
+              "Creation time"
+            ],
+            "event": [],
+            "query": [],
+            "candidate": []
+          },
+          "sample_rows": [
+            {
+              "ID": "1798074",
+              "Description": "Created attachment 9300873\\\\nmemory-report.json.gz\\\\n\\\\nUser Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:106.0) Gecko/20100101 Firefox/106.0\\\\n\\\\nSteps ",
+              "Summary": "High commit, leading to system instability",
+              "T5 target": "0",
+              "Creation time": "2022-10-29 02:27:23"
+            },
+            {
+              "ID": "1675866",
+              "Description": "User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36\\\\n\\\\nSteps to reproduce:\\\\n\\\\nht",
+              "Summary": "drawElementsInstanced and generateMipmap create errors for video frames",
+              "T5 target": "0",
+              "Creation time": "2020-11-07 02:03:52"
+            },
+            {
+              "ID": "1819206",
+              "Description": "Created attachment 9320146\\\\ndrop.html\\\\n\\\\nUser Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/110.0\\\\n\\\\nSteps to reproduce:\\",
+              "Summary": "With Firefox 110, dropdown menus disappear when the mouse moves",
+              "T5 target": "0",
+              "Creation time": "2023-02-28 04:23:05"
+            }
+          ],
+          "error": "field larger than field limit (131072)",
+          "classification": {
+            "source_role": "TICKET_PAIR_SOURCE_CANDIDATE",
+            "positive_evidence": [
+              "ticket text present",
+              "ticket identifier present"
+            ],
+            "warnings": [
+              "duplicate/outcome label present; must not be used as runtime input"
+            ]
+          }
+        }
+      ]
+    },
+    "T6": {
+      "candidate_count": 2,
+      "sources": [
+        {
+          "file": "modeling/T6/splits/t6_train_group_aware.csv",
+          "exists": true,
+          "readable": true,
+          "columns": [
+            "query_id",
+            "query_creation_time",
+            "query_creator",
+            "query_creator_detail",
+            "query_summary",
+            "query_description",
+            "candidate_id",
+            "candidate_creation_time",
+            "candidate_creator",
+            "candidate_creator_detail",
+            "candidate_summary",
+            "candidate_description",
+            "candidate_role",
+            "target_observed",
+            "target_type",
+            "sampling_protocol",
+            "sampling_seed"
+          ],
+          "row_count": null,
+          "semantic_columns": {
+            "id": [
+              "candidate_creation_time",
+              "candidate_creator",
+              "candidate_creator_detail",
+              "candidate_description",
+              "candidate_id",
+              "candidate_role",
+              "candidate_summary",
+              "query_id"
+            ],
+            "text": [
+              "candidate_description",
+              "candidate_summary",
+              "query_description",
+              "query_summary"
+            ],
+            "assignee": [],
+            "priority": [],
+            "severity": [],
+            "duplicate_label": [
+              "candidate_summary",
+              "query_creation_time",
+              "query_creator",
+              "query_creator_detail",
+              "query_description",
+              "query_id",
+              "query_summary",
+              "target_observed",
+              "target_type"
+            ],
+            "resolution": [],
+            "time": [
+              "candidate_creation_time",
+              "query_creation_time"
+            ],
+            "event": [],
+            "query": [
+              "query_creation_time",
+              "query_creator",
+              "query_creator_detail",
+              "query_description",
+              "query_id",
+              "query_summary"
+            ],
+            "candidate": [
+              "candidate_creation_time",
+              "candidate_creator",
+              "candidate_creator_detail",
+              "candidate_description",
+              "candidate_id",
+              "candidate_role",
+              "candidate_summary"
+            ]
+          },
+          "sample_rows": [
+            {
+              "candidate_creation_time": "2003-08-30 02:24:31",
+              "candidate_creator": "urkle@outoforder.cc",
+              "candidate_creator_detail": "{'nick': 'urkle', 'id': 23562, 'name': 'urkle@outoforder.cc', 'email': 'urkle@outoforder.cc', 'real_name': 'Edward Rudd'}",
+              "candidate_description": "User-Agent:       Mozilla/5.0 Galeon/1.2.11 (X11; Linux i686; U;) Gecko/20030703\\\\nBuild Identifier: Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.5b) Gecko/2003",
+              "candidate_id": "217769",
+              "candidate_role": "positive",
+              "candidate_summary": "[BC] border collapse borders not correct when empty row groups are involved",
+              "query_id": "1023761",
+              "query_description": "Created attachment 8438289\\\\nScreenshots showing rendering differences\\\\n\\\\nUser Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML",
+              "query_summary": "With empty <tbody>, only top border in fully-bordered table is displayed (border-collapse:collapse, collapsed/collapsing borders bug)",
+              "query_creation_time": "2014-06-11 14:26:47",
+              "query_creator": "mozilla@chrisrebert.com",
+              "query_creator_detail": "{'name': 'mozilla@chrisrebert.com', 'id': 58202, 'real_name': 'Chris Rebert', 'nick': 'mozilla', 'email': 'mozilla@chrisrebert.com'}",
+              "target_observed": "True",
+              "target_type": "point_in_time_dupe_target"
+            },
+            {
+              "candidate_creation_time": "2001-03-20 05:54:20",
+              "candidate_creator": "sspitzer@mozilla.org",
+              "candidate_creator_detail": "{'nick': 'sspitzer', 'name': 'sspitzer@mozilla.org', 'id': 1193, 'email': 'sspitzer@mozilla.org', 'real_name': '(not reading, please use seth@sspitzer.org inste",
+              "candidate_description": "this is on the modern skin.\\\\n\\\\nframe: Box (0x8ba9270) style: 0x8a6b2a0 {\\\\n  http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul|* weight: 0 { di\\\\n",
+              "candidate_id": "72572",
+              "candidate_role": "observable_non_positive",
+              "candidate_summary": "style error to the console when I collapse / expand \"Local Folders\"",
+              "query_id": "1023761",
+              "query_description": "Created attachment 8438289\\\\nScreenshots showing rendering differences\\\\n\\\\nUser Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML",
+              "query_summary": "With empty <tbody>, only top border in fully-bordered table is displayed (border-collapse:collapse, collapsed/collapsing borders bug)",
+              "query_creation_time": "2014-06-11 14:26:47",
+              "query_creator": "mozilla@chrisrebert.com",
+              "query_creator_detail": "{'name': 'mozilla@chrisrebert.com', 'id': 58202, 'real_name': 'Chris Rebert', 'nick': 'mozilla', 'email': 'mozilla@chrisrebert.com'}",
+              "target_observed": "False"
+            },
+            {
+              "candidate_creation_time": "2012-02-08 06:06:28",
+              "candidate_creator": "joseph.k.olivas@intel.com",
+              "candidate_creator_detail": "{'real_name': 'Joe Olivas', 'nick': 'joseph.k.olivas', 'email': 'joseph.k.olivas@intel.com', 'name': 'joseph.k.olivas@intel.com', 'id': 419880}",
+              "candidate_description": "User Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:13.0a1) Gecko/20120206 Firefox/13.0a1\\\\nBuild ID: 20120207170854\\\\n\\\\nSteps to reproduce:\\\\n\\\\nVisiting some ",
+              "candidate_id": "725152",
+              "candidate_role": "observable_non_positive",
+              "candidate_summary": "Stereoscopic 3D videos not properly detected",
+              "query_id": "1023761",
+              "query_description": "Created attachment 8438289\\\\nScreenshots showing rendering differences\\\\n\\\\nUser Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML",
+              "query_summary": "With empty <tbody>, only top border in fully-bordered table is displayed (border-collapse:collapse, collapsed/collapsing borders bug)",
+              "query_creation_time": "2014-06-11 14:26:47",
+              "query_creator": "mozilla@chrisrebert.com",
+              "query_creator_detail": "{'name': 'mozilla@chrisrebert.com', 'id': 58202, 'real_name': 'Chris Rebert', 'nick': 'mozilla', 'email': 'mozilla@chrisrebert.com'}",
+              "target_observed": "False"
+            }
+          ],
+          "error": "field larger than field limit (131072)",
+          "classification": {
+            "source_role": "RETRIEVAL_CORPUS_CANDIDATE",
+            "positive_evidence": [
+              "ticket text present",
+              "ticket identifier present"
+            ],
+            "warnings": [
+              "retrieval-corpus suitability requires explicit population-level verification"
+            ]
+          }
+        },
+        {
+          "file": "modeling/T6/splits/t6_eval_group_aware.csv",
+          "exists": true,
+          "readable": true,
+          "columns": [
+            "query_id",
+            "query_creation_time",
+            "query_creator",
+            "query_creator_detail",
+            "query_summary",
+            "query_description",
+            "candidate_id",
+            "candidate_creation_time",
+            "candidate_creator",
+            "candidate_creator_detail",
+            "candidate_summary",
+            "candidate_description",
+            "candidate_role",
+            "target_observed",
+            "target_type",
+            "sampling_protocol",
+            "sampling_seed"
+          ],
+          "row_count": 82416,
+          "semantic_columns": {
+            "id": [
+              "candidate_creation_time",
+              "candidate_creator",
+              "candidate_creator_detail",
+              "candidate_description",
+              "candidate_id",
+              "candidate_role",
+              "candidate_summary",
+              "query_id"
+            ],
+            "text": [
+              "candidate_description",
+              "candidate_summary",
+              "query_description",
+              "query_summary"
+            ],
+            "assignee": [],
+            "priority": [],
+            "severity": [],
+            "duplicate_label": [
+              "candidate_summary",
+              "query_creation_time",
+              "query_creator",
+              "query_creator_detail",
+              "query_description",
+              "query_id",
+              "query_summary",
+              "target_observed",
+              "target_type"
+            ],
+            "resolution": [],
+            "time": [
+              "candidate_creation_time",
+              "query_creation_time"
+            ],
+            "event": [],
+            "query": [
+              "query_creation_time",
+              "query_creator",
+              "query_creator_detail",
+              "query_description",
+              "query_id",
+              "query_summary"
+            ],
+            "candidate": [
+              "candidate_creation_time",
+              "candidate_creator",
+              "candidate_creator_detail",
+              "candidate_description",
+              "candidate_id",
+              "candidate_role",
+              "candidate_summary"
+            ]
+          },
+          "sample_rows": [
+            {
+              "candidate_creation_time": "2019-07-01 12:42:45",
+              "candidate_creator": "mbrodesser@igalia.com",
+              "candidate_creator_detail": "{'real_name': 'Mirko Brodesser (:mbrodesser-Igalia)', 'email': 'mbrodesser@igalia.com', 'name': 'mbrodesser@igalia.com', 'id': 725227, 'nick': 'mbrodesser-Igali",
+              "candidate_id": "1562561",
+              "candidate_role": "positive",
+              "candidate_summary": "Don't expose Shadow DOM nodes via Selection API",
+              "query_id": "1872597",
+              "query_description": "Created attachment 9370659\\\\ndemo\\\\n\\\\nUser Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safar",
+              "query_summary": "getSelection API of text in closed shadow root leaks encapsulated DOM nodes",
+              "query_creation_time": "2024-01-01 20:20:27",
+              "query_creator": "weizmangal@gmail.com",
+              "query_creator_detail": "{'nick': 'weizmangal', 'email': 'weizmangal@gmail.com', 'id': 740943, 'real_name': '', 'name': 'weizmangal@gmail.com'}",
+              "target_observed": "True",
+              "target_type": "point_in_time_dupe_target"
+            },
+            {
+              "candidate_creation_time": "2019-03-09 19:37:04",
+              "candidate_creator": "marceljung1@t-online.de",
+              "candidate_creator_detail": "{'email': 'marceljung1@t-online.de', 'id': 629139, 'name': 'marceljung1@t-online.de', 'real_name': 'DoktorDementor', 'nick': 'marceljung1'}",
+              "candidate_description": "User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:67.0) Gecko/20100101 Firefox/67.0\\\\n\\\\nSteps to reproduce:\\\\n\\\\nPlaying normally Youtube videos.\\\\n\\\\n\\",
+              "candidate_id": "1534010",
+              "candidate_role": "observable_non_positive",
+              "candidate_summary": "Graphic glitches on youtube",
+              "query_id": "1872597",
+              "query_description": "Created attachment 9370659\\\\ndemo\\\\n\\\\nUser Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safar",
+              "query_summary": "getSelection API of text in closed shadow root leaks encapsulated DOM nodes",
+              "query_creation_time": "2024-01-01 20:20:27",
+              "query_creator": "weizmangal@gmail.com",
+              "query_creator_detail": "{'nick': 'weizmangal', 'email': 'weizmangal@gmail.com', 'id': 740943, 'real_name': '', 'name': 'weizmangal@gmail.com'}",
+              "target_observed": "False"
+            },
+            {
+              "candidate_creation_time": "2003-01-11 01:14:54",
+              "candidate_creator": "dpalm@writeme.com",
+              "candidate_creator_detail": "{'name': 'dpalm@writeme.com', 'nick': 'dpalm', 'id': 82804, 'email': 'dpalm@writeme.com', 'real_name': 'Daniel Palm'}",
+              "candidate_description": "User-Agent:       Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.3a) Gecko/20021212\\\\nBuild Identifier: Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.3a) Gecko/200",
+              "candidate_id": "188550",
+              "candidate_role": "observable_non_positive",
+              "candidate_summary": "input fields do not correclty render text when using stylesheets that specify an input background color",
+              "query_id": "1872597",
+              "query_description": "Created attachment 9370659\\\\ndemo\\\\n\\\\nUser Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safar",
+              "query_summary": "getSelection API of text in closed shadow root leaks encapsulated DOM nodes",
+              "query_creation_time": "2024-01-01 20:20:27",
+              "query_creator": "weizmangal@gmail.com",
+              "query_creator_detail": "{'nick': 'weizmangal', 'email': 'weizmangal@gmail.com', 'id': 740943, 'real_name': '', 'name': 'weizmangal@gmail.com'}",
+              "target_observed": "False"
+            }
+          ],
+          "classification": {
+            "source_role": "RETRIEVAL_CORPUS_CANDIDATE",
+            "positive_evidence": [
+              "ticket text present",
+              "ticket identifier present"
+            ],
+            "warnings": [
+              "retrieval-corpus suitability requires explicit population-level verification"
+            ]
+          }
+        }
+      ]
+    },
+    "T7": {
+      "candidate_count": 1,
+      "sources": [
+        {
+          "file": "modeling/T7/derived/t7_creation_time_modeling_dataset.csv",
+          "exists": true,
+          "readable": true,
+          "columns": [
+            "ID",
+            "Creation time",
+            "Creator",
+            "Creator Detail",
+            "Summary",
+            "Description",
+            "first_resolved_time",
+            "duration_seconds",
+            "event",
+            "endpoint_type",
+            "observation_endpoint",
+            "source_row_width"
+          ],
+          "row_count": null,
+          "semantic_columns": {
+            "id": [
+              "ID",
+              "source_row_width"
+            ],
+            "text": [
+              "Description",
+              "Summary"
+            ],
+            "assignee": [],
+            "priority": [],
+            "severity": [],
+            "duplicate_label": [
+              "Summary",
+              "endpoint_type"
+            ],
+            "resolution": [
+              "first_resolved_time"
+            ],
+            "time": [
+              "Creation time",
+              "duration_seconds",
+              "first_resolved_time"
+            ],
+            "event": [
+              "event"
+            ],
+            "query": [],
+            "candidate": []
+          },
+          "sample_rows": [
+            {
+              "ID": "91",
+              "source_row_width": "42",
+              "Description": "Created by Till Krech (till@berlin.snafu.de) on Tuesday, April 7, 1998 9:05:23 AM PDT\\\\nAdditional Details :\\\\nthe JavaScript \\\\\"for in\\\\\" statement does not wo",
+              "Summary": "document properties cannot be listed",
+              "endpoint_type": "first_RESOLVED",
+              "first_resolved_time": "1999-06-29T05:21:36",
+              "Creation time": "1998-04-08T04:35:23",
+              "duration_seconds": "38623573.0",
+              "event": "1"
+            },
+            {
+              "ID": "103",
+              "source_row_width": "42",
+              "Description": "Created by Darrell Kindred (dkindred=mozilla@cs.cmu.edu) on Tuesday, April 7, 1998 11:43:26 AM PDT\\\\nAdditional Details :\\\\nThe nested table here is laid out wr",
+              "Summary": "layout bug: table cell overflows containing cell",
+              "endpoint_type": "first_RESOLVED",
+              "first_resolved_time": "2000-12-26T07:21:01",
+              "Creation time": "1998-04-08T07:13:26",
+              "duration_seconds": "85795655.0",
+              "event": "1"
+            },
+            {
+              "ID": "104",
+              "source_row_width": "42",
+              "Description": "Created by Darrell Kindred (dkindred=mozilla@cs.cmu.edu) on Tuesday, April 7, 1998 12:16:02 PM PDT\\\\nAdditional Details :\\\\nVisit this document (which contains ",
+              "Summary": "table saved as text: missing inter-column space",
+              "endpoint_type": "first_RESOLVED",
+              "first_resolved_time": "1998-12-17T09:53:52",
+              "Creation time": "1998-04-08T07:46:02",
+              "duration_seconds": "21866870.0",
+              "event": "1"
+            }
+          ],
+          "error": "field larger than field limit (131072)",
+          "classification": {
+            "source_role": "SURVIVAL_OBSERVATION_CANDIDATE",
+            "positive_evidence": [
+              "time-related field present",
+              "event/status field present",
+              "ticket-level survival semantics potentially present"
+            ],
+            "warnings": []
+          }
+        }
+      ]
+    }
+  },
+  "safeguards": {
+    "models_loaded": false,
+    "inference_executed": false,
+    "retraining": false,
+    "artifact_modification": false,
+    "threshold_created": false,
+    "calibration_performed": false,
+    "synthetic_input_created": false,
+    "synthetic_target_created": false,
+    "universal_confidence_created": false,
+    "universal_risk_created": false
+  },
+  "overall_status": "PASS"
+}

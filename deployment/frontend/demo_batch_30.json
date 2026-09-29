@@ -1,0 +1,242 @@
+[
+  {
+    "ticket_id": "DEMO-B30-001",
+    "creation_time": "2026-09-28T09:05:00",
+    "creator": "synthetic-user-01",
+    "creator_detail": "Synthetic B30 batch demonstration ticket",
+    "summary": "VPN connection failure",
+    "description": "User cannot connect to the corporate VPN from a company workstation and is unable to access internal resources."
+  },
+  {
+    "ticket_id": "DEMO-B30-002",
+    "creation_time": "2026-09-28T10:10:00",
+    "creator": "synthetic-user-02",
+    "creator_detail": "Synthetic B30 batch demonstration ticket",
+    "summary": "Cannot access internal application",
+    "description": "User receives an error while trying to access an internal business application."
+  },
+  {
+    "ticket_id": "DEMO-B30-003",
+    "creation_time": "2026-09-28T11:15:00",
+    "creator": "synthetic-user-03",
+    "creator_detail": "Synthetic B30 batch demonstration ticket",
+    "summary": "Software installation issue",
+    "description": "User reports that a required desktop application cannot be installed on the company workstation."
+  },
+  {
+    "ticket_id": "DEMO-B30-004",
+    "creation_time": "2026-09-28T12:20:00",
+    "creator": "synthetic-user-04",
+    "creator_detail": "Synthetic B30 batch demonstration ticket",
+    "summary": "Password reset request",
+    "description": "User is unable to sign in because the account password has expired and requests a password reset."
+  },
+  {
+    "ticket_id": "DEMO-B30-005",
+    "creation_time": "2026-09-28T13:25:00",
+    "creator": "synthetic-user-05",
+    "creator_detail": "Synthetic B30 batch demonstration ticket",
+    "summary": "Email synchronization problem",
+    "description": "User reports that new messages are not synchronising with the desktop email client."
+  },
+  {
+    "ticket_id": "DEMO-B30-006",
+    "creation_time": "2026-09-28T14:30:00",
+    "creator": "synthetic-user-06",
+    "creator_detail": "Synthetic B30 batch demonstration ticket",
+    "summary": "Printer not responding",
+    "description": "A network printer is visible to the user but print jobs remain queued and do not complete."
+  },
+  {
+    "ticket_id": "DEMO-B30-007",
+    "creation_time": "2026-09-28T15:35:00",
+    "creator": "synthetic-user-07",
+    "creator_detail": "Synthetic B30 batch demonstration ticket",
+    "summary": "Laptop running slowly",
+    "description": "User reports significant performance degradation when opening applications and working with several programs."
+  },
+  {
+    "ticket_id": "DEMO-B30-008",
+    "creation_time": "2026-09-28T16:40:00",
+    "creator": "synthetic-user-08",
+    "creator_detail": "Synthetic B30 batch demonstration ticket",
+    "summary": "Wi-Fi connection drops",
+    "description": "Wireless connectivity repeatedly disconnects from the office network during normal workstation use."
+  },
+  {
+    "ticket_id": "DEMO-B30-009",
+    "creation_time": "2026-09-28T09:45:00",
+    "creator": "synthetic-user-09",
+    "creator_detail": "Synthetic B30 batch demonstration ticket",
+    "summary": "Shared drive unavailable",
+    "description": "User cannot access a department shared drive that was previously available."
+  },
+  {
+    "ticket_id": "DEMO-B30-010",
+    "creation_time": "2026-09-28T10:50:00",
+    "creator": "synthetic-user-10",
+    "creator_detail": "Synthetic B30 batch demonstration ticket",
+    "summary": "Application crashes on startup",
+    "description": "A required desktop application closes immediately after the user launches it."
+  },
+  {
+    "ticket_id": "DEMO-B30-011",
+    "creation_time": "2026-09-28T11:55:00",
+    "creator": "synthetic-user-01",
+    "creator_detail": "Synthetic B30 batch demonstration ticket",
+    "summary": "Monitor display issue",
+    "description": "The external monitor intermittently loses signal while connected to the company workstation."
+  },
+  {
+    "ticket_id": "DEMO-B30-012",
+    "creation_time": "2026-09-28T12:00:00",
+    "creator": "synthetic-user-02",
+    "creator_detail": "Synthetic B30 batch demonstration ticket",
+    "summary": "Browser access problem",
+    "description": "User cannot load an internal web portal in the standard corporate browser."
+  },
+  {
+    "ticket_id": "DEMO-B30-013",
+    "creation_time": "2026-09-28T13:05:00",
+    "creator": "synthetic-user-03",
+    "creator_detail": "Synthetic B30 batch demonstration ticket",
+    "summary": "Account locked",
+    "description": "User reports that the corporate account has become locked after several unsuccessful sign-in attempts."
+  },
+  {
+    "ticket_id": "DEMO-B30-014",
+    "creation_time": "2026-09-28T14:10:00",
+    "creator": "synthetic-user-04",
+    "creator_detail": "Synthetic B30 batch demonstration ticket",
+    "summary": "Teams audio problem",
+    "description": "User can join meetings but cannot hear other participants through the configured audio device."
+  },
+  {
+    "ticket_id": "DEMO-B30-015",
+    "creation_time": "2026-09-28T15:15:00",
+    "creator": "synthetic-user-05",
+    "creator_detail": "Synthetic B30 batch demonstration ticket",
+    "summary": "File access permission request",
+    "description": "User requests access to a shared project folder required for their assigned work."
+  },
+  {
+    "ticket_id": "DEMO-B30-016",
+    "creation_time": "2026-09-28T16:20:00",
+    "creator": "synthetic-user-06",
+    "creator_detail": "Synthetic B30 batch demonstration ticket",
+    "summary": "Keyboard input issue",
+    "description": "Several keys on the company keyboard intermittently fail to register during normal use."
+  },
+  {
+    "ticket_id": "DEMO-B30-017",
+    "creation_time": "2026-09-28T09:25:00",
+    "creator": "synthetic-user-07",
+    "creator_detail": "Synthetic B30 batch demonstration ticket",
+    "summary": "Antivirus alert",
+    "description": "The workstation displays a security software alert after a recently downloaded file was opened."
+  },
+  {
+    "ticket_id": "DEMO-B30-018",
+    "creation_time": "2026-09-28T10:30:00",
+    "creator": "synthetic-user-08",
+    "creator_detail": "Synthetic B30 batch demonstration ticket",
+    "summary": "Remote desktop failure",
+    "description": "User cannot establish a remote desktop session to an assigned internal workstation."
+  },
+  {
+    "ticket_id": "DEMO-B30-019",
+    "creation_time": "2026-09-28T11:35:00",
+    "creator": "synthetic-user-09",
+    "creator_detail": "Synthetic B30 batch demonstration ticket",
+    "summary": "Database client error",
+    "description": "The database client reports a connection error when the user attempts to connect to an internal service."
+  },
+  {
+    "ticket_id": "DEMO-B30-020",
+    "creation_time": "2026-09-28T12:40:00",
+    "creator": "synthetic-user-10",
+    "creator_detail": "Synthetic B30 batch demonstration ticket",
+    "summary": "Office application activation",
+    "description": "A productivity application reports an activation problem after a workstation update."
+  },
+  {
+    "ticket_id": "DEMO-B30-021",
+    "creation_time": "2026-09-28T13:45:00",
+    "creator": "synthetic-user-01",
+    "creator_detail": "Synthetic B30 batch demonstration ticket",
+    "summary": "Mobile device enrolment",
+    "description": "User is unable to complete enrolment of an approved mobile device into the corporate management service."
+  },
+  {
+    "ticket_id": "DEMO-B30-022",
+    "creation_time": "2026-09-28T14:50:00",
+    "creator": "synthetic-user-02",
+    "creator_detail": "Synthetic B30 batch demonstration ticket",
+    "summary": "Slow file transfer",
+    "description": "Transfers between the workstation and an internal shared location are taking substantially longer than expected."
+  },
+  {
+    "ticket_id": "DEMO-B30-023",
+    "creation_time": "2026-09-28T15:55:00",
+    "creator": "synthetic-user-03",
+    "creator_detail": "Synthetic B30 batch demonstration ticket",
+    "summary": "Missing application shortcut",
+    "description": "A previously available application shortcut is no longer visible on the user's managed desktop."
+  },
+  {
+    "ticket_id": "DEMO-B30-024",
+    "creation_time": "2026-09-28T16:00:00",
+    "creator": "synthetic-user-04",
+    "creator_detail": "Synthetic B30 batch demonstration ticket",
+    "summary": "Webcam not detected",
+    "description": "The workstation does not detect the connected webcam when the user starts a video meeting."
+  },
+  {
+    "ticket_id": "DEMO-B30-025",
+    "creation_time": "2026-09-28T09:05:00",
+    "creator": "synthetic-user-05",
+    "creator_detail": "Synthetic B30 batch demonstration ticket",
+    "summary": "Certificate warning",
+    "description": "The browser displays a certificate warning when the user attempts to access an internal service."
+  },
+  {
+    "ticket_id": "DEMO-B30-026",
+    "creation_time": "2026-09-28T10:10:00",
+    "creator": "synthetic-user-06",
+    "creator_detail": "Synthetic B30 batch demonstration ticket",
+    "summary": "Backup status question",
+    "description": "User reports that the expected workstation backup status is not visible in the backup client."
+  },
+  {
+    "ticket_id": "DEMO-B30-027",
+    "creation_time": "2026-09-28T11:15:00",
+    "creator": "synthetic-user-07",
+    "creator_detail": "Synthetic B30 batch demonstration ticket",
+    "summary": "Keyboard layout changed",
+    "description": "The workstation is using an unexpected keyboard layout and the user needs the standard layout restored."
+  },
+  {
+    "ticket_id": "DEMO-B30-028",
+    "creation_time": "2026-09-28T12:20:00",
+    "creator": "synthetic-user-08",
+    "creator_detail": "Synthetic B30 batch demonstration ticket",
+    "summary": "Cloud storage sync paused",
+    "description": "The corporate cloud storage client reports that synchronisation is paused and files are not updating."
+  },
+  {
+    "ticket_id": "DEMO-B30-029",
+    "creation_time": "2026-09-28T13:25:00",
+    "creator": "synthetic-user-09",
+    "creator_detail": "Synthetic B30 batch demonstration ticket",
+    "summary": "Application update failure",
+    "description": "A managed application repeatedly fails when attempting to install its latest update."
+  },
+  {
+    "ticket_id": "DEMO-B30-030",
+    "creation_time": "2026-09-28T14:30:00",
+    "creator": "synthetic-user-10",
+    "creator_detail": "Synthetic B30 batch demonstration ticket",
+    "summary": "Network folder slow to open",
+    "description": "A shared network folder takes a long time to open even though other network services remain accessible."
+  }
+]

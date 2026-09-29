@@ -1,0 +1,111 @@
+{
+  "operation": "H-RUN-004",
+  "operation_name": "T4 historical neighbor resolution",
+  "status": "PASS",
+  "ticket": {
+    "title": "VPN connection fails after password reset",
+    "description": "I reset my corporate password this morning. Since then, the VPN client connects briefly and then disconnects. I restarted the laptop and reinstalled the VPN client, but the issue persists. I need access to the internal systems for today's work."
+  },
+  "development_population": {
+    "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/derived/t4_train.csv",
+    "rows": 142501,
+    "columns": [
+      "ID",
+      "Creation time",
+      "Creator",
+      "Creator Detail",
+      "Summary",
+      "Description",
+      "target_assignee"
+    ]
+  },
+  "frozen_runtime": {
+    "tfidf": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_tfidf.joblib",
+    "neighbors": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_neighbors.joblib"
+  },
+  "runtime": {
+    "transformed_shape": [
+      1,
+      20000
+    ],
+    "neighbor_count": 5,
+    "neighbors": [
+      {
+        "rank": 1,
+        "neighbor_index": 118128,
+        "distance": 0.7060008645057678,
+        "ID": "1321841",
+        "Creation time": "2016-12-02T17:49:04Z",
+        "Creator": "jdsandoval1809@gmail.com",
+        "Creator Detail": "{'id': 584331, 'real_name': 'Baner', 'nick': 'jdsandoval1809', 'name': 'jdsandoval1809@gmail.com', 'email': 'jdsandoval1809@gmail.com'}",
+        "Summary": "Firefox network loss after connection to Cisco VPN.",
+        "Description": "User Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0\\\\nBuild ID: 20161129173726\\\\n\\\\nSteps to reproduce:\\\\n\\\\nNormally browsing internet, and  connect to corporate VPN using Cisco AnyConnect Secure Mobility Client Ver: 3.1.11004\\\\n\\\\n\\\\nActual results:\\\\n\\\\nFirefox Connection is lost, and the only way to get it working again is:\\\\n\\\\n1: Restart Firefox.\\\\n2: Goto  settings - advance - Network - connection-setting -  and then 'toggle' between \\\\\"Auto detect proxy settings\\\\\" & \\\\\"Use system proxy settings\\\\\".\\\\n\\\\n\\\\nExpected results:\\\\n\\\\nFirefox should keep connected.",
+        "target_assignee": "dd.mozilla@gmail.com"
+      },
+      {
+        "rank": 2,
+        "neighbor_index": 36104,
+        "distance": 0.745875358581543,
+        "ID": "220663",
+        "Creation time": "2003-09-29T14:40:28Z",
+        "Creator": "bugzilla.mozilla.org@kleinmanns.com",
+        "Creator Detail": "{'real_name': 'bm', 'name': 'bugzilla.mozilla.org@kleinmanns.com', 'id': 113958, 'email': 'bugzilla.mozilla.org@kleinmanns.com', 'nick': 'bugzilla.mozilla.org'}",
+        "Summary": "Conn: Hang when my VPN connection times out (?)",
+        "Description": "User-Agent:       Mozilla/4.0 (compatible; MSIE 5.5; Windows 98; Win 9x 4.90)\\\\nBuild Identifier: Mozilla/5.0 (Windows; U; Win 9x 4.90; en-US; rv:1.5b) Gecko/20030910 Firebird/0.6.1+\\\\n\\\\nCompare bug # 82728! This bug is similar but not equal.\\\\n\\\\nI use a VPN connection, using either the Windows ME built-in VPN client or the \\\\nCisco VPN Client 4.01. The connection is quite slow (some 100 users sharing a \\\\n10 Mbit line). Whenever it takes more than ~10 seconds to load a page, Mozilla \\\\ndies and the arrows on the current tab stop turning around. Mozilla can usually \\\\nbe killed using End Process in the Win ME Task Manager after some Ctrl-Alt-Dels.\\\\n\\\\nReproducible: Sometimes\\\\n\\\\nSteps to Reproduce:\\\\n1. Connect to the internet via VPN.\\\\n2. Surfin' around.\\\\n3. The more load the whole network has, and the bigger a page is, the larger is \\\\nthe chance for Mozilla Firebird to hang.\\\\n\\\\nIt never takes more than 15 minutes during \\\\\"prime time\\\\\".\\\\nActual Results:  \\\\nThe requested page is displayed partly (usually only the title). About 10-30 \\\\nsec later, Mozilla crashes with all of its instances.\\\\n\\\\nExpected Results:  \\\\nEither wait for more data, or display a time-out error.",
+        "target_assignee": "darin@meer.net"
+      },
+      {
+        "rank": 3,
+        "neighbor_index": 128163,
+        "distance": 0.7511016726493835,
+        "ID": "1405307",
+        "Creation time": "2017-10-03T13:49:31Z",
+        "Creator": "tnmurphy@gmail.com",
+        "Creator Detail": "{'email': 'tnmurphy@gmail.com', 'nick': 'tnmurphy', 'real_name': 'Tim Murphy', 'id': 603351, 'name': 'tnmurphy@gmail.com'}",
+        "Summary": "After connecting to VPN Firefox is unable to navigate to sites inside the VPN but Chrome can",
+        "Description": "User Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.91 Safari/537.36\\\\n\\\\nSteps to reproduce:\\\\n\\\\nI loaded Firefox then I connected to my VPN then I tried to navigate to an intranet site within that VPN.\\\\n\\\\nI am using Fedora Linux 26 on amd64.  My VPN type is 'cisco'.\\\\n\\\\n\\\\nActual results:\\\\n\\\\nMy internet provider's page (Virgin Media UK) for an unknown website appeared.\\\\n\\\\n\\\\nExpected results:\\\\n\\\\nThe same as Google Chrome - the intranet site should have appeared.\\\\n\\\\nAs far as I can tell this is a DNS issue because when I put in IP addresses it works.\\\\nThe 'host' utility on my machine returns a correct address.\\\\n/etc/resolv.conf contains the ip addresses of the VPN's name servers.\\\\nI tried the version 58 nightly release for 03 October 2017 and it did the same thing.",
+        "target_assignee": "daniel@haxx.se"
+      },
+      {
+        "rank": 4,
+        "neighbor_index": 26474,
+        "distance": 0.7548562288284302,
+        "ID": "125875",
+        "Creation time": "2002-02-16T12:37:25Z",
+        "Creator": "shawmt@yahoo.com",
+        "Creator Detail": "{'email': 'shawmt@yahoo.com', 'nick': 'shawmt', 'real_name': '', 'name': 'shawmt@yahoo.com', 'id': 44490}",
+        "Summary": "PAC: configured to work proxy server, but user not on work VPN",
+        "Description": "From Bugzilla Helper:\\\\nUser-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.0; en-US; rv:0.9.8) Gecko/20020204\\\\nBuildID:    2002020406\\\\n\\\\nUnlike pre 6.x versions of Navigator, when auto proxy configuration URL is\\\\nselected, and user is not on work VPN network, pages do not load.  Behavior\\\\nshould be that when proxy's presence is not detected (user connected directly to\\\\nInternet, not VPN) pages will load.\\\\n\\\\nReproducible: Always\\\\nSteps to Reproduce:\\\\n1.configure automatic proxy URL\\\\n2.connect only to ISP, not to VPN associated with proxy server\\\\n3.pages will not load because browser wants to detect proxy server\\\\n4. have to select direct connection to internet and reload browser when not on VPN.\\\\n\\\\n\\\\nActual Results:  Pages do not load.\\\\n\\\\nExpected Results:  Pages should load.",
+        "target_assignee": "darin@netscape.com"
+      },
+      {
+        "rank": 5,
+        "neighbor_index": 88540,
+        "distance": 0.7649978399276733,
+        "ID": "947801",
+        "Creation time": "2013-12-09T05:39:50Z",
+        "Creator": "josh@joshlund.com",
+        "Creator Detail": "{'email': 'josh@joshlund.com', 'real_name': 'Joshua Lund', 'nick': 'josh', 'id': 492263, 'name': 'josh@joshlund.com'}",
+        "Summary": "DNS resolution sporadically fails in Android 4.4/5.0 when connected to a VPN",
+        "Description": "User Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:25.0) Gecko/20100101 Firefox/25.0 (Beta/Release)\\\\nBuild ID: 20131115105349\\\\n\\\\nSteps to reproduce:\\\\n\\\\nSpecs:\\\\n--\\\\n* Nexus 5\\\\n* Android 4.4.1\\\\n* Firefox 26.0 Beta (the issue is present in the Stable release as well)\\\\n* OpenVPN for Android 0.6.1\\\\n\\\\nThis issue happens reliably every time I connect to a VPN and leave the connection active for an extended period of time.\\\\n\\\\n\\\\nActual results:\\\\n\\\\nFirefox appears to become unable to resolve any DNS queries. Attempts to access any site will hang until the request times out, but accessing an IP address directly still works.\\\\n\\\\nIf a page was recently accessed, and its DNS entry is still cached, then that site will still work too. It is important to note that only Firefox is affected by this issue, so it doesn't appear to be a systemic problem with the VPN in general. Chrome and any other alternative browsers are still able to resolve DNS entries and surf the web, and no other applications lose connectivity except for Firefox.\\\\n\\\\nFirefox must be shut down and the DNS connection restarted in order to get things working again.\\\\n\\\\n\\\\nExpected results:\\\\n\\\\nFirefox should be able to resolve the IP address for the specified site and display the requested page as intended.",
+        "target_assignee": "daniel@haxx.se"
+      }
+    ]
+  },
+  "retrieved_assignee_frequency": {
+    "daniel@haxx.se": 2,
+    "dd.mozilla@gmail.com": 1,
+    "darin@meer.net": 1,
+    "darin@netscape.com": 1
+  },
+  "controls": {
+    "model_execution": true,
+    "model_fitting": false,
+    "retraining": false,
+    "threshold_selection": false,
+    "artifact_modification": false,
+    "locked_test_use": false,
+    "synthetic_target_creation": false
+  },
+  "interpretation": "The five T4 nearest neighbors were resolved against the development population used by the frozen retrieval model. Their target_assignee values are historical retrieval evidence only and do not establish operational assignee eligibility, correctness, authorization, or an autonomous assignment policy."
+}

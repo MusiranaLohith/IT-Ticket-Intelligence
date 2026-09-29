@@ -1,0 +1,31 @@
+{
+  "task_id": "T6",
+  "operation_id": "MOD-010",
+  "operation_name": "Direct TF-IDF Score Reconciliation",
+  "status": "COMPLETED",
+  "population": {
+    "exact_score_rows": 274922,
+    "mod009_rows": 274922,
+    "rows_compared": 274922
+  },
+  "score_comparison": {
+    "mean_absolute_difference": 0.0008426022928646396,
+    "median_absolute_difference": 0.0003948740319028093,
+    "maximum_absolute_difference": 0.10488208871140525,
+    "scores_equal_within_1e-12": 2217,
+    "scores_differing_gt_1e-12": 272705
+  },
+  "controls": {
+    "raw_dataset_read": false,
+    "model_training": false,
+    "semantic_model_loading": false,
+    "target_modification": false,
+    "candidate_pool_modification": false,
+    "calibration": false,
+    "threshold_optimization": false
+  },
+  "artifacts": {
+    "report": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod010_direct_score_reconciliation.json",
+    "largest_score_differences": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod010_direct_score_differences.csv"
+  }
+}

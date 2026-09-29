@@ -1,0 +1,417 @@
+{
+  "operation": "T9_MOD-037_OP-008",
+  "title": "T5 Empirical Calibration Evaluation",
+  "status": "PASS",
+  "operation_type": "EMPIRICAL_EVALUATION_OF_EXISTING_NATIVE_OUTPUTS",
+  "previous_operation_validation": {
+    "checks": {
+      "OP-005": {
+        "status": "PASS",
+        "observed": "PASS"
+      },
+      "OP-006": {
+        "status": "PASS",
+        "observed": "PASS"
+      },
+      "OP-007": {
+        "status": "PASS",
+        "observed": "PASS"
+      },
+      "OP-007_no_calibration_fitting": {
+        "status": "PASS"
+      },
+      "OP-007_no_threshold_selection": {
+        "status": "PASS"
+      },
+      "OP-007_locked_test_isolated": {
+        "status": "PASS"
+      },
+      "protocol_primary_metrics": {
+        "status": "PASS",
+        "observed": [
+          "Brier score",
+          "Log loss"
+        ]
+      }
+    },
+    "failed_checks": [],
+    "status": "PASS"
+  },
+  "native_data_validation": {
+    "checks": {
+      "population_rows": {
+        "status": "PASS",
+        "observed": 74091
+      },
+      "population_unique_ids": {
+        "status": "PASS",
+        "observed": 74091
+      },
+      "population_duplicate_ids": {
+        "status": "PASS",
+        "observed": 0
+      },
+      "target_length": {
+        "status": "PASS",
+        "observed": 74091
+      },
+      "binary_target": {
+        "status": "PASS",
+        "observed": [
+          0.0,
+          1.0
+        ]
+      },
+      "target_distribution": {
+        "status": "PASS",
+        "expected": {
+          "0.0": 73611,
+          "1.0": 480
+        },
+        "observed": {
+          "0.0": 73611,
+          "1.0": 480
+        }
+      },
+      "p_base_length": {
+        "status": "PASS",
+        "observed": 74091
+      },
+      "p_base_finite": {
+        "status": "PASS"
+      },
+      "p_base_range": {
+        "status": "PASS"
+      },
+      "p_sigmoid_length": {
+        "status": "PASS",
+        "observed": 74091
+      },
+      "p_sigmoid_finite": {
+        "status": "PASS"
+      },
+      "p_sigmoid_range": {
+        "status": "PASS"
+      },
+      "p_isotonic_length": {
+        "status": "PASS",
+        "observed": 74091
+      },
+      "p_isotonic_finite": {
+        "status": "PASS"
+      },
+      "p_isotonic_range": {
+        "status": "PASS"
+      }
+    },
+    "failed_checks": [],
+    "status": "PASS"
+  },
+  "population": {
+    "rows": 74091,
+    "unique_ids": 74091,
+    "duplicate_ids": 0,
+    "positive_targets": 480,
+    "negative_targets": 73611,
+    "positive_rate": 0.006478519658258088
+  },
+  "fixed_probability_bins": [
+    0.0,
+    0.01,
+    0.05,
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9,
+    0.95,
+    0.99,
+    1.0
+  ],
+  "bootstrap": {
+    "method": "Stratified bootstrap preserving observed binary class counts.",
+    "replicates": 1000,
+    "random_state": 42,
+    "confidence_level": 0.95
+  },
+  "metrics_by_probability": {
+    "p_base": {
+      "point_estimates": {
+        "brier_score": 0.031018998152599814,
+        "log_loss": 0.11953384007668892,
+        "ece": 0.07581475960059116,
+        "mce": 0.7327007606720759,
+        "roc_auc": 0.8969287312131792,
+        "average_precision": 0.16377630768463408
+      },
+      "bootstrap_95_ci": {
+        "brier_score": {
+          "bootstrap_replicates": 1000,
+          "mean": 0.03100996264347884,
+          "std": 0.0004205391406836163,
+          "ci_95_lower": 0.030170533612369724,
+          "ci_95_upper": 0.03185491256093998
+        },
+        "log_loss": {
+          "bootstrap_replicates": 1000,
+          "mean": 0.11952648533139332,
+          "std": 0.0012788865004390697,
+          "ci_95_lower": 0.11704909929557306,
+          "ci_95_upper": 0.12206445604790944
+        },
+        "ece": {
+          "bootstrap_replicates": 1000,
+          "mean": 0.07579560835657197,
+          "std": 0.0005604935983806173,
+          "ci_95_lower": 0.07471113005718676,
+          "ci_95_upper": 0.07688375683181337
+        },
+        "mce": {
+          "bootstrap_replicates": 1000,
+          "mean": 0.7462829819471514,
+          "std": 0.014961837022548295,
+          "ci_95_lower": 0.7197403964502285,
+          "ci_95_upper": 0.7791258933506892
+        },
+        "roc_auc": {
+          "bootstrap_replicates": 1000,
+          "mean": 0.8967750508868694,
+          "std": 0.007877653778487844,
+          "ci_95_lower": 0.8812501054246873,
+          "ci_95_upper": 0.9119215786080431
+        },
+        "average_precision": {
+          "bootstrap_replicates": 1000,
+          "mean": 0.16606343292665693,
+          "std": 0.016746522972378122,
+          "ci_95_lower": 0.1351312242312376,
+          "ci_95_upper": 0.20170532222109466
+        }
+      }
+    },
+    "p_sigmoid": {
+      "point_estimates": {
+        "brier_score": 0.005860260617751882,
+        "log_loss": 0.028358865729015772,
+        "ece": 0.0009205397765848087,
+        "mce": 0.9030691091358121,
+        "roc_auc": 0.8969287312131792,
+        "average_precision": 0.16377630768463408
+      },
+      "bootstrap_95_ci": {
+        "brier_score": {
+          "bootstrap_replicates": 1000,
+          "mean": 0.005861870321283673,
+          "std": 7.882454322787813e-05,
+          "ci_95_lower": 0.005701060443516361,
+          "ci_95_upper": 0.006009262715757045
+        },
+        "log_loss": {
+          "bootstrap_replicates": 1000,
+          "mean": 0.028366389077708967,
+          "std": 0.0005434058815867014,
+          "ci_95_lower": 0.027322881001637996,
+          "ci_95_upper": 0.02937757462010594
+        },
+        "ece": {
+          "bootstrap_replicates": 1000,
+          "mean": 0.0010506276993786027,
+          "std": 0.00020499542465961156,
+          "ci_95_lower": 0.0006622759803108589,
+          "ci_95_upper": 0.0014740485848289983
+        },
+        "mce": {
+          "bootstrap_replicates": 1000,
+          "mean": 0.7276874869494073,
+          "std": 0.2732869243446188,
+          "ci_95_lower": 0.18769760076029252,
+          "ci_95_upper": 0.9030691091358122
+        },
+        "roc_auc": {
+          "bootstrap_replicates": 1000,
+          "mean": 0.8967750508868694,
+          "std": 0.007877653778487844,
+          "ci_95_lower": 0.8812501054246873,
+          "ci_95_upper": 0.9119215786080431
+        },
+        "average_precision": {
+          "bootstrap_replicates": 1000,
+          "mean": 0.16606343292665693,
+          "std": 0.016746522972378122,
+          "ci_95_lower": 0.1351312242312376,
+          "ci_95_upper": 0.20170532222109466
+        }
+      }
+    },
+    "p_isotonic": {
+      "point_estimates": {
+        "brier_score": 0.005843631923421229,
+        "log_loss": 0.02976425583144649,
+        "ece": 0.0012006431935900593,
+        "mce": 0.0537541335499602,
+        "roc_auc": 0.8948104732988276,
+        "average_precision": 0.14869819508663887
+      },
+      "bootstrap_95_ci": {
+        "brier_score": {
+          "bootstrap_replicates": 1000,
+          "mean": 0.005844862385627531,
+          "std": 6.794561715000749e-05,
+          "ci_95_lower": 0.00571154022296303,
+          "ci_95_upper": 0.0059670846359554264
+        },
+        "log_loss": {
+          "bootstrap_replicates": 1000,
+          "mean": 0.029753933247756693,
+          "std": 0.0010039893796809287,
+          "ci_95_lower": 0.02787783900358848,
+          "ci_95_upper": 0.03178318499994941
+        },
+        "ece": {
+          "bootstrap_replicates": 1000,
+          "mean": 0.001321244944669886,
+          "std": 0.00025431990272669426,
+          "ci_95_lower": 0.000856611324114784,
+          "ci_95_upper": 0.0018204422643426036
+        },
+        "mce": {
+          "bootstrap_replicates": 1000,
+          "mean": 0.11500465943766375,
+          "std": 0.05193196869263201,
+          "ci_95_lower": 0.043261553837033666,
+          "ci_95_upper": 0.23445320354131333
+        },
+        "roc_auc": {
+          "bootstrap_replicates": 1000,
+          "mean": 0.8947307217444856,
+          "std": 0.007994828738131562,
+          "ci_95_lower": 0.879260868577726,
+          "ci_95_upper": 0.9099813529199667
+        },
+        "average_precision": {
+          "bootstrap_replicates": 1000,
+          "mean": 0.14968274978310778,
+          "std": 0.014691226665722652,
+          "ci_95_lower": 0.12373509257895746,
+          "ci_95_upper": 0.17951633056151797
+        }
+      }
+    }
+  },
+  "descriptive_metric_table": [
+    {
+      "probability_field": "p_base",
+      "brier_score": 0.031018998152599814,
+      "log_loss": 0.11953384007668892,
+      "ece": 0.07581475960059116,
+      "mce": 0.7327007606720759,
+      "roc_auc": 0.8969287312131792,
+      "average_precision": 0.16377630768463408
+    },
+    {
+      "probability_field": "p_sigmoid",
+      "brier_score": 0.005860260617751882,
+      "log_loss": 0.028358865729015772,
+      "ece": 0.0009205397765848087,
+      "mce": 0.9030691091358121,
+      "roc_auc": 0.8969287312131792,
+      "average_precision": 0.16377630768463408
+    },
+    {
+      "probability_field": "p_isotonic",
+      "brier_score": 0.005843631923421229,
+      "log_loss": 0.02976425583144649,
+      "ece": 0.0012006431935900593,
+      "mce": 0.0537541335499602,
+      "roc_auc": 0.8948104732988276,
+      "average_precision": 0.14869819508663887
+    }
+  ],
+  "probability_distributions": {
+    "p_base": {
+      "min": 1.544367184785814e-05,
+      "max": 0.9994659098849336,
+      "mean": 0.08229327925884924,
+      "median": 0.021859698296415767,
+      "std": 0.1577958230740209,
+      "quantiles": {
+        "0.01": 0.0005516296554186423,
+        "0.05": 0.001545436179041118,
+        "0.25": 0.00720307699145769,
+        "0.50": 0.021859698296415767,
+        "0.75": 0.07369494322058681,
+        "0.95": 0.41634653741661165,
+        "0.99": 0.8527057315834944
+      }
+    },
+    "p_sigmoid": {
+      "min": 6.942310328241331e-06,
+      "max": 0.9030691091358121,
+      "mean": 0.007076626142712772,
+      "median": 0.0017243120176412496,
+      "std": 0.028086275310865584,
+      "quantiles": {
+        "0.01": 0.00010443292912109159,
+        "0.05": 0.00022817749917176082,
+        "0.25": 0.0007356403773062741,
+        "0.50": 0.0017243120176412496,
+        "0.75": 0.004502298589180409,
+        "0.95": 0.023297157149819628,
+        "0.99": 0.10445904349162065
+      }
+    },
+    "p_isotonic": {
+      "min": 0.0,
+      "max": 0.5,
+      "mean": 0.00708799168369449,
+      "median": 0.0012324929971988796,
+      "std": 0.0269562771590849,
+      "quantiles": {
+        "0.01": 0.0,
+        "0.05": 0.0,
+        "0.25": 0.0012324929971988796,
+        "0.50": 0.0012324929971988796,
+        "0.75": 0.003326277592984578,
+        "0.95": 0.036101083032490974,
+        "0.99": 0.11538461538461539
+      }
+    }
+  },
+  "reliability_output": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op008_t5_reliability_bins.csv",
+  "bootstrap_output": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op008_t5_bootstrap_summary.csv",
+  "controls": {
+    "model_fitting_performed": false,
+    "new_probability_generation_performed": false,
+    "calibration_fitting_performed": false,
+    "target_creation_performed": false,
+    "target_relabelling_performed": false,
+    "threshold_selection_performed": false,
+    "automation_threshold_selected": false,
+    "review_threshold_selected": false,
+    "universal_confidence_created": false,
+    "universal_risk_score_created": false,
+    "cross_task_probability_averaging_performed": false,
+    "arbitrary_cross_task_weights_used": false,
+    "locked_test_used": false,
+    "post_creation_information_used": false,
+    "native_t5_target_preserved": true,
+    "native_t5_probability_semantics_preserved": true,
+    "observed_validation_prevalence_preserved": true
+  },
+  "control_failures": [],
+  "interpretation_boundary": [
+    "Brier score and log loss are treated as proper probabilistic scoring metrics.",
+    "ECE and MCE are calibration diagnostics, not standalone proof of calibration.",
+    "ROC-AUC and Average Precision describe discrimination/ranking, not calibration.",
+    "No automation threshold is established.",
+    "No human-review threshold is established.",
+    "T5 probabilities remain task-specific duplicate probabilities.",
+    "No universal ticket confidence or risk quantity is created.",
+    "No cross-task numerical comparison is performed."
+  ],
+  "decision": "T5 native probability representations have been empirically evaluated under the frozen T9 protocol. Any subsequent model/calibration selection claim must be based on these predefined metrics and uncertainty estimates and must preserve the task-specific T5 probability semantics."
+}

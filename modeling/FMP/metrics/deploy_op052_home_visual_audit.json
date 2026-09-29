@@ -1,0 +1,55 @@
+{
+  "operation": "DEPLOY-OP-052",
+  "title": "Home Page Visual Audit",
+  "status": "FAIL",
+  "files": {
+    "index.html": "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/index.html",
+    "app.js": "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/app.js",
+    "style.css": "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/style.css"
+  },
+  "checks": {
+    "PROJECT_LANDING": true,
+    "ENTER_SYSTEM_BUTTON": true,
+    "VIEW_RESEARCH_BUTTON": true,
+    "FEATURE_STRIP": true,
+    "SYSTEM_TITLE": true,
+    "EVIDENCE_FIRST_TAGLINE": true,
+    "ENTER_SYSTEM_TEXT": true,
+    "VIEW_RESEARCH_TEXT": true,
+    "DATASET_INVESTIGATION": true,
+    "T1_T11_EVIDENCE_CHAIN": true,
+    "HUMAN_DECISION_BOUNDARY": true,
+    "DEPLOYMENT_INTEGRITY": true,
+    "ENTER_SYSTEM_HANDLER": false,
+    "VIEW_RESEARCH_HANDLER": false,
+    "SHOW_WORKSPACE_HOME": true,
+    "SHOW_PROJECT_LANDING": true,
+    "LANDING_CONTAINER": true,
+    "PRIMARY_ACTION": true,
+    "SECONDARY_ACTION": true,
+    "LANDING_FEATURES": true,
+    "LANDING_RESPONSIVE": true,
+    "LANDING_SECTION_EXTRACTED": true,
+    "TICKET_PIPELINE_REFERENCE": true,
+    "SKLEARN_REFERENCE": true,
+    "PREDICT_BATCH_REFERENCE": true
+  },
+  "hashes": {
+    "index.html": "b98b320f718dbd5326252373d2a752d537e6ae9aea8ec9e4cccb858f6d3228c2",
+    "app.js": "7507f3d40e4a105dd5e87f4eb820ef9a62c7d047bedbc20ed11383d20c7018c4",
+    "style.css": "ee42d1d750b0420cf29517886ae684e33f1a4dbaecc26f70b9006feef18119d2"
+  },
+  "structural_failures": [
+    "ENTER_SYSTEM_HANDLER",
+    "VIEW_RESEARCH_HANDLER"
+  ],
+  "safety_failures": [],
+  "modification": {
+    "index.html": false,
+    "app.js": false,
+    "style.css": false,
+    "backend": false,
+    "frozen_runtime": false,
+    "modeling": false
+  }
+}

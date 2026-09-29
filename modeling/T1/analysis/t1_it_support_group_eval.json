@@ -1,0 +1,447 @@
+{
+  "operation": "T1_IT_SUPPORT_GROUP_LEVEL_EVALUATION_SENSITIVITY",
+  "status": "COMPLETE",
+  "split_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/splits/t1_split.csv",
+  "model_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/baselines/t1_it_support_svm.joblib",
+  "evaluation_records": 446,
+  "record_correct": 420,
+  "record_incorrect": 26,
+  "record_accuracy": 0.9417040358744395,
+  "unique_normalized_text_groups": 119,
+  "repeated_normalized_text_groups": 69,
+  "records_in_repeated_groups": 396,
+  "repeated_record_rate": 0.8878923766816144,
+  "single_record_groups": 50,
+  "fully_correct_groups": 102,
+  "fully_correct_group_rate": 0.8571428571428571,
+  "prediction_consistent_groups": 119,
+  "prediction_consistent_group_rate": 1.0,
+  "homogeneous_label_groups": 118,
+  "homogeneous_group_correct": 1,
+  "homogeneous_group_accuracy": 0.00847457627118644,
+  "multi_label_normalized_text_groups": 1,
+  "records_in_multi_label_groups": 5,
+  "repeated_group_record_count": 396,
+  "repeated_group_record_correct": 383,
+  "repeated_group_record_accuracy": 0.9671717171717171,
+  "repeated_groups_fully_correct": 65,
+  "repeated_group_fully_correct_rate": 0.9420289855072463,
+  "single_record_group_count": 50,
+  "single_record_group_correct": 37,
+  "single_record_group_accuracy": 0.74,
+  "largest_groups": [
+    {
+      "normalized_text": "file share access - [ticket id] - [name] ([company]. [location])",
+      "record_count": 76,
+      "labels": [
+        "Fileservice"
+      ],
+      "multi_label": false,
+      "predictions": [
+        "Fileservice"
+      ],
+      "prediction_consistent": true,
+      "correct_records": 76,
+      "incorrect_records": 0,
+      "record_accuracy": 1.0,
+      "fully_correct": true,
+      "homogeneous_label": true,
+      "homogeneous_group_correct": true
+    },
+    {
+      "normalized_text": "shared mailbox access - [address] - [email]",
+      "record_count": 46,
+      "labels": [
+        "Support general"
+      ],
+      "multi_label": false,
+      "predictions": [
+        "Support general"
+      ],
+      "prediction_consistent": true,
+      "correct_records": 46,
+      "incorrect_records": 0,
+      "record_accuracy": 1.0,
+      "fully_correct": true,
+      "homogeneous_label": true,
+      "homogeneous_group_correct": true
+    },
+    {
+      "normalized_text": "[ticket id] - new support ticket received - basis user - [username] - [name] ([company]. [location])",
+      "record_count": 22,
+      "labels": [
+        "Support general"
+      ],
+      "multi_label": false,
+      "predictions": [
+        "Support general"
+      ],
+      "prediction_consistent": true,
+      "correct_records": 22,
+      "incorrect_records": 0,
+      "record_accuracy": 1.0,
+      "fully_correct": true,
+      "homogeneous_label": true,
+      "homogeneous_group_correct": true
+    },
+    {
+      "normalized_text": "initiated by git: missing connection to all securitytools on system [server]",
+      "record_count": 18,
+      "labels": [
+        "Software"
+      ],
+      "multi_label": false,
+      "predictions": [
+        "Software"
+      ],
+      "prediction_consistent": true,
+      "correct_records": 18,
+      "incorrect_records": 0,
+      "record_accuracy": 1.0,
+      "fully_correct": true,
+      "homogeneous_label": true,
+      "homogeneous_group_correct": true
+    },
+    {
+      "normalized_text": "[ticket id] - new support ticket received - file share access - [ticket id] - [name] ([company]. [location])",
+      "record_count": 16,
+      "labels": [
+        "Fileservice"
+      ],
+      "multi_label": false,
+      "predictions": [
+        "Fileservice"
+      ],
+      "prediction_consistent": true,
+      "correct_records": 16,
+      "incorrect_records": 0,
+      "record_accuracy": 1.0,
+      "fully_correct": true,
+      "homogeneous_label": true,
+      "homogeneous_group_correct": true
+    },
+    {
+      "normalized_text": "remove file share access - [ticket id] - [name] ([company]a. [location])",
+      "record_count": 14,
+      "labels": [
+        "Fileservice"
+      ],
+      "multi_label": false,
+      "predictions": [
+        "Fileservice"
+      ],
+      "prediction_consistent": true,
+      "correct_records": 14,
+      "incorrect_records": 0,
+      "record_accuracy": 1.0,
+      "fully_correct": true,
+      "homogeneous_label": true,
+      "homogeneous_group_correct": true
+    },
+    {
+      "normalized_text": "file share access - [ticket id] - [address] ([company]a. [location])",
+      "record_count": 13,
+      "labels": [
+        "Fileservice"
+      ],
+      "multi_label": false,
+      "predictions": [
+        "Fileservice"
+      ],
+      "prediction_consistent": true,
+      "correct_records": 13,
+      "incorrect_records": 0,
+      "record_accuracy": 1.0,
+      "fully_correct": true,
+      "homogeneous_label": true,
+      "homogeneous_group_correct": true
+    },
+    {
+      "normalized_text": "missing connection to all securitytools on system [server]",
+      "record_count": 8,
+      "labels": [
+        "Software"
+      ],
+      "multi_label": false,
+      "predictions": [
+        "Software"
+      ],
+      "prediction_consistent": true,
+      "correct_records": 8,
+      "incorrect_records": 0,
+      "record_accuracy": 1.0,
+      "fully_correct": true,
+      "homogeneous_label": true,
+      "homogeneous_group_correct": true
+    },
+    {
+      "normalized_text": "delete shared mailbox - [email] - [email]. [location])",
+      "record_count": 7,
+      "labels": [
+        "Support general"
+      ],
+      "multi_label": false,
+      "predictions": [
+        "Support general"
+      ],
+      "prediction_consistent": true,
+      "correct_records": 7,
+      "incorrect_records": 0,
+      "record_accuracy": 1.0,
+      "fully_correct": true,
+      "homogeneous_label": true,
+      "homogeneous_group_correct": true
+    },
+    {
+      "normalized_text": "file share access - [ticket id] - [name] ([company] [location])",
+      "record_count": 7,
+      "labels": [
+        "Fileservice"
+      ],
+      "multi_label": false,
+      "predictions": [
+        "Fileservice"
+      ],
+      "prediction_consistent": true,
+      "correct_records": 7,
+      "incorrect_records": 0,
+      "record_accuracy": 1.0,
+      "fully_correct": true,
+      "homogeneous_label": true,
+      "homogeneous_group_correct": true
+    },
+    {
+      "normalized_text": "file share access - [ticket id] - [name] ([company])",
+      "record_count": 6,
+      "labels": [
+        "Fileservice"
+      ],
+      "multi_label": false,
+      "predictions": [
+        "Fileservice"
+      ],
+      "prediction_consistent": true,
+      "correct_records": 6,
+      "incorrect_records": 0,
+      "record_accuracy": 1.0,
+      "fully_correct": true,
+      "homogeneous_label": true,
+      "homogeneous_group_correct": true
+    },
+    {
+      "normalized_text": "file share access - [ticket id] - [name] ([company]. [location])service request: file share access grant access to file share for the following user: [name] ([company]. [location]) (username: [username]) access type: (rw) read / write file share: j:/ce-sta/ please create the folder if it does not yet exist and give r/w access for this and all subfolders. requestor: [name] ([company]. [location]) comment:",
+      "record_count": 6,
+      "labels": [
+        "Fileservice"
+      ],
+      "multi_label": false,
+      "predictions": [
+        "Fileservice"
+      ],
+      "prediction_consistent": true,
+      "correct_records": 6,
+      "incorrect_records": 0,
+      "record_accuracy": 1.0,
+      "fully_correct": true,
+      "homogeneous_label": true,
+      "homogeneous_group_correct": true
+    },
+    {
+      "normalized_text": "[ticket id] - a support ticket was forwarded to your role - check_mk sd hostalarm: ([server]) [company] ls site2site[location]- up -> down",
+      "record_count": 5,
+      "labels": [
+        "Support general"
+      ],
+      "multi_label": false,
+      "predictions": [
+        "Support general"
+      ],
+      "prediction_consistent": true,
+      "correct_records": 5,
+      "incorrect_records": 0,
+      "record_accuracy": 1.0,
+      "fully_correct": true,
+      "homogeneous_label": true,
+      "homogeneous_group_correct": true
+    },
+    {
+      "normalized_text": "[ticket id] - new support ticket received - acesso",
+      "record_count": 5,
+      "labels": [
+        "Active Directory",
+        "Fileservice"
+      ],
+      "multi_label": true,
+      "predictions": [
+        "Software"
+      ],
+      "prediction_consistent": true,
+      "correct_records": 0,
+      "incorrect_records": 5,
+      "record_accuracy": 0.0,
+      "fully_correct": false,
+      "homogeneous_label": false,
+      "homogeneous_group_correct": null
+    },
+    {
+      "normalized_text": "[ticket id] - new support ticket received - skype",
+      "record_count": 5,
+      "labels": [
+        "O365"
+      ],
+      "multi_label": false,
+      "predictions": [
+        "O365"
+      ],
+      "prediction_consistent": true,
+      "correct_records": 5,
+      "incorrect_records": 0,
+      "record_accuracy": 1.0,
+      "fully_correct": true,
+      "homogeneous_label": true,
+      "homogeneous_group_correct": true
+    },
+    {
+      "normalized_text": "create shared mailbox - [email] - [email]",
+      "record_count": 5,
+      "labels": [
+        "Support general"
+      ],
+      "multi_label": false,
+      "predictions": [
+        "Support general"
+      ],
+      "prediction_consistent": true,
+      "correct_records": 5,
+      "incorrect_records": 0,
+      "record_accuracy": 1.0,
+      "fully_correct": true,
+      "homogeneous_label": true,
+      "homogeneous_group_correct": true
+    },
+    {
+      "normalized_text": "create shared mailbox - [ticket id] - [email]",
+      "record_count": 5,
+      "labels": [
+        "Support general"
+      ],
+      "multi_label": false,
+      "predictions": [
+        "Support general"
+      ],
+      "prediction_consistent": true,
+      "correct_records": 5,
+      "incorrect_records": 0,
+      "record_accuracy": 1.0,
+      "fully_correct": true,
+      "homogeneous_label": true,
+      "homogeneous_group_correct": true
+    },
+    {
+      "normalized_text": "file share access - [ticket id] - [name] (kwa. [location])",
+      "record_count": 5,
+      "labels": [
+        "Fileservice"
+      ],
+      "multi_label": false,
+      "predictions": [
+        "Fileservice"
+      ],
+      "prediction_consistent": true,
+      "correct_records": 5,
+      "incorrect_records": 0,
+      "record_accuracy": 1.0,
+      "fully_correct": true,
+      "homogeneous_label": true,
+      "homogeneous_group_correct": true
+    },
+    {
+      "normalized_text": "file share access - [ticket id] - [name]. [name] ([company]. [location])",
+      "record_count": 5,
+      "labels": [
+        "Fileservice"
+      ],
+      "multi_label": false,
+      "predictions": [
+        "Fileservice"
+      ],
+      "prediction_consistent": true,
+      "correct_records": 5,
+      "incorrect_records": 0,
+      "record_accuracy": 1.0,
+      "fully_correct": true,
+      "homogeneous_label": true,
+      "homogeneous_group_correct": true
+    },
+    {
+      "normalized_text": "[ticket id] - new support ticket received - light user for external - [username] - [name]",
+      "record_count": 4,
+      "labels": [
+        "Support general"
+      ],
+      "multi_label": false,
+      "predictions": [
+        "Support general"
+      ],
+      "prediction_consistent": true,
+      "correct_records": 4,
+      "incorrect_records": 0,
+      "record_accuracy": 1.0,
+      "fully_correct": true,
+      "homogeneous_label": true,
+      "homogeneous_group_correct": true
+    }
+  ],
+  "multi_label_group_details": [
+    {
+      "normalized_text": "[ticket id] - new support ticket received - acesso",
+      "record_count": 5,
+      "labels": [
+        "Active Directory",
+        "Fileservice"
+      ],
+      "predictions": [
+        "Software"
+      ],
+      "correct_records": 0,
+      "incorrect_records": 5,
+      "records": [
+        {
+          "id": "976",
+          "actual": "Active Directory",
+          "prediction": "Software",
+          "correct": false
+        },
+        {
+          "id": "997",
+          "actual": "Fileservice",
+          "prediction": "Software",
+          "correct": false
+        },
+        {
+          "id": "1260",
+          "actual": "Active Directory",
+          "prediction": "Software",
+          "correct": false
+        },
+        {
+          "id": "888",
+          "actual": "Active Directory",
+          "prediction": "Software",
+          "correct": false
+        },
+        {
+          "id": "892",
+          "actual": "Active Directory",
+          "prediction": "Software",
+          "correct": false
+        }
+      ]
+    }
+  ],
+  "model_retrained": false,
+  "evaluation_used_for_fit": false,
+  "frozen_split_modified": false,
+  "labels_modified": false,
+  "raw_source_modified": false
+}

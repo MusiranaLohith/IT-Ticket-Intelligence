@@ -1,0 +1,149 @@
+{
+  "operation": "H-RUN-008",
+  "operation_name": "T3 Decision-Score Inspection",
+  "status": "PASS",
+  "runtime_controls": {
+    "training": false,
+    "retraining": false,
+    "model_modification": false,
+    "threshold_selection": false,
+    "calibration": false,
+    "locked_test_use": false
+  },
+  "artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib",
+  "classes": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+  ],
+  "results": [
+    {
+      "ticket_id": "H-RUN-008-A",
+      "title": "VPN connection fails after password reset",
+      "prediction": "S3",
+      "scores": [
+        {
+          "class": "S1",
+          "score": -0.6421021418053453
+        },
+        {
+          "class": "S2",
+          "score": -0.22495507173253498
+        },
+        {
+          "class": "S3",
+          "score": 0.4841659586088237
+        },
+        {
+          "class": "S4",
+          "score": 0.3828912549289762
+        }
+      ],
+      "ranked_scores": [
+        {
+          "class": "S3",
+          "score": 0.4841659586088237
+        },
+        {
+          "class": "S4",
+          "score": 0.3828912549289762
+        },
+        {
+          "class": "S2",
+          "score": -0.22495507173253498
+        },
+        {
+          "class": "S1",
+          "score": -0.6421021418053453
+        }
+      ],
+      "top_vs_second_margin": 0.10127470367984753
+    },
+    {
+      "ticket_id": "H-RUN-008-B",
+      "title": "Monitor replacement request",
+      "prediction": "S3",
+      "scores": [
+        {
+          "class": "S1",
+          "score": -1.9585458054333302
+        },
+        {
+          "class": "S2",
+          "score": 0.6116828202177051
+        },
+        {
+          "class": "S3",
+          "score": 0.7884276545099033
+        },
+        {
+          "class": "S4",
+          "score": 0.5584353307056444
+        }
+      ],
+      "ranked_scores": [
+        {
+          "class": "S3",
+          "score": 0.7884276545099033
+        },
+        {
+          "class": "S2",
+          "score": 0.6116828202177051
+        },
+        {
+          "class": "S4",
+          "score": 0.5584353307056444
+        },
+        {
+          "class": "S1",
+          "score": -1.9585458054333302
+        }
+      ],
+      "top_vs_second_margin": 0.17674483429219812
+    },
+    {
+      "ticket_id": "H-RUN-008-C",
+      "title": "Password reset instructions",
+      "prediction": "S3",
+      "scores": [
+        {
+          "class": "S1",
+          "score": -0.8564509214830445
+        },
+        {
+          "class": "S2",
+          "score": -0.31890831964066235
+        },
+        {
+          "class": "S3",
+          "score": 0.62487478512477
+        },
+        {
+          "class": "S4",
+          "score": 0.5504844559988558
+        }
+      ],
+      "ranked_scores": [
+        {
+          "class": "S3",
+          "score": 0.62487478512477
+        },
+        {
+          "class": "S4",
+          "score": 0.5504844559988558
+        },
+        {
+          "class": "S2",
+          "score": -0.31890831964066235
+        },
+        {
+          "class": "S1",
+          "score": -0.8564509214830445
+        }
+      ],
+      "top_vs_second_margin": 0.07439032912591426
+    }
+  ],
+  "interpretation_boundary": "Decision scores are native classifier outputs. They are not probabilities, calibrated confidence, or an operational severity threshold."
+}

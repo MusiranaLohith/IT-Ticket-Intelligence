@@ -1,0 +1,42 @@
+{
+  "operation": "F-OP-002",
+  "title": "Final E2E Integrated Population Evaluation",
+  "status": "REQUIRES_REVIEW",
+  "read_only": true,
+  "models_executed": false,
+  "model_modified": false,
+  "retraining_performed": false,
+  "threshold_selection_performed": false,
+  "threshold_optimization_performed": false,
+  "locked_test_reused_for_policy_selection": false,
+  "primary_artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/mod036/op026/t8_mod036_op026_decision_engine_validation.json",
+  "all_op026_json_files": [
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/mod036/op026/t8_mod036_op026_decision_engine_validation.json"
+  ],
+  "population": {
+    "row_count": 0,
+    "ticket_id_field": null,
+    "non_null_ticket_ids": 0,
+    "unique_ticket_count": 0,
+    "duplicate_ticket_rows": 0,
+    "null_ticket_count": 0
+  },
+  "evidence_state_counts": {},
+  "component_count_counts": {},
+  "provenance_counts": {},
+  "availability_counts": {},
+  "conflict_counts": {},
+  "unsupported_universal_fields": {
+    "confidence": [],
+    "risk": []
+  },
+  "integrity_failures": [
+    "PRIMARY_ARTIFACT_HAS_NO_ROW_RECORDS"
+  ],
+  "interpretation": {
+    "missing_evidence_is_not_negative": true,
+    "native_task_semantics_preserved": true,
+    "universal_confidence_not_created": true,
+    "universal_risk_not_created": true
+  }
+}

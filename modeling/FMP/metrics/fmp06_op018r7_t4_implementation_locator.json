@@ -1,0 +1,647 @@
+{
+  "operation": "FMP-06 OP-018R7",
+  "operation_type": "T4_IMPLEMENTATION_LOCATOR",
+  "status": "PASS",
+  "t4_root": "modeling/T4",
+  "python_files_found": 31,
+  "implementation_candidates": [
+    {
+      "path": "modeling/T4/scripts/t4_baseline.py",
+      "size_bytes": 18138,
+      "functions": [
+        "fail",
+        "combine_features",
+        "top_k_accuracy",
+        "candidate_coverage_metrics",
+        "class_concentration",
+        "main",
+        "share"
+      ],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "time",
+        "joblib",
+        "numpy",
+        "pandas",
+        "sklearn.feature_extraction.text",
+        "sklearn.linear_model",
+        "sklearn.metrics"
+      ],
+      "keyword_hits": [
+        "assignee",
+        "candidate",
+        "rank",
+        "tfidf"
+      ]
+    },
+    {
+      "path": "modeling/T4/scripts/t4_baseline_contract.py",
+      "size_bytes": 10376,
+      "functions": [
+        "fail",
+        "main"
+      ],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "pandas"
+      ],
+      "keyword_hits": [
+        "assignee",
+        "candidate"
+      ]
+    },
+    {
+      "path": "modeling/T4/scripts/t4_baseline_r1.py",
+      "size_bytes": 13992,
+      "functions": [
+        "combined_text",
+        "load_data",
+        "main"
+      ],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "time",
+        "joblib",
+        "numpy",
+        "pandas",
+        "sklearn.feature_extraction.text",
+        "sklearn.svm",
+        "sklearn.metrics"
+      ],
+      "keyword_hits": [
+        "assignee",
+        "candidate",
+        "tfidf",
+        "topk"
+      ]
+    },
+    {
+      "path": "modeling/T4/scripts/t4_compare_r1_mod007.py",
+      "size_bytes": 10100,
+      "functions": [
+        "load_json",
+        "main"
+      ],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "json"
+      ],
+      "keyword_hits": [
+        "assignee",
+        "rank",
+        "similarity",
+        "topk"
+      ]
+    },
+    {
+      "path": "modeling/T4/scripts/t4_materialize.py",
+      "size_bytes": 5827,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "pandas"
+      ],
+      "keyword_hits": [
+        "assignee"
+      ]
+    },
+    {
+      "path": "modeling/T4/scripts/t4_mod007_retrieval_analysis.py",
+      "size_bytes": 15557,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "numpy",
+        "pandas"
+      ],
+      "keyword_hits": [
+        "assignee",
+        "rank",
+        "retrieval",
+        "retrieve",
+        "similarity"
+      ]
+    },
+    {
+      "path": "modeling/T4/scripts/t4_mod007_similarity_analysis.py",
+      "size_bytes": 12443,
+      "functions": [
+        "percentile",
+        "main"
+      ],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "numpy"
+      ],
+      "keyword_hits": [
+        "cosine",
+        "rank",
+        "retrieval",
+        "retrieve",
+        "similarity"
+      ]
+    },
+    {
+      "path": "modeling/T4/scripts/t4_mod007_true_assignee_coverage.py",
+      "size_bytes": 17859,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "numpy",
+        "pandas"
+      ],
+      "keyword_hits": [
+        "assignee",
+        "candidate",
+        "rank",
+        "retrieval",
+        "retrieve",
+        "similarity",
+        "topk"
+      ]
+    },
+    {
+      "path": "modeling/T4/scripts/t4_mod008.py",
+      "size_bytes": 8960,
+      "functions": [
+        "make_text",
+        "retrieve",
+        "run_word",
+        "run_char",
+        "run_word_char",
+        "main"
+      ],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "time",
+        "numpy",
+        "pandas",
+        "scipy.sparse",
+        "sklearn.feature_extraction.text"
+      ],
+      "keyword_hits": [
+        "assignee",
+        "candidate",
+        "rank",
+        "retrieval",
+        "retrieve",
+        "tfidf"
+      ]
+    },
+    {
+      "path": "modeling/T4/scripts/t4_mod008_analysis.py",
+      "size_bytes": 8480,
+      "functions": [
+        "load_json",
+        "pp",
+        "fmt",
+        "main"
+      ],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "json"
+      ],
+      "keyword_hits": [
+        "assignee",
+        "rank",
+        "retrieval",
+        "retrieve"
+      ]
+    },
+    {
+      "path": "modeling/T4/scripts/t4_mod008_full.py",
+      "size_bytes": 8553,
+      "functions": [
+        "make_text",
+        "retrieve",
+        "main"
+      ],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "time",
+        "numpy",
+        "pandas",
+        "scipy.sparse",
+        "sklearn.feature_extraction.text"
+      ],
+      "keyword_hits": [
+        "assignee",
+        "candidate",
+        "rank",
+        "retrieval",
+        "retrieve",
+        "tfidf"
+      ]
+    },
+    {
+      "path": "modeling/T4/scripts/t4_mod009.py",
+      "size_bytes": 10738,
+      "functions": [
+        "combine_text",
+        "bm25_documents",
+        "bm25_queries",
+        "compute_idf",
+        "apply_idf",
+        "extract_top_indices",
+        "main"
+      ],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "time",
+        "numpy",
+        "pandas",
+        "scipy.sparse",
+        "sklearn.feature_extraction.text"
+      ],
+      "keyword_hits": [
+        "assignee",
+        "bm25",
+        "candidate",
+        "retrieval",
+        "retrieve"
+      ]
+    },
+    {
+      "path": "modeling/T4/scripts/t4_mod010.py",
+      "size_bytes": 8849,
+      "functions": [
+        "load_json",
+        "fmt",
+        "main"
+      ],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "json"
+      ],
+      "keyword_hits": [
+        "bm25",
+        "rank",
+        "retrieval"
+      ]
+    },
+    {
+      "path": "modeling/T4/scripts/t4_mod011.py",
+      "size_bytes": 16105,
+      "functions": [
+        "build_text",
+        "bm25_weight_matrix",
+        "bm25_query_matrix",
+        "calculate_ranking_metrics",
+        "calculate_support_buckets",
+        "main"
+      ],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "time",
+        "numpy",
+        "pandas",
+        "sklearn.feature_extraction.text"
+      ],
+      "keyword_hits": [
+        "assignee",
+        "bm25",
+        "candidate",
+        "rank",
+        "retrieval",
+        "retrieve"
+      ]
+    },
+    {
+      "path": "modeling/T4/scripts/t4_mod012.py",
+      "size_bytes": 13788,
+      "functions": [
+        "load_checkpoint",
+        "retrieval_metrics",
+        "true_assignee_positions",
+        "support_bucket",
+        "support_analysis",
+        "main"
+      ],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "numpy",
+        "pandas"
+      ],
+      "keyword_hits": [
+        "assignee",
+        "bm25",
+        "candidate",
+        "rank",
+        "retrieval",
+        "retrieve"
+      ]
+    },
+    {
+      "path": "modeling/T4/scripts/t4_mod013.py",
+      "size_bytes": 11793,
+      "functions": [
+        "load_json",
+        "pp",
+        "delta_pp",
+        "main",
+        "fmt"
+      ],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "json"
+      ],
+      "keyword_hits": [
+        "assignee",
+        "bm25",
+        "candidate",
+        "rank",
+        "retrieval",
+        "retrieve"
+      ]
+    },
+    {
+      "path": "modeling/T4/scripts/t4_mod014.py",
+      "size_bytes": 4905,
+      "functions": [
+        "load_json",
+        "main"
+      ],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "json"
+      ],
+      "keyword_hits": [
+        "assignee",
+        "bm25",
+        "retrieval"
+      ]
+    },
+    {
+      "path": "modeling/T4/scripts/t4_model_contract.py",
+      "size_bytes": 13023,
+      "functions": [
+        "sha256_file",
+        "main"
+      ],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "hashlib",
+        "pandas"
+      ],
+      "keyword_hits": [
+        "assignee",
+        "candidate",
+        "rank"
+      ]
+    },
+    {
+      "path": "modeling/T4/scripts/t4_plt001.py",
+      "size_bytes": 2172,
+      "functions": [],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "matplotlib.pyplot",
+        "numpy"
+      ],
+      "keyword_hits": [
+        "bm25",
+        "rank",
+        "retrieval"
+      ]
+    },
+    {
+      "path": "modeling/T4/scripts/t4_plt002.py",
+      "size_bytes": 2191,
+      "functions": [],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "matplotlib.pyplot"
+      ],
+      "keyword_hits": [
+        "bm25"
+      ]
+    },
+    {
+      "path": "modeling/T4/scripts/t4_plt003.py",
+      "size_bytes": 2102,
+      "functions": [],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "matplotlib.pyplot"
+      ],
+      "keyword_hits": [
+        "bm25",
+        "rank"
+      ]
+    },
+    {
+      "path": "modeling/T4/scripts/t4_plt004.py",
+      "size_bytes": 3177,
+      "functions": [],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "matplotlib.pyplot"
+      ],
+      "keyword_hits": [
+        "assignee",
+        "bm25"
+      ]
+    },
+    {
+      "path": "modeling/T4/scripts/t4_plt005.py",
+      "size_bytes": 2204,
+      "functions": [],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "matplotlib.pyplot"
+      ],
+      "keyword_hits": [
+        "assignee",
+        "bm25",
+        "retrieval"
+      ]
+    },
+    {
+      "path": "modeling/T4/scripts/t4_plt007.py",
+      "size_bytes": 2400,
+      "functions": [],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "matplotlib.pyplot"
+      ],
+      "keyword_hits": [
+        "assignee"
+      ]
+    },
+    {
+      "path": "modeling/T4/scripts/t4_plt008.py",
+      "size_bytes": 3409,
+      "functions": [],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "matplotlib.pyplot",
+        "numpy"
+      ],
+      "keyword_hits": [
+        "assignee",
+        "bm25",
+        "retrieval",
+        "retrieve"
+      ]
+    },
+    {
+      "path": "modeling/T4/scripts/t4_r1_analysis.py",
+      "size_bytes": 9923,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "collections",
+        "numpy",
+        "pandas",
+        "sklearn.metrics"
+      ],
+      "keyword_hits": [
+        "assignee",
+        "candidate",
+        "rank",
+        "topk"
+      ]
+    },
+    {
+      "path": "modeling/T4/scripts/t4_ranking_baseline.py",
+      "size_bytes": 20875,
+      "functions": [
+        "build_text",
+        "validate_data",
+        "rank_assignees",
+        "reciprocal_rank",
+        "ndcg_binary",
+        "main",
+        "rank_assignees_for_row",
+        "bucket_for_support"
+      ],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "time",
+        "numpy",
+        "pandas",
+        "joblib",
+        "sklearn.feature_extraction.text",
+        "sklearn.neighbors",
+        "sklearn.metrics"
+      ],
+      "keyword_hits": [
+        "assignee",
+        "candidate",
+        "cosine",
+        "rank",
+        "retrieval",
+        "retrieve",
+        "similarity",
+        "tfidf"
+      ]
+    },
+    {
+      "path": "modeling/T4/scripts/t4_ranking_contract.py",
+      "size_bytes": 7432,
+      "functions": [],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "json"
+      ],
+      "keyword_hits": [
+        "assignee",
+        "candidate",
+        "rank",
+        "retrieval",
+        "retrieve",
+        "similarity"
+      ]
+    },
+    {
+      "path": "modeling/T4/scripts/t4_split.py",
+      "size_bytes": 8415,
+      "functions": [
+        "class_support",
+        "main"
+      ],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "pandas"
+      ],
+      "keyword_hits": [
+        "assignee",
+        "candidate"
+      ]
+    },
+    {
+      "path": "modeling/T4/scripts/t4_validate.py",
+      "size_bytes": 10195,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "pandas"
+      ],
+      "keyword_hits": [
+        "assignee"
+      ]
+    }
+  ],
+  "runtime_executed": false,
+  "retraining": false,
+  "artifact_modification": false,
+  "test_execution": false,
+  "note": "Read-only source discovery. This operation does not execute T4 retrieval and does not modify artifacts."
+}

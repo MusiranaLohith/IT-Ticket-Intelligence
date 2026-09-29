@@ -1,0 +1,46 @@
+{
+  "experiment": "T4-MOD-008",
+  "type": "retrieval_screening",
+  "status": "COMPLETE",
+  "sample_size": 2000,
+  "top_k": 20,
+  "results": {
+    "word": {
+      "hit_at_1": 0.2895,
+      "hit_at_3": 0.404,
+      "hit_at_5": 0.4535,
+      "hit_at_10": 0.51,
+      "hit_at_20": 0.564,
+      "runtime_seconds": 19.861351251602173,
+      "vectorization_seconds": 19.70160150527954
+    },
+    "char": {
+      "hit_at_1": 0.294,
+      "hit_at_3": 0.4075,
+      "hit_at_5": 0.4495,
+      "hit_at_10": 0.51,
+      "hit_at_20": 0.577,
+      "runtime_seconds": 259.0916600227356,
+      "vectorization_seconds": 320.48344564437866
+    },
+    "word_char": {
+      "hit_at_1": 0.3055,
+      "hit_at_3": 0.416,
+      "hit_at_5": 0.4595,
+      "hit_at_10": 0.523,
+      "hit_at_20": 0.584,
+      "runtime_seconds": 285.3532238006592,
+      "vectorization_seconds": 338.8982708454132
+    }
+  },
+  "baseline": {
+    "mod007_hit_at_20": 0.45745
+  },
+  "controls": {
+    "raw_mozilla_accessed": false,
+    "target_reconstructed": false,
+    "test_used": false,
+    "future_features_used": false,
+    "split_changed": false
+  }
+}

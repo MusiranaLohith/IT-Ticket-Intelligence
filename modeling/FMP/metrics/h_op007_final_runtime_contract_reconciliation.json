@@ -1,0 +1,966 @@
+{
+  "operation": "H-OP-007",
+  "operation_name": "Final Runtime Contract Reconciliation",
+  "status": "PASS",
+  "overall_contract_status": "ADDITIONAL_SOURCE_RECONCILIATION_REQUIRED",
+  "task_contract_candidate_count": 1,
+  "task_results": {
+    "T1": {
+      "inspected_candidates": 9,
+      "strong_candidates": 2,
+      "unique_top_candidate": true,
+      "selection_status": "SOURCE_CONTRACT_CANDIDATE_IDENTIFIED",
+      "top_candidates": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r5_t1_corrected_frozen_runtime_probe.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [
+            "joblib.load"
+          ],
+          "runtime_hits": [
+            "predict(",
+            "transform("
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "historical_hits": [],
+          "return_expressions": [],
+          "evaluation": {
+            "input_contract_signal": true,
+            "runtime_signal": true,
+            "output_contract_signal": true,
+            "artifact_binding_signal": true,
+            "reference_dependency_signal": true,
+            "evidence_count": 5,
+            "contract_status": "STRONG_CANDIDATE"
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/h_op003_exact_frozen_runtime_reconciliation.py",
+          "function": "runtime_signal_hits",
+          "parameters": [
+            "source"
+          ],
+          "artifact_hits": [
+            "joblib.load",
+            "load_model",
+            "pickle.load",
+            "t6_mod010",
+            "t7_mod010",
+            "torch.load"
+          ],
+          "runtime_hits": [
+            "kneighbors(",
+            "lognormal",
+            "predict(",
+            "predict_proba(",
+            "rank(",
+            "retrieve",
+            "similarity",
+            "survival",
+            "transform(",
+            "weibull"
+          ],
+          "input_hits": [],
+          "historical_hits": [],
+          "return_expressions": [
+            "[signal for signal in signals if signal.lower() in source_lower]"
+          ],
+          "evaluation": {
+            "input_contract_signal": false,
+            "runtime_signal": true,
+            "output_contract_signal": true,
+            "artifact_binding_signal": true,
+            "reference_dependency_signal": true,
+            "evidence_count": 4,
+            "contract_status": "STRONG_CANDIDATE"
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/h_op003_exact_frozen_runtime_reconciliation.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [
+            "t1_it_support",
+            "t2_class_weighted",
+            "t3_class_weighted",
+            "t4_mod007",
+            "t5_mod007",
+            "t6_mod010",
+            "t7_mod010"
+          ],
+          "runtime_hits": [],
+          "input_hits": [
+            "reference",
+            "text",
+            "ticket"
+          ],
+          "historical_hits": [],
+          "return_expressions": [],
+          "evaluation": {
+            "input_contract_signal": true,
+            "runtime_signal": false,
+            "output_contract_signal": false,
+            "artifact_binding_signal": true,
+            "reference_dependency_signal": true,
+            "evidence_count": 3,
+            "contract_status": "INSUFFICIENT_SOURCE_EVIDENCE"
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp07_op004_frozen_runtime_reproducibility_manifest.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [],
+          "runtime_hits": [
+            "candidate",
+            "survival"
+          ],
+          "input_hits": [
+            "candidate",
+            "description",
+            "query",
+            "text",
+            "ticket"
+          ],
+          "historical_hits": [],
+          "return_expressions": [],
+          "evaluation": {
+            "input_contract_signal": true,
+            "runtime_signal": false,
+            "output_contract_signal": false,
+            "artifact_binding_signal": false,
+            "reference_dependency_signal": true,
+            "evidence_count": 2,
+            "contract_status": "INSUFFICIENT_SOURCE_EVIDENCE"
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op022_controlled_end_to_end_execution_probe.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [],
+          "runtime_hits": [],
+          "input_hits": [
+            "text"
+          ],
+          "historical_hits": [],
+          "return_expressions": [],
+          "evaluation": {
+            "input_contract_signal": true,
+            "runtime_signal": false,
+            "output_contract_signal": false,
+            "artifact_binding_signal": false,
+            "reference_dependency_signal": true,
+            "evidence_count": 2,
+            "contract_status": "INSUFFICIENT_SOURCE_EVIDENCE"
+          }
+        }
+      ]
+    },
+    "T2": {
+      "inspected_candidates": 3,
+      "strong_candidates": 3,
+      "unique_top_candidate": false,
+      "selection_status": "MULTIPLE_STRONG_CANDIDATES",
+      "top_candidates": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t5",
+          "parameters": [],
+          "artifact_hits": [
+            ".joblib",
+            "joblib.load",
+            "t5_mod005",
+            "t5_mod007"
+          ],
+          "runtime_hits": [
+            "decision_function(",
+            "predict(",
+            "transform("
+          ],
+          "input_hits": [
+            "text",
+            "ticket"
+          ],
+          "historical_hits": [],
+          "return_expressions": [
+            "{'status': 'PASS', 'vectorizer_artifact': rel(vectorizer_path), 'classifier_artifact': rel(classifier_path), 'calibration_artifact': rel(calibration_path), 'input_source': rel(input_path), 'input_count': len(pairs), 'decision_score_shape': list(decision_scores.shape), 'calibrator_input_shape': list(decision_matrix.shape), 'output_count': len(calibrated_probability), 'calibrated_probability_preview': [float(value) for value in calibrated_probability], 'threshold_applied': False, 'threshold_selection': False}"
+          ],
+          "evaluation": {
+            "input_contract_signal": true,
+            "runtime_signal": true,
+            "output_contract_signal": true,
+            "artifact_binding_signal": true,
+            "reference_dependency_signal": true,
+            "evidence_count": 5,
+            "contract_status": "STRONG_CANDIDATE"
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t2",
+          "parameters": [],
+          "artifact_hits": [
+            ".joblib",
+            "joblib.load",
+            "t2_class_weighted"
+          ],
+          "runtime_hits": [
+            "predict(",
+            "transform("
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "historical_hits": [],
+          "return_expressions": [
+            "{'status': 'PASS', 'artifact': rel(artifact), 'input_source': rel(input_path), 'input_count': len(texts), 'vectorizer_type': f'{type(vectorizer).__module__}.{type(vectorizer).__name__}', 'model_type': f'{type(model).__module__}.{type(model).__name__}', 'output_count': len(predictions), 'output_preview': [str(value) for value in predictions]}"
+          ],
+          "evaluation": {
+            "input_contract_signal": true,
+            "runtime_signal": true,
+            "output_contract_signal": true,
+            "artifact_binding_signal": true,
+            "reference_dependency_signal": true,
+            "evidence_count": 5,
+            "contract_status": "STRONG_CANDIDATE"
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t3",
+          "parameters": [],
+          "artifact_hits": [
+            ".joblib",
+            "joblib.load",
+            "t3_class_weighted"
+          ],
+          "runtime_hits": [
+            "predict(",
+            "transform("
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "historical_hits": [],
+          "return_expressions": [
+            "{'status': 'PASS', 'artifact': rel(artifact), 'input_source': rel(input_path), 'input_count': len(texts), 'vectorizer_type': f'{type(vectorizer).__module__}.{type(vectorizer).__name__}', 'model_type': f'{type(model).__module__}.{type(model).__name__}', 'output_count': len(predictions), 'output_preview': [str(value) for value in predictions]}"
+          ],
+          "evaluation": {
+            "input_contract_signal": true,
+            "runtime_signal": true,
+            "output_contract_signal": true,
+            "artifact_binding_signal": true,
+            "reference_dependency_signal": true,
+            "evidence_count": 5,
+            "contract_status": "STRONG_CANDIDATE"
+          }
+        }
+      ]
+    },
+    "T3": {
+      "inspected_candidates": 3,
+      "strong_candidates": 3,
+      "unique_top_candidate": false,
+      "selection_status": "MULTIPLE_STRONG_CANDIDATES",
+      "top_candidates": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t5",
+          "parameters": [],
+          "artifact_hits": [
+            ".joblib",
+            "joblib.load",
+            "t5_mod005",
+            "t5_mod007"
+          ],
+          "runtime_hits": [
+            "decision_function(",
+            "predict(",
+            "transform("
+          ],
+          "input_hits": [
+            "text",
+            "ticket"
+          ],
+          "historical_hits": [],
+          "return_expressions": [
+            "{'status': 'PASS', 'vectorizer_artifact': rel(vectorizer_path), 'classifier_artifact': rel(classifier_path), 'calibration_artifact': rel(calibration_path), 'input_source': rel(input_path), 'input_count': len(pairs), 'decision_score_shape': list(decision_scores.shape), 'calibrator_input_shape': list(decision_matrix.shape), 'output_count': len(calibrated_probability), 'calibrated_probability_preview': [float(value) for value in calibrated_probability], 'threshold_applied': False, 'threshold_selection': False}"
+          ],
+          "evaluation": {
+            "input_contract_signal": true,
+            "runtime_signal": true,
+            "output_contract_signal": true,
+            "artifact_binding_signal": true,
+            "reference_dependency_signal": true,
+            "evidence_count": 5,
+            "contract_status": "STRONG_CANDIDATE"
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t2",
+          "parameters": [],
+          "artifact_hits": [
+            ".joblib",
+            "joblib.load",
+            "t2_class_weighted"
+          ],
+          "runtime_hits": [
+            "predict(",
+            "transform("
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "historical_hits": [],
+          "return_expressions": [
+            "{'status': 'PASS', 'artifact': rel(artifact), 'input_source': rel(input_path), 'input_count': len(texts), 'vectorizer_type': f'{type(vectorizer).__module__}.{type(vectorizer).__name__}', 'model_type': f'{type(model).__module__}.{type(model).__name__}', 'output_count': len(predictions), 'output_preview': [str(value) for value in predictions]}"
+          ],
+          "evaluation": {
+            "input_contract_signal": true,
+            "runtime_signal": true,
+            "output_contract_signal": true,
+            "artifact_binding_signal": true,
+            "reference_dependency_signal": true,
+            "evidence_count": 5,
+            "contract_status": "STRONG_CANDIDATE"
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t3",
+          "parameters": [],
+          "artifact_hits": [
+            ".joblib",
+            "joblib.load",
+            "t3_class_weighted"
+          ],
+          "runtime_hits": [
+            "predict(",
+            "transform("
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "historical_hits": [],
+          "return_expressions": [
+            "{'status': 'PASS', 'artifact': rel(artifact), 'input_source': rel(input_path), 'input_count': len(texts), 'vectorizer_type': f'{type(vectorizer).__module__}.{type(vectorizer).__name__}', 'model_type': f'{type(model).__module__}.{type(model).__name__}', 'output_count': len(predictions), 'output_preview': [str(value) for value in predictions]}"
+          ],
+          "evaluation": {
+            "input_contract_signal": true,
+            "runtime_signal": true,
+            "output_contract_signal": true,
+            "artifact_binding_signal": true,
+            "reference_dependency_signal": true,
+            "evidence_count": 5,
+            "contract_status": "STRONG_CANDIDATE"
+          }
+        }
+      ]
+    },
+    "T4": {
+      "inspected_candidates": 7,
+      "strong_candidates": 3,
+      "unique_top_candidate": false,
+      "selection_status": "MULTIPLE_STRONG_CANDIDATES",
+      "top_candidates": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r14_t4_corrected_frozen_runtime_smoke.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [
+            "joblib.load"
+          ],
+          "runtime_hits": [
+            "candidate",
+            "kneighbors(",
+            "similarity",
+            "transform("
+          ],
+          "input_hits": [
+            "candidate",
+            "description",
+            "text",
+            "ticket"
+          ],
+          "historical_hits": [],
+          "return_expressions": [],
+          "evaluation": {
+            "input_contract_signal": true,
+            "runtime_signal": true,
+            "output_contract_signal": true,
+            "artifact_binding_signal": true,
+            "reference_dependency_signal": false,
+            "evidence_count": 4,
+            "contract_status": "STRONG_CANDIDATE"
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r16_t4_exact_eval_retrieval_reproduction.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [
+            "joblib.load"
+          ],
+          "runtime_hits": [
+            "kneighbors(",
+            "similarity",
+            "transform("
+          ],
+          "input_hits": [
+            "description",
+            "text",
+            "ticket"
+          ],
+          "historical_hits": [],
+          "return_expressions": [],
+          "evaluation": {
+            "input_contract_signal": true,
+            "runtime_signal": true,
+            "output_contract_signal": true,
+            "artifact_binding_signal": true,
+            "reference_dependency_signal": false,
+            "evidence_count": 4,
+            "contract_status": "STRONG_CANDIDATE"
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r12_t4_frozen_runtime_smoke.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [
+            "joblib.load"
+          ],
+          "runtime_hits": [
+            "candidate",
+            "kneighbors(",
+            "transform("
+          ],
+          "input_hits": [
+            "candidate",
+            "text"
+          ],
+          "historical_hits": [],
+          "return_expressions": [],
+          "evaluation": {
+            "input_contract_signal": true,
+            "runtime_signal": true,
+            "output_contract_signal": true,
+            "artifact_binding_signal": true,
+            "reference_dependency_signal": false,
+            "evidence_count": 4,
+            "contract_status": "STRONG_CANDIDATE"
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r12_t4_frozen_runtime_smoke.py",
+          "function": "rank_assignees",
+          "parameters": [
+            "neighbor_indices",
+            "similarities",
+            "train_targets"
+          ],
+          "artifact_hits": [],
+          "runtime_hits": [
+            "similarity"
+          ],
+          "input_hits": [],
+          "historical_hits": [],
+          "return_expressions": [
+            "[{'assignee': assignee, 'score': values['score'], 'neighbor_count': values['neighbor_count']} for assignee, values in ranked]"
+          ],
+          "evaluation": {
+            "input_contract_signal": false,
+            "runtime_signal": true,
+            "output_contract_signal": true,
+            "artifact_binding_signal": false,
+            "reference_dependency_signal": false,
+            "evidence_count": 2,
+            "contract_status": "INSUFFICIENT_SOURCE_EVIDENCE"
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r14_t4_corrected_frozen_runtime_smoke.py",
+          "function": "rank_assignees",
+          "parameters": [
+            "neighbor_indices",
+            "neighbor_similarities",
+            "train_targets"
+          ],
+          "artifact_hits": [],
+          "runtime_hits": [
+            "similarity"
+          ],
+          "input_hits": [],
+          "historical_hits": [],
+          "return_expressions": [
+            "ranked"
+          ],
+          "evaluation": {
+            "input_contract_signal": false,
+            "runtime_signal": true,
+            "output_contract_signal": true,
+            "artifact_binding_signal": false,
+            "reference_dependency_signal": false,
+            "evidence_count": 2,
+            "contract_status": "INSUFFICIENT_SOURCE_EVIDENCE"
+          }
+        }
+      ]
+    },
+    "T5": {
+      "inspected_candidates": 4,
+      "strong_candidates": 4,
+      "unique_top_candidate": false,
+      "selection_status": "MULTIPLE_STRONG_CANDIDATES",
+      "top_candidates": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t5",
+          "parameters": [],
+          "artifact_hits": [
+            ".joblib",
+            "joblib.load",
+            "t5_mod005",
+            "t5_mod007"
+          ],
+          "runtime_hits": [
+            "decision_function(",
+            "predict(",
+            "transform("
+          ],
+          "input_hits": [
+            "text",
+            "ticket"
+          ],
+          "historical_hits": [],
+          "return_expressions": [
+            "{'status': 'PASS', 'vectorizer_artifact': rel(vectorizer_path), 'classifier_artifact': rel(classifier_path), 'calibration_artifact': rel(calibration_path), 'input_source': rel(input_path), 'input_count': len(pairs), 'decision_score_shape': list(decision_scores.shape), 'calibrator_input_shape': list(decision_matrix.shape), 'output_count': len(calibrated_probability), 'calibrated_probability_preview': [float(value) for value in calibrated_probability], 'threshold_applied': False, 'threshold_selection': False}"
+          ],
+          "evaluation": {
+            "input_contract_signal": true,
+            "runtime_signal": true,
+            "output_contract_signal": true,
+            "artifact_binding_signal": true,
+            "reference_dependency_signal": true,
+            "evidence_count": 5,
+            "contract_status": "STRONG_CANDIDATE"
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t1",
+          "parameters": [],
+          "artifact_hits": [
+            ".joblib",
+            "joblib.load",
+            "t1_it_support"
+          ],
+          "runtime_hits": [
+            "predict(",
+            "transform("
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "historical_hits": [],
+          "return_expressions": [
+            "{'status': 'PASS', 'artifact': rel(artifact), 'input_source': rel(input_path), 'input_count': len(texts), 'feature_type': f'{type(features).__module__}.{type(features).__name__}', 'model_type': f'{type(model).__module__}.{type(model).__name__}', 'output_count': len(predictions), 'output_preview': [str(value) for value in predictions]}"
+          ],
+          "evaluation": {
+            "input_contract_signal": true,
+            "runtime_signal": true,
+            "output_contract_signal": true,
+            "artifact_binding_signal": true,
+            "reference_dependency_signal": true,
+            "evidence_count": 5,
+            "contract_status": "STRONG_CANDIDATE"
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t2",
+          "parameters": [],
+          "artifact_hits": [
+            ".joblib",
+            "joblib.load",
+            "t2_class_weighted"
+          ],
+          "runtime_hits": [
+            "predict(",
+            "transform("
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "historical_hits": [],
+          "return_expressions": [
+            "{'status': 'PASS', 'artifact': rel(artifact), 'input_source': rel(input_path), 'input_count': len(texts), 'vectorizer_type': f'{type(vectorizer).__module__}.{type(vectorizer).__name__}', 'model_type': f'{type(model).__module__}.{type(model).__name__}', 'output_count': len(predictions), 'output_preview': [str(value) for value in predictions]}"
+          ],
+          "evaluation": {
+            "input_contract_signal": true,
+            "runtime_signal": true,
+            "output_contract_signal": true,
+            "artifact_binding_signal": true,
+            "reference_dependency_signal": true,
+            "evidence_count": 5,
+            "contract_status": "STRONG_CANDIDATE"
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r3_corrected_frozen_runtime_inference_probe.py",
+          "function": "probe_t3",
+          "parameters": [],
+          "artifact_hits": [
+            ".joblib",
+            "joblib.load",
+            "t3_class_weighted"
+          ],
+          "runtime_hits": [
+            "predict(",
+            "transform("
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "historical_hits": [],
+          "return_expressions": [
+            "{'status': 'PASS', 'artifact': rel(artifact), 'input_source': rel(input_path), 'input_count': len(texts), 'vectorizer_type': f'{type(vectorizer).__module__}.{type(vectorizer).__name__}', 'model_type': f'{type(model).__module__}.{type(model).__name__}', 'output_count': len(predictions), 'output_preview': [str(value) for value in predictions]}"
+          ],
+          "evaluation": {
+            "input_contract_signal": true,
+            "runtime_signal": true,
+            "output_contract_signal": true,
+            "artifact_binding_signal": true,
+            "reference_dependency_signal": true,
+            "evidence_count": 5,
+            "contract_status": "STRONG_CANDIDATE"
+          }
+        }
+      ]
+    },
+    "T6": {
+      "inspected_candidates": 8,
+      "strong_candidates": 8,
+      "unique_top_candidate": false,
+      "selection_status": "MULTIPLE_STRONG_CANDIDATES",
+      "top_candidates": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r20_t6_mod009_semantic_runtime_binding.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [
+            ".joblib",
+            ".json",
+            ".npz"
+          ],
+          "runtime_hits": [
+            "candidate"
+          ],
+          "input_hits": [
+            "candidate",
+            "reference",
+            "text"
+          ],
+          "historical_hits": [],
+          "return_expressions": [],
+          "evaluation": {
+            "input_contract_signal": true,
+            "runtime_signal": true,
+            "output_contract_signal": true,
+            "artifact_binding_signal": true,
+            "reference_dependency_signal": true,
+            "evidence_count": 5,
+            "contract_status": "STRONG_CANDIDATE"
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r18_t6_mod010_component_binding.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [
+            ".joblib",
+            ".json",
+            ".npz"
+          ],
+          "runtime_hits": [
+            "candidate"
+          ],
+          "input_hits": [
+            "candidate",
+            "query",
+            "text"
+          ],
+          "historical_hits": [],
+          "return_expressions": [],
+          "evaluation": {
+            "input_contract_signal": true,
+            "runtime_signal": true,
+            "output_contract_signal": true,
+            "artifact_binding_signal": true,
+            "reference_dependency_signal": true,
+            "evidence_count": 5,
+            "contract_status": "STRONG_CANDIDATE"
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r19_t6_semantic_component_resolution.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [
+            ".json"
+          ],
+          "runtime_hits": [
+            "resolution",
+            "similarity"
+          ],
+          "input_hits": [
+            "reference",
+            "text"
+          ],
+          "historical_hits": [],
+          "return_expressions": [],
+          "evaluation": {
+            "input_contract_signal": true,
+            "runtime_signal": true,
+            "output_contract_signal": true,
+            "artifact_binding_signal": true,
+            "reference_dependency_signal": true,
+            "evidence_count": 5,
+            "contract_status": "STRONG_CANDIDATE"
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp07_op004_frozen_runtime_reproducibility_manifest.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [],
+          "runtime_hits": [
+            "candidate",
+            "survival"
+          ],
+          "input_hits": [
+            "candidate",
+            "description",
+            "query",
+            "text",
+            "ticket"
+          ],
+          "historical_hits": [],
+          "return_expressions": [],
+          "evaluation": {
+            "input_contract_signal": true,
+            "runtime_signal": true,
+            "output_contract_signal": true,
+            "artifact_binding_signal": true,
+            "reference_dependency_signal": true,
+            "evidence_count": 5,
+            "contract_status": "STRONG_CANDIDATE"
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r21_t6_mod010_frozen_runtime_composition_probe.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [],
+          "runtime_hits": [
+            "candidate",
+            "transform("
+          ],
+          "input_hits": [
+            "candidate",
+            "query",
+            "text"
+          ],
+          "historical_hits": [],
+          "return_expressions": [],
+          "evaluation": {
+            "input_contract_signal": true,
+            "runtime_signal": true,
+            "output_contract_signal": true,
+            "artifact_binding_signal": true,
+            "reference_dependency_signal": true,
+            "evidence_count": 5,
+            "contract_status": "STRONG_CANDIDATE"
+          }
+        }
+      ]
+    },
+    "T7": {
+      "inspected_candidates": 12,
+      "strong_candidates": 5,
+      "unique_top_candidate": false,
+      "selection_status": "MULTIPLE_STRONG_CANDIDATES",
+      "top_candidates": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op019_final_t1_t7_runtime_binding_reconciliation.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [],
+          "runtime_hits": [
+            "candidate",
+            "resolution",
+            "survival"
+          ],
+          "input_hits": [
+            "candidate",
+            "query",
+            "text",
+            "ticket"
+          ],
+          "historical_hits": [],
+          "return_expressions": [],
+          "evaluation": {
+            "input_contract_signal": true,
+            "runtime_signal": true,
+            "output_contract_signal": true,
+            "artifact_binding_signal": false,
+            "reference_dependency_signal": true,
+            "evidence_count": 4,
+            "contract_status": "STRONG_CANDIDATE"
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r23_t7_final_model_parameter_binding.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [],
+          "runtime_hits": [
+            "candidate",
+            "lognormal",
+            "survival"
+          ],
+          "input_hits": [
+            "candidate",
+            "text"
+          ],
+          "historical_hits": [],
+          "return_expressions": [],
+          "evaluation": {
+            "input_contract_signal": true,
+            "runtime_signal": true,
+            "output_contract_signal": true,
+            "artifact_binding_signal": false,
+            "reference_dependency_signal": true,
+            "evidence_count": 4,
+            "contract_status": "STRONG_CANDIDATE"
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r23_t7_final_model_parameter_binding.py",
+          "function": "source_model_signals",
+          "parameters": [],
+          "artifact_hits": [],
+          "runtime_hits": [
+            "lognormal",
+            "survival"
+          ],
+          "input_hits": [
+            "text"
+          ],
+          "historical_hits": [],
+          "return_expressions": [
+            "signals"
+          ],
+          "evaluation": {
+            "input_contract_signal": true,
+            "runtime_signal": true,
+            "output_contract_signal": true,
+            "artifact_binding_signal": false,
+            "reference_dependency_signal": true,
+            "evidence_count": 4,
+            "contract_status": "STRONG_CANDIDATE"
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp07_op004_frozen_runtime_reproducibility_manifest.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [],
+          "runtime_hits": [
+            "candidate",
+            "survival"
+          ],
+          "input_hits": [
+            "candidate",
+            "description",
+            "query",
+            "text",
+            "ticket"
+          ],
+          "historical_hits": [],
+          "return_expressions": [],
+          "evaluation": {
+            "input_contract_signal": true,
+            "runtime_signal": true,
+            "output_contract_signal": true,
+            "artifact_binding_signal": false,
+            "reference_dependency_signal": true,
+            "evidence_count": 4,
+            "contract_status": "STRONG_CANDIDATE"
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r25_t7_exact_feature_builder_audit.py",
+          "function": "main",
+          "parameters": [],
+          "artifact_hits": [],
+          "runtime_hits": [
+            "survival"
+          ],
+          "input_hits": [
+            "description",
+            "reference",
+            "text"
+          ],
+          "historical_hits": [],
+          "return_expressions": [],
+          "evaluation": {
+            "input_contract_signal": true,
+            "runtime_signal": true,
+            "output_contract_signal": true,
+            "artifact_binding_signal": false,
+            "reference_dependency_signal": true,
+            "evidence_count": 4,
+            "contract_status": "STRONG_CANDIDATE"
+          }
+        }
+      ]
+    }
+  },
+  "final_contract_candidates": {
+    "T1": {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/fmp06_op018r5_t1_corrected_frozen_runtime_probe.py",
+      "function": "main",
+      "parameters": [],
+      "artifact_hits": [
+        "joblib.load"
+      ],
+      "runtime_hits": [
+        "predict(",
+        "transform("
+      ],
+      "input_hits": [
+        "text"
+      ],
+      "historical_hits": [],
+      "evidence_count": 5
+    }
+  },
+  "controls": {
+    "model_execution": false,
+    "model_retraining": false,
+    "model_selection": false,
+    "artifact_modification": false,
+    "threshold_optimization": false,
+    "locked_test_reuse": false,
+    "production_orchestrator_created": false
+  },
+  "boundary": "H-OP-007 identifies source-level callable candidates only. A candidate is not treated as production-ready until its exact runtime behavior is exercised against a controlled non-locked-test single-ticket probe.",
+  "next_operation": "H-OP-008 \u2014 controlled single-ticket runtime probe using the reconciled callable candidates.",
+  "output": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/h_op007_final_runtime_contract_reconciliation.json"
+}

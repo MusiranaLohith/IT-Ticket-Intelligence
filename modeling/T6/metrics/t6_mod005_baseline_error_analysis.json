@@ -1,0 +1,191 @@
+{
+  "operation": "T6 MOD-005",
+  "task": "T6 Similar-Ticket Retrieval",
+  "status": "BASELINE_ERROR_ANALYSIS_COMPLETED",
+  "input_artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod004_query_rankings.csv",
+  "analysis_only": true,
+  "controls": {
+    "model_retrained": false,
+    "vectorizer_refit": false,
+    "raw_dataset_read": false,
+    "accepted_dtm_artifact_read": false,
+    "threshold_optimization": false,
+    "probability_calibration": false,
+    "candidate_pool_modified": false,
+    "ranking_artifact_modified": false
+  },
+  "train": {
+    "queries": 1906,
+    "recall_at_1": 0.6825813221406086,
+    "recall_at_3": 0.8037775445960126,
+    "recall_at_5": 0.8457502623294858,
+    "recall_at_10": 0.8950682056663168,
+    "recall_at_20": 0.9349422875131165,
+    "mrr": 0.7570528832450475,
+    "positive_rank": {
+      "minimum": 1,
+      "median": 1.0,
+      "mean": 5.31112277019937,
+      "maximum": 101
+    },
+    "rank_distribution": {
+      "rank_1": 1301,
+      "rank_2_3": 231,
+      "rank_4_5": 80,
+      "rank_6_10": 94,
+      "rank_11_20": 76,
+      "rank_gt_20": 124
+    },
+    "top1": {
+      "correct_queries": 1301,
+      "incorrect_queries": 605,
+      "correct_rate": 0.6825813221406086
+    },
+    "score_gap": {
+      "all": {
+        "queries": 1906,
+        "mean": 0.020618875672252283,
+        "median": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.5998390469793652
+      },
+      "top1_correct": {
+        "queries": 1301,
+        "mean": 0.0,
+        "median": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0
+      },
+      "top1_incorrect": {
+        "queries": 605,
+        "mean": 0.06495797856415347,
+        "median": 0.037781730518525,
+        "minimum": 0.0001250857341458106,
+        "maximum": 0.5998390469793652
+      }
+    },
+    "positive_score": {
+      "mean": 0.22066165490684708,
+      "median": 0.1300405304492372,
+      "minimum": 0.0,
+      "maximum": 0.999450045525092
+    },
+    "top1_score": {
+      "mean": 0.24128053057909937,
+      "median": 0.14480992129728387,
+      "minimum": 0.0190170105666629,
+      "maximum": 0.999450045525092
+    }
+  },
+  "eval": {
+    "queries": 816,
+    "recall_at_1": 0.6936274509803921,
+    "recall_at_3": 0.8333333333333334,
+    "recall_at_5": 0.8762254901960784,
+    "recall_at_10": 0.9105392156862745,
+    "recall_at_20": 0.9399509803921569,
+    "mrr": 0.7764268513472535,
+    "positive_rank": {
+      "minimum": 1,
+      "median": 1.0,
+      "mean": 4.745098039215686,
+      "maximum": 99
+    },
+    "rank_distribution": {
+      "rank_1": 566,
+      "rank_2_3": 114,
+      "rank_4_5": 35,
+      "rank_6_10": 28,
+      "rank_11_20": 24,
+      "rank_gt_20": 49
+    },
+    "top1": {
+      "correct_queries": 566,
+      "incorrect_queries": 250,
+      "correct_rate": 0.6936274509803921
+    },
+    "score_gap": {
+      "all": {
+        "queries": 816,
+        "mean": 0.02184275041891839,
+        "median": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.5849114124779718
+      },
+      "top1_correct": {
+        "queries": 566,
+        "mean": 0.0,
+        "median": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0
+      },
+      "top1_incorrect": {
+        "queries": 250,
+        "mean": 0.07129473736734962,
+        "median": 0.040838710076622306,
+        "minimum": 4.200052629280138e-05,
+        "maximum": 0.5849114124779718
+      }
+    },
+    "positive_score": {
+      "mean": 0.2767460417743666,
+      "median": 0.16175647369177037,
+      "minimum": 0.0015244578154712,
+      "maximum": 0.9986142890774816
+    },
+    "top1_score": {
+      "mean": 0.298588792193285,
+      "median": 0.18843849143942665,
+      "minimum": 0.0352799020457235,
+      "maximum": 0.9986142890774816
+    }
+  },
+  "train_eval_comparison": {
+    "recall_at_1_eval_minus_train": 0.011046128839783509,
+    "recall_at_3_eval_minus_train": 0.029555788737320787,
+    "recall_at_5_eval_minus_train": 0.030475227866592625,
+    "recall_at_10_eval_minus_train": 0.015471010019957654,
+    "recall_at_20_eval_minus_train": 0.005008692879040377,
+    "mrr_eval_minus_train": 0.01937396810220604
+  },
+  "failure_concentration": {
+    "train": {
+      "rank_gt_20": 124,
+      "rank_gt_50": 48,
+      "rank_gt_75": 18,
+      "rank_gt_100": 2,
+      "rank_gt_20_rate": 0.06505771248688352,
+      "rank_gt_50_rate": 0.025183630640083946,
+      "rank_gt_75_rate": 0.00944386149003148,
+      "rank_gt_100_rate": 0.001049317943336831
+    },
+    "eval": {
+      "rank_gt_20": 49,
+      "rank_gt_50": 19,
+      "rank_gt_75": 6,
+      "rank_gt_100": 0,
+      "rank_gt_20_rate": 0.06004901960784314,
+      "rank_gt_50_rate": 0.023284313725490197,
+      "rank_gt_75_rate": 0.007352941176470588,
+      "rank_gt_100_rate": 0.0
+    }
+  },
+  "top20_failures": {
+    "total": 173,
+    "train": 124,
+    "eval": 49
+  },
+  "score_gap_definition": "top1_score - positive_score",
+  "interpretation_notes": [
+    "Positive rank is the position of the observed Dupe-of target within the native 101-candidate pool.",
+    "observable_non_positive candidates are retained as candidate roles and are not interpreted as true-negative labels.",
+    "A positive rank greater than 20 means the observed target was not retrieved in the Top-20 by this baseline.",
+    "Score gaps are similarity-score differences, not probabilities or calibrated confidence.",
+    "TRAIN/EVAL metric differences are descriptive and are not treated as evidence of superiority or failure without further investigation."
+  ],
+  "artifacts": {
+    "rank_distribution": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod005_rank_distribution.csv",
+    "top20_failures": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod005_top20_failures.csv",
+    "analysis_results": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod005_baseline_error_analysis.json"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "module": "T8-MOD-032",
+  "operation": "OP-002",
+  "development_population": 16518,
+  "fusion_training_blocks": [
+    "B2",
+    "B3",
+    "B4"
+  ],
+  "fusion_training_rows": 12389,
+  "development_holdout_block": "B5",
+  "development_holdout_rows": 4129,
+  "target": "target_priority",
+  "candidate_A": {
+    "name": "A_T2_ONLY",
+    "features": [
+      "predicted_probability_P1",
+      "predicted_probability_P2",
+      "predicted_probability_P3",
+      "predicted_probability_P4",
+      "predicted_probability_P5"
+    ],
+    "accuracy": 0.37394042140954226,
+    "macro_f1": 0.25518396542077826,
+    "weighted_f1": 0.3909154666986418,
+    "log_loss": 1.459455671991579
+  },
+  "candidate_B": {
+    "name": "B_T2_PLUS_T7",
+    "features": [
+      "predicted_probability_P1",
+      "predicted_probability_P2",
+      "predicted_probability_P3",
+      "predicted_probability_P4",
+      "predicted_probability_P5",
+      "predicted_median_survival_seconds",
+      "survival_probability_at_211583_seconds",
+      "survival_probability_at_1780179_seconds",
+      "survival_probability_at_14608619_seconds"
+    ],
+    "accuracy": 0.46597239040930005,
+    "macro_f1": 0.22210133182469063,
+    "weighted_f1": 0.3894775849550348,
+    "log_loss": 1.3124723319956415
+  },
+  "delta_B_minus_A": {
+    "accuracy": 0.0920319689997578,
+    "macro_f1": -0.033082633596087624,
+    "weighted_f1": -0.0014378817436069835,
+    "log_loss": -0.1469833399959375
+  },
+  "locked_evaluation_used": false,
+  "synthetic_t8_target_created": false,
+  "universal_t8_score_created": false
+}

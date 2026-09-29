@@ -1,0 +1,657 @@
+{
+  "project": {
+    "name": "IT Ticket Intelligence / IT Ticket Triage System",
+    "purpose": "Controlled evidence-first modeling consolidation across T1-T5 completed task investigations.",
+    "project_root": "/home/whiteblack/Documents/IT-Ticket-Triage-System",
+    "raw_datasets_modified": false,
+    "synthetic_data_used": false,
+    "project_level_model_freeze": false
+  },
+  "consolidation_status": "COMPLETE",
+  "t1": {
+    "task": "Incoming IT-ticket classification",
+    "it_support": {
+      "status": "FINAL_CANDIDATE_ESTABLISHED",
+      "formal_model_freeze": false,
+      "source_artifact": "modeling/T1/baselines/t1_it_support_char_svm_report.json",
+      "model": "TFIDF_WORD_CHAR_LINEAR_SVC",
+      "accuracy": 0.9461883408071748,
+      "macro_f1": null,
+      "weighted_f1": null,
+      "evaluation_used_for_fit": false,
+      "interpretation": "Controlled modeling established a final candidate. However, the available T1 contract does not contain a formal model-freeze state."
+    },
+    "vscode": {
+      "status": "MODEL_COMPARISON_COMPLETE",
+      "formal_model_freeze": false,
+      "decision_status": "MODEL_NOT_FROZEN",
+      "source_artifact": "modeling/T1/baselines/t1_vscode_model_compare_report.json",
+      "evaluation_used_for_fit": null,
+      "comparison": {
+        "model": null,
+        "accuracy": null,
+        "macro_f1": null,
+        "weighted_f1": null
+      },
+      "evaluation_class_counts": null,
+      "missing_evaluation_classes": [
+        "Usability"
+      ],
+      "contract_model_selected": false,
+      "interpretation": "Baseline/model comparison was completed, but the comparison artifact explicitly records MODEL_NOT_FROZEN. The evaluation partition contains zero Usability examples."
+    },
+    "project_role": "INCOMING_TICKET_CLASSIFICATION_SIGNAL"
+  },
+  "t2": {
+    "task": "Priority Prediction",
+    "source_artifact": "modeling/T2/analysis/t2_final_closure.json",
+    "closure": {
+      "operation": "T2-MOD-022",
+      "operation_name": "Final T2 Task Suitability & Closure",
+      "task": "T2",
+      "task_name": "Priority Prediction",
+      "dataset": {
+        "name": "Mozilla CORE",
+        "eligible_population": 29498,
+        "target": "first valid P1-P5 Priority assigned strictly after Creation and within following 24 hours",
+        "target_field": "target_priority",
+        "semantic_target": "priority",
+        "classes": [
+          "P1",
+          "P2",
+          "P3",
+          "P4",
+          "P5"
+        ],
+        "class_counts": {
+          "P1": 7325,
+          "P2": 9156,
+          "P3": 11015,
+          "P4": 784,
+          "P5": 1218
+        }
+      },
+      "prediction_boundary": "Creation",
+      "admitted_features": [
+        "Summary",
+        "Description"
+      ],
+      "excluded_features": [
+        "post-Creation administrative information",
+        "current mutable state",
+        "final-state backfill",
+        "target-derived information",
+        "future information",
+        "fabricated historical information"
+      ],
+      "final_model": {
+        "operation": "T2-MOD-007",
+        "name": "TF-IDF + Class-Weighted Logistic Regression",
+        "selection_basis": "validation macro-F1 with minority-class performance considered",
+        "final_model_selected": true
+      },
+      "final_test": {
+        "rows": 4425,
+        "accuracy": 0.4201129943502825,
+        "macro_f1": 0.26495957519937885,
+        "weighted_f1": 0.42540851125365187,
+        "per_class": {
+          "P1": {
+            "precision": 0.2560728744939271,
+            "recall": 0.4048,
+            "f1": 0.3137011779293242,
+            "support": 625
+          },
+          "P2": {
+            "precision": 0.4161988773055333,
+            "recall": 0.33679428942245293,
+            "f1": 0.37230989956958394,
+            "support": 1541
+          },
+          "P3": {
+            "precision": 0.5434782608695652,
+            "recall": 0.5175734232065479,
+            "f1": 0.530209617755857,
+            "support": 2077
+          },
+          "P4": {
+            "precision": 0.03125,
+            "recall": 0.06060606060606061,
+            "f1": 0.041237113402061855,
+            "support": 33
+          },
+          "P5": {
+            "precision": 0.06756756756756757,
+            "recall": 0.06711409395973154,
+            "f1": 0.06734006734006734,
+            "support": 149
+          }
+        }
+      },
+      "generalization": {
+        "validation_accuracy": 0.446102,
+        "test_accuracy": 0.4201129943502825,
+        "accuracy_change_pp": -2.598900564971751,
+        "validation_macro_f1": 0.31045,
+        "test_macro_f1": 0.26495957519937885,
+        "macro_f1_change_pp": -4.549042480062115,
+        "validation_weighted_f1": 0.443565,
+        "test_weighted_f1": 0.42540851125365187,
+        "weighted_f1_change_pp": -1.815648874634812
+      },
+      "system_role": {
+        "decision": "SECONDARY_DECISION_SUPPORT_SIGNAL",
+        "description": "T2 is suitable as a secondary, confidence-aware priority prediction signal within the integrated IT Ticket Intelligence system. It should assist triage and downstream evidence fusion, but should not independently determine final ticket priority."
+      },
+      "suitability_decision": "SUPPORTED_WITH_LIMITATIONS",
+      "strengths": [
+        "The T2 target has an explicit temporal definition: first valid P1-P5 Priority assigned after Creation and within the following 24 hours.",
+        "The prediction boundary is Creation, preserving the intended incoming-ticket decision boundary.",
+        "The modeling features are restricted to Creation-time Summary and Description.",
+        "A chronological train/validation/test split was used.",
+        "The locked test set was evaluated only after model selection.",
+        "The final evaluation was performed without retraining or refitting.",
+        "The model provides measurable signal for priority prediction, especially for the more represented classes."
+      ],
+      "limitations": [
+        "Overall five-class predictive performance is limited: final test accuracy is 42.0113% and macro-F1 is 26.4960%.",
+        "Minority-class performance is very weak, with P4 F1=4.1237% and P5 F1=6.7340%.",
+        "Performance decreases from validation to the later locked test period.",
+        "The dominant error paths involve confusion among P1, P2, and P3.",
+        "The evidence does not justify treating the model as a fully autonomous priority assignment system.",
+        "A universal automated confidence threshold has not been empirically established."
+      ],
+      "supported_claims": [
+        "A leakage-controlled five-class priority prediction experiment can be performed on Mozilla CORE.",
+        "Creation-time Summary and Description contain predictive signal for the subsequent 24-hour priority outcome.",
+        "The selected model generalizes to a later chronological test period, although with degraded performance.",
+        "Priority prediction is substantially harder for P4 and P5 than for the more represented priority classes.",
+        "T2 can contribute one evidence channel to a larger confidence-aware triage system."
+      ],
+      "unsupported_claims": [
+        "T2 does not support claiming highly accurate autonomous five-class priority assignment.",
+        "T2 does not support claiming reliable prediction of P4 or P5.",
+        "T2 does not support automatic action at a fixed confidence threshold without further empirical calibration and policy evaluation.",
+        "T2 does not establish that predicted priority should replace human priority judgment."
+      ],
+      "integrity": {
+        "training_in_closure": false,
+        "refitting_in_closure": false,
+        "test_tuning_in_closure": false,
+        "dataset_modified": false,
+        "new_labels_created": false,
+        "future_features_added": false,
+        "target_derived_features_added": false,
+        "advanced_branch_reopened": false
+      },
+      "evidence_dependencies": {
+        "model_contract": "READY_FOR_CONTROLLED_MODELING",
+        "baseline_comparison": "COMPLETE",
+        "advanced_branch": "ADVANCED_MODEL_BRANCH_CLOSED",
+        "final_model_selection": "FINAL_MODEL_SELECTED",
+        "generalization_analysis": "GENERALIZATION_ANALYSIS_COMPLETE"
+      },
+      "final_conclusion": "Mozilla CORE is suitable for T2 priority-prediction modeling under the frozen Creation-time target and feature boundary. The final TF-IDF + Class-Weighted Logistic Regression model demonstrates measurable but limited predictive performance on the locked chronological test period. Because minority-class performance is weak and generalization degrades on the later period, T2 is closed as a supported secondary decision-support signal rather than an autonomous priority assignment component.",
+      "closure_status": "CLOSED",
+      "next_system_use": "Retain the T2 prediction as one evidence channel for later confidence-aware fusion and human-review policy development. Do not independently automate final priority assignment from T2."
+    }
+  },
+  "t3": {
+    "task": "Severity Prediction",
+    "source_artifact": "modeling/T3/analysis/t3_final_closure.json",
+    "closure": {
+      "operation": "T3-MOD-029",
+      "task": "T3_SEVERITY_PREDICTION",
+      "status": "CLOSED",
+      "final_candidate": {
+        "model_id": "T3-MOD-008",
+        "selection_primary_metric": "macro_f1",
+        "validation_metrics": {
+          "accuracy": 0.5845222654561176,
+          "macro_f1": 0.3480174180281372,
+          "weighted_f1": 0.6148412546447116
+        },
+        "locked_test_metrics": {
+          "accuracy": 0.5540423692174665,
+          "macro_f1": 0.3036817032407433,
+          "weighted_f1": 0.6030788055367481
+        }
+      },
+      "test_per_class": {
+        "S1": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 13
+        },
+        "S2": {
+          "precision": 0.13257575757575757,
+          "recall": 0.3115727002967359,
+          "f1": 0.18600531443755536,
+          "support": 337
+        },
+        "S3": {
+          "precision": 0.83672670321065,
+          "recall": 0.5864434687156971,
+          "f1": 0.6895772829945144,
+          "support": 3644
+        },
+        "S4": {
+          "precision": 0.25455987311657413,
+          "recall": 0.5079113924050633,
+          "f1": 0.33914421553090335,
+          "support": 632
+        }
+      },
+      "generalization": {
+        "accuracy_change": -0.030479896238651105,
+        "macro_f1_change": -0.0443357147873939,
+        "weighted_f1_change": -0.011762449107963535
+      },
+      "advanced_branch": {
+        "distilbert_accuracy": 0.7220060527453523,
+        "distilbert_macro_f1": 0.29663315276577507,
+        "distilbert_weighted_f1": 0.6689419070240422,
+        "selected": false,
+        "status": "CLOSED"
+      },
+      "limitations": [
+        "S1 remained undetected on the locked test set with F1=0 and support=13.",
+        "S2 test F1 was 0.186005, indicating limited minority-class discrimination.",
+        "Macro F1 decreased from 0.348017 on validation to 0.303682 on the locked test set.",
+        "The largest test errors involved S3/S4 and S3/S2 confusion.",
+        "The chronological evaluation exhibits temporal distribution shift across severity classes.",
+        "DistilBERT achieved higher accuracy and weighted F1 in feasibility testing but lower macro F1 and did not resolve S1/S2 detection."
+      ],
+      "suitability": "SUPPORTED_WITH_LIMITATIONS",
+      "system_role": "SECONDARY_DECISION_SUPPORT_SIGNAL",
+      "recommended_use": "Use T3 severity prediction as a secondary decision-support signal for downstream triage or human review. Do not treat the prediction as an autonomous or authoritative severity assignment.",
+      "evidence_controls": {
+        "validation_used_for_selection": true,
+        "locked_test_used_for_final_evaluation": true,
+        "test_used_for_selection": false,
+        "final_model_retrained_after_selection": false,
+        "final_model_refit_on_test": false,
+        "raw_mozilla_accessed_during_closure": false,
+        "dataset_modified": false
+      },
+      "closure_statement": "T3 \u2014 Severity Prediction is CLOSED as a SUPPORTED_WITH_LIMITATIONS secondary decision-support signal. The selected candidate is T3-MOD-008 under the pre-frozen macro-F1 criterion. Locked test evaluation and final generalization analysis are complete. The task is not treated as an autonomous severity assignment capability.",
+      "next_task": "T4"
+    }
+  },
+  "t4": {
+    "task": "Routing / Assignment / Specific Assignee Prediction",
+    "source_artifact": "modeling/T4/results/t4_mod013_closure.json",
+    "closure": {
+      "experiment": "T4-MOD-014",
+      "status": "COMPLETE",
+      "closure_status": "SUPPORTED_WITH_LIMITATIONS",
+      "system_role": "SECONDARY_DECISION_SUPPORT_SIGNAL",
+      "population": {
+        "train_rows": 142501,
+        "evaluation_rows": 35626,
+        "covered_rows": 32773,
+        "unseen_rows": 2853,
+        "unseen_rate": 0.08008196261157581,
+        "training_candidates": 4139
+      },
+      "experiment_summary": [
+        {
+          "metric": "Hit@1",
+          "r1": 0.28105877729747936,
+          "mod007": 0.2579015325885589,
+          "mod008": 0.21335541458485377,
+          "mod011_bm25": 0.20785381462976477
+        },
+        {
+          "metric": "Hit@3",
+          "r1": 0.36352663784876216,
+          "mod007": 0.3231909279739516,
+          "mod008": 0.30320552405546514,
+          "mod011_bm25": 0.29863021388873295
+        },
+        {
+          "metric": "Hit@5",
+          "r1": 0.40192555998428114,
+          "mod007": 0.3529725481389996,
+          "mod008": 0.3367765115365183,
+          "mod011_bm25": 0.33366080952113625
+        },
+        {
+          "metric": "Hit@10",
+          "r1": 0.4500645595913097,
+          "mod007": 0.39308370291360245,
+          "mod008": 0.3821085723909504,
+          "mod011_bm25": 0.38151911525290516
+        },
+        {
+          "metric": "Hit@20",
+          "r1": null,
+          "mod007": null,
+          "mod008": 0.4351035760399708,
+          "mod011_bm25": 0.4354404086902824
+        }
+      ],
+      "bm25_vs_mod007": {
+        "hit_at_1": {
+          "mod007": 0.2579015325885589,
+          "mod011_bm25": 0.20785381462976477,
+          "delta": -0.05004771795879415,
+          "delta_percentage_points": -5.004771795879415
+        },
+        "hit_at_3": {
+          "mod007": 0.3231909279739516,
+          "mod011_bm25": 0.29863021388873295,
+          "delta": -0.02456071408521865,
+          "delta_percentage_points": -2.456071408521865
+        },
+        "hit_at_5": {
+          "mod007": 0.3529725481389996,
+          "mod011_bm25": 0.33366080952113625,
+          "delta": -0.01931173861786334,
+          "delta_percentage_points": -1.9311738617863339
+        },
+        "hit_at_10": {
+          "mod007": 0.39308370291360245,
+          "mod011_bm25": 0.38151911525290516,
+          "delta": -0.01156458766069729,
+          "delta_percentage_points": -1.156458766069729
+        },
+        "mrr": {
+          "mod007": 0.30084030982893156,
+          "mod011_bm25": 0.26639209233350747,
+          "delta": -0.034448217495424094,
+          "delta_percentage_points": -3.4448217495424096
+        },
+        "ndcg_at_5": {
+          "mod007": 0.3082849828792247,
+          "mod011_bm25": 0.27564189731620736,
+          "delta": -0.032643085563017316,
+          "delta_percentage_points": -3.2643085563017316
+        },
+        "ndcg_at_10": {
+          "mod007": 0.32120802022972433,
+          "mod011_bm25": 0.2911261380955127,
+          "delta": -0.030081882134211646,
+          "delta_percentage_points": -3.008188213421165
+        }
+      },
+      "true_assignee_retrieval_coverage": {
+        "mod007": 0.4574497299606384,
+        "mod011_bm25": 0.47334696243859276,
+        "delta": 0.01589723247795438
+      },
+      "bm25_ranking_metrics": {
+        "mrr": 0.26639209233350747,
+        "ndcg_at_5": 0.27564189731620736,
+        "ndcg_at_10": 0.2911261380955127
+      },
+      "long_tail": {
+        "1": {
+          "rows": 983,
+          "hit_at_1": 0.012207527975584944,
+          "hit_at_5": 0.03153611393692777,
+          "hit_at_10": 0.04374364191251272,
+          "hit_at_20": 0.052899287894201424
+        },
+        "2-5": {
+          "rows": 2965,
+          "hit_at_1": 0.02900505902192243,
+          "hit_at_5": 0.08161888701517707,
+          "hit_at_10": 0.10016863406408094,
+          "hit_at_20": 0.12006745362563238
+        },
+        "6-10": {
+          "rows": 1145,
+          "hit_at_1": 0.03318777292576419,
+          "hit_at_5": 0.07510917030567686,
+          "hit_at_10": 0.0890829694323144,
+          "hit_at_20": 0.1205240174672489
+        },
+        "11-20": {
+          "rows": 1338,
+          "hit_at_1": 0.18684603886397608,
+          "hit_at_5": 0.27802690582959644,
+          "hit_at_10": 0.3101644245142003,
+          "hit_at_20": 0.35201793721973096
+        },
+        "21-50": {
+          "rows": 2752,
+          "hit_at_1": 0.13299418604651161,
+          "hit_at_5": 0.25617732558139533,
+          "hit_at_10": 0.30559593023255816,
+          "hit_at_20": 0.36191860465116277
+        },
+        "51-100": {
+          "rows": 4270,
+          "hit_at_1": 0.2306791569086651,
+          "hit_at_5": 0.41124121779859485,
+          "hit_at_10": 0.4711943793911007,
+          "hit_at_20": 0.5182669789227167
+        },
+        "101+": {
+          "rows": 19320,
+          "hit_at_1": 0.2933747412008282,
+          "hit_at_5": 0.4500517598343685,
+          "hit_at_10": 0.5114906832298136,
+          "hit_at_20": 0.5842132505175983
+        }
+      },
+      "open_world": {
+        "unseen_rows": 2853,
+        "unseen_rate": 0.08008196261157581,
+        "retrievable_by_training_history": false
+      },
+      "findings": [
+        "Historical retrieval is feasible at full scale.",
+        "BM25 provides modest improvement over the Word TF-IDF retrieval baseline on the same evaluation population.",
+        "The true-assignee retrieval coverage remains below 50% of the training-observed evaluation population.",
+        "Performance remains strongly dependent on historical assignee support.",
+        "Unseen evaluation assignees cannot be retrieved by a training-history-only candidate system.",
+        "Changing lexical retrieval representation does not remove the open-world or long-tail limitations."
+      ],
+      "unsupported_claims": [
+        "Universal automatic assignee assignment",
+        "Guaranteed correct routing",
+        "Operational assignee eligibility",
+        "Reliable routing for unseen assignees",
+        "Autonomous assignment without human review"
+      ],
+      "controls": {
+        "raw_mozilla_accessed": false,
+        "target_reconstructed": false,
+        "test_used": false,
+        "future_features_used": false,
+        "split_changed": false,
+        "operational_eligibility_established": false,
+        "unseen_targets_removed": false,
+        "target_side_fields_used": false,
+        "model_retrained": false,
+        "new_predictions_created": false
+      },
+      "source_artifacts": [
+        "t4_r1_metrics.json",
+        "t4_mod007_full_results.json",
+        "t4_mod008_full.json",
+        "t4_mod011_full.json",
+        "t4_mod012_analysis.json",
+        "t4_mod013_closure.json"
+      ],
+      "artifact_type": "Corrected final T4 closure artifact",
+      "correction": {
+        "source_artifact": "t4_mod013_closure.json",
+        "issue": "Long-tail reporting referenced a nonexistent coverage_at_20 field and produced None values.",
+        "resolution": "Replaced those values with the actual Hit@1/5/10/20 metrics from the completed MOD-011 historical-support analysis.",
+        "raw_data_accessed": false,
+        "modeling_repeated": false,
+        "retrieval_repeated": false
+      }
+    }
+  },
+  "t5": {
+    "task": "Binary Duplicate Detection",
+    "source_artifact": "modeling/T5/metrics/t5_mod011_final_closure.json",
+    "closure": {
+      "operation": "T5-MOD-011",
+      "operation_name": "Final Task Closure",
+      "timestamp_utc": "2026-09-18T08:17:55.213578+00:00",
+      "task": "T5 \u2014 Binary Duplicate Detection",
+      "task_definition": {
+        "task": "Binary Duplicate Detection",
+        "target": {
+          "name": "T5 target",
+          "type": "binary",
+          "positive": "First observed post-Creation 'Dupe of' addition",
+          "negative": "No observed post-Creation 'Dupe of' addition through the administrative observation endpoint",
+          "interpretation": "Relationship-existence detection; not target-ticket identification or pairing"
+        },
+        "canonical_population": {
+          "rows": 513816,
+          "positive": 4691,
+          "negative": 509125,
+          "unique_ids": 513816,
+          "normalized_content_groups": 512504
+        },
+        "features": [
+          "Creator",
+          "Creator Detail",
+          "Summary",
+          "Description"
+        ],
+        "excluded_from_inference": [
+          "Dupe of",
+          "Assigned to",
+          "Assigned to detail",
+          "post-Creation History",
+          "target-ticket information"
+        ]
+      },
+      "split_definition": {
+        "official_boundary": "Creation year < 2024 = training; Creation year >= 2024 = evaluation",
+        "group_definition": "Normalized Summary + Description",
+        "group_integrity": true,
+        "training_rows": 492989,
+        "training_positive": 3373,
+        "training_negative": 489616,
+        "evaluation_rows": 20827,
+        "evaluation_positive": 1318,
+        "evaluation_negative": 19509,
+        "cross_split_normalized_content_groups": 0,
+        "train_eval_id_overlap": 0,
+        "crossing_groups": 5,
+        "crossing_group_rows": 10,
+        "crossing_group_action": "All five crossing groups assigned to TRAIN to preserve group integrity"
+      },
+      "selected_pipeline": {
+        "representation": "Word-level TF-IDF unigram/bigram",
+        "vectorizer": {
+          "ngram_range": [
+            1,
+            2
+          ],
+          "min_df": 2,
+          "max_features": 100000,
+          "sublinear_tf": true,
+          "lowercase": true
+        },
+        "classifier": {
+          "type": "LogisticRegression",
+          "class_weight": "balanced",
+          "solver": "liblinear",
+          "max_iter": 1000,
+          "random_state": 42
+        },
+        "calibration": "Sigmoid",
+        "probability_output": "p_duplicate",
+        "threshold": {
+          "value": 0.5,
+          "status": "descriptive_only",
+          "optimized": false
+        }
+      },
+      "validation_evidence": {
+        "average_precision": 0.16377630768463408,
+        "roc_auc": 0.8969287312131792,
+        "log_loss": 0.028358865729015772,
+        "brier_score": 0.005860260617751882
+      },
+      "locked_evaluation_evidence": {
+        "average_precision": 0.12583280543036882,
+        "roc_auc": 0.6781415853279965,
+        "log_loss": 0.27250018754800265,
+        "brier_score": 0.059906950851585296,
+        "threshold_0_5": {
+          "precision": 0.4782608695652174,
+          "recall": 0.00834597875569044,
+          "f1": 0.01640566741237882,
+          "positive_predictions": 23
+        }
+      },
+      "generalization_evidence": {
+        "average_precision": {
+          "validation": 0.16377630768463408,
+          "locked_evaluation": 0.12583280543036882,
+          "absolute_change": -0.037943502254265266,
+          "relative_change_percent": -23.167882333340224
+        },
+        "roc_auc": {
+          "validation": 0.8969287312131792,
+          "locked_evaluation": 0.6781415853279965,
+          "absolute_change": -0.21878714588518267,
+          "relative_change_percent": -24.392924239281843
+        },
+        "log_loss": {
+          "validation": 0.028358865729015772,
+          "locked_evaluation": 0.27250018754800265,
+          "absolute_change": 0.24414132181898687,
+          "relative_change_percent": 860.899459632443
+        },
+        "brier_score": {
+          "validation": 0.005860260617751882,
+          "locked_evaluation": 0.059906950851585296,
+          "absolute_change": 0.05404669023383341,
+          "relative_change_percent": 922.2574516586405
+        }
+      },
+      "final_role": "SECONDARY_DECISION_SUPPORT_SIGNAL",
+      "final_status": "SUPPORTED_WITH_LIMITATIONS",
+      "limitations": [
+        "Temporal generalization degradation was observed between validation and the official evaluation population.",
+        "Locked evaluation AP was 0.125833 and ROC-AUC was 0.678142.",
+        "The descriptive 0.5 threshold produced 23 positive predictions with 0.008346 recall.",
+        "No operational threshold was established.",
+        "No autonomous duplicate determination or human-review removal is supported.",
+        "The target detects observed duplicate-relationship existence, not the identity of the duplicate target ticket."
+      ],
+      "controls": {
+        "model_refit": false,
+        "calibrator_refit": false,
+        "vectorizer_refit": false,
+        "threshold_optimization": false,
+        "evaluation_used_for_selection": false,
+        "evaluation_used_for_calibration": false,
+        "evaluation_modified": false,
+        "raw_dataset_modified": false,
+        "synthetic_data": false,
+        "autonomous_decision_support_claim": false
+      },
+      "closure_statement": "T5 Binary Duplicate Detection is closed for the current controlled modeling cycle. The frozen pipeline is retained as a secondary decision-support signal with limitations. The official evaluation was used only for locked final assessment and not for model selection, calibration, threshold optimization, or refitting.",
+      "status": "CLOSED"
+    }
+  },
+  "project_level_interpretation": {
+    "evidence_model": "T1-T5 are retained as distinct task-specific signals. They are not treated as a single universally calibrated score or as automatically interchangeable predictions.",
+    "system_role": "The completed modeling evidence supports a multi-signal decision-support architecture rather than autonomous ticket triage.",
+    "human_review": "Human review remains necessary where task evidence shows class imbalance, temporal degradation, unseen entities, missing evaluation support, low minority performance, calibration limitations, or unresolved operational threshold requirements.",
+    "deployment_claim": "No project-level autonomous deployment claim is established by T1-T5 alone."
+  },
+  "integrity_controls": {
+    "raw_source_modification": false,
+    "synthetic_labels": false,
+    "future_information_used": false,
+    "silent_cross_dataset_merge": false,
+    "evaluation_reuse_for_model_selection": false,
+    "unsupported_operational_threshold_claim": false,
+    "universal_confidence_score_claim": false
+  }
+}

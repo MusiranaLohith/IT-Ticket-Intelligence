@@ -1,0 +1,57 @@
+{
+  "operation": "T7_MOD-003",
+  "status": "ACCEPTED",
+  "task": "T7 Resolution-Time Estimation",
+  "target_artifact": "/run/media/whiteblack/User 1/Datasets/Mozilla_CORE/DTM-002_T7_TIME_TO_FIRST_RESOLVED_derived.csv",
+  "creation_feature_artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/derived/t7_mod003_creation_features.tmp.csv",
+  "final_output": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/derived/t7_creation_time_modeling_dataset.csv",
+  "feature_boundary": [
+    "Creator",
+    "Creator Detail",
+    "Summary",
+    "Description"
+  ],
+  "population": {
+    "rows": 513816,
+    "event_1": 455762,
+    "event_0": 58054
+  },
+  "timezone_contract": {
+    "raw_creation": "UTC",
+    "target_creation": "UTC+05:30",
+    "comparison": "semantic_instant",
+    "offset_seconds": 19800
+  },
+  "feature_audit": {
+    "feature_rows": 513816,
+    "feature_unique_ids": 513816
+  },
+  "join_audit": {
+    "target_rows": 513816,
+    "feature_rows": 513816,
+    "join_rows": 513816,
+    "missing_feature_rows": 0,
+    "extra_feature_rows": 0,
+    "creation_time_mismatches": 0,
+    "known_duplicate_id_feature_rows": 1
+  },
+  "final_audit": {
+    "rows": 513816,
+    "unique_ids": 513816,
+    "event_1": 455762,
+    "event_0": 58054
+  },
+  "controls": {
+    "raw_source_modified": false,
+    "accepted_target_modified": false,
+    "raw_archive_rescanned": false,
+    "pandas_used": false,
+    "full_raw_extraction": false,
+    "disk_backed_join": true,
+    "raw_creation_interpreted_as_utc": true,
+    "target_creation_interpreted_as_utc_plus_0530": true,
+    "raw_target_string_equality_required": false
+  },
+  "known_duplicate_id": "44606",
+  "elapsed_seconds": 45.74097657203674
+}

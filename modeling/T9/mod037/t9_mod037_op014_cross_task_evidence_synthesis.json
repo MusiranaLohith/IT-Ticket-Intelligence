@@ -1,0 +1,253 @@
+{
+  "operation": "T9_MOD-037_OP-014",
+  "title": "Cross-Task Evidence Boundary & Calibration Synthesis",
+  "status": "PASS",
+  "purpose": "Synthesize completed T2-T7 empirical evidence while preserving native task semantics and explicitly prohibiting cross-task probability aggregation or universal confidence construction.",
+  "task_evidence_matrix": [
+    {
+      "task": "T2",
+      "native_quantity": "Categorical Priority probability",
+      "empirical_status": "NOT_AVAILABLE",
+      "cross_task_comparison": "PROHIBITED",
+      "universal_score": "NOT_CREATED"
+    },
+    {
+      "task": "T3",
+      "native_quantity": "Categorical Severity probability",
+      "empirical_status": "NOT_AVAILABLE",
+      "cross_task_comparison": "PROHIBITED",
+      "universal_score": "NOT_CREATED"
+    },
+    {
+      "task": "T4",
+      "native_quantity": "Candidate-space assignee retrieval/ranking",
+      "empirical_status": "NATIVE_RANKING_EVALUATION_ESTABLISHED",
+      "cross_task_comparison": "PROHIBITED",
+      "universal_score": "NOT_CREATED"
+    },
+    {
+      "task": "T5",
+      "native_quantity": "Binary duplicate probability",
+      "empirical_status": "EMPIRICAL_CALIBRATION_EVIDENCE_ESTABLISHED",
+      "cross_task_comparison": "PROHIBITED",
+      "universal_score": "NOT_CREATED"
+    },
+    {
+      "task": "T6",
+      "native_quantity": "Query-level candidate retrieval/ranking",
+      "empirical_status": "NATIVE_RETRIEVAL_EVALUATION_ESTABLISHED",
+      "cross_task_comparison": "PROHIBITED",
+      "universal_score": "NOT_CREATED"
+    },
+    {
+      "task": "T7",
+      "native_quantity": "Survival / time-to-event prediction",
+      "empirical_status": "NATIVE_SURVIVAL_EVIDENCE_CLOSED",
+      "cross_task_comparison": "PROHIBITED",
+      "universal_score": "NOT_CREATED"
+    }
+  ],
+  "task_boundaries": {
+    "T2_T3": {
+      "task": "T2/T3",
+      "T2": {
+        "status": "UNAVAILABLE_FOR_PROBABILITY_CALIBRATION",
+        "probability_calibration": "NOT_AVAILABLE"
+      },
+      "T3": {
+        "status": "UNAVAILABLE",
+        "probability_calibration": "NOT_AVAILABLE"
+      },
+      "interpretation": "T2 and T3 remain governed by their frozen OP-005 task boundaries. No unavailable native probability artifact is reconstructed here."
+    },
+    "T4": {
+      "task": "T4",
+      "status": "NATIVE_RANKING_EVALUATION_ESTABLISHED",
+      "native_quantity": "Candidate-space assignee retrieval/ranking",
+      "native_evaluation": "ESTABLISHED",
+      "probability_calibration": "NOT_ESTABLISHED",
+      "candidate_space_restriction": "PRESERVED",
+      "unseen_targets": "UNAVAILABLE_NOT_NEGATIVE",
+      "universal_score_created": false
+    },
+    "T5": {
+      "task": "T5",
+      "status": "EMPIRICAL_CALIBRATION_EVIDENCE_ESTABLISHED",
+      "native_quantity": "Binary duplicate probability",
+      "calibration_evidence": "ESTABLISHED",
+      "calibration_improvement": "SUPPORTED",
+      "formal_method_selection": "NOT_FORMALLY_SELECTED",
+      "uncertainty_reliability": "ESTABLISHED",
+      "locked_test_used": false,
+      "universal_score_created": false
+    },
+    "T6": {
+      "task": "T6",
+      "status": "NATIVE_RETRIEVAL_EVALUATION_ESTABLISHED",
+      "native_quantity": "Query-level candidate retrieval/ranking",
+      "native_evaluation": "ESTABLISHED",
+      "uncertainty_reliability": "ESTABLISHED",
+      "ranking_evidence_source": "OP-012C",
+      "reliability_evidence_source": "OP-012D",
+      "binary_probability_calibration": "NOT_ESTABLISHED",
+      "observable_non_positive": "NOT_TRUE_NEGATIVE",
+      "universal_score_created": false
+    },
+    "T7": {
+      "task": "T7",
+      "status": "NATIVE_SURVIVAL_EVIDENCE_CLOSED",
+      "native_quantity": "Survival / time-to-event prediction",
+      "native_evaluation": "ESTABLISHED",
+      "native_uncertainty": "ESTABLISHED",
+      "descriptive_reliability": "ESTABLISHED",
+      "formal_survival_calibration": "NOT_ESTABLISHED",
+      "formal_calibration_uncertainty": "NOT_ESTABLISHED",
+      "right_censoring": "PRESERVED",
+      "universal_score_created": false
+    }
+  },
+  "cross_task_restrictions": {
+    "status": "PASS",
+    "prohibited_constructs": {
+      "universal_confidence_score": "PROHIBITED",
+      "universal_risk_score": "PROHIBITED",
+      "cross_task_probability_comparability": "PROHIBITED",
+      "synthetic_target": "PROHIBITED",
+      "blind_probability_averaging": "PROHIBITED",
+      "arbitrary_cross_task_weights": "PROHIBITED"
+    },
+    "OP-005_restriction_fields_present": {
+      "cross_task_probability_comparability": true,
+      "universal_confidence_score": true,
+      "universal_risk_score": true
+    }
+  },
+  "t8_interface": {
+    "status": "ACCEPTED_TASK_SPECIFIC_INTERFACE",
+    "principle": "T8 may preserve and present each task's native output/uncertainty with provenance, but may not convert heterogeneous task outputs into a common numerical probability or universal risk/confidence score.",
+    "task_specific_outputs": {
+      "T2": "Priority probability/confidence only when native probability output is available.",
+      "T3": "Severity probability/confidence only when native probability output is available.",
+      "T4": "Candidate-space assignee ranking within its defined candidate universe.",
+      "T5": "Duplicate probability/calibration evidence.",
+      "T6": "Query-level retrieval/ranking evidence with native retrieval semantics.",
+      "T7": "Survival/time-to-event prediction with explicit uncertainty and censoring semantics."
+    },
+    "cross_task_probability_aggregation": "PROHIBITED",
+    "cross_task_numerical_comparison": "PROHIBITED",
+    "universal_confidence_score": "NOT_CREATED",
+    "universal_risk_score": "NOT_CREATED",
+    "synthetic_fusion_target": "NOT_CREATED",
+    "automatic_action_label": "NOT_CREATED",
+    "provenance": "MUST_BE_PRESERVED",
+    "missing_evidence": "Unavailable task evidence remains unavailable; it is not interpreted as a negative outcome."
+  },
+  "final_conclusion": {
+    "t9_cross_task_status": "TASK_SPECIFIC_EVIDENCE_BOUNDARY_CLOSED",
+    "T2": {
+      "status": "UNAVAILABLE_FOR_PROBABILITY_CALIBRATION",
+      "probability_calibration": "NOT_AVAILABLE"
+    },
+    "T3": {
+      "status": "UNAVAILABLE",
+      "probability_calibration": "NOT_AVAILABLE"
+    },
+    "T4": {
+      "task": "T4",
+      "status": "NATIVE_RANKING_EVALUATION_ESTABLISHED",
+      "native_quantity": "Candidate-space assignee retrieval/ranking",
+      "native_evaluation": "ESTABLISHED",
+      "probability_calibration": "NOT_ESTABLISHED",
+      "candidate_space_restriction": "PRESERVED",
+      "unseen_targets": "UNAVAILABLE_NOT_NEGATIVE",
+      "universal_score_created": false
+    },
+    "T5": {
+      "task": "T5",
+      "status": "EMPIRICAL_CALIBRATION_EVIDENCE_ESTABLISHED",
+      "native_quantity": "Binary duplicate probability",
+      "calibration_evidence": "ESTABLISHED",
+      "calibration_improvement": "SUPPORTED",
+      "formal_method_selection": "NOT_FORMALLY_SELECTED",
+      "uncertainty_reliability": "ESTABLISHED",
+      "locked_test_used": false,
+      "universal_score_created": false
+    },
+    "T6": {
+      "task": "T6",
+      "status": "NATIVE_RETRIEVAL_EVALUATION_ESTABLISHED",
+      "native_quantity": "Query-level candidate retrieval/ranking",
+      "native_evaluation": "ESTABLISHED",
+      "uncertainty_reliability": "ESTABLISHED",
+      "ranking_evidence_source": "OP-012C",
+      "reliability_evidence_source": "OP-012D",
+      "binary_probability_calibration": "NOT_ESTABLISHED",
+      "observable_non_positive": "NOT_TRUE_NEGATIVE",
+      "universal_score_created": false
+    },
+    "T7": {
+      "task": "T7",
+      "status": "NATIVE_SURVIVAL_EVIDENCE_CLOSED",
+      "native_quantity": "Survival / time-to-event prediction",
+      "native_evaluation": "ESTABLISHED",
+      "native_uncertainty": "ESTABLISHED",
+      "descriptive_reliability": "ESTABLISHED",
+      "formal_survival_calibration": "NOT_ESTABLISHED",
+      "formal_calibration_uncertainty": "NOT_ESTABLISHED",
+      "right_censoring": "PRESERVED",
+      "universal_score_created": false
+    },
+    "cross_task_comparability": "NOT_ESTABLISHED_AND_PROHIBITED",
+    "universal_confidence": "NOT_CREATED",
+    "universal_risk_score": "NOT_CREATED",
+    "synthetic_fusion_target": "NOT_CREATED",
+    "automatic_action_label": "NOT_CREATED",
+    "interpretation": "T9 establishes a task-specific empirical evidence boundary rather than a universal confidence or risk scale. Each task remains interpreted according to its native predictive quantity, population, observation structure, and uncertainty semantics."
+  },
+  "controls": {
+    "artifact_read_only": true,
+    "new_model_fitted": false,
+    "new_predictions_generated": false,
+    "new_probability_generated": false,
+    "calibration_fitted": false,
+    "new_target_created": false,
+    "synthetic_target_created": false,
+    "synthetic_probability_created": false,
+    "cross_task_probability_aggregation": false,
+    "cross_task_probability_comparison": false,
+    "blind_probability_averaging": false,
+    "arbitrary_cross_task_weights": false,
+    "universal_confidence_created": false,
+    "universal_risk_score_created": false,
+    "automatic_action_label_created": false,
+    "threshold_selected": false,
+    "model_selected": false,
+    "locked_test_used": false,
+    "post_creation_information_used": false,
+    "existing_artifacts_modified": false,
+    "native_task_semantics_preserved": true,
+    "task_specific_quantities_preserved": true,
+    "provenance_preserved": true,
+    "missing_evidence_preserved_as_unavailable": true
+  },
+  "control_validation": {
+    "status": "PASS",
+    "failed_controls": []
+  },
+  "methodological_restrictions": [
+    "No universal confidence score.",
+    "No universal risk score.",
+    "No synthetic fusion target.",
+    "No automatic-action label.",
+    "No cross-task numerical probability comparison.",
+    "No blind probability averaging.",
+    "No arbitrary cross-task weights.",
+    "No task output is reinterpreted as another task's predictive quantity.",
+    "T4 candidate-space restrictions remain preserved.",
+    "T6 observable_non_positive remains distinct from a true negative.",
+    "T7 right censoring remains preserved.",
+    "Unavailable task evidence remains unavailable rather than negative.",
+    "Task-specific provenance must remain attached to every reported quantity."
+  ],
+  "closure_statement": "T9 cross-task empirical evidence is closed at the task-specific boundary. The evidence supports preservation and presentation of native task quantities, but does not establish cross-task numerical comparability or justify a universal confidence/risk construct."
+}

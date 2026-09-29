@@ -1,0 +1,94 @@
+{
+  "operation": "MOD-033 / OP-005",
+  "status": "PASS",
+  "t4": {
+    "artifacts": [
+      {
+        "name": "train",
+        "path": "modeling/T4/derived/t4_train.csv",
+        "exists": true,
+        "rows": 142501,
+        "unique_ids": 142501,
+        "duplicate_ids": 0
+      },
+      {
+        "name": "evaluation",
+        "path": "modeling/T4/derived/t4_eval.csv",
+        "exists": true,
+        "rows": 35626,
+        "unique_ids": 35626,
+        "duplicate_ids": 0
+      },
+      {
+        "name": "features",
+        "path": "modeling/T4/derived/t4_features.csv",
+        "exists": true,
+        "rows": 178127,
+        "unique_ids": 178127,
+        "duplicate_ids": 0
+      }
+    ],
+    "population_checks": {
+      "train_rows": 142501,
+      "evaluation_rows": 35626,
+      "feature_rows": 178127,
+      "train_eval_id_overlap": 0,
+      "train_feature_id_overlap": 142501,
+      "evaluation_feature_id_overlap": 35626
+    }
+  },
+  "t5": {
+    "artifacts": [
+      {
+        "name": "model_train",
+        "path": "modeling/T5/splits/t5_model_train.csv",
+        "exists": true,
+        "rows": 418898,
+        "unique_ids": 418898,
+        "duplicate_ids": 0
+      },
+      {
+        "name": "model_validation",
+        "path": "modeling/T5/splits/t5_model_val.csv",
+        "exists": true,
+        "rows": 74091,
+        "unique_ids": 74091,
+        "duplicate_ids": 0
+      },
+      {
+        "name": "features",
+        "path": "modeling/T5/derived/t5_train_features.csv",
+        "exists": true,
+        "rows": 492989,
+        "unique_ids": 492989,
+        "duplicate_ids": 0
+      }
+    ],
+    "population_checks": {
+      "model_train_rows": 418898,
+      "model_validation_rows": 74091,
+      "feature_rows": 492989,
+      "train_validation_id_overlap": 0,
+      "train_feature_id_overlap": 418898,
+      "validation_feature_id_overlap": 74091
+    }
+  },
+  "guards": {
+    "t4_train_evaluation_overlap_zero": true,
+    "t5_train_validation_overlap_zero": true,
+    "t4_development_population_exists": true,
+    "t5_development_population_exists": true,
+    "common_development_population_exists": true,
+    "no_prediction_generation_performed": true,
+    "no_model_training_performed": true,
+    "no_locked_evaluation_repurposed": true,
+    "native_task_semantics_preserved": true
+  },
+  "cross_task": {
+    "t4_development_ids": 142501,
+    "t5_development_ids": 418898,
+    "common_development_ids": 121085
+  },
+  "decision": "PASS \u2014 ID-addressable non-locked development populations exist for T4 and T5, with a non-empty common development population. Prediction generation remains a separate operation.",
+  "interpretation": "This audit establishes population eligibility only. It does not generate T4/T5 predictions or train models. Native task semantics must remain unchanged in any subsequent generation operation."
+}

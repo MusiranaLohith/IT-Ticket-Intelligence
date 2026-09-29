@@ -1,0 +1,68 @@
+{
+  "operation": "MOD-036 OP-026",
+  "operation_name": "Decision Engine Validation and Closure",
+  "status": "PASS",
+  "closure_status": "T8_DECISION_ENGINE_CLOSED",
+  "validated_operations": [
+    "MOD-036 OP-019",
+    "MOD-036 OP-020",
+    "MOD-036 OP-021",
+    "MOD-036 OP-023",
+    "MOD-036 OP-024",
+    "MOD-036 OP-025"
+  ],
+  "population": {
+    "decision_engine_union": 119895,
+    "all_four_intersection": 0,
+    "prediction_rows": 119895,
+    "unique_prediction_ids": 119895
+  },
+  "observed_overall_states": [
+    "INSUFFICIENT_EVIDENCE",
+    "SUPPORTED"
+  ],
+  "observed_consistency_states": [
+    "INSUFFICIENT_EVIDENCE",
+    "SUPPORTED"
+  ],
+  "evidence_count_distribution": {
+    "2": 9727,
+    "1": 109649,
+    "3": 519
+  },
+  "closure_criteria": {
+    "component_baselines_established": true,
+    "input_population_resolved": true,
+    "decision_population_composed": true,
+    "prediction_artifact_valid": true,
+    "state_semantics_valid": true,
+    "native_task_semantics_preserved": true,
+    "arbitrary_probability_fusion_avoided": true,
+    "synthetic_universal_target_avoided": true,
+    "locked_test_not_used_for_selection": true
+  },
+  "architecture": {
+    "variable_evidence": true,
+    "missing_evidence_is_unavailable": true,
+    "native_task_semantics_preserved": true,
+    "blind_probability_averaging": false,
+    "arbitrary_cross_task_weights": false,
+    "synthetic_universal_target": false,
+    "post_creation_features_added": false
+  },
+  "limitations": [
+    "No universal four-task population exists.",
+    "The decision engine is a variable-evidence composition layer rather than a single universally supervised predictor.",
+    "No empirical claim of cross-task predictive improvement is established by this closure.",
+    "T7 resolution evidence retains native survival-analysis semantics.",
+    "T5 duplicate probability is retained as calibrated evidence; no automation threshold is selected."
+  ],
+  "next_phase": {
+    "name": "T9",
+    "purpose": "Confidence and calibration layer"
+  },
+  "artifacts": {
+    "decision_predictions": "modeling/T8/mod036/op025/t8_mod036_op025_decision_engine_predictions.csv",
+    "closure_report": "modeling/T8/mod036/op026/t8_mod036_op026_decision_engine_validation.json"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "operation": "MOD-036 OP-021",
+  "component": "duplicate",
+  "status": "PASS",
+  "source": {
+    "native_population": "modeling/T5/splits/t5_model_val.csv",
+    "probability_artifact": "modeling/T5/metrics/t5_mod007_calibrated_validation_predictions.npz",
+    "rows": 74091,
+    "unique_ids": 74091
+  },
+  "native_semantics": {
+    "task_type": "duplicate_detection",
+    "target_column": "T5 target",
+    "native_probability_key": "p_sigmoid",
+    "recommendation_type": "duplicate_recommendation"
+  },
+  "population": {
+    "positive_duplicate_rows": 480,
+    "negative_rows": 73611
+  },
+  "alignment": {
+    "target_rows": 74091,
+    "probability_rows": 74091,
+    "artifact_y_true_aligned": true
+  },
+  "metrics": {
+    "roc_auc": 0.8969287312131792,
+    "average_precision": 0.16377630768463408,
+    "log_loss": 0.028358865729015772,
+    "brier_score": 0.005860260617751882
+  },
+  "descriptive_threshold": {
+    "threshold": 0.5,
+    "accuracy": 0.9934809895938778,
+    "used_for_automation": false
+  },
+  "probability_distribution": {
+    "minimum": 6.942310328241331e-06,
+    "maximum": 0.9030691091358121,
+    "mean": 0.007076626142712772,
+    "median": 0.0017243120176412496
+  },
+  "outputs": {
+    "predictions": "modeling/T8/mod036/op021/t8_mod036_op021_duplicate_component_predictions.csv"
+  },
+  "controls": {
+    "post_creation_information_used": false,
+    "native_t5_target_preserved": true,
+    "native_probability_semantics_preserved": true,
+    "probability_reinterpreted_as_universal_score": false,
+    "blind_cross_task_probability_averaging": false,
+    "arbitrary_cross_task_weighting": false,
+    "automation_threshold_selected": false
+  }
+}

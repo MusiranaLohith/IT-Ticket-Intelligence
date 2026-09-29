@@ -1,0 +1,255 @@
+{
+  "operation": "T1_IT_SUPPORT_WORD_CHAR_SVM_ANALYSIS",
+  "status": "COMPLETE",
+  "evaluation_records": 446,
+  "overall_accuracy": 0.9461883408071748,
+  "subset_summary": {
+    "repeated_text": {
+      "records": 396,
+      "correct": 383,
+      "incorrect": 13,
+      "accuracy": 0.9671717171717171
+    },
+    "single_record": {
+      "records": 50,
+      "correct": 39,
+      "incorrect": 11,
+      "accuracy": 0.78
+    }
+  },
+  "class_analysis": [
+    {
+      "class": "Active Directory",
+      "overall_support": 21,
+      "overall_correct": 12,
+      "overall_errors": 9,
+      "overall_accuracy": 0.5714285714285714,
+      "repeated_text_support": 12,
+      "repeated_text_correct": 6,
+      "repeated_text_errors": 6,
+      "repeated_text_accuracy": 0.5,
+      "single_record_support": 9,
+      "single_record_correct": 6,
+      "single_record_errors": 3,
+      "single_record_accuracy": 0.6666666666666666
+    },
+    {
+      "class": "Computer-Services",
+      "overall_support": 10,
+      "overall_correct": 8,
+      "overall_errors": 2,
+      "overall_accuracy": 0.8,
+      "repeated_text_support": 0,
+      "repeated_text_correct": 0,
+      "repeated_text_errors": 0,
+      "repeated_text_accuracy": null,
+      "single_record_support": 10,
+      "single_record_correct": 8,
+      "single_record_errors": 2,
+      "single_record_accuracy": 0.8
+    },
+    {
+      "class": "EOL",
+      "overall_support": 2,
+      "overall_correct": 2,
+      "overall_errors": 0,
+      "overall_accuracy": 1.0,
+      "repeated_text_support": 2,
+      "repeated_text_correct": 2,
+      "repeated_text_errors": 0,
+      "repeated_text_accuracy": 1.0,
+      "single_record_support": 0,
+      "single_record_correct": 0,
+      "single_record_errors": 0,
+      "single_record_accuracy": null
+    },
+    {
+      "class": "Fileservice",
+      "overall_support": 183,
+      "overall_correct": 182,
+      "overall_errors": 1,
+      "overall_accuracy": 0.994535519125683,
+      "repeated_text_support": 183,
+      "repeated_text_correct": 182,
+      "repeated_text_errors": 1,
+      "repeated_text_accuracy": 0.994535519125683,
+      "single_record_support": 0,
+      "single_record_correct": 0,
+      "single_record_errors": 0,
+      "single_record_accuracy": null
+    },
+    {
+      "class": "O365",
+      "overall_support": 34,
+      "overall_correct": 29,
+      "overall_errors": 5,
+      "overall_accuracy": 0.8529411764705882,
+      "repeated_text_support": 10,
+      "repeated_text_correct": 10,
+      "repeated_text_errors": 0,
+      "repeated_text_accuracy": 1.0,
+      "single_record_support": 24,
+      "single_record_correct": 19,
+      "single_record_errors": 5,
+      "single_record_accuracy": 0.7916666666666666
+    },
+    {
+      "class": "Software",
+      "overall_support": 44,
+      "overall_correct": 37,
+      "overall_errors": 7,
+      "overall_accuracy": 0.8409090909090909,
+      "repeated_text_support": 43,
+      "repeated_text_correct": 37,
+      "repeated_text_errors": 6,
+      "repeated_text_accuracy": 0.8604651162790697,
+      "single_record_support": 1,
+      "single_record_correct": 0,
+      "single_record_errors": 1,
+      "single_record_accuracy": 0.0
+    },
+    {
+      "class": "Support general",
+      "overall_support": 152,
+      "overall_correct": 152,
+      "overall_errors": 0,
+      "overall_accuracy": 1.0,
+      "repeated_text_support": 146,
+      "repeated_text_correct": 146,
+      "repeated_text_errors": 0,
+      "repeated_text_accuracy": 1.0,
+      "single_record_support": 6,
+      "single_record_correct": 6,
+      "single_record_errors": 0,
+      "single_record_accuracy": 1.0
+    }
+  ],
+  "error_pairs": {
+    "overall": [
+      {
+        "actual": "Software",
+        "prediction": "Support general",
+        "count": 6
+      },
+      {
+        "actual": "Active Directory",
+        "prediction": "Software",
+        "count": 4
+      },
+      {
+        "actual": "Active Directory",
+        "prediction": "Support general",
+        "count": 4
+      },
+      {
+        "actual": "O365",
+        "prediction": "Active Directory",
+        "count": 2
+      },
+      {
+        "actual": "O365",
+        "prediction": "Support general",
+        "count": 2
+      },
+      {
+        "actual": "Active Directory",
+        "prediction": "Fileservice",
+        "count": 1
+      },
+      {
+        "actual": "Computer-Services",
+        "prediction": "Fileservice",
+        "count": 1
+      },
+      {
+        "actual": "Computer-Services",
+        "prediction": "Support general",
+        "count": 1
+      },
+      {
+        "actual": "Fileservice",
+        "prediction": "Software",
+        "count": 1
+      },
+      {
+        "actual": "O365",
+        "prediction": "Software",
+        "count": 1
+      },
+      {
+        "actual": "Software",
+        "prediction": "Fileservice",
+        "count": 1
+      }
+    ],
+    "repeated_text": [
+      {
+        "actual": "Software",
+        "prediction": "Support general",
+        "count": 6
+      },
+      {
+        "actual": "Active Directory",
+        "prediction": "Software",
+        "count": 4
+      },
+      {
+        "actual": "Active Directory",
+        "prediction": "Support general",
+        "count": 2
+      },
+      {
+        "actual": "Fileservice",
+        "prediction": "Software",
+        "count": 1
+      }
+    ],
+    "single_record": [
+      {
+        "actual": "Active Directory",
+        "prediction": "Support general",
+        "count": 2
+      },
+      {
+        "actual": "O365",
+        "prediction": "Active Directory",
+        "count": 2
+      },
+      {
+        "actual": "O365",
+        "prediction": "Support general",
+        "count": 2
+      },
+      {
+        "actual": "Active Directory",
+        "prediction": "Fileservice",
+        "count": 1
+      },
+      {
+        "actual": "Computer-Services",
+        "prediction": "Fileservice",
+        "count": 1
+      },
+      {
+        "actual": "Computer-Services",
+        "prediction": "Support general",
+        "count": 1
+      },
+      {
+        "actual": "O365",
+        "prediction": "Software",
+        "count": 1
+      },
+      {
+        "actual": "Software",
+        "prediction": "Fileservice",
+        "count": 1
+      }
+    ]
+  },
+  "model_retrained": true,
+  "evaluation_used_for_fit": false,
+  "frozen_split_modified": false,
+  "labels_modified": false,
+  "raw_source_modified": false
+}

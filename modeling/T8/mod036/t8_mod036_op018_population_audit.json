@@ -1,0 +1,267 @@
+{
+  "operation": "MOD-036 OP-018",
+  "purpose": "Audit T2/T4/T5/T7 development populations and determine whether T8 should use a shared supervised population or native task populations.",
+  "source_populations": {
+    "T2": {
+      "rows": 16518,
+      "unique_ids": 16518,
+      "path": "modeling/T8/t8_mod029_t2_oof.csv"
+    },
+    "T4": {
+      "rows": 178127,
+      "unique_ids": 178127,
+      "path": "modeling/T4/derived/t4_features.csv"
+    },
+    "T5": {
+      "rows": 74091,
+      "unique_ids": 74091,
+      "path": "modeling/T5/splits/t5_model_val.csv"
+    },
+    "T7": {
+      "rows": 16518,
+      "unique_ids": 16518,
+      "path": "modeling/T8/t8_mod029_t7_oof.csv"
+    }
+  },
+  "pairwise_intersections": {
+    "T2_x_T4": {
+      "rows": 8924,
+      "left_population": 16518,
+      "right_population": 178127
+    },
+    "T2_x_T5": {
+      "rows": 2477,
+      "left_population": 16518,
+      "right_population": 74091
+    },
+    "T2_x_T7": {
+      "rows": 16518,
+      "left_population": 16518,
+      "right_population": 16518
+    },
+    "T4_x_T5": {
+      "rows": 26132,
+      "left_population": 178127,
+      "right_population": 74091
+    },
+    "T4_x_T7": {
+      "rows": 8924,
+      "left_population": 178127,
+      "right_population": 16518
+    },
+    "T5_x_T7": {
+      "rows": 2477,
+      "left_population": 74091,
+      "right_population": 16518
+    }
+  },
+  "higher_order_intersections": {
+    "T2_T4_T5": 1317,
+    "T2_T4_T7": 8924,
+    "T2_T5_T7": 2477,
+    "T4_T5_T7": 1317,
+    "T2_T4_T5_T7": 1317,
+    "union": 232520
+  },
+  "column_audit": {
+    "T2": {
+      "all_columns": [
+        "ID",
+        "predicted_priority",
+        "predicted_probability_P1",
+        "predicted_probability_P2",
+        "predicted_probability_P3",
+        "predicted_probability_P4",
+        "predicted_probability_P5",
+        "prediction_block",
+        "prediction_creation_time",
+        "model_task",
+        "implementation_identifier",
+        "preprocessing_scope",
+        "prediction_boundary"
+      ],
+      "target_like_columns": [],
+      "time_like_columns": [
+        "prediction_creation_time"
+      ],
+      "post_creation_like_columns": [],
+      "prediction_like_columns": [
+        "predicted_priority",
+        "predicted_probability_P1",
+        "predicted_probability_P2",
+        "predicted_probability_P3",
+        "predicted_probability_P4",
+        "predicted_probability_P5"
+      ]
+    },
+    "T4": {
+      "all_columns": [
+        "ID",
+        "Creation time",
+        "Creator",
+        "Creator Detail",
+        "Summary",
+        "Description",
+        "target_assignee"
+      ],
+      "target_like_columns": [
+        "target_assignee"
+      ],
+      "time_like_columns": [
+        "Creation time"
+      ],
+      "post_creation_like_columns": [],
+      "prediction_like_columns": []
+    },
+    "T5": {
+      "all_columns": [
+        "ID",
+        "Creation time",
+        "Creator",
+        "Creator Detail",
+        "Summary",
+        "Description",
+        "T5 target"
+      ],
+      "target_like_columns": [
+        "T5 target"
+      ],
+      "time_like_columns": [
+        "Creation time"
+      ],
+      "post_creation_like_columns": [],
+      "prediction_like_columns": []
+    },
+    "T7": {
+      "all_columns": [
+        "ID",
+        "predicted_median_survival_seconds",
+        "survival_probability_at_211583_seconds",
+        "survival_probability_at_1780179_seconds",
+        "survival_probability_at_14608619_seconds",
+        "prediction_block",
+        "prediction_creation_time",
+        "model_task",
+        "implementation_identifier",
+        "preprocessing_scope",
+        "prediction_boundary"
+      ],
+      "target_like_columns": [],
+      "time_like_columns": [
+        "prediction_creation_time"
+      ],
+      "post_creation_like_columns": [],
+      "prediction_like_columns": [
+        "predicted_median_survival_seconds",
+        "survival_probability_at_211583_seconds",
+        "survival_probability_at_1780179_seconds",
+        "survival_probability_at_14608619_seconds"
+      ]
+    }
+  },
+  "feature_target_separation": {
+    "T2": {
+      "target_like_columns": [],
+      "time_like_columns": [
+        "prediction_creation_time"
+      ],
+      "post_creation_like_columns": [],
+      "prediction_like_columns": [
+        "predicted_priority",
+        "predicted_probability_P1",
+        "predicted_probability_P2",
+        "predicted_probability_P3",
+        "predicted_probability_P4",
+        "predicted_probability_P5"
+      ],
+      "target_columns_are_not_automatically_features": true
+    },
+    "T4": {
+      "target_like_columns": [
+        "target_assignee"
+      ],
+      "time_like_columns": [
+        "Creation time"
+      ],
+      "post_creation_like_columns": [],
+      "prediction_like_columns": [],
+      "target_columns_are_not_automatically_features": true
+    },
+    "T5": {
+      "target_like_columns": [
+        "T5 target"
+      ],
+      "time_like_columns": [
+        "Creation time"
+      ],
+      "post_creation_like_columns": [],
+      "prediction_like_columns": [],
+      "target_columns_are_not_automatically_features": true
+    },
+    "T7": {
+      "target_like_columns": [],
+      "time_like_columns": [
+        "prediction_creation_time"
+      ],
+      "post_creation_like_columns": [],
+      "prediction_like_columns": [
+        "predicted_median_survival_seconds",
+        "survival_probability_at_211583_seconds",
+        "survival_probability_at_1780179_seconds",
+        "survival_probability_at_14608619_seconds"
+      ],
+      "target_columns_are_not_automatically_features": true
+    }
+  },
+  "population_assessment": {
+    "T2": {
+      "role": "native priority development/evidence population",
+      "use_for_shared_T8_population": "NO",
+      "reason": "Retain native T2 population and semantics rather than expanding it with unrelated task rows."
+    },
+    "T4": {
+      "role": "native assignment/retrieval development population",
+      "use_for_shared_T8_population": "NO",
+      "reason": "T4 has a substantially larger native population and its candidate-space/evaluation protocol is task-specific."
+    },
+    "T5": {
+      "role": "native duplicate development population",
+      "use_for_shared_T8_population": "NO",
+      "reason": "T5 validation population has its own duplicate-target semantics and calibration protocol."
+    },
+    "T7": {
+      "role": "native resolution/survival development population",
+      "use_for_shared_T8_population": "NO",
+      "reason": "T7 has explicit chronological and censoring semantics."
+    }
+  },
+  "architecture_decision": {
+    "shared_supervised_population": {
+      "status": "NOT_ESTABLISHED",
+      "decision": "Do not use the 232,520-row union as a single supervised T8 training population.",
+      "reason": "The four source populations have different native task definitions, target semantics, evaluation protocols, and population sizes."
+    },
+    "native_component_populations": {
+      "status": "RETAIN",
+      "decision": "Each supervised T8 component should initially train and evaluate using its corresponding native task population."
+    },
+    "decision_engine_population": {
+      "status": "SEPARATE_LAYER",
+      "decision": "T8 decision synthesis should consume validated component outputs/evidence at the decision-engine layer rather than forcing all training targets into one population."
+    },
+    "missing_task_evidence": {
+      "rule": "unavailable",
+      "negative_interpretation": false
+    }
+  },
+  "controls": {
+    "training_performed": false,
+    "prediction_generation_performed": false,
+    "model_selected": false,
+    "model_modified": false,
+    "dataset_modified": false,
+    "232520_union_used_as_supervised_training_population": false,
+    "synthetic_universal_target_created": false,
+    "all_task_intersection_forced": false
+  }
+}

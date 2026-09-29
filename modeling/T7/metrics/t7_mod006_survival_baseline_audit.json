@@ -1,0 +1,59 @@
+{
+  "task": "T7 Resolution-Time Estimation",
+  "operation": "MOD-006",
+  "status": "COMPLETE",
+  "baseline_family": "nonparametric_survival",
+  "training_source": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/splits/t7_train.csv",
+  "evaluation_source": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/splits/t7_evaluation.csv",
+  "train_rows": 411052,
+  "evaluation_rows": 102764,
+  "train_event_1": 374179,
+  "train_event_0": 36873,
+  "evaluation_event_1": 81583,
+  "evaluation_event_0": 21181,
+  "kaplan_meier": {
+    "unique_duration_times": 378467,
+    "median_survival_seconds": 2434986.0,
+    "landmark_s_0_75_seconds": 269443.0,
+    "landmark_s_0_90_seconds": 37349.0
+  },
+  "nelson_aalen": {
+    "unique_duration_times": 378467,
+    "final_cumulative_hazard": 3.4963342870114245
+  },
+  "ipcw_brier": {
+    "horizons": [
+      {
+        "horizon_seconds": 211583.0,
+        "km_predicted_survival": 0.7724253865690694,
+        "ipcw_brier_score": 0.15047031239713146
+      },
+      {
+        "horizon_seconds": 1780179.0,
+        "km_predicted_survival": 0.5448507731378873,
+        "ipcw_brier_score": 0.24631825329377932
+      },
+      {
+        "horizon_seconds": 14608619.0,
+        "km_predicted_survival": 0.31727859248955853,
+        "ipcw_brier_score": 0.19826429448128255
+      }
+    ],
+    "censoring_distribution_fitted_on": "TRAIN_ONLY"
+  },
+  "evaluation_integrity": {
+    "evaluation_fitting": false,
+    "feature_usage": false,
+    "raw_archive_access": false,
+    "chronological_split_respected": true
+  },
+  "c_index": {
+    "reported": false,
+    "reason": "Population-level KM baseline assigns the same survival trajectory to every evaluation ticket; therefore an individual risk ordering is not defined for a meaningful concordance calculation."
+  },
+  "artifacts": {
+    "kaplan_meier_curve": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/derived/t7_mod006_kaplan_meier_curve.csv",
+    "nelson_aalen_curve": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/derived/t7_mod006_nelson_aalen_curve.csv",
+    "audit": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod006_survival_baseline_audit.json"
+  }
+}

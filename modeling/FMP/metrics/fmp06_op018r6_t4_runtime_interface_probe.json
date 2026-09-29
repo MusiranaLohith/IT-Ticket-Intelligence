@@ -1,0 +1,333 @@
+{
+  "operation": "FMP-06 OP-018R6",
+  "operation_type": "T4_RUNTIME_INTERFACE_RESOLUTION",
+  "status": "PASS",
+  "closure": {
+    "path": "modeling/T4/results/t4_mod013_closure.json",
+    "top_level_keys": [
+      "experiment",
+      "status",
+      "closure_status",
+      "system_role",
+      "population",
+      "experiment_summary",
+      "bm25_vs_mod007",
+      "true_assignee_retrieval_coverage",
+      "bm25_ranking_metrics",
+      "long_tail",
+      "open_world",
+      "findings",
+      "unsupported_claims",
+      "controls",
+      "source_artifacts",
+      "artifact_type",
+      "correction"
+    ]
+  },
+  "results_directory": "modeling/T4/results",
+  "python_candidates": [],
+  "json_artifacts": [
+    {
+      "path": "modeling/T4/results/t4_mod007_full_results.json",
+      "top_level_type": "dict",
+      "top_level_keys": [
+        "experiment_id",
+        "title",
+        "status",
+        "train_rows",
+        "evaluation_rows",
+        "training_candidate_assignees",
+        "retrieval",
+        "tfidf",
+        "metrics_overall",
+        "metrics_covered_targets",
+        "metrics_unseen_targets",
+        "supporting_top1_metrics",
+        "historical_support_stratification",
+        "open_world",
+        "controls",
+        "interpretation",
+        "runtime"
+      ]
+    },
+    {
+      "path": "modeling/T4/results/t4_mod007_retrieval_analysis.json",
+      "top_level_type": "dict",
+      "top_level_keys": [
+        "experiment",
+        "status",
+        "inputs",
+        "overall",
+        "winner_change_analysis",
+        "winner_multiplicity",
+        "retrieval_diversity",
+        "winner_similarity_evidence",
+        "interpretation",
+        "controls"
+      ]
+    },
+    {
+      "path": "modeling/T4/results/t4_mod007_similarity_analysis.json",
+      "top_level_type": "dict",
+      "top_level_keys": [
+        "experiment",
+        "status",
+        "retrieval",
+        "global_similarity",
+        "rank_statistics",
+        "mass_statistics",
+        "similarity_concentration",
+        "rank_decay",
+        "weak_retrieval",
+        "effective_neighbor_count",
+        "interpretation",
+        "controls"
+      ]
+    },
+    {
+      "path": "modeling/T4/results/t4_mod007_smoke_report.json",
+      "top_level_type": "dict",
+      "top_level_keys": [
+        "experiment_id",
+        "stage",
+        "status",
+        "train_rows",
+        "full_evaluation_rows",
+        "smoke_evaluation_rows",
+        "training_candidate_assignees",
+        "retrieval_k",
+        "tfidf",
+        "retrieval_seconds",
+        "metrics",
+        "candidate_generation",
+        "open_world",
+        "raw_mozilla_accessed",
+        "target_reconstructed",
+        "test_used",
+        "full_evaluation_run",
+        "purpose",
+        "total_runtime_seconds"
+      ]
+    },
+    {
+      "path": "modeling/T4/results/t4_mod007_true_assignee_coverage.json",
+      "top_level_type": "dict",
+      "top_level_keys": [
+        "experiment",
+        "status",
+        "population",
+        "retrieval_coverage",
+        "retrieval_topk_coverage",
+        "retrieval_rank_distribution",
+        "true_assignee_similarity",
+        "true_assignee_neighbor_count",
+        "covered_outcome_decomposition",
+        "interpretation",
+        "controls"
+      ]
+    },
+    {
+      "path": "modeling/T4/results/t4_mod008_analysis.json",
+      "top_level_type": "dict",
+      "top_level_keys": [
+        "experiment",
+        "status",
+        "population",
+        "overall_comparison",
+        "covered_comparison",
+        "mod008_minus_mod007",
+        "mod007_ranking_metrics",
+        "mod008_retrieval",
+        "screening_vs_full",
+        "interpretation",
+        "controls"
+      ]
+    },
+    {
+      "path": "modeling/T4/results/t4_mod008_full.json",
+      "top_level_type": "dict",
+      "top_level_keys": [
+        "experiment",
+        "status",
+        "representation",
+        "population",
+        "retrieval",
+        "comparison",
+        "controls"
+      ]
+    },
+    {
+      "path": "modeling/T4/results/t4_mod008_screen.json",
+      "top_level_type": "dict",
+      "top_level_keys": [
+        "experiment",
+        "type",
+        "status",
+        "sample_size",
+        "top_k",
+        "results",
+        "baseline",
+        "controls"
+      ]
+    },
+    {
+      "path": "modeling/T4/results/t4_mod009_screen.json",
+      "top_level_type": "dict",
+      "top_level_keys": [
+        "experiment",
+        "status",
+        "method",
+        "population",
+        "bm25",
+        "retrieval",
+        "sampling",
+        "controls"
+      ]
+    },
+    {
+      "path": "modeling/T4/results/t4_mod010_comparison.json",
+      "top_level_type": "dict",
+      "top_level_keys": [
+        "experiment",
+        "status",
+        "purpose",
+        "experiments",
+        "population",
+        "metrics",
+        "mod009_screening",
+        "deltas",
+        "ranking_metrics_mod007",
+        "comparability",
+        "interpretation",
+        "controls",
+        "raw_mozilla_accessed",
+        "target_reconstructed",
+        "test_used",
+        "future_features_used",
+        "split_changed"
+      ]
+    },
+    {
+      "path": "modeling/T4/results/t4_mod011_full.json",
+      "top_level_type": "dict",
+      "top_level_keys": [
+        "experiment",
+        "status",
+        "method",
+        "population",
+        "bm25",
+        "retrieval",
+        "historical_support_stratification",
+        "sampling",
+        "controls",
+        "artifacts",
+        "runtime"
+      ]
+    },
+    {
+      "path": "modeling/T4/results/t4_mod012_analysis.json",
+      "top_level_type": "dict",
+      "top_level_keys": [
+        "experiment",
+        "status",
+        "population",
+        "methods",
+        "true_assignee_retrieval_coverage",
+        "true_assignee_position_counts",
+        "covered_metrics",
+        "overall_metrics",
+        "historical_support",
+        "open_world",
+        "controls"
+      ]
+    },
+    {
+      "path": "modeling/T4/results/t4_mod013_closure.json",
+      "top_level_type": "dict",
+      "top_level_keys": [
+        "experiment",
+        "status",
+        "closure_status",
+        "system_role",
+        "population",
+        "experiment_summary",
+        "bm25_vs_mod007",
+        "true_assignee_retrieval_coverage",
+        "bm25_ranking_metrics",
+        "long_tail",
+        "open_world",
+        "findings",
+        "unsupported_claims",
+        "controls",
+        "source_artifacts",
+        "artifact_type",
+        "correction"
+      ]
+    },
+    {
+      "path": "modeling/T4/results/t4_r1_analysis.json",
+      "top_level_type": "dict",
+      "top_level_keys": [
+        "experiment",
+        "analysis",
+        "evaluation_rows",
+        "candidate_classes",
+        "covered_rows",
+        "unseen_rows",
+        "unseen_rate",
+        "covered_topk_accuracy",
+        "covered_top1_accuracy",
+        "unseen_top1_accuracy",
+        "covered_top1_macro_f1",
+        "training_frequency_bucket_results",
+        "prediction_concentration",
+        "top_20_predicted_assignees",
+        "top_20_error_pairs",
+        "status",
+        "raw_mozilla_accessed",
+        "model_trained",
+        "predictions_created",
+        "test_used"
+      ]
+    },
+    {
+      "path": "modeling/T4/results/t4_r1_metrics.json",
+      "top_level_type": "dict",
+      "top_level_keys": [
+        "experiment",
+        "description",
+        "status",
+        "train_rows",
+        "evaluation_rows",
+        "candidate_classes",
+        "tfidf",
+        "model",
+        "metrics",
+        "open_world",
+        "covered_evaluation",
+        "unseen_target_behavior",
+        "runtime"
+      ]
+    },
+    {
+      "path": "modeling/T4/results/t4_r1_vs_mod007_analysis.json",
+      "top_level_type": "dict",
+      "top_level_keys": [
+        "experiment",
+        "status",
+        "overall",
+        "covered_targets",
+        "open_world",
+        "long_tail",
+        "interpretation"
+      ]
+    }
+  ],
+  "runtime_execution": false,
+  "retraining": false,
+  "artifact_modification": false,
+  "threshold_selection": false,
+  "synthetic_input_created": false,
+  "synthetic_target_created": false,
+  "note": "This operation resolves the T4 runtime interface only. No T4 inference or retrieval execution is performed."
+}

@@ -1,0 +1,62 @@
+{
+  "operation": "MOD-036 OP-025",
+  "operation_name": "Decision Engine Composition Baseline",
+  "status": "PASS",
+  "population": {
+    "union_rows": 119895
+  },
+  "component_availability": {
+    "priority": 4425,
+    "assignment": 35626,
+    "duplicate": 74091,
+    "resolution": 16518
+  },
+  "overall_evidence_states": {
+    "SUPPORTED": 10246,
+    "CONFLICTING": 0,
+    "INSUFFICIENT_EVIDENCE": 109649,
+    "UNAVAILABLE": 0
+  },
+  "evidence_patterns": {
+    "duplicate|resolution": 2294,
+    "duplicate": 66768,
+    "resolution": 12983,
+    "assignment": 27987,
+    "assignment|resolution": 1058,
+    "assignment|duplicate": 4197,
+    "assignment|duplicate|resolution": 183,
+    "priority|assignment": 1865,
+    "priority": 1911,
+    "priority|assignment|duplicate": 336,
+    "priority|duplicate": 313
+  },
+  "decision_engine_semantics": {
+    "variable_evidence_population": true,
+    "missing_evidence_is_unavailable": true,
+    "native_task_outputs_preserved": true,
+    "probability_averaging": false,
+    "arbitrary_weights": false,
+    "synthetic_universal_target": false,
+    "cross_task_compatibility_assumed": false
+  },
+  "structured_outputs": {
+    "priority_recommendation": true,
+    "assignment_recommendation": true,
+    "duplicate_recommendation": true,
+    "resolution_context": true,
+    "overall_triage_recommendation": true
+  },
+  "controls": {
+    "new_model_fitted": false,
+    "training_performed": false,
+    "test_data_used_for_model_selection": false,
+    "post_creation_features_added": false,
+    "censored_cases_relabelled": false,
+    "native_probability_semantics_preserved": true
+  },
+  "outputs": {
+    "predictions": "modeling/T8/mod036/op025/t8_mod036_op025_decision_engine_predictions.csv",
+    "report": "modeling/T8/mod036/op025/t8_mod036_op025_decision_engine_composition.json"
+  },
+  "next_operation": "MOD-036 OP-026 — Decision Engine Validation and Closure"
+}

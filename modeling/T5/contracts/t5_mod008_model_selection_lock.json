@@ -1,0 +1,101 @@
+{
+  "operation": "T5-MOD-008",
+  "operation_name": "Model Selection & Evaluation Lock",
+  "status": "MODEL_SELECTION_LOCKED",
+  "selected_pipeline": {
+    "task": "T5 \u2014 Binary Duplicate Detection",
+    "target": {
+      "column": "T5 target",
+      "definition": "1 = first observed post-Creation Dupe of addition; 0 = no observed post-Creation Dupe of addition through the administrative observation endpoint"
+    },
+    "prediction_boundary": "Creation time",
+    "features": [
+      "Creator",
+      "Creator Detail",
+      "Summary",
+      "Description"
+    ],
+    "representation": {
+      "type": "word-level TF-IDF",
+      "ngram_range": [
+        1,
+        2
+      ],
+      "min_df": 2,
+      "max_features": 100000,
+      "sublinear_tf": true,
+      "lowercase": true
+    },
+    "classifier": {
+      "type": "LogisticRegression",
+      "solver": "liblinear",
+      "class_weight": "balanced",
+      "max_iter": 1000,
+      "random_state": 42
+    },
+    "calibration": {
+      "selected_method": "sigmoid",
+      "fit_on": "separate group-aware calibration partition",
+      "validation_used_for_calibration": false
+    },
+    "probability_output": "p_duplicate",
+    "primary_metric": "Average Precision / PR-AUC",
+    "secondary_metrics": [
+      "ROC-AUC",
+      "Log Loss",
+      "Brier Score"
+    ],
+    "threshold": {
+      "value": 0.5,
+      "purpose": "descriptive reporting only",
+      "operational_selection": false
+    },
+    "evaluation_protocol": {
+      "official_evaluation_locked": true,
+      "official_evaluation_used_for_selection": false,
+      "group_aware_evaluation_boundary": true,
+      "threshold_optimization": false
+    }
+  },
+  "selection_evidence": {
+    "baseline": {
+      "average_precision": 0.16377630768463408,
+      "roc_auc": 0.8969287312131792,
+      "log_loss": 0.11953384007668892,
+      "brier_score": 0.031018998152599814
+    },
+    "sigmoid": {
+      "average_precision": 0.16377630768463408,
+      "roc_auc": 0.8969287312131792,
+      "log_loss": 0.028358865729015772,
+      "brier_score": 0.005860260617751882
+    },
+    "isotonic": {
+      "average_precision": 0.14869819508663887,
+      "roc_auc": 0.8948104732988276,
+      "log_loss": 0.029845500624698273,
+      "brier_score": 0.005843631923421229
+    },
+    "selection_basis": [
+      "Sigmoid preserves Average Precision to numerical precision.",
+      "Sigmoid preserves ROC-AUC to numerical precision.",
+      "Sigmoid substantially reduces Log Loss relative to baseline.",
+      "Sigmoid substantially reduces Brier score relative to baseline.",
+      "Isotonic produces lower AP and ROC-AUC than the baseline in the controlled validation comparison."
+    ]
+  },
+  "data_controls": {
+    "official_evaluation_rows": 20827,
+    "official_evaluation_used": false,
+    "training_validation_group_boundary_preserved": true,
+    "calibration_partition_group_boundary_preserved": true,
+    "synthetic_data": false,
+    "raw_archive_scanned": false
+  },
+  "explicit_non_decisions": [
+    "No operational duplicate-confirmation threshold was selected.",
+    "No automatic duplicate confirmation is authorized by this model-selection operation.",
+    "No target-ticket identification/pairing is implied.",
+    "No claim of production calibration performance is made before locked evaluation."
+  ]
+}

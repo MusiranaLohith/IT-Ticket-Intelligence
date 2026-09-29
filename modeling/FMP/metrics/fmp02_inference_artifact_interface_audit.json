@@ -1,0 +1,941 @@
+{
+  "operation": "FMP-02-OP-004",
+  "title": "Deterministic Inference-Artifact Interface Audit",
+  "read_only": true,
+  "prediction_generated": false,
+  "retraining_performed": false,
+  "evaluation_selection_performed": false,
+  "artifact_modification_performed": false,
+  "tasks": {
+    "T2": {
+      "model": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/models/t2_class_weighted_tfidf_logreg.joblib",
+        "exists": true,
+        "size_bytes": 14317753,
+        "sha256": "19e751d7095ab2cb7bbf0b4562f3274998cc984cb3298745d6d54f51c432a4f5",
+        "status": "LOADED",
+        "object_interface": {
+          "python_type": "builtins.dict",
+          "interfaces": {
+            "predict": false,
+            "predict_proba": false,
+            "decision_function": false,
+            "transform": false,
+            "fit": false,
+            "fit_transform": false,
+            "kneighbors": false
+          }
+        },
+        "dict_keys": [
+          "task",
+          "task_name",
+          "dataset",
+          "model_type",
+          "vectorizer_type",
+          "feature_sources",
+          "target",
+          "classes",
+          "class_weight",
+          "vectorizer",
+          "model"
+        ],
+        "dict_component_types": {
+          "task": "builtins.str",
+          "task_name": "builtins.str",
+          "dataset": "builtins.str",
+          "model_type": "builtins.str",
+          "vectorizer_type": "builtins.str",
+          "feature_sources": "builtins.list",
+          "target": "builtins.str",
+          "classes": "builtins.list",
+          "class_weight": "builtins.str",
+          "vectorizer": "sklearn.feature_extraction.text.TfidfVectorizer",
+          "model": "sklearn.linear_model._logistic.LogisticRegression"
+        },
+        "dict_component_interfaces": {
+          "task": {
+            "python_type": "builtins.str",
+            "interfaces": {
+              "predict": false,
+              "predict_proba": false,
+              "decision_function": false,
+              "transform": false,
+              "fit": false,
+              "fit_transform": false,
+              "kneighbors": false
+            }
+          },
+          "task_name": {
+            "python_type": "builtins.str",
+            "interfaces": {
+              "predict": false,
+              "predict_proba": false,
+              "decision_function": false,
+              "transform": false,
+              "fit": false,
+              "fit_transform": false,
+              "kneighbors": false
+            }
+          },
+          "dataset": {
+            "python_type": "builtins.str",
+            "interfaces": {
+              "predict": false,
+              "predict_proba": false,
+              "decision_function": false,
+              "transform": false,
+              "fit": false,
+              "fit_transform": false,
+              "kneighbors": false
+            }
+          },
+          "model_type": {
+            "python_type": "builtins.str",
+            "interfaces": {
+              "predict": false,
+              "predict_proba": false,
+              "decision_function": false,
+              "transform": false,
+              "fit": false,
+              "fit_transform": false,
+              "kneighbors": false
+            }
+          },
+          "vectorizer_type": {
+            "python_type": "builtins.str",
+            "interfaces": {
+              "predict": false,
+              "predict_proba": false,
+              "decision_function": false,
+              "transform": false,
+              "fit": false,
+              "fit_transform": false,
+              "kneighbors": false
+            }
+          },
+          "feature_sources": {
+            "python_type": "builtins.list",
+            "interfaces": {
+              "predict": false,
+              "predict_proba": false,
+              "decision_function": false,
+              "transform": false,
+              "fit": false,
+              "fit_transform": false,
+              "kneighbors": false
+            }
+          },
+          "target": {
+            "python_type": "builtins.str",
+            "interfaces": {
+              "predict": false,
+              "predict_proba": false,
+              "decision_function": false,
+              "transform": false,
+              "fit": false,
+              "fit_transform": false,
+              "kneighbors": false
+            }
+          },
+          "classes": {
+            "python_type": "builtins.list",
+            "interfaces": {
+              "predict": false,
+              "predict_proba": false,
+              "decision_function": false,
+              "transform": false,
+              "fit": false,
+              "fit_transform": false,
+              "kneighbors": false
+            }
+          },
+          "class_weight": {
+            "python_type": "builtins.str",
+            "interfaces": {
+              "predict": false,
+              "predict_proba": false,
+              "decision_function": false,
+              "transform": false,
+              "fit": false,
+              "fit_transform": false,
+              "kneighbors": false
+            }
+          },
+          "vectorizer": {
+            "python_type": "sklearn.feature_extraction.text.TfidfVectorizer",
+            "interfaces": {
+              "predict": false,
+              "predict_proba": false,
+              "decision_function": false,
+              "transform": true,
+              "fit": true,
+              "fit_transform": true,
+              "kneighbors": false
+            }
+          },
+          "model": {
+            "python_type": "sklearn.linear_model._logistic.LogisticRegression",
+            "interfaces": {
+              "predict": true,
+              "predict_proba": true,
+              "decision_function": true,
+              "transform": false,
+              "fit": true,
+              "fit_transform": false,
+              "kneighbors": false
+            }
+          }
+        },
+        "label": "model"
+      },
+      "closure": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/analysis/t2_final_closure.json",
+        "exists": true,
+        "size_bytes": 6544,
+        "sha256": "6d753e61bb66d7f8b174a8b393b189fae5ea5e79ae0d19b710fd36817cb9d1cc",
+        "status": "READABLE",
+        "summary": {
+          "json_type": "dict",
+          "top_level_keys": [
+            "operation",
+            "operation_name",
+            "task",
+            "task_name",
+            "dataset",
+            "prediction_boundary",
+            "admitted_features",
+            "excluded_features",
+            "final_model",
+            "final_test",
+            "generalization",
+            "system_role",
+            "suitability_decision",
+            "strengths",
+            "limitations",
+            "supported_claims",
+            "unsupported_claims",
+            "integrity",
+            "evidence_dependencies",
+            "final_conclusion",
+            "closure_status",
+            "next_system_use"
+          ],
+          "top_level_key_count": 22
+        },
+        "label": "closure"
+      },
+      "metrics": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/analysis/t2_final_test_metrics.json",
+        "exists": true,
+        "size_bytes": 2588,
+        "sha256": "afec7c4594f89d009718f8deb0d49e1fef5afaccf5ac239dd59017a9a175ff5f",
+        "status": "READABLE",
+        "summary": {
+          "json_type": "dict",
+          "top_level_keys": [
+            "operation",
+            "operation_name",
+            "task",
+            "dataset",
+            "model",
+            "test",
+            "training",
+            "metrics",
+            "actual_distribution",
+            "predicted_distribution",
+            "confusion_matrix",
+            "artifacts",
+            "test_evaluation_status"
+          ],
+          "top_level_key_count": 13
+        },
+        "label": "metrics"
+      }
+    },
+    "T3": {
+      "model": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib",
+        "exists": true,
+        "size_bytes": 17315561,
+        "sha256": "3887d73e8570a6d96c45a518ea4f5e03692e707a6d7aff463475e70f62bb371d",
+        "status": "LOADED",
+        "object_interface": {
+          "python_type": "builtins.dict",
+          "interfaces": {
+            "predict": false,
+            "predict_proba": false,
+            "decision_function": false,
+            "transform": false,
+            "fit": false,
+            "fit_transform": false,
+            "kneighbors": false
+          }
+        },
+        "dict_keys": [
+          "vectorizer",
+          "model",
+          "task",
+          "target",
+          "features",
+          "model_type",
+          "class_weight"
+        ],
+        "dict_component_types": {
+          "vectorizer": "sklearn.feature_extraction.text.TfidfVectorizer",
+          "model": "sklearn.linear_model._logistic.LogisticRegression",
+          "task": "builtins.str",
+          "target": "builtins.str",
+          "features": "builtins.list",
+          "model_type": "builtins.str",
+          "class_weight": "builtins.str"
+        },
+        "dict_component_interfaces": {
+          "vectorizer": {
+            "python_type": "sklearn.feature_extraction.text.TfidfVectorizer",
+            "interfaces": {
+              "predict": false,
+              "predict_proba": false,
+              "decision_function": false,
+              "transform": true,
+              "fit": true,
+              "fit_transform": true,
+              "kneighbors": false
+            }
+          },
+          "model": {
+            "python_type": "sklearn.linear_model._logistic.LogisticRegression",
+            "interfaces": {
+              "predict": true,
+              "predict_proba": true,
+              "decision_function": true,
+              "transform": false,
+              "fit": true,
+              "fit_transform": false,
+              "kneighbors": false
+            }
+          },
+          "task": {
+            "python_type": "builtins.str",
+            "interfaces": {
+              "predict": false,
+              "predict_proba": false,
+              "decision_function": false,
+              "transform": false,
+              "fit": false,
+              "fit_transform": false,
+              "kneighbors": false
+            }
+          },
+          "target": {
+            "python_type": "builtins.str",
+            "interfaces": {
+              "predict": false,
+              "predict_proba": false,
+              "decision_function": false,
+              "transform": false,
+              "fit": false,
+              "fit_transform": false,
+              "kneighbors": false
+            }
+          },
+          "features": {
+            "python_type": "builtins.list",
+            "interfaces": {
+              "predict": false,
+              "predict_proba": false,
+              "decision_function": false,
+              "transform": false,
+              "fit": false,
+              "fit_transform": false,
+              "kneighbors": false
+            }
+          },
+          "model_type": {
+            "python_type": "builtins.str",
+            "interfaces": {
+              "predict": false,
+              "predict_proba": false,
+              "decision_function": false,
+              "transform": false,
+              "fit": false,
+              "fit_transform": false,
+              "kneighbors": false
+            }
+          },
+          "class_weight": {
+            "python_type": "builtins.str",
+            "interfaces": {
+              "predict": false,
+              "predict_proba": false,
+              "decision_function": false,
+              "transform": false,
+              "fit": false,
+              "fit_transform": false,
+              "kneighbors": false
+            }
+          }
+        },
+        "label": "model"
+      },
+      "closure": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/analysis/t3_final_closure.json",
+        "exists": true,
+        "size_bytes": 3048,
+        "sha256": "e2d535cc058e477a0198bf1453e61479be80361c38b71d48a20b7fd59f082e40",
+        "status": "READABLE",
+        "summary": {
+          "json_type": "dict",
+          "top_level_keys": [
+            "operation",
+            "task",
+            "status",
+            "final_candidate",
+            "test_per_class",
+            "generalization",
+            "advanced_branch",
+            "limitations",
+            "suitability",
+            "system_role",
+            "recommended_use",
+            "evidence_controls",
+            "closure_statement",
+            "next_task"
+          ],
+          "top_level_key_count": 14
+        },
+        "label": "closure"
+      },
+      "metrics": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/metrics/t3_final_test_metrics.json",
+        "exists": true,
+        "size_bytes": 1493,
+        "sha256": "73605c05649cfb4a213d87db50ba3503e58393a52192e86bcdb2fd205729eb8b",
+        "status": "READABLE",
+        "summary": {
+          "json_type": "dict",
+          "top_level_keys": [
+            "operation",
+            "task",
+            "model_id",
+            "model_path",
+            "test_rows",
+            "accuracy",
+            "macro_f1",
+            "weighted_f1",
+            "per_class",
+            "true_counts",
+            "prediction_counts",
+            "confusion_matrix",
+            "controls"
+          ],
+          "top_level_key_count": 13
+        },
+        "label": "metrics"
+      }
+    },
+    "T4": {
+      "tfidf": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_tfidf.joblib",
+        "exists": true,
+        "size_bytes": 226595,
+        "sha256": "e451476d50c0fc0edb78c30b95b5acda706fd7730aef29042763433d77af680c",
+        "status": "LOADED",
+        "object_interface": {
+          "python_type": "sklearn.feature_extraction.text.TfidfVectorizer",
+          "interfaces": {
+            "predict": false,
+            "predict_proba": false,
+            "decision_function": false,
+            "transform": true,
+            "fit": true,
+            "fit_transform": true,
+            "kneighbors": false
+          }
+        },
+        "label": "tfidf"
+      },
+      "neighbors": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_neighbors.joblib",
+        "exists": true,
+        "size_bytes": 52792287,
+        "sha256": "08197ced826034fb6265a6b3e94fab041175f1a523c8a93d8f326588c6d1806c",
+        "status": "LOADED",
+        "object_interface": {
+          "python_type": "sklearn.neighbors._unsupervised.NearestNeighbors",
+          "interfaces": {
+            "predict": false,
+            "predict_proba": false,
+            "decision_function": false,
+            "transform": false,
+            "fit": true,
+            "fit_transform": false,
+            "kneighbors": true
+          }
+        },
+        "label": "neighbors"
+      },
+      "r1_tfidf": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/r1_checkpoints/t4_r1_tfidf.joblib",
+        "exists": true,
+        "size_bytes": 226595,
+        "sha256": "94434ba93019b8c115b7367ee26e8be2c53ef11c32fdb746c3a72634eb550c8e",
+        "status": "LOADED",
+        "object_interface": {
+          "python_type": "sklearn.feature_extraction.text.TfidfVectorizer",
+          "interfaces": {
+            "predict": false,
+            "predict_proba": false,
+            "decision_function": false,
+            "transform": true,
+            "fit": true,
+            "fit_transform": true,
+            "kneighbors": false
+          }
+        },
+        "label": "r1_tfidf"
+      },
+      "r1_svc": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/r1_checkpoints/t4_r1_linear_svc.joblib",
+        "exists": true,
+        "size_bytes": 638805252,
+        "sha256": "f2148c98afcc0685c02d9f0cd2279cb88639ad5220444722e5aa6b1757ba6d9d",
+        "status": "LOADED",
+        "object_interface": {
+          "python_type": "sklearn.svm._classes.LinearSVC",
+          "interfaces": {
+            "predict": true,
+            "predict_proba": false,
+            "decision_function": true,
+            "transform": false,
+            "fit": true,
+            "fit_transform": false,
+            "kneighbors": false
+          }
+        },
+        "label": "r1_svc"
+      },
+      "closure": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/t4_mod013_closure.json",
+        "exists": true,
+        "size_bytes": 6363,
+        "sha256": "d5d5862a0181df22c08aee58445c63a9e2809c3429b50a4f7b8e7ba83fd9c3e5",
+        "status": "READABLE",
+        "summary": {
+          "json_type": "dict",
+          "top_level_keys": [
+            "experiment",
+            "status",
+            "closure_status",
+            "system_role",
+            "population",
+            "experiment_summary",
+            "bm25_vs_mod007",
+            "true_assignee_retrieval_coverage",
+            "bm25_ranking_metrics",
+            "long_tail",
+            "open_world",
+            "findings",
+            "unsupported_claims",
+            "controls",
+            "source_artifacts",
+            "artifact_type",
+            "correction"
+          ],
+          "top_level_key_count": 17
+        },
+        "label": "closure"
+      }
+    },
+    "T5": {
+      "tfidf": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod005_tfidf.joblib",
+        "exists": true,
+        "size_bytes": 4041055,
+        "sha256": "3a653b5129b63f6fbb0b8e6423724c213f67e445a9a94acfefd79c999f851029",
+        "status": "LOADED",
+        "object_interface": {
+          "python_type": "sklearn.feature_extraction.text.TfidfVectorizer",
+          "interfaces": {
+            "predict": false,
+            "predict_proba": false,
+            "decision_function": false,
+            "transform": true,
+            "fit": true,
+            "fit_transform": true,
+            "kneighbors": false
+          }
+        },
+        "label": "tfidf"
+      },
+      "logreg": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod005_logreg.joblib",
+        "exists": true,
+        "size_bytes": 800891,
+        "sha256": "7217945fc407fa3cd0b7f06d597d56490fb4889f1992d1d6bef3503954339881",
+        "status": "LOADED",
+        "object_interface": {
+          "python_type": "sklearn.linear_model._logistic.LogisticRegression",
+          "interfaces": {
+            "predict": true,
+            "predict_proba": true,
+            "decision_function": true,
+            "transform": false,
+            "fit": true,
+            "fit_transform": false,
+            "kneighbors": false
+          }
+        },
+        "label": "logreg"
+      },
+      "calibrated_pipeline": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod007_calibrated_tfidf.joblib",
+        "exists": true,
+        "size_bytes": 4041492,
+        "sha256": "9e38ce715c9b4f5213fd7a7717e4295148e5bb40b19af2bb07638edccafb63e4",
+        "status": "LOADED",
+        "object_interface": {
+          "python_type": "sklearn.feature_extraction.text.TfidfVectorizer",
+          "interfaces": {
+            "predict": false,
+            "predict_proba": false,
+            "decision_function": false,
+            "transform": true,
+            "fit": true,
+            "fit_transform": true,
+            "kneighbors": false
+          }
+        },
+        "label": "calibrated_pipeline"
+      },
+      "calibration_models": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod007_calibration_models.joblib",
+        "exists": true,
+        "size_bytes": 802449,
+        "sha256": "06f32a9b0fcc927f08e3f55437c3120a19a6af572335d5fdcb8890833f5cf143",
+        "status": "LOADED",
+        "object_interface": {
+          "python_type": "builtins.dict",
+          "interfaces": {
+            "predict": false,
+            "predict_proba": false,
+            "decision_function": false,
+            "transform": false,
+            "fit": false,
+            "fit_transform": false,
+            "kneighbors": false
+          }
+        },
+        "dict_keys": [
+          "base_model",
+          "sigmoid_calibrator",
+          "isotonic_calibrator"
+        ],
+        "dict_component_types": {
+          "base_model": "sklearn.linear_model._logistic.LogisticRegression",
+          "sigmoid_calibrator": "sklearn.linear_model._logistic.LogisticRegression",
+          "isotonic_calibrator": "sklearn.isotonic.IsotonicRegression"
+        },
+        "dict_component_interfaces": {
+          "base_model": {
+            "python_type": "sklearn.linear_model._logistic.LogisticRegression",
+            "interfaces": {
+              "predict": true,
+              "predict_proba": true,
+              "decision_function": true,
+              "transform": false,
+              "fit": true,
+              "fit_transform": false,
+              "kneighbors": false
+            }
+          },
+          "sigmoid_calibrator": {
+            "python_type": "sklearn.linear_model._logistic.LogisticRegression",
+            "interfaces": {
+              "predict": true,
+              "predict_proba": true,
+              "decision_function": true,
+              "transform": false,
+              "fit": true,
+              "fit_transform": false,
+              "kneighbors": false
+            }
+          },
+          "isotonic_calibrator": {
+            "python_type": "sklearn.isotonic.IsotonicRegression",
+            "interfaces": {
+              "predict": true,
+              "predict_proba": false,
+              "decision_function": false,
+              "transform": true,
+              "fit": true,
+              "fit_transform": true,
+              "kneighbors": false
+            }
+          }
+        },
+        "label": "calibration_models"
+      },
+      "closure": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod011_final_closure.json",
+        "exists": true,
+        "size_bytes": 5177,
+        "sha256": "5ae5a41a93be69391b5bcb27af1188116b2c0d099ee51da9eab73bf8b56df75a",
+        "status": "READABLE",
+        "summary": {
+          "json_type": "dict",
+          "top_level_keys": [
+            "operation",
+            "operation_name",
+            "timestamp_utc",
+            "task",
+            "task_definition",
+            "split_definition",
+            "selected_pipeline",
+            "validation_evidence",
+            "locked_evaluation_evidence",
+            "generalization_evidence",
+            "final_role",
+            "final_status",
+            "limitations",
+            "controls",
+            "closure_statement",
+            "status"
+          ],
+          "top_level_key_count": 16
+        },
+        "label": "closure"
+      }
+    },
+    "T6": {
+      "tfidf": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/models/t6_mod004_tfidf_vectorizer.joblib",
+        "exists": true,
+        "size_bytes": 4235872,
+        "sha256": "eb0c1fbec9d8a138760ddca06bc371b7e3a329114f7e03a02e506e92854e15e2",
+        "status": "LOADED",
+        "object_interface": {
+          "python_type": "sklearn.feature_extraction.text.TfidfVectorizer",
+          "interfaces": {
+            "predict": false,
+            "predict_proba": false,
+            "decision_function": false,
+            "transform": true,
+            "fit": true,
+            "fit_transform": true,
+            "kneighbors": false
+          }
+        },
+        "label": "tfidf"
+      },
+      "hybrid_results": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod010_corrected_hybrid_results.json",
+        "exists": true,
+        "size_bytes": 6325,
+        "sha256": "7683692b6681b6d53b299c5bd5c3eea44ca09a96ff2752b9abcb232f46025ba9",
+        "status": "READABLE",
+        "summary": {
+          "json_type": "dict",
+          "top_level_keys": [
+            "task_id",
+            "operation_id",
+            "operation_name",
+            "status",
+            "lexical_reconciliation",
+            "semantic_branch",
+            "population",
+            "weight_selection",
+            "metrics",
+            "controls",
+            "artifacts",
+            "runtime_seconds"
+          ],
+          "top_level_key_count": 12
+        },
+        "label": "hybrid_results"
+      },
+      "hybrid_rankings": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod010_corrected_hybrid_query_rankings.csv",
+        "exists": true,
+        "size_bytes": 34283752,
+        "sha256": "9a1ca805ace923e2acd11bf0c0989c7e863fb5b499acca1013c64642575a11e0",
+        "status": "READABLE",
+        "header": "split,query_id,candidate_id,target_observed,semantic_score,tfidf_score,tfidf_score_normalized,semantic_score_normalized,hybrid_score",
+        "sample_second_line_present": true,
+        "label": "hybrid_rankings"
+      },
+      "direct_reconciliation": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod010_direct_score_reconciliation.json",
+        "exists": true,
+        "size_bytes": 1073,
+        "sha256": "32d7993ec776604c2781f9246f68702fddc3355f193ea6e8e48b43a7c8245da7",
+        "status": "READABLE",
+        "summary": {
+          "json_type": "dict",
+          "top_level_keys": [
+            "task_id",
+            "operation_id",
+            "operation_name",
+            "status",
+            "population",
+            "score_comparison",
+            "controls",
+            "artifacts"
+          ],
+          "top_level_key_count": 8
+        },
+        "label": "direct_reconciliation"
+      },
+      "closure": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_final_closure.json",
+        "exists": true,
+        "size_bytes": 5819,
+        "sha256": "7b9aaec3890f43719e6871c7067293df5e2d2828f93a9d5f386471a9da2323d8",
+        "status": "READABLE",
+        "summary": {
+          "json_type": "dict",
+          "top_level_keys": [
+            "task_id",
+            "task_name",
+            "operational_task_name",
+            "task_family",
+            "status",
+            "final_status",
+            "final_system_role",
+            "final_model",
+            "evaluation_population",
+            "final_evaluation_metrics",
+            "baseline_comparison",
+            "completed_operations",
+            "final_evidence",
+            "limitations",
+            "explicit_exclusions",
+            "controls",
+            "decision_statement"
+          ],
+          "top_level_key_count": 17
+        },
+        "label": "closure"
+      }
+    },
+    "T7": {
+      "lognormal_spec": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod010_log_normal_aft_model.json",
+        "exists": true,
+        "size_bytes": 2899,
+        "sha256": "3350aefff2b724c6492f1d03fcdf811fd69544a45e27e7805ce53c6c2f9bccd0",
+        "status": "READABLE",
+        "summary": {
+          "json_type": "dict",
+          "top_level_keys": [
+            "model_type",
+            "l2",
+            "sigma",
+            "beta",
+            "feature_names",
+            "standardization_mean",
+            "standardization_std",
+            "optimization"
+          ],
+          "top_level_key_count": 8
+        },
+        "label": "lognormal_spec"
+      },
+      "weibull_spec": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod007_weibull_aft_model.json",
+        "exists": true,
+        "size_bytes": 2985,
+        "sha256": "08dc47090b3367745e3d004c60a683587226776eb2258027cb506cc205510d25",
+        "status": "READABLE",
+        "summary": {
+          "json_type": "dict",
+          "top_level_keys": [
+            "model_type",
+            "l2",
+            "shape",
+            "beta",
+            "feature_names",
+            "standardization_mean",
+            "standardization_std",
+            "creator_frequency_mapping_size",
+            "creator_detail_frequency_mapping_size",
+            "optimization"
+          ],
+          "top_level_key_count": 10
+        },
+        "label": "weibull_spec"
+      },
+      "comparison": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod011_final_model_comparison_audit.json",
+        "exists": true,
+        "size_bytes": 2680,
+        "sha256": "971c0d0189611bd9c7e2d15c9ecf9e7037e7d95d64d59e620c721e8e0a45cbaa",
+        "status": "READABLE",
+        "summary": {
+          "json_type": "dict",
+          "top_level_keys": [
+            "task",
+            "operation",
+            "status",
+            "operation_purpose",
+            "raw_archive_access",
+            "model_refitting",
+            "new_feature_engineering",
+            "evaluation_population",
+            "models_compared",
+            "source_schema",
+            "weibull_aft",
+            "lognormal_aft",
+            "kaplan_meier_reference",
+            "comparison",
+            "evidence_statement",
+            "interpretation_boundary",
+            "artifacts"
+          ],
+          "top_level_key_count": 17
+        },
+        "label": "comparison"
+      },
+      "evaluation_predictions": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/derived/t7_mod010_evaluation_predictions.csv",
+        "exists": true,
+        "size_bytes": 10097325,
+        "sha256": "b3e70e1d248e5293fad03ae3f96e4921f27c45e26d8a18e2b605c6d7edbb05ba",
+        "status": "READABLE",
+        "header": "ID,duration_seconds,event,predicted_median_survival_seconds,survival_probability_at_211583_seconds,survival_probability_at_1780179_seconds,survival_probability_at_14608619_seconds",
+        "sample_second_line_present": true,
+        "label": "evaluation_predictions"
+      },
+      "closure": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod012_final_closure.json",
+        "exists": true,
+        "size_bytes": 4425,
+        "sha256": "db784e66f8c52123d067386f88a7200cac576d2783ef8b440bb61dc193a9cbfd",
+        "status": "READABLE",
+        "summary": {
+          "json_type": "dict",
+          "top_level_keys": [
+            "task",
+            "operation",
+            "status",
+            "closure_type",
+            "task_definition",
+            "population",
+            "data_boundary",
+            "chronological_split",
+            "survival_baselines",
+            "predictive_models",
+            "final_comparison",
+            "calibration",
+            "supported_role",
+            "limitations",
+            "evidence_chain",
+            "final_project_status",
+            "source_evidence"
+          ],
+          "top_level_key_count": 17
+        },
+        "label": "closure"
+      }
+    }
+  }
+}

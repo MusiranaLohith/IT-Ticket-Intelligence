@@ -1,0 +1,193 @@
+{
+  "operation": "FMP-02-OP-007R",
+  "title": "Corrected Native Manifest-to-Artifact Interface Validation",
+  "manifest": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp02_t2_t7_inference_manifest.json",
+  "read_only": true,
+  "prediction_generated": false,
+  "retraining_performed": false,
+  "evaluation_selection_performed": false,
+  "artifact_modified": false,
+  "tasks": {
+    "T2": {
+      "task": "T2",
+      "artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/models/t2_class_weighted_tfidf_logreg.joblib",
+      "loaded": true,
+      "artifact_type": "builtins.dict",
+      "checks": {
+        "vectorizer_present": true,
+        "vectorizer_transform": true,
+        "model_present": true,
+        "model_predict": true,
+        "model_predict_proba": true
+      },
+      "vectorizer_type": "sklearn.feature_extraction.text.TfidfVectorizer",
+      "model_type": "sklearn.linear_model._logistic.LogisticRegression",
+      "metadata_keys": [
+        "task",
+        "task_name",
+        "dataset",
+        "model_type",
+        "vectorizer_type",
+        "feature_sources",
+        "target",
+        "classes",
+        "class_weight",
+        "vectorizer",
+        "model"
+      ]
+    },
+    "T3": {
+      "task": "T3",
+      "artifact": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib",
+      "loaded": true,
+      "artifact_type": "builtins.dict",
+      "checks": {
+        "vectorizer_present": true,
+        "vectorizer_transform": true,
+        "model_present": true,
+        "model_predict": true,
+        "model_predict_proba": true
+      },
+      "vectorizer_type": "sklearn.feature_extraction.text.TfidfVectorizer",
+      "model_type": "sklearn.linear_model._logistic.LogisticRegression",
+      "metadata_keys": [
+        "vectorizer",
+        "model",
+        "task",
+        "target",
+        "features",
+        "model_type",
+        "class_weight"
+      ],
+      "features_metadata": {
+        "present": true,
+        "type": "builtins.list",
+        "value": [
+          "Summary",
+          "Description"
+        ],
+        "treated_as_executable_transformer": false
+      }
+    },
+    "T4": {
+      "task": "T4",
+      "objects": {
+        "mod007_tfidf": {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_tfidf.joblib",
+          "type": "sklearn.feature_extraction.text.TfidfVectorizer"
+        },
+        "mod007_neighbors": {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_neighbors.joblib",
+          "type": "sklearn.neighbors._unsupervised.NearestNeighbors"
+        },
+        "r1_tfidf": {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/r1_checkpoints/t4_r1_tfidf.joblib",
+          "type": "sklearn.feature_extraction.text.TfidfVectorizer"
+        },
+        "r1_linear_svc": {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/r1_checkpoints/t4_r1_linear_svc.joblib",
+          "type": "sklearn.svm._classes.LinearSVC"
+        }
+      },
+      "checks": {
+        "mod007_tfidf_transform": true,
+        "mod007_neighbors_kneighbors": true,
+        "r1_tfidf_transform": true,
+        "r1_svc_predict": true,
+        "r1_svc_decision_function": true
+      }
+    },
+    "T5": {
+      "task": "T5",
+      "objects": {
+        "tfidf": {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod005_tfidf.joblib",
+          "type": "sklearn.feature_extraction.text.TfidfVectorizer"
+        },
+        "logreg": {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod005_logreg.joblib",
+          "type": "sklearn.linear_model._logistic.LogisticRegression"
+        },
+        "calibration_models": {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod007_calibration_models.joblib",
+          "type": "builtins.dict",
+          "keys": [
+            "base_model",
+            "sigmoid_calibrator",
+            "isotonic_calibrator"
+          ]
+        },
+        "base_model": {
+          "type": "sklearn.linear_model._logistic.LogisticRegression"
+        },
+        "sigmoid_calibrator": {
+          "type": "sklearn.linear_model._logistic.LogisticRegression"
+        },
+        "isotonic_calibrator": {
+          "type": "sklearn.isotonic.IsotonicRegression"
+        }
+      },
+      "checks": {
+        "tfidf_transform": true,
+        "standalone_logreg_predict": true,
+        "base_model_present": true,
+        "base_model_predict": true,
+        "base_model_predict_proba": true,
+        "sigmoid_calibrator_present": true,
+        "sigmoid_calibrator_predict": true,
+        "isotonic_calibrator_present": true,
+        "isotonic_calibrator_predict": true
+      }
+    },
+    "T6": {
+      "task": "T6",
+      "lexical_component": {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/models/t6_mod004_tfidf_vectorizer.joblib",
+        "type": "sklearn.feature_extraction.text.TfidfVectorizer"
+      },
+      "implementation_components": {
+        "semantic_retrieval_script": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/scripts/t6_mod008_semantic_failure_retrieval.py",
+        "hybrid_retrieval_script": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/scripts/t6_mod009_hybrid_lexical_semantic_retrieval.py"
+      },
+      "checks": {
+        "lexical_transform": true,
+        "semantic_implementation_present": true,
+        "hybrid_implementation_present": true
+      }
+    },
+    "T7": {
+      "task": "T7",
+      "lognormal_keys": [
+        "model_type",
+        "l2",
+        "sigma",
+        "beta",
+        "feature_names",
+        "standardization_mean",
+        "standardization_std",
+        "optimization"
+      ],
+      "weibull_keys": [
+        "model_type",
+        "l2",
+        "shape",
+        "beta",
+        "feature_names",
+        "standardization_mean",
+        "standardization_std",
+        "creator_frequency_mapping_size",
+        "creator_detail_frequency_mapping_size",
+        "optimization"
+      ],
+      "reconstruction_script": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/scripts/t7_mod010_log_normal_aft_baseline.py",
+      "checks": {
+        "lognormal_spec_readable": true,
+        "weibull_spec_readable": true,
+        "lognormal_required_parameters": true,
+        "weibull_required_parameters": true,
+        "reconstruction_script_present": true
+      }
+    }
+  },
+  "status": "PASS"
+}

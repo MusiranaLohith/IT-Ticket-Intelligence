@@ -1,0 +1,59 @@
+{
+  "operation": "MOD-033 / OP-006",
+  "title": "T4/T5 Native Development Prediction Generation Contract",
+  "t4": {
+    "development_source": "modeling/T4/derived/t4_train.csv",
+    "development_rows": 142501,
+    "boundary": "Creation time",
+    "task": "Native T4 assignee ranking/retrieval",
+    "implementation": "T4 native implementation",
+    "output_semantics": [
+      "ID-addressable prediction",
+      "ranked assignee candidates",
+      "native ranking/retrieval evidence"
+    ],
+    "prohibited": [
+      "ranking-to-probability conversion",
+      "universal assignee eligibility claim",
+      "use of locked evaluation rows",
+      "post-Creation features"
+    ]
+  },
+  "t5": {
+    "development_source": "modeling/T5/splits/t5_model_train.csv",
+    "development_rows": 418898,
+    "boundary": "Creation",
+    "task": "Native T5 duplicate probability prediction",
+    "implementation": "T5 native implementation",
+    "output_semantics": [
+      "ID-addressable prediction",
+      "native duplicate probability"
+    ],
+    "prohibited": [
+      "duplicate probability interpreted as duplicate identity",
+      "use of locked evaluation rows",
+      "post-Creation features"
+    ]
+  },
+  "cross_task": {
+    "common_development_population_required": true,
+    "same_ticket_IDs_required": true,
+    "synthetic_T8_target": false,
+    "universal_triage_score": false
+  },
+  "locked_evaluation": {
+    "T4_evaluation_rows": 35626,
+    "T5_locked_evaluation_rows": 20827,
+    "repurpose_for_development": false
+  },
+  "generation_rules": {
+    "model_training_during_generation": false,
+    "prediction_boundary": "Creation",
+    "preserve_native_task_semantics": true,
+    "preserve_ID_provenance": true,
+    "record_model_implementation": true,
+    "record_source_population": true,
+    "record_generation_boundary": true
+  },
+  "decision": "PASS \u2014 the native T4/T5 development prediction generation contract is defined. Generation may proceed as a separate controlled operation using only eligible development populations and native task semantics."
+}

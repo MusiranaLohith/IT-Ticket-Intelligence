@@ -1,0 +1,540 @@
+{
+  "operation": "FMP-06-OP-001",
+  "operation_name": "E2E Runtime Interface Inventory",
+  "operation_type": "READ_ONLY_E2E_RUNTIME_INTERFACE_INVENTORY",
+  "timestamp_utc": "2026-09-26T10:13:31.394312+00:00",
+  "stage_order": [
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "T5",
+    "T6",
+    "T7",
+    "T8",
+    "T9",
+    "T10"
+  ],
+  "stage_results": {
+    "T1": {
+      "stage": "T1",
+      "artifact_count": 2,
+      "readable_count": 2,
+      "missing_count": 0,
+      "unreadable_count": 0,
+      "stage_status": "PASS",
+      "artifacts": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/analysis/t1_final_closure.json",
+          "exists": true,
+          "readable": true,
+          "type": ".json",
+          "size_bytes": 2128,
+          "top_level_keys": [
+            "closure_id",
+            "generated_utc",
+            "contract_id",
+            "contract_status_before_closure",
+            "final_decision",
+            "evidence"
+          ],
+          "columns": null,
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/analysis/t1_it_support_3model_compare.json",
+          "exists": true,
+          "readable": true,
+          "type": ".json",
+          "size_bytes": 12213,
+          "top_level_keys": [
+            "operation",
+            "status",
+            "evaluation_records",
+            "evaluation_used_for_fit",
+            "models_retrained",
+            "frozen_split_modified",
+            "labels_modified",
+            "raw_source_modified",
+            "results",
+            "rankings",
+            "pairwise_deltas",
+            "class_comparison"
+          ],
+          "columns": null,
+          "error": null
+        }
+      ]
+    },
+    "T2": {
+      "stage": "T2",
+      "artifact_count": 3,
+      "readable_count": 3,
+      "missing_count": 0,
+      "unreadable_count": 0,
+      "stage_status": "PASS",
+      "artifacts": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/analysis/t2_final_test_predictions.csv",
+          "exists": true,
+          "readable": true,
+          "type": ".csv",
+          "size_bytes": 181478,
+          "top_level_keys": null,
+          "columns": [
+            "ID",
+            "Creation time",
+            "actual_priority",
+            "predicted_priority"
+          ],
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/analysis/t2_final_test_metrics.json",
+          "exists": true,
+          "readable": true,
+          "type": ".json",
+          "size_bytes": 2588,
+          "top_level_keys": [
+            "operation",
+            "operation_name",
+            "task",
+            "dataset",
+            "model",
+            "test",
+            "training",
+            "metrics",
+            "actual_distribution",
+            "predicted_distribution",
+            "confusion_matrix",
+            "artifacts",
+            "test_evaluation_status"
+          ],
+          "columns": null,
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/analysis/t2_final_closure.json",
+          "exists": true,
+          "readable": true,
+          "type": ".json",
+          "size_bytes": 6544,
+          "top_level_keys": [
+            "operation",
+            "operation_name",
+            "task",
+            "task_name",
+            "dataset",
+            "prediction_boundary",
+            "admitted_features",
+            "excluded_features",
+            "final_model",
+            "final_test",
+            "generalization",
+            "system_role",
+            "suitability_decision",
+            "strengths",
+            "limitations",
+            "supported_claims",
+            "unsupported_claims",
+            "integrity",
+            "evidence_dependencies",
+            "final_conclusion",
+            "closure_status",
+            "next_system_use"
+          ],
+          "columns": null,
+          "error": null
+        }
+      ]
+    },
+    "T3": {
+      "stage": "T3",
+      "artifact_count": 3,
+      "readable_count": 3,
+      "missing_count": 0,
+      "unreadable_count": 0,
+      "stage_status": "PASS",
+      "artifacts": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/analysis/t3_locked_test_evaluation.json",
+          "exists": true,
+          "readable": true,
+          "type": ".json",
+          "size_bytes": 807,
+          "top_level_keys": [
+            "operation",
+            "status",
+            "selected_model",
+            "selection_basis",
+            "test_metrics",
+            "test_rows",
+            "controls",
+            "artifacts"
+          ],
+          "columns": null,
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/metrics/t3_final_test_metrics.json",
+          "exists": true,
+          "readable": true,
+          "type": ".json",
+          "size_bytes": 1493,
+          "top_level_keys": [
+            "operation",
+            "task",
+            "model_id",
+            "model_path",
+            "test_rows",
+            "accuracy",
+            "macro_f1",
+            "weighted_f1",
+            "per_class",
+            "true_counts",
+            "prediction_counts",
+            "confusion_matrix",
+            "controls"
+          ],
+          "columns": null,
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/analysis/t3_final_closure.json",
+          "exists": true,
+          "readable": true,
+          "type": ".json",
+          "size_bytes": 3048,
+          "top_level_keys": [
+            "operation",
+            "task",
+            "status",
+            "final_candidate",
+            "test_per_class",
+            "generalization",
+            "advanced_branch",
+            "limitations",
+            "suitability",
+            "system_role",
+            "recommended_use",
+            "evidence_controls",
+            "closure_statement",
+            "next_task"
+          ],
+          "columns": null,
+          "error": null
+        }
+      ]
+    },
+    "T4": {
+      "stage": "T4",
+      "artifact_count": 1,
+      "readable_count": 1,
+      "missing_count": 0,
+      "unreadable_count": 0,
+      "stage_status": "PASS",
+      "artifacts": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/t4_mod013_closure.json",
+          "exists": true,
+          "readable": true,
+          "type": ".json",
+          "size_bytes": 6363,
+          "top_level_keys": [
+            "experiment",
+            "status",
+            "closure_status",
+            "system_role",
+            "population",
+            "experiment_summary",
+            "bm25_vs_mod007",
+            "true_assignee_retrieval_coverage",
+            "bm25_ranking_metrics",
+            "long_tail",
+            "open_world",
+            "findings",
+            "unsupported_claims",
+            "controls",
+            "source_artifacts",
+            "artifact_type",
+            "correction"
+          ],
+          "columns": null,
+          "error": null
+        }
+      ]
+    },
+    "T5": {
+      "stage": "T5",
+      "artifact_count": 2,
+      "readable_count": 2,
+      "missing_count": 0,
+      "unreadable_count": 0,
+      "stage_status": "PASS",
+      "artifacts": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod009_locked_evaluation_metrics.json",
+          "exists": true,
+          "readable": true,
+          "type": ".json",
+          "size_bytes": 1387,
+          "top_level_keys": [
+            "operation",
+            "operation_name",
+            "evaluation_artifact",
+            "evaluation_population",
+            "locked_pipeline",
+            "metrics",
+            "controls",
+            "status"
+          ],
+          "columns": null,
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod011_final_closure.json",
+          "exists": true,
+          "readable": true,
+          "type": ".json",
+          "size_bytes": 5177,
+          "top_level_keys": [
+            "operation",
+            "operation_name",
+            "timestamp_utc",
+            "task",
+            "task_definition",
+            "split_definition",
+            "selected_pipeline",
+            "validation_evidence",
+            "locked_evaluation_evidence",
+            "generalization_evidence",
+            "final_role",
+            "final_status",
+            "limitations",
+            "controls",
+            "closure_statement",
+            "status"
+          ],
+          "columns": null,
+          "error": null
+        }
+      ]
+    },
+    "T6": {
+      "stage": "T6",
+      "artifact_count": 2,
+      "readable_count": 2,
+      "missing_count": 0,
+      "unreadable_count": 0,
+      "stage_status": "PASS",
+      "artifacts": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_final_closure.json",
+          "exists": true,
+          "readable": true,
+          "type": ".json",
+          "size_bytes": 5819,
+          "top_level_keys": [
+            "task_id",
+            "task_name",
+            "operational_task_name",
+            "task_family",
+            "status",
+            "final_status",
+            "final_system_role",
+            "final_model",
+            "evaluation_population",
+            "final_evaluation_metrics",
+            "baseline_comparison",
+            "completed_operations",
+            "final_evidence",
+            "limitations",
+            "explicit_exclusions",
+            "controls",
+            "decision_statement"
+          ],
+          "columns": null,
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod010_corrected_hybrid_results.json",
+          "exists": true,
+          "readable": true,
+          "type": ".json",
+          "size_bytes": 6325,
+          "top_level_keys": [
+            "task_id",
+            "operation_id",
+            "operation_name",
+            "status",
+            "lexical_reconciliation",
+            "semantic_branch",
+            "population",
+            "weight_selection",
+            "metrics",
+            "controls",
+            "artifacts",
+            "runtime_seconds"
+          ],
+          "columns": null,
+          "error": null
+        }
+      ]
+    },
+    "T7": {
+      "stage": "T7",
+      "artifact_count": 1,
+      "readable_count": 1,
+      "missing_count": 0,
+      "unreadable_count": 0,
+      "stage_status": "PASS",
+      "artifacts": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod012_final_closure.json",
+          "exists": true,
+          "readable": true,
+          "type": ".json",
+          "size_bytes": 4425,
+          "top_level_keys": [
+            "task",
+            "operation",
+            "status",
+            "closure_type",
+            "task_definition",
+            "population",
+            "data_boundary",
+            "chronological_split",
+            "survival_baselines",
+            "predictive_models",
+            "final_comparison",
+            "calibration",
+            "supported_role",
+            "limitations",
+            "evidence_chain",
+            "final_project_status",
+            "source_evidence"
+          ],
+          "columns": null,
+          "error": null
+        }
+      ]
+    },
+    "T8": {
+      "stage": "T8",
+      "artifact_count": 1,
+      "readable_count": 1,
+      "missing_count": 0,
+      "unreadable_count": 0,
+      "stage_status": "PASS",
+      "artifacts": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/mod036/op026/t8_mod036_op026_decision_engine_validation.json",
+          "exists": true,
+          "readable": true,
+          "type": ".json",
+          "size_bytes": 2256,
+          "top_level_keys": [
+            "operation",
+            "operation_name",
+            "status",
+            "closure_status",
+            "validated_operations",
+            "population",
+            "observed_overall_states",
+            "observed_consistency_states",
+            "evidence_count_distribution",
+            "closure_criteria",
+            "architecture",
+            "limitations",
+            "next_phase",
+            "artifacts"
+          ],
+          "columns": null,
+          "error": null
+        }
+      ]
+    },
+    "T9": {
+      "stage": "T9",
+      "artifact_count": 1,
+      "readable_count": 1,
+      "missing_count": 0,
+      "unreadable_count": 0,
+      "stage_status": "PASS",
+      "artifacts": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op015_final_integrated_closure.json",
+          "exists": true,
+          "readable": true,
+          "type": ".json",
+          "size_bytes": 6247,
+          "top_level_keys": [
+            "operation",
+            "title",
+            "status",
+            "purpose",
+            "prior_operations",
+            "contract_validation",
+            "semantic_lock_validation",
+            "task_evidence",
+            "final_evidence_statement",
+            "OP014_boundary",
+            "controls",
+            "control_validation",
+            "closure",
+            "methodological_restrictions"
+          ],
+          "columns": null,
+          "error": null
+        }
+      ]
+    },
+    "T10": {
+      "stage": "T10",
+      "artifact_count": 1,
+      "readable_count": 1,
+      "missing_count": 0,
+      "unreadable_count": 0,
+      "stage_status": "PASS",
+      "artifacts": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/project_consolidation.py",
+          "exists": true,
+          "readable": true,
+          "type": ".py",
+          "size_bytes": 9832,
+          "top_level_keys": null,
+          "columns": null,
+          "error": null
+        }
+      ]
+    }
+  },
+  "missing_artifacts": [],
+  "unreadable_artifacts": [],
+  "interface_observations": {
+    "T1_to_T2": "Both task artifacts exist, but this operation does not infer an executable runtime adapter merely from artifact presence.",
+    "T2_to_T3": "T2 and T3 native prediction/evaluation artifacts exist. Native task semantics remain separate.",
+    "T3_to_T4": "T3 and T4 artifacts exist. This inventory does not assume that a direct prediction-to-retrieval runtime call exists.",
+    "T4_to_T5": "T4 and T5 artifacts exist with distinct task semantics.",
+    "T5_to_T6": "T5 duplicate-probability evidence and T6 retrieval evidence remain task-specific.",
+    "T6_to_T7": "T6 retrieval and T7 survival evidence remain at their native task grains.",
+    "T7_to_T8": "T8 has a validated evidence-engine artifact and consumes native task evidence according to its established architecture.",
+    "T8_to_T9": "T9 has an integrated closure artifact and receives task-specific reliability/calibration evidence.",
+    "T9_to_T10": "T10 policy architecture exists in project consolidation, while empirical operational policy boundaries remain not established."
+  },
+  "e2e_execution_claim": "NOT_ESTABLISHED_BY_THIS_OPERATION",
+  "safeguards": {
+    "models_loaded": false,
+    "predictions_generated": false,
+    "retraining_performed": false,
+    "calibration_fitted": false,
+    "threshold_selected": false,
+    "threshold_optimized": false,
+    "policy_modified": false,
+    "artifacts_modified": false,
+    "universal_confidence_created": false,
+    "universal_risk_created": false
+  },
+  "status": "PASS"
+}

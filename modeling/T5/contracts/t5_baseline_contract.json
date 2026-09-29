@@ -1,0 +1,131 @@
+{
+  "operation": "T5-MOD-002",
+  "operation_name": "Baseline Modeling Contract",
+  "task": "T5 Binary Duplicate Detection",
+  "dataset": "Mozilla CORE",
+  "status": "FROZEN_BASELINE_CONTRACT",
+  "target": {
+    "column": "T5 target",
+    "type": "binary",
+    "positive_value": 1,
+    "negative_value": 0,
+    "meaning_positive": "First observed post-Creation Dupe of addition",
+    "meaning_negative": "No observed post-Creation Dupe of addition through the administrative observation endpoint",
+    "target_ticket_identification": false
+  },
+  "prediction_boundary": {
+    "time": "Creation",
+    "post_creation_history_allowed": false,
+    "post_creation_fields_allowed": false,
+    "target_side_fields_allowed": false
+  },
+  "features": {
+    "admitted": [
+      "Creator",
+      "Creator Detail",
+      "Summary",
+      "Description"
+    ],
+    "excluded_target_and_provenance": [
+      "T5 target",
+      "Target event index",
+      "Target change index",
+      "Target time",
+      "Target actor"
+    ]
+  },
+  "representation": {
+    "type": "TF-IDF",
+    "granularity": "word",
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 2,
+    "max_features": 100000,
+    "sublinear_tf": true,
+    "lowercase": true
+  },
+  "classifier": {
+    "type": "LogisticRegression",
+    "solver": "liblinear",
+    "class_weight": "balanced",
+    "max_iter": 1000,
+    "random_state": 42
+  },
+  "probability_output": {
+    "required": true,
+    "positive_class_probability": true,
+    "probability_column": "p_duplicate"
+  },
+  "evaluation": {
+    "primary_metrics": [
+      "average_precision",
+      "pr_auc"
+    ],
+    "secondary_metrics": [
+      "roc_auc",
+      "log_loss",
+      "brier_score_loss"
+    ],
+    "class_metrics": [
+      "precision",
+      "recall",
+      "f1"
+    ],
+    "confusion_matrix": true
+  },
+  "calibration": {
+    "required": true,
+    "metrics": [
+      "brier_score_loss",
+      "expected_calibration_error"
+    ],
+    "reliability_analysis": true,
+    "threshold_independent_probability_analysis": true
+  },
+  "threshold_policy": {
+    "baseline_threshold": 0.5,
+    "threshold_optimization": false,
+    "evaluation_threshold_tuning": false,
+    "automatic_operational_threshold": false
+  },
+  "split_policy": {
+    "training_artifact": "DTM-002_T5_TRAIN_GROUP_AWARE.csv",
+    "evaluation_artifact": "DTM-002_T5_EVAL_GROUP_AWARE.csv",
+    "group_aware_boundary": true,
+    "normalized_content_group_crossing_allowed": false,
+    "evaluation_set_used_for_model_selection": false,
+    "evaluation_set_used_for_threshold_tuning": false
+  },
+  "data_usage": {
+    "canonical_artifact": "DTM-002_T5_DUPLICATE_DETECTION_derived_canonical.csv",
+    "raw_archive_access": false,
+    "raw_archive_reconstruction": false,
+    "artifact_modification": false,
+    "synthetic_data": false
+  },
+  "model_selection": {
+    "advanced_model_before_baseline": false,
+    "baseline_required_first": true,
+    "selection_metric": "average_precision",
+    "evaluation_set_locked_until_baseline_complete": true
+  },
+  "interpretation_controls": {
+    "similarity_alone_is_not_duplication_proof": true,
+    "relationship_existence_target": true,
+    "target_ticket_pairing": false,
+    "autonomous_duplicate_confirmation": false
+  },
+  "operational_claims": {
+    "guaranteed_duplicate_detection": false,
+    "universal_automation": false,
+    "automatic_confirmation": false,
+    "human_review_boundary_established": false
+  },
+  "next_operation": {
+    "operation": "T5-MOD-003",
+    "purpose": "Materialize controlled modeling features from accepted T5 training artifact",
+    "model_training": false
+  }
+}

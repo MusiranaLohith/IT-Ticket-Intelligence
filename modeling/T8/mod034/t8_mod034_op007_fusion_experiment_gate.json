@@ -1,0 +1,36 @@
+{
+  "operation": "MOD-034 / OP-007",
+  "status": "PASS",
+  "checks": {
+    "fusion_contract_pass": true,
+    "native_outcomes_available": true,
+    "robust_interaction_pass": true,
+    "synthetic_joint_target": false,
+    "arbitrary_weighting": false,
+    "t4_probability_conversion": false,
+    "t5_assignment_conversion": false
+  },
+  "allowed_experiment": {
+    "t4_task": {
+      "target": "target_assignee",
+      "baseline": "native T4 ranking",
+      "addition": "T5 native p_duplicate evidence",
+      "evaluation": "native T4 ranking metrics"
+    },
+    "t5_task": {
+      "target": "T5 target",
+      "baseline": "native T5 p_duplicate",
+      "addition": "T4 native ranking evidence",
+      "evaluation": "native T5 discrimination metrics"
+    }
+  },
+  "prohibited": [
+    "synthetic universal triage target",
+    "single fused probability",
+    "arbitrary weighted score",
+    "T4 ranking to probability conversion",
+    "T5 probability to assignment conversion",
+    "causal interpretation"
+  ],
+  "decision": "PROCEED_WITH_CONTROLLED_NATIVE_EVIDENCE_ADDITION_EXPERIMENT"
+}

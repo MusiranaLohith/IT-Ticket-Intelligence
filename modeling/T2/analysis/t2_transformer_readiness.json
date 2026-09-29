@@ -1,0 +1,83 @@
+{
+  "operation": "T2-MOD-014",
+  "operation_name": "Transformer Environment and Data Readiness Check",
+  "task": "T2",
+  "dataset": "Mozilla CORE",
+  "model_candidate": "distilbert-base-uncased",
+  "environment": {
+    "python_version": "3.14.7",
+    "platform": "Linux-7.1.12-200.fc44.x86_64-x86_64-with-glibc2.43",
+    "pytorch_installed": false,
+    "pytorch_version": null,
+    "cuda_available": false,
+    "cuda_version": null,
+    "gpu_count": 0,
+    "gpu_name": null,
+    "transformers_installed": false,
+    "transformers_version": null,
+    "tokenizer_loadable": false,
+    "tokenizer_vocab_size": null,
+    "tokenizer_error": null,
+    "pytorch_error": "No module named 'torch'",
+    "transformers_error": "No module named 'transformers'"
+  },
+  "required_files": {
+    "feature_materialization": {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/derived/t2_features.csv",
+      "exists": true
+    },
+    "train_split": {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/splits/t2_train.csv",
+      "exists": false
+    },
+    "validation_split": {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/splits/t2_validation.csv",
+      "exists": false
+    }
+  },
+  "feature_materialization": {
+    "exists": true,
+    "rows": 29498,
+    "fields": [
+      "ID",
+      "Creation time",
+      "Summary",
+      "Description",
+      "target_priority"
+    ]
+  },
+  "train_split": null,
+  "validation_split": null,
+  "split_integrity": {
+    "train_rows_correct": false,
+    "validation_rows_correct": false,
+    "combined_rows_correct": false,
+    "train_validation_id_overlap": null,
+    "all_expected_classes_present": false
+  },
+  "readiness_checks": {
+    "pytorch_available": false,
+    "transformers_available": false,
+    "distilbert_tokenizer_loadable": false,
+    "feature_file_available": true,
+    "feature_row_count_correct": true,
+    "train_split_available": false,
+    "validation_split_available": false,
+    "train_size_correct": false,
+    "validation_size_correct": false,
+    "train_validation_combined_size_correct": false,
+    "train_validation_id_overlap_zero": false,
+    "all_expected_classes_present": false
+  },
+  "test_access": {
+    "test_file_loaded": false,
+    "test_file_path_checked": false,
+    "reason": "The test partition remains locked during advanced-model preparation."
+  },
+  "training": {
+    "started": false,
+    "fine_tuning_started": false
+  },
+  "overall_ready": false,
+  "status": "NOT_READY"
+}

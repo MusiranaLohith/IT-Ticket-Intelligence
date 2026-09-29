@@ -1,0 +1,38 @@
+{
+  "operation": "FMP-06 OP-018R15",
+  "operation_name": "T4 frozen retrieval reproducibility check",
+  "status": "REPRODUCIBILITY_MISMATCH",
+  "finding": "Frozen T4 runtime executes, but stored MOD-007 retrieval values and/or neighbor indices do not exactly reproduce for the probe rows.",
+  "read_only": true,
+  "training_or_fitting": false,
+  "evaluation_metrics": false,
+  "locked_test_used": false,
+  "artifact_modified": false,
+  "probe_rows": 3,
+  "frozen_metric": "cosine",
+  "frozen_algorithm": "brute",
+  "frozen_n_neighbors": 20,
+  "stored_index_key": "neighbor_indices",
+  "stored_value_key": "neighbor_similarities",
+  "stored_index_shape": [
+    35626,
+    20
+  ],
+  "stored_value_shape": [
+    35626,
+    20
+  ],
+  "reproduced_index_shape": [
+    3,
+    20
+  ],
+  "reproduced_distance_shape": [
+    3,
+    20
+  ],
+  "index_exact_match": false,
+  "stored_value_matches_distance": false,
+  "stored_value_matches_similarity": false,
+  "exact_reproduction": false,
+  "output": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op018r15_t4_frozen_retrieval_reproducibility.json"
+}

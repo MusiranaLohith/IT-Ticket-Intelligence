@@ -1,0 +1,122 @@
+{
+  "operation": "H-RUN-021R1",
+  "operation_name": "Reusable runtime API smoke test",
+  "single_ticket": {
+    "ticket_id": "INC-2026-10482",
+    "category": "Active Directory",
+    "priority": "P1",
+    "severity": "S3",
+    "duplicate_evidence": 0.0,
+    "related_ticket_ids": [],
+    "resolution_median_seconds": 14.687785978139638,
+    "evidence_state": "SUPPORTED_WITH_LIMITATIONS",
+    "action": "HUMAN_DECISION_REQUIRED",
+    "lifecycle": "AWAITING_OUTCOME",
+    "task_status": {
+      "T1": "EXECUTED",
+      "T2": "EXECUTED",
+      "T3": "EXECUTED",
+      "T4": "EXECUTED",
+      "T5": "EXECUTED",
+      "T6": "PARTIAL_NATIVE_RUNTIME",
+      "T7": "EXECUTED_WITH_SUPPORT_LIMITATION",
+      "T8": "EXECUTED",
+      "T9": "EXECUTED",
+      "T10": "EXECUTED",
+      "T11": "EXECUTED"
+    }
+  },
+  "batch": {
+    "ticket_count": 3,
+    "results": [
+      {
+        "ticket_id": "INC-2026-10482",
+        "category": "Active Directory",
+        "priority": "P1",
+        "severity": "S3",
+        "duplicate_evidence": 0.0,
+        "related_ticket_ids": [],
+        "resolution_median_seconds": 14.687785978139638,
+        "evidence_state": "SUPPORTED_WITH_LIMITATIONS",
+        "action": "HUMAN_DECISION_REQUIRED",
+        "lifecycle": "AWAITING_OUTCOME",
+        "task_status": {
+          "T1": "EXECUTED",
+          "T2": "EXECUTED",
+          "T3": "EXECUTED",
+          "T4": "EXECUTED",
+          "T5": "EXECUTED",
+          "T6": "PARTIAL_NATIVE_RUNTIME",
+          "T7": "EXECUTED_WITH_SUPPORT_LIMITATION",
+          "T8": "EXECUTED",
+          "T9": "EXECUTED",
+          "T10": "EXECUTED",
+          "T11": "EXECUTED"
+        }
+      },
+      {
+        "ticket_id": "INC-2026-10483",
+        "category": "Computer-Services",
+        "priority": "P1",
+        "severity": "S3",
+        "duplicate_evidence": 0.0,
+        "related_ticket_ids": [],
+        "resolution_median_seconds": 21.104444841622566,
+        "evidence_state": "SUPPORTED_WITH_LIMITATIONS",
+        "action": "HUMAN_DECISION_REQUIRED",
+        "lifecycle": "AWAITING_OUTCOME",
+        "task_status": {
+          "T1": "EXECUTED",
+          "T2": "EXECUTED",
+          "T3": "EXECUTED",
+          "T4": "EXECUTED",
+          "T5": "EXECUTED",
+          "T6": "PARTIAL_NATIVE_RUNTIME",
+          "T7": "EXECUTED_WITH_SUPPORT_LIMITATION",
+          "T8": "EXECUTED",
+          "T9": "EXECUTED",
+          "T10": "EXECUTED",
+          "T11": "EXECUTED"
+        }
+      },
+      {
+        "ticket_id": "INC-2026-10484",
+        "category": "Active Directory",
+        "priority": "P1",
+        "severity": "S3",
+        "duplicate_evidence": 0.0,
+        "related_ticket_ids": [],
+        "resolution_median_seconds": 23.615853467261086,
+        "evidence_state": "SUPPORTED_WITH_LIMITATIONS",
+        "action": "HUMAN_DECISION_REQUIRED",
+        "lifecycle": "AWAITING_OUTCOME",
+        "task_status": {
+          "T1": "EXECUTED",
+          "T2": "EXECUTED",
+          "T3": "EXECUTED",
+          "T4": "EXECUTED",
+          "T5": "EXECUTED",
+          "T6": "PARTIAL_NATIVE_RUNTIME",
+          "T7": "EXECUTED_WITH_SUPPORT_LIMITATION",
+          "T8": "EXECUTED",
+          "T9": "EXECUTED",
+          "T10": "EXECUTED",
+          "T11": "EXECUTED"
+        }
+      }
+    ]
+  },
+  "validation": {
+    "single_ticket_api": true,
+    "batch_ticket_api": true,
+    "same_pipeline_instance": true,
+    "hard_coded_ticket_execution": false,
+    "model_retraining": false,
+    "model_modification": false,
+    "threshold_optimization": false,
+    "locked_test_reuse": false,
+    "prediction_modification": false,
+    "synthetic_feedback": false
+  },
+  "final_status": "PASS_WITH_LIMITATIONS"
+}

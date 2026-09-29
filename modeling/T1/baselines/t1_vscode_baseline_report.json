@@ -1,0 +1,131 @@
+{
+  "status": "BASELINE_COMPLETE",
+  "model": {
+    "type": "TFIDF_LOGISTIC_REGRESSION",
+    "random_state": 42,
+    "class_weight": "balanced",
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 2,
+    "max_df": 0.98,
+    "sublinear_tf": true
+  },
+  "data": {
+    "split_dataset": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/splits/t1_vscode_split.csv",
+    "development_records": 3717,
+    "evaluation_records": 930,
+    "development_used_for_fit": true,
+    "evaluation_used_for_fit": false
+  },
+  "features": {
+    "summary": true,
+    "description_clean": true,
+    "issue_id": false,
+    "source_row": false,
+    "created": false,
+    "resolved": false,
+    "resolution": false
+  },
+  "targets": {
+    "classes": [
+      "Bug",
+      "Feature Request",
+      "Performance Issue",
+      "Usability"
+    ],
+    "evaluation_class_counts": {
+      "Bug": 900,
+      "Feature Request": 16,
+      "Performance Issue": 14,
+      "Usability": 0
+    },
+    "evaluation_classes_without_examples": [
+      "Usability"
+    ]
+  },
+  "metrics": {
+    "accuracy": 0.9795698924731183,
+    "macro_f1": 0.5596819322192457,
+    "weighted_f1": 0.9774155854309922,
+    "classification_report": {
+      "Bug": {
+        "precision": 0.9845984598459846,
+        "recall": 0.9944444444444445,
+        "f1-score": 0.9894969596462134,
+        "support": 900.0
+      },
+      "Feature Request": {
+        "precision": 0.6666666666666666,
+        "recall": 0.375,
+        "f1-score": 0.48,
+        "support": 16.0
+      },
+      "Performance Issue": {
+        "precision": 0.8333333333333334,
+        "recall": 0.7142857142857143,
+        "f1-score": 0.7692307692307693,
+        "support": 14.0
+      },
+      "Usability": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "accuracy": 0.9795698924731183,
+      "macro avg": {
+        "precision": 0.6211496149614961,
+        "recall": 0.5209325396825397,
+        "f1-score": 0.5596819322192457,
+        "support": 930.0
+      },
+      "weighted avg": {
+        "precision": 0.9768515561233542,
+        "recall": 0.9795698924731183,
+        "f1-score": 0.9774155854309922,
+        "support": 930.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        895,
+        3,
+        2,
+        0
+      ],
+      [
+        10,
+        6,
+        0,
+        0
+      ],
+      [
+        4,
+        0,
+        10,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "Bug",
+      "Feature Request",
+      "Performance Issue",
+      "Usability"
+    ]
+  },
+  "model_classes": [
+    "Bug",
+    "Feature Request",
+    "Performance Issue",
+    "Usability"
+  ],
+  "raw_source_modified": false
+}

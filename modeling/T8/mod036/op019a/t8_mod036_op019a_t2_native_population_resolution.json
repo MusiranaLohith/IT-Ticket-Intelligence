@@ -1,0 +1,606 @@
+{
+  "operation": "MOD-036 OP-019A",
+  "purpose": "Resolve the authoritative native T2 labeled development population required for T8 Priority Decision Component development.",
+  "t2_root": "modeling/T2",
+  "discovered_files": {
+    "csv_count": 13,
+    "json_count": 27
+  },
+  "csv_candidates": [
+    {
+      "path": "modeling/T2/derived/t2_features.csv",
+      "size_bytes": 36829375,
+      "columns": [
+        "ID",
+        "Creation time",
+        "Summary",
+        "Description",
+        "target_priority"
+      ],
+      "score": 16,
+      "target_hits": [
+        "target_priority"
+      ],
+      "id_hits": [
+        "id"
+      ],
+      "text_hits": [
+        "description",
+        "summary"
+      ],
+      "forbidden_post_creation_like_columns": []
+    },
+    {
+      "path": "modeling/T2/splits/test.csv",
+      "size_bytes": 7485706,
+      "columns": [
+        "ID",
+        "Creation time",
+        "Summary",
+        "Description",
+        "target_priority"
+      ],
+      "score": 16,
+      "target_hits": [
+        "target_priority"
+      ],
+      "id_hits": [
+        "id"
+      ],
+      "text_hits": [
+        "description",
+        "summary"
+      ],
+      "forbidden_post_creation_like_columns": []
+    },
+    {
+      "path": "modeling/T2/splits/train.csv",
+      "size_bytes": 22396127,
+      "columns": [
+        "ID",
+        "Creation time",
+        "Summary",
+        "Description",
+        "target_priority"
+      ],
+      "score": 16,
+      "target_hits": [
+        "target_priority"
+      ],
+      "id_hits": [
+        "id"
+      ],
+      "text_hits": [
+        "description",
+        "summary"
+      ],
+      "forbidden_post_creation_like_columns": []
+    },
+    {
+      "path": "modeling/T2/splits/validation.csv",
+      "size_bytes": 7065639,
+      "columns": [
+        "ID",
+        "Creation time",
+        "Summary",
+        "Description",
+        "target_priority"
+      ],
+      "score": 16,
+      "target_hits": [
+        "target_priority"
+      ],
+      "id_hits": [
+        "id"
+      ],
+      "text_hits": [
+        "description",
+        "summary"
+      ],
+      "forbidden_post_creation_like_columns": []
+    },
+    {
+      "path": "modeling/T2/analysis/t2_baseline_validation_predictions.csv",
+      "size_bytes": 86465,
+      "columns": [
+        "ID",
+        "target_priority",
+        "predicted_priority",
+        "correct"
+      ],
+      "score": 13,
+      "target_hits": [
+        "target_priority"
+      ],
+      "id_hits": [
+        "id"
+      ],
+      "text_hits": [],
+      "forbidden_post_creation_like_columns": []
+    },
+    {
+      "path": "modeling/T2/analysis/t2_final_test_predictions.csv",
+      "size_bytes": 181478,
+      "columns": [
+        "ID",
+        "Creation time",
+        "actual_priority",
+        "predicted_priority"
+      ],
+      "score": 3,
+      "target_hits": [],
+      "id_hits": [
+        "id"
+      ],
+      "text_hits": [],
+      "forbidden_post_creation_like_columns": []
+    }
+  ],
+  "json_provenance_candidates": [
+    {
+      "path": "modeling/T2/analysis/t2_advanced_branch_closure.json",
+      "size_bytes": 2061,
+      "hits": [
+        "target_priority",
+        "priority",
+        "target",
+        "train",
+        "validation",
+        "split"
+      ]
+    },
+    {
+      "path": "modeling/T2/analysis/t2_artifact_env_resolution.json",
+      "size_bytes": 3725,
+      "hits": [
+        "train",
+        "validation",
+        "split"
+      ]
+    },
+    {
+      "path": "modeling/T2/analysis/t2_baseline_comparison.json",
+      "size_bytes": 4411,
+      "hits": [
+        "priority",
+        "train",
+        "validation",
+        "split"
+      ]
+    },
+    {
+      "path": "modeling/T2/analysis/t2_baseline_error_analysis.json",
+      "size_bytes": 6034,
+      "hits": [
+        "priority",
+        "train",
+        "validation",
+        "split"
+      ]
+    },
+    {
+      "path": "modeling/T2/analysis/t2_final_closure.json",
+      "size_bytes": 6544,
+      "hits": [
+        "target_priority",
+        "priority",
+        "target",
+        "prediction_boundary",
+        "creation",
+        "train",
+        "validation",
+        "split"
+      ]
+    },
+    {
+      "path": "modeling/T2/analysis/t2_final_generalization_analysis.json",
+      "size_bytes": 6299,
+      "hits": [
+        "priority",
+        "train",
+        "validation"
+      ]
+    },
+    {
+      "path": "modeling/T2/analysis/t2_final_model_selection.json",
+      "size_bytes": 3140,
+      "hits": [
+        "priority",
+        "train",
+        "validation"
+      ]
+    },
+    {
+      "path": "modeling/T2/analysis/t2_final_test_metrics.json",
+      "size_bytes": 2588,
+      "hits": [
+        "target_priority",
+        "priority",
+        "target",
+        "creation",
+        "train",
+        "split"
+      ]
+    },
+    {
+      "path": "modeling/T2/analysis/t2_split_artifact_identification.json",
+      "size_bytes": 6573,
+      "hits": [
+        "target_priority",
+        "priority",
+        "target",
+        "creation",
+        "train",
+        "validation",
+        "split"
+      ]
+    },
+    {
+      "path": "modeling/T2/analysis/t2_transformer_env_configuration.json",
+      "size_bytes": 651,
+      "hits": [
+        "train"
+      ]
+    },
+    {
+      "path": "modeling/T2/analysis/t2_transformer_readiness.json",
+      "size_bytes": 2529,
+      "hits": [
+        "target_priority",
+        "priority",
+        "target",
+        "creation",
+        "train",
+        "validation",
+        "split"
+      ]
+    },
+    {
+      "path": "modeling/T2/contracts/t2_advanced_candidate_selection.json",
+      "size_bytes": 3546,
+      "hits": [
+        "target_priority",
+        "priority",
+        "target",
+        "prediction_boundary",
+        "creation",
+        "train",
+        "validation",
+        "split"
+      ]
+    },
+    {
+      "path": "modeling/T2/contracts/t2_advanced_model_contract.json",
+      "size_bytes": 4205,
+      "hits": [
+        "target_priority",
+        "priority",
+        "target",
+        "prediction_boundary",
+        "creation",
+        "train",
+        "validation",
+        "split"
+      ]
+    },
+    {
+      "path": "modeling/T2/contracts/t2_contract.json",
+      "size_bytes": 3966,
+      "hits": [
+        "priority",
+        "target",
+        "prediction_boundary",
+        "creation",
+        "train",
+        "split"
+      ]
+    },
+    {
+      "path": "modeling/T2/contracts/t2_model_contract.json",
+      "size_bytes": 6175,
+      "hits": [
+        "target_priority",
+        "priority",
+        "target",
+        "prediction_boundary",
+        "creation",
+        "train",
+        "validation",
+        "split"
+      ]
+    },
+    {
+      "path": "modeling/T2/derived/t2_materialize_report.json",
+      "size_bytes": 1304,
+      "hits": [
+        "priority",
+        "target",
+        "creation"
+      ]
+    },
+    {
+      "path": "modeling/T2/derived/t2_validation_report.json",
+      "size_bytes": 1828,
+      "hits": [
+        "target_priority",
+        "priority",
+        "target",
+        "creation",
+        "validation"
+      ]
+    },
+    {
+      "path": "modeling/T2/logs/t2_baseline_run.json",
+      "size_bytes": 534,
+      "hits": [
+        "train",
+        "validation"
+      ]
+    },
+    {
+      "path": "modeling/T2/logs/t2_class_weighted_run.json",
+      "size_bytes": 645,
+      "hits": [
+        "train",
+        "validation"
+      ]
+    },
+    {
+      "path": "modeling/T2/logs/t2_svm_run.json",
+      "size_bytes": 607,
+      "hits": [
+        "train",
+        "validation"
+      ]
+    },
+    {
+      "path": "modeling/T2/logs/t2_weighted_svm_run.json",
+      "size_bytes": 693,
+      "hits": [
+        "train",
+        "validation",
+        "split"
+      ]
+    },
+    {
+      "path": "modeling/T2/metrics/t2_baseline_metrics.json",
+      "size_bytes": 1682,
+      "hits": [
+        "priority",
+        "train",
+        "validation",
+        "split"
+      ]
+    },
+    {
+      "path": "modeling/T2/metrics/t2_class_weighted_metrics.json",
+      "size_bytes": 1945,
+      "hits": [
+        "priority",
+        "train",
+        "validation",
+        "split"
+      ]
+    },
+    {
+      "path": "modeling/T2/metrics/t2_svm_metrics.json",
+      "size_bytes": 1746,
+      "hits": [
+        "priority",
+        "train",
+        "validation",
+        "split"
+      ]
+    },
+    {
+      "path": "modeling/T2/metrics/t2_weighted_svm_metrics.json",
+      "size_bytes": 1305,
+      "hits": [
+        "train",
+        "validation"
+      ]
+    },
+    {
+      "path": "modeling/T2/plots/t2_visualization_manifest.json",
+      "size_bytes": 955,
+      "hits": [
+        "priority",
+        "train",
+        "validation"
+      ]
+    },
+    {
+      "path": "modeling/T2/splits/t2_split_report.json",
+      "size_bytes": 2178,
+      "hits": [
+        "priority",
+        "target",
+        "creation",
+        "train",
+        "validation",
+        "split"
+      ]
+    }
+  ],
+  "contracts": [
+    {
+      "path": "modeling/T2/contracts/t2_advanced_model_contract.json",
+      "valid_json": true,
+      "type": "dict",
+      "top_level_keys": [
+        "operation",
+        "operation_name",
+        "task",
+        "task_name",
+        "dataset",
+        "target",
+        "prediction_boundary",
+        "admitted_features",
+        "frozen_split",
+        "baseline_reference",
+        "advanced_model_family",
+        "input_representation",
+        "imbalance_policy",
+        "evaluation_policy",
+        "comparison_policy",
+        "reproducibility",
+        "resource_policy",
+        "selection_policy",
+        "forbidden",
+        "status",
+        "contract_status"
+      ]
+    },
+    {
+      "path": "modeling/T2/contracts/t2_contract.json",
+      "valid_json": true,
+      "type": "dict",
+      "top_level_keys": [
+        "operation",
+        "task",
+        "task_name",
+        "status",
+        "contract_status",
+        "dataset",
+        "objective",
+        "target",
+        "prediction_boundary",
+        "historical_feature_basis",
+        "feature_constraints",
+        "known_feature_availability",
+        "split_policy",
+        "modeling_policy",
+        "data_integrity",
+        "downstream"
+      ]
+    },
+    {
+      "path": "modeling/T2/contracts/t2_model_contract.json",
+      "valid_json": true,
+      "type": "dict",
+      "top_level_keys": [
+        "operation",
+        "operation_name",
+        "task",
+        "task_name",
+        "status",
+        "contract_status",
+        "source_authority",
+        "dataset",
+        "objective",
+        "target",
+        "prediction_boundary",
+        "admitted_features",
+        "rn136_historical_features",
+        "excluded_features",
+        "missingness_policy",
+        "leakage_controls",
+        "modeling_policy",
+        "required_next_steps",
+        "downstream",
+        "integrity"
+      ]
+    }
+  ],
+  "native_population_candidates": [
+    {
+      "path": "modeling/T2/derived/t2_features.csv",
+      "size_bytes": 36829375,
+      "columns": [
+        "ID",
+        "Creation time",
+        "Summary",
+        "Description",
+        "target_priority"
+      ],
+      "score": 16,
+      "target_hits": [
+        "target_priority"
+      ],
+      "id_hits": [
+        "id"
+      ],
+      "text_hits": [
+        "description",
+        "summary"
+      ],
+      "forbidden_post_creation_like_columns": []
+    },
+    {
+      "path": "modeling/T2/splits/test.csv",
+      "size_bytes": 7485706,
+      "columns": [
+        "ID",
+        "Creation time",
+        "Summary",
+        "Description",
+        "target_priority"
+      ],
+      "score": 16,
+      "target_hits": [
+        "target_priority"
+      ],
+      "id_hits": [
+        "id"
+      ],
+      "text_hits": [
+        "description",
+        "summary"
+      ],
+      "forbidden_post_creation_like_columns": []
+    },
+    {
+      "path": "modeling/T2/splits/train.csv",
+      "size_bytes": 22396127,
+      "columns": [
+        "ID",
+        "Creation time",
+        "Summary",
+        "Description",
+        "target_priority"
+      ],
+      "score": 16,
+      "target_hits": [
+        "target_priority"
+      ],
+      "id_hits": [
+        "id"
+      ],
+      "text_hits": [
+        "description",
+        "summary"
+      ],
+      "forbidden_post_creation_like_columns": []
+    },
+    {
+      "path": "modeling/T2/splits/validation.csv",
+      "size_bytes": 7065639,
+      "columns": [
+        "ID",
+        "Creation time",
+        "Summary",
+        "Description",
+        "target_priority"
+      ],
+      "score": 16,
+      "target_hits": [
+        "target_priority"
+      ],
+      "id_hits": [
+        "id"
+      ],
+      "text_hits": [
+        "description",
+        "summary"
+      ],
+      "forbidden_post_creation_like_columns": []
+    }
+  ],
+  "resolution": {
+    "status": "MULTIPLE_CANDIDATES_REQUIRE_PROVENANCE_CHECK",
+    "automatic_selection_performed": false,
+    "training_performed": false,
+    "prediction_generation_performed": false,
+    "dataset_modified": false
+  }
+}

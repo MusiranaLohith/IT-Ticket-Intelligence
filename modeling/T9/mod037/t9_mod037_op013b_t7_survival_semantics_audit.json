@@ -1,0 +1,561 @@
+{
+  "operation": "T9_MOD-037_OP-013B",
+  "title": "T7 Event / Censoring / Native Survival Output Semantic Audit",
+  "status": "PASS",
+  "purpose": "Resolve the native T7 survival evaluation population, event/censoring semantics, duration structure, and predictive survival outputs without fitting, calibration, or target modification.",
+  "frozen_t9_boundary": {
+    "status": "PASS",
+    "checks": {
+      "OP-004_T7_acceptance": {
+        "status": "PASS",
+        "accepted_tasks": [
+          "T4",
+          "T5",
+          "T6",
+          "T7"
+        ]
+      },
+      "OP-005_T7_boundary": {
+        "status": "PASS",
+        "boundary": {
+          "status": "ACCEPTED_NATIVE_SURVIVAL",
+          "native_quantity": "Survival / time-to-event prediction",
+          "native_probability_output": true,
+          "accepted_for_calibration": true,
+          "artifact": "modeling/T7/derived/t7_mod007_evaluation_predictions.csv",
+          "native_outputs": [
+            "predicted_median_survival_seconds",
+            "survival_probability_at_211583_seconds",
+            "survival_probability_at_1780179_seconds",
+            "survival_probability_at_14608619_seconds"
+          ],
+          "outcomes": [
+            "duration_seconds",
+            "event"
+          ],
+          "semantic_restrictions": [
+            "T7 remains a survival/time-to-event task.",
+            "Right-censoring must be preserved.",
+            "event=0 must not be relabelled as a negative resolution outcome.",
+            "T7 must not be converted into ordinary binary resolved/not-resolved confidence.",
+            "Calibration must be defined for an appropriate survival/time-to-event predictive quantity."
+          ],
+          "calibration_boundary": "Later T7 calibration must retain survival semantics and right censoring."
+        }
+      },
+      "OP-013A": {
+        "status": "PASS",
+        "observed_status": "PASS"
+      }
+    },
+    "failed_checks": [],
+    "t7_boundary": {
+      "status": "ACCEPTED_NATIVE_SURVIVAL",
+      "native_quantity": "Survival / time-to-event prediction",
+      "native_probability_output": true,
+      "accepted_for_calibration": true,
+      "artifact": "modeling/T7/derived/t7_mod007_evaluation_predictions.csv",
+      "native_outputs": [
+        "predicted_median_survival_seconds",
+        "survival_probability_at_211583_seconds",
+        "survival_probability_at_1780179_seconds",
+        "survival_probability_at_14608619_seconds"
+      ],
+      "outcomes": [
+        "duration_seconds",
+        "event"
+      ],
+      "semantic_restrictions": [
+        "T7 remains a survival/time-to-event task.",
+        "Right-censoring must be preserved.",
+        "event=0 must not be relabelled as a negative resolution outcome.",
+        "T7 must not be converted into ordinary binary resolved/not-resolved confidence.",
+        "Calibration must be defined for an appropriate survival/time-to-event predictive quantity."
+      ],
+      "calibration_boundary": "Later T7 calibration must retain survival semantics and right censoring."
+    }
+  },
+  "contract_audit": {
+    "top_level_keys": [
+      "task_id",
+      "task_name",
+      "task_family",
+      "status",
+      "operational_problem",
+      "prediction_boundary",
+      "target",
+      "population",
+      "censoring",
+      "feature_boundary",
+      "data_artifact",
+      "modeling_formulation",
+      "evaluation",
+      "split_policy",
+      "model_development_policy",
+      "leakage_controls",
+      "immutable_source_controls",
+      "next_operations",
+      "decision"
+    ],
+    "survival_related_fields": {
+      "prediction_boundary": {
+        "name": "Creation time",
+        "definition": "Only information legitimately available at ticket Creation may be used as predictive input."
+      },
+      "censoring": {
+        "type": "right_censoring",
+        "treatment": "Preserve censored observations as right-censored survival records.",
+        "ordinary_negative_interpretation": false,
+        "forbidden_actions": [
+          "Do not treat censored tickets as ordinary negative labels.",
+          "Do not assign fabricated resolution times to censored tickets.",
+          "Do not drop censored observations merely because their exact resolution time is unobserved.",
+          "Do not convert censoring into binary classification."
+        ]
+      },
+      "evaluation": {
+        "principle": "Censoring-aware evaluation",
+        "primary_metric": "Concordance index",
+        "secondary_metrics": [
+          "Integrated Brier score",
+          "Time-dependent discrimination metrics where supported by the selected survival methodology",
+          "Calibration/reliability analysis where valid survival-specific methodology is available"
+        ],
+        "forbidden_evaluation": [
+          "Do not evaluate censored duration as if it were an observed exact resolution time.",
+          "Do not use ordinary MAE/RMSE across censored and uncensored records without an explicit censoring-aware justification.",
+          "Do not select models using the locked evaluation set."
+        ]
+      }
+    },
+    "required_semantic_terms": {
+      "survival": true,
+      "censoring": true,
+      "event": true,
+      "duration_or_time": true
+    },
+    "status": "PASS"
+  },
+  "train_audit": {
+    "split": "TRAIN",
+    "rows": 411052,
+    "columns": [
+      "ID",
+      "Creation time",
+      "Creator",
+      "Creator Detail",
+      "Summary",
+      "Description",
+      "first_resolved_time",
+      "duration_seconds",
+      "event",
+      "endpoint_type",
+      "observation_endpoint",
+      "source_row_width"
+    ],
+    "id_column": "ID",
+    "event_1": 374179,
+    "event_0": 36873,
+    "event_rate": 0.9102960209413894,
+    "censor_rate": 0.08970397905861059,
+    "duration_min": 5.0,
+    "duration_max": 827119786.0,
+    "duration_median": 2434996.5,
+    "invalid_duration_rows": 0,
+    "invalid_event_rows": 0,
+    "status": "PASS"
+  },
+  "evaluation_audit": {
+    "split": "EVAL",
+    "rows": 102764,
+    "columns": [
+      "ID",
+      "Creation time",
+      "Creator",
+      "Creator Detail",
+      "Summary",
+      "Description",
+      "first_resolved_time",
+      "duration_seconds",
+      "event",
+      "endpoint_type",
+      "observation_endpoint",
+      "source_row_width"
+    ],
+    "id_column": "ID",
+    "event_1": 81583,
+    "event_0": 21181,
+    "event_rate": 0.7938869643065665,
+    "censor_rate": 0.2061130356934335,
+    "duration_min": 5.0,
+    "duration_max": 132512646.0,
+    "duration_median": 2250134.0,
+    "invalid_duration_rows": 0,
+    "invalid_event_rows": 0,
+    "status": "PASS"
+  },
+  "prediction_artifacts": {
+    "MOD-007": {
+      "artifact": "modeling/T7/derived/t7_mod007_evaluation_predictions.csv",
+      "rows": 102764,
+      "columns": [
+        "ID",
+        "duration_seconds",
+        "event",
+        "predicted_median_survival_seconds",
+        "survival_probability_at_211583_seconds",
+        "survival_probability_at_1780179_seconds",
+        "survival_probability_at_14608619_seconds"
+      ],
+      "column_count": 7,
+      "expected_columns_present": true,
+      "missing_expected_columns": [],
+      "prediction_like_columns": [
+        "predicted_median_survival_seconds",
+        "survival_probability_at_211583_seconds",
+        "survival_probability_at_1780179_seconds",
+        "survival_probability_at_14608619_seconds"
+      ],
+      "id_column": "ID",
+      "event_1": 81583,
+      "event_0": 21181,
+      "event_rate": 0.7938869643065665,
+      "censor_rate": 0.2061130356934335,
+      "duration_min": 5.0,
+      "duration_max": 132512646.0,
+      "median_prediction_min": 6.552777881522615e-05,
+      "median_prediction_max": 0.1205121109814168,
+      "invalid_duration_rows": 0,
+      "invalid_event_rows": 0,
+      "invalid_median_prediction_rows": 0,
+      "invalid_survival_probability_rows": {
+        "survival_probability_at_211583_seconds": 0,
+        "survival_probability_at_1780179_seconds": 0,
+        "survival_probability_at_14608619_seconds": 0
+      },
+      "status": "PASS"
+    },
+    "MOD-010": {
+      "artifact": "modeling/T7/derived/t7_mod010_evaluation_predictions.csv",
+      "rows": 102764,
+      "columns": [
+        "ID",
+        "duration_seconds",
+        "event",
+        "predicted_median_survival_seconds",
+        "survival_probability_at_211583_seconds",
+        "survival_probability_at_1780179_seconds",
+        "survival_probability_at_14608619_seconds"
+      ],
+      "column_count": 7,
+      "expected_columns_present": true,
+      "missing_expected_columns": [],
+      "prediction_like_columns": [
+        "predicted_median_survival_seconds",
+        "survival_probability_at_211583_seconds",
+        "survival_probability_at_1780179_seconds",
+        "survival_probability_at_14608619_seconds"
+      ],
+      "id_column": "ID",
+      "event_1": 81583,
+      "event_0": 21181,
+      "event_rate": 0.7938869643065665,
+      "censor_rate": 0.2061130356934335,
+      "duration_min": 5.0,
+      "duration_max": 132512646.0,
+      "median_prediction_min": 0.143900066707564,
+      "median_prediction_max": 133.16642288875315,
+      "invalid_duration_rows": 0,
+      "invalid_event_rows": 0,
+      "invalid_median_prediction_rows": 0,
+      "invalid_survival_probability_rows": {
+        "survival_probability_at_211583_seconds": 0,
+        "survival_probability_at_1780179_seconds": 0,
+        "survival_probability_at_14608619_seconds": 0
+      },
+      "status": "PASS"
+    }
+  },
+  "population_alignment": {
+    "MOD-007": {
+      "prediction_artifact": "MOD-007",
+      "evaluation_rows": 102764,
+      "prediction_rows": 102764,
+      "evaluation_id_column": "ID",
+      "prediction_id_column": "ID",
+      "duplicate_evaluation_ids": 0,
+      "duplicate_prediction_ids": 0,
+      "evaluation_ids_missing_from_prediction": 0,
+      "prediction_ids_not_in_evaluation": 0,
+      "exact_id_set_alignment": true,
+      "row_count_alignment": true,
+      "status": "PASS"
+    },
+    "MOD-010": {
+      "prediction_artifact": "MOD-010",
+      "evaluation_rows": 102764,
+      "prediction_rows": 102764,
+      "evaluation_id_column": "ID",
+      "prediction_id_column": "ID",
+      "duplicate_evaluation_ids": 0,
+      "duplicate_prediction_ids": 0,
+      "evaluation_ids_missing_from_prediction": 0,
+      "prediction_ids_not_in_evaluation": 0,
+      "exact_id_set_alignment": true,
+      "row_count_alignment": true,
+      "status": "PASS"
+    }
+  },
+  "population_reconciliation": {
+    "evaluation_id_column": "ID",
+    "mod007_id_column": "ID",
+    "mod010_id_column": "ID",
+    "evaluation_rows": 102764,
+    "mod007_rows": 102764,
+    "mod010_rows": 102764,
+    "all_population_sizes_equal": true,
+    "eval_mod007_exact_id_match": true,
+    "eval_mod010_exact_id_match": true,
+    "mod007_mod010_exact_id_match": true
+  },
+  "prediction_artifact_comparison": {
+    "mod007_rows": 102764,
+    "mod010_rows": 102764,
+    "same_row_count": true,
+    "common_columns": [
+      "ID",
+      "duration_seconds",
+      "event",
+      "predicted_median_survival_seconds",
+      "survival_probability_at_14608619_seconds",
+      "survival_probability_at_1780179_seconds",
+      "survival_probability_at_211583_seconds"
+    ],
+    "column_comparison": {
+      "ID": {
+        "numeric": true,
+        "exact_equal": true,
+        "max_absolute_difference": 0.0
+      },
+      "duration_seconds": {
+        "numeric": true,
+        "exact_equal": true,
+        "max_absolute_difference": 0.0
+      },
+      "event": {
+        "numeric": true,
+        "exact_equal": true,
+        "max_absolute_difference": 0.0
+      },
+      "predicted_median_survival_seconds": {
+        "numeric": true,
+        "exact_equal": false,
+        "max_absolute_difference": 133.04591077777172
+      },
+      "survival_probability_at_14608619_seconds": {
+        "numeric": true,
+        "exact_equal": false,
+        "max_absolute_difference": 0.061068329577987385
+      },
+      "survival_probability_at_1780179_seconds": {
+        "numeric": true,
+        "exact_equal": false,
+        "max_absolute_difference": 0.07022283699072879
+      },
+      "survival_probability_at_211583_seconds": {
+        "numeric": true,
+        "exact_equal": false,
+        "max_absolute_difference": 0.08083375446660859
+      }
+    }
+  },
+  "supporting_t7_audits": {
+    "MOD-007": {
+      "exists": true,
+      "path": "modeling/T7/metrics/t7_mod007_predictive_survival_audit.json",
+      "top_level_keys": [
+        "task",
+        "operation",
+        "status",
+        "model",
+        "feature_boundary",
+        "features",
+        "train_event_count",
+        "train_censor_count",
+        "evaluation_event_count",
+        "evaluation_censor_count",
+        "weibull",
+        "evaluation_metrics",
+        "artifacts"
+      ],
+      "status": "COMPLETE",
+      "operation": "MOD-007",
+      "title": null
+    },
+    "MOD-008": {
+      "exists": true,
+      "path": "modeling/T7/metrics/t7_mod008_predictive_vs_reference_audit.json",
+      "top_level_keys": [
+        "task",
+        "operation",
+        "status",
+        "purpose",
+        "evaluation_population",
+        "alignment",
+        "models_compared",
+        "predictive_model",
+        "horizon_results",
+        "integrity",
+        "source_artifacts",
+        "output_artifacts"
+      ],
+      "status": "COMPLETE",
+      "operation": "MOD-008",
+      "title": null
+    },
+    "MOD-009": {
+      "exists": true,
+      "path": "modeling/T7/metrics/t7_mod009_survival_calibration_audit.json",
+      "top_level_keys": [
+        "task",
+        "operation",
+        "status",
+        "purpose",
+        "evaluation_rows",
+        "prediction_alignment",
+        "methodological_note",
+        "horizons",
+        "integrity",
+        "artifacts"
+      ],
+      "status": "COMPLETE",
+      "operation": "MOD-009",
+      "title": null
+    },
+    "MOD-012": {
+      "exists": true,
+      "path": "modeling/T7/metrics/t7_mod012_final_closure.json",
+      "top_level_keys": [
+        "task",
+        "operation",
+        "status",
+        "closure_type",
+        "task_definition",
+        "population",
+        "data_boundary",
+        "chronological_split",
+        "survival_baselines",
+        "predictive_models",
+        "final_comparison",
+        "calibration",
+        "supported_role",
+        "limitations",
+        "evidence_chain",
+        "final_project_status",
+        "source_evidence"
+      ],
+      "status": "COMPLETE",
+      "operation": "MOD-012",
+      "title": null
+    }
+  },
+  "candidate_status": {
+    "MOD-007": {
+      "artifact": "modeling/T7/derived/t7_mod007_evaluation_predictions.csv",
+      "population_alignment": "PASS",
+      "native_survival_outputs_present": true,
+      "status": "ACCEPTED_NATIVE_SURVIVAL_CANDIDATE"
+    },
+    "MOD-010": {
+      "artifact": "modeling/T7/derived/t7_mod010_evaluation_predictions.csv",
+      "population_alignment": "PASS",
+      "native_survival_outputs_present": true,
+      "status": "ACCEPTED_NATIVE_SURVIVAL_CANDIDATE"
+    }
+  },
+  "semantic_resolution": {
+    "duration_seconds": {
+      "status": "ESTABLISHED",
+      "meaning": "Observed time-to-event / censoring duration field preserved from the T7 native evaluation population."
+    },
+    "event": {
+      "status": "ESTABLISHED",
+      "meaning": "Binary event indicator retained as the native survival event/censoring indicator; 1 denotes observed event and 0 denotes censored observation within the T7 evidence boundary."
+    },
+    "predicted_median_survival_seconds": {
+      "status": "NATIVE_SURVIVAL_OUTPUT_CANDIDATE",
+      "meaning": "Predicted median survival time emitted by the existing T7 predictive artifact."
+    },
+    "survival_probability_horizons": {
+      "status": "NATIVE_SURVIVAL_OUTPUT_CANDIDATE",
+      "horizons_seconds": [
+        211583,
+        1780179,
+        14608619
+      ],
+      "meaning": "Existing survival-probability outputs at fixed time horizons."
+    },
+    "binary_resolution_probability": {
+      "status": "NOT_ESTABLISHED",
+      "restriction": "No conversion of survival outputs into an ordinary binary resolution probability is permitted."
+    },
+    "censoring": {
+      "status": "PRESERVED",
+      "restriction": "Censored observations remain censored and are not relabelled as non-resolution events."
+    }
+  },
+  "interpretation": {
+    "native_survival_semantics": "ESTABLISHED",
+    "censoring_semantics": "PRESERVED",
+    "event_duration_structure": "ESTABLISHED",
+    "native_survival_prediction_artifacts": [
+      "MOD-007",
+      "MOD-010"
+    ],
+    "final_model_artifact_selection": "NOT_PERFORMED",
+    "probability_calibration": "NOT_PERFORMED",
+    "binary_conversion": "NOT_PERFORMED",
+    "next_operation": "OP-013C should perform native T7 survival evaluation using the established event/time/censoring structure and accepted native survival outputs."
+  },
+  "controls": {
+    "artifact_read_only": true,
+    "model_fitted": false,
+    "prediction_generated": false,
+    "probability_generated": false,
+    "calibration_fitted": false,
+    "target_created": false,
+    "target_relabelled": false,
+    "censoring_relabelled": false,
+    "survival_converted_to_binary": false,
+    "binary_resolution_created": false,
+    "threshold_selected": false,
+    "locked_test_used": false,
+    "post_creation_information_used": false,
+    "universal_confidence_created": false,
+    "universal_risk_score_created": false,
+    "existing_artifacts_modified": false,
+    "native_survival_semantics_preserved": true
+  },
+  "control_validation": {
+    "status": "PASS",
+    "failed_controls": []
+  },
+  "methodological_restrictions": [
+    "Read-only artifact inspection.",
+    "No model fitting.",
+    "No prediction generation.",
+    "No new probability generation.",
+    "No calibration fitting.",
+    "No target creation.",
+    "No target relabelling.",
+    "No censoring relabelling.",
+    "No survival-to-binary conversion.",
+    "No threshold selection.",
+    "No locked-test selection.",
+    "No final MOD-007 vs MOD-010 model selection is performed by this operation.",
+    "Native survival semantics are preserved."
+  ],
+  "artifacts_generated": [
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op013b_t7_survival_semantics_audit.json"
+  ]
+}

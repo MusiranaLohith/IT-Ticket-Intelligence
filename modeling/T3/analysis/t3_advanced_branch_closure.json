@@ -1,0 +1,86 @@
+{
+  "operation": "T3-MOD-026",
+  "task": "T3_SEVERITY_PREDICTION",
+  "decision_basis": {
+    "primary_metric": "macro_f1",
+    "secondary_metrics": [
+      "accuracy",
+      "weighted_f1"
+    ],
+    "test_used_for_selection": false
+  },
+  "classical_candidate": {
+    "model_id": "T3-MOD-008",
+    "accuracy": 0.584522,
+    "macro_f1": 0.348017,
+    "weighted_f1": 0.614841
+  },
+  "advanced_candidate": {
+    "model": "distilbert-base-uncased",
+    "accuracy": 0.7220060527453523,
+    "macro_f1": 0.29663315276577507,
+    "weighted_f1": 0.6689419070240422,
+    "training_seconds": 10036.816281080246,
+    "training_hours": 2.7880045225222907,
+    "per_class": {
+      "S1": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 20
+      },
+      "S2": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 487
+      },
+      "S3": {
+        "precision": 0.7659051830017195,
+        "recall": 0.9116959064327486,
+        "f1": 0.8324656254171673,
+        "support": 3420
+      },
+      "S4": {
+        "precision": 0.4,
+        "recall": 0.31759656652360513,
+        "f1": 0.35406698564593303,
+        "support": 699
+      }
+    },
+    "prediction_counts": {
+      "S1": 0,
+      "S2": 0,
+      "S3": 4071,
+      "S4": 555
+    }
+  },
+  "metric_changes_advanced_minus_classical": {
+    "accuracy": 0.13748405274535236,
+    "macro_f1": -0.051383847234224955,
+    "weighted_f1": 0.054100907024042244
+  },
+  "interpretation": {
+    "advanced_accuracy_higher": true,
+    "advanced_weighted_f1_higher": true,
+    "advanced_macro_f1_higher": false,
+    "s1_detection_resolved": false,
+    "s2_detection_resolved": false,
+    "s3_prediction_dominance_persists": true
+  },
+  "decision": {
+    "final_candidate": "T3-MOD-008",
+    "advanced_branch_status": "ADVANCED_BRANCH_CLOSED",
+    "reason": "The frozen primary metric is macro F1. DistilBERT achieved higher accuracy and weighted F1 but lower macro F1 than T3-MOD-008. S1 and S2 remained undetected in validation. The advanced branch therefore does not replace the classical candidate under the frozen criterion."
+  },
+  "controls": {
+    "test_used": false,
+    "training_repeated": false,
+    "raw_mozilla_accessed": false,
+    "dataset_modified": false,
+    "advanced_training_started": true,
+    "advanced_training_completed": true
+  },
+  "next_stage": "LOCKED_TEST_EVALUATION",
+  "status": "ADVANCED_BRANCH_CLOSED"
+}

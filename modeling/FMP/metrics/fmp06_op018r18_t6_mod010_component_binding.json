@@ -1,0 +1,245 @@
+{
+  "operation": "FMP-06 OP-018R18",
+  "operation_name": "T6 final MOD-010 component binding",
+  "read_only": true,
+  "training_or_fitting": false,
+  "evaluation_metrics": false,
+  "locked_test_used": false,
+  "artifact_modified": false,
+  "files": {
+    "modeling/T6/scripts/t6_mod010_corrected_hybrid_reconstruction.py": {
+      "status": "READABLE"
+    },
+    "modeling/T6/scripts/t6_mod010_exact_tfidf_reproduction.py": {
+      "status": "READABLE"
+    },
+    "modeling/T6/scripts/t6_mod010_final_hybrid_comparison.py": {
+      "status": "READABLE"
+    },
+    "modeling/T6/scripts/t6_mod010_inspect_artifact_schemas.py": {
+      "status": "READABLE"
+    },
+    "modeling/T6/scripts/t6_final_model_selection_and_closure.py": {
+      "status": "READABLE"
+    }
+  },
+  "search_hits": [
+    {
+      "file": "modeling/T6/scripts/t6_mod010_corrected_hybrid_reconstruction.py",
+      "term": "embedding"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_corrected_hybrid_reconstruction.py",
+      "term": "semantic_score"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_corrected_hybrid_reconstruction.py",
+      "term": "tfidf_score"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_corrected_hybrid_reconstruction.py",
+      "term": "hybrid_score"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_corrected_hybrid_reconstruction.py",
+      "term": "semantic_weight"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_corrected_hybrid_reconstruction.py",
+      "term": "0.5"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_corrected_hybrid_reconstruction.py",
+      "term": "normalize"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_corrected_hybrid_reconstruction.py",
+      "term": "transform"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_corrected_hybrid_reconstruction.py",
+      "term": "joblib"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_corrected_hybrid_reconstruction.py",
+      "term": "load"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_corrected_hybrid_reconstruction.py",
+      "term": "dump"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_corrected_hybrid_reconstruction.py",
+      "term": "model"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_corrected_hybrid_reconstruction.py",
+      "term": "artifact"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_corrected_hybrid_reconstruction.py",
+      "term": "MOD-010"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_exact_tfidf_reproduction.py",
+      "term": "tfidf_score"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_exact_tfidf_reproduction.py",
+      "term": "transform"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_exact_tfidf_reproduction.py",
+      "term": "joblib"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_exact_tfidf_reproduction.py",
+      "term": "load"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_exact_tfidf_reproduction.py",
+      "term": "dump"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_exact_tfidf_reproduction.py",
+      "term": "model"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_exact_tfidf_reproduction.py",
+      "term": "artifact"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_exact_tfidf_reproduction.py",
+      "term": "MOD-010"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_final_hybrid_comparison.py",
+      "term": "load"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_final_hybrid_comparison.py",
+      "term": "dump"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_final_hybrid_comparison.py",
+      "term": "model"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_final_hybrid_comparison.py",
+      "term": "artifact"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_final_hybrid_comparison.py",
+      "term": "MOD-010"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_inspect_artifact_schemas.py",
+      "term": "tfidf_score"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_inspect_artifact_schemas.py",
+      "term": "normalize"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_inspect_artifact_schemas.py",
+      "term": "load"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_inspect_artifact_schemas.py",
+      "term": "dump"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_inspect_artifact_schemas.py",
+      "term": "model"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_inspect_artifact_schemas.py",
+      "term": "artifact"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_inspect_artifact_schemas.py",
+      "term": "MOD-010"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_final_model_selection_and_closure.py",
+      "term": "semantic_weight"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_final_model_selection_and_closure.py",
+      "term": "0.5"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_final_model_selection_and_closure.py",
+      "term": "load"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_final_model_selection_and_closure.py",
+      "term": "dump"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_final_model_selection_and_closure.py",
+      "term": "model"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_final_model_selection_and_closure.py",
+      "term": "artifact"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_final_model_selection_and_closure.py",
+      "term": "MOD-010"
+    }
+  ],
+  "function_sources": {
+    "modeling/T6/scripts/t6_mod010_corrected_hybrid_reconstruction.py": {
+      "clean_text": "def clean_text(value: object) -> str:\n\n    if pd.isna(value):\n        return \"\"\n\n    return str(value).strip()",
+      "build_mod004_text": "def build_mod004_text(\n    frame: pd.DataFrame,\n    columns: list[str],\n) -> pd.Series:\n\n    parts = []\n\n    for column in columns:\n\n        field_name = column.replace(\n            \"_\",\n            \" \",\n        )\n\n        values = frame[column].map(\n            clean_text\n        )\n\n        parts.append(\n            field_name\n            + \" \"\n            + values\n        )\n\n    result = parts[0]\n\n    for part in parts[1:]:\n\n        result = (\n            result\n            + \" \"\n            + part\n        )\n\n    return result",
+      "minmax_normalize_within_query": "def minmax_normalize_within_query(\n    frame: pd.DataFrame,\n    score_column: str,\n    output_column: str,\n) -> pd.DataFrame:\n\n    output = frame.copy()\n\n    normalized_parts = []\n\n    for _, group in output.groupby(\n        \"query_id\",\n        sort=False,\n    ):\n\n        scores = group[\n            score_column\n        ].to_numpy(\n            dtype=np.float64\n        )\n\n        minimum = float(\n            np.min(scores)\n        )\n\n        maximum = float(\n            np.max(scores)\n        )\n\n        if maximum > minimum:\n\n            normalized = (\n                scores - minimum\n            ) / (\n                maximum - minimum\n            )\n\n        else:\n\n            normalized = np.zeros_like(\n                scores\n            )\n\n        normalized_parts.append(\n            pd.Series(\n                normalized,\n                index=group.index,\n                dtype=np.float64,\n            )\n        )\n\n    output[\n        output_column\n    ] = pd.concat(\n        normalized_parts\n    ).sort_index()\n\n    return output"
+    },
+    "modeling/T6/scripts/t6_mod010_exact_tfidf_reproduction.py": {
+      "clean_text": "def clean_text(value: object) -> str:\n\n    if pd.isna(value):\n        return \"\"\n\n    return str(value).strip()",
+      "build_text": "def build_text(\n    frame: pd.DataFrame,\n    columns: list[str],\n) -> pd.Series:\n\n    parts = []\n\n    for column in columns:\n\n        field_name = column.replace(\n            \"_\",\n            \" \",\n        )\n\n        values = frame[column].map(\n            clean_text\n        )\n\n        parts.append(\n            field_name\n            + \" \"\n            + values\n        )\n\n    result = parts[0]\n\n    for part in parts[1:]:\n\n        result = (\n            result\n            + \" \"\n            + part\n        )\n\n    return result"
+    },
+    "modeling/T6/scripts/t6_mod010_inspect_artifact_schemas.py": {
+      "normalize_bool": "def normalize_bool(series: pd.Series) -> pd.Series:\n\n    values = []\n\n    for value in series:\n\n        if isinstance(value, (bool, np.bool_)):\n            values.append(bool(value))\n\n        elif isinstance(value, (int, np.integer)):\n            if int(value) in (0, 1):\n                values.append(bool(int(value)))\n            else:\n                raise ValueError(\n                    f\"Unexpected integer target value: {value}\"\n                )\n\n        elif isinstance(value, str):\n            value = value.strip().lower()\n\n            if value in {\"true\", \"1\"}:\n                values.append(True)\n            elif value in {\"false\", \"0\"}:\n                values.append(False)\n            else:\n                raise ValueError(\n                    f\"Unexpected string target value: {value!r}\"\n                )\n\n        else:\n            raise ValueError(\n                f\"Unexpected target value: {value!r}\"\n            )\n\n    return pd.Series(\n        values,\n        index=series.index,\n        dtype=bool,\n    )",
+      "reconstruct_query_summary": "def reconstruct_query_summary(\n    df: pd.DataFrame,\n) -> pd.DataFrame:\n\n    records = []\n\n    for query_id, group in df.groupby(\n        \"query_id\",\n        sort=False,\n    ):\n\n        ordered = group.sort_values(\n            [\"tfidf_score\", \"candidate_id\"],\n            ascending=[False, True],\n            kind=\"mergesort\",\n        ).reset_index(drop=True)\n\n        positives = ordered[\n            ordered[\"target_observed\"]\n        ]\n\n        if len(positives) != 1:\n            raise ValueError(\n                f\"Query {query_id} has \"\n                f\"{len(positives)} observed positives.\"\n            )\n\n        positive_position = int(\n            np.flatnonzero(\n                ordered[\"target_observed\"].to_numpy(dtype=bool)\n            )[0]\n        )\n\n        positive_row = ordered.iloc[positive_position]\n        top_row = ordered.iloc[0]\n\n        records.append(\n            {\n                \"query_id\": query_id,\n                \"positive_candidate_id_reconstructed\": int(\n                    positive_row[\"candidate_id\"]\n                ),\n                \"positive_rank_reconstructed\": (\n                    positive_position + 1\n                ),\n                \"top_candidate_id_reconstructed\": int(\n                    top_row[\"candidate_id\"]\n                ),\n                \"top_candidate_role_reconstructed\": (\n                    \"positive\"\n                    if bool(top_row[\"target_observed\"])\n                    else \"observable_non_positive\"\n                ),\n                \"top_score_reconstructed\": float(\n                    top_row[\"tfidf_score\"]\n                ),\n                \"positive_score_reconstructed\": float(\n                    positive_row[\"tfidf_score\"]\n                ),\n            }\n        )\n\n    return pd.DataFrame(records)"
+    },
+    "modeling/T6/scripts/t6_final_model_selection_and_closure.py": {
+      "load_json": "def load_json(path: Path) -> dict:\n    with path.open(\n        \"r\",\n        encoding=\"utf-8\",\n    ) as f:\n        return json.load(f)"
+    }
+  },
+  "candidate_artifacts": [
+    {
+      "path": "modeling/T6/models/t6_mod004_tfidf_vectorizer.joblib",
+      "size_bytes": 4235872
+    }
+  ],
+  "candidate_data_sources": [
+    "modeling/T6/metrics/t6_final_closure.json",
+    "modeling/T6/metrics/t6_mod004_query_rankings.csv",
+    "modeling/T6/metrics/t6_mod004_tfidf_retrieval_results.json",
+    "modeling/T6/metrics/t6_mod007_bm25_query_rankings.csv",
+    "modeling/T6/metrics/t6_mod007_bm25_retrieval_results.json",
+    "modeling/T6/metrics/t6_mod009_hybrid_query_rankings.csv",
+    "modeling/T6/metrics/t6_mod009_hybrid_retrieval_results.json",
+    "modeling/T6/metrics/t6_mod010_corrected_hybrid_query_rankings.csv",
+    "modeling/T6/metrics/t6_mod010_corrected_hybrid_results.json",
+    "modeling/T6/metrics/t6_mod010_corrected_lexical_reconciliation.csv",
+    "modeling/T6/metrics/t6_mod010_direct_score_differences.csv",
+    "modeling/T6/metrics/t6_mod010_direct_score_reconciliation.json",
+    "modeling/T6/metrics/t6_mod010_exact_reproduction_mismatches.csv",
+    "modeling/T6/metrics/t6_mod010_exact_reproduction_report.json",
+    "modeling/T6/metrics/t6_mod010_final_comparison.json",
+    "modeling/T6/metrics/t6_mod010_tfidf_query_mismatches.csv",
+    "modeling/T6/metrics/t6_mod010_tfidf_reproducibility_report.json",
+    "modeling/T6/splits/t6_eval_group_aware.csv",
+    "modeling/T6/splits/t6_train_group_aware.csv"
+  ],
+  "explicit_weight_matches": [
+    {
+      "file": "modeling/T6/scripts/t6_mod010_corrected_hybrid_reconstruction.py",
+      "pattern": "weights?\\s*=\\s*\\[([^\\]]+)\\]",
+      "match": "\n    0.10,\n    0.25,\n    0.50,\n    0.75,\n    0.90,\n"
+    }
+  ],
+  "status": "INSPECTION_COMPLETE"
+}

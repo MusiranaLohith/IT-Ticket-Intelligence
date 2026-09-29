@@ -1,0 +1,30 @@
+{
+  "operation": "H-RUN-011R1",
+  "operation_name": "T7 Model JSON Structure Inspection",
+  "status": "PASS",
+  "model_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod010_log_normal_aft_model.json",
+  "root_type": "dict",
+  "root_keys": [
+    "model_type",
+    "l2",
+    "sigma",
+    "beta",
+    "feature_names",
+    "standardization_mean",
+    "standardization_std",
+    "optimization"
+  ],
+  "field_types": {
+    "feature_names": "list",
+    "beta": "dict",
+    "sigma": "float"
+  },
+  "beta_entry_count": 21,
+  "controls": {
+    "training": false,
+    "retraining": false,
+    "model_modification": false,
+    "prediction": false,
+    "locked_test_use": false
+  }
+}

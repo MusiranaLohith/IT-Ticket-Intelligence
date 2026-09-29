@@ -1,0 +1,1536 @@
+{
+  "operation": "E-OP-001",
+  "title": "Policy-Relevant Evidence Inventory",
+  "status": "PASS",
+  "read_only": true,
+  "model_modified": false,
+  "retraining_performed": false,
+  "threshold_selection_performed": false,
+  "threshold_optimization_performed": false,
+  "locked_test_reused": false,
+  "universal_confidence_created": false,
+  "universal_risk_created": false,
+  "synthetic_fusion_target_created": false,
+  "task_evidence": {
+    "T1": {
+      "task": "T1",
+      "records": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/analysis/t1_final_closure.json",
+          "exists": true,
+          "readable": true,
+          "text_length": 1705,
+          "policy_relevant_terms": {
+            "probability": true,
+            "confidence": false,
+            "threshold": true,
+            "ranking": false,
+            "retrieval": false,
+            "calibration": true,
+            "review": true,
+            "automation": false,
+            "defer": false,
+            "risk": false,
+            "evidence": true,
+            "decision": true
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/analysis/t1_it_support_3model_compare.json",
+          "exists": true,
+          "readable": true,
+          "text_length": 6831,
+          "policy_relevant_terms": {
+            "probability": false,
+            "confidence": false,
+            "threshold": false,
+            "ranking": true,
+            "retrieval": false,
+            "calibration": false,
+            "review": false,
+            "automation": false,
+            "defer": false,
+            "risk": false,
+            "evidence": false,
+            "decision": false
+          }
+        }
+      ]
+    },
+    "T2": {
+      "task": "T2",
+      "records": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/metrics/t2_final_closure.json",
+          "exists": false,
+          "readable": false
+        }
+      ]
+    },
+    "T3": {
+      "task": "T3",
+      "records": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/metrics/t3_final_closure.json",
+          "exists": false,
+          "readable": false
+        }
+      ]
+    },
+    "T4": {
+      "task": "T4",
+      "records": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/t4_mod013_closure.json",
+          "exists": true,
+          "readable": true,
+          "text_length": 4655,
+          "policy_relevant_terms": {
+            "probability": false,
+            "confidence": false,
+            "threshold": false,
+            "ranking": true,
+            "retrieval": true,
+            "calibration": false,
+            "review": true,
+            "automation": false,
+            "defer": false,
+            "risk": false,
+            "evidence": false,
+            "decision": true
+          }
+        }
+      ]
+    },
+    "T5": {
+      "task": "T5",
+      "records": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod011_final_closure.json",
+          "exists": true,
+          "readable": true,
+          "text_length": 3937,
+          "policy_relevant_terms": {
+            "probability": true,
+            "confidence": false,
+            "threshold": true,
+            "ranking": false,
+            "retrieval": false,
+            "calibration": true,
+            "review": true,
+            "automation": false,
+            "defer": false,
+            "risk": false,
+            "evidence": true,
+            "decision": true
+          }
+        }
+      ]
+    },
+    "T6": {
+      "task": "T6",
+      "records": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_final_closure.json",
+          "exists": true,
+          "readable": true,
+          "text_length": 4804,
+          "policy_relevant_terms": {
+            "probability": true,
+            "confidence": false,
+            "threshold": true,
+            "ranking": true,
+            "retrieval": true,
+            "calibration": true,
+            "review": true,
+            "automation": true,
+            "defer": false,
+            "risk": false,
+            "evidence": true,
+            "decision": true
+          }
+        }
+      ]
+    },
+    "T7": {
+      "task": "T7",
+      "records": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod012_final_closure.json",
+          "exists": true,
+          "readable": true,
+          "text_length": 3575,
+          "policy_relevant_terms": {
+            "probability": false,
+            "confidence": false,
+            "threshold": true,
+            "ranking": false,
+            "retrieval": false,
+            "calibration": true,
+            "review": true,
+            "automation": true,
+            "defer": false,
+            "risk": false,
+            "evidence": true,
+            "decision": true
+          }
+        }
+      ]
+    },
+    "T8": {
+      "task": "T8",
+      "records": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/mod036/op026/t8_mod036_op026_decision_engine_validation.json",
+          "exists": true,
+          "readable": true,
+          "text_length": 1782,
+          "policy_relevant_terms": {
+            "probability": true,
+            "confidence": true,
+            "threshold": true,
+            "ranking": false,
+            "retrieval": false,
+            "calibration": true,
+            "review": false,
+            "automation": true,
+            "defer": false,
+            "risk": false,
+            "evidence": true,
+            "decision": true
+          }
+        }
+      ]
+    },
+    "T9": {
+      "task": "T9",
+      "records": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op015_final_integrated_closure.json",
+          "exists": true,
+          "readable": true,
+          "text_length": 5103,
+          "policy_relevant_terms": {
+            "probability": true,
+            "confidence": true,
+            "threshold": true,
+            "ranking": true,
+            "retrieval": true,
+            "calibration": true,
+            "review": true,
+            "automation": false,
+            "defer": false,
+            "risk": true,
+            "evidence": true,
+            "decision": true
+          }
+        }
+      ]
+    }
+  },
+  "t10_evidence": {
+    "files_discovered": 76,
+    "records": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/a_op001_t1_calibration_requirement_audit.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": true,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/a_op002_t1_calibration_requirement_reconciliation.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": true,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": true,
+          "universal_risk": true,
+          "not_established": true,
+          "not_created": true,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp02_final_inference_component_completeness.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": false,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp02_inference_artifact_interface_audit.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": false,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp02_manifest_artifact_interface_validation.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": false,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp02_t2_t7_inference_manifest.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": true,
+          "human_review": false,
+          "review": true,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": true,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp05_op003r_t10_source_evidence.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": true,
+          "human_review": true,
+          "review": true,
+          "defer": true,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": true,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": true
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp05_op004_t10_policy_evidence_reconciliation.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": true,
+          "human_review": true,
+          "review": true,
+          "defer": true,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": true,
+          "universal_risk": true,
+          "not_established": false,
+          "not_created": false,
+          "policy": true
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp05_op004r_t10_artifact_path_reconciliation.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": true,
+          "human_review": true,
+          "review": true,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": true,
+          "universal_risk": true,
+          "not_established": true,
+          "not_created": true,
+          "policy": true
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp05_op005_empirical_policy_support_assessment.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": true,
+          "human_review": true,
+          "review": true,
+          "defer": true,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": true,
+          "universal_risk": true,
+          "not_established": true,
+          "not_created": true,
+          "policy": true
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp05_op006_native_policy_evidence_inventory.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": true,
+          "universal_risk": true,
+          "not_established": false,
+          "not_created": false,
+          "policy": true
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp05_op007r_native_operating_evidence.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": true,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": true,
+          "universal_risk": true,
+          "not_established": false,
+          "not_created": false,
+          "policy": true
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp05_op008_empirical_policy_boundary_audit.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": true,
+          "human_review": true,
+          "review": true,
+          "defer": true,
+          "threshold": true,
+          "universal_threshold": true,
+          "universal_confidence": true,
+          "universal_risk": true,
+          "not_established": true,
+          "not_created": true,
+          "policy": true
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_final_phase_closure.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": true,
+          "human_review": true,
+          "review": true,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": true,
+          "universal_confidence": true,
+          "universal_risk": true,
+          "not_established": true,
+          "not_created": true,
+          "policy": true
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op001_e2e_runtime_interface_inventory.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": true,
+          "universal_risk": true,
+          "not_established": true,
+          "not_created": false,
+          "policy": true
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op002_runtime_producer_consumer_audit.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": true,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": true,
+          "not_created": false,
+          "policy": true
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op006_t9_op014_dependency_audit.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": true
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op007_t9_input_contract_audit.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": true,
+          "universal_risk": true,
+          "not_established": true,
+          "not_created": true,
+          "policy": true
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op008_t10_consumer_contract_audit.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": true,
+          "human_review": true,
+          "review": true,
+          "defer": true,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": true
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op009_runtime_entrypoint_inventory.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": true,
+          "human_review": true,
+          "review": true,
+          "defer": true,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": true
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op010_frozen_t1_t7_runtime_interface_resolution.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": true,
+          "human_review": false,
+          "review": true,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": true,
+          "universal_risk": true,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op011a_t2_t3_frozen_artifact_resolution.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": true,
+          "human_review": false,
+          "review": true,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": true,
+          "universal_risk": true,
+          "not_established": false,
+          "not_created": false,
+          "policy": true
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op011b_t2_t3_final_model_selection_resolution.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": true,
+          "universal_risk": true,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op011c_t2_t3_selection_evidence_trace.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": true,
+          "universal_risk": true,
+          "not_established": false,
+          "not_created": false,
+          "policy": true
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op011d_frozen_t2_t3_artifact_binding.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": true,
+          "universal_risk": true,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op012_frozen_runtime_input_contract_audit.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": true,
+          "universal_risk": true,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op013_runtime_input_availability_audit.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": true,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": true,
+          "universal_risk": true,
+          "not_established": false,
+          "not_created": false,
+          "policy": true
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op014_frozen_runtime_source_binding_audit.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": true,
+          "universal_risk": true,
+          "not_established": false,
+          "not_created": false,
+          "policy": true
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op015_runtime_source_semantic_validation.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": true,
+          "universal_risk": true,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op016_frozen_runtime_input_construction_audit.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": true,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": true,
+          "universal_risk": true,
+          "not_established": false,
+          "not_created": false,
+          "policy": true
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op017_exact_frozen_runtime_binding_audit.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": true,
+          "human_review": false,
+          "review": true,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": true,
+          "universal_risk": true,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op018_controlled_frozen_runtime_inference_probe.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": true,
+          "universal_risk": true,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op018r10_t4_artifact_location_reconciliation.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": false,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op018r11_t4_frozen_component_compatibility.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": false,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op018r13_t4_native_input_contract_inspection.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": false,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": true
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op018r14_t4_corrected_frozen_runtime_smoke.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op018r15_t4_frozen_retrieval_reproducibility.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": false,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op018r16_t4_exact_eval_retrieval_reproduction.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": false,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op018r17_t6_native_runtime_input_contract_inspection.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": false,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op018r18_t6_mod010_component_binding.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": false,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op018r1_frozen_artifact_runtime_structure_inspection.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op018r21_t6_mod010_frozen_runtime_composition_probe.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": false,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op018r22_t7_frozen_runtime_interface_resolution.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": true,
+          "human_review": true,
+          "review": true,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": true,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op018r22c_t7_compact_runtime_interface_resolution.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": false,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op018r23_t7_final_model_parameter_binding.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": false,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op018r24_t7_frozen_runtime_probe.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": false,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op018r25_t7_exact_feature_builder_audit.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": false,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op018r26_t7_make_features_source_extract.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": false,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op018r27_t7_exact_frozen_runtime_probe.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": false,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op018r28_t7_runtime_closure_reconciliation.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": false,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op018r2_frozen_runtime_component_interface_audit.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op018r3_corrected_frozen_runtime_inference_probe.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": true,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": true,
+          "universal_risk": true,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op018r4_t1_frozen_runtime_input_binding_audit.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": false,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op018r5_t1_corrected_frozen_runtime_probe.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": true,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op018r6_t4_runtime_interface_probe.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op018r7_t4_implementation_locator.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": false,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op018r8_t4_final_implementation_binding_audit.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": false,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op019_final_t1_t7_runtime_binding_reconciliation.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": true,
+          "defer": false,
+          "threshold": false,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op019r1_final_t1_t7_runtime_binding_reconciliation.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": false,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op020_t2_t3_authoritative_binding_reconciliation.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": false,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op021_end_to_end_runtime_chain_interface_audit.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": true,
+          "human_review": false,
+          "review": true,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": true,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": true
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op021r1_corrected_end_to_end_runtime_chain_interface_audit.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": true,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": true,
+          "universal_risk": true,
+          "not_established": false,
+          "not_created": false,
+          "policy": true
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op022_controlled_end_to_end_execution_probe.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": true,
+          "defer": false,
+          "threshold": false,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": true
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op022r1_corrected_controlled_execution_reconciliation.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": true,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": true
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op022r2_t5_t10_authoritative_boundary_reconciliation.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": true,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": true,
+          "policy": true
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op022r3_t10_direct_policy_boundary_extraction.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": true,
+          "human_review": true,
+          "review": true,
+          "defer": true,
+          "threshold": true,
+          "universal_threshold": true,
+          "universal_confidence": true,
+          "universal_risk": true,
+          "not_established": true,
+          "not_created": true,
+          "policy": true
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op022r4_final_controlled_end_to_end_reconciliation.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": true,
+          "human_review": true,
+          "review": true,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": true,
+          "universal_confidence": true,
+          "universal_risk": true,
+          "not_established": false,
+          "not_created": true,
+          "policy": true
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op022r8_final_t10_literal_key_reconciliation.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": true,
+          "human_review": true,
+          "review": true,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": true,
+          "universal_confidence": true,
+          "universal_risk": true,
+          "not_established": true,
+          "not_created": true,
+          "policy": true
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp07_op001_final_modeling_freeze_inventory.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": false,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": true
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp07_op002_frozen_artifact_integrity_hash_manifest.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": false,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp07_op003_frozen_artifact_closure_identity_reconciliation.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": true,
+          "defer": false,
+          "threshold": false,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp07_op003r1_frozen_artifact_closure_identity_reconciliation.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": false,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp07_op004_frozen_runtime_reproducibility_manifest.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": true,
+          "universal_confidence": true,
+          "universal_risk": true,
+          "not_established": false,
+          "not_created": false,
+          "policy": true
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp07_op005_final_frozen_modeling_package_completeness_audit.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": true,
+          "defer": false,
+          "threshold": false,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": true
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp07_op005r1_final_frozen_modeling_package_completeness_audit.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": false,
+          "universal_threshold": false,
+          "universal_confidence": false,
+          "universal_risk": false,
+          "not_established": false,
+          "not_created": false,
+          "policy": true
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp07_op006_final_modeling_freeze_release_manifest.json",
+        "readable": true,
+        "policy_relevant_terms": {
+          "automation": false,
+          "human_review": false,
+          "review": false,
+          "defer": false,
+          "threshold": true,
+          "universal_threshold": false,
+          "universal_confidence": true,
+          "universal_risk": true,
+          "not_established": false,
+          "not_created": false,
+          "policy": false
+        }
+      }
+    ]
+  },
+  "policy_boundary": {
+    "automation": "NOT_ESTABLISHED",
+    "human_review": "NOT_ESTABLISHED",
+    "universal_threshold": "NOT_ESTABLISHED",
+    "universal_confidence": "NOT_CREATED",
+    "universal_risk": "NOT_CREATED"
+  },
+  "interpretation": "This operation inventories policy-relevant evidence only. It does not establish an operational policy or threshold."
+}

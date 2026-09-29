@@ -1,0 +1,711 @@
+{
+  "operation": "FMP-05-OP-006",
+  "operation_type": "READ_ONLY_NATIVE_TASK_SPECIFIC_POLICY_EVIDENCE_INVENTORY",
+  "status": "PASS",
+  "tasks": {
+    "T2": {
+      "root_exists": true,
+      "candidate_count": 11,
+      "candidates": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/analysis/t2_baseline_validation_predictions.csv",
+          "relative_path": "modeling/T2/analysis/t2_baseline_validation_predictions.csv",
+          "readable": true,
+          "columns": [
+            "ID",
+            "target_priority",
+            "predicted_priority",
+            "correct"
+          ],
+          "row_count_sampled": 5,
+          "interesting_columns": [
+            "target_priority",
+            "predicted_priority"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/analysis/t2_final_test_confusion_matrix.csv",
+          "relative_path": "modeling/T2/analysis/t2_final_test_confusion_matrix.csv",
+          "readable": true,
+          "columns": [
+            "actual\\predicted",
+            "P1",
+            "P2",
+            "P3",
+            "P4",
+            "P5"
+          ],
+          "row_count_sampled": 5,
+          "interesting_columns": [
+            "actual\\predicted"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/analysis/t2_final_test_metrics.json",
+          "relative_path": "modeling/T2/analysis/t2_final_test_metrics.json",
+          "readable": true,
+          "top_level_type": "dict",
+          "top_level_keys": [
+            "actual_distribution",
+            "artifacts",
+            "confusion_matrix",
+            "dataset",
+            "metrics",
+            "model",
+            "operation",
+            "operation_name",
+            "predicted_distribution",
+            "task",
+            "test",
+            "test_evaluation_status",
+            "training"
+          ],
+          "interesting_keys": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/analysis/t2_final_test_predictions.csv",
+          "relative_path": "modeling/T2/analysis/t2_final_test_predictions.csv",
+          "readable": true,
+          "columns": [
+            "ID",
+            "Creation time",
+            "actual_priority",
+            "predicted_priority"
+          ],
+          "row_count_sampled": 5,
+          "interesting_columns": [
+            "actual_priority",
+            "predicted_priority"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/derived/t2_validation_report.json",
+          "relative_path": "modeling/T2/derived/t2_validation_report.json",
+          "readable": true,
+          "top_level_type": "dict",
+          "top_level_keys": [
+            "checks",
+            "dataset",
+            "feature_artifact",
+            "frozen_target_artifact",
+            "integrity",
+            "operation",
+            "operation_name",
+            "status",
+            "task",
+            "task_name"
+          ],
+          "interesting_keys": [
+            "frozen_target_artifact"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/metrics/t2_baseline_metrics.json",
+          "relative_path": "modeling/T2/metrics/t2_baseline_metrics.json",
+          "readable": true,
+          "top_level_type": "dict",
+          "top_level_keys": [
+            "dataset",
+            "evaluation",
+            "features",
+            "model",
+            "operation",
+            "operation_name",
+            "task",
+            "task_name",
+            "train",
+            "validation"
+          ],
+          "interesting_keys": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/metrics/t2_class_weighted_metrics.json",
+          "relative_path": "modeling/T2/metrics/t2_class_weighted_metrics.json",
+          "readable": true,
+          "top_level_type": "dict",
+          "top_level_keys": [
+            "comparison_reference",
+            "dataset",
+            "evaluation",
+            "features",
+            "intentional_change",
+            "model",
+            "operation",
+            "operation_name",
+            "task",
+            "task_name",
+            "train",
+            "validation"
+          ],
+          "interesting_keys": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/metrics/t2_svm_metrics.json",
+          "relative_path": "modeling/T2/metrics/t2_svm_metrics.json",
+          "readable": true,
+          "top_level_type": "dict",
+          "top_level_keys": [
+            "comparison_reference",
+            "dataset",
+            "evaluation",
+            "features",
+            "model",
+            "operation",
+            "operation_name",
+            "task",
+            "task_name",
+            "train",
+            "validation"
+          ],
+          "interesting_keys": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/metrics/t2_weighted_svm_metrics.json",
+          "relative_path": "modeling/T2/metrics/t2_weighted_svm_metrics.json",
+          "readable": true,
+          "top_level_type": "dict",
+          "top_level_keys": [
+            "C",
+            "accuracy",
+            "class_weight",
+            "dataset",
+            "macro_f1",
+            "model",
+            "operation",
+            "operation_name",
+            "per_class",
+            "random_state",
+            "task",
+            "test_used",
+            "tfidf",
+            "train_rows",
+            "validation_rows",
+            "weighted_f1"
+          ],
+          "interesting_keys": [
+            "macro_f1",
+            "weighted_f1"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/splits/test.csv",
+          "relative_path": "modeling/T2/splits/test.csv",
+          "readable": true,
+          "columns": [
+            "ID",
+            "Creation time",
+            "Summary",
+            "Description",
+            "target_priority"
+          ],
+          "row_count_sampled": 5,
+          "interesting_columns": [
+            "target_priority"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/splits/validation.csv",
+          "relative_path": "modeling/T2/splits/validation.csv",
+          "readable": true,
+          "columns": [
+            "ID",
+            "Creation time",
+            "Summary",
+            "Description",
+            "target_priority"
+          ],
+          "row_count_sampled": 5,
+          "interesting_columns": [
+            "target_priority"
+          ]
+        }
+      ]
+    },
+    "T3": {
+      "root_exists": true,
+      "candidate_count": 12,
+      "candidates": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/analysis/t3_locked_test_evaluation.json",
+          "relative_path": "modeling/T3/analysis/t3_locked_test_evaluation.json",
+          "readable": true,
+          "top_level_type": "dict",
+          "top_level_keys": [
+            "artifacts",
+            "controls",
+            "operation",
+            "selected_model",
+            "selection_basis",
+            "status",
+            "test_metrics",
+            "test_rows"
+          ],
+          "interesting_keys": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/analysis/t3_transformer_smoke_test.json",
+          "relative_path": "modeling/T3/analysis/t3_transformer_smoke_test.json",
+          "readable": true,
+          "top_level_type": "dict",
+          "top_level_keys": [
+            "cuda_available",
+            "dataset_accessed",
+            "device",
+            "forward_pass",
+            "hidden_state_shape",
+            "model",
+            "model_loaded",
+            "operation",
+            "raw_mozilla_accessed",
+            "status",
+            "task",
+            "test_used",
+            "tokenizer_loaded",
+            "torch_version",
+            "training_started"
+          ],
+          "interesting_keys": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/analysis/t3_validation_report.json",
+          "relative_path": "modeling/T3/analysis/t3_validation_report.json",
+          "readable": true,
+          "top_level_type": "dict",
+          "top_level_keys": [
+            "columns",
+            "description_blank",
+            "duplicate_ids",
+            "forbidden_columns_present",
+            "input",
+            "invalid_creation_times",
+            "invalid_target_values",
+            "no_usable_text",
+            "rows",
+            "status",
+            "summary_blank",
+            "target_counts",
+            "unique_ids"
+          ],
+          "interesting_keys": [
+            "invalid_target_values",
+            "target_counts"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/metrics/t3_baseline_validation_metrics.json",
+          "relative_path": "modeling/T3/metrics/t3_baseline_validation_metrics.json",
+          "readable": true,
+          "top_level_type": "dict",
+          "top_level_keys": [
+            "accuracy",
+            "class_weight",
+            "confusion_matrix",
+            "feature_count",
+            "labels",
+            "macro_f1",
+            "model",
+            "per_class",
+            "status",
+            "task",
+            "test_used",
+            "train_rows",
+            "validation_rows",
+            "weighted_f1"
+          ],
+          "interesting_keys": [
+            "macro_f1",
+            "weighted_f1",
+            "labels"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/metrics/t3_class_weighted_validation_metrics.json",
+          "relative_path": "modeling/T3/metrics/t3_class_weighted_validation_metrics.json",
+          "readable": true,
+          "top_level_type": "dict",
+          "top_level_keys": [
+            "accuracy",
+            "class_weight",
+            "confusion_matrix",
+            "feature_count",
+            "labels",
+            "macro_f1",
+            "model",
+            "per_class",
+            "status",
+            "task",
+            "test_used",
+            "train_rows",
+            "validation_rows",
+            "weighted_f1"
+          ],
+          "interesting_keys": [
+            "macro_f1",
+            "weighted_f1",
+            "labels"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/metrics/t3_distilbert_feasibility_validation_metrics.json",
+          "relative_path": "modeling/T3/metrics/t3_distilbert_feasibility_validation_metrics.json",
+          "readable": true,
+          "top_level_type": "dict",
+          "top_level_keys": [
+            "accuracy",
+            "batch_size",
+            "dataset_modified",
+            "device",
+            "epochs",
+            "gradient_accumulation_steps",
+            "learning_rate",
+            "macro_f1",
+            "max_length",
+            "model",
+            "operation",
+            "per_class",
+            "prediction_counts",
+            "raw_mozilla_accessed",
+            "task",
+            "test_used",
+            "train_rows",
+            "training_seconds",
+            "validation_rows",
+            "validation_seconds",
+            "weighted_f1"
+          ],
+          "interesting_keys": [
+            "macro_f1",
+            "weighted_f1",
+            "prediction_counts"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/metrics/t3_final_test_metrics.json",
+          "relative_path": "modeling/T3/metrics/t3_final_test_metrics.json",
+          "readable": true,
+          "top_level_type": "dict",
+          "top_level_keys": [
+            "accuracy",
+            "confusion_matrix",
+            "controls",
+            "macro_f1",
+            "model_id",
+            "model_path",
+            "operation",
+            "per_class",
+            "prediction_counts",
+            "task",
+            "test_rows",
+            "true_counts",
+            "weighted_f1"
+          ],
+          "interesting_keys": [
+            "macro_f1",
+            "weighted_f1",
+            "prediction_counts"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/metrics/t3_linear_svm_validation_metrics.json",
+          "relative_path": "modeling/T3/metrics/t3_linear_svm_validation_metrics.json",
+          "readable": true,
+          "top_level_type": "dict",
+          "top_level_keys": [
+            "accuracy",
+            "class_weight",
+            "feature_dimensions",
+            "features",
+            "macro_f1",
+            "model_family",
+            "model_id",
+            "per_class",
+            "status",
+            "task",
+            "test_used",
+            "train_rows",
+            "validation_rows",
+            "weighted_f1"
+          ],
+          "interesting_keys": [
+            "macro_f1",
+            "weighted_f1"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/metrics/t3_svm_class_weighted_validation_metrics.json",
+          "relative_path": "modeling/T3/metrics/t3_svm_class_weighted_validation_metrics.json",
+          "readable": true,
+          "top_level_type": "dict",
+          "top_level_keys": [
+            "accuracy",
+            "class_weight",
+            "feature_dimensions",
+            "features",
+            "macro_f1",
+            "model_family",
+            "model_id",
+            "parameters",
+            "per_class",
+            "status",
+            "task",
+            "test_used",
+            "train_rows",
+            "validation_rows",
+            "weighted_f1"
+          ],
+          "interesting_keys": [
+            "macro_f1",
+            "weighted_f1"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/metrics/t3_word_char_validation_metrics.json",
+          "relative_path": "modeling/T3/metrics/t3_word_char_validation_metrics.json",
+          "readable": true,
+          "top_level_type": "dict",
+          "top_level_keys": [
+            "accuracy",
+            "char_feature_count",
+            "class_weight",
+            "combined_feature_count",
+            "confusion_matrix",
+            "labels",
+            "macro_f1",
+            "model",
+            "per_class",
+            "status",
+            "task",
+            "test_used",
+            "train_rows",
+            "validation_rows",
+            "weighted_f1",
+            "word_feature_count"
+          ],
+          "interesting_keys": [
+            "macro_f1",
+            "weighted_f1",
+            "labels"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/splits/t3_test.csv",
+          "relative_path": "modeling/T3/splits/t3_test.csv",
+          "readable": true,
+          "columns": [
+            "ID",
+            "Creation time",
+            "Summary",
+            "Description",
+            "target_severity"
+          ],
+          "row_count_sampled": 5,
+          "interesting_columns": [
+            "target_severity"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/splits/t3_validation.csv",
+          "relative_path": "modeling/T3/splits/t3_validation.csv",
+          "readable": true,
+          "columns": [
+            "ID",
+            "Creation time",
+            "Summary",
+            "Description",
+            "target_severity"
+          ],
+          "row_count_sampled": 5,
+          "interesting_columns": [
+            "target_severity"
+          ]
+        }
+      ]
+    },
+    "T5": {
+      "root_exists": true,
+      "candidate_count": 7,
+      "candidates": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod005_validation_metrics.json",
+          "relative_path": "modeling/T5/metrics/t5_mod005_validation_metrics.json",
+          "readable": true,
+          "top_level_type": "dict",
+          "top_level_keys": [
+            "confusion_matrix_at_0_5",
+            "evaluation_set_used",
+            "metrics",
+            "model",
+            "operation",
+            "operation_name",
+            "probability_output",
+            "status",
+            "task",
+            "threshold_optimization",
+            "training",
+            "validation"
+          ],
+          "interesting_keys": [
+            "probability_output",
+            "threshold_optimization"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod006_calibration_bins.json",
+          "relative_path": "modeling/T5/metrics/t5_mod006_calibration_bins.json",
+          "readable": true,
+          "top_level_type": "list",
+          "top_level_keys": [
+            "LIST",
+            "length=10"
+          ],
+          "interesting_keys": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod006_calibration_metrics.json",
+          "relative_path": "modeling/T5/metrics/t5_mod006_calibration_metrics.json",
+          "readable": true,
+          "top_level_type": "dict",
+          "top_level_keys": [
+            "brier_score",
+            "expected_calibration_error",
+            "n_calibration_bins",
+            "negative",
+            "official_evaluation_used",
+            "operation",
+            "operation_name",
+            "positive",
+            "probability_summary",
+            "rows",
+            "source",
+            "status",
+            "threshold_diagnostics",
+            "threshold_optimization"
+          ],
+          "interesting_keys": [
+            "brier_score",
+            "expected_calibration_error",
+            "probability_summary",
+            "threshold_diagnostics",
+            "n_calibration_bins",
+            "threshold_optimization"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod007_calibration_comparison.json",
+          "relative_path": "modeling/T5/metrics/t5_mod007_calibration_comparison.json",
+          "readable": true,
+          "top_level_type": "dict",
+          "top_level_keys": [
+            "base_model",
+            "calibration_fit_data",
+            "calibration_fraction",
+            "calibration_methods",
+            "calibration_partition",
+            "classifier_fit_partition",
+            "group_controls",
+            "isotonic_calibrated",
+            "model_selection",
+            "official_evaluation_used",
+            "operation",
+            "operation_name",
+            "random_seed",
+            "sigmoid_calibrated",
+            "status",
+            "threshold_optimization",
+            "validation_partition",
+            "validation_used_for_calibrator_fit"
+          ],
+          "interesting_keys": [
+            "calibration_fraction",
+            "calibration_partition",
+            "calibration_methods",
+            "calibration_fit_data",
+            "threshold_optimization"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod009_locked_evaluation_metrics.json",
+          "relative_path": "modeling/T5/metrics/t5_mod009_locked_evaluation_metrics.json",
+          "readable": true,
+          "top_level_type": "dict",
+          "top_level_keys": [
+            "controls",
+            "evaluation_artifact",
+            "evaluation_population",
+            "locked_pipeline",
+            "metrics",
+            "operation",
+            "operation_name",
+            "status"
+          ],
+          "interesting_keys": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/splits/t5_calibration_cal.csv",
+          "relative_path": "modeling/T5/splits/t5_calibration_cal.csv",
+          "readable": true,
+          "columns": [
+            "ID",
+            "Creation time",
+            "Creator",
+            "Creator Detail",
+            "Summary",
+            "Description",
+            "T5 target"
+          ],
+          "row_count_sampled": 5,
+          "interesting_columns": [
+            "T5 target"
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/splits/t5_calibration_fit.csv",
+          "relative_path": "modeling/T5/splits/t5_calibration_fit.csv",
+          "readable": true,
+          "columns": [
+            "ID",
+            "Creation time",
+            "Creator",
+            "Creator Detail",
+            "Summary",
+            "Description",
+            "T5 target"
+          ],
+          "row_count_sampled": 5,
+          "interesting_columns": [
+            "T5 target"
+          ]
+        }
+      ]
+    }
+  },
+  "native_evidence_requirements": {
+    "T2": [
+      "locked evaluation predictions or equivalent",
+      "native class labels / truth",
+      "probability or decision-score evidence if available"
+    ],
+    "T3": [
+      "locked evaluation predictions or equivalent",
+      "native class labels / truth",
+      "probability or decision-score evidence if available"
+    ],
+    "T5": [
+      "locked evaluation predictions or equivalent",
+      "duplicate truth",
+      "native calibrated probability if available",
+      "existing calibration/reliability evidence"
+    ]
+  },
+  "read_only_safeguards": {
+    "models_loaded": false,
+    "predictions_generated": false,
+    "retraining_performed": false,
+    "calibration_fitted": false,
+    "threshold_selected": false,
+    "policy_modified": false,
+    "artifacts_modified": false,
+    "universal_confidence_created": false,
+    "universal_risk_created": false
+  }
+}

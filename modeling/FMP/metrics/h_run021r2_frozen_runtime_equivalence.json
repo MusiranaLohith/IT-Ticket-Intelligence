@@ -1,0 +1,140 @@
+{
+  "operation": "H-RUN-021R2",
+  "operation_name": "Frozen runtime equivalence validation",
+  "ticket": {
+    "ticket_id": "H-RUN-021R2-VPN-001",
+    "creation_time": "2026-09-26T18:03:00Z",
+    "creator": "",
+    "creator_detail": "",
+    "summary": "VPN connection fails after password reset",
+    "description": "I reset my corporate password this morning. Since then, the VPN client connects briefly and then disconnects. I restarted the laptop and reinstalled the VPN client, but the issue persists. I need access to the internal systems for today's work."
+  },
+  "legacy_runtime": {
+    "T1": "Support general",
+    "T2": "P1",
+    "T3": "S3",
+    "T4": "['1321841', '220663', '1405307', '125875', '947801']",
+    "T5": "0.0",
+    "T6": "[]",
+    "T7": "19.629117104199928",
+    "T8": "SUPPORTED_WITH_LIMITATIONS",
+    "T9": "EXECUTED",
+    "T10": "HUMAN_DECISION_REQUIRED",
+    "T11": "AWAITING_OUTCOME"
+  },
+  "new_runtime": {
+    "T1": "Support general",
+    "T2": "P1",
+    "T3": "S3",
+    "T4": [
+      "1321841",
+      "220663",
+      "1405307",
+      "125875",
+      "947801"
+    ],
+    "T5": 0.0,
+    "T6": {
+      "status": "PARTIAL_NATIVE_RUNTIME",
+      "full_mod010_hybrid_available": false,
+      "top_ids": []
+    },
+    "T7": {
+      "status": "EXECUTED_WITH_SUPPORT_LIMITATION",
+      "median_seconds": 19.629117104199928,
+      "temporal_support": "OUTSIDE_OBSERVED_TRAINING_RANGE"
+    },
+    "T8": "SUPPORTED_WITH_LIMITATIONS",
+    "T9": null,
+    "T10": "HUMAN_DECISION_REQUIRED",
+    "T11": "AWAITING_OUTCOME"
+  },
+  "comparisons": [
+    {
+      "field": "T1",
+      "legacy": "Support general",
+      "new": "Support general",
+      "match": true
+    },
+    {
+      "field": "T2",
+      "legacy": "P1",
+      "new": "P1",
+      "match": true
+    },
+    {
+      "field": "T3",
+      "legacy": "S3",
+      "new": "S3",
+      "match": true
+    },
+    {
+      "field": "T4",
+      "legacy": "['1321841', '220663', '1405307', '125875', '947801']",
+      "new": [
+        "1321841",
+        "220663",
+        "1405307",
+        "125875",
+        "947801"
+      ],
+      "match": false
+    },
+    {
+      "field": "T5",
+      "legacy": "0.0",
+      "new": 0.0,
+      "match": false
+    },
+    {
+      "field": "T8",
+      "legacy": "SUPPORTED_WITH_LIMITATIONS",
+      "new": "SUPPORTED_WITH_LIMITATIONS",
+      "match": true
+    },
+    {
+      "field": "T10",
+      "legacy": "HUMAN_DECISION_REQUIRED",
+      "new": "HUMAN_DECISION_REQUIRED",
+      "match": true
+    },
+    {
+      "field": "T11",
+      "legacy": "AWAITING_OUTCOME",
+      "new": "AWAITING_OUTCOME",
+      "match": true
+    },
+    {
+      "field": "T6",
+      "legacy": "[]",
+      "new": {
+        "status": "PARTIAL_NATIVE_RUNTIME",
+        "full_mod010_hybrid_available": false,
+        "top_ids": []
+      },
+      "match": true
+    },
+    {
+      "field": "T7",
+      "legacy": "19.629117104199928",
+      "new": {
+        "status": "EXECUTED_WITH_SUPPORT_LIMITATION",
+        "median_seconds": 19.629117104199928,
+        "temporal_support": "OUTSIDE_OBSERVED_TRAINING_RANGE"
+      },
+      "match": true
+    }
+  ],
+  "validation": {
+    "all_required_equivalence_checks_pass": false,
+    "legacy_source_modified": false,
+    "new_models_created": false,
+    "model_retraining": false,
+    "model_modification": false,
+    "threshold_optimization": false,
+    "locked_test_reuse": false,
+    "prediction_modification": false,
+    "synthetic_feedback": false
+  },
+  "final_status": "REQUIRES_REVIEW"
+}

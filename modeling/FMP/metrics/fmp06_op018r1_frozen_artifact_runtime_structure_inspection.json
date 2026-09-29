@@ -1,0 +1,1033 @@
+{
+  "operation": "FMP-06 OP-018R1",
+  "operation_type": "READ_ONLY_FROZEN_ARTIFACT_RUNTIME_STRUCTURE_INSPECTION",
+  "artifacts": {
+    "T1": [
+      {
+        "task": "T1",
+        "artifact": "modeling/T1/baselines/t1_it_support_char_svm.joblib",
+        "exists": true,
+        "size_bytes": 2179887,
+        "status": "INSPECTED",
+        "structure": {
+          "path": "root",
+          "type": "builtins.dict",
+          "python_class": "dict",
+          "python_module": "builtins",
+          "methods": {
+            "predict": false,
+            "predict_proba": false,
+            "decision_function": false,
+            "transform": false,
+            "fit": false,
+            "fit_transform": false
+          },
+          "container_type": "dict",
+          "keys": [
+            "model",
+            "features",
+            "target",
+            "development_records",
+            "evaluation_records",
+            "feature_design",
+            "classifier"
+          ],
+          "children": [
+            {
+              "path": "root['model']",
+              "type": "sklearn.svm._classes.LinearSVC",
+              "python_class": "LinearSVC",
+              "python_module": "sklearn.svm._classes",
+              "methods": {
+                "predict": true,
+                "predict_proba": false,
+                "decision_function": true,
+                "transform": false,
+                "fit": true,
+                "fit_transform": false
+              },
+              "container_type": null
+            },
+            {
+              "path": "root['features']",
+              "type": "sklearn.pipeline.FeatureUnion",
+              "python_class": "FeatureUnion",
+              "python_module": "sklearn.pipeline",
+              "methods": {
+                "predict": false,
+                "predict_proba": false,
+                "decision_function": false,
+                "transform": true,
+                "fit": true,
+                "fit_transform": true
+              },
+              "container_type": null
+            },
+            {
+              "path": "root['target']",
+              "type": "builtins.str",
+              "python_class": "str",
+              "python_module": "builtins",
+              "methods": {
+                "predict": false,
+                "predict_proba": false,
+                "decision_function": false,
+                "transform": false,
+                "fit": false,
+                "fit_transform": false
+              },
+              "container_type": null
+            },
+            {
+              "path": "root['development_records']",
+              "type": "builtins.int",
+              "python_class": "int",
+              "python_module": "builtins",
+              "methods": {
+                "predict": false,
+                "predict_proba": false,
+                "decision_function": false,
+                "transform": false,
+                "fit": false,
+                "fit_transform": false
+              },
+              "container_type": null
+            },
+            {
+              "path": "root['evaluation_records']",
+              "type": "builtins.int",
+              "python_class": "int",
+              "python_module": "builtins",
+              "methods": {
+                "predict": false,
+                "predict_proba": false,
+                "decision_function": false,
+                "transform": false,
+                "fit": false,
+                "fit_transform": false
+              },
+              "container_type": null
+            },
+            {
+              "path": "root['feature_design']",
+              "type": "builtins.dict",
+              "python_class": "dict",
+              "python_module": "builtins",
+              "methods": {
+                "predict": false,
+                "predict_proba": false,
+                "decision_function": false,
+                "transform": false,
+                "fit": false,
+                "fit_transform": false
+              },
+              "container_type": "dict",
+              "keys": [
+                "word",
+                "character"
+              ],
+              "children": [
+                {
+                  "path": "root['feature_design']['word']",
+                  "type": "builtins.dict",
+                  "python_class": "dict",
+                  "python_module": "builtins",
+                  "methods": {
+                    "predict": false,
+                    "predict_proba": false,
+                    "decision_function": false,
+                    "transform": false,
+                    "fit": false,
+                    "fit_transform": false
+                  },
+                  "container_type": "dict",
+                  "keys": [
+                    "analyzer",
+                    "ngram_range",
+                    "min_df",
+                    "max_df",
+                    "sublinear_tf"
+                  ],
+                  "children": [
+                    {
+                      "path": "root['feature_design']['word']['analyzer']",
+                      "type": "builtins.str",
+                      "python_class": "str",
+                      "python_module": "builtins",
+                      "methods": {
+                        "predict": false,
+                        "predict_proba": false,
+                        "decision_function": false,
+                        "transform": false,
+                        "fit": false,
+                        "fit_transform": false
+                      }
+                    },
+                    {
+                      "path": "root['feature_design']['word']['ngram_range']",
+                      "type": "builtins.list",
+                      "python_class": "list",
+                      "python_module": "builtins",
+                      "methods": {
+                        "predict": false,
+                        "predict_proba": false,
+                        "decision_function": false,
+                        "transform": false,
+                        "fit": false,
+                        "fit_transform": false
+                      }
+                    },
+                    {
+                      "path": "root['feature_design']['word']['min_df']",
+                      "type": "builtins.int",
+                      "python_class": "int",
+                      "python_module": "builtins",
+                      "methods": {
+                        "predict": false,
+                        "predict_proba": false,
+                        "decision_function": false,
+                        "transform": false,
+                        "fit": false,
+                        "fit_transform": false
+                      }
+                    },
+                    {
+                      "path": "root['feature_design']['word']['max_df']",
+                      "type": "builtins.float",
+                      "python_class": "float",
+                      "python_module": "builtins",
+                      "methods": {
+                        "predict": false,
+                        "predict_proba": false,
+                        "decision_function": false,
+                        "transform": false,
+                        "fit": false,
+                        "fit_transform": false
+                      }
+                    },
+                    {
+                      "path": "root['feature_design']['word']['sublinear_tf']",
+                      "type": "builtins.bool",
+                      "python_class": "bool",
+                      "python_module": "builtins",
+                      "methods": {
+                        "predict": false,
+                        "predict_proba": false,
+                        "decision_function": false,
+                        "transform": false,
+                        "fit": false,
+                        "fit_transform": false
+                      }
+                    }
+                  ]
+                },
+                {
+                  "path": "root['feature_design']['character']",
+                  "type": "builtins.dict",
+                  "python_class": "dict",
+                  "python_module": "builtins",
+                  "methods": {
+                    "predict": false,
+                    "predict_proba": false,
+                    "decision_function": false,
+                    "transform": false,
+                    "fit": false,
+                    "fit_transform": false
+                  },
+                  "container_type": "dict",
+                  "keys": [
+                    "analyzer",
+                    "ngram_range",
+                    "min_df",
+                    "max_df",
+                    "sublinear_tf"
+                  ],
+                  "children": [
+                    {
+                      "path": "root['feature_design']['character']['analyzer']",
+                      "type": "builtins.str",
+                      "python_class": "str",
+                      "python_module": "builtins",
+                      "methods": {
+                        "predict": false,
+                        "predict_proba": false,
+                        "decision_function": false,
+                        "transform": false,
+                        "fit": false,
+                        "fit_transform": false
+                      }
+                    },
+                    {
+                      "path": "root['feature_design']['character']['ngram_range']",
+                      "type": "builtins.list",
+                      "python_class": "list",
+                      "python_module": "builtins",
+                      "methods": {
+                        "predict": false,
+                        "predict_proba": false,
+                        "decision_function": false,
+                        "transform": false,
+                        "fit": false,
+                        "fit_transform": false
+                      }
+                    },
+                    {
+                      "path": "root['feature_design']['character']['min_df']",
+                      "type": "builtins.int",
+                      "python_class": "int",
+                      "python_module": "builtins",
+                      "methods": {
+                        "predict": false,
+                        "predict_proba": false,
+                        "decision_function": false,
+                        "transform": false,
+                        "fit": false,
+                        "fit_transform": false
+                      }
+                    },
+                    {
+                      "path": "root['feature_design']['character']['max_df']",
+                      "type": "builtins.float",
+                      "python_class": "float",
+                      "python_module": "builtins",
+                      "methods": {
+                        "predict": false,
+                        "predict_proba": false,
+                        "decision_function": false,
+                        "transform": false,
+                        "fit": false,
+                        "fit_transform": false
+                      }
+                    },
+                    {
+                      "path": "root['feature_design']['character']['sublinear_tf']",
+                      "type": "builtins.bool",
+                      "python_class": "bool",
+                      "python_module": "builtins",
+                      "methods": {
+                        "predict": false,
+                        "predict_proba": false,
+                        "decision_function": false,
+                        "transform": false,
+                        "fit": false,
+                        "fit_transform": false
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "path": "root['classifier']",
+              "type": "builtins.dict",
+              "python_class": "dict",
+              "python_module": "builtins",
+              "methods": {
+                "predict": false,
+                "predict_proba": false,
+                "decision_function": false,
+                "transform": false,
+                "fit": false,
+                "fit_transform": false
+              },
+              "container_type": "dict",
+              "keys": [
+                "type",
+                "class_weight",
+                "random_state"
+              ],
+              "children": [
+                {
+                  "path": "root['classifier']['type']",
+                  "type": "builtins.str",
+                  "python_class": "str",
+                  "python_module": "builtins",
+                  "methods": {
+                    "predict": false,
+                    "predict_proba": false,
+                    "decision_function": false,
+                    "transform": false,
+                    "fit": false,
+                    "fit_transform": false
+                  },
+                  "container_type": null
+                },
+                {
+                  "path": "root['classifier']['class_weight']",
+                  "type": "builtins.str",
+                  "python_class": "str",
+                  "python_module": "builtins",
+                  "methods": {
+                    "predict": false,
+                    "predict_proba": false,
+                    "decision_function": false,
+                    "transform": false,
+                    "fit": false,
+                    "fit_transform": false
+                  },
+                  "container_type": null
+                },
+                {
+                  "path": "root['classifier']['random_state']",
+                  "type": "builtins.int",
+                  "python_class": "int",
+                  "python_module": "builtins",
+                  "methods": {
+                    "predict": false,
+                    "predict_proba": false,
+                    "decision_function": false,
+                    "transform": false,
+                    "fit": false,
+                    "fit_transform": false
+                  },
+                  "container_type": null
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "T2": [
+      {
+        "task": "T2",
+        "artifact": "modeling/T2/models/t2_class_weighted_tfidf_logreg.joblib",
+        "exists": true,
+        "size_bytes": 14317753,
+        "status": "INSPECTED",
+        "structure": {
+          "path": "root",
+          "type": "builtins.dict",
+          "python_class": "dict",
+          "python_module": "builtins",
+          "methods": {
+            "predict": false,
+            "predict_proba": false,
+            "decision_function": false,
+            "transform": false,
+            "fit": false,
+            "fit_transform": false
+          },
+          "container_type": "dict",
+          "keys": [
+            "task",
+            "task_name",
+            "dataset",
+            "model_type",
+            "vectorizer_type",
+            "feature_sources",
+            "target",
+            "classes",
+            "class_weight",
+            "vectorizer",
+            "model"
+          ],
+          "children": [
+            {
+              "path": "root['task']",
+              "type": "builtins.str",
+              "python_class": "str",
+              "python_module": "builtins",
+              "methods": {
+                "predict": false,
+                "predict_proba": false,
+                "decision_function": false,
+                "transform": false,
+                "fit": false,
+                "fit_transform": false
+              },
+              "container_type": null
+            },
+            {
+              "path": "root['task_name']",
+              "type": "builtins.str",
+              "python_class": "str",
+              "python_module": "builtins",
+              "methods": {
+                "predict": false,
+                "predict_proba": false,
+                "decision_function": false,
+                "transform": false,
+                "fit": false,
+                "fit_transform": false
+              },
+              "container_type": null
+            },
+            {
+              "path": "root['dataset']",
+              "type": "builtins.str",
+              "python_class": "str",
+              "python_module": "builtins",
+              "methods": {
+                "predict": false,
+                "predict_proba": false,
+                "decision_function": false,
+                "transform": false,
+                "fit": false,
+                "fit_transform": false
+              },
+              "container_type": null
+            },
+            {
+              "path": "root['model_type']",
+              "type": "builtins.str",
+              "python_class": "str",
+              "python_module": "builtins",
+              "methods": {
+                "predict": false,
+                "predict_proba": false,
+                "decision_function": false,
+                "transform": false,
+                "fit": false,
+                "fit_transform": false
+              },
+              "container_type": null
+            },
+            {
+              "path": "root['vectorizer_type']",
+              "type": "builtins.str",
+              "python_class": "str",
+              "python_module": "builtins",
+              "methods": {
+                "predict": false,
+                "predict_proba": false,
+                "decision_function": false,
+                "transform": false,
+                "fit": false,
+                "fit_transform": false
+              },
+              "container_type": null
+            },
+            {
+              "path": "root['feature_sources']",
+              "type": "builtins.list",
+              "python_class": "list",
+              "python_module": "builtins",
+              "methods": {
+                "predict": false,
+                "predict_proba": false,
+                "decision_function": false,
+                "transform": false,
+                "fit": false,
+                "fit_transform": false
+              },
+              "container_type": "list",
+              "length": 2,
+              "children": [
+                {
+                  "path": "root['feature_sources'][0]",
+                  "type": "builtins.str",
+                  "python_class": "str",
+                  "python_module": "builtins",
+                  "methods": {
+                    "predict": false,
+                    "predict_proba": false,
+                    "decision_function": false,
+                    "transform": false,
+                    "fit": false,
+                    "fit_transform": false
+                  },
+                  "container_type": null
+                },
+                {
+                  "path": "root['feature_sources'][1]",
+                  "type": "builtins.str",
+                  "python_class": "str",
+                  "python_module": "builtins",
+                  "methods": {
+                    "predict": false,
+                    "predict_proba": false,
+                    "decision_function": false,
+                    "transform": false,
+                    "fit": false,
+                    "fit_transform": false
+                  },
+                  "container_type": null
+                }
+              ]
+            },
+            {
+              "path": "root['target']",
+              "type": "builtins.str",
+              "python_class": "str",
+              "python_module": "builtins",
+              "methods": {
+                "predict": false,
+                "predict_proba": false,
+                "decision_function": false,
+                "transform": false,
+                "fit": false,
+                "fit_transform": false
+              },
+              "container_type": null
+            },
+            {
+              "path": "root['classes']",
+              "type": "builtins.list",
+              "python_class": "list",
+              "python_module": "builtins",
+              "methods": {
+                "predict": false,
+                "predict_proba": false,
+                "decision_function": false,
+                "transform": false,
+                "fit": false,
+                "fit_transform": false
+              },
+              "container_type": "list",
+              "length": 5,
+              "children": [
+                {
+                  "path": "root['classes'][0]",
+                  "type": "builtins.str",
+                  "python_class": "str",
+                  "python_module": "builtins",
+                  "methods": {
+                    "predict": false,
+                    "predict_proba": false,
+                    "decision_function": false,
+                    "transform": false,
+                    "fit": false,
+                    "fit_transform": false
+                  },
+                  "container_type": null
+                },
+                {
+                  "path": "root['classes'][1]",
+                  "type": "builtins.str",
+                  "python_class": "str",
+                  "python_module": "builtins",
+                  "methods": {
+                    "predict": false,
+                    "predict_proba": false,
+                    "decision_function": false,
+                    "transform": false,
+                    "fit": false,
+                    "fit_transform": false
+                  },
+                  "container_type": null
+                },
+                {
+                  "path": "root['classes'][2]",
+                  "type": "builtins.str",
+                  "python_class": "str",
+                  "python_module": "builtins",
+                  "methods": {
+                    "predict": false,
+                    "predict_proba": false,
+                    "decision_function": false,
+                    "transform": false,
+                    "fit": false,
+                    "fit_transform": false
+                  },
+                  "container_type": null
+                },
+                {
+                  "path": "root['classes'][3]",
+                  "type": "builtins.str",
+                  "python_class": "str",
+                  "python_module": "builtins",
+                  "methods": {
+                    "predict": false,
+                    "predict_proba": false,
+                    "decision_function": false,
+                    "transform": false,
+                    "fit": false,
+                    "fit_transform": false
+                  },
+                  "container_type": null
+                },
+                {
+                  "path": "root['classes'][4]",
+                  "type": "builtins.str",
+                  "python_class": "str",
+                  "python_module": "builtins",
+                  "methods": {
+                    "predict": false,
+                    "predict_proba": false,
+                    "decision_function": false,
+                    "transform": false,
+                    "fit": false,
+                    "fit_transform": false
+                  },
+                  "container_type": null
+                }
+              ]
+            },
+            {
+              "path": "root['class_weight']",
+              "type": "builtins.str",
+              "python_class": "str",
+              "python_module": "builtins",
+              "methods": {
+                "predict": false,
+                "predict_proba": false,
+                "decision_function": false,
+                "transform": false,
+                "fit": false,
+                "fit_transform": false
+              },
+              "container_type": null
+            },
+            {
+              "path": "root['vectorizer']",
+              "type": "sklearn.feature_extraction.text.TfidfVectorizer",
+              "python_class": "TfidfVectorizer",
+              "python_module": "sklearn.feature_extraction.text",
+              "methods": {
+                "predict": false,
+                "predict_proba": false,
+                "decision_function": false,
+                "transform": true,
+                "fit": true,
+                "fit_transform": true
+              },
+              "container_type": null
+            },
+            {
+              "path": "root['model']",
+              "type": "sklearn.linear_model._logistic.LogisticRegression",
+              "python_class": "LogisticRegression",
+              "python_module": "sklearn.linear_model._logistic",
+              "methods": {
+                "predict": true,
+                "predict_proba": true,
+                "decision_function": true,
+                "transform": false,
+                "fit": true,
+                "fit_transform": false
+              },
+              "container_type": null
+            }
+          ]
+        }
+      }
+    ],
+    "T3": [
+      {
+        "task": "T3",
+        "artifact": "modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib",
+        "exists": true,
+        "size_bytes": 17315561,
+        "status": "INSPECTED",
+        "structure": {
+          "path": "root",
+          "type": "builtins.dict",
+          "python_class": "dict",
+          "python_module": "builtins",
+          "methods": {
+            "predict": false,
+            "predict_proba": false,
+            "decision_function": false,
+            "transform": false,
+            "fit": false,
+            "fit_transform": false
+          },
+          "container_type": "dict",
+          "keys": [
+            "vectorizer",
+            "model",
+            "task",
+            "target",
+            "features",
+            "model_type",
+            "class_weight"
+          ],
+          "children": [
+            {
+              "path": "root['vectorizer']",
+              "type": "sklearn.feature_extraction.text.TfidfVectorizer",
+              "python_class": "TfidfVectorizer",
+              "python_module": "sklearn.feature_extraction.text",
+              "methods": {
+                "predict": false,
+                "predict_proba": false,
+                "decision_function": false,
+                "transform": true,
+                "fit": true,
+                "fit_transform": true
+              },
+              "container_type": null
+            },
+            {
+              "path": "root['model']",
+              "type": "sklearn.linear_model._logistic.LogisticRegression",
+              "python_class": "LogisticRegression",
+              "python_module": "sklearn.linear_model._logistic",
+              "methods": {
+                "predict": true,
+                "predict_proba": true,
+                "decision_function": true,
+                "transform": false,
+                "fit": true,
+                "fit_transform": false
+              },
+              "container_type": null
+            },
+            {
+              "path": "root['task']",
+              "type": "builtins.str",
+              "python_class": "str",
+              "python_module": "builtins",
+              "methods": {
+                "predict": false,
+                "predict_proba": false,
+                "decision_function": false,
+                "transform": false,
+                "fit": false,
+                "fit_transform": false
+              },
+              "container_type": null
+            },
+            {
+              "path": "root['target']",
+              "type": "builtins.str",
+              "python_class": "str",
+              "python_module": "builtins",
+              "methods": {
+                "predict": false,
+                "predict_proba": false,
+                "decision_function": false,
+                "transform": false,
+                "fit": false,
+                "fit_transform": false
+              },
+              "container_type": null
+            },
+            {
+              "path": "root['features']",
+              "type": "builtins.list",
+              "python_class": "list",
+              "python_module": "builtins",
+              "methods": {
+                "predict": false,
+                "predict_proba": false,
+                "decision_function": false,
+                "transform": false,
+                "fit": false,
+                "fit_transform": false
+              },
+              "container_type": "list",
+              "length": 2,
+              "children": [
+                {
+                  "path": "root['features'][0]",
+                  "type": "builtins.str",
+                  "python_class": "str",
+                  "python_module": "builtins",
+                  "methods": {
+                    "predict": false,
+                    "predict_proba": false,
+                    "decision_function": false,
+                    "transform": false,
+                    "fit": false,
+                    "fit_transform": false
+                  },
+                  "container_type": null
+                },
+                {
+                  "path": "root['features'][1]",
+                  "type": "builtins.str",
+                  "python_class": "str",
+                  "python_module": "builtins",
+                  "methods": {
+                    "predict": false,
+                    "predict_proba": false,
+                    "decision_function": false,
+                    "transform": false,
+                    "fit": false,
+                    "fit_transform": false
+                  },
+                  "container_type": null
+                }
+              ]
+            },
+            {
+              "path": "root['model_type']",
+              "type": "builtins.str",
+              "python_class": "str",
+              "python_module": "builtins",
+              "methods": {
+                "predict": false,
+                "predict_proba": false,
+                "decision_function": false,
+                "transform": false,
+                "fit": false,
+                "fit_transform": false
+              },
+              "container_type": null
+            },
+            {
+              "path": "root['class_weight']",
+              "type": "builtins.str",
+              "python_class": "str",
+              "python_module": "builtins",
+              "methods": {
+                "predict": false,
+                "predict_proba": false,
+                "decision_function": false,
+                "transform": false,
+                "fit": false,
+                "fit_transform": false
+              },
+              "container_type": null
+            }
+          ]
+        }
+      }
+    ],
+    "T5": [
+      {
+        "task": "T5",
+        "artifact": "modeling/T5/models/t5_mod005_tfidf.joblib",
+        "exists": true,
+        "size_bytes": 4041055,
+        "status": "INSPECTED",
+        "structure": {
+          "path": "root",
+          "type": "sklearn.feature_extraction.text.TfidfVectorizer",
+          "python_class": "TfidfVectorizer",
+          "python_module": "sklearn.feature_extraction.text",
+          "methods": {
+            "predict": false,
+            "predict_proba": false,
+            "decision_function": false,
+            "transform": true,
+            "fit": true,
+            "fit_transform": true
+          },
+          "container_type": null
+        }
+      },
+      {
+        "task": "T5",
+        "artifact": "modeling/T5/models/t5_mod005_logreg.joblib",
+        "exists": true,
+        "size_bytes": 800891,
+        "status": "INSPECTED",
+        "structure": {
+          "path": "root",
+          "type": "sklearn.linear_model._logistic.LogisticRegression",
+          "python_class": "LogisticRegression",
+          "python_module": "sklearn.linear_model._logistic",
+          "methods": {
+            "predict": true,
+            "predict_proba": true,
+            "decision_function": true,
+            "transform": false,
+            "fit": true,
+            "fit_transform": false
+          },
+          "container_type": null
+        }
+      },
+      {
+        "task": "T5",
+        "artifact": "modeling/T5/models/t5_mod007_calibrated_tfidf.joblib",
+        "exists": true,
+        "size_bytes": 4041492,
+        "status": "INSPECTED",
+        "structure": {
+          "path": "root",
+          "type": "sklearn.feature_extraction.text.TfidfVectorizer",
+          "python_class": "TfidfVectorizer",
+          "python_module": "sklearn.feature_extraction.text",
+          "methods": {
+            "predict": false,
+            "predict_proba": false,
+            "decision_function": false,
+            "transform": true,
+            "fit": true,
+            "fit_transform": true
+          },
+          "container_type": null
+        }
+      },
+      {
+        "task": "T5",
+        "artifact": "modeling/T5/models/t5_mod007_calibration_models.joblib",
+        "exists": true,
+        "size_bytes": 802449,
+        "status": "INSPECTED",
+        "structure": {
+          "path": "root",
+          "type": "builtins.dict",
+          "python_class": "dict",
+          "python_module": "builtins",
+          "methods": {
+            "predict": false,
+            "predict_proba": false,
+            "decision_function": false,
+            "transform": false,
+            "fit": false,
+            "fit_transform": false
+          },
+          "container_type": "dict",
+          "keys": [
+            "base_model",
+            "sigmoid_calibrator",
+            "isotonic_calibrator"
+          ],
+          "children": [
+            {
+              "path": "root['base_model']",
+              "type": "sklearn.linear_model._logistic.LogisticRegression",
+              "python_class": "LogisticRegression",
+              "python_module": "sklearn.linear_model._logistic",
+              "methods": {
+                "predict": true,
+                "predict_proba": true,
+                "decision_function": true,
+                "transform": false,
+                "fit": true,
+                "fit_transform": false
+              },
+              "container_type": null
+            },
+            {
+              "path": "root['sigmoid_calibrator']",
+              "type": "sklearn.linear_model._logistic.LogisticRegression",
+              "python_class": "LogisticRegression",
+              "python_module": "sklearn.linear_model._logistic",
+              "methods": {
+                "predict": true,
+                "predict_proba": true,
+                "decision_function": true,
+                "transform": false,
+                "fit": true,
+                "fit_transform": false
+              },
+              "container_type": null
+            },
+            {
+              "path": "root['isotonic_calibrator']",
+              "type": "sklearn.isotonic.IsotonicRegression",
+              "python_class": "IsotonicRegression",
+              "python_module": "sklearn.isotonic",
+              "methods": {
+                "predict": true,
+                "predict_proba": false,
+                "decision_function": false,
+                "transform": true,
+                "fit": true,
+                "fit_transform": true
+              },
+              "container_type": null
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "safeguards": {
+    "inference_executed": false,
+    "predict_called": false,
+    "predict_proba_called": false,
+    "fit_called": false,
+    "retraining": false,
+    "artifact_modification": false,
+    "threshold_selection": false,
+    "calibration_fitting": false
+  },
+  "overall_status": "PASS"
+}

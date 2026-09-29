@@ -1,0 +1,184 @@
+{
+  "operation": "T9_MOD-037_OP-006",
+  "title": "T5 Calibration Population & Probability Semantics Audit",
+  "status": "PASS",
+  "purpose": "Audit the accepted native T5 duplicate-probability artifact and its model-validation population before subsequent task-specific calibration work.",
+  "op005_validation": {
+    "checks": {
+      "operation_status": {
+        "status": "PASS",
+        "observed": "PASS"
+      },
+      "T5_status": {
+        "status": "PASS",
+        "observed": "ACCEPTED_NATIVE_PROBABILITY"
+      },
+      "T5_probability_accepted": {
+        "status": "PASS",
+        "observed": true
+      }
+    },
+    "failed_checks": [],
+    "status": "PASS"
+  },
+  "native_artifact_audit": {
+    "status": "PASS",
+    "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod007_calibrated_validation_predictions.npz",
+    "keys": [
+      "p_base",
+      "p_isotonic",
+      "p_sigmoid",
+      "y_true"
+    ],
+    "required_keys": [
+      "p_base",
+      "p_isotonic",
+      "p_sigmoid",
+      "y_true"
+    ],
+    "missing_keys": [],
+    "arrays": {
+      "y_true": {
+        "shape": [
+          74091
+        ],
+        "dtype": "int8"
+      },
+      "p_base": {
+        "shape": [
+          74091
+        ],
+        "dtype": "float64"
+      },
+      "p_sigmoid": {
+        "shape": [
+          74091
+        ],
+        "dtype": "float64"
+      },
+      "p_isotonic": {
+        "shape": [
+          74091
+        ],
+        "dtype": "float64"
+      }
+    }
+  },
+  "population_audit": {
+    "status": "PASS",
+    "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/splits/t5_model_val.csv",
+    "rows": 74091,
+    "columns": [
+      "ID",
+      "Creation time",
+      "Creator",
+      "Creator Detail",
+      "Summary",
+      "Description",
+      "T5 target"
+    ],
+    "missing_required_columns": [],
+    "ID_integrity": {
+      "unique_ids": 74091,
+      "duplicate_ids": 0,
+      "null_ids": 0
+    },
+    "target": {
+      "column": "T5 target",
+      "non_null": 74091,
+      "unique_values": [
+        0,
+        1
+      ],
+      "value_counts": {
+        "0": 73611,
+        "1": 480
+      }
+    }
+  },
+  "probability_semantics_audit": {
+    "status": "PASS",
+    "target": {
+      "finite": true,
+      "binary": true,
+      "unique_values": [
+        0,
+        1
+      ]
+    },
+    "probabilities": {
+      "p_base": {
+        "shape": [
+          74091
+        ],
+        "finite": true,
+        "range_0_to_1": true,
+        "min": 1.544367184785814e-05,
+        "max": 0.9994659098849336,
+        "mean": 0.08229327925884924,
+        "median": 0.021859698296415767
+      },
+      "p_sigmoid": {
+        "shape": [
+          74091
+        ],
+        "finite": true,
+        "range_0_to_1": true,
+        "min": 6.942310328241331e-06,
+        "max": 0.9030691091358121,
+        "mean": 0.007076626142712772,
+        "median": 0.0017243120176412496
+      },
+      "p_isotonic": {
+        "shape": [
+          74091
+        ],
+        "finite": true,
+        "range_0_to_1": true,
+        "min": 0.0,
+        "max": 0.5,
+        "mean": 0.00708799168369449,
+        "median": 0.0012324929971988796
+      }
+    },
+    "semantic_statement": "The native T5 probability arrays are treated as task-specific duplicate-probability quantities. They are not interpreted as universal ticket confidence or universal ticket risk."
+  },
+  "alignment_audit": {
+    "status": "PASS",
+    "array_lengths": {
+      "y_true": 74091,
+      "p_base": 74091,
+      "p_sigmoid": 74091,
+      "p_isotonic": 74091
+    },
+    "equal_array_lengths": true,
+    "population_rows": 74091,
+    "population_matches_probability_rows": true
+  },
+  "boundary_controls": {
+    "checks": {
+      "new_model_fitted": false,
+      "new_probability_generated": false,
+      "new_calibration_fitted": false,
+      "target_created": false,
+      "target_relabelled": false,
+      "threshold_selected": false,
+      "universal_confidence_created": false,
+      "universal_risk_score_created": false,
+      "synthetic_target_created": false,
+      "locked_test_used_for_selection": false,
+      "post_creation_features_introduced": false,
+      "native_t5_target_preserved": true,
+      "native_probability_semantics_preserved": true
+    },
+    "failed_checks": [],
+    "status": "PASS"
+  },
+  "calibration_readiness_statement": "T5 may proceed to a subsequent task-specific calibration/evaluation operation only if the native duplicate-probability semantics, target alignment, population boundary, and evaluation protocol remain frozen. This operation itself does not fit or select calibration.",
+  "prohibited_interpretations": [
+    "T5 probability is not a universal ticket confidence score.",
+    "T5 probability is not a universal ticket risk score.",
+    "T5 probability must not be compared numerically with T4/T6 ranking scores or T7 survival quantities as if they were the same predictive quantity.",
+    "No automation threshold is established by this operation."
+  ]
+}

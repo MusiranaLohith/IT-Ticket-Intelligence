@@ -1,0 +1,51 @@
+{
+  "operation": "DEPLOY-OP-055",
+  "title": "Landing Width and Workspace Home Navigation Fix",
+  "status": "PASS",
+  "scope": [
+    "full-width landing visual background",
+    "centred landing content preservation",
+    "workspace back-to-home navigation",
+    "workspace kicker visibility",
+    "responsive navigation"
+  ],
+  "modified_files": [
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/index.html",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/app.js",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/style.css"
+  ],
+  "backups": [
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/index.html.before-deploy-op055",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/app.js.before-deploy-op055",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/style.css.before-deploy-op055"
+  ],
+  "unchanged": [
+    "deployment/backend/app.py",
+    "modeling/FMP/deployment/runtime/ticket_pipeline.py",
+    "modeling/FMP/deployment/runtime/ticket_explanation.py",
+    "frozen modeling artifacts",
+    "T1\u2013T11 runtime semantics"
+  ],
+  "hashes_before": {
+    "index.html": "b98b320f718dbd5326252373d2a752d537e6ae9aea8ec9e4cccb858f6d3228c2",
+    "app.js": "7507f3d40e4a105dd5e87f4eb820ef9a62c7d047bedbc20ed11383d20c7018c4",
+    "style.css": "d121707747787f9a505b018c5b2fbca6cbe5459537d9a8d9f69af96a623ee792"
+  },
+  "hashes_after": {
+    "index.html": "30695a997d09d02a1d56e98ef7aade4994844f5c0926e480b45fd70d99ea7ac6",
+    "app.js": "8dc96a573c9b57b55d065072ad128ff2477bbc12fbffb10104de993bc57783cb",
+    "style.css": "59cb81f1c6a01bc6818718292208facca1e772d39b7e34c9bec6c2ae485147a4"
+  },
+  "checks": {
+    "LANDING_FULL_WIDTH": true,
+    "LANDING_CONTENT_CENTRED": true,
+    "WORKSPACE_HOME_BUTTON_HTML": true,
+    "WORKSPACE_HOME_BUTTON_JS": true,
+    "WORKSPACE_HOME_BUTTON_LISTENER": true,
+    "HOME_DESTINATION": true,
+    "KICKER_VISIBILITY": true,
+    "RESPONSIVE_HOME_BUTTON": true,
+    "TICKET_PIPELINE_UNTOUCHED": true,
+    "SKLEARN_UNTOUCHED": true
+  }
+}

@@ -1,0 +1,2117 @@
+{
+  "operation": "FMP-05-OP-007R",
+  "operation_type": "READ_ONLY_NATIVE_OPERATING_EVIDENCE_EXTRACTION",
+  "status": "PASS",
+  "authoritative_files": {
+    "T2_test_predictions": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/analysis/t2_final_test_predictions.csv",
+    "T2_test_metrics": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/analysis/t2_final_test_metrics.json",
+    "T2_closure": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/analysis/t2_final_closure.json",
+    "T3_locked_evaluation": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/analysis/t3_locked_test_evaluation.json",
+    "T3_test_metrics": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/metrics/t3_final_test_metrics.json",
+    "T3_closure": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/analysis/t3_final_closure.json",
+    "T5_locked_evaluation": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod009_locked_evaluation_metrics.json",
+    "T5_calibration_metrics": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod006_calibration_metrics.json",
+    "T5_calibration_bins": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod006_calibration_bins.json",
+    "T5_calibration_comparison": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod007_calibration_comparison.json",
+    "T5_validation_metrics": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod005_validation_metrics.json",
+    "T5_closure": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod011_final_closure.json"
+  },
+  "t2_evidence": {
+    "T2_test_metrics": [
+      {
+        "path": "metrics.accuracy",
+        "value": 0.4201129943502825,
+        "matched_terms": [
+          "accuracy"
+        ]
+      },
+      {
+        "path": "metrics.macro_f1",
+        "value": 0.26495957519937885,
+        "matched_terms": [
+          "macro_f1"
+        ]
+      },
+      {
+        "path": "metrics.weighted_f1",
+        "value": 0.42540851125365187,
+        "matched_terms": [
+          "weighted_f1"
+        ]
+      },
+      {
+        "path": "actual_distribution.P1",
+        "value": 625,
+        "matched_terms": [
+          "actual"
+        ]
+      },
+      {
+        "path": "actual_distribution.P2",
+        "value": 1541,
+        "matched_terms": [
+          "actual"
+        ]
+      },
+      {
+        "path": "actual_distribution.P3",
+        "value": 2077,
+        "matched_terms": [
+          "actual"
+        ]
+      },
+      {
+        "path": "actual_distribution.P4",
+        "value": 33,
+        "matched_terms": [
+          "actual"
+        ]
+      },
+      {
+        "path": "actual_distribution.P5",
+        "value": 149,
+        "matched_terms": [
+          "actual"
+        ]
+      },
+      {
+        "path": "predicted_distribution.P1",
+        "value": 988,
+        "matched_terms": [
+          "predicted"
+        ]
+      },
+      {
+        "path": "predicted_distribution.P2",
+        "value": 1247,
+        "matched_terms": [
+          "predicted"
+        ]
+      },
+      {
+        "path": "predicted_distribution.P3",
+        "value": 1978,
+        "matched_terms": [
+          "predicted"
+        ]
+      },
+      {
+        "path": "predicted_distribution.P4",
+        "value": 64,
+        "matched_terms": [
+          "predicted"
+        ]
+      },
+      {
+        "path": "predicted_distribution.P5",
+        "value": 148,
+        "matched_terms": [
+          "predicted"
+        ]
+      }
+    ],
+    "T2_closure": [
+      {
+        "path": "final_test.accuracy",
+        "value": 0.4201129943502825,
+        "matched_terms": [
+          "accuracy"
+        ]
+      },
+      {
+        "path": "final_test.macro_f1",
+        "value": 0.26495957519937885,
+        "matched_terms": [
+          "macro_f1"
+        ]
+      },
+      {
+        "path": "final_test.weighted_f1",
+        "value": 0.42540851125365187,
+        "matched_terms": [
+          "weighted_f1"
+        ]
+      },
+      {
+        "path": "generalization.validation_accuracy",
+        "value": 0.446102,
+        "matched_terms": [
+          "accuracy"
+        ]
+      },
+      {
+        "path": "generalization.test_accuracy",
+        "value": 0.4201129943502825,
+        "matched_terms": [
+          "accuracy"
+        ]
+      },
+      {
+        "path": "generalization.accuracy_change_pp",
+        "value": -2.598900564971751,
+        "matched_terms": [
+          "accuracy"
+        ]
+      },
+      {
+        "path": "generalization.validation_macro_f1",
+        "value": 0.31045,
+        "matched_terms": [
+          "macro_f1"
+        ]
+      },
+      {
+        "path": "generalization.test_macro_f1",
+        "value": 0.26495957519937885,
+        "matched_terms": [
+          "macro_f1"
+        ]
+      },
+      {
+        "path": "generalization.macro_f1_change_pp",
+        "value": -4.549042480062115,
+        "matched_terms": [
+          "macro_f1"
+        ]
+      },
+      {
+        "path": "generalization.validation_weighted_f1",
+        "value": 0.443565,
+        "matched_terms": [
+          "weighted_f1"
+        ]
+      },
+      {
+        "path": "generalization.test_weighted_f1",
+        "value": 0.42540851125365187,
+        "matched_terms": [
+          "weighted_f1"
+        ]
+      },
+      {
+        "path": "generalization.weighted_f1_change_pp",
+        "value": -1.815648874634812,
+        "matched_terms": [
+          "weighted_f1"
+        ]
+      },
+      {
+        "path": "system_role.decision",
+        "value": "SECONDARY_DECISION_SUPPORT_SIGNAL",
+        "matched_terms": [
+          "decision"
+        ]
+      },
+      {
+        "path": "system_role.description",
+        "value": "T2 is suitable as a secondary, confidence-aware priority prediction signal within the integrated IT Ticket Intelligence system. It should assist triage and downstream evidence fusion, but should not independently determine final ticket priority.",
+        "matched_terms": [
+          "confidence"
+        ]
+      },
+      {
+        "path": "suitability_decision",
+        "value": "SUPPORTED_WITH_LIMITATIONS",
+        "matched_terms": [
+          "decision"
+        ]
+      },
+      {
+        "path": "strengths[1]",
+        "value": "The prediction boundary is Creation, preserving the intended incoming-ticket decision boundary.",
+        "matched_terms": [
+          "decision"
+        ]
+      },
+      {
+        "path": "limitations[0]",
+        "value": "Overall five-class predictive performance is limited: final test accuracy is 42.0113% and macro-F1 is 26.4960%.",
+        "matched_terms": [
+          "accuracy"
+        ]
+      },
+      {
+        "path": "limitations[5]",
+        "value": "A universal automated confidence threshold has not been empirically established.",
+        "matched_terms": [
+          "threshold",
+          "confidence"
+        ]
+      },
+      {
+        "path": "supported_claims[4]",
+        "value": "T2 can contribute one evidence channel to a larger confidence-aware triage system.",
+        "matched_terms": [
+          "confidence"
+        ]
+      },
+      {
+        "path": "unsupported_claims[2]",
+        "value": "T2 does not support automatic action at a fixed confidence threshold without further empirical calibration and policy evaluation.",
+        "matched_terms": [
+          "threshold",
+          "confidence"
+        ]
+      },
+      {
+        "path": "unsupported_claims[3]",
+        "value": "T2 does not establish that predicted priority should replace human priority judgment.",
+        "matched_terms": [
+          "predicted"
+        ]
+      },
+      {
+        "path": "final_conclusion",
+        "value": "Mozilla CORE is suitable for T2 priority-prediction modeling under the frozen Creation-time target and feature boundary. The final TF-IDF + Class-Weighted Logistic Regression model demonstrates measurable but limited predictive performance on the locked chronological test period. Because minority-class performance is weak and generalization degrades on the later period, T2 is closed as a supported secondary decision-support signal rather than an autonomous priority assignment component.",
+        "matched_terms": [
+          "decision"
+        ]
+      },
+      {
+        "path": "next_system_use",
+        "value": "Retain the T2 prediction as one evidence channel for later confidence-aware fusion and human-review policy development. Do not independently automate final priority assignment from T2.",
+        "matched_terms": [
+          "confidence"
+        ]
+      }
+    ]
+  },
+  "t2_prediction_schema": {
+    "columns": [
+      "ID",
+      "Creation time",
+      "actual_priority",
+      "predicted_priority"
+    ],
+    "sample_rows": [
+      {
+        "ID": "1732760",
+        "Creation time": "2021-09-27 17:51:33+00:00",
+        "actual_priority": "P2",
+        "predicted_priority": "P1"
+      },
+      {
+        "ID": "1732766",
+        "Creation time": "2021-09-27 18:30:12+00:00",
+        "actual_priority": "P3",
+        "predicted_priority": "P2"
+      },
+      {
+        "ID": "1732785",
+        "Creation time": "2021-09-27 20:30:39+00:00",
+        "actual_priority": "P3",
+        "predicted_priority": "P3"
+      },
+      {
+        "ID": "1732875",
+        "Creation time": "2021-09-28 11:03:08+00:00",
+        "actual_priority": "P2",
+        "predicted_priority": "P3"
+      },
+      {
+        "ID": "1732932",
+        "Creation time": "2021-09-28 15:35:42+00:00",
+        "actual_priority": "P2",
+        "predicted_priority": "P3"
+      }
+    ],
+    "row_count_sampled": 5
+  },
+  "t3_evidence": {
+    "T3_locked_evaluation": [
+      {
+        "path": "selection_basis.primary_metric",
+        "value": "macro_f1",
+        "matched_terms": [
+          "macro_f1"
+        ]
+      },
+      {
+        "path": "selection_basis.validation_macro_f1",
+        "value": 0.348017,
+        "matched_terms": [
+          "macro_f1"
+        ]
+      },
+      {
+        "path": "test_metrics.accuracy",
+        "value": 0.5540423692174665,
+        "matched_terms": [
+          "accuracy"
+        ]
+      },
+      {
+        "path": "test_metrics.macro_f1",
+        "value": 0.3036817032407433,
+        "matched_terms": [
+          "macro_f1"
+        ]
+      },
+      {
+        "path": "test_metrics.weighted_f1",
+        "value": 0.6030788055367481,
+        "matched_terms": [
+          "weighted_f1"
+        ]
+      }
+    ],
+    "T3_test_metrics": [
+      {
+        "path": "task",
+        "value": "T3_SEVERITY_PREDICTION",
+        "matched_terms": [
+          "prediction"
+        ]
+      },
+      {
+        "path": "accuracy",
+        "value": 0.5540423692174665,
+        "matched_terms": [
+          "accuracy"
+        ]
+      },
+      {
+        "path": "macro_f1",
+        "value": 0.3036817032407433,
+        "matched_terms": [
+          "macro_f1"
+        ]
+      },
+      {
+        "path": "weighted_f1",
+        "value": 0.6030788055367481,
+        "matched_terms": [
+          "weighted_f1"
+        ]
+      },
+      {
+        "path": "prediction_counts.S1",
+        "value": 19,
+        "matched_terms": [
+          "prediction"
+        ]
+      },
+      {
+        "path": "prediction_counts.S2",
+        "value": 792,
+        "matched_terms": [
+          "prediction"
+        ]
+      },
+      {
+        "path": "prediction_counts.S3",
+        "value": 2554,
+        "matched_terms": [
+          "prediction"
+        ]
+      },
+      {
+        "path": "prediction_counts.S4",
+        "value": 1261,
+        "matched_terms": [
+          "prediction"
+        ]
+      }
+    ],
+    "T3_closure": [
+      {
+        "path": "task",
+        "value": "T3_SEVERITY_PREDICTION",
+        "matched_terms": [
+          "prediction"
+        ]
+      },
+      {
+        "path": "final_candidate.selection_primary_metric",
+        "value": "macro_f1",
+        "matched_terms": [
+          "macro_f1"
+        ]
+      },
+      {
+        "path": "final_candidate.validation_metrics.accuracy",
+        "value": 0.5845222654561176,
+        "matched_terms": [
+          "accuracy"
+        ]
+      },
+      {
+        "path": "final_candidate.validation_metrics.macro_f1",
+        "value": 0.3480174180281372,
+        "matched_terms": [
+          "macro_f1"
+        ]
+      },
+      {
+        "path": "final_candidate.validation_metrics.weighted_f1",
+        "value": 0.6148412546447116,
+        "matched_terms": [
+          "weighted_f1"
+        ]
+      },
+      {
+        "path": "final_candidate.locked_test_metrics.accuracy",
+        "value": 0.5540423692174665,
+        "matched_terms": [
+          "accuracy"
+        ]
+      },
+      {
+        "path": "final_candidate.locked_test_metrics.macro_f1",
+        "value": 0.3036817032407433,
+        "matched_terms": [
+          "macro_f1"
+        ]
+      },
+      {
+        "path": "final_candidate.locked_test_metrics.weighted_f1",
+        "value": 0.6030788055367481,
+        "matched_terms": [
+          "weighted_f1"
+        ]
+      },
+      {
+        "path": "generalization.accuracy_change",
+        "value": -0.030479896238651105,
+        "matched_terms": [
+          "accuracy"
+        ]
+      },
+      {
+        "path": "generalization.macro_f1_change",
+        "value": -0.0443357147873939,
+        "matched_terms": [
+          "macro_f1"
+        ]
+      },
+      {
+        "path": "generalization.weighted_f1_change",
+        "value": -0.011762449107963535,
+        "matched_terms": [
+          "weighted_f1"
+        ]
+      },
+      {
+        "path": "advanced_branch.distilbert_accuracy",
+        "value": 0.7220060527453523,
+        "matched_terms": [
+          "accuracy"
+        ]
+      },
+      {
+        "path": "advanced_branch.distilbert_macro_f1",
+        "value": 0.29663315276577507,
+        "matched_terms": [
+          "macro_f1"
+        ]
+      },
+      {
+        "path": "advanced_branch.distilbert_weighted_f1",
+        "value": 0.6689419070240422,
+        "matched_terms": [
+          "weighted_f1"
+        ]
+      },
+      {
+        "path": "limitations[5]",
+        "value": "DistilBERT achieved higher accuracy and weighted F1 in feasibility testing but lower macro F1 and did not resolve S1/S2 detection.",
+        "matched_terms": [
+          "accuracy"
+        ]
+      },
+      {
+        "path": "system_role",
+        "value": "SECONDARY_DECISION_SUPPORT_SIGNAL",
+        "matched_terms": [
+          "decision"
+        ]
+      },
+      {
+        "path": "recommended_use",
+        "value": "Use T3 severity prediction as a secondary decision-support signal for downstream triage or human review. Do not treat the prediction as an autonomous or authoritative severity assignment.",
+        "matched_terms": [
+          "decision",
+          "prediction"
+        ]
+      },
+      {
+        "path": "closure_statement",
+        "value": "T3 — Severity Prediction is CLOSED as a SUPPORTED_WITH_LIMITATIONS secondary decision-support signal. The selected candidate is T3-MOD-008 under the pre-frozen macro-F1 criterion. Locked test evaluation and final generalization analysis are complete. The task is not treated as an autonomous severity assignment capability.",
+        "matched_terms": [
+          "decision",
+          "prediction"
+        ]
+      }
+    ]
+  },
+  "t5_evidence": {
+    "T5_locked_evaluation": [
+      {
+        "path": "locked_pipeline.calibration",
+        "value": "sigmoid",
+        "matched_terms": [
+          "calibration"
+        ]
+      },
+      {
+        "path": "locked_pipeline.probability_output",
+        "value": "p_duplicate",
+        "matched_terms": [
+          "probability"
+        ]
+      },
+      {
+        "path": "metrics.average_precision",
+        "value": 0.12583280543036882,
+        "matched_terms": [
+          "precision",
+          "average_precision"
+        ]
+      },
+      {
+        "path": "metrics.roc_auc",
+        "value": 0.6781415853279965,
+        "matched_terms": [
+          "roc_auc"
+        ]
+      },
+      {
+        "path": "metrics.log_loss",
+        "value": 0.27250018754800265,
+        "matched_terms": [
+          "log_loss"
+        ]
+      },
+      {
+        "path": "metrics.brier_score",
+        "value": 0.059906950851585296,
+        "matched_terms": [
+          "brier"
+        ]
+      },
+      {
+        "path": "metrics.threshold_0_5.precision",
+        "value": 0.4782608695652174,
+        "matched_terms": [
+          "threshold",
+          "precision"
+        ]
+      },
+      {
+        "path": "metrics.threshold_0_5.recall",
+        "value": 0.00834597875569044,
+        "matched_terms": [
+          "threshold",
+          "recall"
+        ]
+      },
+      {
+        "path": "metrics.threshold_0_5.f1",
+        "value": 0.01640566741237882,
+        "matched_terms": [
+          "threshold",
+          "f1"
+        ]
+      },
+      {
+        "path": "metrics.threshold_0_5.positive_predictions",
+        "value": 23,
+        "matched_terms": [
+          "threshold"
+        ]
+      },
+      {
+        "path": "controls.threshold_optimization",
+        "value": false,
+        "matched_terms": [
+          "threshold",
+          "threshold_optimization"
+        ]
+      },
+      {
+        "path": "controls.evaluation_used_for_calibration",
+        "value": false,
+        "matched_terms": [
+          "calibration"
+        ]
+      }
+    ],
+    "T5_calibration_metrics": [
+      {
+        "path": "operation_name",
+        "value": "Calibration Analysis",
+        "matched_terms": [
+          "calibration"
+        ]
+      },
+      {
+        "path": "brier_score",
+        "value": 0.0314241207869983,
+        "matched_terms": [
+          "brier"
+        ]
+      },
+      {
+        "path": "expected_calibration_error",
+        "value": 0.07601621043899813,
+        "matched_terms": [
+          "calibration",
+          "expected_calibration_error"
+        ]
+      },
+      {
+        "path": "probability_summary.0",
+        "value": 1.804229767896597e-05,
+        "matched_terms": [
+          "probability"
+        ]
+      },
+      {
+        "path": "probability_summary.25",
+        "value": 0.006886887385775524,
+        "matched_terms": [
+          "probability"
+        ]
+      },
+      {
+        "path": "probability_summary.50",
+        "value": 0.021455323347858792,
+        "matched_terms": [
+          "probability"
+        ]
+      },
+      {
+        "path": "probability_summary.75",
+        "value": 0.07316717763749526,
+        "matched_terms": [
+          "probability"
+        ]
+      },
+      {
+        "path": "probability_summary.90",
+        "value": 0.22708402631062863,
+        "matched_terms": [
+          "probability"
+        ]
+      },
+      {
+        "path": "probability_summary.95",
+        "value": 0.423317563444952,
+        "matched_terms": [
+          "probability"
+        ]
+      },
+      {
+        "path": "probability_summary.99",
+        "value": 0.8595729444857029,
+        "matched_terms": [
+          "probability"
+        ]
+      },
+      {
+        "path": "probability_summary.99.5",
+        "value": 0.9333072420488099,
+        "matched_terms": [
+          "probability"
+        ]
+      },
+      {
+        "path": "probability_summary.99.9",
+        "value": 0.9862313003701322,
+        "matched_terms": [
+          "probability"
+        ]
+      },
+      {
+        "path": "probability_summary.100",
+        "value": 0.9993552073275289,
+        "matched_terms": [
+          "probability"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[0].threshold",
+        "value": 0.01,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[0].predicted_positive",
+        "value": 49871,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[0].predicted_positive_rate",
+        "value": 0.6731046955770607,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[0].precision",
+        "value": 0.009444366465480941,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics",
+          "precision"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[0].recall",
+        "value": 0.98125,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics",
+          "recall"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[1].threshold",
+        "value": 0.02,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[1].predicted_positive",
+        "value": 38180,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[1].predicted_positive_rate",
+        "value": 0.5153122511506121,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[1].precision",
+        "value": 0.011969617600838135,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics",
+          "precision"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[1].recall",
+        "value": 0.9520833333333333,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics",
+          "recall"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[2].threshold",
+        "value": 0.05,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[2].predicted_positive",
+        "value": 23696,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[2].predicted_positive_rate",
+        "value": 0.3198229204626743,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[2].precision",
+        "value": 0.018315327481431467,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics",
+          "precision"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[2].recall",
+        "value": 0.9041666666666667,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics",
+          "recall"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[3].threshold",
+        "value": 0.1,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[3].predicted_positive",
+        "value": 14817,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[3].predicted_positive_rate",
+        "value": 0.19998380370085436,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[3].precision",
+        "value": 0.026591077816022136,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics",
+          "precision"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[3].recall",
+        "value": 0.8208333333333333,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics",
+          "recall"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[4].threshold",
+        "value": 0.2,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[4].predicted_positive",
+        "value": 8301,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[4].predicted_positive_rate",
+        "value": 0.11203789934000082,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[4].precision",
+        "value": 0.042043127334056137,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics",
+          "precision"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[4].recall",
+        "value": 0.7270833333333333,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics",
+          "recall"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[5].threshold",
+        "value": 0.3,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[5].predicted_positive",
+        "value": 5537,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[5].predicted_positive_rate",
+        "value": 0.07473242364119799,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[5].precision",
+        "value": 0.057793028715911146,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics",
+          "precision"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[5].recall",
+        "value": 0.6666666666666666,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics",
+          "recall"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[6].threshold",
+        "value": 0.4,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[6].predicted_positive",
+        "value": 3975,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[6].predicted_positive_rate",
+        "value": 0.05365024091994979,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[6].precision",
+        "value": 0.0739622641509434,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics",
+          "precision"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[6].recall",
+        "value": 0.6125,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics",
+          "recall"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[7].threshold",
+        "value": 0.5,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[7].predicted_positive",
+        "value": 2913,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[7].predicted_positive_rate",
+        "value": 0.03931651617605377,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[7].precision",
+        "value": 0.09474768280123584,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics",
+          "precision"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[7].recall",
+        "value": 0.575,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics",
+          "recall"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[8].threshold",
+        "value": 0.6,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[8].predicted_positive",
+        "value": 2141,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[8].predicted_positive_rate",
+        "value": 0.028896897059022014,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[8].precision",
+        "value": 0.11630079402148528,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics",
+          "precision"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[8].recall",
+        "value": 0.51875,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics",
+          "recall"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[9].threshold",
+        "value": 0.7,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[9].predicted_positive",
+        "value": 1504,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[9].predicted_positive_rate",
+        "value": 0.020299361595875344,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[9].precision",
+        "value": 0.14162234042553193,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics",
+          "precision"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[9].recall",
+        "value": 0.44375,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics",
+          "recall"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[10].threshold",
+        "value": 0.8,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[10].predicted_positive",
+        "value": 1024,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[10].predicted_positive_rate",
+        "value": 0.013820841937617255,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[10].precision",
+        "value": 0.173828125,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics",
+          "precision"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[10].recall",
+        "value": 0.37083333333333335,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics",
+          "recall"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[11].threshold",
+        "value": 0.9,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[11].predicted_positive",
+        "value": 539,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[11].predicted_positive_rate",
+        "value": 0.007274837699585645,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[11].precision",
+        "value": 0.23376623376623376,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics",
+          "precision"
+        ]
+      },
+      {
+        "path": "threshold_diagnostics[11].recall",
+        "value": 0.2625,
+        "matched_terms": [
+          "threshold",
+          "threshold_diagnostics",
+          "recall"
+        ]
+      },
+      {
+        "path": "n_calibration_bins",
+        "value": 10,
+        "matched_terms": [
+          "calibration"
+        ]
+      },
+      {
+        "path": "threshold_optimization",
+        "value": false,
+        "matched_terms": [
+          "threshold",
+          "threshold_optimization"
+        ]
+      }
+    ],
+    "T5_calibration_bins": [
+      {
+        "path": "[0].mean_predicted_probability",
+        "value": 0.02324781562253205,
+        "matched_terms": [
+          "probability"
+        ]
+      },
+      {
+        "path": "[0].absolute_calibration_error",
+        "value": 0.021796926531193517,
+        "matched_terms": [
+          "calibration"
+        ]
+      },
+      {
+        "path": "[1].mean_predicted_probability",
+        "value": 0.1412956944463598,
+        "matched_terms": [
+          "probability"
+        ]
+      },
+      {
+        "path": "[1].absolute_calibration_error",
+        "value": 0.1343896170982935,
+        "matched_terms": [
+          "calibration"
+        ]
+      },
+      {
+        "path": "[2].mean_predicted_probability",
+        "value": 0.24553687067534238,
+        "matched_terms": [
+          "probability"
+        ]
+      },
+      {
+        "path": "[2].absolute_calibration_error",
+        "value": 0.23504483015435831,
+        "matched_terms": [
+          "calibration"
+        ]
+      },
+      {
+        "path": "[3].mean_predicted_probability",
+        "value": 0.34538225418365615,
+        "matched_terms": [
+          "probability"
+        ]
+      },
+      {
+        "path": "[3].absolute_calibration_error",
+        "value": 0.32873692767917473,
+        "matched_terms": [
+          "calibration"
+        ]
+      },
+      {
+        "path": "[4].mean_predicted_probability",
+        "value": 0.44844291983945883,
+        "matched_terms": [
+          "probability"
+        ]
+      },
+      {
+        "path": "[4].absolute_calibration_error",
+        "value": 0.43149376729708594,
+        "matched_terms": [
+          "calibration"
+        ]
+      },
+      {
+        "path": "[5].mean_predicted_probability",
+        "value": 0.5470400977372512,
+        "matched_terms": [
+          "probability"
+        ]
+      },
+      {
+        "path": "[5].absolute_calibration_error",
+        "value": 0.5120660044730024,
+        "matched_terms": [
+          "calibration"
+        ]
+      },
+      {
+        "path": "[6].mean_predicted_probability",
+        "value": 0.647450704081177,
+        "matched_terms": [
+          "probability"
+        ]
+      },
+      {
+        "path": "[6].absolute_calibration_error",
+        "value": 0.5909357904234062,
+        "matched_terms": [
+          "calibration"
+        ]
+      },
+      {
+        "path": "[7].mean_predicted_probability",
+        "value": 0.7490045242781159,
+        "matched_terms": [
+          "probability"
+        ]
+      },
+      {
+        "path": "[7].absolute_calibration_error",
+        "value": 0.6760878576114493,
+        "matched_terms": [
+          "calibration"
+        ]
+      },
+      {
+        "path": "[8].mean_predicted_probability",
+        "value": 0.8498475498766419,
+        "matched_terms": [
+          "probability"
+        ]
+      },
+      {
+        "path": "[8].absolute_calibration_error",
+        "value": 0.7426310550312811,
+        "matched_terms": [
+          "calibration"
+        ]
+      },
+      {
+        "path": "[9].mean_predicted_probability",
+        "value": 0.951032689546953,
+        "matched_terms": [
+          "probability"
+        ]
+      },
+      {
+        "path": "[9].absolute_calibration_error",
+        "value": 0.7172664557807192,
+        "matched_terms": [
+          "calibration"
+        ]
+      }
+    ],
+    "T5_calibration_comparison": [
+      {
+        "path": "operation_name",
+        "value": "Calibration Comparison",
+        "matched_terms": [
+          "calibration"
+        ]
+      },
+      {
+        "path": "calibration_fraction",
+        "value": 0.2,
+        "matched_terms": [
+          "calibration"
+        ]
+      },
+      {
+        "path": "calibration_partition.rows",
+        "value": 24415,
+        "matched_terms": [
+          "calibration"
+        ]
+      },
+      {
+        "path": "calibration_partition.positive",
+        "value": 171,
+        "matched_terms": [
+          "calibration"
+        ]
+      },
+      {
+        "path": "calibration_partition.negative",
+        "value": 24244,
+        "matched_terms": [
+          "calibration"
+        ]
+      },
+      {
+        "path": "group_controls.calibration_groups",
+        "value": 24352,
+        "matched_terms": [
+          "calibration"
+        ]
+      },
+      {
+        "path": "calibration_methods[0]",
+        "value": "sigmoid",
+        "matched_terms": [
+          "calibration"
+        ]
+      },
+      {
+        "path": "calibration_methods[1]",
+        "value": "isotonic",
+        "matched_terms": [
+          "calibration"
+        ]
+      },
+      {
+        "path": "base_model.average_precision",
+        "value": 0.16377630768463408,
+        "matched_terms": [
+          "precision",
+          "average_precision"
+        ]
+      },
+      {
+        "path": "base_model.roc_auc",
+        "value": 0.8969287312131792,
+        "matched_terms": [
+          "roc_auc"
+        ]
+      },
+      {
+        "path": "base_model.log_loss",
+        "value": 0.11953384007668892,
+        "matched_terms": [
+          "log_loss"
+        ]
+      },
+      {
+        "path": "base_model.brier_score",
+        "value": 0.031018998152599814,
+        "matched_terms": [
+          "brier"
+        ]
+      },
+      {
+        "path": "base_model.threshold_0_5_precision",
+        "value": 0.0942936673625609,
+        "matched_terms": [
+          "threshold",
+          "precision"
+        ]
+      },
+      {
+        "path": "base_model.threshold_0_5_recall",
+        "value": 0.5645833333333333,
+        "matched_terms": [
+          "threshold",
+          "recall"
+        ]
+      },
+      {
+        "path": "base_model.threshold_0_5_positive_predictions",
+        "value": 2874,
+        "matched_terms": [
+          "threshold"
+        ]
+      },
+      {
+        "path": "sigmoid_calibrated.average_precision",
+        "value": 0.16377630768463408,
+        "matched_terms": [
+          "precision",
+          "average_precision"
+        ]
+      },
+      {
+        "path": "sigmoid_calibrated.roc_auc",
+        "value": 0.8969287312131792,
+        "matched_terms": [
+          "roc_auc"
+        ]
+      },
+      {
+        "path": "sigmoid_calibrated.log_loss",
+        "value": 0.028358865729015772,
+        "matched_terms": [
+          "log_loss"
+        ]
+      },
+      {
+        "path": "sigmoid_calibrated.brier_score",
+        "value": 0.005860260617751882,
+        "matched_terms": [
+          "brier"
+        ]
+      },
+      {
+        "path": "sigmoid_calibrated.threshold_0_5_precision",
+        "value": 0.46808510638297873,
+        "matched_terms": [
+          "threshold",
+          "precision"
+        ]
+      },
+      {
+        "path": "sigmoid_calibrated.threshold_0_5_recall",
+        "value": 0.04583333333333333,
+        "matched_terms": [
+          "threshold",
+          "recall"
+        ]
+      },
+      {
+        "path": "sigmoid_calibrated.threshold_0_5_positive_predictions",
+        "value": 47,
+        "matched_terms": [
+          "threshold"
+        ]
+      },
+      {
+        "path": "isotonic_calibrated.average_precision",
+        "value": 0.14869819508663887,
+        "matched_terms": [
+          "precision",
+          "average_precision"
+        ]
+      },
+      {
+        "path": "isotonic_calibrated.roc_auc",
+        "value": 0.8948104732988276,
+        "matched_terms": [
+          "roc_auc"
+        ]
+      },
+      {
+        "path": "isotonic_calibrated.log_loss",
+        "value": 0.029845500624698273,
+        "matched_terms": [
+          "log_loss"
+        ]
+      },
+      {
+        "path": "isotonic_calibrated.brier_score",
+        "value": 0.005843631923421229,
+        "matched_terms": [
+          "brier"
+        ]
+      },
+      {
+        "path": "isotonic_calibrated.threshold_0_5_precision",
+        "value": 0.4634146341463415,
+        "matched_terms": [
+          "threshold",
+          "precision"
+        ]
+      },
+      {
+        "path": "isotonic_calibrated.threshold_0_5_recall",
+        "value": 0.03958333333333333,
+        "matched_terms": [
+          "threshold",
+          "recall"
+        ]
+      },
+      {
+        "path": "isotonic_calibrated.threshold_0_5_positive_predictions",
+        "value": 41,
+        "matched_terms": [
+          "threshold"
+        ]
+      },
+      {
+        "path": "calibration_fit_data",
+        "value": "separate group-aware calibration partition",
+        "matched_terms": [
+          "calibration"
+        ]
+      },
+      {
+        "path": "threshold_optimization",
+        "value": false,
+        "matched_terms": [
+          "threshold",
+          "threshold_optimization"
+        ]
+      },
+      {
+        "path": "status",
+        "value": "CALIBRATION_COMPARISON_COMPLETE",
+        "matched_terms": [
+          "calibration"
+        ]
+      }
+    ],
+    "T5_validation_metrics": [
+      {
+        "path": "metrics.average_precision",
+        "value": 0.16393359116287273,
+        "matched_terms": [
+          "precision",
+          "average_precision"
+        ]
+      },
+      {
+        "path": "metrics.roc_auc",
+        "value": 0.8982772615505836,
+        "matched_terms": [
+          "roc_auc"
+        ]
+      },
+      {
+        "path": "metrics.log_loss",
+        "value": 0.12063087777467868,
+        "matched_terms": [
+          "log_loss"
+        ]
+      },
+      {
+        "path": "metrics.brier_score_loss",
+        "value": 0.0314241207869983,
+        "matched_terms": [
+          "brier"
+        ]
+      },
+      {
+        "path": "metrics.precision_at_0_5",
+        "value": 0.09474768280123584,
+        "matched_terms": [
+          "precision"
+        ]
+      },
+      {
+        "path": "metrics.recall_at_0_5",
+        "value": 0.575,
+        "matched_terms": [
+          "recall"
+        ]
+      },
+      {
+        "path": "metrics.f1_at_0_5",
+        "value": 0.16268788682581786,
+        "matched_terms": [
+          "f1"
+        ]
+      },
+      {
+        "path": "probability_output.column",
+        "value": "p_duplicate",
+        "matched_terms": [
+          "probability"
+        ]
+      },
+      {
+        "path": "probability_output.minimum",
+        "value": 1.804229767896597e-05,
+        "matched_terms": [
+          "probability"
+        ]
+      },
+      {
+        "path": "probability_output.maximum",
+        "value": 0.9993552073275289,
+        "matched_terms": [
+          "probability"
+        ]
+      },
+      {
+        "path": "probability_output.mean",
+        "value": 0.08249473009725622,
+        "matched_terms": [
+          "probability"
+        ]
+      },
+      {
+        "path": "threshold_optimization",
+        "value": false,
+        "matched_terms": [
+          "threshold",
+          "threshold_optimization"
+        ]
+      }
+    ],
+    "T5_closure": [
+      {
+        "path": "selected_pipeline.representation",
+        "value": "Word-level TF-IDF unigram/bigram",
+        "matched_terms": [
+          "selected"
+        ]
+      },
+      {
+        "path": "selected_pipeline.vectorizer.ngram_range[0]",
+        "value": 1,
+        "matched_terms": [
+          "selected"
+        ]
+      },
+      {
+        "path": "selected_pipeline.vectorizer.ngram_range[1]",
+        "value": 2,
+        "matched_terms": [
+          "selected"
+        ]
+      },
+      {
+        "path": "selected_pipeline.vectorizer.min_df",
+        "value": 2,
+        "matched_terms": [
+          "selected"
+        ]
+      },
+      {
+        "path": "selected_pipeline.vectorizer.max_features",
+        "value": 100000,
+        "matched_terms": [
+          "selected"
+        ]
+      },
+      {
+        "path": "selected_pipeline.vectorizer.sublinear_tf",
+        "value": true,
+        "matched_terms": [
+          "selected"
+        ]
+      },
+      {
+        "path": "selected_pipeline.vectorizer.lowercase",
+        "value": true,
+        "matched_terms": [
+          "selected"
+        ]
+      },
+      {
+        "path": "selected_pipeline.classifier.type",
+        "value": "LogisticRegression",
+        "matched_terms": [
+          "selected"
+        ]
+      },
+      {
+        "path": "selected_pipeline.classifier.class_weight",
+        "value": "balanced",
+        "matched_terms": [
+          "selected"
+        ]
+      },
+      {
+        "path": "selected_pipeline.classifier.solver",
+        "value": "liblinear",
+        "matched_terms": [
+          "selected"
+        ]
+      },
+      {
+        "path": "selected_pipeline.classifier.max_iter",
+        "value": 1000,
+        "matched_terms": [
+          "selected"
+        ]
+      },
+      {
+        "path": "selected_pipeline.classifier.random_state",
+        "value": 42,
+        "matched_terms": [
+          "selected"
+        ]
+      },
+      {
+        "path": "selected_pipeline.calibration",
+        "value": "Sigmoid",
+        "matched_terms": [
+          "calibration",
+          "selected"
+        ]
+      },
+      {
+        "path": "selected_pipeline.probability_output",
+        "value": "p_duplicate",
+        "matched_terms": [
+          "probability",
+          "selected"
+        ]
+      },
+      {
+        "path": "selected_pipeline.threshold.value",
+        "value": 0.5,
+        "matched_terms": [
+          "threshold",
+          "selected"
+        ]
+      },
+      {
+        "path": "selected_pipeline.threshold.status",
+        "value": "descriptive_only",
+        "matched_terms": [
+          "threshold",
+          "selected"
+        ]
+      },
+      {
+        "path": "selected_pipeline.threshold.optimized",
+        "value": false,
+        "matched_terms": [
+          "threshold",
+          "selected",
+          "optimized"
+        ]
+      },
+      {
+        "path": "validation_evidence.average_precision",
+        "value": 0.16377630768463408,
+        "matched_terms": [
+          "precision",
+          "average_precision"
+        ]
+      },
+      {
+        "path": "validation_evidence.roc_auc",
+        "value": 0.8969287312131792,
+        "matched_terms": [
+          "roc_auc"
+        ]
+      },
+      {
+        "path": "validation_evidence.log_loss",
+        "value": 0.028358865729015772,
+        "matched_terms": [
+          "log_loss"
+        ]
+      },
+      {
+        "path": "validation_evidence.brier_score",
+        "value": 0.005860260617751882,
+        "matched_terms": [
+          "brier"
+        ]
+      },
+      {
+        "path": "locked_evaluation_evidence.average_precision",
+        "value": 0.12583280543036882,
+        "matched_terms": [
+          "precision",
+          "average_precision"
+        ]
+      },
+      {
+        "path": "locked_evaluation_evidence.roc_auc",
+        "value": 0.6781415853279965,
+        "matched_terms": [
+          "roc_auc"
+        ]
+      },
+      {
+        "path": "locked_evaluation_evidence.log_loss",
+        "value": 0.27250018754800265,
+        "matched_terms": [
+          "log_loss"
+        ]
+      },
+      {
+        "path": "locked_evaluation_evidence.brier_score",
+        "value": 0.059906950851585296,
+        "matched_terms": [
+          "brier"
+        ]
+      },
+      {
+        "path": "locked_evaluation_evidence.threshold_0_5.precision",
+        "value": 0.4782608695652174,
+        "matched_terms": [
+          "threshold",
+          "precision"
+        ]
+      },
+      {
+        "path": "locked_evaluation_evidence.threshold_0_5.recall",
+        "value": 0.00834597875569044,
+        "matched_terms": [
+          "threshold",
+          "recall"
+        ]
+      },
+      {
+        "path": "locked_evaluation_evidence.threshold_0_5.f1",
+        "value": 0.01640566741237882,
+        "matched_terms": [
+          "threshold",
+          "f1"
+        ]
+      },
+      {
+        "path": "locked_evaluation_evidence.threshold_0_5.positive_predictions",
+        "value": 23,
+        "matched_terms": [
+          "threshold"
+        ]
+      },
+      {
+        "path": "generalization_evidence.average_precision.validation",
+        "value": 0.16377630768463408,
+        "matched_terms": [
+          "precision",
+          "average_precision"
+        ]
+      },
+      {
+        "path": "generalization_evidence.average_precision.locked_evaluation",
+        "value": 0.12583280543036882,
+        "matched_terms": [
+          "precision",
+          "average_precision"
+        ]
+      },
+      {
+        "path": "generalization_evidence.average_precision.absolute_change",
+        "value": -0.037943502254265266,
+        "matched_terms": [
+          "precision",
+          "average_precision"
+        ]
+      },
+      {
+        "path": "generalization_evidence.average_precision.relative_change_percent",
+        "value": -23.167882333340224,
+        "matched_terms": [
+          "precision",
+          "average_precision"
+        ]
+      },
+      {
+        "path": "generalization_evidence.roc_auc.validation",
+        "value": 0.8969287312131792,
+        "matched_terms": [
+          "roc_auc"
+        ]
+      },
+      {
+        "path": "generalization_evidence.roc_auc.locked_evaluation",
+        "value": 0.6781415853279965,
+        "matched_terms": [
+          "roc_auc"
+        ]
+      },
+      {
+        "path": "generalization_evidence.roc_auc.absolute_change",
+        "value": -0.21878714588518267,
+        "matched_terms": [
+          "roc_auc"
+        ]
+      },
+      {
+        "path": "generalization_evidence.roc_auc.relative_change_percent",
+        "value": -24.392924239281843,
+        "matched_terms": [
+          "roc_auc"
+        ]
+      },
+      {
+        "path": "generalization_evidence.log_loss.validation",
+        "value": 0.028358865729015772,
+        "matched_terms": [
+          "log_loss"
+        ]
+      },
+      {
+        "path": "generalization_evidence.log_loss.locked_evaluation",
+        "value": 0.27250018754800265,
+        "matched_terms": [
+          "log_loss"
+        ]
+      },
+      {
+        "path": "generalization_evidence.log_loss.absolute_change",
+        "value": 0.24414132181898687,
+        "matched_terms": [
+          "log_loss"
+        ]
+      },
+      {
+        "path": "generalization_evidence.log_loss.relative_change_percent",
+        "value": 860.899459632443,
+        "matched_terms": [
+          "log_loss"
+        ]
+      },
+      {
+        "path": "generalization_evidence.brier_score.validation",
+        "value": 0.005860260617751882,
+        "matched_terms": [
+          "brier"
+        ]
+      },
+      {
+        "path": "generalization_evidence.brier_score.locked_evaluation",
+        "value": 0.059906950851585296,
+        "matched_terms": [
+          "brier"
+        ]
+      },
+      {
+        "path": "generalization_evidence.brier_score.absolute_change",
+        "value": 0.05404669023383341,
+        "matched_terms": [
+          "brier"
+        ]
+      },
+      {
+        "path": "generalization_evidence.brier_score.relative_change_percent",
+        "value": 922.2574516586405,
+        "matched_terms": [
+          "brier"
+        ]
+      },
+      {
+        "path": "limitations[2]",
+        "value": "The descriptive 0.5 threshold produced 23 positive predictions with 0.008346 recall.",
+        "matched_terms": [
+          "threshold",
+          "recall"
+        ]
+      },
+      {
+        "path": "limitations[3]",
+        "value": "No operational threshold was established.",
+        "matched_terms": [
+          "threshold",
+          "operational"
+        ]
+      },
+      {
+        "path": "controls.threshold_optimization",
+        "value": false,
+        "matched_terms": [
+          "threshold",
+          "threshold_optimization"
+        ]
+      },
+      {
+        "path": "controls.evaluation_used_for_calibration",
+        "value": false,
+        "matched_terms": [
+          "calibration"
+        ]
+      },
+      {
+        "path": "closure_statement",
+        "value": "T5 Binary Duplicate Detection is closed for the current controlled modeling cycle. The frozen pipeline is retained as a secondary decision-support signal with limitations. The official evaluation was used only for locked final assessment and not for model selection, calibration, threshold optimization, or refitting.",
+        "matched_terms": [
+          "threshold",
+          "calibration"
+        ]
+      }
+    ]
+  },
+  "native_semantics": {
+    "T2": "classification / task-specific priority evidence",
+    "T3": "classification / task-specific severity evidence",
+    "T5": "task-specific duplicate probability with existing calibration evidence"
+  },
+  "controls": {
+    "new_threshold_selected": false,
+    "threshold_reoptimized": false,
+    "model_loaded": false,
+    "predictions_generated": false,
+    "new_calibration_fitted": false,
+    "policy_modified": false,
+    "universal_confidence_created": false,
+    "universal_risk_created": false
+  },
+  "read_only_safeguards": {
+    "models_loaded": false,
+    "predictions_generated": false,
+    "retraining_performed": false,
+    "calibration_fitted": false,
+    "threshold_selected": false,
+    "threshold_optimized": false,
+    "policy_modified": false,
+    "artifacts_modified": false,
+    "universal_confidence_created": false,
+    "universal_risk_created": false
+  }
+}

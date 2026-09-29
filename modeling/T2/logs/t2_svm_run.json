@@ -1,0 +1,14 @@
+{
+  "operation": "T2-MOD-008",
+  "status": "COMPLETE",
+  "train_rows": 20648,
+  "validation_rows": 4425,
+  "test_loaded": false,
+  "train_validation_overlap": 0,
+  "comparison_reference": "T2-MOD-006",
+  "model": "LinearSVC",
+  "class_weight": null,
+  "model_file": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/models/t2_tfidf_linear_svm.joblib",
+  "metrics_file": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/metrics/t2_svm_metrics.json",
+  "confusion_matrix_file": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/metrics/t2_svm_confusion_matrix.csv"
+}

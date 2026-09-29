@@ -1,0 +1,1833 @@
+{
+  "operation": "F-OP-005",
+  "title": "OP-026 Producer/Output Trace",
+  "read_only": true,
+  "models_executed": false,
+  "model_modified": false,
+  "retraining_performed": false,
+  "threshold_selection_performed": false,
+  "locked_test_reused_for_policy_selection": false,
+  "expected_population": {
+    "rows": 119895,
+    "columns": 19
+  },
+  "validation_json": {
+    "exists": true,
+    "readable": true,
+    "matches": [
+      {
+        "path": "root.validated_operations",
+        "key": "validated_operations",
+        "value": [
+          "MOD-036 OP-019",
+          "MOD-036 OP-020",
+          "MOD-036 OP-021",
+          "MOD-036 OP-023",
+          "MOD-036 OP-024",
+          "MOD-036 OP-025"
+        ],
+        "matched_terms": [
+          "19"
+        ]
+      },
+      {
+        "path": "root.validated_operations[0]",
+        "key": "0",
+        "value": "MOD-036 OP-019",
+        "matched_terms": [
+          "19"
+        ]
+      },
+      {
+        "path": "root.population",
+        "key": "population",
+        "value": {
+          "decision_engine_union": 119895,
+          "all_four_intersection": 0,
+          "prediction_rows": 119895,
+          "unique_prediction_ids": 119895
+        },
+        "matched_terms": [
+          "119895",
+          "19",
+          "prediction"
+        ]
+      },
+      {
+        "path": "root.population.decision_engine_union",
+        "key": "decision_engine_union",
+        "value": 119895,
+        "matched_terms": [
+          "119895",
+          "19"
+        ]
+      },
+      {
+        "path": "root.population.prediction_rows",
+        "key": "prediction_rows",
+        "value": 119895,
+        "matched_terms": [
+          "119895",
+          "19",
+          "prediction"
+        ]
+      },
+      {
+        "path": "root.population.unique_prediction_ids",
+        "key": "unique_prediction_ids",
+        "value": 119895,
+        "matched_terms": [
+          "119895",
+          "19",
+          "prediction"
+        ]
+      },
+      {
+        "path": "root.evidence_count_distribution",
+        "key": "evidence_count_distribution",
+        "value": {
+          "2": 9727,
+          "1": 109649,
+          "3": 519
+        },
+        "matched_terms": [
+          "19"
+        ]
+      },
+      {
+        "path": "root.evidence_count_distribution.3",
+        "key": "3",
+        "value": 519,
+        "matched_terms": [
+          "19"
+        ]
+      },
+      {
+        "path": "root.closure_criteria",
+        "key": "closure_criteria",
+        "value": {
+          "component_baselines_established": true,
+          "input_population_resolved": true,
+          "decision_population_composed": true,
+          "prediction_artifact_valid": true,
+          "state_semantics_valid": true,
+          "native_task_semantics_preserved": true,
+          "arbitrary_probability_fusion_avoided": true,
+          "synthetic_universal_target_avoided": true,
+          "locked_test_not_used_for_selection": true
+        },
+        "matched_terms": [
+          "prediction",
+          "artifact"
+        ]
+      },
+      {
+        "path": "root.closure_criteria.prediction_artifact_valid",
+        "key": "prediction_artifact_valid",
+        "value": true,
+        "matched_terms": [
+          "prediction",
+          "artifact"
+        ]
+      },
+      {
+        "path": "root.artifacts",
+        "key": "artifacts",
+        "value": {
+          "decision_predictions": "modeling/T8/mod036/op025/t8_mod036_op025_decision_engine_predictions.csv",
+          "closure_report": "modeling/T8/mod036/op026/t8_mod036_op026_decision_engine_validation.json"
+        },
+        "matched_terms": [
+          "prediction",
+          "predictions",
+          "artifact",
+          "json"
+        ]
+      },
+      {
+        "path": "root.artifacts.decision_predictions",
+        "key": "decision_predictions",
+        "value": "modeling/T8/mod036/op025/t8_mod036_op025_decision_engine_predictions.csv",
+        "matched_terms": [
+          "prediction",
+          "predictions",
+          "artifact"
+        ]
+      },
+      {
+        "path": "root.artifacts.closure_report",
+        "key": "closure_report",
+        "value": "modeling/T8/mod036/op026/t8_mod036_op026_decision_engine_validation.json",
+        "matched_terms": [
+          "artifact",
+          "json"
+        ]
+      }
+    ],
+    "top_level_keys": [
+      "operation",
+      "operation_name",
+      "status",
+      "closure_status",
+      "validated_operations",
+      "population",
+      "observed_overall_states",
+      "observed_consistency_states",
+      "evidence_count_distribution",
+      "closure_criteria",
+      "architecture",
+      "limitations",
+      "next_phase",
+      "artifacts"
+    ]
+  },
+  "candidate_source_files": [
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/f_op003_op026_row_population_locator.py",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/f_op004_op026_row_artifact_reconciliation.py",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/f_op005_op026_producer_output_trace.py",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod036_op026_decision_engine_validation.py"
+  ],
+  "source_traces": [
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/f_op003_op026_row_population_locator.py",
+      "readable": true,
+      "matching_lines": [
+        {
+          "line": 3,
+          "text": "import json",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 20,
+          "text": "OUTPUT_PATH = (",
+          "matched_terms": [
+            "output",
+            "output_path"
+          ]
+        },
+        {
+          "line": 22,
+          "text": "/ \"f_op003_op026_row_population_locator.json\"",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 25,
+          "text": "EXPECTED_ROWS = 119_895",
+          "matched_terms": [
+            "19"
+          ]
+        },
+        {
+          "line": 28,
+          "text": "def load_json(path: Path) -> Any:",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 30,
+          "text": "return json.load(f)",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 56,
+          "text": "def inspect_json(path: Path) -> dict[str, Any]:",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 65,
+          "text": "data = load_json(path)",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 75,
+          "text": "record[\"row_count\"] = len(data)",
+          "matched_terms": [
+            "row_count"
+          ]
+        },
+        {
+          "line": 88,
+          "text": "\"predictions\",",
+          "matched_terms": [
+            "prediction",
+            "predictions"
+          ]
+        },
+        {
+          "line": 89,
+          "text": "\"prediction_rows\",",
+          "matched_terms": [
+            "prediction"
+          ]
+        },
+        {
+          "line": 116,
+          "text": "nested_record[\"row_count\"] = len(value)",
+          "matched_terms": [
+            "row_count"
+          ]
+        },
+        {
+          "line": 141,
+          "text": "json_files = sorted(",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 142,
+          "text": "OP026_DIR.glob(\"*.json\")",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 146,
+          "text": "inspect_json(path)",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 147,
+          "text": "for path in json_files",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 158,
+          "text": "and record.get(\"row_count\") is not None",
+          "matched_terms": [
+            "row_count"
+          ]
+        },
+        {
+          "line": 163,
+          "text": "\"row_count\": record[\"row_count\"],",
+          "matched_terms": [
+            "row_count"
+          ]
+        },
+        {
+          "line": 166,
+          "text": "record[\"row_count\"]",
+          "matched_terms": [
+            "row_count"
+          ]
+        },
+        {
+          "line": 176,
+          "text": "if candidate.get(\"row_count\") is None:",
+          "matched_terms": [
+            "row_count"
+          ]
+        },
+        {
+          "line": 183,
+          "text": "\"row_count\": candidate[\"row_count\"],",
+          "matched_terms": [
+            "row_count"
+          ]
+        },
+        {
+          "line": 189,
+          "text": "candidate[\"row_count\"]",
+          "matched_terms": [
+            "row_count"
+          ]
+        },
+        {
+          "line": 220,
+          "text": "\"json_files_discovered\": len(json_files),",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 221,
+          "text": "\"json_files_readable\": sum(",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 226,
+          "text": "\"expected_row_count\": EXPECTED_ROWS,",
+          "matched_terms": [
+            "row_count"
+          ]
+        },
+        {
+          "line": 231,
+          "text": "\"UNIQUE_119895_ROW_ARTIFACT_IDENTIFIED\"",
+          "matched_terms": [
+            "119895",
+            "19",
+            "artifact"
+          ]
+        },
+        {
+          "line": 236,
+          "text": "\"Use the uniquely identified row-level artifact \"",
+          "matched_terms": [
+            "artifact"
+          ]
+        },
+        {
+          "line": 239,
+          "text": "else \"Resolve population artifact before evaluation.\"",
+          "matched_terms": [
+            "artifact"
+          ]
+        },
+        {
+          "line": 243,
+          "text": "with OUTPUT_PATH.open(",
+          "matched_terms": [
+            "output",
+            "output_path"
+          ]
+        },
+        {
+          "line": 247,
+          "text": "json.dump(",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 263,
+          "text": "f\"JSON files discovered  : {len(json_files)}\"",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 274,
+          "text": "\"Exact 119895 matches   : \"",
+          "matched_terms": [
+            "119895",
+            "19"
+          ]
+        },
+        {
+          "line": 297,
+          "text": "f\"{match['row_count']}\"",
+          "matched_terms": [
+            "row_count"
+          ]
+        },
+        {
+          "line": 309,
+          "text": "\"UNIQUE_119895_ROW_ARTIFACT_IDENTIFIED\"",
+          "matched_terms": [
+            "119895",
+            "19",
+            "artifact"
+          ]
+        },
+        {
+          "line": 316,
+          "text": "f\"Output                 : {OUTPUT_PATH}\"",
+          "matched_terms": [
+            "output",
+            "output_path"
+          ]
+        }
+      ],
+      "bytes": 7803
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/f_op004_op026_row_artifact_reconciliation.py",
+      "readable": true,
+      "matching_lines": [
+        {
+          "line": 4,
+          "text": "import json",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 22,
+          "text": "OUTPUT_PATH = (",
+          "matched_terms": [
+            "output",
+            "output_path"
+          ]
+        },
+        {
+          "line": 24,
+          "text": "/ \"f_op004_op026_row_artifact_reconciliation.json\"",
+          "matched_terms": [
+            "artifact",
+            "json"
+          ]
+        },
+        {
+          "line": 27,
+          "text": "EXPECTED_ROWS = 119_895",
+          "matched_terms": [
+            "19"
+          ]
+        },
+        {
+          "line": 28,
+          "text": "EXPECTED_COLUMNS = 19",
+          "matched_terms": [
+            "19"
+          ]
+        },
+        {
+          "line": 41,
+          "text": "\"ticket_id\",",
+          "matched_terms": [
+            "ticket_id"
+          ]
+        },
+        {
+          "line": 103,
+          "text": "row_count = 0",
+          "matched_terms": [
+            "row_count"
+          ]
+        },
+        {
+          "line": 106,
+          "text": "row_count += 1",
+          "matched_terms": [
+            "row_count"
+          ]
+        },
+        {
+          "line": 109,
+          "text": "result[\"row_count\"] = row_count",
+          "matched_terms": [
+            "row_count"
+          ]
+        },
+        {
+          "line": 112,
+          "text": "result[\"ticket_id_column\"] = (",
+          "matched_terms": [
+            "ticket_id"
+          ]
+        },
+        {
+          "line": 124,
+          "text": "def inspect_json(",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 130,
+          "text": "\"format\": \"json\",",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 140,
+          "text": "data = json.load(f)",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 147,
+          "text": "result[\"row_count\"] = len(data)",
+          "matched_terms": [
+            "row_count"
+          ]
+        },
+        {
+          "line": 164,
+          "text": "result[\"ticket_id_column\"] = (",
+          "matched_terms": [
+            "ticket_id"
+          ]
+        },
+        {
+          "line": 176,
+          "text": "\"predictions\",",
+          "matched_terms": [
+            "prediction",
+            "predictions"
+          ]
+        },
+        {
+          "line": 177,
+          "text": "\"prediction_rows\",",
+          "matched_terms": [
+            "prediction"
+          ]
+        },
+        {
+          "line": 212,
+          "text": "result[\"row_count\"] = len(",
+          "matched_terms": [
+            "row_count"
+          ]
+        },
+        {
+          "line": 223,
+          "text": "\"ticket_id_column\"",
+          "matched_terms": [
+            "ticket_id"
+          ]
+        },
+        {
+          "line": 238,
+          "text": "def inspect_jsonl(",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 244,
+          "text": "\"format\": \"jsonl\",",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 250,
+          "text": "row_count = 0",
+          "matched_terms": [
+            "row_count"
+          ]
+        },
+        {
+          "line": 266,
+          "text": "value = json.loads(line)",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 271,
+          "text": "row_count += 1",
+          "matched_terms": [
+            "row_count"
+          ]
+        },
+        {
+          "line": 274,
+          "text": "result[\"row_count\"] = row_count",
+          "matched_terms": [
+            "row_count"
+          ]
+        },
+        {
+          "line": 291,
+          "text": "result[\"ticket_id_column\"] = (",
+          "matched_terms": [
+            "ticket_id"
+          ]
+        },
+        {
+          "line": 343,
+          "text": "result[\"row_count\"] = int(",
+          "matched_terms": [
+            "row_count"
+          ]
+        },
+        {
+          "line": 347,
+          "text": "result[\"ticket_id_column\"] = (",
+          "matched_terms": [
+            "ticket_id"
+          ]
+        },
+        {
+          "line": 355,
+          "text": "result[\"row_count\"] = len(data)",
+          "matched_terms": [
+            "row_count"
+          ]
+        },
+        {
+          "line": 373,
+          "text": "result[\"ticket_id_column\"] = (",
+          "matched_terms": [
+            "ticket_id"
+          ]
+        },
+        {
+          "line": 413,
+          "text": "result[\"row_count\"] = int(",
+          "matched_terms": [
+            "row_count"
+          ]
+        },
+        {
+          "line": 420,
+          "text": "result[\"ticket_id_column\"] = (",
+          "matched_terms": [
+            "ticket_id"
+          ]
+        },
+        {
+          "line": 449,
+          "text": "if suffix == \".json\":",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 450,
+          "text": "return inspect_json(path)",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 453,
+          "text": "\".jsonl\",",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 454,
+          "text": "\".ndjson\",",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 456,
+          "text": "return inspect_jsonl(path)",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 487,
+          "text": "\"F-OP-004 — OP-026 ROW ARTIFACT \"",
+          "matched_terms": [
+            "artifact"
+          ]
+        },
+        {
+          "line": 510,
+          "text": "row_artifacts = []",
+          "matched_terms": [
+            "artifact"
+          ]
+        },
+        {
+          "line": 514,
+          "text": "row_count = record.get(",
+          "matched_terms": [
+            "row_count"
+          ]
+        },
+        {
+          "line": 515,
+          "text": "\"row_count\"",
+          "matched_terms": [
+            "row_count"
+          ]
+        },
+        {
+          "line": 522,
+          "text": "if row_count is None:",
+          "matched_terms": [
+            "row_count"
+          ]
+        },
+        {
+          "line": 525,
+          "text": "row_artifacts.append(",
+          "matched_terms": [
+            "artifact"
+          ]
+        },
+        {
+          "line": 531,
+          "text": "\"row_count\": row_count,",
+          "matched_terms": [
+            "row_count"
+          ]
+        },
+        {
+          "line": 533,
+          "text": "\"ticket_id_column\": record.get(",
+          "matched_terms": [
+            "ticket_id"
+          ]
+        },
+        {
+          "line": 534,
+          "text": "\"ticket_id_column\"",
+          "matched_terms": [
+            "ticket_id"
+          ]
+        },
+        {
+          "line": 541,
+          "text": "row_count",
+          "matched_terms": [
+            "row_count"
+          ]
+        },
+        {
+          "line": 545,
+          "text": "row_count",
+          "matched_terms": [
+            "row_count"
+          ]
+        },
+        {
+          "line": 555,
+          "text": "for record in row_artifacts",
+          "matched_terms": [
+            "artifact"
+          ]
+        },
+        {
+          "line": 563,
+          "text": "for record in row_artifacts",
+          "matched_terms": [
+            "artifact"
+          ]
+        },
+        {
+          "line": 578,
+          "text": "\"OP-026 Row-Level Artifact \"",
+          "matched_terms": [
+            "artifact"
+          ]
+        },
+        {
+          "line": 597,
+          "text": "\"row_artifacts\": row_artifacts,",
+          "matched_terms": [
+            "artifact"
+          ]
+        },
+        {
+          "line": 601,
+          "text": "\"UNIQUE_119895x19_ARTIFACT_IDENTIFIED\"",
+          "matched_terms": [
+            "119895",
+            "19",
+            "artifact"
+          ]
+        },
+        {
+          "line": 608,
+          "text": "with OUTPUT_PATH.open(",
+          "matched_terms": [
+            "output",
+            "output_path"
+          ]
+        },
+        {
+          "line": 613,
+          "text": "json.dump(",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 622,
+          "text": "\"F-OP-004 — OP-026 ROW ARTIFACT \"",
+          "matched_terms": [
+            "artifact"
+          ]
+        },
+        {
+          "line": 642,
+          "text": "f\"Row-bearing artifacts   : \"",
+          "matched_terms": [
+            "artifact"
+          ]
+        },
+        {
+          "line": 643,
+          "text": "f\"{len(row_artifacts)}\"",
+          "matched_terms": [
+            "artifact"
+          ]
+        },
+        {
+          "line": 647,
+          "text": "f\"119895-row matches      : \"",
+          "matched_terms": [
+            "119895",
+            "19"
+          ]
+        },
+        {
+          "line": 652,
+          "text": "f\"119895×19 matches       : \"",
+          "matched_terms": [
+            "119895",
+            "19"
+          ]
+        },
+        {
+          "line": 676,
+          "text": "f\"{record['row_count']}\"",
+          "matched_terms": [
+            "row_count"
+          ]
+        },
+        {
+          "line": 686,
+          "text": "f\"{record['ticket_id_column']}\"",
+          "matched_terms": [
+            "ticket_id"
+          ]
+        },
+        {
+          "line": 700,
+          "text": "elif row_artifacts:",
+          "matched_terms": [
+            "artifact"
+          ]
+        },
+        {
+          "line": 703,
+          "text": "print(\"ROW-BEARING ARTIFACTS\")",
+          "matched_terms": [
+            "artifact"
+          ]
+        },
+        {
+          "line": 706,
+          "text": "for record in row_artifacts:",
+          "matched_terms": [
+            "artifact"
+          ]
+        },
+        {
+          "line": 710,
+          "text": "f\"{record['row_count']} rows | \"",
+          "matched_terms": [
+            "row_count"
+          ]
+        },
+        {
+          "line": 712,
+          "text": "f\"ticket_id=\"",
+          "matched_terms": [
+            "ticket_id"
+          ]
+        },
+        {
+          "line": 713,
+          "text": "f\"{record['ticket_id_column']}\"",
+          "matched_terms": [
+            "ticket_id"
+          ]
+        },
+        {
+          "line": 720,
+          "text": "\"No row-bearing artifact identified.\"",
+          "matched_terms": [
+            "artifact"
+          ]
+        },
+        {
+          "line": 727,
+          "text": "\"UNIQUE_119895x19_ARTIFACT_IDENTIFIED\"",
+          "matched_terms": [
+            "119895",
+            "19",
+            "artifact"
+          ]
+        },
+        {
+          "line": 734,
+          "text": "f\"Output                  : \"",
+          "matched_terms": [
+            "output"
+          ]
+        },
+        {
+          "line": 735,
+          "text": "f\"{OUTPUT_PATH}\"",
+          "matched_terms": [
+            "output",
+            "output_path"
+          ]
+        }
+      ],
+      "bytes": 15620
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/f_op005_op026_producer_output_trace.py",
+      "readable": true,
+      "matching_lines": [
+        {
+          "line": 3,
+          "text": "import json",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 28,
+          "text": "VALIDATION_JSON = (",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 30,
+          "text": "/ \"t8_mod036_op026_decision_engine_validation.json\"",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 33,
+          "text": "OUTPUT_PATH = (",
+          "matched_terms": [
+            "output",
+            "output_path"
+          ]
+        },
+        {
+          "line": 35,
+          "text": "/ \"f_op005_op026_producer_output_trace.json\"",
+          "matched_terms": [
+            "output",
+            "json"
+          ]
+        },
+        {
+          "line": 39,
+          "text": "\"119895\",",
+          "matched_terms": [
+            "119895",
+            "19"
+          ]
+        },
+        {
+          "line": 40,
+          "text": "\"19\",",
+          "matched_terms": [
+            "19"
+          ]
+        },
+        {
+          "line": 41,
+          "text": "\"prediction\",",
+          "matched_terms": [
+            "prediction"
+          ]
+        },
+        {
+          "line": 42,
+          "text": "\"predictions\",",
+          "matched_terms": [
+            "prediction",
+            "predictions"
+          ]
+        },
+        {
+          "line": 43,
+          "text": "\"prediction_path\",",
+          "matched_terms": [
+            "prediction",
+            "prediction_path"
+          ]
+        },
+        {
+          "line": 44,
+          "text": "\"output\",",
+          "matched_terms": [
+            "output"
+          ]
+        },
+        {
+          "line": 45,
+          "text": "\"output_path\",",
+          "matched_terms": [
+            "output",
+            "output_path"
+          ]
+        },
+        {
+          "line": 46,
+          "text": "\"artifact\",",
+          "matched_terms": [
+            "artifact"
+          ]
+        },
+        {
+          "line": 47,
+          "text": "\"artifact_path\",",
+          "matched_terms": [
+            "artifact",
+            "artifact_path"
+          ]
+        },
+        {
+          "line": 48,
+          "text": "\"row_count\",",
+          "matched_terms": [
+            "row_count"
+          ]
+        },
+        {
+          "line": 49,
+          "text": "\"ticket_id\",",
+          "matched_terms": [
+            "ticket_id"
+          ]
+        },
+        {
+          "line": 50,
+          "text": "\"write_csv\",",
+          "matched_terms": [
+            "write_csv"
+          ]
+        },
+        {
+          "line": 51,
+          "text": "\"to_csv\",",
+          "matched_terms": [
+            "to_csv"
+          ]
+        },
+        {
+          "line": 52,
+          "text": "\"to_parquet\",",
+          "matched_terms": [
+            "to_parquet"
+          ]
+        },
+        {
+          "line": 53,
+          "text": "\"json\",",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 54,
+          "text": "\"save\",",
+          "matched_terms": [
+            "save"
+          ]
+        },
+        {
+          "line": 58,
+          "text": "def flatten_json(",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 81,
+          "text": "flatten_json(",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 106,
+          "text": "flatten_json(",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 115,
+          "text": "def trace_validation_json():",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 118,
+          "text": "\"exists\": VALIDATION_JSON.exists(),",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 124,
+          "text": "if not VALIDATION_JSON.exists():",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 129,
+          "text": "with VALIDATION_JSON.open(",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 134,
+          "text": "data = json.load(f)",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 144,
+          "text": "flattened = flatten_json(data)",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 311,
+          "text": "\".json\",",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 312,
+          "text": "\".jsonl\",",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 337,
+          "text": "trace_validation_json()",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 374,
+          "text": "output = {",
+          "matched_terms": [
+            "output"
+          ]
+        },
+        {
+          "line": 377,
+          "text": "\"OP-026 Producer/Output Trace\"",
+          "matched_terms": [
+            "output"
+          ]
+        },
+        {
+          "line": 388,
+          "text": "\"rows\": 119895,",
+          "matched_terms": [
+            "119895",
+            "19"
+          ]
+        },
+        {
+          "line": 389,
+          "text": "\"columns\": 19,",
+          "matched_terms": [
+            "19"
+          ]
+        },
+        {
+          "line": 391,
+          "text": "\"validation_json\": (",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 410,
+          "text": "# Determine whether the producer/output",
+          "matched_terms": [
+            "output"
+          ]
+        },
+        {
+          "line": 412,
+          "text": "strong_output_matches = []",
+          "matched_terms": [
+            "output"
+          ]
+        },
+        {
+          "line": 423,
+          "text": "output_signal = any(",
+          "matched_terms": [
+            "output"
+          ]
+        },
+        {
+          "line": 426,
+          "text": "\"to_csv\",",
+          "matched_terms": [
+            "to_csv"
+          ]
+        },
+        {
+          "line": 427,
+          "text": "\"to_parquet\",",
+          "matched_terms": [
+            "to_parquet"
+          ]
+        },
+        {
+          "line": 428,
+          "text": "\"json.dump\",",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 431,
+          "text": "\"save(\",",
+          "matched_terms": [
+            "save"
+          ]
+        },
+        {
+          "line": 436,
+          "text": "\"119895\" in line",
+          "matched_terms": [
+            "119895",
+            "19"
+          ]
+        },
+        {
+          "line": 437,
+          "text": "or \"prediction\" in line",
+          "matched_terms": [
+            "prediction"
+          ]
+        },
+        {
+          "line": 438,
+          "text": "or \"predictions\" in line",
+          "matched_terms": [
+            "prediction",
+            "predictions"
+          ]
+        },
+        {
+          "line": 439,
+          "text": "or \"output\" in line",
+          "matched_terms": [
+            "output"
+          ]
+        },
+        {
+          "line": 440,
+          "text": "or \"artifact\" in line",
+          "matched_terms": [
+            "artifact"
+          ]
+        },
+        {
+          "line": 444,
+          "text": "output_signal",
+          "matched_terms": [
+            "output"
+          ]
+        },
+        {
+          "line": 447,
+          "text": "strong_output_matches.append(",
+          "matched_terms": [
+            "output"
+          ]
+        },
+        {
+          "line": 461,
+          "text": "output[",
+          "matched_terms": [
+            "output"
+          ]
+        },
+        {
+          "line": 462,
+          "text": "\"strong_producer_output_matches\"",
+          "matched_terms": [
+            "output"
+          ]
+        },
+        {
+          "line": 463,
+          "text": "] = strong_output_matches",
+          "matched_terms": [
+            "output"
+          ]
+        },
+        {
+          "line": 474,
+          "text": "\"UNIQUE_OUTPUT_PATH_REFERENCED\"",
+          "matched_terms": [
+            "output",
+            "output_path"
+          ]
+        },
+        {
+          "line": 477,
+          "text": "elif len(strong_output_matches) == 1:",
+          "matched_terms": [
+            "output"
+          ]
+        },
+        {
+          "line": 482,
+          "text": "\"UNIQUE_PRODUCER_OUTPUT_BINDING\"",
+          "matched_terms": [
+            "output"
+          ]
+        },
+        {
+          "line": 490,
+          "text": "\"PRODUCER_OUTPUT_BINDING_NOT_UNIQUELY_RESOLVED\"",
+          "matched_terms": [
+            "output"
+          ]
+        },
+        {
+          "line": 493,
+          "text": "output[\"status\"] = status",
+          "matched_terms": [
+            "output"
+          ]
+        },
+        {
+          "line": 494,
+          "text": "output[\"population_resolution\"] = resolution",
+          "matched_terms": [
+            "output"
+          ]
+        },
+        {
+          "line": 496,
+          "text": "with OUTPUT_PATH.open(",
+          "matched_terms": [
+            "output",
+            "output_path"
+          ]
+        },
+        {
+          "line": 501,
+          "text": "json.dump(",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 502,
+          "text": "output,",
+          "matched_terms": [
+            "output"
+          ]
+        },
+        {
+          "line": 511,
+          "text": "\"PRODUCER/OUTPUT TRACE\"",
+          "matched_terms": [
+            "output"
+          ]
+        },
+        {
+          "line": 516,
+          "text": "\"Validation JSON readable : \"",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 541,
+          "text": "\"Producer/output matches : \"",
+          "matched_terms": [
+            "output"
+          ]
+        },
+        {
+          "line": 542,
+          "text": "f\"{len(strong_output_matches)}\"",
+          "matched_terms": [
+            "output"
+          ]
+        },
+        {
+          "line": 567,
+          "text": "if strong_output_matches:",
+          "matched_terms": [
+            "output"
+          ]
+        },
+        {
+          "line": 571,
+          "text": "\"PRODUCER OUTPUT MATCHES\"",
+          "matched_terms": [
+            "output"
+          ]
+        },
+        {
+          "line": 575,
+          "text": "for match in strong_output_matches:",
+          "matched_terms": [
+            "output"
+          ]
+        },
+        {
+          "line": 593,
+          "text": "f\"Output                 : \"",
+          "matched_terms": [
+            "output"
+          ]
+        },
+        {
+          "line": 594,
+          "text": "f\"{OUTPUT_PATH}\"",
+          "matched_terms": [
+            "output",
+            "output_path"
+          ]
+        }
+      ],
+      "bytes": 11930
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod036_op026_decision_engine_validation.py",
+      "readable": true,
+      "matching_lines": [
+        {
+          "line": 3,
+          "text": "import json",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 11,
+          "text": "\"t8_mod036_op024_decision_input_composition.json\"",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 17,
+          "text": "\"t8_mod036_op025_decision_engine_composition.json\"",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 20,
+          "text": "OP025_PREDICTIONS = (",
+          "matched_terms": [
+            "prediction",
+            "predictions"
+          ]
+        },
+        {
+          "line": 23,
+          "text": "\"t8_mod036_op025_decision_engine_predictions.csv\"",
+          "matched_terms": [
+            "prediction",
+            "predictions"
+          ]
+        },
+        {
+          "line": 26,
+          "text": "OP019_REPORT = (",
+          "matched_terms": [
+            "19"
+          ]
+        },
+        {
+          "line": 28,
+          "text": "/ \"modeling/T8/mod036/op019/\"",
+          "matched_terms": [
+            "19"
+          ]
+        },
+        {
+          "line": 29,
+          "text": "\"t8_mod036_op019_priority_component_baseline.json\"",
+          "matched_terms": [
+            "19",
+            "json"
+          ]
+        },
+        {
+          "line": 35,
+          "text": "\"t8_mod036_op020_assignment_component_baseline.json\"",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 41,
+          "text": "\"t8_mod036_op021_duplicate_component_baseline.json\"",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 47,
+          "text": "\"t8_mod036_op023_resolution_component_baseline.json\"",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 55,
+          "text": "/ \"t8_mod036_op026_decision_engine_validation.json\"",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 59,
+          "text": "def load_json(path):",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 67,
+          "text": "return json.load(f)",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 107,
+          "text": "\"OP-019\": load_json(OP019_REPORT),",
+          "matched_terms": [
+            "19",
+            "json"
+          ]
+        },
+        {
+          "line": 108,
+          "text": "\"OP-020\": load_json(OP020_REPORT),",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 109,
+          "text": "\"OP-021\": load_json(OP021_REPORT),",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 110,
+          "text": "\"OP-023\": load_json(OP023_REPORT),",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 111,
+          "text": "\"OP-024\": load_json(OP024_REPORT),",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 112,
+          "text": "\"OP-025\": load_json(OP025_REPORT),",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 197,
+          "text": "# 4. Validate decision-engine prediction artifact",
+          "matched_terms": [
+            "prediction",
+            "artifact"
+          ]
+        },
+        {
+          "line": 201,
+          "text": "OP025_PREDICTIONS",
+          "matched_terms": [
+            "prediction",
+            "predictions"
+          ]
+        },
+        {
+          "line": 204,
+          "text": "print(\"\\nDecision-engine prediction artifact\")",
+          "matched_terms": [
+            "prediction",
+            "artifact"
+          ]
+        },
+        {
+          "line": 215,
+          "text": "\"Decision-engine prediction row count \"",
+          "matched_terms": [
+            "prediction"
+          ]
+        },
+        {
+          "line": 234,
+          "text": "\"survival_probability_at_14608619_seconds\",",
+          "matched_terms": [
+            "19"
+          ]
+        },
+        {
+          "line": 246,
+          "text": "\"Decision-engine artifact is missing \"",
+          "matched_terms": [
+            "artifact"
+          ]
+        },
+        {
+          "line": 259,
+          "text": "\"Decision-engine prediction artifact contains \"",
+          "matched_terms": [
+            "prediction",
+            "artifact"
+          ]
+        },
+        {
+          "line": 441,
+          "text": "\"OP-019\": [",
+          "matched_terms": [
+            "19"
+          ]
+        },
+        {
+          "line": 459,
+          "text": "\"native_t7_output_preserved\",",
+          "matched_terms": [
+            "output"
+          ]
+        },
+        {
+          "line": 557,
+          "text": "\"prediction_artifact_valid\": True,",
+          "matched_terms": [
+            "prediction",
+            "artifact"
+          ]
+        },
+        {
+          "line": 578,
+          "text": "# 10. Save final closure artifact",
+          "matched_terms": [
+            "artifact",
+            "save"
+          ]
+        },
+        {
+          "line": 597,
+          "text": "\"MOD-036 OP-019\",",
+          "matched_terms": [
+            "19"
+          ]
+        },
+        {
+          "line": 608,
+          "text": "\"prediction_rows\": len(rows),",
+          "matched_terms": [
+            "prediction"
+          ]
+        },
+        {
+          "line": 609,
+          "text": "\"unique_prediction_ids\": len(unique_ids),",
+          "matched_terms": [
+            "prediction"
+          ]
+        },
+        {
+          "line": 667,
+          "text": "\"artifacts\": {",
+          "matched_terms": [
+            "artifact"
+          ]
+        },
+        {
+          "line": 668,
+          "text": "\"decision_predictions\": str(",
+          "matched_terms": [
+            "prediction",
+            "predictions"
+          ]
+        },
+        {
+          "line": 669,
+          "text": "OP025_PREDICTIONS.relative_to(ROOT)",
+          "matched_terms": [
+            "prediction",
+            "predictions"
+          ]
+        },
+        {
+          "line": 678,
+          "text": "json.dumps(",
+          "matched_terms": [
+            "json"
+          ]
+        },
+        {
+          "line": 687,
+          "text": "# 11. Final console output",
+          "matched_terms": [
+            "output"
+          ]
+        },
+        {
+          "line": 705,
+          "text": "print(\"\\nArtifact\")",
+          "matched_terms": [
+            "artifact"
+          ]
+        }
+      ],
+      "bytes": 17644
+    }
+  ],
+  "referenced_paths": [
+    "modeling/T8/mod036/op025/t8_mod036_op025_decision_engine_predictions.csv",
+    "modeling/T8/mod036/op026/t8_mod036_op026_decision_engine_validation.json"
+  ],
+  "existing_referenced_paths": [
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/mod036/op025/t8_mod036_op025_decision_engine_predictions.csv",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/mod036/op026/t8_mod036_op026_decision_engine_validation.json"
+  ],
+  "missing_referenced_paths": [],
+  "strong_producer_output_matches": [
+    {
+      "source": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/f_op003_op026_row_population_locator.py",
+      "line": 243,
+      "text": "with OUTPUT_PATH.open("
+    },
+    {
+      "source": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/f_op004_op026_row_artifact_reconciliation.py",
+      "line": 608,
+      "text": "with OUTPUT_PATH.open("
+    },
+    {
+      "source": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/scripts/f_op005_op026_producer_output_trace.py",
+      "line": 496,
+      "text": "with OUTPUT_PATH.open("
+    }
+  ],
+  "status": "REQUIRES_REVIEW",
+  "population_resolution": "PRODUCER_OUTPUT_BINDING_NOT_UNIQUELY_RESOLVED"
+}

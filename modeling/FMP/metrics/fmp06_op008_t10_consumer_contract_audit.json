@@ -1,0 +1,122 @@
+{
+  "operation": "FMP-06 OP-008",
+  "target": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/project_consolidation.py",
+  "source_structure": {
+    "syntax_valid": true,
+    "function_names": [
+      "load_json",
+      "main"
+    ],
+    "imports": [
+      "json",
+      "pathlib"
+    ],
+    "string_constant_count": 150
+  },
+  "consumer_evidence": {
+    "path_like_strings": [
+      "Baseline/model comparison was completed, but the comparison artifact explicitly records MODEL_NOT_FROZEN. The evaluation partition contains zero Usability examples.",
+      "IT Ticket Intelligence / IT Ticket Triage System",
+      "Routing / Assignment / Specific Assignee Prediction",
+      "T1 IT Support : FINAL CANDIDATE ESTABLISHED / NOT FORMALLY FROZEN",
+      "T1 VS Code    : MODEL COMPARISON COMPLETE / MODEL NOT FROZEN",
+      "modeling/T1/baselines/t1_it_support_char_svm_report.json",
+      "modeling/T1/baselines/t1_vscode_model_compare_report.json",
+      "modeling/T2/analysis/t2_final_closure.json",
+      "modeling/T3/analysis/t3_final_closure.json",
+      "modeling/T4/results/t4_mod013_closure.json",
+      "modeling/T5/metrics/t5_mod011_final_closure.json",
+      "t1_it_support_char_svm_report.json",
+      "t1_t5_consolidated_evidence.json",
+      "t1_vscode_contract.json",
+      "t1_vscode_model_compare_report.json",
+      "t2_final_closure.json",
+      "t3_final_closure.json",
+      "t4_mod013_closure.json",
+      "t5_mod011_final_closure.json"
+    ],
+    "keyword_hits": {
+      "t8": 0,
+      "t9": 0,
+      "evidence": 6,
+      "prediction": 4,
+      "decision": 3,
+      "policy": 0,
+      "automation": 0,
+      "human_review": 1,
+      "defer": 0,
+      "threshold": 2,
+      "ticket": 5,
+      "input": 0,
+      "output": 8,
+      "operation": 2,
+      "action": 0,
+      "confidence": 1,
+      "risk": 0
+    }
+  },
+  "known_upstream_artifacts": {
+    "t8_closure": {
+      "exists": true,
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/mod036/op026/t8_mod036_op026_decision_engine_validation.json",
+      "top_level_type": "dict",
+      "top_level_keys": [
+        "architecture",
+        "artifacts",
+        "closure_criteria",
+        "closure_status",
+        "evidence_count_distribution",
+        "limitations",
+        "next_phase",
+        "observed_consistency_states",
+        "observed_overall_states",
+        "operation",
+        "operation_name",
+        "population",
+        "status",
+        "validated_operations"
+      ]
+    },
+    "t9_closure": {
+      "exists": true,
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op015_final_integrated_closure.json",
+      "top_level_type": "dict",
+      "top_level_keys": [
+        "OP014_boundary",
+        "closure",
+        "contract_validation",
+        "control_validation",
+        "controls",
+        "final_evidence_statement",
+        "methodological_restrictions",
+        "operation",
+        "prior_operations",
+        "purpose",
+        "semantic_lock_validation",
+        "status",
+        "task_evidence",
+        "title"
+      ]
+    }
+  },
+  "interpretation": {
+    "t8_consumer_reference_present": false,
+    "t9_consumer_reference_present": false,
+    "ticket_input_reference_present": true,
+    "decision_output_reference_present": true,
+    "operation_reference_present": true,
+    "automation_reference_present": false,
+    "human_review_reference_present": true,
+    "defer_reference_present": false
+  },
+  "safeguards": {
+    "execution": false,
+    "model_training": false,
+    "prediction_generation": false,
+    "calibration": false,
+    "threshold_selection": false,
+    "artifact_modification": false,
+    "policy_change": false
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,264 @@
+{
+  "operation": "MOD-034 / OP-002",
+  "status": "PASS",
+  "population": {
+    "rows": 4716,
+    "unique_ids": 4716
+  },
+  "t4_native_characterization": {
+    "top1_unique_assignees": 732,
+    "rank1_score": {
+      "min": 28.70796585083008,
+      "median": 1113.0545043945312,
+      "mean": 4174.993886893437,
+      "max": 264083.03125
+    },
+    "rank_score_spread": {
+      "1": {
+        "median": 1113.0545043945312,
+        "mean": 4174.993886893437
+      },
+      "3": {
+        "median": 1030.281005859375,
+        "mean": 3611.664314677697
+      },
+      "5": {
+        "median": 987.0438537597656,
+        "mean": 3348.116809796842
+      },
+      "10": {
+        "median": 896.2607421875,
+        "mean": 3049.5156531208545
+      },
+      "20": {
+        "median": 829.3804931640625,
+        "mean": 2769.906221900985
+      }
+    }
+  },
+  "t5_native_characterization": {
+    "p_duplicate": {
+      "min": 0.0001000386460031,
+      "q25": 0.00266101462017275,
+      "median": 0.0063785448611274,
+      "q75": 0.016607215086702827,
+      "mean": 0.02059328942634599,
+      "max": 0.7037217901144501
+    }
+  },
+  "t5_probability_bands": [
+    {
+      "t5_probability_band": "<=0.01",
+      "n": 2957,
+      "t4_rank1_score_median": 1050.185791015625,
+      "t4_rank1_score_mean": 3438.4076467790755
+    },
+    {
+      "t5_probability_band": "0.01-0.05",
+      "n": 1352,
+      "t4_rank1_score_median": 1240.2943115234375,
+      "t4_rank1_score_mean": 4711.769569526763
+    },
+    {
+      "t5_probability_band": "0.05-0.10",
+      "n": 212,
+      "t4_rank1_score_median": 1335.1575317382812,
+      "t4_rank1_score_mean": 6685.503135645165
+    },
+    {
+      "t5_probability_band": "0.10-0.25",
+      "n": 150,
+      "t4_rank1_score_median": 2049.959716796875,
+      "t4_rank1_score_mean": 8347.921338907878
+    },
+    {
+      "t5_probability_band": "0.25-0.50",
+      "n": 37,
+      "t4_rank1_score_median": 1288.8023681640625,
+      "t4_rank1_score_mean": 12674.256280435098
+    },
+    {
+      "t5_probability_band": "0.50-0.75",
+      "n": 8,
+      "t4_rank1_score_median": 855.8580932617188,
+      "t4_rank1_score_mean": 1640.6191368103027
+    },
+    {
+      "t5_probability_band": "0.75-1.00",
+      "n": 0,
+      "t4_rank1_score_median": NaN,
+      "t4_rank1_score_mean": NaN
+    }
+  ],
+  "t4_score_quartiles": [
+    {
+      "t4_rank1_score_band": "Q1",
+      "n": 1179,
+      "t5_p_duplicate_median": 0.0061725077495327,
+      "t5_p_duplicate_mean": 0.019626404798323577
+    },
+    {
+      "t4_rank1_score_band": "Q2",
+      "n": 1179,
+      "t5_p_duplicate_median": 0.0051737085093421,
+      "t5_p_duplicate_mean": 0.016968303543488675
+    },
+    {
+      "t4_rank1_score_band": "Q3",
+      "n": 1179,
+      "t5_p_duplicate_median": 0.0066730292381522,
+      "t5_p_duplicate_mean": 0.016721322543703263
+    },
+    {
+      "t4_rank1_score_band": "Q4",
+      "n": 1179,
+      "t5_p_duplicate_median": 0.0085790989266051,
+      "t5_p_duplicate_mean": 0.029057126819868433
+    }
+  ],
+  "rank_position_characterization": [
+    {
+      "rank": 1,
+      "unique_assignees": 732,
+      "non_null": 4716
+    },
+    {
+      "rank": 2,
+      "unique_assignees": 761,
+      "non_null": 4716
+    },
+    {
+      "rank": 3,
+      "unique_assignees": 758,
+      "non_null": 4716
+    },
+    {
+      "rank": 4,
+      "unique_assignees": 747,
+      "non_null": 4716
+    },
+    {
+      "rank": 5,
+      "unique_assignees": 770,
+      "non_null": 4716
+    },
+    {
+      "rank": 6,
+      "unique_assignees": 728,
+      "non_null": 4716
+    },
+    {
+      "rank": 7,
+      "unique_assignees": 765,
+      "non_null": 4716
+    },
+    {
+      "rank": 8,
+      "unique_assignees": 764,
+      "non_null": 4716
+    },
+    {
+      "rank": 9,
+      "unique_assignees": 766,
+      "non_null": 4716
+    },
+    {
+      "rank": 10,
+      "unique_assignees": 774,
+      "non_null": 4716
+    },
+    {
+      "rank": 11,
+      "unique_assignees": 763,
+      "non_null": 4716
+    },
+    {
+      "rank": 12,
+      "unique_assignees": 780,
+      "non_null": 4716
+    },
+    {
+      "rank": 13,
+      "unique_assignees": 763,
+      "non_null": 4716
+    },
+    {
+      "rank": 14,
+      "unique_assignees": 762,
+      "non_null": 4716
+    },
+    {
+      "rank": 15,
+      "unique_assignees": 793,
+      "non_null": 4716
+    },
+    {
+      "rank": 16,
+      "unique_assignees": 762,
+      "non_null": 4716
+    },
+    {
+      "rank": 17,
+      "unique_assignees": 774,
+      "non_null": 4716
+    },
+    {
+      "rank": 18,
+      "unique_assignees": 772,
+      "non_null": 4716
+    },
+    {
+      "rank": 19,
+      "unique_assignees": 799,
+      "non_null": 4716
+    },
+    {
+      "rank": 20,
+      "unique_assignees": 769,
+      "non_null": 4716
+    }
+  ],
+  "native_association": {
+    "spearman_t4_rank1_score_vs_t5_probability": 0.10394712424471936,
+    "pearson_t4_rank1_score_vs_t5_probability": 0.09091745873542706
+  },
+  "median_interaction_table": [
+    {
+      "t4_evidence_level": "higher_or_equal",
+      "t5_evidence_level": "higher_or_equal",
+      "n": 1277,
+      "mean_t4_score": 8563.577853520213,
+      "mean_t5_probability": 0.03977116910744653
+    },
+    {
+      "t4_evidence_level": "higher_or_equal",
+      "t5_evidence_level": "lower",
+      "n": 1081,
+      "mean_t4_score": 6503.580484988401,
+      "mean_t5_probability": 0.0029463541622958473
+    },
+    {
+      "t4_evidence_level": "lower",
+      "t5_evidence_level": "higher_or_equal",
+      "n": 1081,
+      "mean_t4_score": 719.3677911467292,
+      "mean_t5_probability": 0.036576339755047184
+    },
+    {
+      "t4_evidence_level": "lower",
+      "t5_evidence_level": "lower",
+      "n": 1277,
+      "mean_t4_score": 740.4660651073292,
+      "mean_t5_probability": 0.0028239137508149132
+    }
+  ],
+  "interpretation_constraints": {
+    "causal_claim": false,
+    "fusion_performance_claim": false,
+    "synthetic_triage_target": false,
+    "t4_ranking_to_probability": false,
+    "t5_probability_to_assignment": false,
+    "arbitrary_weighting": false
+  },
+  "decision": "NATIVE_EVIDENCE_INTERACTION_CHARACTERIZED; NO_FUSION_PERFORMANCE_CLAIM"
+}

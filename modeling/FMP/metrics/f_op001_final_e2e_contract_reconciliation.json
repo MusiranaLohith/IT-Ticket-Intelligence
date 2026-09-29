@@ -1,0 +1,229 @@
+{
+  "operation": "F-OP-001",
+  "title": "Final E2E Evaluation Contract Reconciliation",
+  "status": "PASS",
+  "read_only": true,
+  "models_executed": false,
+  "model_modified": false,
+  "retraining_performed": false,
+  "threshold_selection_performed": false,
+  "locked_test_reused_for_policy_selection": false,
+  "sources": [
+    {
+      "name": "T8_OP025",
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/mod036/op025",
+      "exists": true,
+      "json_files": 1,
+      "readable": 1,
+      "files": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/mod036/op025/t8_mod036_op025_decision_engine_composition.json",
+          "readable": true,
+          "bytes": 1907,
+          "e2e_signals": {
+            "ticket": false,
+            "ticket_id": false,
+            "evidence": true,
+            "provenance": false,
+            "decision": true,
+            "state": true,
+            "missing": true,
+            "conflict": true,
+            "supported": true,
+            "insufficient": true,
+            "unavailable": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "T8_OP026",
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/mod036/op026",
+      "exists": true,
+      "json_files": 1,
+      "readable": 1,
+      "files": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/mod036/op026/t8_mod036_op026_decision_engine_validation.json",
+          "readable": true,
+          "bytes": 2256,
+          "e2e_signals": {
+            "ticket": false,
+            "ticket_id": false,
+            "evidence": true,
+            "provenance": false,
+            "decision": true,
+            "state": true,
+            "missing": true,
+            "conflict": false,
+            "supported": true,
+            "insufficient": true,
+            "unavailable": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "T9_OP014",
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op014_cross_task_evidence_synthesis.json",
+      "exists": true,
+      "json_files": 1,
+      "readable": 1,
+      "files": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op014_cross_task_evidence_synthesis.json",
+          "readable": true,
+          "bytes": 10677,
+          "e2e_signals": {
+            "ticket": false,
+            "ticket_id": false,
+            "evidence": true,
+            "provenance": true,
+            "decision": false,
+            "state": true,
+            "missing": true,
+            "conflict": false,
+            "supported": true,
+            "insufficient": false,
+            "unavailable": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "T9_FINAL",
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op015_final_integrated_closure.json",
+      "exists": true,
+      "json_files": 1,
+      "readable": 1,
+      "files": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op015_final_integrated_closure.json",
+          "readable": true,
+          "bytes": 6247,
+          "e2e_signals": {
+            "ticket": false,
+            "ticket_id": false,
+            "evidence": true,
+            "provenance": true,
+            "decision": true,
+            "state": true,
+            "missing": true,
+            "conflict": false,
+            "supported": false,
+            "insufficient": false,
+            "unavailable": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "FMP06_FINAL",
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_final_phase_closure.json",
+      "exists": true,
+      "json_files": 1,
+      "readable": 1,
+      "files": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_final_phase_closure.json",
+          "readable": true,
+          "bytes": 3065,
+          "e2e_signals": {
+            "ticket": true,
+            "ticket_id": false,
+            "evidence": true,
+            "provenance": false,
+            "decision": true,
+            "state": false,
+            "missing": false,
+            "conflict": false,
+            "supported": false,
+            "insufficient": false,
+            "unavailable": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "T10_POLICY",
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op022r8_final_t10_literal_key_reconciliation.json",
+      "exists": true,
+      "json_files": 1,
+      "readable": 1,
+      "files": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op022r8_final_t10_literal_key_reconciliation.json",
+          "readable": true,
+          "bytes": 1219,
+          "e2e_signals": {
+            "ticket": false,
+            "ticket_id": false,
+            "evidence": false,
+            "provenance": false,
+            "decision": false,
+            "state": false,
+            "missing": false,
+            "conflict": false,
+            "supported": false,
+            "insufficient": false,
+            "unavailable": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "FMP07_FREEZE",
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp07_op006_final_modeling_freeze_release_manifest.json",
+      "exists": true,
+      "json_files": 1,
+      "readable": 1,
+      "files": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp07_op006_final_modeling_freeze_release_manifest.json",
+          "readable": true,
+          "bytes": 4802,
+          "e2e_signals": {
+            "ticket": true,
+            "ticket_id": false,
+            "evidence": true,
+            "provenance": false,
+            "decision": false,
+            "state": true,
+            "missing": false,
+            "conflict": false,
+            "supported": false,
+            "insufficient": false,
+            "unavailable": false
+          }
+        }
+      ]
+    }
+  ],
+  "source_summary": {
+    "json_files_discovered": 7,
+    "json_files_readable": 7,
+    "known_values": {}
+  },
+  "e2e_contract": {
+    "native_task_semantics_preserved": true,
+    "missing_evidence_is_unavailable_not_negative": true,
+    "no_cross_task_probability_aggregation": true,
+    "no_universal_confidence": true,
+    "no_universal_risk": true,
+    "no_synthetic_fusion_target": true,
+    "locked_test_not_used_for_policy_selection": true,
+    "frozen_model_boundary_preserved": true,
+    "T8_decision_state_is_evidence_state": true,
+    "T9_reliability_is_task_specific": true,
+    "T10_automation_not_established": true,
+    "T10_human_review_not_established": true,
+    "T10_universal_threshold_not_established": true
+  },
+  "contract_failures": [],
+  "evaluation_population": {
+    "not_created_by_this_operation": true,
+    "must_be_derived_from_reconciled_frozen_runtime_evidence": true,
+    "population_identity_required_before_final_evaluation": true
+  },
+  "next_step": "F-OP-002 final E2E evaluation"
+}

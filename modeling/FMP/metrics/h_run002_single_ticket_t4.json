@@ -1,0 +1,61 @@
+{
+  "operation": "H-RUN-002",
+  "operation_name": "Single Ticket T4 Frozen Retrieval",
+  "status": "PASS",
+  "ticket": {
+    "title": "VPN connection fails after password reset",
+    "description": "I reset my corporate password this morning. Since then, the VPN client connects briefly and then disconnects. I restarted the laptop and reinstalled the VPN client, but the issue persists. I need access to the internal systems for today's work.",
+    "representation": "VPN connection fails after password reset\nI reset my corporate password this morning. Since then, the VPN client connects briefly and then disconnects. I restarted the laptop and reinstalled the VPN client, but the issue persists. I need access to the internal systems for today's work."
+  },
+  "artifacts": {
+    "tfidf": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_tfidf.joblib",
+    "neighbors": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_neighbors.joblib",
+    "retrieval": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_full_retrieval.npz"
+  },
+  "runtime": {
+    "transformed_shape": [
+      1,
+      20000
+    ],
+    "retrieved_count": 5,
+    "neighbor_indices": [
+      118128,
+      36104,
+      128163,
+      26474,
+      88540
+    ],
+    "distances": [
+      0.7060008645057678,
+      0.745875358581543,
+      0.7511016726493835,
+      0.7548562288284302,
+      0.7649978399276733
+    ]
+  },
+  "retrieval_archive": {
+    "neighbor_indices": {
+      "type": "numpy.ndarray",
+      "shape": [
+        35626,
+        20
+      ]
+    },
+    "neighbor_similarities": {
+      "type": "numpy.ndarray",
+      "shape": [
+        35626,
+        20
+      ]
+    }
+  },
+  "controls": {
+    "model_execution": true,
+    "model_fitting": false,
+    "retraining": false,
+    "threshold_selection": false,
+    "artifact_modification": false,
+    "locked_test_use": false
+  },
+  "interpretation": "T4 output is native historical retrieval evidence. Retrieved historical neighbors are not treated as guaranteed operationally eligible assignees and no autonomous assignment decision is made."
+}

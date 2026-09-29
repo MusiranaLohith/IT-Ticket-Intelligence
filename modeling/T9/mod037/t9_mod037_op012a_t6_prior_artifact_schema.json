@@ -1,0 +1,757 @@
+{
+  "operation": "T9_MOD-037_OP-012A",
+  "title": "T6 Prior-Artifact Schema / Value Resolution",
+  "status": "PASS",
+  "purpose": "Resolve the actual schemas, values, native ranking fields, supporting artifacts, and frozen methodological boundary of T6 before performing the OP-012 native evaluation audit.",
+  "op004_resolution": {
+    "status": "FAIL",
+    "accepted_tasks": [
+      "T4",
+      "T5",
+      "T6",
+      "T7"
+    ],
+    "rejected_tasks": [
+      "T2"
+    ],
+    "unavailable_tasks": [
+      "T3"
+    ],
+    "T6_accepted": true,
+    "controls": {
+      "model_fitting_performed": false,
+      "calibration_fitting_performed": false,
+      "model_selection_performed": false,
+      "target_creation_performed": false,
+      "threshold_selection_performed": false,
+      "universal_confidence_created": false,
+      "universal_risk_score_created": false,
+      "synthetic_target_created": false,
+      "t6_observable_non_positive_reinterpreted": false,
+      "t6_forced_into_binary_classifier": false,
+      "t7_binary_resolution_created": false,
+      "t7_censoring_relabelled": false,
+      "t7_survival_semantics_preserved": true,
+      "locked_test_used_for_calibration_selection": false
+    }
+  },
+  "op005_resolution": {
+    "status": "PASS",
+    "native_evaluation_tasks": [
+      "T4",
+      "T6"
+    ],
+    "empirical_calibration_tasks": [
+      "T5",
+      "T7"
+    ],
+    "unavailable_tasks": [
+      "T2",
+      "T3"
+    ],
+    "T6_boundary": {
+      "status": "ACCEPTED_NATIVE_RANKING",
+      "native_quantity": "Query-level candidate retrieval/ranking",
+      "native_probability_output": false,
+      "accepted_for_calibration": false,
+      "accepted_for_native_evaluation": true,
+      "artifact": "modeling/T6/metrics/t6_mod010_corrected_hybrid_query_rankings.csv",
+      "native_outputs": [
+        "query-level ranking",
+        "candidate-level score/ranking information"
+      ],
+      "semantic_restrictions": [
+        "T6 remains a query-level retrieval/ranking task.",
+        "observable_non_positive is not a true negative.",
+        "T6 must not be flattened into an ordinary binary classifier.",
+        "Any confidence/relevance formulation must retain native retrieval semantics."
+      ],
+      "calibration_boundary": "Any later T6 confidence formulation must be defined around native query-level retrieval/ranking semantics rather than ordinary binary probability calibration."
+    },
+    "global_restrictions": {
+      "task_specific_calibration_only": true,
+      "universal_confidence_score": false,
+      "universal_risk_score": false,
+      "cross_task_probability_comparability": false,
+      "synthetic_target_creation": false,
+      "synthetic_probability_creation": false,
+      "blind_probability_averaging": false,
+      "arbitrary_cross_task_weights": false,
+      "post_creation_features_allowed": false,
+      "t6_observable_non_positive_as_true_negative": false,
+      "t7_binary_resolution_conversion": false,
+      "t7_censoring_relabelling": false,
+      "locked_test_for_calibration_selection": false
+    },
+    "global_control_validation": {
+      "checks": {
+        "task_specific_calibration_only": {
+          "status": "PASS",
+          "value": true
+        },
+        "universal_confidence_score": {
+          "status": "PASS",
+          "value": false
+        },
+        "universal_risk_score": {
+          "status": "PASS",
+          "value": false
+        },
+        "cross_task_probability_comparability": {
+          "status": "PASS",
+          "value": false
+        },
+        "synthetic_target_creation": {
+          "status": "PASS",
+          "value": false
+        },
+        "synthetic_probability_creation": {
+          "status": "PASS",
+          "value": false
+        },
+        "blind_probability_averaging": {
+          "status": "PASS",
+          "value": false
+        },
+        "arbitrary_cross_task_weights": {
+          "status": "PASS",
+          "value": false
+        },
+        "post_creation_features_allowed": {
+          "status": "PASS",
+          "value": false
+        },
+        "t6_observable_non_positive_as_true_negative": {
+          "status": "PASS",
+          "value": false
+        },
+        "t7_binary_resolution_conversion": {
+          "status": "PASS",
+          "value": false
+        },
+        "t7_censoring_relabelling": {
+          "status": "PASS",
+          "value": false
+        },
+        "locked_test_for_calibration_selection": {
+          "status": "PASS",
+          "value": false
+        }
+      },
+      "failed_checks": [],
+      "status": "PASS"
+    }
+  },
+  "t6_contract_resolution": {
+    "top_level_keys": [
+      "task_id",
+      "task_name",
+      "task_family",
+      "status",
+      "source_dataset",
+      "accepted_source_artifact",
+      "operational_problem",
+      "prediction_boundary",
+      "query_definition",
+      "candidate_definition",
+      "relationship_direction",
+      "positive_definition",
+      "observable_non_positive_definition",
+      "observable_non_positive_semantics",
+      "candidate_pool",
+      "feature_policy",
+      "missing_target_policy",
+      "task_formulation",
+      "evaluation",
+      "split_policy",
+      "modeling_policy",
+      "data_integrity",
+      "prohibitions"
+    ],
+    "artifact": {
+      "task_id": "T6",
+      "task_name": "Similar-Ticket Retrieval",
+      "task_family": "duplicate_related_ticket_retrieval",
+      "status": "MODELING_CONTRACT_FROZEN",
+      "source_dataset": "Mozilla CORE",
+      "accepted_source_artifact": "/run/media/whiteblack/User 1/Datasets/Mozilla_CORE/DTM-002_T6_CANDIDATE_DATASET_derived.csv",
+      "operational_problem": "Given a source ticket at its Creation time, rank candidate existing tickets so that the ticket corresponding to the source ticket's subsequently observed first post-Creation Dupe-of relationship is ranked highly.",
+      "prediction_boundary": "Creation time of the query ticket",
+      "query_definition": {
+        "unit": "ticket",
+        "features": [
+          "query_creator",
+          "query_creator_detail",
+          "query_summary",
+          "query_description"
+        ]
+      },
+      "candidate_definition": {
+        "unit": "ticket",
+        "features": [
+          "candidate_creator",
+          "candidate_creator_detail",
+          "candidate_summary",
+          "candidate_description"
+        ]
+      },
+      "relationship_direction": "query_source_ticket_to_observed_dupe_target",
+      "positive_definition": "The candidate whose ID equals the source ticket's first observed post-Creation Dupe-of target ID under the accepted point-in-time construction.",
+      "observable_non_positive_definition": "A candidate that was observable and eligible for the query's candidate pool but was not the observed positive candidate for that query under the accepted point-in-time construction.",
+      "observable_non_positive_semantics": {
+        "is_true_negative": false,
+        "may_be_used_as_ranked_candidate": true,
+        "may_be_converted_to_binary_ground_truth": false,
+        "may_be_used_for_pairwise_or_listwise_ranking": true
+      },
+      "candidate_pool": {
+        "queries": 2722,
+        "candidates_per_query": 101,
+        "positive_candidates_per_query": 1,
+        "observable_non_positive_candidates_per_query": 100,
+        "total_rows": 274922,
+        "sampling_protocol": "T6-DCS-v2",
+        "sampling_with_replacement": false,
+        "known_positive_excluded_from_non_positive_pool": true,
+        "self_candidates_allowed": false,
+        "future_candidates_allowed": false
+      },
+      "feature_policy": {
+        "allowed_query_features": [
+          "Creator",
+          "Creator Detail",
+          "Summary",
+          "Description"
+        ],
+        "allowed_candidate_features": [
+          "Creator",
+          "Creator Detail",
+          "Summary",
+          "Description"
+        ],
+        "forbidden_query_information": [
+          "post-Creation History",
+          "current/final Dupe of",
+          "current/final Assigned to",
+          "post-Creation field values",
+          "target-ticket information",
+          "future relationship information"
+        ],
+        "forbidden_candidate_information": [
+          "target-ticket relationship information",
+          "query outcome information",
+          "post-Creation query information",
+          "future query relationship information"
+        ]
+      },
+      "missing_target_policy": {
+        "observed_missing_target_relationships": 395,
+        "relationship_evidence_retained": true,
+        "candidate_feature_extraction_possible": false,
+        "target_ticket_retrieval_evaluation_possible": false,
+        "fabricate_target_ticket": false
+      },
+      "task_formulation": {
+        "primary": "query_level_ranking",
+        "secondary": [
+          "candidate_retrieval",
+          "top_k_retrieval"
+        ],
+        "binary_classification_as_primary_task": false,
+        "unrestricted_generic_similarity_as_ground_truth": false
+      },
+      "evaluation": {
+        "unit": "query",
+        "primary_family": "retrieval_ranking",
+        "candidate_level_binary_calibration_established": false,
+        "ranking_scores_are_probabilities": false,
+        "required_evaluation_dimensions": [
+          "Recall@K",
+          "MRR",
+          "NDCG@K"
+        ],
+        "k_values": [
+          1,
+          3,
+          5,
+          10,
+          20
+        ],
+        "candidate_pool_fixed_at_evaluation": true
+      },
+      "split_policy": {
+        "method": "TO_BE_FROZEN_IN_NEXT_OPERATION",
+        "requirements": [
+          "chronological integrity",
+          "query-level separation",
+          "no future candidate leakage",
+          "content-group leakage control where supported by accepted evidence",
+          "deterministic reproducibility"
+        ]
+      },
+      "modeling_policy": {
+        "baseline_first": true,
+        "advanced_model_requires_empirical_justification": true,
+        "no_threshold_optimization_for_automation": true,
+        "no_universal_confidence_score": true,
+        "no_claim_of_automation_safety_before_empirical_evidence": true
+      },
+      "data_integrity": {
+        "raw_dataset_modified": false,
+        "accepted_dtm_artifact_modified": false,
+        "source_artifact_is_immutable": true,
+        "modeling_artifacts_must_be_separate": true
+      },
+      "prohibitions": [
+        "Do not convert observable_non_positive candidates into true negatives.",
+        "Do not flatten T6 into ordinary binary classification.",
+        "Do not use post-Creation query information.",
+        "Do not use current/final relationship values as query features.",
+        "Do not use target-ticket information as query-time features.",
+        "Do not use future relationship information.",
+        "Do not treat later-created positive targets as negative evidence.",
+        "Do not fabricate missing target tickets.",
+        "Do not interpret generic semantic similarity as ground-truth relevance.",
+        "Do not optimize an automation threshold without empirical evidence.",
+        "Do not claim retrieval confidence is a calibrated probability without calibration evidence."
+      ]
+    }
+  },
+  "t6_data_schema": {
+    "final_rankings": {
+      "rows": 274922,
+      "columns_count": 9,
+      "columns": [
+        "split",
+        "query_id",
+        "candidate_id",
+        "target_observed",
+        "semantic_score",
+        "tfidf_score",
+        "tfidf_score_normalized",
+        "semantic_score_normalized",
+        "hybrid_score"
+      ],
+      "dtypes": {
+        "split": "str",
+        "query_id": "int64",
+        "candidate_id": "int64",
+        "target_observed": "bool",
+        "semantic_score": "float64",
+        "tfidf_score": "float64",
+        "tfidf_score_normalized": "float64",
+        "semantic_score_normalized": "float64",
+        "hybrid_score": "float64"
+      }
+    },
+    "train_group_aware": {
+      "rows": 192506,
+      "columns_count": 17,
+      "columns": [
+        "query_id",
+        "query_creation_time",
+        "query_creator",
+        "query_creator_detail",
+        "query_summary",
+        "query_description",
+        "candidate_id",
+        "candidate_creation_time",
+        "candidate_creator",
+        "candidate_creator_detail",
+        "candidate_summary",
+        "candidate_description",
+        "candidate_role",
+        "target_observed",
+        "target_type",
+        "sampling_protocol",
+        "sampling_seed"
+      ],
+      "dtypes": {
+        "query_id": "int64",
+        "query_creation_time": "str",
+        "query_creator": "str",
+        "query_creator_detail": "str",
+        "query_summary": "str",
+        "query_description": "str",
+        "candidate_id": "int64",
+        "candidate_creation_time": "str",
+        "candidate_creator": "str",
+        "candidate_creator_detail": "str",
+        "candidate_summary": "str",
+        "candidate_description": "str",
+        "candidate_role": "str",
+        "target_observed": "bool",
+        "target_type": "str",
+        "sampling_protocol": "str",
+        "sampling_seed": "str"
+      }
+    },
+    "eval_group_aware": {
+      "rows": 82416,
+      "columns_count": 17,
+      "columns": [
+        "query_id",
+        "query_creation_time",
+        "query_creator",
+        "query_creator_detail",
+        "query_summary",
+        "query_description",
+        "candidate_id",
+        "candidate_creation_time",
+        "candidate_creator",
+        "candidate_creator_detail",
+        "candidate_summary",
+        "candidate_description",
+        "candidate_role",
+        "target_observed",
+        "target_type",
+        "sampling_protocol",
+        "sampling_seed"
+      ],
+      "dtypes": {
+        "query_id": "int64",
+        "query_creation_time": "str",
+        "query_creator": "str",
+        "query_creator_detail": "str",
+        "query_summary": "str",
+        "query_description": "str",
+        "candidate_id": "int64",
+        "candidate_creation_time": "str",
+        "candidate_creator": "str",
+        "candidate_creator_detail": "str",
+        "candidate_summary": "str",
+        "candidate_description": "str",
+        "candidate_role": "str",
+        "target_observed": "bool",
+        "target_type": "str",
+        "sampling_protocol": "str",
+        "sampling_seed": "str"
+      }
+    }
+  },
+  "native_ranking_columns": {
+    "status": "PASS",
+    "resolved_columns": {
+      "query_id": "query_id",
+      "candidate_id": "candidate_id",
+      "rank": null,
+      "score": "hybrid_score",
+      "relevance": null,
+      "observed_non_positive": null
+    }
+  },
+  "native_ranking_value_audit": {
+    "query_id": {
+      "status": "RESOLVED",
+      "column": "query_id",
+      "summary": {
+        "dtype": "int64",
+        "rows": 274922,
+        "non_null": 274922,
+        "null": 0,
+        "unique": 2722,
+        "sample_values": [
+          "1023761",
+          "1023761",
+          "1023761",
+          "1023761",
+          "1023761",
+          "1023761",
+          "1023761",
+          "1023761",
+          "1023761",
+          "1023761"
+        ]
+      }
+    },
+    "candidate_id": {
+      "status": "RESOLVED",
+      "column": "candidate_id",
+      "summary": {
+        "dtype": "int64",
+        "rows": 274922,
+        "non_null": 274922,
+        "null": 0,
+        "unique": 211382,
+        "sample_values": [
+          "217769",
+          "72572",
+          "725152",
+          "694763",
+          "155283",
+          "755484",
+          "184524",
+          "10415",
+          "550943",
+          "1003452"
+        ]
+      }
+    },
+    "rank": {
+      "status": "NOT_RESOLVED"
+    },
+    "score": {
+      "status": "RESOLVED",
+      "column": "hybrid_score",
+      "summary": {
+        "dtype": "float64",
+        "rows": 274922,
+        "non_null": 274922,
+        "null": 0,
+        "unique": 273216,
+        "sample_values": [
+          "1.0",
+          "0.4699070652504643",
+          "0.3161389016507631",
+          "0.1435901304053331",
+          "0.2854595900840859",
+          "0.1567532899750298",
+          "0.4443357610927971",
+          "0.3323565515475883",
+          "0.1992069947105951",
+          "0.1130954761493839"
+        ]
+      }
+    },
+    "relevance": {
+      "status": "NOT_RESOLVED"
+    },
+    "observed_non_positive": {
+      "status": "NOT_RESOLVED"
+    }
+  },
+  "other_t6_ranking_artifacts": {
+    "MOD-004": {
+      "exists": true,
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod004_query_rankings.csv",
+      "summary": {
+        "rows": 2722,
+        "columns_count": 8,
+        "columns": [
+          "split",
+          "query_id",
+          "positive_candidate_id",
+          "positive_rank",
+          "top_candidate_id",
+          "top_candidate_role",
+          "top_score",
+          "positive_score"
+        ],
+        "dtypes": {
+          "split": "str",
+          "query_id": "int64",
+          "positive_candidate_id": "int64",
+          "positive_rank": "int64",
+          "top_candidate_id": "int64",
+          "top_candidate_role": "str",
+          "top_score": "float64",
+          "positive_score": "float64"
+        }
+      }
+    },
+    "MOD-007": {
+      "exists": true,
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod007_bm25_query_rankings.csv",
+      "summary": {
+        "rows": 2722,
+        "columns_count": 11,
+        "columns": [
+          "split",
+          "query_id",
+          "query_creation_time",
+          "positive_candidate_id",
+          "positive_rank",
+          "top_candidate_id",
+          "top_candidate_role",
+          "top_score",
+          "positive_score",
+          "score_gap_top1_minus_positive",
+          "query_token_count"
+        ],
+        "dtypes": {
+          "split": "str",
+          "query_id": "int64",
+          "query_creation_time": "str",
+          "positive_candidate_id": "int64",
+          "positive_rank": "int64",
+          "top_candidate_id": "int64",
+          "top_candidate_role": "str",
+          "top_score": "float64",
+          "positive_score": "float64",
+          "score_gap_top1_minus_positive": "float64",
+          "query_token_count": "int64"
+        }
+      }
+    },
+    "MOD-008": {
+      "exists": true,
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod008_semantic_failure_rankings.csv",
+      "summary": {
+        "rows": 173,
+        "columns_count": 9,
+        "columns": [
+          "split",
+          "query_id",
+          "positive_candidate_id",
+          "original_tfidf_rank",
+          "semantic_positive_rank",
+          "semantic_top_candidate_id",
+          "semantic_top_score",
+          "semantic_positive_score",
+          "semantic_score_gap_top1_minus_positive"
+        ],
+        "dtypes": {
+          "split": "str",
+          "query_id": "int64",
+          "positive_candidate_id": "int64",
+          "original_tfidf_rank": "int64",
+          "semantic_positive_rank": "int64",
+          "semantic_top_candidate_id": "int64",
+          "semantic_top_score": "float64",
+          "semantic_positive_score": "float64",
+          "semantic_score_gap_top1_minus_positive": "float64"
+        }
+      }
+    },
+    "MOD-009": {
+      "exists": true,
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod009_hybrid_query_rankings.csv",
+      "summary": {
+        "rows": 274922,
+        "columns_count": 9,
+        "columns": [
+          "split",
+          "query_id",
+          "candidate_id",
+          "target_observed",
+          "tfidf_score",
+          "semantic_score",
+          "tfidf_score_normalized",
+          "semantic_score_normalized",
+          "hybrid_score"
+        ],
+        "dtypes": {
+          "split": "str",
+          "query_id": "int64",
+          "candidate_id": "int64",
+          "target_observed": "bool",
+          "tfidf_score": "float64",
+          "semantic_score": "float64",
+          "tfidf_score_normalized": "float64",
+          "semantic_score_normalized": "float64",
+          "hybrid_score": "float64"
+        }
+      }
+    }
+  },
+  "supporting_artifacts": {
+    "T6_final_closure": {
+      "exists": false,
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/metrics/t6_final_closure.json"
+    },
+    "T6_group_aware_split_audit": {
+      "exists": true,
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_group_aware_split_audit.json",
+      "top_level_keys": [
+        "operation",
+        "task",
+        "status",
+        "source_artifact",
+        "source_artifact_modified",
+        "split_policy",
+        "source_accounting",
+        "content_groups",
+        "final_split",
+        "temporal_displacement",
+        "temporal_purity",
+        "leakage_controls",
+        "immutability_controls",
+        "artifacts",
+        "overall_control",
+        "decision"
+      ],
+      "status": "ACCEPTED"
+    },
+    "T6_content_group_assignments": {
+      "exists": true,
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/derived/t6_content_group_assignments.csv",
+      "summary": {
+        "rows": 2722,
+        "columns_count": 5,
+        "columns": [
+          "query_id",
+          "query_creation_time",
+          "creation_year",
+          "content_group_hash",
+          "assigned_side"
+        ],
+        "dtypes": {
+          "query_id": "int64",
+          "query_creation_time": "str",
+          "creation_year": "int64",
+          "content_group_hash": "str",
+          "assigned_side": "str"
+        }
+      }
+    }
+  },
+  "t6_methodological_boundary": {
+    "status": "ACCEPTED_NATIVE_RANKING",
+    "native_quantity": "Query-level candidate retrieval/ranking",
+    "native_probability_output": false,
+    "accepted_for_calibration": false,
+    "accepted_for_native_evaluation": true,
+    "native_outputs": [
+      "query-level ranking",
+      "candidate-level score/ranking information"
+    ],
+    "semantic_restrictions": [
+      "T6 remains a query-level retrieval/ranking task.",
+      "observable_non_positive is not a true negative.",
+      "T6 must not be flattened into an ordinary binary classifier.",
+      "Any confidence/relevance formulation must retain native retrieval semantics."
+    ],
+    "calibration_boundary": "Any later T6 confidence formulation must be defined around native query-level retrieval/ranking semantics rather than ordinary binary probability calibration."
+  },
+  "controls": {
+    "artifact_read_only": true,
+    "model_fitted": false,
+    "prediction_generated": false,
+    "probability_generated": false,
+    "calibration_fitted": false,
+    "target_created": false,
+    "target_relabelled": false,
+    "observable_non_positive_reinterpreted_as_true_negative": false,
+    "ranking_forced_into_binary_classification": false,
+    "threshold_selected": false,
+    "locked_test_used": false,
+    "universal_confidence_created": false,
+    "universal_risk_score_created": false,
+    "synthetic_probability_created": false,
+    "existing_artifacts_modified": false
+  },
+  "control_validation": {
+    "status": "PASS",
+    "failed_controls": []
+  },
+  "artifacts_used": {
+    "OP-004": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op004_native_output_acceptance.json",
+    "OP-005": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op005_output_semantics_lock.json",
+    "T6_contract": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/contracts/t6_modeling_contract.json",
+    "T6_final_rankings": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod010_corrected_hybrid_query_rankings.csv",
+    "T6_final_closure": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/metrics/t6_final_closure.json",
+    "T6_group_aware_audit": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_group_aware_split_audit.json",
+    "T6_train": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/splits/t6_train_group_aware.csv",
+    "T6_eval": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/splits/t6_eval_group_aware.csv",
+    "T6_content_groups": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/derived/t6_content_group_assignments.csv"
+  },
+  "interpretation_boundary": [
+    "This operation performs schema/value resolution only.",
+    "No new model or prediction is generated.",
+    "Native T6 ranking quantities remain ranking quantities.",
+    "Observable non-positive observations must not be reinterpreted as true negative labels.",
+    "No binary probability calibration is established by schema inspection alone.",
+    "No synthetic target or synthetic probability may be introduced.",
+    "Any later OP-012 evaluation must use the actual resolved native schema."
+  ]
+}

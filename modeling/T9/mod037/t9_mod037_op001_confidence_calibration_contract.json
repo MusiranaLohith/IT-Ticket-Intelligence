@@ -1,0 +1,118 @@
+{
+  "operation": "MOD-037 OP-001",
+  "operation_name": "T9 Confidence and Calibration Contract",
+  "status": "PASS",
+  "t9_role": {
+    "phase": "T9",
+    "name": "Confidence / Calibration",
+    "purpose": "Determine whether validated upstream task and decision outputs provide confidence or uncertainty information that can be interpreted reliably for downstream review and automation-boundary decisions.",
+    "not_a_new_prediction_task": true,
+    "not_a_universal_supermodel": true
+  },
+  "research_question": "Do the confidence, probability, score, and uncertainty quantities produced by the validated T1-T8 system components correspond meaningfully to their observed reliability, correctness, or uncertainty on appropriately defined development and untouched evaluation populations?",
+  "scope": {
+    "included": [
+      "confidence reliability",
+      "probability calibration where probabilistic semantics apply",
+      "confidence versus observed correctness where a valid outcome exists",
+      "retrieval/recommendation score interpretation where a valid outcome exists",
+      "survival uncertainty and horizon-specific survival semantics",
+      "decision-level evidence sufficiency",
+      "calibration and uncertainty diagnostics"
+    ],
+    "excluded": [
+      "creating a new universal prediction target",
+      "blindly combining incompatible confidence quantities",
+      "inventing a universal scalar confidence score without evidence",
+      "changing native task semantics",
+      "using locked evaluation/test data for calibration-method selection",
+      "post-Creation information injection",
+      "turning censored survival outcomes into artificial binary labels"
+    ]
+  },
+  "confidence_semantics": {
+    "probability": "A quantity explicitly representing a probability may be evaluated for probabilistic calibration when a valid outcome definition exists.",
+    "score": "A ranking, retrieval, similarity, or recommendation score is not automatically a probability.",
+    "survival_probability": "A horizon-specific survival probability retains its native time-to-event interpretation.",
+    "survival_time": "Predicted survival time is an outcome estimate, not directly a confidence probability.",
+    "evidence_state": "Decision-engine evidence states describe evidence conditions and are not automatically confidence probabilities."
+  },
+  "calibration_principles": [
+    "Calibrate only quantities with identifiable semantic meaning.",
+    "Use valid observed outcomes where calibration requires correctness.",
+    "Separate calibration data from untouched evaluation data.",
+    "Do not use locked evaluation/test data for method selection.",
+    "Preserve the Creation-time prediction boundary.",
+    "Do not convert unavailable evidence into negative evidence.",
+    "Do not create synthetic universal targets.",
+    "Do not average incompatible probabilities or scores.",
+    "Do not assume ranking scores are probabilities.",
+    "Do not assume calibration transfers between tasks."
+  ],
+  "candidate_metrics": {
+    "classification_probabilities": [
+      "reliability curves",
+      "Brier score where applicable",
+      "log loss where applicable",
+      "Expected Calibration Error where appropriately defined",
+      "class-wise calibration diagnostics"
+    ],
+    "ranking_or_retrieval_scores": [
+      "score-versus-outcome analysis",
+      "rank-based correctness analysis",
+      "coverage versus correctness where applicable"
+    ],
+    "survival_outputs": [
+      "horizon-specific calibration diagnostics where valid",
+      "survival probability versus observed event behavior",
+      "survival-specific uncertainty diagnostics"
+    ],
+    "decision_engine": [
+      "evidence-state coverage",
+      "confidence/correctness relationship where a valid outcome exists",
+      "coverage versus reliability"
+    ]
+  },
+  "population_rules": {
+    "calibration_population": "Must be explicitly identified from development data and must not contain locked evaluation/test cases used for calibration-method selection.",
+    "evaluation_population": "Must remain untouched until calibration procedures and method-selection decisions are frozen.",
+    "population_alignment": "Calibration conclusions must identify the population, task, outcome definition, and prediction boundary."
+  },
+  "leakage_controls": {
+    "creation_boundary_preserved": true,
+    "post_creation_information_forbidden": true,
+    "locked_test_used_for_calibration_selection": false,
+    "synthetic_universal_target_forbidden": true,
+    "native_task_semantics_preserved": true,
+    "censored_cases_relabelled": false
+  },
+  "t8_boundary": {
+    "t8_closed_before_t9": true,
+    "t8_status": "T8_DECISION_ENGINE_CLOSED",
+    "t8_decision_population": 119895,
+    "t8_universal_target_exists": false,
+    "t8_universal_confidence_exists": false,
+    "implication": "T9 must establish whether a defensible decision-level confidence representation is possible; it must not assume that one already exists."
+  },
+  "closure_criteria": [
+    "T9 confidence semantics documented",
+    "native confidence/probability/score artifacts inventoried",
+    "valid calibration populations established",
+    "locked evaluation populations identified",
+    "calibration methodology justified",
+    "applicable calibration metrics defined",
+    "Creation-time boundary preserved",
+    "native task semantics preserved",
+    "synthetic universal target avoided",
+    "incompatible confidence quantities not blindly combined"
+  ],
+  "controls": {
+    "model_fitted_in_this_operation": false,
+    "calibration_fitted_in_this_operation": false,
+    "target_created_in_this_operation": false,
+    "probabilities_combined_in_this_operation": false,
+    "test_data_used_for_selection": false,
+    "post_creation_features_used": false
+  },
+  "next_operation": "MOD-037 OP-002 \u2014 Native Confidence and Uncertainty Artifact Inventory"
+}

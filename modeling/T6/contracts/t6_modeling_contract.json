@@ -1,0 +1,167 @@
+{
+  "task_id": "T6",
+  "task_name": "Similar-Ticket Retrieval",
+  "task_family": "duplicate_related_ticket_retrieval",
+  "status": "MODELING_CONTRACT_FROZEN",
+
+  "source_dataset": "Mozilla CORE",
+
+  "accepted_source_artifact": "/run/media/whiteblack/User 1/Datasets/Mozilla_CORE/DTM-002_T6_CANDIDATE_DATASET_derived.csv",
+
+  "operational_problem": "Given a source ticket at its Creation time, rank candidate existing tickets so that the ticket corresponding to the source ticket's subsequently observed first post-Creation Dupe-of relationship is ranked highly.",
+
+  "prediction_boundary": "Creation time of the query ticket",
+
+  "query_definition": {
+    "unit": "ticket",
+    "features": [
+      "query_creator",
+      "query_creator_detail",
+      "query_summary",
+      "query_description"
+    ]
+  },
+
+  "candidate_definition": {
+    "unit": "ticket",
+    "features": [
+      "candidate_creator",
+      "candidate_creator_detail",
+      "candidate_summary",
+      "candidate_description"
+    ]
+  },
+
+  "relationship_direction": "query_source_ticket_to_observed_dupe_target",
+
+  "positive_definition": "The candidate whose ID equals the source ticket's first observed post-Creation Dupe-of target ID under the accepted point-in-time construction.",
+
+  "observable_non_positive_definition": "A candidate that was observable and eligible for the query's candidate pool but was not the observed positive candidate for that query under the accepted point-in-time construction.",
+
+  "observable_non_positive_semantics": {
+    "is_true_negative": false,
+    "may_be_used_as_ranked_candidate": true,
+    "may_be_converted_to_binary_ground_truth": false,
+    "may_be_used_for_pairwise_or_listwise_ranking": true
+  },
+
+  "candidate_pool": {
+    "queries": 2722,
+    "candidates_per_query": 101,
+    "positive_candidates_per_query": 1,
+    "observable_non_positive_candidates_per_query": 100,
+    "total_rows": 274922,
+    "sampling_protocol": "T6-DCS-v2",
+    "sampling_with_replacement": false,
+    "known_positive_excluded_from_non_positive_pool": true,
+    "self_candidates_allowed": false,
+    "future_candidates_allowed": false
+  },
+
+  "feature_policy": {
+    "allowed_query_features": [
+      "Creator",
+      "Creator Detail",
+      "Summary",
+      "Description"
+    ],
+    "allowed_candidate_features": [
+      "Creator",
+      "Creator Detail",
+      "Summary",
+      "Description"
+    ],
+    "forbidden_query_information": [
+      "post-Creation History",
+      "current/final Dupe of",
+      "current/final Assigned to",
+      "post-Creation field values",
+      "target-ticket information",
+      "future relationship information"
+    ],
+    "forbidden_candidate_information": [
+      "target-ticket relationship information",
+      "query outcome information",
+      "post-Creation query information",
+      "future query relationship information"
+    ]
+  },
+
+  "missing_target_policy": {
+    "observed_missing_target_relationships": 395,
+    "relationship_evidence_retained": true,
+    "candidate_feature_extraction_possible": false,
+    "target_ticket_retrieval_evaluation_possible": false,
+    "fabricate_target_ticket": false
+  },
+
+  "task_formulation": {
+    "primary": "query_level_ranking",
+    "secondary": [
+      "candidate_retrieval",
+      "top_k_retrieval"
+    ],
+    "binary_classification_as_primary_task": false,
+    "unrestricted_generic_similarity_as_ground_truth": false
+  },
+
+  "evaluation": {
+    "unit": "query",
+    "primary_family": "retrieval_ranking",
+    "candidate_level_binary_calibration_established": false,
+    "ranking_scores_are_probabilities": false,
+    "required_evaluation_dimensions": [
+      "Recall@K",
+      "MRR",
+      "NDCG@K"
+    ],
+    "k_values": [
+      1,
+      3,
+      5,
+      10,
+      20
+    ],
+    "candidate_pool_fixed_at_evaluation": true
+  },
+
+  "split_policy": {
+    "method": "TO_BE_FROZEN_IN_NEXT_OPERATION",
+    "requirements": [
+      "chronological integrity",
+      "query-level separation",
+      "no future candidate leakage",
+      "content-group leakage control where supported by accepted evidence",
+      "deterministic reproducibility"
+    ]
+  },
+
+  "modeling_policy": {
+    "baseline_first": true,
+    "advanced_model_requires_empirical_justification": true,
+    "no_threshold_optimization_for_automation": true,
+    "no_universal_confidence_score": true,
+    "no_claim_of_automation_safety_before_empirical_evidence": true
+  },
+
+  "data_integrity": {
+    "raw_dataset_modified": false,
+    "accepted_dtm_artifact_modified": false,
+    "source_artifact_is_immutable": true,
+    "modeling_artifacts_must_be_separate": true
+  },
+
+  "prohibitions": [
+    "Do not convert observable_non_positive candidates into true negatives.",
+    "Do not flatten T6 into ordinary binary classification.",
+    "Do not use post-Creation query information.",
+    "Do not use current/final relationship values as query features.",
+    "Do not use target-ticket information as query-time features.",
+    "Do not use future relationship information.",
+    "Do not treat later-created positive targets as negative evidence.",
+    "Do not fabricate missing target tickets.",
+    "Do not interpret generic semantic similarity as ground-truth relevance.",
+    "Do not optimize an automation threshold without empirical evidence.",
+    "Do not claim retrieval confidence is a calibrated probability without calibration evidence."
+  ]
+}

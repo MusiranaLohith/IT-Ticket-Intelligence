@@ -1,0 +1,79 @@
+{
+  "operation": "T3-MOD-029",
+  "task": "T3_SEVERITY_PREDICTION",
+  "status": "CLOSED",
+  "final_candidate": {
+    "model_id": "T3-MOD-008",
+    "selection_primary_metric": "macro_f1",
+    "validation_metrics": {
+      "accuracy": 0.5845222654561176,
+      "macro_f1": 0.3480174180281372,
+      "weighted_f1": 0.6148412546447116
+    },
+    "locked_test_metrics": {
+      "accuracy": 0.5540423692174665,
+      "macro_f1": 0.3036817032407433,
+      "weighted_f1": 0.6030788055367481
+    }
+  },
+  "test_per_class": {
+    "S1": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 13
+    },
+    "S2": {
+      "precision": 0.13257575757575757,
+      "recall": 0.3115727002967359,
+      "f1": 0.18600531443755536,
+      "support": 337
+    },
+    "S3": {
+      "precision": 0.83672670321065,
+      "recall": 0.5864434687156971,
+      "f1": 0.6895772829945144,
+      "support": 3644
+    },
+    "S4": {
+      "precision": 0.25455987311657413,
+      "recall": 0.5079113924050633,
+      "f1": 0.33914421553090335,
+      "support": 632
+    }
+  },
+  "generalization": {
+    "accuracy_change": -0.030479896238651105,
+    "macro_f1_change": -0.0443357147873939,
+    "weighted_f1_change": -0.011762449107963535
+  },
+  "advanced_branch": {
+    "distilbert_accuracy": 0.7220060527453523,
+    "distilbert_macro_f1": 0.29663315276577507,
+    "distilbert_weighted_f1": 0.6689419070240422,
+    "selected": false,
+    "status": "CLOSED"
+  },
+  "limitations": [
+    "S1 remained undetected on the locked test set with F1=0 and support=13.",
+    "S2 test F1 was 0.186005, indicating limited minority-class discrimination.",
+    "Macro F1 decreased from 0.348017 on validation to 0.303682 on the locked test set.",
+    "The largest test errors involved S3/S4 and S3/S2 confusion.",
+    "The chronological evaluation exhibits temporal distribution shift across severity classes.",
+    "DistilBERT achieved higher accuracy and weighted F1 in feasibility testing but lower macro F1 and did not resolve S1/S2 detection."
+  ],
+  "suitability": "SUPPORTED_WITH_LIMITATIONS",
+  "system_role": "SECONDARY_DECISION_SUPPORT_SIGNAL",
+  "recommended_use": "Use T3 severity prediction as a secondary decision-support signal for downstream triage or human review. Do not treat the prediction as an autonomous or authoritative severity assignment.",
+  "evidence_controls": {
+    "validation_used_for_selection": true,
+    "locked_test_used_for_final_evaluation": true,
+    "test_used_for_selection": false,
+    "final_model_retrained_after_selection": false,
+    "final_model_refit_on_test": false,
+    "raw_mozilla_accessed_during_closure": false,
+    "dataset_modified": false
+  },
+  "closure_statement": "T3 \u2014 Severity Prediction is CLOSED as a SUPPORTED_WITH_LIMITATIONS secondary decision-support signal. The selected candidate is T3-MOD-008 under the pre-frozen macro-F1 criterion. Locked test evaluation and final generalization analysis are complete. The task is not treated as an autonomous severity assignment capability.",
+  "next_task": "T4"
+}

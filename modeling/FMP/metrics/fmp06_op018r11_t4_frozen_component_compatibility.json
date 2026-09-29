@@ -1,0 +1,35 @@
+{
+  "operation": "FMP-06 OP-018R11",
+  "operation_type": "T4_FROZEN_COMPONENT_COMPATIBILITY",
+  "status": "PASS",
+  "script": "modeling/T4/scripts/t4_ranking_baseline.py",
+  "rank_assignees_for_row_arguments": [
+    "row_idx",
+    "indices",
+    "similarities",
+    "train_targets"
+  ],
+  "rank_assignees_for_row_source": "def rank_assignees_for_row(\n    row_idx,\n    indices,\n    similarities,\n    train_targets,\n):\n    return rank_assignees(\n        indices[row_idx],\n        similarities[row_idx],\n        train_targets,\n    )",
+  "tfidf_artifact": "modeling/T4/results/mod007_checkpoints/t4_mod007_tfidf.joblib",
+  "neighbor_artifact": "modeling/T4/results/mod007_checkpoints/t4_mod007_neighbors.joblib",
+  "retrieval_artifact": "modeling/T4/results/mod007_checkpoints/t4_mod007_full_retrieval.npz",
+  "tfidf_type": "sklearn.feature_extraction.text.TfidfVectorizer",
+  "neighbor_type": "sklearn.neighbors._unsupervised.NearestNeighbors",
+  "tfidf_methods": [
+    "transform",
+    "fit",
+    "fit_transform",
+    "get_feature_names_out"
+  ],
+  "neighbor_methods": [
+    "kneighbors",
+    "fit"
+  ],
+  "retrieval_artifact_size_bytes": 4076925,
+  "runtime_inference": false,
+  "transform_called": false,
+  "kneighbors_called": false,
+  "fit_called": false,
+  "retraining": false,
+  "artifact_modification": false
+}

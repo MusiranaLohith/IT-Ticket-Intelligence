@@ -1,0 +1,119 @@
+{
+  "operation": "FMP-07 OP-006",
+  "operation_name": "FINAL_MODELING_FREEZE_RELEASE_MANIFEST",
+  "timestamp_utc": "2026-09-26T16:49:30.364699+00:00",
+  "status": "FROZEN_PASS",
+  "release_state": "FROZEN",
+  "read_only": true,
+  "training_performed": false,
+  "fitting_performed": false,
+  "prediction_performed": false,
+  "evaluation_performed": false,
+  "locked_test_used": false,
+  "artifact_modified": false,
+  "fmp07_chain": {
+    "OP-001": "PASS",
+    "OP-002": "PASS",
+    "OP-003R1": "PASS",
+    "OP-004": "PASS",
+    "OP-005R1": "PASS"
+  },
+  "frozen_artifacts": {
+    "T1": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/baselines/t1_it_support_char_svm.joblib",
+        "size_bytes": 2179887,
+        "sha256": "2e6b4c81f1dc363edfa313e1cbd4c46b641ec017638c8e4447ba27c99f276632"
+      }
+    ],
+    "T2": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/models/t2_class_weighted_tfidf_logreg.joblib",
+        "size_bytes": 14317753,
+        "sha256": "19e751d7095ab2cb7bbf0b4562f3274998cc984cb3298745d6d54f51c432a4f5"
+      }
+    ],
+    "T3": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib",
+        "size_bytes": 17315561,
+        "sha256": "3887d73e8570a6d96c45a518ea4f5e03692e707a6d7aff463475e70f62bb371d"
+      }
+    ],
+    "T4": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_tfidf.joblib",
+        "size_bytes": 226595,
+        "sha256": "e451476d50c0fc0edb78c30b95b5acda706fd7730aef29042763433d77af680c"
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_neighbors.joblib",
+        "size_bytes": 52792287,
+        "sha256": "08197ced826034fb6265a6b3e94fab041175f1a523c8a93d8f326588c6d1806c"
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_full_retrieval.npz",
+        "size_bytes": 4076925,
+        "sha256": "4182bcf03ae3061631d18eecf7c20fb246f3656acfef4a0208c2f9f6a8f15afb"
+      }
+    ],
+    "T5": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod005_tfidf.joblib",
+        "size_bytes": 4041055,
+        "sha256": "3a653b5129b63f6fbb0b8e6423724c213f67e445a9a94acfefd79c999f851029"
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod005_logreg.joblib",
+        "size_bytes": 800891,
+        "sha256": "7217945fc407fa3cd0b7f06d597d56490fb4889f1992d1d6bef3503954339881"
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod007_calibrated_tfidf.joblib",
+        "size_bytes": 4041492,
+        "sha256": "9e38ce715c9b4f5213fd7a7717e4295148e5bb40b19af2bb07638edccafb63e4"
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod007_calibration_models.joblib",
+        "size_bytes": 802449,
+        "sha256": "06f32a9b0fcc927f08e3f55437c3120a19a6af572335d5fdcb8890833f5cf143"
+      }
+    ],
+    "T6": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod010_corrected_hybrid_results.json",
+        "size_bytes": 6325,
+        "sha256": "7683692b6681b6d53b299c5bd5c3eea44ca09a96ff2752b9abcb232f46025ba9"
+      }
+    ],
+    "T7": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod010_log_normal_aft_model.json",
+        "size_bytes": 2899,
+        "sha256": "3350aefff2b724c6492f1d03fcdf811fd69544a45e27e7805ce53c6c2f9bccd0"
+      }
+    ]
+  },
+  "total_frozen_artifacts": 12,
+  "hash_manifest_status": "PASS",
+  "package_completeness_status": "PASS",
+  "runtime_reproducibility_status": "PASS",
+  "fmp06_status": "CLOSED_PASS",
+  "downstream_status": {
+    "T8": "PASS",
+    "T9": "PASS",
+    "T10": "PASS"
+  },
+  "freeze_controls": {
+    "model_retraining_authorized": false,
+    "model_refitting_authorized": false,
+    "new_model_selection_authorized": false,
+    "threshold_reoptimization_authorized": false,
+    "universal_confidence_creation_authorized": false,
+    "universal_risk_creation_authorized": false,
+    "synthetic_fusion_target_creation_authorized": false,
+    "frozen_artifact_modification_authorized": false,
+    "locked_test_reuse_for_selection_authorized": false
+  },
+  "interpretation": "This manifest establishes the final frozen modeling-package release state using only previously established authoritative evidence. The operation does not train, refit, select, optimize, evaluate, or modify any model artifact."
+}

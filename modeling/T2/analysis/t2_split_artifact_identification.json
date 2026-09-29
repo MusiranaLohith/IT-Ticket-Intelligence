@@ -1,0 +1,238 @@
+{
+  "operation": "T2-MOD-016",
+  "operation_name": "Frozen Split Artifact Identification",
+  "task": "T2",
+  "dataset": "Mozilla CORE",
+  "expected_partition_sizes": {
+    "train": 20648,
+    "validation": 4425,
+    "test": 4425
+  },
+  "candidate_count": 4,
+  "candidates": [
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/analysis/t2_baseline_validation_predictions.csv",
+      "filename": "t2_baseline_validation_predictions.csv",
+      "size_bytes": 86465,
+      "header": [
+        "ID",
+        "target_priority",
+        "predicted_priority",
+        "correct"
+      ],
+      "row_count": 4425,
+      "has_id": true,
+      "has_target_priority": true,
+      "has_summary": false,
+      "has_description": false,
+      "first_id": "",
+      "last_id": "",
+      "matches_train_size": false,
+      "matches_validation_size": true,
+      "matches_test_size": true,
+      "looks_like_t2_split": false
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/splits/test.csv",
+      "filename": "test.csv",
+      "size_bytes": 7485706,
+      "header": [
+        "ID",
+        "Creation time",
+        "Summary",
+        "Description",
+        "target_priority"
+      ],
+      "row_count": 4425,
+      "has_id": true,
+      "has_target_priority": true,
+      "has_summary": true,
+      "has_description": true,
+      "first_id": "",
+      "last_id": "",
+      "matches_train_size": false,
+      "matches_validation_size": true,
+      "matches_test_size": true,
+      "looks_like_t2_split": true
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/splits/train.csv",
+      "filename": "train.csv",
+      "size_bytes": 22396127,
+      "header": [
+        "ID",
+        "Creation time",
+        "Summary",
+        "Description",
+        "target_priority"
+      ],
+      "row_count": 20648,
+      "has_id": true,
+      "has_target_priority": true,
+      "has_summary": true,
+      "has_description": true,
+      "first_id": "",
+      "last_id": "",
+      "matches_train_size": true,
+      "matches_validation_size": false,
+      "matches_test_size": false,
+      "looks_like_t2_split": true
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/splits/validation.csv",
+      "filename": "validation.csv",
+      "size_bytes": 7065639,
+      "header": [
+        "ID",
+        "Creation time",
+        "Summary",
+        "Description",
+        "target_priority"
+      ],
+      "row_count": 4425,
+      "has_id": true,
+      "has_target_priority": true,
+      "has_summary": true,
+      "has_description": true,
+      "first_id": "",
+      "last_id": "",
+      "matches_train_size": false,
+      "matches_validation_size": true,
+      "matches_test_size": true,
+      "looks_like_t2_split": true
+    }
+  ],
+  "size_matched_candidates": {
+    "train": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/splits/train.csv",
+        "filename": "train.csv",
+        "size_bytes": 22396127,
+        "header": [
+          "ID",
+          "Creation time",
+          "Summary",
+          "Description",
+          "target_priority"
+        ],
+        "row_count": 20648,
+        "has_id": true,
+        "has_target_priority": true,
+        "has_summary": true,
+        "has_description": true,
+        "first_id": "",
+        "last_id": "",
+        "matches_train_size": true,
+        "matches_validation_size": false,
+        "matches_test_size": false,
+        "looks_like_t2_split": true
+      }
+    ],
+    "validation": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/splits/test.csv",
+        "filename": "test.csv",
+        "size_bytes": 7485706,
+        "header": [
+          "ID",
+          "Creation time",
+          "Summary",
+          "Description",
+          "target_priority"
+        ],
+        "row_count": 4425,
+        "has_id": true,
+        "has_target_priority": true,
+        "has_summary": true,
+        "has_description": true,
+        "first_id": "",
+        "last_id": "",
+        "matches_train_size": false,
+        "matches_validation_size": true,
+        "matches_test_size": true,
+        "looks_like_t2_split": true
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/splits/validation.csv",
+        "filename": "validation.csv",
+        "size_bytes": 7065639,
+        "header": [
+          "ID",
+          "Creation time",
+          "Summary",
+          "Description",
+          "target_priority"
+        ],
+        "row_count": 4425,
+        "has_id": true,
+        "has_target_priority": true,
+        "has_summary": true,
+        "has_description": true,
+        "first_id": "",
+        "last_id": "",
+        "matches_train_size": false,
+        "matches_validation_size": true,
+        "matches_test_size": true,
+        "looks_like_t2_split": true
+      }
+    ],
+    "test": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/splits/test.csv",
+        "filename": "test.csv",
+        "size_bytes": 7485706,
+        "header": [
+          "ID",
+          "Creation time",
+          "Summary",
+          "Description",
+          "target_priority"
+        ],
+        "row_count": 4425,
+        "has_id": true,
+        "has_target_priority": true,
+        "has_summary": true,
+        "has_description": true,
+        "first_id": "",
+        "last_id": "",
+        "matches_train_size": false,
+        "matches_validation_size": true,
+        "matches_test_size": true,
+        "looks_like_t2_split": true
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/splits/validation.csv",
+        "filename": "validation.csv",
+        "size_bytes": 7065639,
+        "header": [
+          "ID",
+          "Creation time",
+          "Summary",
+          "Description",
+          "target_priority"
+        ],
+        "row_count": 4425,
+        "has_id": true,
+        "has_target_priority": true,
+        "has_summary": true,
+        "has_description": true,
+        "first_id": "",
+        "last_id": "",
+        "matches_train_size": false,
+        "matches_validation_size": true,
+        "matches_test_size": true,
+        "looks_like_t2_split": true
+      }
+    ]
+  },
+  "identification": {
+    "train_unique_candidate": true,
+    "validation_unique_candidate": false,
+    "test_unique_candidate": false
+  },
+  "test_loaded": false,
+  "training_started": false,
+  "status": [
+    "AMBIGUITY_REMAINS"
+  ]
+}

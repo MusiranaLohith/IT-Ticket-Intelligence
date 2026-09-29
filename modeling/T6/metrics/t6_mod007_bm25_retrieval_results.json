@@ -1,0 +1,91 @@
+{
+  "operation": "T6 MOD-007",
+  "task": "T6 Similar-Ticket Retrieval",
+  "task_formulation": "Duplicate-Related Ticket Retrieval",
+  "status": "BASELINE_COMPLETED",
+  "method": {
+    "name": "BM25",
+    "k1": 1.2,
+    "b": 0.75,
+    "ranking_only": true,
+    "probability_output": false,
+    "calibration": false
+  },
+  "candidate_pool": {
+    "candidates_per_query": 101,
+    "same_as_mod004": true,
+    "candidate_pool_reconstructed": false
+  },
+  "target_handling": {
+    "one_observed_positive_per_query": true,
+    "observable_non_positive_is_true_negative": false,
+    "binary_classification": false,
+    "target_representation_normalized": true
+  },
+  "controls": {
+    "raw_mozilla_dataset_read": false,
+    "accepted_dtm_artifact_read": false,
+    "candidate_pool_modified": false,
+    "target_modified": false,
+    "model_retrained": false,
+    "tfidf_refit": false,
+    "calibration": false,
+    "threshold_optimization": false
+  },
+  "train": {
+    "queries": 1906,
+    "recall_at_1": 0.5713536201469045,
+    "recall_at_3": 0.6768100734522561,
+    "recall_at_5": 0.7287513116474291,
+    "recall_at_10": 0.7943336831059811,
+    "recall_at_20": 0.8751311647429171,
+    "mrr": 0.6470888430972883,
+    "ndcg_at_5": 0.654026733163058,
+    "ndcg_at_10": 0.6754169380293584,
+    "positive_rank": {
+      "minimum": 1,
+      "median": 1.0,
+      "mean": 8.527806925498426,
+      "maximum": 101
+    }
+  },
+  "eval": {
+    "queries": 816,
+    "recall_at_1": 0.6299019607843137,
+    "recall_at_3": 0.7169117647058824,
+    "recall_at_5": 0.7573529411764706,
+    "recall_at_10": 0.8198529411764706,
+    "recall_at_20": 0.8848039215686274,
+    "mrr": 0.6923239432426228,
+    "ndcg_at_5": 0.69622231224545,
+    "ndcg_at_10": 0.7166678647849147,
+    "positive_rank": {
+      "minimum": 1,
+      "median": 1.0,
+      "mean": 7.5318627450980395,
+      "maximum": 98
+    }
+  },
+  "train_eval_deltas": {
+    "recall_at_1_eval_minus_train": 0.05854834063740921,
+    "recall_at_3_eval_minus_train": 0.04010169125362628,
+    "recall_at_5_eval_minus_train": 0.02860162952904144,
+    "recall_at_10_eval_minus_train": 0.025519258070489492,
+    "recall_at_20_eval_minus_train": 0.009672756825710338,
+    "mrr_eval_minus_train": 0.045235100145334495,
+    "ndcg_at_5_eval_minus_train": 0.04219557908239191,
+    "ndcg_at_10_eval_minus_train": 0.041250926755556305
+  },
+  "artifacts": {
+    "query_rankings": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod007_bm25_query_rankings.csv",
+    "results": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod007_bm25_retrieval_results.json"
+  },
+  "interpretation_notes": [
+    "BM25 is evaluated as a ranking baseline on the same frozen 101-candidate query pools used by MOD-004.",
+    "The existing target_observed field is normalized only for recognizing the already-defined observed positive candidate.",
+    "No new labels are created by this normalization.",
+    "Observable non-positive candidates are not treated as true-negative labels.",
+    "BM25 scores are retrieval scores and are not interpreted as probabilities or calibrated confidence.",
+    "This operation is a baseline comparison and does not select a final T6 model."
+  ]
+}

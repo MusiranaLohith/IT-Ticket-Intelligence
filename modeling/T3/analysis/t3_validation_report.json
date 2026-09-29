@@ -1,0 +1,26 @@
+{
+  "input": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/derived/t3_features.csv",
+  "rows": 30839,
+  "columns": [
+    "ID",
+    "Creation time",
+    "Summary",
+    "Description",
+    "target_severity"
+  ],
+  "unique_ids": 30839,
+  "duplicate_ids": 0,
+  "invalid_target_values": [],
+  "invalid_creation_times": 0,
+  "summary_blank": 0,
+  "description_blank": 821,
+  "no_usable_text": 0,
+  "target_counts": {
+    "S1": 227,
+    "S2": 2886,
+    "S3": 20955,
+    "S4": 6771
+  },
+  "forbidden_columns_present": [],
+  "status": "PASS"
+}

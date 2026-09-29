@@ -1,0 +1,44 @@
+{
+  "operation": "DEPLOY-OP-071",
+  "title": "Navigation State Isolation",
+  "status": "PASS",
+  "purpose": "Make landing, workspace, analysis and research views mutually exclusive.",
+  "modified_files": [
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/app.js"
+  ],
+  "unmodified_files": [
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/index.html",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/style.css"
+  ],
+  "backup": "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/app.js.before-deploy-op071",
+  "checks": {
+    "STATE_RESET_INCLUDES_RESEARCH": true,
+    "ANALYSIS_HIDES_RESEARCH": true,
+    "LANDING_STATE_APPLIED": true,
+    "WORKSPACE_STATE_APPLIED": true,
+    "ANALYSIS_STATE_APPLIED": true,
+    "RESEARCH_STATE_APPLIED": true,
+    "SINGLE_API_PRESERVED": true,
+    "BATCH_API_PRESERVED": true,
+    "BATCH_SELECTION_PRESERVED": true,
+    "DETAIL_RENDERER_PRESERVED": true,
+    "TICKET_PIPELINE_ABSENT": true,
+    "SKLEARN_ABSENT": true,
+    "PREDICT_BATCH_ABSENT": true,
+    "INDEX_UNCHANGED": true,
+    "STYLE_UNCHANGED": true
+  },
+  "hashes_before": {
+    "app.js": "8de847acd04c41f181cc4628009453c24d9a4852057bf9a863303abba8cc2675",
+    "index.html": "152795b3897e9c3444ca63fe3c01cfb81adbda83675ea8ed01109b2a6df77a6b",
+    "style.css": "4daf4d1d56f0b61ab3586166e05a45887062e0f5c3dde7631ca611901d1926e6"
+  },
+  "hashes_after": {
+    "app.js": "87ce98e9a925c8e0d436c2a0ca96c033a0ce39df61218431a1a8fd4063cacdf3",
+    "index.html": "152795b3897e9c3444ca63fe3c01cfb81adbda83675ea8ed01109b2a6df77a6b",
+    "style.css": "4daf4d1d56f0b61ab3586166e05a45887062e0f5c3dde7631ca611901d1926e6"
+  },
+  "frozen_runtime_modified": false,
+  "backend_modified": false,
+  "model_artifacts_modified": false
+}

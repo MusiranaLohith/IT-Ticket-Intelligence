@@ -1,0 +1,369 @@
+IT SUPPORT T1 — LINEAR SVM ERROR REVIEW
+
+TOTAL EVALUATION ERRORS: 26
+
+Review purpose:
+Inspect actual misclassifications without modifying
+labels, splits, source data, or model artifacts.
+
+================================================================================
+ACTUAL: Active Directory
+PREDICTED: Software
+COUNT: 4
+================================================================================
+
+
+CASE 1
+ID: 976
+ACTUAL: Active Directory
+PREDICTED: Software
+SOURCE_PARTITION: train
+SOURCE_ROW_X: 1561
+SOURCE_ROW_Y: 1561
+TEXT:
+[TICKET ID] - New Support Ticket received  - acesso
+
+
+CASE 2
+ID: 1260
+ACTUAL: Active Directory
+PREDICTED: Software
+SOURCE_PARTITION: train
+SOURCE_ROW_X: 330
+SOURCE_ROW_Y: 330
+TEXT:
+[TICKET ID] - New Support Ticket received  - Acesso
+
+
+CASE 3
+ID: 888
+ACTUAL: Active Directory
+PREDICTED: Software
+SOURCE_PARTITION: test
+SOURCE_ROW_X: 70
+SOURCE_ROW_Y: 70
+TEXT:
+[TICKET ID] - New Support Ticket received  - acesso
+
+
+CASE 4
+ID: 892
+ACTUAL: Active Directory
+PREDICTED: Software
+SOURCE_PARTITION: test
+SOURCE_ROW_X: 656
+SOURCE_ROW_Y: 656
+TEXT:
+[TICKET ID] - New Support Ticket received  - Acesso
+
+
+================================================================================
+ACTUAL: Active Directory
+PREDICTED: Support general
+COUNT: 4
+================================================================================
+
+
+CASE 1
+ID: 1441
+ACTUAL: Active Directory
+PREDICTED: Support general
+SOURCE_PARTITION: test
+SOURCE_ROW_X: 616
+SOURCE_ROW_Y: 616
+TEXT:
+[COMPANY]ify[LOCATION][SERVER]
+
+
+CASE 2
+ID: 2618
+ACTUAL: Active Directory
+PREDICTED: Support general
+SOURCE_PARTITION: test
+SOURCE_ROW_X: 345
+SOURCE_ROW_Y: 345
+TEXT:
+Basis User - [TICKET ID] - [NAME] ([COMPANY]. [LOCATION])Service Request: Basis User     Create Windows account for internal user  [NAME] ([COMPANY]. [LOCATION])     Firstname:  [NAME]  Lastname:  Nadj  Cost Center:  44265  Company:  [COMPANY] Seme YU D.O.O.  Department:  [COMPANY]_MA-[ADDRESS]  ZIP:  [ADDRESS]  City:  [ADDRESS]  Country:  [ADDRESS]  Office:       Important: Please set the EA10 to the following value: 13315 (leave blank. when empty)  Please create Exchange and Skype account.  The user needs at least the following access permissions:  Access to [SOFTWARE] ([SERVER])  Requestor:  [NAME] (EXTERNAL. [LOCATION])     Desired date:  Sep  3 2018 12:00AM     Additional information:  [LOCATION]Emloyee!  !!!! She also need mobile device accounts only - for A6 and iPad with [COMPANY] CRM. but this options are not existing in the Matrix shop!!!!
+
+
+CASE 3
+ID: 792
+ACTUAL: Active Directory
+PREDICTED: Support general
+SOURCE_PARTITION: train
+SOURCE_ROW_X: 1382
+SOURCE_ROW_Y: 1382
+TEXT:
+[TICKET ID] - A Support Ticket was forwarded to you  - Basis User - [USERNAME] - [NAME] ([COMPANY]. [LOCATION])
+
+
+CASE 4
+ID: 793
+ACTUAL: Active Directory
+PREDICTED: Support general
+SOURCE_PARTITION: test
+SOURCE_ROW_X: 635
+SOURCE_ROW_Y: 635
+TEXT:
+[TICKET ID] - A Support Ticket was forwarded to you  - Basis User - [USERNAME] - [NAME] ([COMPANY]. [LOCATION])
+
+
+================================================================================
+ACTUAL: O365
+PREDICTED: Software
+COUNT: 3
+================================================================================
+
+
+CASE 1
+ID: 1683
+ACTUAL: O365
+PREDICTED: Software
+SOURCE_PARTITION: train
+SOURCE_ROW_X: 252
+SOURCE_ROW_Y: 252
+TEXT:
+External vendors have e3 license again (previously removed on [DRIVER_ID])
+
+
+CASE 2
+ID: 1266
+ACTUAL: O365
+PREDICTED: Software
+SOURCE_PARTITION: test
+SOURCE_ROW_X: 177
+SOURCE_ROW_Y: 177
+TEXT:
+[TICKET ID] - A Support Ticket was forwarded to your role  - Instalação do Visio
+
+
+CASE 3
+ID: 1388
+ACTUAL: O365
+PREDICTED: Software
+SOURCE_PARTITION: train
+SOURCE_ROW_X: 642
+SOURCE_ROW_Y: 642
+TEXT:
+[TICKET ID] - A Support Ticket was forwarded to your role  - Problemas com e-mail Contas a Pagar
+
+
+================================================================================
+ACTUAL: O365
+PREDICTED: Support general
+COUNT: 2
+================================================================================
+
+
+CASE 1
+ID: 1171
+ACTUAL: O365
+PREDICTED: Support general
+SOURCE_PARTITION: train
+SOURCE_ROW_X: 1539
+SOURCE_ROW_Y: 1539
+TEXT:
+[TICKET ID] - New Support Ticket received  - enviar e_mail
+
+
+CASE 2
+ID: 678
+ACTUAL: O365
+PREDICTED: Support general
+SOURCE_PARTITION: train
+SOURCE_ROW_X: 258
+SOURCE_ROW_Y: 258
+TEXT:
+[TICKET ID] - New Support Ticket received  - Block email from [NAME] Enright
+
+
+================================================================================
+ACTUAL: O365
+PREDICTED: Active Directory
+COUNT: 2
+================================================================================
+
+
+CASE 1
+ID: 1158
+ACTUAL: O365
+PREDICTED: Active Directory
+SOURCE_PARTITION: train
+SOURCE_ROW_X: 104
+SOURCE_ROW_Y: 104
+TEXT:
+[TICKET ID] - New Support Ticket received  -[LOCATION]on samsung J7 not working. Lost Login credentials. 
+
+
+CASE 2
+ID: 1390
+ACTUAL: O365
+PREDICTED: Active Directory
+SOURCE_PARTITION: train
+SOURCE_ROW_X: 1472
+SOURCE_ROW_Y: 1472
+TEXT:
+[TICKET ID] - New Support Ticket received  - problema con activacion de office
+
+
+================================================================================
+ACTUAL: Software
+PREDICTED: Support general
+COUNT: 6
+================================================================================
+
+
+CASE 1
+ID: 75
+ACTUAL: Software
+PREDICTED: Support general
+SOURCE_PARTITION: train
+SOURCE_ROW_X: 614
+SOURCE_ROW_Y: 614
+TEXT:
+Initiated by [COMPANY][LOCATION]- Vulnerable Internet Explorer on [SERVER]
+
+
+CASE 2
+ID: 3248
+ACTUAL: Software
+PREDICTED: Support general
+SOURCE_PARTITION: train
+SOURCE_ROW_X: 1471
+SOURCE_ROW_Y: 1471
+TEXT:
+Initiated by [COMPANY][LOCATION]- Vulnerable Internet Explorer on [SERVER]
+
+
+CASE 3
+ID: 3662
+ACTUAL: Software
+PREDICTED: Support general
+SOURCE_PARTITION: train
+SOURCE_ROW_X: 1571
+SOURCE_ROW_Y: 1571
+TEXT:
+Initiated by [COMPANY][LOCATION]- Vulnerable Internet Explorer on [SERVER]
+
+
+CASE 4
+ID: 3838
+ACTUAL: Software
+PREDICTED: Support general
+SOURCE_PARTITION: train
+SOURCE_ROW_X: 800
+SOURCE_ROW_Y: 800
+TEXT:
+Initiated by [COMPANY][LOCATION]- Vulnerable Internet Explorere on [SERVER]
+
+
+CASE 5
+ID: 5708
+ACTUAL: Software
+PREDICTED: Support general
+SOURCE_PARTITION: train
+SOURCE_ROW_X: 1500
+SOURCE_ROW_Y: 1500
+TEXT:
+Initiated by [COMPANY][LOCATION]- Vulnerable Internet Explorere on [SERVER]
+
+
+CASE 6
+ID: 8214
+ACTUAL: Software
+PREDICTED: Support general
+SOURCE_PARTITION: train
+SOURCE_ROW_X: 1408
+SOURCE_ROW_Y: 1408
+TEXT:
+Initiated by [COMPANY][LOCATION]- Vulnerable Internet Explorere on [SERVER]
+
+
+================================================================================
+ACTUAL: Software
+PREDICTED: Fileservice
+COUNT: 1
+================================================================================
+
+
+CASE 1
+ID: 1017
+ACTUAL: Software
+PREDICTED: Fileservice
+SOURCE_PARTITION: train
+SOURCE_ROW_X: 1260
+SOURCE_ROW_Y: 1260
+TEXT:
+[TICKET ID] - New Support Ticket received  - Abrir pasta de arquivos do google Drive
+
+
+================================================================================
+ACTUAL: Computer-Services
+PREDICTED: Support general
+COUNT: 1
+================================================================================
+
+
+CASE 1
+ID: 971
+ACTUAL: Computer-Services
+PREDICTED: Support general
+SOURCE_PARTITION: train
+SOURCE_ROW_X: 1457
+SOURCE_ROW_Y: 1457
+TEXT:
+[TICKET ID] - New Support Ticket received  - Britos LapTop
+
+
+================================================================================
+ACTUAL: Computer-Services
+PREDICTED: Fileservice
+COUNT: 1
+================================================================================
+
+
+CASE 1
+ID: 845
+ACTUAL: Computer-Services
+PREDICTED: Fileservice
+SOURCE_PARTITION: test
+SOURCE_ROW_X: 50
+SOURCE_ROW_Y: 50
+TEXT:
+[TICKET ID] - New Support Ticket received  - unlock my personal external[LOCATION]drive
+
+
+================================================================================
+ACTUAL: Fileservice
+PREDICTED: Software
+COUNT: 1
+================================================================================
+
+
+CASE 1
+ID: 997
+ACTUAL: Fileservice
+PREDICTED: Software
+SOURCE_PARTITION: train
+SOURCE_ROW_X: 132
+SOURCE_ROW_Y: 132
+TEXT:
+[TICKET ID] - New Support Ticket received  - Acesso
+
+
+================================================================================
+ACTUAL: Active Directory
+PREDICTED: Fileservice
+COUNT: 1
+================================================================================
+
+
+CASE 1
+ID: 10745
+ACTUAL: Active Directory
+PREDICTED: Fileservice
+SOURCE_PARTITION: train
+SOURCE_ROW_X: 119
+SOURCE_ROW_Y: 119
+TEXT:
+Konto wird immer wieder gesperrt

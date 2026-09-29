@@ -1,0 +1,59 @@
+{
+  "operation": "DEPLOY-OP-056",
+  "title": "Fixed Viewport Home and Workspace Navigation",
+  "status": "PASS",
+  "scope": [
+    "fixed home viewport",
+    "fixed research workspace viewport",
+    "remove VIEW RESEARCH scrollIntoView behaviour",
+    "non-scrolling research focus feedback",
+    "analysis workspace scrolling preserved"
+  ],
+  "modified_files": [
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/app.js",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/style.css"
+  ],
+  "backups": [
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/app.js.before-deploy-op056",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/style.css.before-deploy-op056"
+  ],
+  "untouched": [
+    "deployment/frontend/index.html",
+    "deployment/backend/app.py",
+    "modeling/FMP/deployment/runtime/ticket_pipeline.py",
+    "modeling/FMP/deployment/runtime/ticket_explanation.py",
+    "frozen modeling artifacts",
+    "T1\u2013T11 runtime semantics",
+    "single-ticket analysis logic",
+    "batch analysis logic"
+  ],
+  "checks": {
+    "OP056_MARKER_APP": true,
+    "OP056_MARKER_STYLE": true,
+    "VIEW_RESEARCH_SCROLL_REMOVED": true,
+    "VIEW_RESEARCH_HANDLER_PRESENT": true,
+    "VIEWPORT_STATE_FUNCTION": true,
+    "LANDING_VIEW_STATE": true,
+    "WORKSPACE_VIEW_STATE": true,
+    "ANALYSIS_VIEW_STATE": true,
+    "LANDING_FIXED_VIEW": true,
+    "WORKSPACE_FIXED_VIEW": true,
+    "LANDING_OVERFLOW_LOCK": true,
+    "WORKSPACE_OVERFLOW_LOCK": true,
+    "ANALYSIS_SCROLL_PRESERVED": true,
+    "RESEARCH_FOCUS_PRESENT": true,
+    "BACK_TO_HOME_PRESERVED": true,
+    "SHOW_ANALYSIS_PRESERVED": true,
+    "TICKET_PIPELINE_NOT_FRONTEND": true,
+    "SKLEARN_NOT_FRONTEND": true,
+    "PREDICT_BATCH_NOT_FRONTEND": true
+  },
+  "hashes_before": {
+    "app.js": "8dc96a573c9b57b55d065072ad128ff2477bbc12fbffb10104de993bc57783cb",
+    "style.css": "59cb81f1c6a01bc6818718292208facca1e772d39b7e34c9bec6c2ae485147a4"
+  },
+  "hashes_after": {
+    "app.js": "2078b3dd784424176b6ada560c599ea6d8828945048743326995efe9f913cc14",
+    "style.css": "60282bd9a07f28d48318b5c66080f2055014f09e1bfdca540fa40cecf3b16393"
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "task_id": "T6",
+  "operation_id": "MOD-010",
+  "operation_name": "Corrected Hybrid Lexical Reconstruction",
+  "status": "COMPLETED",
+  "lexical_reconciliation": {
+    "rows": 274922,
+    "mean_absolute_difference": 0.0,
+    "maximum_absolute_difference": 0.0,
+    "tolerance": 1e-12,
+    "hard_gate_passed": true
+  },
+  "semantic_branch": {
+    "source": "MOD-009",
+    "recomputed": false,
+    "rows": 274922,
+    "positive_rows": 2722
+  },
+  "population": {
+    "train_rows": 192506,
+    "eval_rows": 82416,
+    "queries": 2722,
+    "candidate_rows": 274922
+  },
+  "weight_selection": {
+    "selection_split": "TRAIN",
+    "criteria": [
+      "Recall@20",
+      "MRR",
+      "Recall@10"
+    ],
+    "predeclared_weights": [
+      0.1,
+      0.25,
+      0.5,
+      0.75,
+      0.9
+    ],
+    "candidates": [
+      {
+        "recall_at_1": 0.6883525708289612,
+        "recall_at_3": 0.8058761804826863,
+        "recall_at_5": 0.8504721930745016,
+        "recall_at_10": 0.9003147953830011,
+        "recall_at_20": 0.9386149003147953,
+        "mrr": 0.7626198302371436,
+        "ndcg_at_5": 0.7764153637061393,
+        "ndcg_at_10": 0.792572164214175,
+        "semantic_weight": 0.1,
+        "lexical_weight": 0.9
+      },
+      {
+        "recall_at_1": 0.6988457502623295,
+        "recall_at_3": 0.8189926547743966,
+        "recall_at_5": 0.8551941238195173,
+        "recall_at_10": 0.9076600209863589,
+        "recall_at_20": 0.9391395592864638,
+        "mrr": 0.772044723171477,
+        "ndcg_at_5": 0.784743380796249,
+        "ndcg_at_10": 0.8018167616721369,
+        "semantic_weight": 0.25,
+        "lexical_weight": 0.75
+      },
+      {
+        "recall_at_1": 0.7151101783840503,
+        "recall_at_3": 0.8310598111227702,
+        "recall_at_5": 0.8683105981112277,
+        "recall_at_10": 0.9087093389296957,
+        "recall_at_20": 0.9412381951731374,
+        "mrr": 0.78601572432888,
+        "ndcg_at_5": 0.7997962430147244,
+        "ndcg_at_10": 0.8129118924678418,
+        "semantic_weight": 0.5,
+        "lexical_weight": 0.5
+      },
+      {
+        "recall_at_1": 0.720881427072403,
+        "recall_at_3": 0.8189926547743966,
+        "recall_at_5": 0.8546694648478489,
+        "recall_at_10": 0.8940188877229801,
+        "recall_at_20": 0.9286463798530955,
+        "mrr": 0.7820643304009404,
+        "ndcg_at_5": 0.7930160268155204,
+        "ndcg_at_10": 0.8057863312035729,
+        "semantic_weight": 0.75,
+        "lexical_weight": 0.25
+      },
+      {
+        "recall_at_1": 0.6778593913955928,
+        "recall_at_3": 0.7796432318992654,
+        "recall_at_5": 0.8195173137460651,
+        "recall_at_10": 0.8688352570828961,
+        "recall_at_20": 0.9097586568730325,
+        "mrr": 0.7448818725653366,
+        "ndcg_at_5": 0.7547364914135477,
+        "ndcg_at_10": 0.7706774554165718,
+        "semantic_weight": 0.9,
+        "lexical_weight": 0.09999999999999998
+      }
+    ],
+    "selected": {
+      "recall_at_1": 0.7151101783840503,
+      "recall_at_3": 0.8310598111227702,
+      "recall_at_5": 0.8683105981112277,
+      "recall_at_10": 0.9087093389296957,
+      "recall_at_20": 0.9412381951731374,
+      "mrr": 0.78601572432888,
+      "ndcg_at_5": 0.7997962430147244,
+      "ndcg_at_10": 0.8129118924678418,
+      "semantic_weight": 0.5,
+      "lexical_weight": 0.5
+    }
+  },
+  "metrics": {
+    "train": {
+      "tfidf": {
+        "recall_at_1": 0.6825813221406086,
+        "recall_at_3": 0.8037775445960126,
+        "recall_at_5": 0.8457502623294858,
+        "recall_at_10": 0.8950682056663168,
+        "recall_at_20": 0.9349422875131165,
+        "mrr": 0.7570524363940124,
+        "ndcg_at_5": 0.7710528634146957,
+        "ndcg_at_10": 0.7870240584017848
+      },
+      "semantic": {
+        "recall_at_1": 0.6138509968520461,
+        "recall_at_3": 0.7376705141657922,
+        "recall_at_5": 0.776495278069255,
+        "recall_at_10": 0.8410283315844701,
+        "recall_at_20": 0.8924449108079748,
+        "mrr": 0.6920960794185801,
+        "ndcg_at_5": 0.7019579608095231,
+        "ndcg_at_10": 0.7228845362233872
+      },
+      "corrected_hybrid": {
+        "recall_at_1": 0.7151101783840503,
+        "recall_at_3": 0.8310598111227702,
+        "recall_at_5": 0.8683105981112277,
+        "recall_at_10": 0.9087093389296957,
+        "recall_at_20": 0.9412381951731374,
+        "mrr": 0.78601572432888,
+        "ndcg_at_5": 0.7997962430147244,
+        "ndcg_at_10": 0.8129118924678418
+      }
+    },
+    "eval": {
+      "tfidf": {
+        "recall_at_1": 0.6936274509803921,
+        "recall_at_3": 0.8333333333333334,
+        "recall_at_5": 0.8762254901960784,
+        "recall_at_10": 0.9105392156862745,
+        "recall_at_20": 0.9399509803921569,
+        "mrr": 0.7764268513472535,
+        "ndcg_at_5": 0.7954814890792703,
+        "ndcg_at_10": 0.8066454422871442
+      },
+      "semantic": {
+        "recall_at_1": 0.6372549019607843,
+        "recall_at_3": 0.7328431372549019,
+        "recall_at_5": 0.7916666666666666,
+        "recall_at_10": 0.8529411764705882,
+        "recall_at_20": 0.9080882352941176,
+        "mrr": 0.7083441457211728,
+        "ndcg_at_5": 0.7181874509411946,
+        "ndcg_at_10": 0.7380812408732352
+      },
+      "corrected_hybrid": {
+        "recall_at_1": 0.7450980392156863,
+        "recall_at_3": 0.8517156862745098,
+        "recall_at_5": 0.8897058823529411,
+        "recall_at_10": 0.9215686274509803,
+        "recall_at_20": 0.9473039215686274,
+        "mrr": 0.8093031701244353,
+        "ndcg_at_5": 0.823910859998925,
+        "ndcg_at_10": 0.8341663767650592
+      }
+    }
+  },
+  "controls": {
+    "raw_dataset_read": false,
+    "target_modification": false,
+    "candidate_pool_modification": false,
+    "semantic_recomputation": false,
+    "model_training": false,
+    "calibration": false,
+    "threshold_optimization": false,
+    "evaluation_weight_selection": false
+  },
+  "artifacts": {
+    "corrected_rankings": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod010_corrected_hybrid_query_rankings.csv",
+    "results": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod010_corrected_hybrid_results.json",
+    "lexical_reconciliation": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod010_corrected_lexical_reconciliation.csv"
+  },
+  "runtime_seconds": 414.68
+}

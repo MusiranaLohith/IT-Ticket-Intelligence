@@ -1,0 +1,4119 @@
+{
+  "operation": "FMP-06 OP-009",
+  "scope": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling",
+  "candidate_count": 283,
+  "candidates": [
+    {
+      "path": "modeling/FMP/scripts/fmp06_op009_runtime_entrypoint_inventory.py",
+      "syntax_valid": true,
+      "functions": [
+        "inspect_python_file",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "FastAPI": 2,
+        "predict": 5,
+        "predict_proba": 2,
+        "decision_function": 2,
+        "joblib.load": 2,
+        "inference": 2,
+        "orchestrator": 7,
+        "pipeline": 3,
+        "api": 4,
+        "argparse": 2
+      }
+    },
+    {
+      "path": "modeling/FMP/scripts/fmp02_inference_artifact_interface_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "inspect_artifact",
+        "inspect_csv",
+        "inspect_joblib",
+        "inspect_json",
+        "json_summary",
+        "main",
+        "object_interface",
+        "sha256_file"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 7,
+        "predict_proba": 1,
+        "decision_function": 1,
+        "joblib.load": 1,
+        "inference": 6,
+        "pipeline": 1
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod036_op007_model_interface_validation.py",
+      "syntax_valid": true,
+      "functions": [
+        "inspect_model",
+        "load_json"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 13,
+        "predict_proba": 4,
+        "decision_function": 4,
+        "joblib.load": 1,
+        "inference": 1,
+        "pipeline": 7
+      }
+    },
+    {
+      "path": "modeling/FMP/scripts/fmp02_manifest_artifact_interface_validation.py",
+      "syntax_valid": true,
+      "functions": [
+        "has_method",
+        "load_json",
+        "main",
+        "task_passes",
+        "type_name",
+        "validate_t2_t3",
+        "validate_t4",
+        "validate_t5",
+        "validate_t6",
+        "validate_t7"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 19,
+        "predict_proba": 4,
+        "decision_function": 2,
+        "joblib.load": 6,
+        "inference": 2
+      }
+    },
+    {
+      "path": "modeling/T5/scripts/t5_mod009_locked_evaluation.py",
+      "syntax_valid": true,
+      "functions": [
+        "calculate_metrics",
+        "combine_text",
+        "fail",
+        "load_evaluation_rows",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 16,
+        "predict_proba": 2,
+        "joblib.load": 2,
+        "inference": 4,
+        "pipeline": 2
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod036_op009_t1_model_resolution.py",
+      "syntax_valid": true,
+      "functions": [
+        "inspect_model",
+        "load_json"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 18,
+        "predict_proba": 8,
+        "decision_function": 4,
+        "joblib.load": 1,
+        "pipeline": 5
+      }
+    },
+    {
+      "path": "modeling/T1/scripts/fmp01_t1_artifact_structure_check.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 11,
+        "predict_proba": 5,
+        "decision_function": 5,
+        "joblib.load": 1
+      }
+    },
+    {
+      "path": "modeling/T1/scripts/fmp01_t1_calibration_feasibility.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 7,
+        "predict_proba": 3,
+        "decision_function": 5,
+        "joblib.load": 1
+      }
+    },
+    {
+      "path": "modeling/T5/scripts/t5_mod009_evaluation_schema_diagnostic.py",
+      "syntax_valid": true,
+      "functions": [
+        "calculate_metrics",
+        "combine_text",
+        "fail",
+        "load_evaluation_rows",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 16,
+        "predict_proba": 2,
+        "joblib.load": 2,
+        "pipeline": 2
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod033_op003_t4_t5_generation_feasibility_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "find_contract_terms",
+        "relevant_lines",
+        "source_files"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 13,
+        "predict_proba": 2,
+        "decision_function": 1,
+        "api": 1
+      }
+    },
+    {
+      "path": "modeling/FMP/scripts/fmp02_build_t2_t7_inference_manifest.py",
+      "syntax_valid": true,
+      "functions": [
+        "main",
+        "p"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 6,
+        "inference": 4,
+        "pipeline": 1
+      }
+    },
+    {
+      "path": "modeling/FMP/scripts/fmp02_final_inference_component_completeness.py",
+      "syntax_valid": true,
+      "functions": [
+        "main",
+        "targeted_candidates"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 5,
+        "inference": 5,
+        "pipeline": 1
+      }
+    },
+    {
+      "path": "modeling/T1/scripts/fmp01_t1_development_calibration_feasibility.py",
+      "syntax_valid": true,
+      "functions": [
+        "fail"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 10,
+        "decision_function": 4,
+        "joblib.load": 1
+      }
+    },
+    {
+      "path": "modeling/T1/scripts/fmp01_t1_final_closure.py",
+      "syntax_valid": true,
+      "functions": [
+        "load_json"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 2,
+        "predict_proba": 1,
+        "decision_function": 3
+      }
+    },
+    {
+      "path": "modeling/T1/splits/t1_it_support_3model_compare.py",
+      "syntax_valid": true,
+      "functions": [
+        "__init__",
+        "deltas",
+        "evaluate_model",
+        "load_predictor",
+        "main",
+        "normalize_text",
+        "predict",
+        "subset_metrics"
+      ],
+      "classes": [
+        "FeatureModelAdapter"
+      ],
+      "runtime_keyword_hits": {
+        "predict": 32,
+        "joblib.load": 1,
+        "pipeline": 1
+      }
+    },
+    {
+      "path": "modeling/T1/splits/t1_it_support_baseline.py",
+      "syntax_valid": true,
+      "functions": [
+        "clean",
+        "create_model",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 9,
+        "predict_proba": 1,
+        "pipeline": 4
+      }
+    },
+    {
+      "path": "modeling/T1/splits/t1_vscode_baseline.py",
+      "syntax_valid": true,
+      "functions": [
+        "build_text",
+        "clean",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 13,
+        "predict_proba": 1,
+        "pipeline": 10
+      }
+    },
+    {
+      "path": "modeling/T10/scripts/t10_op035_t5_native_empirical_validation.py",
+      "syntax_valid": true,
+      "functions": [
+        "check"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 9,
+        "inference": 1,
+        "pipeline": 11
+      }
+    },
+    {
+      "path": "modeling/T11/scripts/t11_op003_feedback_taxonomy_boundary.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 7,
+        "inference": 1,
+        "pipeline": 6
+      }
+    },
+    {
+      "path": "modeling/T11/scripts/t11_op009_candidate_selection_review_boundary.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 5,
+        "inference": 1,
+        "pipeline": 6
+      }
+    },
+    {
+      "path": "modeling/T2/scripts/t2_final_test_evaluation.py",
+      "syntax_valid": true,
+      "functions": [
+        "load_test_data",
+        "main",
+        "predict_with_artifact"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 24,
+        "joblib.load": 1,
+        "pipeline": 1
+      }
+    },
+    {
+      "path": "modeling/T4/scripts/t4_baseline_r1.py",
+      "syntax_valid": true,
+      "functions": [
+        "combined_text",
+        "load_data",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 9,
+        "decision_function": 1,
+        "joblib.load": 2
+      }
+    },
+    {
+      "path": "modeling/T5/scripts/t5_mod011_final_closure.py",
+      "syntax_valid": true,
+      "functions": [
+        "fail",
+        "load_json",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 4,
+        "inference": 1,
+        "pipeline": 6
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod024_oof_fold_model_contract_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "chronological_records",
+        "find_first_existing",
+        "get_id",
+        "load_csv",
+        "load_json",
+        "parse_creation",
+        "print_header",
+        "print_json_value",
+        "recursive_find_keys",
+        "search_text"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 20,
+        "predict_proba": 1,
+        "decision_function": 1
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod032_op002_controlled_fusion_training.py",
+      "syntax_valid": true,
+      "functions": [
+        "evaluate_candidate",
+        "make_fusion_pipeline"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 43,
+        "predict_proba": 1,
+        "pipeline": 5
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod036_op003_authoritative_artifact_resolution.py",
+      "syntax_valid": true,
+      "functions": [
+        "inspect_artifact",
+        "inspect_csv_header",
+        "inspect_json",
+        "is_excluded",
+        "score_candidate",
+        "task_matches"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 15,
+        "inference": 2,
+        "pipeline": 1
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod036_op019_priority_component_baseline.py",
+      "syntax_valid": true,
+      "functions": [
+        "get_id",
+        "get_target",
+        "get_text",
+        "main",
+        "prepare",
+        "resolve_column",
+        "target_distribution"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 20,
+        "predict_proba": 1,
+        "api": 1
+      }
+    },
+    {
+      "path": "modeling/FMP/scripts/fmp02_final_artifact_reconciliation.py",
+      "syntax_valid": true,
+      "functions": [
+        "exists",
+        "report"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 5,
+        "pipeline": 1
+      }
+    },
+    {
+      "path": "modeling/FMP/scripts/fmp05_op008_empirical_policy_boundary_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "contains_text",
+        "get_nested",
+        "load_json",
+        "main",
+        "walk"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1,
+        "pipeline": 6
+      }
+    },
+    {
+      "path": "modeling/FMP/scripts/fmp06_op002_runtime_producer_consumer_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "find_python_files",
+        "inspect_json",
+        "inspect_python",
+        "load_json",
+        "main",
+        "recursive_strings"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 4,
+        "inference": 1
+      }
+    },
+    {
+      "path": "modeling/T1/splits/t1_it_support_char_svm.py",
+      "syntax_valid": true,
+      "functions": [
+        "main",
+        "normalize_text"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 10,
+        "pipeline": 1
+      }
+    },
+    {
+      "path": "modeling/T1/splits/t1_it_support_group_eval.py",
+      "syntax_valid": true,
+      "functions": [
+        "main",
+        "normalize_text",
+        "safe_float"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 37,
+        "joblib.load": 1
+      }
+    },
+    {
+      "path": "modeling/T1/splits/t1_it_support_model_subset_compare.py",
+      "syntax_valid": true,
+      "functions": [
+        "accuracy",
+        "analyze_model",
+        "main",
+        "normalize_text"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 44,
+        "joblib.load": 2
+      }
+    },
+    {
+      "path": "modeling/T1/splits/t1_it_support_subset_analysis.py",
+      "syntax_valid": true,
+      "functions": [
+        "main",
+        "normalize_text"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 13,
+        "joblib.load": 1
+      }
+    },
+    {
+      "path": "modeling/T1/splits/t1_it_support_svm.py",
+      "syntax_valid": true,
+      "functions": [
+        "load_csv",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 9,
+        "pipeline": 8
+      }
+    },
+    {
+      "path": "modeling/T1/splits/t1_it_support_svm_errors.py",
+      "syntax_valid": true,
+      "functions": [
+        "load_csv",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 18,
+        "joblib.load": 1
+      }
+    },
+    {
+      "path": "modeling/T1/splits/t1_vscode_advanced.py",
+      "syntax_valid": true,
+      "functions": [
+        "build_text",
+        "clean",
+        "create_model",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 9,
+        "pipeline": 4
+      }
+    },
+    {
+      "path": "modeling/T1/splits/t1_vscode_feature_compare.py",
+      "syntax_valid": true,
+      "functions": [
+        "build_combined_text",
+        "build_summary_text",
+        "clean",
+        "create_model",
+        "evaluate_model",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 6,
+        "pipeline": 5
+      }
+    },
+    {
+      "path": "modeling/T10/scripts/t10_op002_task_evidence_contract_registry.py",
+      "syntax_valid": true,
+      "functions": [],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 18,
+        "inference": 6
+      }
+    },
+    {
+      "path": "modeling/T10/scripts/t10_op017_t5_locked_generation_provenance.py",
+      "syntax_valid": true,
+      "functions": [
+        "inspect_t5_structure",
+        "main",
+        "print_context",
+        "read_text",
+        "search_files"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 6,
+        "inference": 1
+      }
+    },
+    {
+      "path": "modeling/T10/scripts/t10_op017_t5_provenance_limitation.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1,
+        "inference": 1
+      }
+    },
+    {
+      "path": "modeling/T10/scripts/t10_op031_t2_t10_contract_alignment.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 23,
+        "inference": 5
+      }
+    },
+    {
+      "path": "modeling/T10/scripts/t10_op036_final_empirical_synthesis.py",
+      "syntax_valid": true,
+      "functions": [
+        "check"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 2,
+        "inference": 6
+      }
+    },
+    {
+      "path": "modeling/T11/scripts/t11_op005_feedback_validation_conflict_contract.py",
+      "syntax_valid": true,
+      "functions": [
+        "check"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 18,
+        "pipeline": 6
+      }
+    },
+    {
+      "path": "modeling/T11/scripts/t11_op006_learning_signal_training_boundary_contract.py",
+      "syntax_valid": true,
+      "functions": [
+        "check"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 8,
+        "pipeline": 9
+      }
+    },
+    {
+      "path": "modeling/T11/scripts/t11_op007_retraining_trigger_validation_contract.py",
+      "syntax_valid": true,
+      "functions": [
+        "check"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 3,
+        "pipeline": 9
+      }
+    },
+    {
+      "path": "modeling/T2/scripts/t2_baseline.py",
+      "syntax_valid": true,
+      "functions": [
+        "build_text",
+        "fail",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 5,
+        "predict_proba": 1
+      }
+    },
+    {
+      "path": "modeling/T2/scripts/t2_class_weighted.py",
+      "syntax_valid": true,
+      "functions": [
+        "build_text",
+        "fail",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 5,
+        "predict_proba": 1
+      }
+    },
+    {
+      "path": "modeling/T2/scripts/t2_error_analysis.py",
+      "syntax_valid": true,
+      "functions": [
+        "build_text",
+        "distribution",
+        "fail",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 44,
+        "joblib.load": 1
+      }
+    },
+    {
+      "path": "modeling/T2/scripts/t2_svm.py",
+      "syntax_valid": true,
+      "functions": [
+        "build_text",
+        "fail",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 4,
+        "decision_function": 1
+      }
+    },
+    {
+      "path": "modeling/T3/scripts/t3_error_analysis.py",
+      "syntax_valid": true,
+      "functions": [
+        "combine_text",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 25,
+        "joblib.load": 1
+      }
+    },
+    {
+      "path": "modeling/T3/scripts/t3_locked_test.py",
+      "syntax_valid": true,
+      "functions": [],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 21,
+        "joblib.load": 1
+      }
+    },
+    {
+      "path": "modeling/T4/scripts/t4_baseline.py",
+      "syntax_valid": true,
+      "functions": [
+        "candidate_coverage_metrics",
+        "class_concentration",
+        "combine_features",
+        "fail",
+        "main",
+        "share",
+        "top_k_accuracy"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 32,
+        "predict_proba": 1
+      }
+    },
+    {
+      "path": "modeling/T4/scripts/t4_ranking_contract.py",
+      "syntax_valid": true,
+      "functions": [],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 3,
+        "pipeline": 2
+      }
+    },
+    {
+      "path": "modeling/T5/scripts/t5_mod005_baseline_training.py",
+      "syntax_valid": true,
+      "functions": [
+        "combine_text",
+        "fail",
+        "load_dataset",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 15,
+        "predict_proba": 1
+      }
+    },
+    {
+      "path": "modeling/T5/scripts/t5_mod007_calibration_comparison.py",
+      "syntax_valid": true,
+      "functions": [
+        "apply_sigmoid_calibrator",
+        "calculate_metrics",
+        "combine_text",
+        "deterministic_group_value",
+        "fail",
+        "fit_sigmoid_calibrator",
+        "load_rows",
+        "main",
+        "normalized_content_key",
+        "target_stats"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 15,
+        "predict_proba": 3
+      }
+    },
+    {
+      "path": "modeling/T5/scripts/t5_mod008_model_selection_lock.py",
+      "syntax_valid": true,
+      "functions": [
+        "fail",
+        "main",
+        "require_close"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1,
+        "pipeline": 5
+      }
+    },
+    {
+      "path": "modeling/T5/scripts/t5_mod009_mod007_artifact_contents.py",
+      "syntax_valid": true,
+      "functions": [
+        "describe_object"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 10,
+        "joblib.load": 1
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod005_prediction_artifact_inventory.py",
+      "syntax_valid": true,
+      "functions": [
+        "human_size",
+        "inspect_csv_header",
+        "should_skip",
+        "task_mentions"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 24,
+        "inference": 1
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod015_native_baseline_definition.py",
+      "syntax_valid": true,
+      "functions": [
+        "binary_average_precision",
+        "binary_metrics",
+        "clean_pair",
+        "confusion_binary",
+        "pct",
+        "print_binary_result",
+        "read_csv",
+        "read_ids",
+        "safe_float"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 41,
+        "inference": 1
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod028b_t2_final_implementation_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "ast_string",
+        "header",
+        "load_json",
+        "print_matching_lines",
+        "require_file",
+        "source"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 5,
+        "pipeline": 1
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod029_joint_oof_generation.py",
+      "syntax_valid": true,
+      "functions": [
+        "build_common_population",
+        "extract_function_source",
+        "fit_t2_fold",
+        "fit_t7_fold",
+        "load_csv",
+        "log",
+        "main",
+        "make_blocks",
+        "normalize_creation",
+        "recover_t2_namespace",
+        "recover_t7_namespace",
+        "require_columns",
+        "resolve_splits",
+        "sha256_file",
+        "sort_creation",
+        "t7_history_before",
+        "validate_input_schemas",
+        "validate_oof_result",
+        "validate_split_integrity",
+        "validate_unique_ids"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 74,
+        "predict_proba": 1
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod032_op004_chronological_robustness_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "evaluate",
+        "make_model"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 51,
+        "pipeline": 3
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod034_op012_t5_controlled_ablation.py",
+      "syntax_valid": true,
+      "functions": [
+        "make_features"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 3,
+        "predict_proba": 2
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod036_op004_native_input_validation.py",
+      "syntax_valid": true,
+      "functions": [
+        "inspect",
+        "inspect_csv",
+        "inspect_json"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 4,
+        "inference": 4
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod036_op005_t1_t3_output_resolution.py",
+      "syntax_valid": true,
+      "functions": [
+        "excluded",
+        "inspect_csv",
+        "inspect_json",
+        "score",
+        "task_match"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 7,
+        "inference": 4
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod036_op008_t1_t3_artifact_structure.py",
+      "syntax_valid": true,
+      "functions": [
+        "describe_value",
+        "inventory_directory",
+        "load_json",
+        "walk"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1,
+        "joblib.load": 1
+      }
+    },
+    {
+      "path": "modeling/T9/scripts/t9_mod037_op002_native_output_inventory.py",
+      "syntax_valid": true,
+      "functions": [
+        "filename_matches",
+        "inspect_csv",
+        "inspect_file",
+        "inspect_json",
+        "inspect_npz",
+        "main",
+        "safe_relative",
+        "scalar_summary",
+        "semantic_matches"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 23,
+        "api": 1
+      }
+    },
+    {
+      "path": "modeling/T9/scripts/t9_mod037_op013b_t7_survival_semantics_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "audit_alignment",
+        "audit_contract",
+        "build_controls",
+        "compare_prediction_artifacts",
+        "find_id_column",
+        "inspect_prediction_artifact",
+        "inspect_supporting_audits",
+        "load_json",
+        "load_split",
+        "main",
+        "normalize_columns",
+        "require_file",
+        "validate_controls",
+        "validate_t9_boundary"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 74,
+        "api": 2
+      }
+    },
+    {
+      "path": "modeling/FMP/scripts/fmp03_op001_t8_native_interface_inspection.py",
+      "syntax_valid": true,
+      "functions": [
+        "load_json",
+        "print_tree"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/FMP/scripts/fmp03_op002_native_evidence_interface_extraction.py",
+      "syntax_valid": true,
+      "functions": [
+        "classify_task",
+        "discover_contracts",
+        "flatten_keys",
+        "inspect_contract",
+        "main",
+        "read_json"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 2
+      }
+    },
+    {
+      "path": "modeling/FMP/scripts/fmp03_op003_t8_layer_interface_reconciliation.py",
+      "syntax_valid": true,
+      "functions": [
+        "discover_t8_json",
+        "flatten",
+        "inspect_artifact",
+        "main",
+        "read_json",
+        "semantic_matches"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/FMP/scripts/fmp03_op004_t8_interface_closure_check.py",
+      "syntax_valid": true,
+      "functions": [
+        "main",
+        "read_json"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/FMP/scripts/fmp04_op001_t9_reliability_reconciliation.py",
+      "syntax_valid": true,
+      "functions": [
+        "discover_json_files",
+        "flatten",
+        "main",
+        "read_json",
+        "semantic_matches"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/FMP/scripts/fmp04_op002_t9_final_closure_verification.py",
+      "syntax_valid": true,
+      "functions": [
+        "main",
+        "read_json"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/FMP/scripts/fmp04_op002r_t9_final_closure_verification.py",
+      "syntax_valid": true,
+      "functions": [
+        "main",
+        "read_json"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/FMP/scripts/fmp04_op003_t9_t10_handoff_verification.py",
+      "syntax_valid": true,
+      "functions": [
+        "main",
+        "read_json"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/FMP/scripts/fmp05_op001_t10_existing_policy_closure_inspection.py",
+      "syntax_valid": true,
+      "functions": [
+        "inspect_root",
+        "main",
+        "print_json_summary",
+        "safe_json_read",
+        "targeted_files"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/FMP/scripts/fmp05_op002_locate_t10_evidence.py",
+      "syntax_valid": true,
+      "functions": [
+        "main",
+        "matches_name",
+        "search_content"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/FMP/scripts/fmp05_op003_extract_t10_authoritative_evidence.py",
+      "syntax_valid": true,
+      "functions": [
+        "flatten_strings",
+        "keyword_matches",
+        "load_json",
+        "main",
+        "summarize_value"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 2
+      }
+    },
+    {
+      "path": "modeling/FMP/scripts/fmp05_op003r_t10_source_evidence.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 2
+      }
+    },
+    {
+      "path": "modeling/FMP/scripts/fmp05_op004_t10_policy_evidence_reconciliation.py",
+      "syntax_valid": true,
+      "functions": [
+        "find_terms",
+        "flatten",
+        "load_json",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/FMP/scripts/fmp05_op004r_t10_artifact_path_reconciliation.py",
+      "syntax_valid": true,
+      "functions": [
+        "inspect_json",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/FMP/scripts/fmp05_op005_empirical_policy_support_assessment.py",
+      "syntax_valid": true,
+      "functions": [
+        "find_policy_evidence",
+        "flatten",
+        "load_json",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/FMP/scripts/fmp05_op006_native_policy_evidence_inventory.py",
+      "syntax_valid": true,
+      "functions": [
+        "inspect_csv",
+        "inspect_json",
+        "main",
+        "read_json"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 8
+      }
+    },
+    {
+      "path": "modeling/FMP/scripts/fmp05_op007_extract_native_operating_evidence.py",
+      "syntax_valid": true,
+      "functions": [
+        "collect_matching_fields",
+        "flatten",
+        "load_json",
+        "main",
+        "print_matches",
+        "read_csv_schema"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 12
+      }
+    },
+    {
+      "path": "modeling/FMP/scripts/fmp06_op001_e2e_runtime_interface_inventory.py",
+      "syntax_valid": true,
+      "functions": [
+        "inspect_artifact",
+        "main",
+        "read_csv_header",
+        "read_json",
+        "summarize_stage"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 5
+      }
+    },
+    {
+      "path": "modeling/FMP/scripts/fmp06_op006_t9_op014_dependency_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "collect_string_constants",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 2
+      }
+    },
+    {
+      "path": "modeling/FMP/scripts/fmp06_op007_t9_input_contract_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "extract_strings",
+        "keyword_context",
+        "load_json",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/FMP/scripts/fmp06_op008_t10_consumer_contract_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "collect_function_names",
+        "collect_imports",
+        "extract_strings",
+        "load_json",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 2
+      }
+    },
+    {
+      "path": "modeling/T1/analysis  /t1_it_support_svm_error_review.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 10
+      }
+    },
+    {
+      "path": "modeling/T1/contracts/t1_contract.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/T1/contracts/t1_vscode_contract.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 6
+      }
+    },
+    {
+      "path": "modeling/T1/derived/t1_vscode_derive.py",
+      "syntax_valid": true,
+      "functions": [
+        "canonicalize_target",
+        "choose_target",
+        "clean_value",
+        "extract_targets",
+        "main",
+        "remove_target_marker_matches"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 2
+      }
+    },
+    {
+      "path": "modeling/T1/scripts/fmp01_t1_evidence_consistency.py",
+      "syntax_valid": true,
+      "functions": [
+        "get_nested",
+        "load_json",
+        "main",
+        "print_value"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 2
+      }
+    },
+    {
+      "path": "modeling/T1/splits/t1_it_support_baseline_analysis.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/T1/splits/t1_it_support_svm_analysis.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/T1/splits/t1_vscode_baseline_analysis.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/T10/scripts/t10_op001_specification_integrity.py",
+      "syntax_valid": true,
+      "functions": [],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 2
+      }
+    },
+    {
+      "path": "modeling/T10/scripts/t10_op003_decision_state_contract.py",
+      "syntax_valid": true,
+      "functions": [],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 2
+      }
+    },
+    {
+      "path": "modeling/T10/scripts/t10_op004_automation_gate_contract.py",
+      "syntax_valid": true,
+      "functions": [],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 3
+      }
+    },
+    {
+      "path": "modeling/T10/scripts/t10_op005_missing_uncertainty_conflict_contract.py",
+      "syntax_valid": true,
+      "functions": [
+        "main",
+        "run_checks"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 4
+      }
+    },
+    {
+      "path": "modeling/T10/scripts/t10_op006_evidence_combination_boundary_contract.py",
+      "syntax_valid": true,
+      "functions": [
+        "main",
+        "run_checks"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 5
+      }
+    },
+    {
+      "path": "modeling/T10/scripts/t10_op007_evidence_sufficiency_decision_readiness_contract.py",
+      "syntax_valid": true,
+      "functions": [
+        "main",
+        "run_checks"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 3
+      }
+    },
+    {
+      "path": "modeling/T10/scripts/t10_op008_empirical_validation_policy_boundary_contract.py",
+      "syntax_valid": true,
+      "functions": [
+        "main",
+        "run_checks"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 8
+      }
+    },
+    {
+      "path": "modeling/T10/scripts/t10_op009_human_review_defer_boundary_contract.py",
+      "syntax_valid": true,
+      "functions": [
+        "main",
+        "run_checks"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 3
+      }
+    },
+    {
+      "path": "modeling/T10/scripts/t10_op011_empirical_policy_readiness.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [
+        "EvidenceItem",
+        "PolicyRequirement"
+      ],
+      "runtime_keyword_hits": {
+        "predict": 4
+      }
+    },
+    {
+      "path": "modeling/T10/scripts/t10_op012_t5_native_anchor_eligibility.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [
+        "Check"
+      ],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/T10/scripts/t10_op013_auxiliary_traceability_overlap.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [
+        "AuditCheck"
+      ],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/T10/scripts/t10_op014_artifact_traceability_overlap.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [
+        "ArtifactAudit"
+      ],
+      "runtime_keyword_hits": {
+        "predict": 6
+      }
+    },
+    {
+      "path": "modeling/T10/scripts/t10_op015_deterministic_t5_auxiliary_intersection.py",
+      "syntax_valid": true,
+      "functions": [
+        "inspect_file",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 2
+      }
+    },
+    {
+      "path": "modeling/T10/scripts/t10_op016_canonical_artifact_resolution.py",
+      "syntax_valid": true,
+      "functions": [
+        "calculate_id_intersection",
+        "inspect_csv",
+        "inspect_npz",
+        "main",
+        "print_csv_result",
+        "require_file"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 10
+      }
+    },
+    {
+      "path": "modeling/T10/scripts/t10_op016r_t5_locked_identity_resolution.py",
+      "syntax_valid": true,
+      "functions": [
+        "inspect_csv",
+        "main",
+        "require"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 4
+      }
+    },
+    {
+      "path": "modeling/T10/scripts/t10_op018_traceable_empirical_evidence_registry.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 3
+      }
+    },
+    {
+      "path": "modeling/T10/scripts/t10_op019_native_empirical_correctness_registry.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 6
+      }
+    },
+    {
+      "path": "modeling/T10/scripts/t10_op020_empirical_decision_boundary_readiness.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 2
+      }
+    },
+    {
+      "path": "modeling/T10/scripts/t10_op021_empirical_policy_anchor_registry.py",
+      "syntax_valid": true,
+      "functions": [
+        "candidate_is_structurally_eligible",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 3
+      }
+    },
+    {
+      "path": "modeling/T10/scripts/t10_op022_task_native_empirical_validation_design.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 6
+      }
+    },
+    {
+      "path": "modeling/T10/scripts/t10_op023_t2_native_empirical_validation.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 40
+      }
+    },
+    {
+      "path": "modeling/T10/scripts/t10_op024_t2_error_operating_region.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 31
+      }
+    },
+    {
+      "path": "modeling/T10/scripts/t10_op025_t2_priority_transition_analysis.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 32
+      }
+    },
+    {
+      "path": "modeling/T10/scripts/t10_op026_t2_prediction_class_reliability.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 85
+      }
+    },
+    {
+      "path": "modeling/T10/scripts/t10_op027_t2_support_stratified_error.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 26
+      }
+    },
+    {
+      "path": "modeling/T10/scripts/t10_op028_t2_correctness_by_transition_distance.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 13
+      }
+    },
+    {
+      "path": "modeling/T10/scripts/t10_op029_t2_error_cohort_traceability.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 9
+      }
+    },
+    {
+      "path": "modeling/T10/scripts/t10_op030_t2_empirical_sufficiency.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 22
+      }
+    },
+    {
+      "path": "modeling/T10/scripts/t10_op034_t7_native_empirical_validation.py",
+      "syntax_valid": true,
+      "functions": [],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 10
+      }
+    },
+    {
+      "path": "modeling/T11/scripts/t11_op001_feedback_readiness_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "check"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 3
+      }
+    },
+    {
+      "path": "modeling/T11/scripts/t11_op002_prediction_learning_contract.py",
+      "syntax_valid": true,
+      "functions": [
+        "check"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 28
+      }
+    },
+    {
+      "path": "modeling/T11/scripts/t11_op003_prediction_feedback_eligibility_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "check",
+        "inspect_json",
+        "read_csv_header"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 66
+      }
+    },
+    {
+      "path": "modeling/T11/scripts/t11_op004_feedback_source_outcome_schema_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "check"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 20
+      }
+    },
+    {
+      "path": "modeling/T11/scripts/t11_op004_feedback_validation_admission.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 17
+      }
+    },
+    {
+      "path": "modeling/T11/scripts/t11_op008_learning_signal_population_integrity_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "check"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 23
+      }
+    },
+    {
+      "path": "modeling/T11/scripts/t11_op010_feedback_evidence_strength.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 5
+      }
+    },
+    {
+      "path": "modeling/T11/scripts/t11_op011_retraining_decision_boundary.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 2
+      }
+    },
+    {
+      "path": "modeling/T11/scripts/t11_op012_feedback_lifecycle_state_machine.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/T11/scripts/t11_op013_cross_task_semantic_protection.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 6
+      }
+    },
+    {
+      "path": "modeling/T11/scripts/t11_op014_feedback_provenance_auditability.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 16
+      }
+    },
+    {
+      "path": "modeling/T11/scripts/t11_op015_final_readiness_closure.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 10
+      }
+    },
+    {
+      "path": "modeling/T2/contracts/t2_contract.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 7
+      }
+    },
+    {
+      "path": "modeling/T2/scripts/t2_advanced_contract.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 3
+      }
+    },
+    {
+      "path": "modeling/T2/scripts/t2_baseline_comparison.py",
+      "syntax_valid": true,
+      "functions": [
+        "fail",
+        "get_evaluation_block",
+        "load_json",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/T2/scripts/t2_candidate_selection.py",
+      "syntax_valid": true,
+      "functions": [
+        "detect_compute_environment",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 5
+      }
+    },
+    {
+      "path": "modeling/T2/scripts/t2_final_closure.py",
+      "syntax_valid": true,
+      "functions": [
+        "load_json",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 18
+      }
+    },
+    {
+      "path": "modeling/T2/scripts/t2_final_generalization_analysis.py",
+      "syntax_valid": true,
+      "functions": [
+        "build_confusion_counts",
+        "build_distributions",
+        "class_error_summary",
+        "load_json",
+        "load_predictions",
+        "main",
+        "top_errors"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 41
+      }
+    },
+    {
+      "path": "modeling/T2/scripts/t2_final_model_selection.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/T2/scripts/t2_generate_plots.py",
+      "syntax_valid": true,
+      "functions": [
+        "build_confusion_matrix",
+        "create_confusion_matrix_plot",
+        "create_per_class_f1_plot",
+        "create_performance_plot",
+        "load_json",
+        "load_predictions",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 16
+      }
+    },
+    {
+      "path": "modeling/T2/scripts/t2_model_contract.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 9
+      }
+    },
+    {
+      "path": "modeling/T2/scripts/t2_split.py",
+      "syntax_valid": true,
+      "functions": [
+        "class_counts",
+        "fail",
+        "main",
+        "timestamp_summary"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/T2/scripts/t2_validate.py",
+      "syntax_valid": true,
+      "functions": [
+        "fail",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/T2/scripts/t2_weighted_svm.py",
+      "syntax_valid": true,
+      "functions": [
+        "build_text",
+        "fail",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 4
+      }
+    },
+    {
+      "path": "modeling/T3/scripts/t3_advanced_branch_decision.py",
+      "syntax_valid": true,
+      "functions": [],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 12
+      }
+    },
+    {
+      "path": "modeling/T3/scripts/t3_advanced_model_contract.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 3
+      }
+    },
+    {
+      "path": "modeling/T3/scripts/t3_baseline.py",
+      "syntax_valid": true,
+      "functions": [
+        "combine_text",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 9
+      }
+    },
+    {
+      "path": "modeling/T3/scripts/t3_baseline_comparison.py",
+      "syntax_valid": true,
+      "functions": [
+        "load_json",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/T3/scripts/t3_class_weighted.py",
+      "syntax_valid": true,
+      "functions": [
+        "combine_text",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 9
+      }
+    },
+    {
+      "path": "modeling/T3/scripts/t3_classical_comparison.py",
+      "syntax_valid": true,
+      "functions": [
+        "load_metrics",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/T3/scripts/t3_distilbert_feasibility.py",
+      "syntax_valid": true,
+      "functions": [
+        "__getitem__",
+        "__init__",
+        "__len__",
+        "build_text",
+        "load_split"
+      ],
+      "classes": [
+        "TicketDataset"
+      ],
+      "runtime_keyword_hits": {
+        "predict": 15
+      }
+    },
+    {
+      "path": "modeling/T3/scripts/t3_final_closure.py",
+      "syntax_valid": true,
+      "functions": [],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 4
+      }
+    },
+    {
+      "path": "modeling/T3/scripts/t3_generalization_analysis.py",
+      "syntax_valid": true,
+      "functions": [],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 22
+      }
+    },
+    {
+      "path": "modeling/T3/scripts/t3_generate_plots.py",
+      "syntax_valid": true,
+      "functions": [],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 10
+      }
+    },
+    {
+      "path": "modeling/T3/scripts/t3_inspect_errors.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 5
+      }
+    },
+    {
+      "path": "modeling/T3/scripts/t3_linear_svm.py",
+      "syntax_valid": true,
+      "functions": [
+        "clean_text",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 7
+      }
+    },
+    {
+      "path": "modeling/T3/scripts/t3_materialize.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/T3/scripts/t3_model_comparison.py",
+      "syntax_valid": true,
+      "functions": [
+        "load_json",
+        "main",
+        "validate_common_conditions"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/T3/scripts/t3_model_contract.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 4
+      }
+    },
+    {
+      "path": "modeling/T3/scripts/t3_selection_criterion.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/T3/scripts/t3_svm_class_weighted.py",
+      "syntax_valid": true,
+      "functions": [
+        "clean_text",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 7
+      }
+    },
+    {
+      "path": "modeling/T3/scripts/t3_transformer_smoke_test.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/T3/scripts/t3_word_char.py",
+      "syntax_valid": true,
+      "functions": [
+        "combine_text",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 9
+      }
+    },
+    {
+      "path": "modeling/T4/scripts/t4_baseline_contract.py",
+      "syntax_valid": true,
+      "functions": [
+        "fail",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 9
+      }
+    },
+    {
+      "path": "modeling/T4/scripts/t4_materialize.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 2
+      }
+    },
+    {
+      "path": "modeling/T4/scripts/t4_mod007_retrieval_analysis.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/T4/scripts/t4_mod007_similarity_analysis.py",
+      "syntax_valid": true,
+      "functions": [
+        "main",
+        "percentile"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 2
+      }
+    },
+    {
+      "path": "modeling/T4/scripts/t4_mod007_true_assignee_coverage.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/T4/scripts/t4_mod014.py",
+      "syntax_valid": true,
+      "functions": [
+        "load_json",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/T4/scripts/t4_model_contract.py",
+      "syntax_valid": true,
+      "functions": [
+        "main",
+        "sha256_file"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 4
+      }
+    },
+    {
+      "path": "modeling/T4/scripts/t4_r1_analysis.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 29
+      }
+    },
+    {
+      "path": "modeling/T4/scripts/t4_ranking_baseline.py",
+      "syntax_valid": true,
+      "functions": [
+        "bucket_for_support",
+        "build_text",
+        "main",
+        "ndcg_binary",
+        "rank_assignees",
+        "rank_assignees_for_row",
+        "reciprocal_rank",
+        "validate_data"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 5
+      }
+    },
+    {
+      "path": "modeling/T4/scripts/t4_split.py",
+      "syntax_valid": true,
+      "functions": [
+        "class_support",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 2
+      }
+    },
+    {
+      "path": "modeling/T4/scripts/t4_validate.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 2
+      }
+    },
+    {
+      "path": "modeling/T5/scripts/t5_mod001_contract_reconciliation.py",
+      "syntax_valid": true,
+      "functions": [
+        "count_rows_and_target",
+        "fail",
+        "inspect_id_uniqueness",
+        "inspect_split_id_uniqueness",
+        "main",
+        "read_header",
+        "validate_schema"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/T5/scripts/t5_mod002_baseline_contract.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/T5/scripts/t5_mod006_calibration_analysis.py",
+      "syntax_valid": true,
+      "functions": [
+        "calculate_ece",
+        "fail",
+        "main",
+        "probability_summary",
+        "threshold_analysis"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 33
+      }
+    },
+    {
+      "path": "modeling/T5/scripts/t5_mod009_artifact_diagnostic.py",
+      "syntax_valid": true,
+      "functions": [],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/T5/scripts/t5_mod009_recover_mod007_vectorizer.py",
+      "syntax_valid": true,
+      "functions": [
+        "combine_text",
+        "deterministic_group_value",
+        "fail",
+        "load_rows",
+        "main",
+        "normalized_content_key"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "joblib.load": 2
+      }
+    },
+    {
+      "path": "modeling/T5/scripts/t5_visualization.py",
+      "syntax_valid": true,
+      "functions": [
+        "load_json",
+        "main",
+        "save_plot"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 16
+      }
+    },
+    {
+      "path": "modeling/T6/scripts/t6_final_model_selection_and_closure.py",
+      "syntax_valid": true,
+      "functions": [
+        "load_json",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/T6/scripts/t6_mod010_corrected_hybrid_reconstruction.py",
+      "syntax_valid": true,
+      "functions": [
+        "build_mod004_text",
+        "clean_text",
+        "main",
+        "minmax_normalize_within_query",
+        "rank_metrics"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "joblib.load": 1
+      }
+    },
+    {
+      "path": "modeling/T6/scripts/t6_mod010_diagnose_mod009_lexical_reconstruction.py",
+      "syntax_valid": true,
+      "functions": [
+        "build_mod004_text",
+        "build_mod009_text",
+        "clean_text",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "joblib.load": 1
+      }
+    },
+    {
+      "path": "modeling/T6/scripts/t6_mod010_exact_tfidf_reproduction.py",
+      "syntax_valid": true,
+      "functions": [
+        "build_text",
+        "clean_text",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "joblib.load": 1
+      }
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod002_feature_source_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 6
+      }
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod004_feature_temporal_split_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "check_temporal_order",
+        "diagnostic_chronological_split",
+        "event_summary",
+        "fail",
+        "main",
+        "parse_creation",
+        "parse_int",
+        "percentile",
+        "summarize_feature",
+        "temporal_summary"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 26
+      }
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod006_survival_baselines.py",
+      "syntax_valid": true,
+      "functions": [
+        "build_censoring_survival",
+        "build_grouped_statistics",
+        "build_kaplan_meier",
+        "build_nelson_aalen",
+        "find_survival_landmark",
+        "ipcw_brier_score",
+        "load_split",
+        "main",
+        "percentile",
+        "survival_at_time"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 10
+      }
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod007_predictive_survival_baseline.py",
+      "syntax_valid": true,
+      "functions": [
+        "__init__",
+        "add",
+        "build_censoring_km",
+        "build_features",
+        "build_frequency_maps",
+        "censor_survival_at",
+        "censor_survival_before",
+        "efficient_harrell_concordance",
+        "fit",
+        "fit_standardizer",
+        "ipcw_brier",
+        "main",
+        "median_time",
+        "negative_log_likelihood",
+        "parse_creation",
+        "percentile",
+        "prefix_sum",
+        "read_rows",
+        "shape_",
+        "standardize",
+        "survival",
+        "text_features"
+      ],
+      "classes": [
+        "FenwickTree",
+        "WeibullAFT"
+      ],
+      "runtime_keyword_hits": {
+        "predict": 36
+      }
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod008_predictive_vs_reference_evaluation.py",
+      "syntax_valid": true,
+      "functions": [
+        "build_censoring_km",
+        "censor_survival_at",
+        "censor_survival_before",
+        "ipcw_brier",
+        "km_survival_at",
+        "load_evaluation",
+        "load_json",
+        "load_km_curve",
+        "load_predictions",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 88
+      }
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod009_survival_calibration.py",
+      "syntax_valid": true,
+      "functions": [
+        "calibration_for_horizon",
+        "load_evaluation",
+        "load_predictions",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 50
+      }
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod010_log_normal_aft_baseline.py",
+      "syntax_valid": true,
+      "functions": [
+        "G_at",
+        "G_before",
+        "__init__",
+        "add",
+        "censoring_km",
+        "concordance",
+        "fit",
+        "frequency_maps",
+        "ipcw_brier",
+        "main",
+        "make_features",
+        "median",
+        "objective",
+        "parse_creation",
+        "query",
+        "read_rows",
+        "sigma",
+        "standardize_fit",
+        "survival",
+        "text_features"
+      ],
+      "classes": [
+        "Fenwick",
+        "LogNormalAFT"
+      ],
+      "runtime_keyword_hits": {
+        "predict": 20
+      }
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod011_final_model_comparison.py",
+      "syntax_valid": true,
+      "functions": [
+        "find_column",
+        "find_horizon_column",
+        "load_csv",
+        "load_json",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 4
+      }
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod012_final_closure.py",
+      "syntax_valid": true,
+      "functions": [
+        "load_json",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 11
+      }
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod013_generate_visualizations.py",
+      "syntax_valid": true,
+      "functions": [
+        "load_json",
+        "require_column",
+        "save_figure",
+        "seconds_to_days"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 14
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod002_native_evidence_semantic_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "audit_file_exists",
+        "classify_availability",
+        "display_counter",
+        "is_blank",
+        "profile_availability",
+        "profile_columns"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 4
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod004_native_task_output_inventory.py",
+      "syntax_valid": true,
+      "functions": [
+        "display_value",
+        "is_blank",
+        "population_stats"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 6
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod006_prediction_artifact_content_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "classify_name",
+        "file_info",
+        "find_relevant_jsons",
+        "inspect_csv",
+        "inspect_json",
+        "inspect_npz",
+        "inspect_task_metadata",
+        "main",
+        "print_section",
+        "summarize_numeric_array",
+        "walk"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 15
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod007_prediction_population_id_provenance.py",
+      "syntax_valid": true,
+      "functions": [
+        "find_id_column",
+        "flatten_strings",
+        "load_json",
+        "normalize_id",
+        "print_header",
+        "print_population_result",
+        "read_csv_header_and_rows",
+        "read_csv_ids"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 16
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod008_targeted_prediction_provenance.py",
+      "syntax_valid": true,
+      "functions": [
+        "normalize_id",
+        "print_header",
+        "read_csv_column",
+        "read_csv_ids"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 12
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod009_prediction_evidence_eligibility_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "normalize_id",
+        "print_header",
+        "read_id_set"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 10
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod010_outcome_evaluation_target_feasibility.py",
+      "syntax_valid": true,
+      "functions": [
+        "flatten_strings",
+        "load_json",
+        "print_header",
+        "print_relevant_json_fields",
+        "read_header",
+        "read_rows_selected"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 19
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod011_fusion_evaluation_design_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "flatten_strings",
+        "load_json",
+        "print_header",
+        "read_header"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 16
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod012_cross_task_overlap_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "find_csv_references",
+        "find_strings",
+        "load_csv_ids",
+        "load_json",
+        "print_header"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 14
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod012_cross_task_split_inventory.py",
+      "syntax_valid": true,
+      "functions": [
+        "csv_header",
+        "discover_files",
+        "print_header"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 9
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod013_clean_candidate_population_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "load_ids",
+        "percentage",
+        "print_header"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 27
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod014_candidate_cohort_composition_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "build_rows_by_id",
+        "categorical_counts",
+        "clean_pair",
+        "compare_categorical",
+        "distribution",
+        "jensen_shannon",
+        "kl",
+        "mean",
+        "median",
+        "pct",
+        "print_distribution",
+        "read_csv",
+        "read_ids",
+        "safe_float",
+        "summarize_numeric"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 3
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod016_evidence_addition_ablation_design.py",
+      "syntax_valid": true,
+      "functions": [
+        "clean_multi",
+        "clean_pair",
+        "ids_from_rows",
+        "read_csv",
+        "read_ids",
+        "status_line"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 30
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod017_t2_t7_evidence_association.py",
+      "syntax_valid": true,
+      "functions": [
+        "accuracy",
+        "mean",
+        "median",
+        "pct",
+        "quantile",
+        "quartile_bins",
+        "read_csv",
+        "safe_float"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 41
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod018_fusion_training_population_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "json_files",
+        "read_csv",
+        "read_ids",
+        "text_contains"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 44
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod019_development_prediction_feasibility.py",
+      "syntax_valid": true,
+      "functions": [
+        "compare_prediction_to_split",
+        "flatten_strings",
+        "print_csv_info",
+        "read_csv_info",
+        "read_json",
+        "relevant_json_text"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 81
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod020_t7_development_generation_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "flatten_json",
+        "print_section",
+        "read_json",
+        "read_text"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 53
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod021_t7_oof_design_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "load_rows",
+        "parse_creation",
+        "print_header"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 22
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod022_joint_t2_t7_oof_design_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "chronological_records",
+        "get_id",
+        "inspect_source_tree",
+        "load_csv",
+        "parse_creation",
+        "print_header"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 33
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod023_t2_warmup_class_coverage_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "get_id",
+        "get_target",
+        "load_csv",
+        "load_json",
+        "parse_creation",
+        "print_header"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 17
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod025_t7_frozen_contract_discovery.py",
+      "syntax_valid": true,
+      "functions": [
+        "load_json",
+        "print_header",
+        "recursive_find_keys",
+        "relative",
+        "text_contains_any"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 21
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod026_t7_final_model_contract_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "load_json",
+        "print_header",
+        "recursive_find_keys",
+        "relative",
+        "search_script",
+        "show_selected_keys"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 23
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod027_t7_lognormal_feature_preprocessing_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "print_code_context",
+        "print_header",
+        "relative"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 14
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod028_joint_t2_t7_oof_protocol_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "audit_design",
+        "chronological_sort",
+        "class_counts",
+        "format_counts",
+        "get_first_existing_key",
+        "header",
+        "load_json",
+        "normalize_creation",
+        "print_population",
+        "read_csv",
+        "require_file"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 37
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod032_op003_development_result_audit.py",
+      "syntax_valid": true,
+      "functions": [],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 34
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod032_op005_t7_priority_association_audit.py",
+      "syntax_valid": true,
+      "functions": [],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 6
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod033_op001_t4_t5_prediction_artifact_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "classify_candidates",
+        "discover_files",
+        "inspect_csv"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 29
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod033_op002_t4_t5_validation_artifact_content_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "inspect_structure",
+        "summarize"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 11
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod033_op004_summary.py",
+      "syntax_valid": true,
+      "functions": [
+        "show_section"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod033_op004_t4_t5_development_provenance_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "classify_paths",
+        "discover_files",
+        "inspect_csv",
+        "inspect_json",
+        "inspect_text",
+        "section"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 15
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod033_op005_development_population_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "inspect_population",
+        "read_ids"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 3
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod033_op006_t4_t5_generation_contract.py",
+      "syntax_valid": true,
+      "functions": [],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 7
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod033_op007_t4_t5_development_generation.py",
+      "syntax_valid": true,
+      "functions": [
+        "fail"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 9
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod034_op001_t4_t5_fusion_contract_audit.py",
+      "syntax_valid": true,
+      "functions": [],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 2
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod034_op003_native_outcome_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "candidate_columns"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "api": 1
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod034_op011_t4_controlled_ablation.py",
+      "syntax_valid": true,
+      "functions": [],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 2
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod035_op001_final_synthesis.py",
+      "syntax_valid": true,
+      "functions": [],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod036_op001_decision_engine_inventory.py",
+      "syntax_valid": true,
+      "functions": [],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 3
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod036_op002_task_output_inventory.py",
+      "syntax_valid": true,
+      "functions": [
+        "discover_candidates",
+        "inspect_csv"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 2
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod036_op006_t1_t3_provenance_trace.py",
+      "syntax_valid": true,
+      "functions": [
+        "extract_recursive",
+        "load_json"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 4
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod036_op011_decision_engine_input_schema.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 8
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod036_op012_decision_engine_architecture.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 4
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod036_op013_learning_target_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "inspect_csv",
+        "inspect_json_targets",
+        "load_json",
+        "main",
+        "walk"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 2
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod036_op014_assignment_target_reconciliation.py",
+      "syntax_valid": true,
+      "functions": [
+        "inspect_csv",
+        "inspect_json",
+        "load_json",
+        "main",
+        "walk"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 4
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod036_op015_trainable_component_design.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 3
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod036_op016_component_contracts.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 10
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod036_op017_development_population.py",
+      "syntax_valid": true,
+      "functions": [
+        "build_index",
+        "find_id",
+        "main",
+        "norm_id",
+        "parse_float",
+        "parse_int",
+        "pick",
+        "read_csv",
+        "stable_hash"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 21
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod036_op018_population_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "build_ids",
+        "find_id",
+        "main",
+        "read_csv",
+        "summarize_columns"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 8
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod036_op019a_t2_native_population_resolution.py",
+      "syntax_valid": true,
+      "functions": [
+        "inspect_json",
+        "main",
+        "read_csv_header",
+        "score_csv"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 2
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod036_op019b_t2_split_resolution.py",
+      "syntax_valid": true,
+      "functions": [
+        "get_id",
+        "inspect_provenance",
+        "load_rows",
+        "main",
+        "target_distribution"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod036_op020_assignment_component_baseline.py",
+      "syntax_valid": true,
+      "functions": [
+        "aggregate_neighbor_scores",
+        "get_id",
+        "get_target",
+        "load_csv",
+        "main",
+        "resolve_column"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 12
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod036_op021_duplicate_component_baseline.py",
+      "syntax_valid": true,
+      "functions": [
+        "main",
+        "resolve_column",
+        "to_binary_target"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 14
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod036_op022_t7_output_resolution.py",
+      "syntax_valid": true,
+      "functions": [
+        "classify_column",
+        "inspect_csv",
+        "main",
+        "normalize",
+        "resolve_column"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 9
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod036_op023_resolution_component_baseline.py",
+      "syntax_valid": true,
+      "functions": [
+        "classify_resolution_context",
+        "main",
+        "normalize",
+        "parse_float",
+        "resolve_column"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 21
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod036_op024_decision_input_composition.py",
+      "syntax_valid": true,
+      "functions": [
+        "main",
+        "normalize",
+        "read_csv",
+        "resolve_id"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 4
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod036_op025_decision_engine_composition.py",
+      "syntax_valid": true,
+      "functions": [
+        "assignment_record",
+        "determine_overall_state",
+        "duplicate_record",
+        "load_component",
+        "main",
+        "normalize",
+        "parse_bool",
+        "parse_float",
+        "priority_record",
+        "read_csv",
+        "resolution_record",
+        "resolve_column"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 25
+      }
+    },
+    {
+      "path": "modeling/T8/scripts/t8_mod036_op026_decision_engine_validation.py",
+      "syntax_valid": true,
+      "functions": [
+        "load_json",
+        "main",
+        "read_csv",
+        "require"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 15
+      }
+    },
+    {
+      "path": "modeling/T9/scripts/t9_mod037_final_plots.py",
+      "syntax_valid": true,
+      "functions": [
+        "load_json",
+        "print_columns",
+        "require_file",
+        "savefig"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 11
+      }
+    },
+    {
+      "path": "modeling/T9/scripts/t9_mod037_op001_contract.py",
+      "syntax_valid": true,
+      "functions": [
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 5
+      }
+    },
+    {
+      "path": "modeling/T9/scripts/t9_mod037_op003_calibration_feasibility.py",
+      "syntax_valid": true,
+      "functions": [
+        "csv_columns",
+        "discover_t3_candidates",
+        "evaluate_t2",
+        "evaluate_t3",
+        "evaluate_t4",
+        "evaluate_t5",
+        "evaluate_t6",
+        "evaluate_t7",
+        "exists",
+        "inspect",
+        "inspect_csv",
+        "inspect_npz",
+        "load_csv_columns",
+        "main",
+        "rel"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 35
+      }
+    },
+    {
+      "path": "modeling/T9/scripts/t9_mod037_op004_native_output_acceptance.py",
+      "syntax_valid": true,
+      "functions": [
+        "accept_t2",
+        "accept_t4",
+        "accept_t5",
+        "accept_t6",
+        "accept_t7",
+        "fail",
+        "inspect_csv",
+        "inspect_npz",
+        "main",
+        "numeric_probability_check",
+        "passed",
+        "probability_matrix_check",
+        "rel",
+        "unique_id_check"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 13
+      }
+    },
+    {
+      "path": "modeling/T9/scripts/t9_mod037_op004a_t2_probability_resolution.py",
+      "syntax_valid": true,
+      "functions": [
+        "discover_candidates",
+        "inspect_csv",
+        "inspect_file",
+        "inspect_npz",
+        "main",
+        "rel",
+        "validate_probability_csv"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 18
+      }
+    },
+    {
+      "path": "modeling/T9/scripts/t9_mod037_op005_output_semantics_lock.py",
+      "syntax_valid": true,
+      "functions": [
+        "collect_failures",
+        "load_json",
+        "main",
+        "validate_boundary",
+        "validate_controls",
+        "validate_previous_operations"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 14
+      }
+    },
+    {
+      "path": "modeling/T9/scripts/t9_mod037_op006_t5_calibration_population_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "audit_alignment",
+        "audit_boundary_controls",
+        "audit_population",
+        "audit_probability_semantics",
+        "audit_t5_artifact",
+        "binary_target_valid",
+        "fail",
+        "finite_array",
+        "load_json",
+        "main",
+        "probability_range_valid",
+        "validate_op005"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 2
+      }
+    },
+    {
+      "path": "modeling/T9/scripts/t9_mod037_op007_t5_calibration_protocol.py",
+      "syntax_valid": true,
+      "functions": [
+        "load_json",
+        "main",
+        "validate_op005",
+        "validate_op006",
+        "validate_protocol"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 4
+      }
+    },
+    {
+      "path": "modeling/T9/scripts/t9_mod037_op008_t5_empirical_calibration.py",
+      "syntax_valid": true,
+      "functions": [
+        "bootstrap_metrics",
+        "clip_probabilities",
+        "compute_metrics",
+        "expected_calibration_error",
+        "load_json",
+        "load_native_data",
+        "main",
+        "reliability_table",
+        "validate_native_data",
+        "validate_previous_operations"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 8
+      }
+    },
+    {
+      "path": "modeling/T9/scripts/t9_mod037_op009_t5_uncertainty_reliability.py",
+      "syntax_valid": true,
+      "functions": [
+        "audit_bootstrap",
+        "audit_reliability",
+        "build_metric_summary",
+        "calculate_interval_overlap",
+        "fail",
+        "load_json",
+        "main",
+        "summarize_reliability",
+        "validate_previous_operations"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 3
+      }
+    },
+    {
+      "path": "modeling/T9/scripts/t9_mod037_op011_t4_ranking_evaluation.py",
+      "syntax_valid": true,
+      "functions": [
+        "audit_candidate_space",
+        "audit_output_semantics",
+        "audit_populations",
+        "audit_source_schema",
+        "audit_target_availability",
+        "build_controls",
+        "determine_calibration_readiness",
+        "evaluate_top1",
+        "load_json",
+        "load_native_sources",
+        "main",
+        "normalize_ids",
+        "normalize_targets",
+        "require_file",
+        "resolve_column",
+        "validate_controls",
+        "validate_op011a",
+        "validate_previous_operations"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 89
+      }
+    },
+    {
+      "path": "modeling/T9/scripts/t9_mod037_op011a_t4_prior_artifact_schema.py",
+      "syntax_valid": true,
+      "functions": [
+        "find_key_paths",
+        "find_paths_containing",
+        "inspect_artifact",
+        "load_json",
+        "main",
+        "summarize_value"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 4
+      }
+    },
+    {
+      "path": "modeling/T9/scripts/t9_mod037_op012a_t6_prior_artifact_schema.py",
+      "syntax_valid": true,
+      "functions": [
+        "audit_ranking_values",
+        "build_controls",
+        "frame_summary",
+        "inventory_other_rankings",
+        "load_json",
+        "main",
+        "require_file",
+        "resolve_column",
+        "resolve_op004",
+        "resolve_op005",
+        "resolve_ranking_columns",
+        "resolve_supporting_artifacts",
+        "resolve_t6_boundary",
+        "resolve_t6_contract",
+        "resolve_t6_data_schema",
+        "validate_controls",
+        "value_summary"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 2
+      }
+    },
+    {
+      "path": "modeling/T9/scripts/t9_mod037_op012b_t6_target_observation_audit.py",
+      "syntax_valid": true,
+      "functions": [
+        "audit_observation_by_split",
+        "audit_query_candidate_structure",
+        "audit_score_structure",
+        "audit_split_integrity",
+        "audit_target_observed",
+        "build_controls",
+        "load_json",
+        "load_t6_data",
+        "main",
+        "normalize_series",
+        "require_file",
+        "resolve_column",
+        "resolve_t6_schema",
+        "summarize_column",
+        "validate_controls",
+        "validate_prior_operations"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/T9/scripts/t9_mod037_op012c_t6_native_ranking_evaluation.py",
+      "syntax_valid": true,
+      "functions": [
+        "audit_eval_population",
+        "build_controls",
+        "build_query_results",
+        "calculate_ranking_metrics",
+        "evaluate_by_split",
+        "extract_query_level_results",
+        "load_json",
+        "load_rankings",
+        "main",
+        "normalize_id",
+        "require_file",
+        "validate_controls",
+        "validate_input",
+        "validate_prior_operations"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/T9/scripts/t9_mod037_op012d_t6_ranking_reliability.py",
+      "syntax_valid": true,
+      "functions": [
+        "bootstrap_metrics",
+        "build_controls",
+        "calculate_point_estimates",
+        "evaluate_split",
+        "load_json",
+        "load_query_results",
+        "main",
+        "metric_hit_at_k",
+        "metric_mrr",
+        "require_file",
+        "summarize_bootstrap",
+        "summarize_rank_distribution",
+        "validate_controls",
+        "validate_prior_operations",
+        "validate_query_results"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 1
+      }
+    },
+    {
+      "path": "modeling/T9/scripts/t9_mod037_op013a_t7_prior_artifact_schema.py",
+      "syntax_valid": true,
+      "functions": [
+        "build_controls",
+        "classify_path",
+        "discover_t7_files",
+        "identify_candidates",
+        "inspect_csv",
+        "inspect_file",
+        "inspect_json",
+        "inspect_parquet",
+        "load_json",
+        "main",
+        "safe_json_value",
+        "validate_controls",
+        "validate_t9_boundary"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 8
+      }
+    },
+    {
+      "path": "modeling/T9/scripts/t9_mod037_op013c_t7_full_evidence_scan.py",
+      "syntax_valid": true,
+      "functions": [
+        "audit_prior_operations",
+        "build_reconciliation",
+        "compact_value",
+        "compare_prediction_headers",
+        "discover_relevant_files",
+        "inspect_text_file",
+        "inspect_tree",
+        "json_structure",
+        "load_json",
+        "main",
+        "read_csv_header",
+        "read_json_evidence",
+        "recursive_text_hits",
+        "scan_high_value_files",
+        "scan_t7_scripts"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 23
+      }
+    },
+    {
+      "path": "modeling/T9/scripts/t9_mod037_op013c_t7_native_survival_evaluation.py",
+      "syntax_valid": true,
+      "functions": [
+        "align_prediction_to_eval",
+        "audit_prediction_ranges",
+        "build_controls",
+        "censoring_km",
+        "censoring_survival_at",
+        "censoring_survival_before",
+        "compare_native_outputs",
+        "find_id_column",
+        "harrell_c_index",
+        "ipcw_brier_score",
+        "kaplan_meier_event_survival",
+        "kaplan_meier_survival_at",
+        "load_eval_population",
+        "load_json",
+        "load_prediction",
+        "main",
+        "median_survival_descriptive_error",
+        "normalize_frame",
+        "require_file",
+        "survival_calibration_summary",
+        "validate_controls",
+        "validate_prior_operations"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 83
+      }
+    },
+    {
+      "path": "modeling/T9/scripts/t9_mod037_op013d_t7_existing_evidence_reconciliation.py",
+      "syntax_valid": true,
+      "functions": [
+        "build_controls",
+        "classify_remaining_gaps",
+        "extract_calibration_evidence",
+        "extract_final_closure",
+        "extract_final_comparison",
+        "extract_model_audit",
+        "extract_population_evidence",
+        "first_present",
+        "get_nested",
+        "load_csv",
+        "load_json",
+        "main",
+        "number_or_none",
+        "require_file",
+        "validate_artifact_presence",
+        "validate_controls",
+        "validate_prior_operations"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 19
+      }
+    },
+    {
+      "path": "modeling/T9/scripts/t9_mod037_op013e_t7_survival_uncertainty_reliability.py",
+      "syntax_valid": true,
+      "functions": [
+        "align_prediction",
+        "bootstrap_mean",
+        "build_horizon_components",
+        "censoring_km",
+        "censoring_survival_at",
+        "censoring_survival_before",
+        "find_id_column",
+        "load_evaluation",
+        "load_json",
+        "load_prediction",
+        "main",
+        "normalize_columns",
+        "reliability_summary",
+        "require_file",
+        "validate_prior_operations",
+        "weighted_brier"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 44
+      }
+    },
+    {
+      "path": "modeling/T9/scripts/t9_mod037_op013f_t7_evidence_synthesis.py",
+      "syntax_valid": true,
+      "functions": [
+        "assert_pass",
+        "build_controls",
+        "build_native_quantity_status",
+        "load_json",
+        "load_prior_evidence",
+        "main",
+        "reconcile_population",
+        "require_file",
+        "status_of",
+        "validate_controls",
+        "validate_existing_evidence",
+        "validate_semantics",
+        "validate_t7_prior_boundary",
+        "validate_uncertainty"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 4
+      }
+    },
+    {
+      "path": "modeling/T9/scripts/t9_mod037_op014_cross_task_evidence_synthesis.py",
+      "syntax_valid": true,
+      "functions": [
+        "build_controls",
+        "build_t8_interface",
+        "build_task_matrix",
+        "load_evidence",
+        "load_json",
+        "main",
+        "require_file",
+        "require_pass",
+        "validate_controls",
+        "validate_cross_task_restrictions",
+        "validate_t2_t3",
+        "validate_t4",
+        "validate_t5",
+        "validate_t6",
+        "validate_t7"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 5
+      }
+    },
+    {
+      "path": "modeling/T9/scripts/t9_mod037_op015_final_integrated_closure.py",
+      "syntax_valid": true,
+      "functions": [
+        "build_final_controls",
+        "build_final_evidence_statement",
+        "load_json",
+        "load_prior_evidence",
+        "main",
+        "require_pass",
+        "validate_contract",
+        "validate_final_controls",
+        "validate_op014",
+        "validate_semantic_lock",
+        "validate_task_evidence"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 3
+      }
+    },
+    {
+      "path": "modeling/project_consolidation.py",
+      "syntax_valid": true,
+      "functions": [
+        "load_json",
+        "main"
+      ],
+      "classes": [],
+      "runtime_keyword_hits": {
+        "predict": 4
+      }
+    }
+  ],
+  "interpretation": {
+    "orchestrator_confirmed": false,
+    "raw_ticket_pipeline_confirmed": false,
+    "automated_operation_engine_confirmed": false,
+    "note": "This operation only inventories candidate runtime entrypoints. A candidate is not considered an orchestrator until its actual producer/consumer interface is inspected."
+  },
+  "safeguards": {
+    "execution_of_project_models": false,
+    "model_training": false,
+    "prediction_generation": false,
+    "calibration": false,
+    "threshold_selection": false,
+    "artifact_modification": false,
+    "policy_change": false
+  },
+  "status": "PASS"
+}

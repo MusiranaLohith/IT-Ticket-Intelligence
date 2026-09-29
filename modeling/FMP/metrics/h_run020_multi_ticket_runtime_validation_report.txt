@@ -1,0 +1,64 @@
+======================================================================
+H-RUN-020 — MULTI-TICKET RUNTIME VALIDATION REPORT
+======================================================================
+
+Ticket ID : H-RUN-020-VPN-001
+Title     : VPN connection fails after password reset
+Process   : PASS
+Overall   : PASS_WITH_LIMITATIONS
+[T1] EXECUTED -> Support general
+[T2] EXECUTED -> P1
+[T3] EXECUTED -> S3
+[T4] EXECUTED -> ['1321841', '220663', '1405307', '125875', '947801']
+[T5] EXECUTED -> 0.0
+[T6] PARTIAL_NATIVE_RUNTIME -> []
+[T7] EXECUTED_WITH_SUPPORT_LIMITATION -> 19.629117104199928
+[T8] EXECUTED -> SUPPORTED_WITH_LIMITATIONS
+[T9] EXECUTED
+[T10] EXECUTED -> HUMAN_DECISION_REQUIRED
+[T11] EXECUTED -> AWAITING_OUTCOME
+
+Ticket ID : H-RUN-020-HW-001
+Title     : Laptop does not detect external monitor
+Process   : PASS
+Overall   : PASS_WITH_LIMITATIONS
+[T1] EXECUTED -> Computer-Services
+[T2] EXECUTED -> P2
+[T3] EXECUTED -> S3
+[T4] EXECUTED -> ['396614', '138905', '1245442', '1254019', '635089']
+[T5] EXECUTED -> 0.0
+[T6] PARTIAL_NATIVE_RUNTIME -> []
+[T7] EXECUTED_WITH_SUPPORT_LIMITATION -> 20.878617273422876
+[T8] EXECUTED -> SUPPORTED_WITH_LIMITATIONS
+[T9] EXECUTED
+[T10] EXECUTED -> HUMAN_DECISION_REQUIRED
+[T11] EXECUTED -> AWAITING_OUTCOME
+
+Ticket ID : H-RUN-020-ACC-001
+Title     : Unable to access corporate account
+Process   : PASS
+Overall   : PASS_WITH_LIMITATIONS
+[T1] EXECUTED -> Active Directory
+[T2] EXECUTED -> P1
+[T3] EXECUTED -> S3
+[T4] EXECUTED -> ['86537', '358327', '573238', '27559', '752982']
+[T5] EXECUTED -> 0.0
+[T6] PARTIAL_NATIVE_RUNTIME -> []
+[T7] EXECUTED_WITH_SUPPORT_LIMITATION -> 18.045111691441516
+[T8] EXECUTED -> SUPPORTED_WITH_LIMITATIONS
+[T9] EXECUTED
+[T10] EXECUTED -> HUMAN_DECISION_REQUIRED
+[T11] EXECUTED -> AWAITING_OUTCOME
+
+======================================================================
+FINAL STATUS: PASS_WITH_LIMITATIONS
+======================================================================
+
+[INTEGRITY]
+Frozen orchestrator unchanged : YES
+Model retraining              : NO
+Model modification            : NO
+Threshold optimization        : NO
+Locked test reuse             : NO
+Prediction modification       : NO
+Synthetic feedback            : NO

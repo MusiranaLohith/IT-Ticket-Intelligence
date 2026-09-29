@@ -1,0 +1,328 @@
+{
+  "task": "T7 Resolution-Time Estimation",
+  "operation": "MOD-009",
+  "status": "COMPLETE",
+  "purpose": "Calibration/reliability diagnostic for MOD-007 survival predictions.",
+  "evaluation_rows": 102764,
+  "prediction_alignment": {
+    "id_match": true,
+    "duration_match": true,
+    "event_match": true
+  },
+  "methodological_note": "This operation is a calibration-style diagnostic. It is not a formal IPCW survival calibration estimator. Tickets censored before the horizon are excluded from the observed-outcome proxy.",
+  "horizons": [
+    {
+      "horizon_seconds": 211583.0,
+      "evaluation_rows": 102764,
+      "observable_rows": 102764,
+      "early_censored_rows": 0,
+      "overall_predicted_survival": 0.18045612894999413,
+      "overall_observed_survival_proxy": 0.8188859912031451,
+      "overall_absolute_calibration_gap": 0.638429862253151,
+      "calibration_bins": [
+        {
+          "bin": 1,
+          "n": 10277,
+          "predicted_survival_mean": 0.1551308627637013,
+          "observed_survival_mean": 0.7702636956310207,
+          "absolute_calibration_gap": 0.6151328328673193,
+          "predicted_min": 0.1325360148457173,
+          "predicted_max": 0.16037712887175132
+        },
+        {
+          "bin": 2,
+          "n": 10276,
+          "predicted_survival_mean": 0.1630540862505342,
+          "observed_survival_mean": 0.8503308680420397,
+          "absolute_calibration_gap": 0.6872767817915055,
+          "predicted_min": 0.16037760093765785,
+          "predicted_max": 0.16545781161956946
+        },
+        {
+          "bin": 3,
+          "n": 10276,
+          "predicted_survival_mean": 0.16749662949504773,
+          "observed_survival_mean": 0.8660957571039315,
+          "absolute_calibration_gap": 0.6985991276088838,
+          "predicted_min": 0.16545846056677543,
+          "predicted_max": 0.16941640713562217
+        },
+        {
+          "bin": 4,
+          "n": 10277,
+          "predicted_survival_mean": 0.1713960643304275,
+          "observed_survival_mean": 0.8501508222243845,
+          "absolute_calibration_gap": 0.678754757893957,
+          "predicted_min": 0.16941729943880807,
+          "predicted_max": 0.17342418523337147
+        },
+        {
+          "bin": 5,
+          "n": 10276,
+          "predicted_survival_mean": 0.17584385557241405,
+          "observed_survival_mean": 0.8201634877384196,
+          "absolute_calibration_gap": 0.6443196321660056,
+          "predicted_min": 0.17342444716560296,
+          "predicted_max": 0.17851178959754757
+        },
+        {
+          "bin": 6,
+          "n": 10276,
+          "predicted_survival_mean": 0.1815123621042107,
+          "observed_survival_mean": 0.7845465161541456,
+          "absolute_calibration_gap": 0.6030341540499349,
+          "predicted_min": 0.17851284455425778,
+          "predicted_max": 0.18452555803295603
+        },
+        {
+          "bin": 7,
+          "n": 10277,
+          "predicted_survival_mean": 0.187407852417179,
+          "observed_survival_mean": 0.7696798676656612,
+          "absolute_calibration_gap": 0.5822720152484822,
+          "predicted_min": 0.18452616807748554,
+          "predicted_max": 0.19022552577833768
+        },
+        {
+          "bin": 8,
+          "n": 10276,
+          "predicted_survival_mean": 0.1931915051609861,
+          "observed_survival_mean": 0.7962242117555469,
+          "absolute_calibration_gap": 0.6030327065945609,
+          "predicted_min": 0.19022624801850277,
+          "predicted_max": 0.1962115291961879
+        },
+        {
+          "bin": 9,
+          "n": 10276,
+          "predicted_survival_mean": 0.19957818265175079,
+          "observed_survival_mean": 0.8224017127286882,
+          "absolute_calibration_gap": 0.6228235300769375,
+          "predicted_min": 0.1962143119711605,
+          "predicted_max": 0.2033170622384449
+        },
+        {
+          "bin": 10,
+          "n": 10277,
+          "predicted_survival_mean": 0.2099496882912532,
+          "observed_survival_mean": 0.859005546365671,
+          "absolute_calibration_gap": 0.6490558580744177,
+          "predicted_min": 0.20331737327387195,
+          "predicted_max": 0.2466990474846336
+        }
+      ]
+    },
+    {
+      "horizon_seconds": 1780179.0,
+      "evaluation_rows": 102764,
+      "observable_rows": 102277,
+      "early_censored_rows": 487,
+      "overall_predicted_survival": 0.14962967060591312,
+      "overall_observed_survival_proxy": 0.5634697928175445,
+      "overall_absolute_calibration_gap": 0.41384012221163136,
+      "calibration_bins": [
+        {
+          "bin": 1,
+          "n": 10228,
+          "predicted_survival_mean": 0.1264385240953614,
+          "observed_survival_mean": 0.5300156433320298,
+          "absolute_calibration_gap": 0.4035771192366684,
+          "predicted_min": 0.10618301810760218,
+          "predicted_max": 0.1311818411529572
+        },
+        {
+          "bin": 2,
+          "n": 10228,
+          "predicted_survival_mean": 0.13361770483650892,
+          "observed_survival_mean": 0.5209229565897536,
+          "absolute_calibration_gap": 0.3873052517532447,
+          "predicted_min": 0.13118189858317592,
+          "predicted_max": 0.13580422126447333
+        },
+        {
+          "bin": 3,
+          "n": 10227,
+          "predicted_survival_mean": 0.13766160815595532,
+          "observed_survival_mean": 0.5575437567224015,
+          "absolute_calibration_gap": 0.41988214856644623,
+          "predicted_min": 0.1358042877319117,
+          "predicted_max": 0.13941278394868578
+        },
+        {
+          "bin": 4,
+          "n": 10228,
+          "predicted_survival_mean": 0.14122057489676534,
+          "observed_survival_mean": 0.5848650762612436,
+          "absolute_calibration_gap": 0.4436445013644783,
+          "predicted_min": 0.13941311600681774,
+          "predicted_max": 0.1430797189037058
+        },
+        {
+          "bin": 5,
+          "n": 10227,
+          "predicted_survival_mean": 0.1453018334066424,
+          "observed_survival_mean": 0.5683973794856751,
+          "absolute_calibration_gap": 0.42309554607903277,
+          "predicted_min": 0.1430800878477223,
+          "predicted_max": 0.14775618127187806
+        },
+        {
+          "bin": 6,
+          "n": 10228,
+          "predicted_survival_mean": 0.15051558509357205,
+          "observed_survival_mean": 0.5353930387172467,
+          "absolute_calibration_gap": 0.3848774536236747,
+          "predicted_min": 0.14775650621352848,
+          "predicted_max": 0.1532901356654797
+        },
+        {
+          "bin": 7,
+          "n": 10228,
+          "predicted_survival_mean": 0.15594213943209043,
+          "observed_survival_mean": 0.5214118107156824,
+          "absolute_calibration_gap": 0.365469671283592,
+          "predicted_min": 0.15329026246070845,
+          "predicted_max": 0.1585404241706966
+        },
+        {
+          "bin": 8,
+          "n": 10227,
+          "predicted_survival_mean": 0.16128534369144434,
+          "observed_survival_mean": 0.5632150190671751,
+          "absolute_calibration_gap": 0.40192967537573077,
+          "predicted_min": 0.15854328201690943,
+          "predicted_max": 0.16407498168931145
+        },
+        {
+          "bin": 9,
+          "n": 10228,
+          "predicted_survival_mean": 0.1672116625257638,
+          "observed_survival_mean": 0.5952287837309347,
+          "absolute_calibration_gap": 0.4280171212051709,
+          "predicted_min": 0.16407565869920326,
+          "predicted_max": 0.17069112664247482
+        },
+        {
+          "bin": 10,
+          "n": 10228,
+          "predicted_survival_mean": 0.176886158981037,
+          "observed_survival_mean": 0.6577043410246383,
+          "absolute_calibration_gap": 0.48081818204360127,
+          "predicted_min": 0.1706915534196494,
+          "predicted_max": 0.21158702171196278
+        }
+      ]
+    },
+    {
+      "horizon_seconds": 14608619.0,
+      "evaluation_rows": 102764,
+      "observable_rows": 98993,
+      "early_censored_rows": 3771,
+      "overall_predicted_survival": 0.12187165877547627,
+      "overall_observed_survival_proxy": 0.2670693887446587,
+      "overall_absolute_calibration_gap": 0.1451977299691824,
+      "calibration_bins": [
+        {
+          "bin": 1,
+          "n": 9900,
+          "predicted_survival_mean": 0.1009495778183141,
+          "observed_survival_mean": 0.16070707070707071,
+          "absolute_calibration_gap": 0.05975749288875662,
+          "predicted_min": 0.08327829247449799,
+          "predicted_max": 0.1051396676512989
+        },
+        {
+          "bin": 2,
+          "n": 9899,
+          "predicted_survival_mean": 0.10727798974727168,
+          "observed_survival_mean": 0.15072229518133146,
+          "absolute_calibration_gap": 0.04344430543405978,
+          "predicted_min": 0.10514020621864702,
+          "predicted_max": 0.10921378298726532
+        },
+        {
+          "bin": 3,
+          "n": 9899,
+          "predicted_survival_mean": 0.11085472715111326,
+          "observed_survival_mean": 0.14264067077482573,
+          "absolute_calibration_gap": 0.03178594362371247,
+          "predicted_min": 0.10921476473422595,
+          "predicted_max": 0.11240984122857606
+        },
+        {
+          "bin": 4,
+          "n": 9899,
+          "predicted_survival_mean": 0.11399033358995374,
+          "observed_survival_mean": 0.17355288412971007,
+          "absolute_calibration_gap": 0.05956255053975633,
+          "predicted_min": 0.11240996856047605,
+          "predicted_max": 0.11561926723653092
+        },
+        {
+          "bin": 5,
+          "n": 9899,
+          "predicted_survival_mean": 0.11756570931589451,
+          "observed_survival_mean": 0.22477017880594,
+          "absolute_calibration_gap": 0.10720446949004549,
+          "predicted_min": 0.11562000464393865,
+          "predicted_max": 0.11971855222768199
+        },
+        {
+          "bin": 6,
+          "n": 9900,
+          "predicted_survival_mean": 0.12218954493990976,
+          "observed_survival_mean": 0.28373737373737373,
+          "absolute_calibration_gap": 0.161547828797464,
+          "predicted_min": 0.11971855635443189,
+          "predicted_max": 0.12471047044931434
+        },
+        {
+          "bin": 7,
+          "n": 9899,
+          "predicted_survival_mean": 0.12712232133110687,
+          "observed_survival_mean": 0.3221537529043338,
+          "absolute_calibration_gap": 0.19503143157322692,
+          "predicted_min": 0.12471048236909303,
+          "predicted_max": 0.12949600714444987
+        },
+        {
+          "bin": 8,
+          "n": 9899,
+          "predicted_survival_mean": 0.1319721974420233,
+          "observed_survival_mean": 0.3768057379533286,
+          "absolute_calibration_gap": 0.24483354051130532,
+          "predicted_min": 0.12949626237926046,
+          "predicted_max": 0.13453034079155538
+        },
+        {
+          "bin": 9,
+          "n": 9899,
+          "predicted_survival_mean": 0.13736097447901785,
+          "observed_survival_mean": 0.3999393878169512,
+          "absolute_calibration_gap": 0.26257841333793336,
+          "predicted_min": 0.13453068928947226,
+          "predicted_max": 0.14052197999995186
+        },
+        {
+          "bin": 10,
+          "n": 9900,
+          "predicted_survival_mean": 0.14616779288344395,
+          "observed_survival_mean": 0.43565656565656563,
+          "absolute_calibration_gap": 0.2894887727731217,
+          "predicted_min": 0.14052270052685695,
+          "predicted_max": 0.1759605451344923
+        }
+      ]
+    }
+  ],
+  "integrity": {
+    "model_refit": false,
+    "new_features": false,
+    "raw_archive_access": false,
+    "evaluation_population_changed": false
+  },
+  "artifacts": {
+    "calibration_table": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod009_survival_calibration.csv",
+    "audit": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod009_survival_calibration_audit.json"
+  }
+}

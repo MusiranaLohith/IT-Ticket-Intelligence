@@ -1,0 +1,1580 @@
+{
+  "operation": "T9_MOD-037_OP-013A",
+  "title": "T7 Prior-Artifact / Native Survival Output Resolution",
+  "status": "PASS",
+  "purpose": "Resolve the actual T7 artifact inventory and candidate native survival-output structures before empirical evaluation.",
+  "frozen_t9_boundary": {
+    "status": "PASS",
+    "checks": {
+      "OP-004_T7_acceptance": {
+        "status": "PASS",
+        "accepted_tasks": [
+          "T4",
+          "T5",
+          "T6",
+          "T7"
+        ]
+      },
+      "OP-005_T7_boundary": {
+        "status": "PASS",
+        "boundary": {
+          "status": "ACCEPTED_NATIVE_SURVIVAL",
+          "native_quantity": "Survival / time-to-event prediction",
+          "native_probability_output": true,
+          "accepted_for_calibration": true,
+          "artifact": "modeling/T7/derived/t7_mod007_evaluation_predictions.csv",
+          "native_outputs": [
+            "predicted_median_survival_seconds",
+            "survival_probability_at_211583_seconds",
+            "survival_probability_at_1780179_seconds",
+            "survival_probability_at_14608619_seconds"
+          ],
+          "outcomes": [
+            "duration_seconds",
+            "event"
+          ],
+          "semantic_restrictions": [
+            "T7 remains a survival/time-to-event task.",
+            "Right-censoring must be preserved.",
+            "event=0 must not be relabelled as a negative resolution outcome.",
+            "T7 must not be converted into ordinary binary resolved/not-resolved confidence.",
+            "Calibration must be defined for an appropriate survival/time-to-event predictive quantity."
+          ],
+          "calibration_boundary": "Later T7 calibration must retain survival semantics and right censoring."
+        }
+      },
+      "T7_native_survival_semantics": {
+        "status": "PASS",
+        "native_quantity": "Survival / time-to-event prediction",
+        "semantic_restrictions": [
+          "T7 remains a survival/time-to-event task.",
+          "Right-censoring must be preserved.",
+          "event=0 must not be relabelled as a negative resolution outcome.",
+          "T7 must not be converted into ordinary binary resolved/not-resolved confidence.",
+          "Calibration must be defined for an appropriate survival/time-to-event predictive quantity."
+        ],
+        "calibration_boundary": "Later T7 calibration must retain survival semantics and right censoring."
+      },
+      "T7_censoring_semantics_preserved": {
+        "status": "PASS",
+        "evidence_text_contains_censoring_reference": true
+      },
+      "T7_binary_conversion_prohibited": {
+        "status": "PASS",
+        "basis": "The frozen T7 boundary is ACCEPTED_NATIVE_SURVIVAL. This operation does not require or infer a native_probability_output field. Binary conversion is prohibited by the T7 survival/censoring boundary itself.",
+        "native_quantity": "Survival / time-to-event prediction"
+      }
+    },
+    "failed_checks": [],
+    "t7_boundary": {
+      "status": "ACCEPTED_NATIVE_SURVIVAL",
+      "native_quantity": "Survival / time-to-event prediction",
+      "native_probability_output": true,
+      "accepted_for_calibration": true,
+      "artifact": "modeling/T7/derived/t7_mod007_evaluation_predictions.csv",
+      "native_outputs": [
+        "predicted_median_survival_seconds",
+        "survival_probability_at_211583_seconds",
+        "survival_probability_at_1780179_seconds",
+        "survival_probability_at_14608619_seconds"
+      ],
+      "outcomes": [
+        "duration_seconds",
+        "event"
+      ],
+      "semantic_restrictions": [
+        "T7 remains a survival/time-to-event task.",
+        "Right-censoring must be preserved.",
+        "event=0 must not be relabelled as a negative resolution outcome.",
+        "T7 must not be converted into ordinary binary resolved/not-resolved confidence.",
+        "Calibration must be defined for an appropriate survival/time-to-event predictive quantity."
+      ],
+      "calibration_boundary": "Later T7 calibration must retain survival semantics and right censoring."
+    }
+  },
+  "t7_root": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7",
+  "file_count": 48,
+  "artifact_inventory": [
+    {
+      "path": "modeling/T7/baselines/t7_kaplan_meier_baseline.csv",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/baselines/t7_kaplan_meier_baseline.csv",
+      "suffix": ".csv",
+      "size_bytes": 15537381,
+      "classification": "csv",
+      "content_inspection": {
+        "read_status": "PASS",
+        "sample_rows_read": 1000,
+        "columns": [
+          "time_seconds",
+          "at_risk",
+          "events",
+          "censored",
+          "survival_probability"
+        ],
+        "column_count": 5,
+        "survival_related_columns": [
+          "time_seconds",
+          "at_risk",
+          "events",
+          "censored",
+          "survival_probability"
+        ],
+        "dtypes": {
+          "time_seconds": "float64",
+          "at_risk": "int64",
+          "events": "int64",
+          "censored": "int64",
+          "survival_probability": "float64"
+        }
+      }
+    },
+    {
+      "path": "modeling/T7/baselines/t7_nelson_aalen_baseline.csv",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/baselines/t7_nelson_aalen_baseline.csv",
+      "suffix": ".csv",
+      "size_bytes": 23215601,
+      "classification": "csv",
+      "content_inspection": {
+        "read_status": "PASS",
+        "sample_rows_read": 1000,
+        "columns": [
+          "time_seconds",
+          "at_risk",
+          "events",
+          "censored",
+          "hazard_increment",
+          "cumulative_hazard"
+        ],
+        "column_count": 6,
+        "survival_related_columns": [
+          "time_seconds",
+          "at_risk",
+          "events",
+          "censored",
+          "hazard_increment",
+          "cumulative_hazard"
+        ],
+        "dtypes": {
+          "time_seconds": "float64",
+          "at_risk": "int64",
+          "events": "int64",
+          "censored": "int64",
+          "hazard_increment": "float64",
+          "cumulative_hazard": "float64"
+        }
+      }
+    },
+    {
+      "path": "modeling/T7/contracts/t7_modeling_contract.json",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/contracts/t7_modeling_contract.json",
+      "suffix": ".json",
+      "size_bytes": 6178,
+      "classification": "json",
+      "content_inspection": {
+        "read_status": "PASS",
+        "top_level_type": "dict",
+        "top_level_keys": [
+          "task_id",
+          "task_name",
+          "task_family",
+          "status",
+          "operational_problem",
+          "prediction_boundary",
+          "target",
+          "population",
+          "censoring",
+          "feature_boundary",
+          "data_artifact",
+          "modeling_formulation",
+          "evaluation",
+          "split_policy",
+          "model_development_policy",
+          "leakage_controls",
+          "immutable_source_controls",
+          "next_operations",
+          "decision"
+        ],
+        "survival_related_keys": [
+          "operational_problem",
+          "prediction_boundary",
+          "censoring"
+        ],
+        "top_level_key_count": 19
+      }
+    },
+    {
+      "path": "modeling/T7/derived/t7_creation_time_modeling_dataset.csv",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/derived/t7_creation_time_modeling_dataset.csv",
+      "suffix": ".csv",
+      "size_bytes": 1009699100,
+      "classification": "csv",
+      "content_inspection": {
+        "read_status": "PASS",
+        "sample_rows_read": 1000,
+        "columns": [
+          "ID",
+          "Creation time",
+          "Creator",
+          "Creator Detail",
+          "Summary",
+          "Description",
+          "first_resolved_time",
+          "duration_seconds",
+          "event",
+          "endpoint_type",
+          "observation_endpoint",
+          "source_row_width"
+        ],
+        "column_count": 12,
+        "survival_related_columns": [
+          "Creation time",
+          "first_resolved_time",
+          "duration_seconds",
+          "event"
+        ],
+        "dtypes": {
+          "ID": "int64",
+          "Creation time": "str",
+          "Creator": "str",
+          "Creator Detail": "str",
+          "Summary": "str",
+          "Description": "str",
+          "first_resolved_time": "str",
+          "duration_seconds": "float64",
+          "event": "int64",
+          "endpoint_type": "str",
+          "observation_endpoint": "str",
+          "source_row_width": "int64"
+        }
+      }
+    },
+    {
+      "path": "modeling/T7/derived/t7_mod003_creation_features.tmp.csv",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/derived/t7_mod003_creation_features.tmp.csv",
+      "suffix": ".csv",
+      "size_bytes": 974831971,
+      "classification": "csv",
+      "content_inspection": {
+        "read_status": "PASS",
+        "sample_rows_read": 1000,
+        "columns": [
+          "ID",
+          "Creation time",
+          "Creator",
+          "Creator Detail",
+          "Summary",
+          "Description"
+        ],
+        "column_count": 6,
+        "survival_related_columns": [
+          "Creation time"
+        ],
+        "dtypes": {
+          "ID": "int64",
+          "Creation time": "str",
+          "Creator": "str",
+          "Creator Detail": "str",
+          "Summary": "str",
+          "Description": "str"
+        }
+      }
+    },
+    {
+      "path": "modeling/T7/derived/t7_mod006_kaplan_meier_curve.csv",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/derived/t7_mod006_kaplan_meier_curve.csv",
+      "suffix": ".csv",
+      "size_bytes": 15537395,
+      "classification": "csv",
+      "content_inspection": {
+        "read_status": "PASS",
+        "sample_rows_read": 1000,
+        "columns": [
+          "duration_seconds",
+          "event_count",
+          "censor_count",
+          "at_risk",
+          "kaplan_meier_survival"
+        ],
+        "column_count": 5,
+        "survival_related_columns": [
+          "duration_seconds",
+          "event_count",
+          "censor_count",
+          "at_risk",
+          "kaplan_meier_survival"
+        ],
+        "dtypes": {
+          "duration_seconds": "float64",
+          "event_count": "int64",
+          "censor_count": "int64",
+          "at_risk": "int64",
+          "kaplan_meier_survival": "float64"
+        }
+      }
+    },
+    {
+      "path": "modeling/T7/derived/t7_mod006_nelson_aalen_curve.csv",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/derived/t7_mod006_nelson_aalen_curve.csv",
+      "suffix": ".csv",
+      "size_bytes": 14699233,
+      "classification": "csv",
+      "content_inspection": {
+        "read_status": "PASS",
+        "sample_rows_read": 1000,
+        "columns": [
+          "duration_seconds",
+          "event_count",
+          "at_risk",
+          "nelson_aalen_cumulative_hazard"
+        ],
+        "column_count": 4,
+        "survival_related_columns": [
+          "duration_seconds",
+          "event_count",
+          "at_risk",
+          "nelson_aalen_cumulative_hazard"
+        ],
+        "dtypes": {
+          "duration_seconds": "float64",
+          "event_count": "int64",
+          "at_risk": "int64",
+          "nelson_aalen_cumulative_hazard": "float64"
+        }
+      }
+    },
+    {
+      "path": "modeling/T7/derived/t7_mod007_evaluation_predictions.csv",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/derived/t7_mod007_evaluation_predictions.csv",
+      "suffix": ".csv",
+      "size_bytes": 10437926,
+      "classification": "csv",
+      "content_inspection": {
+        "read_status": "PASS",
+        "sample_rows_read": 1000,
+        "columns": [
+          "ID",
+          "duration_seconds",
+          "event",
+          "predicted_median_survival_seconds",
+          "survival_probability_at_211583_seconds",
+          "survival_probability_at_1780179_seconds",
+          "survival_probability_at_14608619_seconds"
+        ],
+        "column_count": 7,
+        "survival_related_columns": [
+          "duration_seconds",
+          "event",
+          "predicted_median_survival_seconds",
+          "survival_probability_at_211583_seconds",
+          "survival_probability_at_1780179_seconds",
+          "survival_probability_at_14608619_seconds"
+        ],
+        "dtypes": {
+          "ID": "int64",
+          "duration_seconds": "float64",
+          "event": "int64",
+          "predicted_median_survival_seconds": "float64",
+          "survival_probability_at_211583_seconds": "float64",
+          "survival_probability_at_1780179_seconds": "float64",
+          "survival_probability_at_14608619_seconds": "float64"
+        }
+      }
+    },
+    {
+      "path": "modeling/T7/derived/t7_mod010_evaluation_predictions.csv",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/derived/t7_mod010_evaluation_predictions.csv",
+      "suffix": ".csv",
+      "size_bytes": 10097325,
+      "classification": "csv",
+      "content_inspection": {
+        "read_status": "PASS",
+        "sample_rows_read": 1000,
+        "columns": [
+          "ID",
+          "duration_seconds",
+          "event",
+          "predicted_median_survival_seconds",
+          "survival_probability_at_211583_seconds",
+          "survival_probability_at_1780179_seconds",
+          "survival_probability_at_14608619_seconds"
+        ],
+        "column_count": 7,
+        "survival_related_columns": [
+          "duration_seconds",
+          "event",
+          "predicted_median_survival_seconds",
+          "survival_probability_at_211583_seconds",
+          "survival_probability_at_1780179_seconds",
+          "survival_probability_at_14608619_seconds"
+        ],
+        "dtypes": {
+          "ID": "int64",
+          "duration_seconds": "float64",
+          "event": "int64",
+          "predicted_median_survival_seconds": "float64",
+          "survival_probability_at_211583_seconds": "float64",
+          "survival_probability_at_1780179_seconds": "float64",
+          "survival_probability_at_14608619_seconds": "float64"
+        }
+      }
+    },
+    {
+      "path": "modeling/T7/metrics/t7_mod002_feature_source_audit.json",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod002_feature_source_audit.json",
+      "suffix": ".json",
+      "size_bytes": 1937,
+      "classification": "json",
+      "content_inspection": {
+        "read_status": "PASS",
+        "top_level_type": "dict",
+        "top_level_keys": [
+          "candidate_creation_fields_physically_present",
+          "decision",
+          "feature_boundary",
+          "identity_time_fields",
+          "operation_id",
+          "operation_name",
+          "population",
+          "schema",
+          "source",
+          "status",
+          "target_evidence_fields",
+          "target_mapping",
+          "task_id"
+        ],
+        "survival_related_keys": [
+          "identity_time_fields"
+        ],
+        "top_level_key_count": 13
+      }
+    },
+    {
+      "path": "modeling/T7/metrics/t7_mod003_feature_construction_audit.json",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod003_feature_construction_audit.json",
+      "suffix": ".json",
+      "size_bytes": 1721,
+      "classification": "json",
+      "content_inspection": {
+        "read_status": "PASS",
+        "top_level_type": "dict",
+        "top_level_keys": [
+          "operation",
+          "status",
+          "task",
+          "target_artifact",
+          "creation_feature_artifact",
+          "final_output",
+          "feature_boundary",
+          "population",
+          "timezone_contract",
+          "feature_audit",
+          "join_audit",
+          "final_audit",
+          "controls",
+          "known_duplicate_id",
+          "elapsed_seconds"
+        ],
+        "survival_related_keys": [
+          "final_output",
+          "timezone_contract"
+        ],
+        "top_level_key_count": 15
+      }
+    },
+    {
+      "path": "modeling/T7/metrics/t7_mod004_feature_temporal_split_audit.json",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod004_feature_temporal_split_audit.json",
+      "suffix": ".json",
+      "size_bytes": 10306,
+      "classification": "json",
+      "content_inspection": {
+        "read_status": "PASS",
+        "top_level_type": "dict",
+        "top_level_keys": [
+          "operation",
+          "status",
+          "input_dataset",
+          "raw_archive_accessed",
+          "model_trained",
+          "split_frozen",
+          "rows",
+          "unique_ids",
+          "schema",
+          "target_summary",
+          "feature_audit",
+          "temporal_summary",
+          "temporal_ordering",
+          "diagnostic_chronological_80_20",
+          "leakage_name_audit",
+          "next_decision"
+        ],
+        "survival_related_keys": [],
+        "top_level_key_count": 16
+      }
+    },
+    {
+      "path": "modeling/T7/metrics/t7_mod005_split_freeze.json",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod005_split_freeze.json",
+      "suffix": ".json",
+      "size_bytes": 1922,
+      "classification": "json",
+      "content_inspection": {
+        "read_status": "PASS",
+        "top_level_type": "dict",
+        "top_level_keys": [
+          "operation",
+          "rn",
+          "status",
+          "input_dataset",
+          "raw_archive_accessed",
+          "model_trained",
+          "split_frozen",
+          "ordering",
+          "split_rule",
+          "boundary",
+          "population",
+          "event_accounting",
+          "artifacts"
+        ],
+        "survival_related_keys": [
+          "event_accounting"
+        ],
+        "top_level_key_count": 13
+      }
+    },
+    {
+      "path": "modeling/T7/metrics/t7_mod006_survival_baseline_audit.json",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod006_survival_baseline_audit.json",
+      "suffix": ".json",
+      "size_bytes": 2226,
+      "classification": "json",
+      "content_inspection": {
+        "read_status": "PASS",
+        "top_level_type": "dict",
+        "top_level_keys": [
+          "task",
+          "operation",
+          "status",
+          "baseline_family",
+          "training_source",
+          "evaluation_source",
+          "train_rows",
+          "evaluation_rows",
+          "train_event_1",
+          "train_event_0",
+          "evaluation_event_1",
+          "evaluation_event_0",
+          "kaplan_meier",
+          "nelson_aalen",
+          "ipcw_brier",
+          "evaluation_integrity",
+          "c_index",
+          "artifacts"
+        ],
+        "survival_related_keys": [
+          "train_event_1",
+          "train_event_0",
+          "evaluation_event_1",
+          "evaluation_event_0"
+        ],
+        "top_level_key_count": 18
+      }
+    },
+    {
+      "path": "modeling/T7/metrics/t7_mod007_predictive_survival_audit.json",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod007_predictive_survival_audit.json",
+      "suffix": ".json",
+      "size_bytes": 2435,
+      "classification": "json",
+      "content_inspection": {
+        "read_status": "PASS",
+        "top_level_type": "dict",
+        "top_level_keys": [
+          "task",
+          "operation",
+          "status",
+          "model",
+          "feature_boundary",
+          "features",
+          "train_event_count",
+          "train_censor_count",
+          "evaluation_event_count",
+          "evaluation_censor_count",
+          "weibull",
+          "evaluation_metrics",
+          "artifacts"
+        ],
+        "survival_related_keys": [
+          "train_event_count",
+          "train_censor_count",
+          "evaluation_event_count",
+          "evaluation_censor_count"
+        ],
+        "top_level_key_count": 13
+      }
+    },
+    {
+      "path": "modeling/T7/metrics/t7_mod007_weibull_aft_model.json",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod007_weibull_aft_model.json",
+      "suffix": ".json",
+      "size_bytes": 2985,
+      "classification": "json",
+      "content_inspection": {
+        "read_status": "PASS",
+        "top_level_type": "dict",
+        "top_level_keys": [
+          "model_type",
+          "l2",
+          "shape",
+          "beta",
+          "feature_names",
+          "standardization_mean",
+          "standardization_std",
+          "creator_frequency_mapping_size",
+          "creator_detail_frequency_mapping_size",
+          "optimization"
+        ],
+        "survival_related_keys": [],
+        "top_level_key_count": 10
+      }
+    },
+    {
+      "path": "modeling/T7/metrics/t7_mod008_predictive_vs_reference.csv",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod008_predictive_vs_reference.csv",
+      "suffix": ".csv",
+      "size_bytes": 800,
+      "classification": "csv",
+      "content_inspection": {
+        "read_status": "PASS",
+        "sample_rows_read": 3,
+        "columns": [
+          "horizon_seconds",
+          "km_reference_survival",
+          "predictive_mean_survival",
+          "predictive_std_survival",
+          "predictive_min_survival",
+          "predictive_max_survival",
+          "km_reference_ipcw_brier",
+          "predictive_ipcw_brier",
+          "predictive_minus_reference_brier",
+          "relative_brier_change"
+        ],
+        "column_count": 10,
+        "survival_related_columns": [
+          "km_reference_survival",
+          "predictive_mean_survival",
+          "predictive_std_survival",
+          "predictive_min_survival",
+          "predictive_max_survival"
+        ],
+        "dtypes": {
+          "horizon_seconds": "float64",
+          "km_reference_survival": "float64",
+          "predictive_mean_survival": "float64",
+          "predictive_std_survival": "float64",
+          "predictive_min_survival": "float64",
+          "predictive_max_survival": "float64",
+          "km_reference_ipcw_brier": "float64",
+          "predictive_ipcw_brier": "float64",
+          "predictive_minus_reference_brier": "float64",
+          "relative_brier_change": "float64"
+        }
+      }
+    },
+    {
+      "path": "modeling/T7/metrics/t7_mod008_predictive_vs_reference_audit.json",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod008_predictive_vs_reference_audit.json",
+      "suffix": ".json",
+      "size_bytes": 3629,
+      "classification": "json",
+      "content_inspection": {
+        "read_status": "PASS",
+        "top_level_type": "dict",
+        "top_level_keys": [
+          "task",
+          "operation",
+          "status",
+          "purpose",
+          "evaluation_population",
+          "alignment",
+          "models_compared",
+          "predictive_model",
+          "horizon_results",
+          "integrity",
+          "source_artifacts",
+          "output_artifacts"
+        ],
+        "survival_related_keys": [
+          "output_artifacts"
+        ],
+        "top_level_key_count": 12
+      }
+    },
+    {
+      "path": "modeling/T7/metrics/t7_mod009_survival_calibration.csv",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod009_survival_calibration.csv",
+      "suffix": ".csv",
+      "size_bytes": 3609,
+      "classification": "csv",
+      "content_inspection": {
+        "read_status": "PASS",
+        "sample_rows_read": 30,
+        "columns": [
+          "horizon_seconds",
+          "bin",
+          "n",
+          "predicted_survival_mean",
+          "observed_survival_mean",
+          "absolute_calibration_gap",
+          "predicted_min",
+          "predicted_max"
+        ],
+        "column_count": 8,
+        "survival_related_columns": [
+          "predicted_survival_mean",
+          "observed_survival_mean"
+        ],
+        "dtypes": {
+          "horizon_seconds": "float64",
+          "bin": "int64",
+          "n": "int64",
+          "predicted_survival_mean": "float64",
+          "observed_survival_mean": "float64",
+          "absolute_calibration_gap": "float64",
+          "predicted_min": "float64",
+          "predicted_max": "float64"
+        }
+      }
+    },
+    {
+      "path": "modeling/T7/metrics/t7_mod009_survival_calibration_audit.json",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod009_survival_calibration_audit.json",
+      "suffix": ".json",
+      "size_bytes": 11953,
+      "classification": "json",
+      "content_inspection": {
+        "read_status": "PASS",
+        "top_level_type": "dict",
+        "top_level_keys": [
+          "task",
+          "operation",
+          "status",
+          "purpose",
+          "evaluation_rows",
+          "prediction_alignment",
+          "methodological_note",
+          "horizons",
+          "integrity",
+          "artifacts"
+        ],
+        "survival_related_keys": [
+          "prediction_alignment"
+        ],
+        "top_level_key_count": 10
+      }
+    },
+    {
+      "path": "modeling/T7/metrics/t7_mod010_log_normal_aft_audit.json",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod010_log_normal_aft_audit.json",
+      "suffix": ".json",
+      "size_bytes": 1843,
+      "classification": "json",
+      "content_inspection": {
+        "read_status": "PASS",
+        "top_level_type": "dict",
+        "top_level_keys": [
+          "task",
+          "operation",
+          "status",
+          "purpose",
+          "model",
+          "feature_boundary",
+          "optimization",
+          "evaluation_metrics",
+          "horizons_seconds",
+          "artifacts"
+        ],
+        "survival_related_keys": [],
+        "top_level_key_count": 10
+      }
+    },
+    {
+      "path": "modeling/T7/metrics/t7_mod010_log_normal_aft_model.json",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod010_log_normal_aft_model.json",
+      "suffix": ".json",
+      "size_bytes": 2899,
+      "classification": "json",
+      "content_inspection": {
+        "read_status": "PASS",
+        "top_level_type": "dict",
+        "top_level_keys": [
+          "model_type",
+          "l2",
+          "sigma",
+          "beta",
+          "feature_names",
+          "standardization_mean",
+          "standardization_std",
+          "optimization"
+        ],
+        "survival_related_keys": [],
+        "top_level_key_count": 8
+      }
+    },
+    {
+      "path": "modeling/T7/metrics/t7_mod011_final_model_comparison.csv",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod011_final_model_comparison.csv",
+      "suffix": ".csv",
+      "size_bytes": 540,
+      "classification": "csv",
+      "content_inspection": {
+        "read_status": "PASS",
+        "sample_rows_read": 3,
+        "columns": [
+          "horizon_seconds",
+          "kaplan_meier_ipcw_brier",
+          "weibull_aft_ipcw_brier",
+          "lognormal_aft_ipcw_brier",
+          "weibull_minus_km",
+          "lognormal_minus_km",
+          "lognormal_minus_weibull"
+        ],
+        "column_count": 7,
+        "survival_related_columns": [],
+        "dtypes": {
+          "horizon_seconds": "float64",
+          "kaplan_meier_ipcw_brier": "float64",
+          "weibull_aft_ipcw_brier": "float64",
+          "lognormal_aft_ipcw_brier": "float64",
+          "weibull_minus_km": "float64",
+          "lognormal_minus_km": "float64",
+          "lognormal_minus_weibull": "float64"
+        }
+      }
+    },
+    {
+      "path": "modeling/T7/metrics/t7_mod011_final_model_comparison_audit.json",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod011_final_model_comparison_audit.json",
+      "suffix": ".json",
+      "size_bytes": 2680,
+      "classification": "json",
+      "content_inspection": {
+        "read_status": "PASS",
+        "top_level_type": "dict",
+        "top_level_keys": [
+          "task",
+          "operation",
+          "status",
+          "operation_purpose",
+          "raw_archive_access",
+          "model_refitting",
+          "new_feature_engineering",
+          "evaluation_population",
+          "models_compared",
+          "source_schema",
+          "weibull_aft",
+          "lognormal_aft",
+          "kaplan_meier_reference",
+          "comparison",
+          "evidence_statement",
+          "interpretation_boundary",
+          "artifacts"
+        ],
+        "survival_related_keys": [],
+        "top_level_key_count": 17
+      }
+    },
+    {
+      "path": "modeling/T7/metrics/t7_mod012_final_closure.json",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod012_final_closure.json",
+      "suffix": ".json",
+      "size_bytes": 4425,
+      "classification": "json",
+      "content_inspection": {
+        "read_status": "PASS",
+        "top_level_type": "dict",
+        "top_level_keys": [
+          "task",
+          "operation",
+          "status",
+          "closure_type",
+          "task_definition",
+          "population",
+          "data_boundary",
+          "chronological_split",
+          "survival_baselines",
+          "predictive_models",
+          "final_comparison",
+          "calibration",
+          "supported_role",
+          "limitations",
+          "evidence_chain",
+          "final_project_status",
+          "source_evidence"
+        ],
+        "survival_related_keys": [
+          "survival_baselines"
+        ],
+        "top_level_key_count": 17
+      }
+    },
+    {
+      "path": "modeling/T7/metrics/t7_mod013_visualization_manifest.json",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod013_visualization_manifest.json",
+      "suffix": ".json",
+      "size_bytes": 1158,
+      "classification": "json",
+      "content_inspection": {
+        "read_status": "PASS",
+        "top_level_type": "dict",
+        "top_level_keys": [
+          "operation",
+          "purpose",
+          "model_refit",
+          "raw_archive_access",
+          "target_reconstruction",
+          "source_artifacts",
+          "plots",
+          "status"
+        ],
+        "survival_related_keys": [],
+        "top_level_key_count": 8
+      }
+    },
+    {
+      "path": "modeling/T7/plots/t7_mod013_cindex_comparison.png",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/plots/t7_mod013_cindex_comparison.png",
+      "suffix": ".png",
+      "size_bytes": 62320,
+      "classification": "other"
+    },
+    {
+      "path": "modeling/T7/plots/t7_mod013_ipcw_brier_comparison.png",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/plots/t7_mod013_ipcw_brier_comparison.png",
+      "suffix": ".png",
+      "size_bytes": 155400,
+      "classification": "other"
+    },
+    {
+      "path": "modeling/T7/plots/t7_mod013_kaplan_meier_survival_curve.png",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/plots/t7_mod013_kaplan_meier_survival_curve.png",
+      "suffix": ".png",
+      "size_bytes": 93593,
+      "classification": "survival_like"
+    },
+    {
+      "path": "modeling/T7/plots/t7_mod013_nelson_aalen_cumulative_hazard.png",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/plots/t7_mod013_nelson_aalen_cumulative_hazard.png",
+      "suffix": ".png",
+      "size_bytes": 92033,
+      "classification": "other"
+    },
+    {
+      "path": "modeling/T7/plots/t7_mod013_survival_calibration_style.png",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/plots/t7_mod013_survival_calibration_style.png",
+      "suffix": ".png",
+      "size_bytes": 127090,
+      "classification": "survival_like"
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod002_feature_source_audit.py",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/scripts/t7_mod002_feature_source_audit.py",
+      "suffix": ".py",
+      "size_bytes": 9694,
+      "classification": "other"
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod003_build_modeling_dataset.py",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/scripts/t7_mod003_build_modeling_dataset.py",
+      "suffix": ".py",
+      "size_bytes": 28253,
+      "classification": "other"
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod003_duplicate_feature_diagnostic.py",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/scripts/t7_mod003_duplicate_feature_diagnostic.py",
+      "suffix": ".py",
+      "size_bytes": 7715,
+      "classification": "other"
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod003_identify_mozilla_source.py",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/scripts/t7_mod003_identify_mozilla_source.py",
+      "suffix": ".py",
+      "size_bytes": 3892,
+      "classification": "other"
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod003_inspect_source_archives.py",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/scripts/t7_mod003_inspect_source_archives.py",
+      "suffix": ".py",
+      "size_bytes": 1968,
+      "classification": "other"
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod004_feature_temporal_split_audit.py",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/scripts/t7_mod004_feature_temporal_split_audit.py",
+      "suffix": ".py",
+      "size_bytes": 20872,
+      "classification": "other"
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod005_freeze_chronological_split.py",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/scripts/t7_mod005_freeze_chronological_split.py",
+      "suffix": ".py",
+      "size_bytes": 12075,
+      "classification": "other"
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod006_survival_baselines.py",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/scripts/t7_mod006_survival_baselines.py",
+      "suffix": ".py",
+      "size_bytes": 18039,
+      "classification": "survival_like"
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod007_predictive_survival_baseline.py",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/scripts/t7_mod007_predictive_survival_baseline.py",
+      "suffix": ".py",
+      "size_bytes": 28598,
+      "classification": "prediction_like"
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod008_predictive_vs_reference_evaluation.py",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/scripts/t7_mod008_predictive_vs_reference_evaluation.py",
+      "suffix": ".py",
+      "size_bytes": 21910,
+      "classification": "prediction_like"
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod009_survival_calibration.py",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/scripts/t7_mod009_survival_calibration.py",
+      "suffix": ".py",
+      "size_bytes": 12270,
+      "classification": "survival_like"
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod010_log_normal_aft_baseline.py",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/scripts/t7_mod010_log_normal_aft_baseline.py",
+      "suffix": ".py",
+      "size_bytes": 19916,
+      "classification": "other"
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod011_final_model_comparison.py",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/scripts/t7_mod011_final_model_comparison.py",
+      "suffix": ".py",
+      "size_bytes": 16006,
+      "classification": "other"
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod012_final_closure.py",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/scripts/t7_mod012_final_closure.py",
+      "suffix": ".py",
+      "size_bytes": 13889,
+      "classification": "other"
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod013_generate_visualizations.py",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/scripts/t7_mod013_generate_visualizations.py",
+      "suffix": ".py",
+      "size_bytes": 12553,
+      "classification": "other"
+    },
+    {
+      "path": "modeling/T7/splits/t7_evaluation.csv",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/splits/t7_evaluation.csv",
+      "suffix": ".csv",
+      "size_bytes": 341170947,
+      "classification": "csv",
+      "content_inspection": {
+        "read_status": "PASS",
+        "sample_rows_read": 1000,
+        "columns": [
+          "ID",
+          "Creation time",
+          "Creator",
+          "Creator Detail",
+          "Summary",
+          "Description",
+          "first_resolved_time",
+          "duration_seconds",
+          "event",
+          "endpoint_type",
+          "observation_endpoint",
+          "source_row_width"
+        ],
+        "column_count": 12,
+        "survival_related_columns": [
+          "Creation time",
+          "first_resolved_time",
+          "duration_seconds",
+          "event"
+        ],
+        "dtypes": {
+          "ID": "int64",
+          "Creation time": "str",
+          "Creator": "str",
+          "Creator Detail": "str",
+          "Summary": "str",
+          "Description": "str",
+          "first_resolved_time": "str",
+          "duration_seconds": "float64",
+          "event": "int64",
+          "endpoint_type": "str",
+          "observation_endpoint": "str",
+          "source_row_width": "int64"
+        }
+      }
+    },
+    {
+      "path": "modeling/T7/splits/t7_train.csv",
+      "absolute_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/splits/t7_train.csv",
+      "suffix": ".csv",
+      "size_bytes": 669042126,
+      "classification": "csv",
+      "content_inspection": {
+        "read_status": "PASS",
+        "sample_rows_read": 1000,
+        "columns": [
+          "ID",
+          "Creation time",
+          "Creator",
+          "Creator Detail",
+          "Summary",
+          "Description",
+          "first_resolved_time",
+          "duration_seconds",
+          "event",
+          "endpoint_type",
+          "observation_endpoint",
+          "source_row_width"
+        ],
+        "column_count": 12,
+        "survival_related_columns": [
+          "Creation time",
+          "first_resolved_time",
+          "duration_seconds",
+          "event"
+        ],
+        "dtypes": {
+          "ID": "int64",
+          "Creation time": "str",
+          "Creator": "str",
+          "Creator Detail": "str",
+          "Summary": "str",
+          "Description": "str",
+          "first_resolved_time": "str",
+          "duration_seconds": "float64",
+          "event": "int64",
+          "endpoint_type": "str",
+          "observation_endpoint": "str",
+          "source_row_width": "int64"
+        }
+      }
+    }
+  ],
+  "native_survival_candidates": [
+    {
+      "path": "modeling/T7/metrics/t7_mod006_survival_baseline_audit.json",
+      "classification": "json",
+      "score": 9,
+      "reasons": [
+        "filename_contains_survival",
+        "filename_contains_surv",
+        "survival_related_fields_detected"
+      ],
+      "survival_fields": [
+        "train_event_1",
+        "train_event_0",
+        "evaluation_event_1",
+        "evaluation_event_0"
+      ]
+    },
+    {
+      "path": "modeling/T7/metrics/t7_mod007_predictive_survival_audit.json",
+      "classification": "json",
+      "score": 9,
+      "reasons": [
+        "filename_contains_survival",
+        "filename_contains_surv",
+        "survival_related_fields_detected"
+      ],
+      "survival_fields": [
+        "train_event_count",
+        "train_censor_count",
+        "evaluation_event_count",
+        "evaluation_censor_count"
+      ]
+    },
+    {
+      "path": "modeling/T7/metrics/t7_mod009_survival_calibration.csv",
+      "classification": "csv",
+      "score": 7,
+      "reasons": [
+        "filename_contains_survival",
+        "filename_contains_surv",
+        "survival_related_fields_detected"
+      ],
+      "survival_fields": [
+        "predicted_survival_mean",
+        "observed_survival_mean"
+      ]
+    },
+    {
+      "path": "modeling/T7/metrics/t7_mod009_survival_calibration_audit.json",
+      "classification": "json",
+      "score": 6,
+      "reasons": [
+        "filename_contains_survival",
+        "filename_contains_surv",
+        "survival_related_fields_detected"
+      ],
+      "survival_fields": [
+        "prediction_alignment"
+      ]
+    },
+    {
+      "path": "modeling/T7/plots/t7_mod013_kaplan_meier_survival_curve.png",
+      "classification": "survival_like",
+      "score": 6,
+      "reasons": [
+        "filename_contains_survival",
+        "filename_contains_surv",
+        "classification=survival_like"
+      ],
+      "survival_fields": []
+    },
+    {
+      "path": "modeling/T7/plots/t7_mod013_survival_calibration_style.png",
+      "classification": "survival_like",
+      "score": 6,
+      "reasons": [
+        "filename_contains_survival",
+        "filename_contains_surv",
+        "classification=survival_like"
+      ],
+      "survival_fields": []
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod006_survival_baselines.py",
+      "classification": "survival_like",
+      "score": 6,
+      "reasons": [
+        "filename_contains_survival",
+        "filename_contains_surv",
+        "classification=survival_like"
+      ],
+      "survival_fields": []
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod007_predictive_survival_baseline.py",
+      "classification": "prediction_like",
+      "score": 6,
+      "reasons": [
+        "filename_contains_survival",
+        "filename_contains_surv",
+        "classification=prediction_like"
+      ],
+      "survival_fields": []
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod009_survival_calibration.py",
+      "classification": "survival_like",
+      "score": 6,
+      "reasons": [
+        "filename_contains_survival",
+        "filename_contains_surv",
+        "classification=survival_like"
+      ],
+      "survival_fields": []
+    },
+    {
+      "path": "modeling/T7/baselines/t7_kaplan_meier_baseline.csv",
+      "classification": "csv",
+      "score": 5,
+      "reasons": [
+        "survival_related_fields_detected"
+      ],
+      "survival_fields": [
+        "time_seconds",
+        "at_risk",
+        "events",
+        "censored",
+        "survival_probability"
+      ]
+    },
+    {
+      "path": "modeling/T7/baselines/t7_nelson_aalen_baseline.csv",
+      "classification": "csv",
+      "score": 5,
+      "reasons": [
+        "survival_related_fields_detected"
+      ],
+      "survival_fields": [
+        "time_seconds",
+        "at_risk",
+        "events",
+        "censored",
+        "hazard_increment",
+        "cumulative_hazard"
+      ]
+    },
+    {
+      "path": "modeling/T7/derived/t7_mod006_kaplan_meier_curve.csv",
+      "classification": "csv",
+      "score": 5,
+      "reasons": [
+        "survival_related_fields_detected"
+      ],
+      "survival_fields": [
+        "duration_seconds",
+        "event_count",
+        "censor_count",
+        "at_risk",
+        "kaplan_meier_survival"
+      ]
+    },
+    {
+      "path": "modeling/T7/derived/t7_mod007_evaluation_predictions.csv",
+      "classification": "csv",
+      "score": 5,
+      "reasons": [
+        "survival_related_fields_detected"
+      ],
+      "survival_fields": [
+        "duration_seconds",
+        "event",
+        "predicted_median_survival_seconds",
+        "survival_probability_at_211583_seconds",
+        "survival_probability_at_1780179_seconds",
+        "survival_probability_at_14608619_seconds"
+      ]
+    },
+    {
+      "path": "modeling/T7/derived/t7_mod010_evaluation_predictions.csv",
+      "classification": "csv",
+      "score": 5,
+      "reasons": [
+        "survival_related_fields_detected"
+      ],
+      "survival_fields": [
+        "duration_seconds",
+        "event",
+        "predicted_median_survival_seconds",
+        "survival_probability_at_211583_seconds",
+        "survival_probability_at_1780179_seconds",
+        "survival_probability_at_14608619_seconds"
+      ]
+    },
+    {
+      "path": "modeling/T7/metrics/t7_mod008_predictive_vs_reference.csv",
+      "classification": "csv",
+      "score": 5,
+      "reasons": [
+        "survival_related_fields_detected"
+      ],
+      "survival_fields": [
+        "km_reference_survival",
+        "predictive_mean_survival",
+        "predictive_std_survival",
+        "predictive_min_survival",
+        "predictive_max_survival"
+      ]
+    },
+    {
+      "path": "modeling/T7/derived/t7_creation_time_modeling_dataset.csv",
+      "classification": "csv",
+      "score": 4,
+      "reasons": [
+        "survival_related_fields_detected"
+      ],
+      "survival_fields": [
+        "Creation time",
+        "first_resolved_time",
+        "duration_seconds",
+        "event"
+      ]
+    },
+    {
+      "path": "modeling/T7/derived/t7_mod006_nelson_aalen_curve.csv",
+      "classification": "csv",
+      "score": 4,
+      "reasons": [
+        "survival_related_fields_detected"
+      ],
+      "survival_fields": [
+        "duration_seconds",
+        "event_count",
+        "at_risk",
+        "nelson_aalen_cumulative_hazard"
+      ]
+    },
+    {
+      "path": "modeling/T7/splits/t7_evaluation.csv",
+      "classification": "csv",
+      "score": 4,
+      "reasons": [
+        "survival_related_fields_detected"
+      ],
+      "survival_fields": [
+        "Creation time",
+        "first_resolved_time",
+        "duration_seconds",
+        "event"
+      ]
+    },
+    {
+      "path": "modeling/T7/splits/t7_train.csv",
+      "classification": "csv",
+      "score": 4,
+      "reasons": [
+        "survival_related_fields_detected"
+      ],
+      "survival_fields": [
+        "Creation time",
+        "first_resolved_time",
+        "duration_seconds",
+        "event"
+      ]
+    },
+    {
+      "path": "modeling/T7/contracts/t7_modeling_contract.json",
+      "classification": "json",
+      "score": 3,
+      "reasons": [
+        "survival_related_fields_detected"
+      ],
+      "survival_fields": [
+        "operational_problem",
+        "prediction_boundary",
+        "censoring"
+      ]
+    },
+    {
+      "path": "modeling/T7/metrics/t7_mod003_feature_construction_audit.json",
+      "classification": "json",
+      "score": 2,
+      "reasons": [
+        "survival_related_fields_detected"
+      ],
+      "survival_fields": [
+        "final_output",
+        "timezone_contract"
+      ]
+    },
+    {
+      "path": "modeling/T7/derived/t7_mod003_creation_features.tmp.csv",
+      "classification": "csv",
+      "score": 1,
+      "reasons": [
+        "survival_related_fields_detected"
+      ],
+      "survival_fields": [
+        "Creation time"
+      ]
+    },
+    {
+      "path": "modeling/T7/metrics/t7_mod002_feature_source_audit.json",
+      "classification": "json",
+      "score": 1,
+      "reasons": [
+        "survival_related_fields_detected"
+      ],
+      "survival_fields": [
+        "identity_time_fields"
+      ]
+    },
+    {
+      "path": "modeling/T7/metrics/t7_mod005_split_freeze.json",
+      "classification": "json",
+      "score": 1,
+      "reasons": [
+        "survival_related_fields_detected"
+      ],
+      "survival_fields": [
+        "event_accounting"
+      ]
+    },
+    {
+      "path": "modeling/T7/metrics/t7_mod008_predictive_vs_reference_audit.json",
+      "classification": "json",
+      "score": 1,
+      "reasons": [
+        "survival_related_fields_detected"
+      ],
+      "survival_fields": [
+        "output_artifacts"
+      ]
+    },
+    {
+      "path": "modeling/T7/metrics/t7_mod012_final_closure.json",
+      "classification": "json",
+      "score": 1,
+      "reasons": [
+        "survival_related_fields_detected"
+      ],
+      "survival_fields": [
+        "survival_baselines"
+      ]
+    },
+    {
+      "path": "modeling/T7/scripts/t7_mod008_predictive_vs_reference_evaluation.py",
+      "classification": "prediction_like",
+      "score": 1,
+      "reasons": [
+        "classification=prediction_like"
+      ],
+      "survival_fields": []
+    }
+  ],
+  "candidate_resolution_status": "DISCOVERY_COMPLETE__SEMANTIC_RESOLUTION_PENDING",
+  "controls": {
+    "artifact_read_only": true,
+    "model_fitted": false,
+    "prediction_generated": false,
+    "probability_generated": false,
+    "calibration_fitted": false,
+    "target_created": false,
+    "target_relabelled": false,
+    "censoring_relabelled": false,
+    "survival_converted_to_binary": false,
+    "binary_resolution_created": false,
+    "threshold_selected": false,
+    "locked_test_used": false,
+    "universal_confidence_created": false,
+    "universal_risk_score_created": false,
+    "existing_artifacts_modified": false,
+    "post_creation_information_used": false,
+    "native_survival_semantics_preserved": true
+  },
+  "control_validation": {
+    "status": "PASS",
+    "failed_controls": []
+  },
+  "interpretation": {
+    "operation_role": "Read-only structural and semantic candidate resolution.",
+    "native_survival_output_established": false,
+    "final_artifact_selected": false,
+    "survival_semantics_inferred_from_filename_only": false,
+    "censoring_semantics_inferred_without_evidence": false,
+    "probability_semantics_established": false,
+    "next_operation": "OP-013B should resolve the actual T7 event, censoring, duration/time, and native survival-output semantics from the strongest candidate artifact(s)."
+  },
+  "methodological_restrictions": [
+    "This operation is read-only.",
+    "No model fitting is permitted.",
+    "No prediction generation is permitted.",
+    "No probability generation is permitted.",
+    "No calibration fitting is permitted.",
+    "No target creation or relabelling is permitted.",
+    "No censoring relabelling is permitted.",
+    "Survival outputs must not be converted into an ordinary binary resolution target.",
+    "Filename or field-name discovery alone does not establish survival semantics.",
+    "No final T7 artifact is selected solely from heuristic filename scoring.",
+    "No locked test data are used for method or artifact selection."
+  ],
+  "artifacts_generated": [
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op013a_t7_prior_artifact_schema.json"
+  ]
+}

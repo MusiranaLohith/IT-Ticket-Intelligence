@@ -1,0 +1,126 @@
+{
+  "experiment_id": "T4-MOD-007",
+  "title": "Historical Similarity Assignee Ranking Baseline",
+  "status": "COMPLETE",
+  "train_rows": 142501,
+  "evaluation_rows": 35626,
+  "training_candidate_assignees": 4139,
+  "retrieval": {
+    "k": 20,
+    "method": "TF-IDF cosine nearest-neighbor retrieval",
+    "aggregation": "sum of similarity evidence by historical assignee"
+  },
+  "tfidf": {
+    "max_features": 20000,
+    "ngram_range": [
+      1,
+      1
+    ],
+    "min_df": 2,
+    "max_df": 0.995,
+    "sublinear_tf": true
+  },
+  "metrics_overall": {
+    "hit_at_1": 0.2579015325885589,
+    "hit_at_3": 0.3231909279739516,
+    "hit_at_5": 0.3529725481389996,
+    "hit_at_10": 0.39308370291360245,
+    "mrr": 0.30084030982893156,
+    "ndcg_at_5": 0.3082849828792247,
+    "ndcg_at_10": 0.32120802022972433
+  },
+  "metrics_covered_targets": {
+    "rows": 32773,
+    "hit_at_1": 0.2803527293808928,
+    "hit_at_3": 0.3513257864705703,
+    "hit_at_5": 0.38369999694870777,
+    "hit_at_10": 0.42730296280474783,
+    "mrr": 0.32702947175923824,
+    "ndcg_at_5": 0.3351222286655252,
+    "ndcg_at_10": 0.3491702599305575
+  },
+  "metrics_unseen_targets": {
+    "rows": 2853,
+    "rate": 0.08008196261157581,
+    "hit_at_1": 0.0,
+    "hit_at_3": 0.0,
+    "hit_at_5": 0.0,
+    "hit_at_10": 0.0,
+    "mrr": 0.0,
+    "ndcg_at_5": 0.0,
+    "ndcg_at_10": 0.0
+  },
+  "supporting_top1_metrics": {
+    "accuracy": 0.2579015325885589,
+    "macro_f1": 0.016350079695902176,
+    "weighted_f1": 0.2794140094291517
+  },
+  "historical_support_stratification": {
+    "1": {
+      "rows": 983,
+      "hit_at_1": 0.0,
+      "hit_at_5": 0.029501525940996948,
+      "hit_at_10": 0.044760935910478125
+    },
+    "2-5": {
+      "rows": 2965,
+      "hit_at_1": 0.006745362563237774,
+      "hit_at_5": 0.059359190556492414,
+      "hit_at_10": 0.09005059021922428
+    },
+    "6-10": {
+      "rows": 1145,
+      "hit_at_1": 0.023580786026200874,
+      "hit_at_5": 0.07336244541484715,
+      "hit_at_10": 0.11441048034934498
+    },
+    "11-20": {
+      "rows": 1338,
+      "hit_at_1": 0.10239162929745889,
+      "hit_at_5": 0.20254110612855009,
+      "hit_at_10": 0.23094170403587444
+    },
+    "21-50": {
+      "rows": 2752,
+      "hit_at_1": 0.14970930232558138,
+      "hit_at_5": 0.2376453488372093,
+      "hit_at_10": 0.2914244186046512
+    },
+    "51-100": {
+      "rows": 4270,
+      "hit_at_1": 0.3009367681498829,
+      "hit_at_5": 0.45081967213114754,
+      "hit_at_10": 0.4932084309133489
+    },
+    "101+": {
+      "rows": 19320,
+      "hit_at_1": 0.37820910973084887,
+      "hit_at_5": 0.48840579710144927,
+      "hit_at_10": 0.535455486542443
+    }
+  },
+  "open_world": {
+    "covered_rows": 32773,
+    "unseen_rows": 2853,
+    "unseen_rate": 0.08008196261157581
+  },
+  "controls": {
+    "raw_mozilla_accessed": false,
+    "target_reconstructed": false,
+    "evaluation_used_only_for_scoring": true,
+    "training_tickets_used_for_retrieval": true,
+    "evaluation_tickets_used_for_retrieval": false,
+    "future_features_used": false,
+    "target_side_fields_used": false,
+    "unseen_targets_removed": false
+  },
+  "interpretation": {
+    "system_role": "secondary decision-support signal",
+    "problem_formulation": "candidate ranking",
+    "historical_assignment_not_universal_truth": true,
+    "operational_eligibility_established": false
+  },
+  "runtime": {
+    "total_seconds": 95.23970913887024
+  }
+}

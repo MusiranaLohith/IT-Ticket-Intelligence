@@ -1,0 +1,209 @@
+{
+  "module": "T8-MOD-033",
+  "operation": "OP-001",
+  "t8_development_population": 16518,
+  "t4_root_exists": true,
+  "t5_root_exists": true,
+  "t4_files": [
+    "modeling/T4/contracts/t4_baseline_contract.json",
+    "modeling/T4/contracts/t4_model_contract.json",
+    "modeling/T4/contracts/t4_ranking_contract.json",
+    "modeling/T4/derived/t4_eval.csv",
+    "modeling/T4/derived/t4_features.csv",
+    "modeling/T4/derived/t4_materialize_report.json",
+    "modeling/T4/derived/t4_split_report.json",
+    "modeling/T4/derived/t4_train.csv",
+    "modeling/T4/derived/t4_validation_report.json",
+    "modeling/T4/results/t4_mod007_full_results.json",
+    "modeling/T4/results/t4_mod007_retrieval_analysis.json",
+    "modeling/T4/results/t4_mod007_similarity_analysis.json",
+    "modeling/T4/results/t4_mod007_smoke_report.json",
+    "modeling/T4/results/t4_mod007_true_assignee_coverage.json",
+    "modeling/T4/results/t4_mod008_analysis.json",
+    "modeling/T4/results/t4_mod008_full.json",
+    "modeling/T4/results/t4_mod008_screen.json",
+    "modeling/T4/results/t4_mod009_screen.json",
+    "modeling/T4/results/t4_mod010_comparison.json",
+    "modeling/T4/results/t4_mod011_full.json",
+    "modeling/T4/results/t4_mod012_analysis.json",
+    "modeling/T4/results/t4_mod013_closure.json",
+    "modeling/T4/results/t4_r1_analysis.json",
+    "modeling/T4/results/t4_r1_metrics.json",
+    "modeling/T4/results/t4_r1_vs_mod007_analysis.json"
+  ],
+  "t5_files": [
+    "modeling/T5/contracts/t5_baseline_contract.json",
+    "modeling/T5/contracts/t5_mod008_model_selection_lock.json",
+    "modeling/T5/derived/t5_mod003_materialize_report.json",
+    "modeling/T5/derived/t5_train_features.csv",
+    "modeling/T5/metrics/t5_mod005_validation_metrics.json",
+    "modeling/T5/metrics/t5_mod006_calibration_bins.json",
+    "modeling/T5/metrics/t5_mod006_calibration_metrics.json",
+    "modeling/T5/metrics/t5_mod007_calibration_comparison.json",
+    "modeling/T5/metrics/t5_mod009_locked_evaluation_metrics.json",
+    "modeling/T5/metrics/t5_mod010_generalization_analysis.json",
+    "modeling/T5/metrics/t5_mod011_final_closure.json",
+    "modeling/T5/plots/t5_visualization_manifest.json",
+    "modeling/T5/splits/t5_calibration_cal.csv",
+    "modeling/T5/splits/t5_calibration_fit.csv",
+    "modeling/T5/splits/t5_mod004_split_report.json",
+    "modeling/T5/splits/t5_model_train.csv",
+    "modeling/T5/splits/t5_model_val.csv"
+  ],
+  "csv_inspections": [
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/derived/t4_eval.csv",
+      "type": "csv",
+      "columns": [
+        "ID",
+        "Creation time",
+        "Creator",
+        "Creator Detail",
+        "Summary",
+        "Description",
+        "target_assignee"
+      ],
+      "sample_rows": 5,
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/derived/t4_features.csv",
+      "type": "csv",
+      "columns": [
+        "ID",
+        "Creation time",
+        "Creator",
+        "Creator Detail",
+        "Summary",
+        "Description",
+        "target_assignee"
+      ],
+      "sample_rows": 5,
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/derived/t4_train.csv",
+      "type": "csv",
+      "columns": [
+        "ID",
+        "Creation time",
+        "Creator",
+        "Creator Detail",
+        "Summary",
+        "Description",
+        "target_assignee"
+      ],
+      "sample_rows": 5,
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/derived/t5_train_features.csv",
+      "type": "csv",
+      "columns": [
+        "ID",
+        "Creation time",
+        "Creator",
+        "Creator Detail",
+        "Summary",
+        "Description",
+        "T5 target"
+      ],
+      "sample_rows": 5,
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/splits/t5_calibration_cal.csv",
+      "type": "csv",
+      "columns": [
+        "ID",
+        "Creation time",
+        "Creator",
+        "Creator Detail",
+        "Summary",
+        "Description",
+        "T5 target"
+      ],
+      "sample_rows": 5,
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/splits/t5_calibration_fit.csv",
+      "type": "csv",
+      "columns": [
+        "ID",
+        "Creation time",
+        "Creator",
+        "Creator Detail",
+        "Summary",
+        "Description",
+        "T5 target"
+      ],
+      "sample_rows": 5,
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/splits/t5_model_train.csv",
+      "type": "csv",
+      "columns": [
+        "ID",
+        "Creation time",
+        "Creator",
+        "Creator Detail",
+        "Summary",
+        "Description",
+        "T5 target"
+      ],
+      "sample_rows": 5,
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/splits/t5_model_val.csv",
+      "type": "csv",
+      "columns": [
+        "ID",
+        "Creation time",
+        "Creator",
+        "Creator Detail",
+        "Summary",
+        "Description",
+        "T5 target"
+      ],
+      "sample_rows": 5,
+      "error": null
+    }
+  ],
+  "prediction_artifact_candidates": {
+    "T4": [
+      "modeling/T4/derived/t4_validation_report.json"
+    ],
+    "T5": [
+      "modeling/T5/metrics/t5_mod005_validation_metrics.json"
+    ]
+  },
+  "id_candidate_results": [
+    {
+      "task": "T4",
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/derived/t4_validation_report.json",
+      "readable": false,
+      "has_ID": false,
+      "row_count": null,
+      "overlap_with_t8_oof": null,
+      "columns": [],
+      "error": null
+    },
+    {
+      "task": "T5",
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod005_validation_metrics.json",
+      "readable": false,
+      "has_ID": false,
+      "row_count": null,
+      "overlap_with_t8_oof": null,
+      "columns": [],
+      "error": null
+    }
+  ],
+  "t4_id_addressable_candidate": false,
+  "t5_id_addressable_candidate": false,
+  "locked_evaluation_used": false,
+  "fusion_model_trained": false
+}

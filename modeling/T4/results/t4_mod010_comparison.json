@@ -1,0 +1,156 @@
+{
+  "experiment": "T4-MOD-010",
+  "status": "COMPLETE",
+  "purpose": "Controlled comparison of T4 retrieval and classification experiments",
+  "experiments": {
+    "r1": "Flat TF-IDF + LinearSVC",
+    "mod007": "Word TF-IDF historical retrieval",
+    "mod008": "Word + Character TF-IDF historical retrieval",
+    "mod009": "BM25 historical retrieval screening"
+  },
+  "population": {
+    "r1_evaluation_rows": 35626,
+    "mod007_evaluation_rows": 35626,
+    "mod008_evaluation_rows": 35626,
+    "mod009_screen_rows": 2000
+  },
+  "metrics": [
+    {
+      "metric": "Hit@1",
+      "r1": 0.28105877729747936,
+      "mod007": 0.2579015325885589,
+      "mod008": 0.21335541458485377,
+      "mod009_screen": 0.2175
+    },
+    {
+      "metric": "Hit@3",
+      "r1": 0.36352663784876216,
+      "mod007": 0.3231909279739516,
+      "mod008": 0.30320552405546514,
+      "mod009_screen": 0.321
+    },
+    {
+      "metric": "Hit@5",
+      "r1": 0.40192555998428114,
+      "mod007": 0.3529725481389996,
+      "mod008": 0.3367765115365183,
+      "mod009_screen": 0.3615
+    },
+    {
+      "metric": "Hit@10",
+      "r1": 0.4500645595913097,
+      "mod007": 0.39308370291360245,
+      "mod008": 0.3821085723909504,
+      "mod009_screen": 0.4135
+    },
+    {
+      "metric": "Hit@20",
+      "r1": null,
+      "mod007": null,
+      "mod008": 0.4351035760399708,
+      "mod009_screen": 0.466
+    }
+  ],
+  "mod009_screening": {
+    "population": {
+      "train_rows": 142501,
+      "evaluation_rows": 35626,
+      "covered_evaluation_rows": 32773,
+      "screen_sample": 2000,
+      "training_candidates": 4139
+    },
+    "bm25": {
+      "max_features": 50000,
+      "min_df": 2,
+      "k1": 1.5,
+      "b": 0.75,
+      "vocabulary_size": 50000
+    },
+    "retrieval": {
+      "top_k": 20,
+      "metrics": {
+        "hit_at_1": 0.2175,
+        "hit_at_3": 0.321,
+        "hit_at_5": 0.3615,
+        "hit_at_10": 0.4135,
+        "hit_at_20": 0.466
+      },
+      "runtime_seconds": 13.609824419021606
+    },
+    "sampling": {
+      "seed": 42,
+      "deterministic": true,
+      "covered_only": true
+    }
+  },
+  "deltas": {
+    "hit_at_1": {
+      "vs_mod007": -0.040401532588558914,
+      "vs_mod008": 0.004144585415146229
+    },
+    "hit_at_3": {
+      "vs_mod007": -0.0021909279739515952,
+      "vs_mod008": 0.01779447594453487
+    },
+    "hit_at_5": {
+      "vs_mod007": 0.008527451861000401,
+      "vs_mod008": 0.024723488463481713
+    },
+    "hit_at_10": {
+      "vs_mod007": 0.020416297086397528,
+      "vs_mod008": 0.03139142760904956
+    },
+    "hit_at_20": {
+      "vs_mod007": null,
+      "vs_mod008": 0.03089642396002923
+    }
+  },
+  "ranking_metrics_mod007": {
+    "mrr": 0.30084030982893156,
+    "ndcg_at_5": 0.3082849828792247,
+    "ndcg_at_10": 0.32120802022972433
+  },
+  "comparability": {
+    "mod009_is_screening_only": true,
+    "mod009_full_evaluation_completed": false,
+    "mod009_screen_rows": 2000,
+    "mod008_full_evaluation_rows": 35626,
+    "mod007_full_evaluation_rows": 35626
+  },
+  "interpretation": {
+    "screening_not_final_model_selection": true,
+    "full_scale_mod009_required_before_final_comparison": true
+  },
+  "controls": {
+    "r1": {},
+    "mod007": {
+      "raw_mozilla_accessed": false,
+      "target_reconstructed": false,
+      "evaluation_used_only_for_scoring": true,
+      "training_tickets_used_for_retrieval": true,
+      "evaluation_tickets_used_for_retrieval": false,
+      "future_features_used": false,
+      "target_side_fields_used": false,
+      "unseen_targets_removed": false
+    },
+    "mod008": {
+      "raw_mozilla_accessed": false,
+      "target_reconstructed": false,
+      "test_used": false,
+      "future_features_used": false,
+      "split_changed": false
+    },
+    "mod009": {
+      "raw_mozilla_accessed": false,
+      "target_reconstructed": false,
+      "test_used": false,
+      "future_features_used": false,
+      "split_changed": false
+    }
+  },
+  "raw_mozilla_accessed": false,
+  "target_reconstructed": false,
+  "test_used": false,
+  "future_features_used": false,
+  "split_changed": false
+}

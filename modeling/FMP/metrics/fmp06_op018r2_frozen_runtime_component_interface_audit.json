@@ -1,0 +1,364 @@
+{
+  "operation": "FMP-06 OP-018R2",
+  "operation_type": "READ_ONLY_FROZEN_RUNTIME_COMPONENT_INTERFACE_AUDIT",
+  "components": {
+    "T1": {
+      "artifact": "modeling/T1/baselines/t1_it_support_char_svm.joblib",
+      "artifact_type": "builtins.dict",
+      "components": [
+        {
+          "name": "model",
+          "type": "sklearn.svm._classes.LinearSVC",
+          "methods": {
+            "transform": false,
+            "predict": true,
+            "predict_proba": false,
+            "decision_function": true,
+            "fit": true,
+            "fit_transform": false
+          },
+          "attributes": {
+            "classes_": {
+              "shape": [
+                7
+              ]
+            },
+            "n_features_in_": "29096",
+            "coef_": {
+              "type": "numpy.ndarray",
+              "shape": [
+                7,
+                29096
+              ]
+            },
+            "intercept_": {
+              "type": "numpy.ndarray",
+              "shape": [
+                7
+              ]
+            }
+          }
+        },
+        {
+          "name": "features",
+          "type": "sklearn.pipeline.FeatureUnion",
+          "methods": {
+            "transform": true,
+            "predict": false,
+            "predict_proba": false,
+            "decision_function": false,
+            "fit": true,
+            "fit_transform": true
+          },
+          "attributes": {}
+        },
+        {
+          "name": "classifier",
+          "type": "builtins.dict",
+          "methods": {
+            "transform": false,
+            "predict": false,
+            "predict_proba": false,
+            "decision_function": false,
+            "fit": false,
+            "fit_transform": false
+          },
+          "attributes": {}
+        }
+      ]
+    },
+    "T2": {
+      "artifact": "modeling/T2/models/t2_class_weighted_tfidf_logreg.joblib",
+      "artifact_type": "builtins.dict",
+      "components": [
+        {
+          "name": "vectorizer",
+          "type": "sklearn.feature_extraction.text.TfidfVectorizer",
+          "methods": {
+            "transform": true,
+            "predict": false,
+            "predict_proba": false,
+            "decision_function": false,
+            "fit": true,
+            "fit_transform": true
+          },
+          "attributes": {
+            "vocabulary_": {
+              "type": "dict",
+              "size": 212254
+            },
+            "idf_": {
+              "type": "numpy.ndarray",
+              "shape": [
+                212254
+              ]
+            }
+          }
+        },
+        {
+          "name": "model",
+          "type": "sklearn.linear_model._logistic.LogisticRegression",
+          "methods": {
+            "transform": false,
+            "predict": true,
+            "predict_proba": true,
+            "decision_function": true,
+            "fit": true,
+            "fit_transform": false
+          },
+          "attributes": {
+            "classes_": {
+              "shape": [
+                5
+              ]
+            },
+            "n_features_in_": "212254",
+            "coef_": {
+              "type": "numpy.ndarray",
+              "shape": [
+                5,
+                212254
+              ]
+            },
+            "intercept_": {
+              "type": "numpy.ndarray",
+              "shape": [
+                5
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "T3": {
+      "artifact": "modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib",
+      "artifact_type": "builtins.dict",
+      "components": [
+        {
+          "name": "vectorizer",
+          "type": "sklearn.feature_extraction.text.TfidfVectorizer",
+          "methods": {
+            "transform": true,
+            "predict": false,
+            "predict_proba": false,
+            "decision_function": false,
+            "fit": true,
+            "fit_transform": true
+          },
+          "attributes": {
+            "vocabulary_": {
+              "type": "dict",
+              "size": 288972
+            },
+            "idf_": {
+              "type": "numpy.ndarray",
+              "shape": [
+                288972
+              ]
+            }
+          }
+        },
+        {
+          "name": "model",
+          "type": "sklearn.linear_model._logistic.LogisticRegression",
+          "methods": {
+            "transform": false,
+            "predict": true,
+            "predict_proba": true,
+            "decision_function": true,
+            "fit": true,
+            "fit_transform": false
+          },
+          "attributes": {
+            "classes_": {
+              "shape": [
+                4
+              ]
+            },
+            "n_features_in_": "288972",
+            "coef_": {
+              "type": "numpy.ndarray",
+              "shape": [
+                4,
+                288972
+              ]
+            },
+            "intercept_": {
+              "type": "numpy.ndarray",
+              "shape": [
+                4
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "T5_VECTOR": {
+      "name": "t5_vectorizer",
+      "type": "sklearn.feature_extraction.text.TfidfVectorizer",
+      "methods": {
+        "transform": true,
+        "predict": false,
+        "predict_proba": false,
+        "decision_function": false,
+        "fit": true,
+        "fit_transform": true
+      },
+      "attributes": {
+        "vocabulary_": {
+          "type": "dict",
+          "size": 100000
+        },
+        "idf_": {
+          "type": "numpy.ndarray",
+          "shape": [
+            100000
+          ]
+        }
+      }
+    },
+    "T5_CLASSIFIER": {
+      "name": "t5_classifier",
+      "type": "sklearn.linear_model._logistic.LogisticRegression",
+      "methods": {
+        "transform": false,
+        "predict": true,
+        "predict_proba": true,
+        "decision_function": true,
+        "fit": true,
+        "fit_transform": false
+      },
+      "attributes": {
+        "classes_": {
+          "shape": [
+            2
+          ]
+        },
+        "n_features_in_": "100000",
+        "coef_": {
+          "type": "numpy.ndarray",
+          "shape": [
+            1,
+            100000
+          ]
+        },
+        "intercept_": {
+          "type": "numpy.ndarray",
+          "shape": [
+            1
+          ]
+        }
+      }
+    },
+    "T5_CALIBRATION": {
+      "artifact": "modeling/T5/models/t5_mod007_calibration_models.joblib",
+      "keys": [
+        "base_model",
+        "sigmoid_calibrator",
+        "isotonic_calibrator"
+      ],
+      "components": [
+        {
+          "name": "base_model",
+          "type": "sklearn.linear_model._logistic.LogisticRegression",
+          "methods": {
+            "transform": false,
+            "predict": true,
+            "predict_proba": true,
+            "decision_function": true,
+            "fit": true,
+            "fit_transform": false
+          },
+          "attributes": {
+            "classes_": {
+              "shape": [
+                2
+              ]
+            },
+            "n_features_in_": "100000",
+            "coef_": {
+              "type": "numpy.ndarray",
+              "shape": [
+                1,
+                100000
+              ]
+            },
+            "intercept_": {
+              "type": "numpy.ndarray",
+              "shape": [
+                1
+              ]
+            }
+          }
+        },
+        {
+          "name": "sigmoid_calibrator",
+          "type": "sklearn.linear_model._logistic.LogisticRegression",
+          "methods": {
+            "transform": false,
+            "predict": true,
+            "predict_proba": true,
+            "decision_function": true,
+            "fit": true,
+            "fit_transform": false
+          },
+          "attributes": {
+            "classes_": {
+              "shape": [
+                2
+              ]
+            },
+            "n_features_in_": "1",
+            "coef_": {
+              "type": "numpy.ndarray",
+              "shape": [
+                1,
+                1
+              ]
+            },
+            "intercept_": {
+              "type": "numpy.ndarray",
+              "shape": [
+                1
+              ]
+            }
+          }
+        },
+        {
+          "name": "isotonic_calibrator",
+          "type": "sklearn.isotonic.IsotonicRegression",
+          "methods": {
+            "transform": true,
+            "predict": true,
+            "predict_proba": false,
+            "decision_function": false,
+            "fit": true,
+            "fit_transform": true
+          },
+          "attributes": {
+            "X_thresholds_": {
+              "shape": [
+                48
+              ]
+            },
+            "y_thresholds_": {
+              "shape": [
+                48
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "safeguards": {
+    "inference_executed": false,
+    "predict_called": false,
+    "predict_proba_called": false,
+    "transform_called": false,
+    "fit_called": false,
+    "retraining": false,
+    "artifact_modification": false
+  },
+  "overall_status": "PASS"
+}

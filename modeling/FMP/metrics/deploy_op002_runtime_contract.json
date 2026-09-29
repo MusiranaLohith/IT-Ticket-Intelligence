@@ -1,0 +1,907 @@
+{
+  "operation": "DEPLOY-OP-002",
+  "title": "Runtime Contract Reconciliation",
+  "timestamp": "2026-09-27T14:05:47.783570",
+  "read_only": true,
+  "runtime_root": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/deployment/runtime",
+  "interfaces": {
+    "TicketPipeline": {
+      "__init__": "(self)",
+      "predict": "(self, ticket: 'dict[str, Any]')",
+      "predict_batch": "(self, tickets: 'list[dict[str, Any]]')",
+      "methods": {
+        "predict": "(self, ticket: 'dict[str, Any]')",
+        "predict_batch": "(self, tickets: 'list[dict[str, Any]]')"
+      }
+    },
+    "TicketExplanation": {
+      "__init__": "(self, /, *args, **kwargs)",
+      "explain": "(result)",
+      "methods": {
+        "explain": "(result)"
+      }
+    }
+  },
+  "ticket_fields": {
+    "source_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/deployment/runtime/ticket_pipeline.py",
+    "known_fields_referenced": [
+      "ticket_id",
+      "creation_time",
+      "creator",
+      "creator_detail",
+      "summary",
+      "description"
+    ]
+  },
+  "contract_ticket": {
+    "ticket_id": "DEPLOY-OP002-001",
+    "creation_time": "2026-09-27T08:00:00",
+    "creator": "contract-test-user",
+    "creator_detail": "engineering",
+    "summary": "VPN connection problem",
+    "description": "User cannot connect to the company VPN from the workstation."
+  },
+  "prediction_structure": {
+    "path": "root",
+    "type": "dict",
+    "keys": [
+      "ticket",
+      "tasks",
+      "final",
+      "integrity"
+    ],
+    "children": [
+      {
+        "path": "root.ticket",
+        "type": "dict",
+        "keys": [
+          "ticket_id",
+          "creation_time",
+          "creator",
+          "creator_detail",
+          "summary",
+          "description"
+        ],
+        "children": [
+          {
+            "path": "root.ticket.ticket_id",
+            "type": "str",
+            "value_preview": "DEPLOY-OP002-001"
+          },
+          {
+            "path": "root.ticket.creation_time",
+            "type": "str",
+            "value_preview": "2026-09-27T08:00:00"
+          },
+          {
+            "path": "root.ticket.creator",
+            "type": "str",
+            "value_preview": "contract-test-user"
+          },
+          {
+            "path": "root.ticket.creator_detail",
+            "type": "str",
+            "value_preview": "engineering"
+          },
+          {
+            "path": "root.ticket.summary",
+            "type": "str",
+            "value_preview": "VPN connection problem"
+          },
+          {
+            "path": "root.ticket.description",
+            "type": "str",
+            "value_preview": "User cannot connect to the company VPN from the workstation."
+          }
+        ]
+      },
+      {
+        "path": "root.tasks",
+        "type": "dict",
+        "keys": [
+          "T1",
+          "T2",
+          "T3",
+          "T4",
+          "T5",
+          "T6",
+          "T7",
+          "T8",
+          "T9",
+          "T10",
+          "T11"
+        ],
+        "children": [
+          {
+            "path": "root.tasks.T1",
+            "type": "dict",
+            "keys": [
+              "status",
+              "prediction",
+              "transformed_shape",
+              "artifact"
+            ],
+            "children": [
+              {
+                "path": "root.tasks.T1.status",
+                "type": "str",
+                "value_preview": "EXECUTED"
+              },
+              {
+                "path": "root.tasks.T1.prediction",
+                "type": "str",
+                "value_preview": "Support general"
+              },
+              {
+                "path": "root.tasks.T1.transformed_shape",
+                "type": "list",
+                "length": 2,
+                "first_item": {
+                  "path": "root.tasks.T1.transformed_shape[0]",
+                  "type": "int",
+                  "value_preview": "1"
+                }
+              },
+              {
+                "path": "root.tasks.T1.artifact",
+                "type": "str",
+                "value_preview": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/baselines/t1_it_support_char_svm.joblib"
+              }
+            ]
+          },
+          {
+            "path": "root.tasks.T2",
+            "type": "dict",
+            "keys": [
+              "status",
+              "prediction",
+              "transformed_shape",
+              "artifact"
+            ],
+            "children": [
+              {
+                "path": "root.tasks.T2.status",
+                "type": "str",
+                "value_preview": "EXECUTED"
+              },
+              {
+                "path": "root.tasks.T2.prediction",
+                "type": "str",
+                "value_preview": "P2"
+              },
+              {
+                "path": "root.tasks.T2.transformed_shape",
+                "type": "list",
+                "length": 2,
+                "first_item": {
+                  "path": "root.tasks.T2.transformed_shape[0]",
+                  "type": "int",
+                  "value_preview": "1"
+                }
+              },
+              {
+                "path": "root.tasks.T2.artifact",
+                "type": "str",
+                "value_preview": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/models/t2_class_weighted_tfidf_logreg.joblib"
+              }
+            ]
+          },
+          {
+            "path": "root.tasks.T3",
+            "type": "dict",
+            "keys": [
+              "status",
+              "prediction",
+              "transformed_shape",
+              "artifact"
+            ],
+            "children": [
+              {
+                "path": "root.tasks.T3.status",
+                "type": "str",
+                "value_preview": "EXECUTED"
+              },
+              {
+                "path": "root.tasks.T3.prediction",
+                "type": "str",
+                "value_preview": "S4"
+              },
+              {
+                "path": "root.tasks.T3.transformed_shape",
+                "type": "list",
+                "length": 2,
+                "first_item": {
+                  "path": "root.tasks.T3.transformed_shape[0]",
+                  "type": "int",
+                  "value_preview": "1"
+                }
+              },
+              {
+                "path": "root.tasks.T3.artifact",
+                "type": "str",
+                "value_preview": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib"
+              }
+            ]
+          },
+          {
+            "path": "root.tasks.T4",
+            "type": "dict",
+            "keys": [
+              "status",
+              "results",
+              "artifacts"
+            ],
+            "children": [
+              {
+                "path": "root.tasks.T4.status",
+                "type": "str",
+                "value_preview": "EXECUTED"
+              },
+              {
+                "path": "root.tasks.T4.results",
+                "type": "list",
+                "length": 5,
+                "first_item": {
+                  "path": "root.tasks.T4.results[0]",
+                  "type": "dict",
+                  "keys": [
+                    "id",
+                    "distance",
+                    "summary",
+                    "target_assignee"
+                  ],
+                  "children": [
+                    {
+                      "path": "root.tasks.T4.results[0].id",
+                      "type": "str",
+                      "value_preview": "125875"
+                    },
+                    {
+                      "path": "root.tasks.T4.results[0].distance",
+                      "type": "float",
+                      "value_preview": "0.6364051103591919"
+                    },
+                    {
+                      "path": "root.tasks.T4.results[0].summary",
+                      "type": "str",
+                      "value_preview": "PAC: configured to work proxy server, but user not on work VPN"
+                    },
+                    {
+                      "path": "root.tasks.T4.results[0].target_assignee",
+                      "type": "str",
+                      "value_preview": "darin@netscape.com"
+                    }
+                  ]
+                }
+              },
+              {
+                "path": "root.tasks.T4.artifacts",
+                "type": "dict",
+                "keys": [
+                  "tfidf",
+                  "neighbors",
+                  "population"
+                ],
+                "children": [
+                  {
+                    "path": "root.tasks.T4.artifacts.tfidf",
+                    "type": "str",
+                    "value_preview": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_tfidf.joblib"
+                  },
+                  {
+                    "path": "root.tasks.T4.artifacts.neighbors",
+                    "type": "str",
+                    "value_preview": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod007_checkpoints/t4_mod007_neighbors.joblib"
+                  },
+                  {
+                    "path": "root.tasks.T4.artifacts.population",
+                    "type": "str",
+                    "value_preview": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/derived/t4_train.csv"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "path": "root.tasks.T5",
+            "type": "dict",
+            "keys": [
+              "status",
+              "duplicate_evidence",
+              "threshold_used",
+              "decision_score",
+              "artifacts"
+            ],
+            "children": [
+              {
+                "path": "root.tasks.T5.status",
+                "type": "str",
+                "value_preview": "EXECUTED"
+              },
+              {
+                "path": "root.tasks.T5.duplicate_evidence",
+                "type": "float",
+                "value_preview": "0.0"
+              },
+              {
+                "path": "root.tasks.T5.threshold_used",
+                "type": "bool",
+                "value_preview": "False"
+              },
+              {
+                "path": "root.tasks.T5.decision_score",
+                "type": "float",
+                "value_preview": "-3.4840238063987825"
+              },
+              {
+                "path": "root.tasks.T5.artifacts",
+                "type": "dict",
+                "keys": [
+                  "tfidf",
+                  "classifier",
+                  "calibrated_vectorizer",
+                  "calibration_models"
+                ],
+                "children": [
+                  {
+                    "path": "root.tasks.T5.artifacts.tfidf",
+                    "type": "str",
+                    "value_preview": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod005_tfidf.joblib"
+                  },
+                  {
+                    "path": "root.tasks.T5.artifacts.classifier",
+                    "type": "str",
+                    "value_preview": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod005_logreg.joblib"
+                  },
+                  {
+                    "path": "root.tasks.T5.artifacts.calibrated_vectorizer",
+                    "type": "str",
+                    "value_preview": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod007_calibrated_tfidf.joblib"
+                  },
+                  {
+                    "path": "root.tasks.T5.artifacts.calibration_models",
+                    "type": "str",
+                    "value_preview": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod007_calibration_models.joblib"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "path": "root.tasks.T6",
+            "type": "dict",
+            "keys": [
+              "status",
+              "full_mod010_hybrid_available",
+              "top_ids",
+              "reason"
+            ],
+            "children": [
+              {
+                "path": "root.tasks.T6.status",
+                "type": "str",
+                "value_preview": "PARTIAL_NATIVE_RUNTIME"
+              },
+              {
+                "path": "root.tasks.T6.full_mod010_hybrid_available",
+                "type": "bool",
+                "value_preview": "False"
+              },
+              {
+                "path": "root.tasks.T6.top_ids",
+                "type": "list",
+                "length": 0
+              },
+              {
+                "path": "root.tasks.T6.reason",
+                "type": "str",
+                "value_preview": "The frozen MOD-010 semantic component depends on stored semantic evidence for the existing evaluation population. A genuinely new ticket does not have a corresponding stored semantic evidence row. No semantic score is fabricated."
+              }
+            ]
+          },
+          {
+            "path": "root.tasks.T7",
+            "type": "dict",
+            "keys": [
+              "status",
+              "median_seconds",
+              "creation_year",
+              "training_year_min",
+              "training_year_max",
+              "temporal_support",
+              "linear_predictor",
+              "feature_count",
+              "artifacts"
+            ],
+            "children": [
+              {
+                "path": "root.tasks.T7.status",
+                "type": "str",
+                "value_preview": "EXECUTED_WITH_SUPPORT_LIMITATION"
+              },
+              {
+                "path": "root.tasks.T7.median_seconds",
+                "type": "float",
+                "value_preview": "5.584631924286706"
+              },
+              {
+                "path": "root.tasks.T7.creation_year",
+                "type": "int",
+                "value_preview": "2026"
+              },
+              {
+                "path": "root.tasks.T7.training_year_min",
+                "type": "int",
+                "value_preview": "1997"
+              },
+              {
+                "path": "root.tasks.T7.training_year_max",
+                "type": "int",
+                "value_preview": "2020"
+              },
+              {
+                "path": "root.tasks.T7.temporal_support",
+                "type": "str",
+                "value_preview": "OUTSIDE_OBSERVED_TRAINING_RANGE"
+              },
+              {
+                "path": "root.tasks.T7.linear_predictor",
+                "type": "float",
+                "value_preview": "1.7200185260139627"
+              },
+              {
+                "path": "root.tasks.T7.feature_count",
+                "type": "int",
+                "value_preview": "21"
+              },
+              {
+                "path": "root.tasks.T7.artifacts",
+                "type": "dict",
+                "keys": [
+                  "model",
+                  "train_population"
+                ],
+                "children": [
+                  {
+                    "path": "root.tasks.T7.artifacts.model",
+                    "type": "str",
+                    "value_preview": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod010_log_normal_aft_model.json"
+                  },
+                  {
+                    "path": "root.tasks.T7.artifacts.train_population",
+                    "type": "str",
+                    "value_preview": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/splits/t7_train.csv"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "path": "root.tasks.T8",
+            "type": "dict",
+            "keys": [
+              "status",
+              "evidence_state",
+              "available",
+              "partial",
+              "unavailable",
+              "missing_evidence_is_not_negative",
+              "native_semantics_preserved"
+            ],
+            "children": [
+              {
+                "path": "root.tasks.T8.status",
+                "type": "str",
+                "value_preview": "EXECUTED"
+              },
+              {
+                "path": "root.tasks.T8.evidence_state",
+                "type": "str",
+                "value_preview": "SUPPORTED_WITH_LIMITATIONS"
+              },
+              {
+                "path": "root.tasks.T8.available",
+                "type": "list",
+                "length": 5,
+                "first_item": {
+                  "path": "root.tasks.T8.available[0]",
+                  "type": "str",
+                  "value_preview": "T1"
+                }
+              },
+              {
+                "path": "root.tasks.T8.partial",
+                "type": "list",
+                "length": 2,
+                "first_item": {
+                  "path": "root.tasks.T8.partial[0]",
+                  "type": "str",
+                  "value_preview": "T6"
+                }
+              },
+              {
+                "path": "root.tasks.T8.unavailable",
+                "type": "list",
+                "length": 0
+              },
+              {
+                "path": "root.tasks.T8.missing_evidence_is_not_negative",
+                "type": "bool",
+                "value_preview": "True"
+              },
+              {
+                "path": "root.tasks.T8.native_semantics_preserved",
+                "type": "bool",
+                "value_preview": "True"
+              }
+            ]
+          },
+          {
+            "path": "root.tasks.T9",
+            "type": "dict",
+            "keys": [
+              "status",
+              "universal_confidence",
+              "universal_risk",
+              "cross_task_probability_aggregation",
+              "reason"
+            ],
+            "children": [
+              {
+                "path": "root.tasks.T9.status",
+                "type": "str",
+                "value_preview": "EXECUTED"
+              },
+              {
+                "path": "root.tasks.T9.universal_confidence",
+                "type": "NoneType"
+              },
+              {
+                "path": "root.tasks.T9.universal_risk",
+                "type": "NoneType"
+              },
+              {
+                "path": "root.tasks.T9.cross_task_probability_aggregation",
+                "type": "bool",
+                "value_preview": "False"
+              },
+              {
+                "path": "root.tasks.T9.reason",
+                "type": "str",
+                "value_preview": "Task outputs retain native semantics. No universal confidence or risk score is created."
+              }
+            ]
+          },
+          {
+            "path": "root.tasks.T10",
+            "type": "dict",
+            "keys": [
+              "status",
+              "action",
+              "automation",
+              "warnings"
+            ],
+            "children": [
+              {
+                "path": "root.tasks.T10.status",
+                "type": "str",
+                "value_preview": "EXECUTED"
+              },
+              {
+                "path": "root.tasks.T10.action",
+                "type": "str",
+                "value_preview": "HUMAN_DECISION_REQUIRED"
+              },
+              {
+                "path": "root.tasks.T10.automation",
+                "type": "str",
+                "value_preview": "NOT_ESTABLISHED"
+              },
+              {
+                "path": "root.tasks.T10.warnings",
+                "type": "list",
+                "length": 3,
+                "first_item": {
+                  "path": "root.tasks.T10.warnings[0]",
+                  "type": "str",
+                  "value_preview": "Evidence is not fully supported; missing evidence is not negative evidence."
+                }
+              }
+            ]
+          },
+          {
+            "path": "root.tasks.T11",
+            "type": "dict",
+            "keys": [
+              "status",
+              "feedback",
+              "synthetic_feedback"
+            ],
+            "children": [
+              {
+                "path": "root.tasks.T11.status",
+                "type": "str",
+                "value_preview": "EXECUTED"
+              },
+              {
+                "path": "root.tasks.T11.feedback",
+                "type": "str",
+                "value_preview": "AWAITING_OUTCOME"
+              },
+              {
+                "path": "root.tasks.T11.synthetic_feedback",
+                "type": "bool",
+                "value_preview": "False"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "root.final",
+        "type": "dict",
+        "keys": [
+          "category",
+          "priority",
+          "severity",
+          "duplicate_evidence",
+          "related_ticket_ids",
+          "resolution_median_seconds",
+          "evidence_state",
+          "action",
+          "lifecycle"
+        ],
+        "children": [
+          {
+            "path": "root.final.category",
+            "type": "str",
+            "value_preview": "Support general"
+          },
+          {
+            "path": "root.final.priority",
+            "type": "str",
+            "value_preview": "P2"
+          },
+          {
+            "path": "root.final.severity",
+            "type": "str",
+            "value_preview": "S4"
+          },
+          {
+            "path": "root.final.duplicate_evidence",
+            "type": "float",
+            "value_preview": "0.0"
+          },
+          {
+            "path": "root.final.related_ticket_ids",
+            "type": "list",
+            "length": 0
+          },
+          {
+            "path": "root.final.resolution_median_seconds",
+            "type": "float",
+            "value_preview": "5.584631924286706"
+          },
+          {
+            "path": "root.final.evidence_state",
+            "type": "str",
+            "value_preview": "SUPPORTED_WITH_LIMITATIONS"
+          },
+          {
+            "path": "root.final.action",
+            "type": "str",
+            "value_preview": "HUMAN_DECISION_REQUIRED"
+          },
+          {
+            "path": "root.final.lifecycle",
+            "type": "str",
+            "value_preview": "AWAITING_OUTCOME"
+          }
+        ]
+      },
+      {
+        "path": "root.integrity",
+        "type": "dict",
+        "keys": [
+          "model_retraining",
+          "model_modification",
+          "threshold_optimization",
+          "locked_test_reuse",
+          "prediction_modification",
+          "synthetic_feedback"
+        ],
+        "children": [
+          {
+            "path": "root.integrity.model_retraining",
+            "type": "bool",
+            "value_preview": "False"
+          },
+          {
+            "path": "root.integrity.model_modification",
+            "type": "bool",
+            "value_preview": "False"
+          },
+          {
+            "path": "root.integrity.threshold_optimization",
+            "type": "bool",
+            "value_preview": "False"
+          },
+          {
+            "path": "root.integrity.locked_test_reuse",
+            "type": "bool",
+            "value_preview": "False"
+          },
+          {
+            "path": "root.integrity.prediction_modification",
+            "type": "bool",
+            "value_preview": "False"
+          },
+          {
+            "path": "root.integrity.synthetic_feedback",
+            "type": "bool",
+            "value_preview": "False"
+          }
+        ]
+      }
+    ]
+  },
+  "prediction_top_level_keys": [
+    "ticket",
+    "tasks",
+    "final",
+    "integrity"
+  ],
+  "task_summary": {
+    "T1": {
+      "type": "dict",
+      "keys": [
+        "status",
+        "prediction",
+        "transformed_shape",
+        "artifact"
+      ],
+      "status": "EXECUTED"
+    },
+    "T2": {
+      "type": "dict",
+      "keys": [
+        "status",
+        "prediction",
+        "transformed_shape",
+        "artifact"
+      ],
+      "status": "EXECUTED"
+    },
+    "T3": {
+      "type": "dict",
+      "keys": [
+        "status",
+        "prediction",
+        "transformed_shape",
+        "artifact"
+      ],
+      "status": "EXECUTED"
+    },
+    "T4": {
+      "type": "dict",
+      "keys": [
+        "status",
+        "results",
+        "artifacts"
+      ],
+      "status": "EXECUTED"
+    },
+    "T5": {
+      "type": "dict",
+      "keys": [
+        "status",
+        "duplicate_evidence",
+        "threshold_used",
+        "decision_score",
+        "artifacts"
+      ],
+      "status": "EXECUTED"
+    },
+    "T6": {
+      "type": "dict",
+      "keys": [
+        "status",
+        "full_mod010_hybrid_available",
+        "top_ids",
+        "reason"
+      ],
+      "status": "PARTIAL_NATIVE_RUNTIME"
+    },
+    "T7": {
+      "type": "dict",
+      "keys": [
+        "status",
+        "median_seconds",
+        "creation_year",
+        "training_year_min",
+        "training_year_max",
+        "temporal_support",
+        "linear_predictor",
+        "feature_count",
+        "artifacts"
+      ],
+      "status": "EXECUTED_WITH_SUPPORT_LIMITATION"
+    },
+    "T8": {
+      "type": "dict",
+      "keys": [
+        "status",
+        "evidence_state",
+        "available",
+        "partial",
+        "unavailable",
+        "missing_evidence_is_not_negative",
+        "native_semantics_preserved"
+      ],
+      "status": "EXECUTED",
+      "evidence_state": "SUPPORTED_WITH_LIMITATIONS"
+    },
+    "T9": {
+      "type": "dict",
+      "keys": [
+        "status",
+        "universal_confidence",
+        "universal_risk",
+        "cross_task_probability_aggregation",
+        "reason"
+      ],
+      "status": "EXECUTED"
+    },
+    "T10": {
+      "type": "dict",
+      "keys": [
+        "status",
+        "action",
+        "automation",
+        "warnings"
+      ],
+      "status": "EXECUTED",
+      "action": "HUMAN_DECISION_REQUIRED"
+    },
+    "T11": {
+      "type": "dict",
+      "keys": [
+        "status",
+        "feedback",
+        "synthetic_feedback"
+      ],
+      "status": "EXECUTED"
+    }
+  },
+  "final_result": {
+    "category": "Support general",
+    "priority": "P2",
+    "severity": "S4",
+    "duplicate_evidence": 0.0,
+    "related_ticket_ids": [],
+    "resolution_median_seconds": 5.584631924286706,
+    "evidence_state": "SUPPORTED_WITH_LIMITATIONS",
+    "action": "HUMAN_DECISION_REQUIRED",
+    "lifecycle": "AWAITING_OUTCOME"
+  },
+  "integrity_result": {
+    "model_retraining": false,
+    "model_modification": false,
+    "threshold_optimization": false,
+    "locked_test_reuse": false,
+    "prediction_modification": false,
+    "synthetic_feedback": false
+  },
+  "explanation_structure": {
+    "path": "root",
+    "type": "str",
+    "value_preview": "==============================================================================\nTICKET DEPLOY-OP002-001\n==============================================================================\n\nISSUE\n------------------------------------------------------------------------------\nVPN connection problem\n\nWHAT THE SYSTEM FOUND\n------------------------------------------------------------------------------\nCategory : Support general\nPriority : P2 \u2014 Priority class P2\nSeverity : S4 \u2014 Severity class S4\n\nSUPPORTING "
+  },
+  "explanation_result": "==============================================================================\nTICKET DEPLOY-OP002-001\n==============================================================================\n\nISSUE\n------------------------------------------------------------------------------\nVPN connection problem\n\nWHAT THE SYSTEM FOUND\n------------------------------------------------------------------------------\nCategory : Support general\nPriority : P2 \u2014 Priority class P2\nSeverity : S4 \u2014 Severity class S4\n\nSUPPORTING EVIDENCE\n------------------------------------------------------------------------------\nT4 Routing / Assignment: 5 historical related-ticket candidates were retrieved. These are historical retrieval evidence, not proof of current operational assignment.\nT5 Duplicate Evidence: Duplicate evidence = 0.0000. No operational duplicate threshold was applied.\nT6 Semantic Retrieval: Full semantic retrieval is unavailable for this genuinely new ticket because the frozen MOD-010 semantic component depends on stored semantic evidence for the existing evaluation population. No semantic score was fabricated.\nT7 Resolution Evidence: The model produced a median resolution-time estimate of 5.58 seconds. However, the ticket creation year is outside the observed training range, so this estimate carries a temporal-support limitation.\n\nHOW THE PIPELINE REACHED ITS DECISION\n------------------------------------------------------------------------------\n1. T1\u2013T3 produced category, priority, and severity evidence.\n2. T4 added historical related-ticket retrieval evidence.\n3. T5 added duplicate-relationship evidence without applying an operational threshold.\n4. T6 reported only the semantic evidence that was actually available for this new ticket.\n5. T7 produced resolution-time evidence together with its temporal-support status.\n6. T8 integrated the available evidence as: SUPPORTED_WITH_LIMITATIONS\n7. T9 preserved native task semantics and did not create universal confidence or risk.\n8. T10 produced the pipeline action: HUMAN_DECISION_REQUIRED\n9. T11 recorded the lifecycle state: AWAITING_OUTCOME\n\nPIPELINE DECISION\n------------------------------------------------------------------------------\nEvidence state : SUPPORTED_WITH_LIMITATIONS\nAction         : HUMAN_DECISION_REQUIRED\nLifecycle      : AWAITING_OUTCOME\n\nWHY THIS DECISION\n------------------------------------------------------------------------------\nThe integrated evidence is usable with limitations. Some task evidence is incomplete or outside its supported runtime conditions. Missing evidence is not treated as negative evidence.\nThe pipeline does not establish an autonomous operational action. Because the available evidence has documented limitations, the ticket requires human review.\nThe ticket is awaiting an eventual operational outcome. No synthetic feedback is created.\n\nPIPELINE WARNINGS\n------------------------------------------------------------------------------\n- Evidence is not fully supported; missing evidence is not negative evidence.\n- T6 full MOD-010 hybrid is unavailable for this new-ticket runtime.\n- T7 ticket creation year is outside observed training temporal range.\n\nPLAIN-ENGLISH SUMMARY\n------------------------------------------------------------------------------\nThe system classified this ticket as Support general, with P2 priority evidence and S4 severity evidence.\n5 historical related-ticket candidates were retrieved. These are historical retrieval evidence, not proof of current operational assignment.\nFull semantic retrieval is unavailable for this genuinely new ticket because the frozen MOD-010 semantic component depends on stored semantic evidence for the existing evaluation population. No semantic score was fabricated.\nThe model produced a median resolution-time estimate of 5.58 seconds. However, the ticket creation year is outside the observed training range, so this estimate carries a temporal-support limitation.\nThe integrated evidence state is SUPPORTED_WITH_LIMITATIONS.\nThe pipeline does not establish an autonomous operational action. Because the available evidence has documented limitations, the ticket requires human review.\n\nSYSTEM MATURITY\n------------------------------------------------------------------------------\nResearch / engineering prototype \u2014 NOT PRODUCTION READY.\nThis output is decision-support evidence, not an autonomous operational ticket disposition.\n\nINTEGRITY\n------------------------------------------------------------------------------\nIntegrity check: PASS\n==============================================================================",
+  "serialization": {
+    "pipeline_result": "PASS",
+    "pipeline_serialized_length": 6142,
+    "explanation_result": "PASS",
+    "explanation_serialized_length": 4680
+  }
+}

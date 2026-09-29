@@ -1,0 +1,210 @@
+from pathlib import Path
+import json
+
+
+ROOT = Path("/home/whiteblack/Documents/IT-Ticket-Triage-System")
+T8 = ROOT / "modeling/T8"
+
+OUT_DIR = T8 / "mod036"
+OUT_DIR.mkdir(parents=True, exist_ok=True)
+
+OUT = OUT_DIR / "t8_mod036_op001_decision_engine_inventory.json"
+
+
+# ------------------------------------------------------------
+# Known project task artifacts / contracts
+# ------------------------------------------------------------
+
+tasks = {
+    "T1": {
+        "status": "project task; native output inventory required",
+        "role": "task-specific evidence",
+    },
+    "T2": {
+        "status": "validated",
+        "role": "Priority Prediction",
+        "native_output": "priority probability distribution",
+        "target": "first valid P1-P5 priority strictly after Creation and within 24h",
+        "decision_boundary": "Creation",
+    },
+    "T3": {
+        "status": "project task; native output inventory required",
+        "role": "task-specific evidence",
+    },
+    "T4": {
+        "status": "validated",
+        "role": "Assignee Retrieval",
+        "native_output": "ranked assignee candidates with retrieval scores",
+        "decision_boundary": "Creation",
+    },
+    "T5": {
+        "status": "validated",
+        "role": "Duplicate Prediction",
+        "native_output": "p_duplicate",
+        "decision_boundary": "Creation",
+    },
+    "T6": {
+        "status": "validated as separate evidence layer",
+        "role": "query-level / query-candidate evidence",
+        "native_output": "query and query-candidate retrieval evidence",
+        "decision_boundary": "Creation",
+    },
+    "T7": {
+        "status": "validated",
+        "role": "Resolution-Time / Survival Evidence",
+        "native_output": "survival evidence from Log-Normal AFT",
+        "target": "first post-Creation RESOLVED event with right-censoring preserved",
+        "decision_boundary": "Creation",
+    },
+}
+
+
+# ------------------------------------------------------------
+# T8 design requirements
+# ------------------------------------------------------------
+
+requirements = {
+    "input": (
+        "Validated native task outputs and evidence from T1-T7. "
+        "Inputs must retain their original task semantics."
+    ),
+    "output": (
+        "Machine-generated structured triage recommendation, "
+        "rather than only exposing evidence to a human."
+    ),
+    "human_role": (
+        "Human remains able to review or override the recommendation; "
+        "human review is not the substitute for producing a recommendation."
+    ),
+    "fusion_principle": (
+        "Task outputs must not be blindly concatenated or numerically "
+        "combined when their semantics differ."
+    ),
+    "missingness": (
+        "Unavailable task evidence remains unavailable and must not "
+        "be interpreted as negative evidence."
+    ),
+    "leakage_boundary": "Creation",
+    "post_creation_information": False,
+    "synthetic_universal_target_allowed": False,
+    "arbitrary_weighting_allowed": False,
+}
+
+
+# ------------------------------------------------------------
+# Candidate decision outputs
+# ------------------------------------------------------------
+
+decision_outputs = {
+    "priority_recommendation": {
+        "description": "Recommended priority when sufficient evidence exists",
+        "candidate_evidence": ["T2", "T1", "T3"],
+    },
+    "assignment_recommendation": {
+        "description": "Recommended assignee/team from validated candidate evidence",
+        "candidate_evidence": ["T4", "T6", "T1", "T3"],
+    },
+    "duplicate_recommendation": {
+        "description": "Duplicate indication based on validated duplicate evidence",
+        "candidate_evidence": ["T5", "T6"],
+    },
+    "resolution_context": {
+        "description": "Resolution-time context from survival evidence",
+        "candidate_evidence": ["T7"],
+    },
+    "overall_triage_recommendation": {
+        "description": (
+            "Structured machine-generated triage recommendation "
+            "based on the available decision-specific evidence."
+        ),
+        "candidate_evidence": ["T1", "T2", "T3", "T4", "T5", "T6", "T7"],
+    },
+}
+
+
+# ------------------------------------------------------------
+# Existing T8 evidence already completed
+# ------------------------------------------------------------
+
+completed_t8 = {
+    "T2_T7_fusion_investigation": "CLOSED",
+    "T4_T5_fusion_investigation": "CLOSED",
+    "T8_final_synthesis": "CLOSED",
+    "final_synthesis_artifact":
+        str(T8 / "t8_mod035_op001_final_synthesis.json"),
+}
+
+
+# ------------------------------------------------------------
+# Important architectural distinction
+# ------------------------------------------------------------
+
+architecture = {
+    "current_completed_layer": (
+        "T8 Fusion Investigation: tested whether native task evidence "
+        "could be fused robustly."
+    ),
+    "new_layer": (
+        "T8 Decision Engine: converts validated task-specific evidence "
+        "into actionable machine-generated triage recommendations."
+    ),
+    "not_a_requirement": (
+        "A single universal scalar score representing the entire ticket."
+    ),
+    "required_behavior": (
+        "Produce decision-specific recommendations while preserving "
+        "the semantic meaning of each task's evidence."
+    ),
+}
+
+
+# ------------------------------------------------------------
+# Write inventory
+# ------------------------------------------------------------
+
+inventory = {
+    "operation": "T8 / MOD-036 / OP-001",
+    "status": "PASS",
+    "purpose": (
+        "Establish the input/output contract and architectural "
+        "requirements for the T8 Decision Engine."
+    ),
+    "tasks": tasks,
+    "requirements": requirements,
+    "decision_outputs": decision_outputs,
+    "completed_t8": completed_t8,
+    "architecture": architecture,
+}
+
+
+OUT.write_text(json.dumps(inventory, indent=2))
+
+print("=" * 80)
+print("T8 DECISION ENGINE — MOD-036 OP-001")
+print("=" * 80)
+print()
+print("Purpose:")
+print("  Define the input/output contract for the new T8 Decision Engine.")
+print()
+print("Inputs:")
+print("  T1-T7 validated native task outputs/evidence")
+print()
+print("Required output:")
+print("  Machine-generated structured triage recommendation")
+print()
+print("Decision outputs:")
+for name in decision_outputs:
+    print(f"  - {name}")
+print()
+print("Universal scalar score:")
+print("  NOT REQUIRED")
+print()
+print("Human role:")
+print("  Review / override, not replacement for machine recommendation")
+print()
+print("Prediction boundary:")
+print("  Creation")
+print()
+print("Status: PASS")
+print(f"Artifact: {OUT}")
+print("=" * 80)

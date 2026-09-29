@@ -1,0 +1,909 @@
+{
+  "operation": "E-OP-005",
+  "title": "Final Source-Driven Policy Boundary Reconciliation",
+  "status": "PASS",
+  "read_only": true,
+  "model_modified": false,
+  "retraining_performed": false,
+  "threshold_selection_performed": false,
+  "threshold_optimization_performed": false,
+  "locked_test_reused": false,
+  "task_source_reconciliation": {
+    "tasks_checked": 9,
+    "relevant_files_inspected": 50,
+    "readable_files": 50
+  },
+  "task_results": {
+    "T1": {
+      "task_directory": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1",
+      "json_discovered": 26,
+      "relevant_json_selected": 2,
+      "records": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/analysis/t1_final_closure.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 2128,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/derived/t1_vscode_validation_report.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 946,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        }
+      ]
+    },
+    "T2": {
+      "task_directory": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2",
+      "json_discovered": 27,
+      "relevant_json_selected": 7,
+      "records": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/analysis/t2_final_closure.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 6544,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/analysis/t2_advanced_branch_closure.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 2061,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/analysis/t2_baseline_comparison.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 4411,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/analysis/t2_final_generalization_analysis.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 6299,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/analysis/t2_final_model_selection.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 3140,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/analysis/t2_final_test_metrics.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 2588,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/derived/t2_validation_report.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 1828,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        }
+      ]
+    },
+    "T3": {
+      "task_directory": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3",
+      "json_discovered": 28,
+      "relevant_json_selected": 14,
+      "records": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/analysis/t3_final_closure.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 3048,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/analysis/t3_advanced_branch_closure.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 2436,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/analysis/t3_baseline_comparison.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 3473,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/analysis/t3_classical_model_comparison.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 3995,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/analysis/t3_final_generalization_analysis.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 4281,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/analysis/t3_model_comparison.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 4540,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/analysis/t3_validation_report.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 551,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/metrics/t3_baseline_validation_metrics.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 1179,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/metrics/t3_class_weighted_validation_metrics.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 1209,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/metrics/t3_distilbert_feasibility_validation_metrics.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 1157,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/metrics/t3_final_test_metrics.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 1493,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/metrics/t3_linear_svm_validation_metrics.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 1176,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/metrics/t3_svm_class_weighted_validation_metrics.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 1244,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/metrics/t3_word_char_validation_metrics.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 1300,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        }
+      ]
+    },
+    "T4": {
+      "task_directory": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4",
+      "json_discovered": 22,
+      "relevant_json_selected": 3,
+      "records": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/derived/t4_validation_report.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 1879,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/t4_mod010_comparison.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 4056,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/t4_mod013_closure.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 6363,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        }
+      ]
+    },
+    "T5": {
+      "task_directory": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5",
+      "json_discovered": 12,
+      "relevant_json_selected": 3,
+      "records": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod011_final_closure.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 5177,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod005_validation_metrics.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 1394,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod007_calibration_comparison.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 2079,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        }
+      ]
+    },
+    "T6": {
+      "task_directory": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6",
+      "json_discovered": 17,
+      "relevant_json_selected": 2,
+      "records": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_final_closure.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 5819,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod010_final_comparison.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 2690,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        }
+      ]
+    },
+    "T7": {
+      "task_directory": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7",
+      "json_discovered": 15,
+      "relevant_json_selected": 2,
+      "records": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod011_final_model_comparison_audit.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 2680,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod012_final_closure.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 4425,
+          "explicit_policy_signals": {
+            "automation_not_established": true,
+            "human_review_not_established": true,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        }
+      ]
+    },
+    "T8": {
+      "task_directory": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8",
+      "json_discovered": 51,
+      "relevant_json_selected": 7,
+      "records": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/mod033/t8_mod033_op002_t4_t5_validation_artifact_content.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 58010,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/mod034/t8_mod034_op004_native_evidence_addition.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 7773,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/mod034/t8_mod034_op013_fusion_closure.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 1654,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/mod036/op026/t8_mod036_op026_decision_engine_validation.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 2256,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/mod036/t8_mod036_op004_native_input_validation.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 14336,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/mod036/t8_mod036_op007_model_interface_validation.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 6170,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/t8_mod035_op001_final_synthesis.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 3426,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        }
+      ]
+    },
+    "T9": {
+      "task_directory": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9",
+      "json_discovered": 27,
+      "relevant_json_selected": 10,
+      "records": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op015_final_integrated_closure.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 6247,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": true,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": true,
+            "universal_risk_not_created": true,
+            "synthetic_fusion_target_not_created": true,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/plots/t9_mod037_final_visualization_manifest.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 890,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op009_t5_uncertainty_reliability.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 20112,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op010_t5_calibration_evidence_synthesis.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 13779,
+          "explicit_policy_signals": {
+            "automation_not_established": true,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op012d_t6_ranking_reliability.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 10543,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op013c_t7_full_evidence_scan.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 195989,
+          "explicit_policy_signals": {
+            "automation_not_established": true,
+            "human_review_not_established": true,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op013d_t7_existing_evidence_reconciliation.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 46274,
+          "explicit_policy_signals": {
+            "automation_not_established": true,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": false,
+            "universal_risk_not_created": false,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op013e_t7_survival_uncertainty_reliability.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 8747,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": true,
+            "universal_risk_not_created": true,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op013f_t7_evidence_synthesis.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 6164,
+          "explicit_policy_signals": {
+            "automation_not_established": true,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": true,
+            "universal_risk_not_created": true,
+            "synthetic_fusion_target_not_created": false,
+            "operational_threshold_not_established": false
+          }
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op014_cross_task_evidence_synthesis.json",
+          "exists": true,
+          "readable": true,
+          "bytes": 10677,
+          "explicit_policy_signals": {
+            "automation_not_established": false,
+            "human_review_not_established": false,
+            "universal_threshold_not_established": false,
+            "universal_confidence_not_created": true,
+            "universal_risk_not_created": true,
+            "synthetic_fusion_target_not_created": true,
+            "operational_threshold_not_established": false
+          }
+        }
+      ]
+    }
+  },
+  "t10_authoritative_reconciliation": {
+    "expected": 4,
+    "records": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp05_op006_native_policy_evidence_inventory.json",
+        "exists": true,
+        "readable": true,
+        "policy_boundary_signals": {
+          "automation_not_established": false,
+          "human_review_not_established": false,
+          "universal_threshold_not_established": false,
+          "universal_confidence_not_created": false,
+          "universal_risk_not_created": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp05_op007r_native_operating_evidence.json",
+        "exists": true,
+        "readable": true,
+        "policy_boundary_signals": {
+          "automation_not_established": false,
+          "human_review_not_established": false,
+          "universal_threshold_not_established": false,
+          "universal_confidence_not_created": false,
+          "universal_risk_not_created": false
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp05_op008_empirical_policy_boundary_audit.json",
+        "exists": true,
+        "readable": true,
+        "policy_boundary_signals": {
+          "automation_not_established": true,
+          "human_review_not_established": true,
+          "universal_threshold_not_established": true,
+          "universal_confidence_not_created": true,
+          "universal_risk_not_created": true
+        }
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op022r8_final_t10_literal_key_reconciliation.json",
+        "exists": true,
+        "readable": true,
+        "policy_boundary_signals": {
+          "automation_not_established": true,
+          "human_review_not_established": true,
+          "universal_threshold_not_established": true,
+          "universal_confidence_not_created": true,
+          "universal_risk_not_created": true
+        }
+      }
+    ]
+  },
+  "t10_boundary": {
+    "automation_not_established": true,
+    "human_review_not_established": true,
+    "universal_threshold_not_established": true,
+    "universal_confidence_not_created": true,
+    "universal_risk_not_created": true
+  },
+  "all_required_t10_boundaries_present": true,
+  "final_policy_status": "NO_OPERATIONAL_POLICY_ESTABLISHED",
+  "closure_status": "GREEN_CLOSED",
+  "controls": {
+    "universal_confidence_created": false,
+    "universal_risk_created": false,
+    "cross_task_probability_aggregation_created": false,
+    "synthetic_fusion_target_created": false,
+    "arbitrary_cross_task_weights_created": false,
+    "threshold_optimization_performed": false,
+    "locked_test_reused_for_policy_selection": false
+  },
+  "interpretation": {
+    "task_evidence_does_not_automatically_create_policy": true,
+    "absence_of_threshold_does_not_equal_negative_evidence": true,
+    "t10_is_authoritative_for_global_policy_boundary": true,
+    "native_task_semantics_preserved": true
+  }
+}

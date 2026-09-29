@@ -1,0 +1,27 @@
+{
+  "operation": "T3-VIZ-001",
+  "task": "T3_SEVERITY_PREDICTION",
+  "source_artifacts": [
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/metrics/t3_class_weighted_validation_metrics.json",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/metrics/t3_final_test_metrics.json",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/analysis/t3_final_generalization_analysis.json"
+  ],
+  "plots": [
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/plots/t3_validation_vs_test.png",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/plots/t3_test_per_class_f1.png",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/plots/t3_test_confusion_matrix.png",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/plots/t3_test_true_vs_predicted_distribution.png"
+  ],
+  "visualizations": [
+    "validation_vs_locked_test_metrics",
+    "locked_test_per_class_f1",
+    "locked_test_confusion_matrix",
+    "locked_test_true_vs_predicted_distribution"
+  ],
+  "modeling_performed": false,
+  "training_performed": false,
+  "test_selection_performed": false,
+  "raw_mozilla_accessed": false,
+  "dataset_modified": false,
+  "status": "VISUALIZATION_COMPLETE"
+}

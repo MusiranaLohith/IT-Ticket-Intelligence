@@ -1,0 +1,112 @@
+{
+  "operation": "T5-MOD-006",
+  "operation_name": "Calibration Analysis",
+  "source": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod005_validation_predictions.npz",
+  "rows": 74091,
+  "positive": 480,
+  "negative": 73611,
+  "brier_score": 0.0314241207869983,
+  "expected_calibration_error": 0.07601621043899813,
+  "probability_summary": {
+    "0": 1.804229767896597e-05,
+    "25": 0.006886887385775524,
+    "50": 0.021455323347858792,
+    "75": 0.07316717763749526,
+    "90": 0.22708402631062863,
+    "95": 0.423317563444952,
+    "99": 0.8595729444857029,
+    "99.5": 0.9333072420488099,
+    "99.9": 0.9862313003701322,
+    "100": 0.9993552073275289
+  },
+  "threshold_diagnostics": [
+    {
+      "threshold": 0.01,
+      "predicted_positive": 49871,
+      "predicted_positive_rate": 0.6731046955770607,
+      "precision": 0.009444366465480941,
+      "recall": 0.98125
+    },
+    {
+      "threshold": 0.02,
+      "predicted_positive": 38180,
+      "predicted_positive_rate": 0.5153122511506121,
+      "precision": 0.011969617600838135,
+      "recall": 0.9520833333333333
+    },
+    {
+      "threshold": 0.05,
+      "predicted_positive": 23696,
+      "predicted_positive_rate": 0.3198229204626743,
+      "precision": 0.018315327481431467,
+      "recall": 0.9041666666666667
+    },
+    {
+      "threshold": 0.1,
+      "predicted_positive": 14817,
+      "predicted_positive_rate": 0.19998380370085436,
+      "precision": 0.026591077816022136,
+      "recall": 0.8208333333333333
+    },
+    {
+      "threshold": 0.2,
+      "predicted_positive": 8301,
+      "predicted_positive_rate": 0.11203789934000082,
+      "precision": 0.042043127334056137,
+      "recall": 0.7270833333333333
+    },
+    {
+      "threshold": 0.3,
+      "predicted_positive": 5537,
+      "predicted_positive_rate": 0.07473242364119799,
+      "precision": 0.057793028715911146,
+      "recall": 0.6666666666666666
+    },
+    {
+      "threshold": 0.4,
+      "predicted_positive": 3975,
+      "predicted_positive_rate": 0.05365024091994979,
+      "precision": 0.0739622641509434,
+      "recall": 0.6125
+    },
+    {
+      "threshold": 0.5,
+      "predicted_positive": 2913,
+      "predicted_positive_rate": 0.03931651617605377,
+      "precision": 0.09474768280123584,
+      "recall": 0.575
+    },
+    {
+      "threshold": 0.6,
+      "predicted_positive": 2141,
+      "predicted_positive_rate": 0.028896897059022014,
+      "precision": 0.11630079402148528,
+      "recall": 0.51875
+    },
+    {
+      "threshold": 0.7,
+      "predicted_positive": 1504,
+      "predicted_positive_rate": 0.020299361595875344,
+      "precision": 0.14162234042553193,
+      "recall": 0.44375
+    },
+    {
+      "threshold": 0.8,
+      "predicted_positive": 1024,
+      "predicted_positive_rate": 0.013820841937617255,
+      "precision": 0.173828125,
+      "recall": 0.37083333333333335
+    },
+    {
+      "threshold": 0.9,
+      "predicted_positive": 539,
+      "predicted_positive_rate": 0.007274837699585645,
+      "precision": 0.23376623376623376,
+      "recall": 0.2625
+    }
+  ],
+  "n_calibration_bins": 10,
+  "official_evaluation_used": false,
+  "threshold_optimization": false,
+  "status": "PASS"
+}

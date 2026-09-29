@@ -1,0 +1,63 @@
+{
+  "operation": "T2-MOD-018",
+  "operation_name": "Advanced Model Branch Closure",
+  "task": "T2",
+  "dataset": "Mozilla CORE",
+  "target": "target_priority",
+  "advanced_candidate": {
+    "architecture": "DistilBERT",
+    "model_identifier": "distilbert-base-uncased",
+    "candidate_selected": true,
+    "training_started": false,
+    "trained_model_exists": false
+  },
+  "branch_decision": {
+    "advanced_training_executed": false,
+    "reason": "The additional dependency and resource cost of transformer experimentation was not justified for the current working-model objective.",
+    "transformer_dependencies": "not installed",
+    "existing_project_environment": "preserved"
+  },
+  "retained_models": [
+    {
+      "operation": "T2-MOD-006",
+      "model": "TF-IDF + Logistic Regression",
+      "validation_accuracy": 0.470282,
+      "validation_macro_f1": 0.269346,
+      "validation_weighted_f1": 0.448665
+    },
+    {
+      "operation": "T2-MOD-007",
+      "model": "TF-IDF + Class-Weighted Logistic Regression",
+      "validation_accuracy": 0.446102,
+      "validation_macro_f1": 0.31045,
+      "validation_weighted_f1": 0.443565
+    },
+    {
+      "operation": "T2-MOD-008",
+      "model": "TF-IDF + Linear SVM",
+      "validation_accuracy": 0.44904,
+      "validation_macro_f1": 0.268347,
+      "validation_weighted_f1": 0.435913
+    },
+    {
+      "operation": "T2-MOD-010",
+      "model": "TF-IDF + Class-Weighted Linear SVM",
+      "validation_accuracy": 0.44339,
+      "validation_macro_f1": 0.291273,
+      "validation_weighted_f1": 0.435755
+    }
+  ],
+  "evaluation_state": {
+    "validation_comparison_complete": true,
+    "test_evaluation_completed": false,
+    "test_set_locked": true,
+    "final_model_selected": false
+  },
+  "important_limitation": "No transformer performance claim is made. DistilBERT was a selected candidate only and was never trained or evaluated.",
+  "dataset_integrity": {
+    "dataset_modified": false,
+    "target_modified": false,
+    "split_modified": false
+  },
+  "status": "ADVANCED_MODEL_BRANCH_CLOSED"
+}

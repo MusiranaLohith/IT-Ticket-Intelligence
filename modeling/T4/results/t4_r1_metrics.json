@@ -1,0 +1,50 @@
+{
+  "experiment": "T4-MOD-006-R1",
+  "description": "Resource-controlled LinearSVC routing baseline using word-level TF-IDF.",
+  "status": "COMPLETE",
+  "train_rows": 142501,
+  "evaluation_rows": 35626,
+  "candidate_classes": 4139,
+  "tfidf": {
+    "max_features": 20000,
+    "ngram_range": [
+      1,
+      1
+    ],
+    "min_df": 2,
+    "max_df": 0.995,
+    "sublinear_tf": true
+  },
+  "model": {
+    "type": "LinearSVC",
+    "C": 0.5,
+    "class_weight": null,
+    "max_iter": 300
+  },
+  "metrics": {
+    "top1_accuracy": 0.28105877729747936,
+    "top1_macro_f1": 0.017470540759012658,
+    "top1_weighted_f1": 0.29970512009180017,
+    "top3_accuracy": 0.36352663784876216,
+    "top5_accuracy": 0.40192555998428114,
+    "top10_accuracy": 0.4500645595913097
+  },
+  "open_world": {
+    "covered_evaluation_rows": 32773,
+    "unseen_evaluation_rows": 2853,
+    "unseen_evaluation_rate": 0.08008196261157581
+  },
+  "covered_evaluation": {
+    "rows": 32773,
+    "top1_accuracy": 0.3055258902145058,
+    "top1_macro_f1": 0.018294370820711604,
+    "top1_weighted_f1": 0.3080757679024816
+  },
+  "unseen_target_behavior": {
+    "rows": 2853,
+    "top1_correct_count": 0
+  },
+  "runtime": {
+    "total_seconds": 6515.510268688202
+  }
+}

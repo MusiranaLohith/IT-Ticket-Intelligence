@@ -1,0 +1,492 @@
+{
+  "operation": "T8 / MOD-036 / OP-004",
+  "status": "PASS",
+  "purpose": "Validate candidate T1-T7 artifacts and distinguish native inference evidence from targets, evaluation, and analysis artifacts.",
+  "candidate_inspection": {
+    "T1": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/analysis/t1_it_support_eval_groups.json",
+        "exists": true,
+        "status": "FOUND",
+        "type": "dict",
+        "keys": [
+          "status",
+          "task",
+          "evaluation",
+          "largest_repeated_groups",
+          "multi_label_groups",
+          "integrity"
+        ]
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/analysis/t1_it_support_group_eval.json",
+        "exists": true,
+        "status": "FOUND",
+        "type": "dict",
+        "keys": [
+          "operation",
+          "status",
+          "split_path",
+          "model_path",
+          "evaluation_records",
+          "record_correct",
+          "record_incorrect",
+          "record_accuracy",
+          "unique_normalized_text_groups",
+          "repeated_normalized_text_groups",
+          "records_in_repeated_groups",
+          "repeated_record_rate",
+          "single_record_groups",
+          "fully_correct_groups",
+          "fully_correct_group_rate",
+          "prediction_consistent_groups",
+          "prediction_consistent_group_rate",
+          "homogeneous_label_groups",
+          "homogeneous_group_correct",
+          "homogeneous_group_accuracy",
+          "multi_label_normalized_text_groups",
+          "records_in_multi_label_groups",
+          "repeated_group_record_count",
+          "repeated_group_record_correct",
+          "repeated_group_record_accuracy",
+          "repeated_groups_fully_correct",
+          "repeated_group_fully_correct_rate",
+          "single_record_group_count",
+          "single_record_group_correct",
+          "single_record_group_accuracy",
+          "largest_groups",
+          "multi_label_group_details",
+          "model_retrained",
+          "evaluation_used_for_fit",
+          "frozen_split_modified",
+          "labels_modified",
+          "raw_source_modified"
+        ]
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/project_consolidation/t1_t5_consolidated_evidence.json",
+        "exists": true,
+        "status": "FOUND",
+        "type": "dict",
+        "keys": [
+          "project",
+          "consolidation_status",
+          "t1",
+          "t2",
+          "t3",
+          "t4",
+          "t5",
+          "project_level_interpretation",
+          "integrity_controls"
+        ]
+      }
+    ],
+    "T3": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/analysis/t3_locked_test_evaluation.json",
+        "exists": true,
+        "status": "FOUND",
+        "type": "dict",
+        "keys": [
+          "operation",
+          "status",
+          "selected_model",
+          "selection_basis",
+          "test_metrics",
+          "test_rows",
+          "controls",
+          "artifacts"
+        ]
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/analysis/t3_error_analysis.json",
+        "exists": true,
+        "status": "FOUND",
+        "type": "dict",
+        "keys": [
+          "task",
+          "model",
+          "analysis_type",
+          "validation_rows",
+          "feature_count",
+          "test_used",
+          "confusion_matrix",
+          "labels",
+          "prediction_counts",
+          "confusion_pairs",
+          "representative_errors"
+        ]
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/analysis/t3_model_comparison.json",
+        "exists": true,
+        "status": "FOUND",
+        "type": "dict",
+        "keys": [
+          "task",
+          "evaluation_split",
+          "test_used",
+          "models",
+          "feature_details",
+          "pairwise_changes"
+        ]
+      }
+    ],
+    "T6": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod010_corrected_hybrid_query_rankings.csv",
+        "exists": true,
+        "status": "FOUND",
+        "columns": [
+          "split",
+          "query_id",
+          "candidate_id",
+          "target_observed",
+          "semantic_score",
+          "tfidf_score",
+          "tfidf_score_normalized",
+          "semantic_score_normalized",
+          "hybrid_score"
+        ],
+        "sample_rows": [
+          [
+            "TRAIN",
+            "1023761",
+            "217769",
+            "True",
+            "0.7731983661651611",
+            "0.10243274136861227",
+            "1.0",
+            "1.0",
+            "1.0"
+          ],
+          [
+            "TRAIN",
+            "1023761",
+            "72572",
+            "False",
+            "0.5874933004379272",
+            "0.02472548790526859",
+            "0.22535792890421003",
+            "0.7144562015967185",
+            "0.4699070652504643"
+          ]
+        ],
+        "rows_sampled": 2
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod009_hybrid_query_rankings.csv",
+        "exists": true,
+        "status": "FOUND",
+        "columns": [
+          "split",
+          "query_id",
+          "candidate_id",
+          "target_observed",
+          "tfidf_score",
+          "semantic_score",
+          "tfidf_score_normalized",
+          "semantic_score_normalized",
+          "hybrid_score"
+        ],
+        "sample_rows": [
+          [
+            "TRAIN",
+            "1023761",
+            "217769",
+            "True",
+            "0.1041147960499194",
+            "0.7731983661651611",
+            "1.0",
+            "1.0",
+            "1.0"
+          ],
+          [
+            "TRAIN",
+            "1023761",
+            "72572",
+            "False",
+            "0.024922927769365565",
+            "0.5874933004379272",
+            "0.23189247630544713",
+            "0.7144562015967184",
+            "0.47317433895108274"
+          ]
+        ],
+        "rows_sampled": 2
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod007_bm25_query_rankings.csv",
+        "exists": true,
+        "status": "FOUND",
+        "columns": [
+          "split",
+          "query_id",
+          "query_creation_time",
+          "positive_candidate_id",
+          "positive_rank",
+          "top_candidate_id",
+          "top_candidate_role",
+          "top_score",
+          "positive_score",
+          "score_gap_top1_minus_positive",
+          "query_token_count"
+        ],
+        "sample_rows": [
+          [
+            "train",
+            "1023761",
+            "2014-06-11 14:26:47",
+            "217769",
+            "7",
+            "857745",
+            "observable_non_positive",
+            "61.69611163822675",
+            "37.68315892081245",
+            "24.0129527174143",
+            "175"
+          ],
+          [
+            "train",
+            "1033149",
+            "2014-07-02 09:34:48",
+            "563436",
+            "1",
+            "563436",
+            "positive",
+            "43.6730911412037",
+            "43.6730911412037",
+            "0.0",
+            "94"
+          ]
+        ],
+        "rows_sampled": 2
+      }
+    ],
+    "T7": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/derived/t7_mod010_evaluation_predictions.csv",
+        "exists": true,
+        "status": "FOUND",
+        "columns": [
+          "ID",
+          "duration_seconds",
+          "event",
+          "predicted_median_survival_seconds",
+          "survival_probability_at_211583_seconds",
+          "survival_probability_at_1780179_seconds",
+          "survival_probability_at_14608619_seconds"
+        ],
+        "sample_rows": [
+          [
+            "1664573",
+            "1642378.0",
+            "1",
+            "1.4898172073054672",
+            "0.2328004864885741",
+            "0.19471607142618086",
+            "0.16106132250102556"
+          ],
+          [
+            "1664575",
+            "258257.0",
+            "1",
+            "2.8915272980334605",
+            "0.2454523579801442",
+            "0.20614710194670327",
+            "0.1712287651493274"
+          ]
+        ],
+        "rows_sampled": 2
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/derived/t7_mod007_evaluation_predictions.csv",
+        "exists": true,
+        "status": "FOUND",
+        "columns": [
+          "ID",
+          "duration_seconds",
+          "event",
+          "predicted_median_survival_seconds",
+          "survival_probability_at_211583_seconds",
+          "survival_probability_at_1780179_seconds",
+          "survival_probability_at_14608619_seconds"
+        ],
+        "sample_rows": [
+          [
+            "1664573",
+            "1642378.0",
+            "1",
+            "0.0008649227122142296",
+            "0.16838786821255788",
+            "0.1384962733737622",
+            "0.11179339586964442"
+          ],
+          [
+            "1664575",
+            "258257.0",
+            "1",
+            "0.001672958329009821",
+            "0.17817933244096584",
+            "0.14746105577581792",
+            "0.11984134371865525"
+          ]
+        ],
+        "rows_sampled": 2
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/t8_mod029_t7_oof.csv",
+        "exists": true,
+        "status": "FOUND",
+        "columns": [
+          "ID",
+          "predicted_median_survival_seconds",
+          "survival_probability_at_211583_seconds",
+          "survival_probability_at_1780179_seconds",
+          "survival_probability_at_14608619_seconds",
+          "prediction_block",
+          "prediction_creation_time",
+          "model_task",
+          "implementation_identifier",
+          "preprocessing_scope",
+          "prediction_boundary"
+        ],
+        "sample_rows": [
+          [
+            "243389",
+            "2.869465082532346",
+            "0.22099442025171576",
+            "0.18011207401518892",
+            "0.14472583158691435",
+            "B2",
+            "2004-05-12 10:08:19+00:00",
+            "T7",
+            "T7-MOD-010-LOGNORMAL-AFT",
+            "fold_local_training_prefix",
+            "Creation"
+          ],
+          [
+            "243487",
+            "6.186813687900392",
+            "0.2369532932793754",
+            "0.19427876264393218",
+            "0.15705787428479356",
+            "B2",
+            "2004-05-13 05:51:56+00:00",
+            "T7",
+            "T7-MOD-010-LOGNORMAL-AFT",
+            "fold_local_training_prefix",
+            "Creation"
+          ]
+        ],
+        "rows_sampled": 2
+      }
+    ],
+    "T2": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/t8_mod029_t2_oof.csv",
+        "exists": true,
+        "status": "FOUND",
+        "columns": [
+          "ID",
+          "predicted_priority",
+          "predicted_probability_P1",
+          "predicted_probability_P2",
+          "predicted_probability_P3",
+          "predicted_probability_P4",
+          "predicted_probability_P5",
+          "prediction_block",
+          "prediction_creation_time",
+          "model_task",
+          "implementation_identifier",
+          "preprocessing_scope",
+          "prediction_boundary"
+        ],
+        "sample_rows": [
+          [
+            "243389",
+            "P1",
+            "0.6182977800753896",
+            "0.2070281638749017",
+            "0.07903038020030961",
+            "0.03515824849218702",
+            "0.06048542735721222",
+            "B2",
+            "2004-05-12 10:08:19+00:00",
+            "T2",
+            "T2-MOD-007",
+            "fold_local_training_prefix",
+            "Creation"
+          ],
+          [
+            "243487",
+            "P1",
+            "0.4249170544144275",
+            "0.21773994588026288",
+            "0.17726428998576654",
+            "0.11877743292315959",
+            "0.061301276796383496",
+            "B2",
+            "2004-05-13 05:51:56+00:00",
+            "T2",
+            "T2-MOD-007",
+            "fold_local_training_prefix",
+            "Creation"
+          ]
+        ],
+        "rows_sampled": 2
+      }
+    ],
+    "T4": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/mod011_checkpoints/t4_mod011_retrieval.npz",
+        "exists": true,
+        "status": "FOUND_BINARY_ARTIFACT",
+        "suffix": ".npz"
+      }
+    ],
+    "T5": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod007_calibrated_validation_predictions.npz",
+        "exists": true,
+        "status": "FOUND_BINARY_ARTIFACT",
+        "suffix": ".npz"
+      },
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod011_final_closure.json",
+        "exists": true,
+        "status": "FOUND",
+        "type": "dict",
+        "keys": [
+          "operation",
+          "operation_name",
+          "timestamp_utc",
+          "task",
+          "task_definition",
+          "split_definition",
+          "selected_pipeline",
+          "validation_evidence",
+          "locked_evaluation_evidence",
+          "generalization_evidence",
+          "final_role",
+          "final_status",
+          "limitations",
+          "controls",
+          "closure_statement",
+          "status"
+        ]
+      }
+    ]
+  },
+  "classification_contract": {
+    "prediction_evidence": "Machine-generated output that can legitimately be consumed by T8 while preserving the native task semantics.",
+    "target_or_outcome": "Observed outcome/label used for training or evaluation. Must not be treated as an inference-time T8 input.",
+    "evaluation_only": "Artifact describing model performance or evaluation results. Not itself a per-ticket inference signal.",
+    "analysis_only": "Diagnostic/analytical artifact. Not automatically a Decision Engine input.",
+    "creation_boundary": true,
+    "post_creation_information": false,
+    "native_semantics_preserved": true,
+    "synthetic_universal_target": false,
+    "blind_probability_averaging": false
+  }
+}

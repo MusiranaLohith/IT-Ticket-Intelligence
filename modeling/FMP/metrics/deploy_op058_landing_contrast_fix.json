@@ -1,0 +1,48 @@
+{
+  "operation": "DEPLOY-OP-058",
+  "title": "Landing Contrast and Visual Correction",
+  "status": "PASS",
+  "scope": [
+    "landing typography contrast",
+    "legacy !important conflict resolution",
+    "hero title readability",
+    "hero motto readability",
+    "hero introduction readability",
+    "research feature readability",
+    "light architectural background preservation",
+    "CSS-only presentation correction"
+  ],
+  "modified_files": [
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/style.css"
+  ],
+  "backups": [
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/deployment/frontend/style.css.before-deploy-op058"
+  ],
+  "unchanged": [
+    "deployment/frontend/index.html",
+    "deployment/frontend/app.js",
+    "deployment/backend/app.py",
+    "modeling/FMP/deployment/runtime/ticket_pipeline.py",
+    "modeling/FMP/deployment/runtime/ticket_explanation.py",
+    "frozen modeling artifacts",
+    "T1\u2013T11 runtime semantics"
+  ],
+  "hashes": {
+    "style_before": "4337e52dad0c1e86c71ba9ab1e798573ba59982aa29d1ea2c76f28cfdb5e95b1",
+    "style_after": "24530db0ffdf9280231ee6717a0c61987b804f6a59ce0a91ed50bc4361d8b7a5"
+  },
+  "checks": {
+    "op058_marker_present": true,
+    "landing_background_present": true,
+    "landing_title_override": true,
+    "landing_title_fill_override": true,
+    "intelligence_override": true,
+    "motto_override": true,
+    "introduction_override": true,
+    "primary_action_preserved": true,
+    "secondary_action_preserved": true,
+    "research_strip_preserved": true,
+    "feature_text_preserved": true,
+    "op057_preserved": true
+  }
+}

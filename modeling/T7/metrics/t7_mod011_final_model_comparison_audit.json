@@ -1,0 +1,84 @@
+{
+  "task": "T7 Resolution-Time Estimation",
+  "operation": "MOD-011",
+  "status": "COMPLETE",
+  "operation_purpose": "Final comparative evaluation of established survival baselines using existing artifacts only.",
+  "raw_archive_access": false,
+  "model_refitting": false,
+  "new_feature_engineering": false,
+  "evaluation_population": {
+    "rows": 102764,
+    "population_alignment": "PASS"
+  },
+  "models_compared": [
+    "Kaplan-Meier reference",
+    "Weibull AFT",
+    "Log-Normal AFT"
+  ],
+  "source_schema": {
+    "mod008_horizon_column": "horizon_seconds",
+    "mod008_km_brier_column": "km_reference_ipcw_brier"
+  },
+  "weibull_aft": {
+    "harrell_concordance_index": 0.5549621693633812,
+    "ipcw_brier": [
+      {
+        "horizon_seconds": 211583.0,
+        "score": 0.5559985321807034
+      },
+      {
+        "horizon_seconds": 1780179.0,
+        "score": 0.4165689714851437
+      },
+      {
+        "horizon_seconds": 14608619.0,
+        "score": 0.2143230585981617
+      }
+    ]
+  },
+  "lognormal_aft": {
+    "harrell_concordance_index": 0.5568745548761679,
+    "ipcw_brier": [
+      {
+        "horizon_seconds": 211583.0,
+        "score": 0.4739882052966035
+      },
+      {
+        "horizon_seconds": 1780179.0,
+        "score": 0.3709262798833482
+      },
+      {
+        "horizon_seconds": 14608619.0,
+        "score": 0.20190683817023508
+      }
+    ]
+  },
+  "kaplan_meier_reference": {
+    "ipcw_brier": [
+      {
+        "horizon_seconds": 211583.0,
+        "score": 0.15047031239713146
+      },
+      {
+        "horizon_seconds": 1780179.0,
+        "score": 0.24631825329377932
+      },
+      {
+        "horizon_seconds": 14608619.0,
+        "score": 0.19826429448128255
+      }
+    ]
+  },
+  "comparison": {
+    "lognormal_minus_weibull_cindex": 0.0019123855127867184,
+    "weibull_horizons_better_than_km": 0,
+    "lognormal_horizons_better_than_km": 0,
+    "lognormal_horizons_better_than_weibull": 3
+  },
+  "evidence_statement": "The evaluated predictive survival models do not show uniform improvement across the reported metrics and horizons. The evidence should therefore be carried forward as model-performance limitations.",
+  "interpretation_boundary": "The comparison describes model behavior on the frozen chronological evaluation population. It does not establish autonomous operational deployment suitability or an unsupported automation threshold.",
+  "artifacts": {
+    "comparison_csv": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod011_final_model_comparison.csv",
+    "audit_json": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod011_final_model_comparison_audit.json"
+  }
+}

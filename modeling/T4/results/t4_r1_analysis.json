@@ -1,0 +1,369 @@
+{
+  "experiment": "T4-MOD-006-R1",
+  "analysis": "post_baseline_error_and_concentration_analysis",
+  "evaluation_rows": 35626,
+  "candidate_classes": 4139,
+  "covered_rows": 32773,
+  "unseen_rows": 2853,
+  "unseen_rate": 0.08008196261157581,
+  "covered_topk_accuracy": {
+    "top1_accuracy": 0.3055258902145058,
+    "top3_accuracy": 0.3951728557043908,
+    "top5_accuracy": 0.4369145333048546,
+    "top10_accuracy": 0.48924419491654714
+  },
+  "covered_top1_accuracy": 0.3055258902145058,
+  "unseen_top1_accuracy": 0.0,
+  "covered_top1_macro_f1": 0.018294370820711604,
+  "training_frequency_bucket_results": {
+    "1": {
+      "evaluation_rows": 983,
+      "top1_accuracy": 0.002034587995930824
+    },
+    "2-5": {
+      "evaluation_rows": 2965,
+      "top1_accuracy": 0.01045531197301855
+    },
+    "6-10": {
+      "evaluation_rows": 1145,
+      "top1_accuracy": 0.01834061135371179
+    },
+    "11-20": {
+      "evaluation_rows": 1338,
+      "top1_accuracy": 0.13602391629297458
+    },
+    "21-50": {
+      "evaluation_rows": 2752,
+      "top1_accuracy": 0.14861918604651161
+    },
+    "51-100": {
+      "evaluation_rows": 4270,
+      "top1_accuracy": 0.30515222482435594
+    },
+    "101+": {
+      "evaluation_rows": 19320,
+      "top1_accuracy": 0.4174430641821946
+    }
+  },
+  "prediction_concentration": {
+    "top_1_predicted_assignees": {
+      "unique_assignees": 1,
+      "prediction_count": 1543,
+      "prediction_share": 0.04331106495256273
+    },
+    "top_5_predicted_assignees": {
+      "unique_assignees": 5,
+      "prediction_count": 4811,
+      "prediction_share": 0.1350418233874137
+    },
+    "top_10_predicted_assignees": {
+      "unique_assignees": 10,
+      "prediction_count": 7670,
+      "prediction_share": 0.21529220232414528
+    },
+    "top_25_predicted_assignees": {
+      "unique_assignees": 25,
+      "prediction_count": 13673,
+      "prediction_share": 0.38379273564250826
+    },
+    "top_50_predicted_assignees": {
+      "unique_assignees": 50,
+      "prediction_count": 19965,
+      "prediction_share": 0.5604053219558749
+    },
+    "top_100_predicted_assignees": {
+      "unique_assignees": 100,
+      "prediction_count": 26846,
+      "prediction_share": 0.7535507775220345
+    }
+  },
+  "top_20_predicted_assignees": [
+    {
+      "assignee": "emilio@crisal.io",
+      "prediction_count": 1543,
+      "prediction_share": 0.04331106495256273,
+      "training_support": 766,
+      "evaluation_actual_support": 2151
+    },
+    {
+      "assignee": "sotaro.ikeda.g@gmail.com",
+      "prediction_count": 902,
+      "prediction_share": 0.025318587548419695,
+      "training_support": 957,
+      "evaluation_actual_support": 796
+    },
+    {
+      "assignee": "amarchesini@mozilla.com",
+      "prediction_count": 881,
+      "prediction_share": 0.024729130410374445,
+      "training_support": 1089,
+      "evaluation_actual_support": 199
+    },
+    {
+      "assignee": "jfkthame@gmail.com",
+      "prediction_count": 807,
+      "prediction_share": 0.022651995733453095,
+      "training_support": 1218,
+      "evaluation_actual_support": 873
+    },
+    {
+      "assignee": "stransky@redhat.com",
+      "prediction_count": 678,
+      "prediction_share": 0.019031044742603715,
+      "training_support": 229,
+      "evaluation_actual_support": 542
+    },
+    {
+      "assignee": "jdemooij@mozilla.com",
+      "prediction_count": 632,
+      "prediction_share": 0.017739852916409365,
+      "training_support": 916,
+      "evaluation_actual_support": 342
+    },
+    {
+      "assignee": "bzbarsky@mit.edu",
+      "prediction_count": 580,
+      "prediction_share": 0.016280244765059227,
+      "training_support": 2764,
+      "evaluation_actual_support": 74
+    },
+    {
+      "assignee": "jcoppeard@mozilla.com",
+      "prediction_count": 558,
+      "prediction_share": 0.015662718239488015,
+      "training_support": 737,
+      "evaluation_actual_support": 456
+    },
+    {
+      "assignee": "jmuizelaar@mozilla.com",
+      "prediction_count": 545,
+      "prediction_share": 0.01529781620165048,
+      "training_support": 944,
+      "evaluation_actual_support": 263
+    },
+    {
+      "assignee": "gwatson@mozilla.com",
+      "prediction_count": 544,
+      "prediction_share": 0.015269746814124515,
+      "training_support": 241,
+      "evaluation_actual_support": 801
+    },
+    {
+      "assignee": "bugmail@mozilla.staktrace.com",
+      "prediction_count": 523,
+      "prediction_share": 0.014680289676079268,
+      "training_support": 476,
+      "evaluation_actual_support": 0
+    },
+    {
+      "assignee": "jyavenard@mozilla.com",
+      "prediction_count": 480,
+      "prediction_share": 0.013473306012462808,
+      "training_support": 834,
+      "evaluation_actual_support": 91
+    },
+    {
+      "assignee": "valentin.gosu@gmail.com",
+      "prediction_count": 474,
+      "prediction_share": 0.013304889687307022,
+      "training_support": 358,
+      "evaluation_actual_support": 387
+    },
+    {
+      "assignee": "matt.woodrow@gmail.com",
+      "prediction_count": 457,
+      "prediction_share": 0.012827710099365631,
+      "training_support": 849,
+      "evaluation_actual_support": 190
+    },
+    {
+      "assignee": "dholbert@mozilla.com",
+      "prediction_count": 438,
+      "prediction_share": 0.012294391736372312,
+      "training_support": 1031,
+      "evaluation_actual_support": 241
+    },
+    {
+      "assignee": "ehsan@mozilla.com",
+      "prediction_count": 428,
+      "prediction_share": 0.012013697861112671,
+      "training_support": 1950,
+      "evaluation_actual_support": 69
+    },
+    {
+      "assignee": "masayuki@d-toybox.com",
+      "prediction_count": 415,
+      "prediction_share": 0.011648795823275136,
+      "training_support": 666,
+      "evaluation_actual_support": 456
+    },
+    {
+      "assignee": "bugs@pettay.fi",
+      "prediction_count": 414,
+      "prediction_share": 0.011620726435749172,
+      "training_support": 697,
+      "evaluation_actual_support": 209
+    },
+    {
+      "assignee": "general@js.bugs",
+      "prediction_count": 369,
+      "prediction_share": 0.010357603997080784,
+      "training_support": 1895,
+      "evaluation_actual_support": 0
+    },
+    {
+      "assignee": "docfaraday@gmail.com",
+      "prediction_count": 348,
+      "prediction_share": 0.009768146859035536,
+      "training_support": 409,
+      "evaluation_actual_support": 253
+    }
+  ],
+  "top_20_error_pairs": [
+    {
+      "true_assignee": "aethanyc@gmail.com",
+      "predicted_assignee": "tlin@mozilla.com",
+      "count": 129,
+      "training_support_true": 99,
+      "training_support_predicted": 128
+    },
+    {
+      "true_assignee": "emilio@crisal.io",
+      "predicted_assignee": "stransky@redhat.com",
+      "count": 111,
+      "training_support_true": 766,
+      "training_support_predicted": 229
+    },
+    {
+      "true_assignee": "jteh@mozilla.com",
+      "predicted_assignee": "surkov.alexander@gmail.com",
+      "count": 107,
+      "training_support_true": 77,
+      "training_support_predicted": 832
+    },
+    {
+      "true_assignee": "iireland@mozilla.com",
+      "predicted_assignee": "jdemooij@mozilla.com",
+      "count": 91,
+      "training_support_true": 33,
+      "training_support_predicted": 916
+    },
+    {
+      "true_assignee": "hikezoe.birchill@mozilla.com",
+      "predicted_assignee": "hikezoe@mozilla.com",
+      "count": 81,
+      "training_support_true": 22,
+      "training_support_predicted": 347
+    },
+    {
+      "true_assignee": "padenot@mozilla.com",
+      "predicted_assignee": "jyavenard@mozilla.com",
+      "count": 78,
+      "training_support_true": 334,
+      "training_support_predicted": 834
+    },
+    {
+      "true_assignee": "zhaojiazhong-hf@loongson.cn",
+      "predicted_assignee": "qiaopengcheng-hf@loongson.cn",
+      "count": 71,
+      "training_support_true": 0,
+      "training_support_predicted": 14
+    },
+    {
+      "true_assignee": "alwu@mozilla.com",
+      "predicted_assignee": "jyavenard@mozilla.com",
+      "count": 66,
+      "training_support_true": 161,
+      "training_support_predicted": 834
+    },
+    {
+      "true_assignee": "emilio@crisal.io",
+      "predicted_assignee": "bugmail@mozilla.staktrace.com",
+      "count": 64,
+      "training_support_true": 766,
+      "training_support_predicted": 476
+    },
+    {
+      "true_assignee": "iireland@mozilla.com",
+      "predicted_assignee": "bhackett1024@gmail.com",
+      "count": 61,
+      "training_support_true": 33,
+      "training_support_predicted": 925
+    },
+    {
+      "true_assignee": "emilio@crisal.io",
+      "predicted_assignee": "dholbert@mozilla.com",
+      "count": 60,
+      "training_support_true": 766,
+      "training_support_predicted": 1031
+    },
+    {
+      "true_assignee": "hsivonen@mozilla.com",
+      "predicted_assignee": "hsivonen@iki.fi",
+      "count": 59,
+      "training_support_true": 79,
+      "training_support_predicted": 328
+    },
+    {
+      "true_assignee": "gwatson@mozilla.com",
+      "predicted_assignee": "matt.woodrow@gmail.com",
+      "count": 59,
+      "training_support_true": 241,
+      "training_support_predicted": 849
+    },
+    {
+      "true_assignee": "kershaw@mozilla.com",
+      "predicted_assignee": "valentin.gosu@gmail.com",
+      "count": 57,
+      "training_support_true": 76,
+      "training_support_predicted": 358
+    },
+    {
+      "true_assignee": "emilio@crisal.io",
+      "predicted_assignee": "bzbarsky@mit.edu",
+      "count": 55,
+      "training_support_true": 766,
+      "training_support_predicted": 2764
+    },
+    {
+      "true_assignee": "kershaw@mozilla.com",
+      "predicted_assignee": "kechang@mozilla.com",
+      "count": 53,
+      "training_support_true": 76,
+      "training_support_predicted": 72
+    },
+    {
+      "true_assignee": "rhunt@eqrion.net",
+      "predicted_assignee": "bbouvier@mozilla.com",
+      "count": 53,
+      "training_support_true": 125,
+      "training_support_predicted": 248
+    },
+    {
+      "true_assignee": "aethanyc@gmail.com",
+      "predicted_assignee": "dholbert@mozilla.com",
+      "count": 51,
+      "training_support_true": 99,
+      "training_support_predicted": 1031
+    },
+    {
+      "true_assignee": "emilio@crisal.io",
+      "predicted_assignee": "bugs@pettay.fi",
+      "count": 50,
+      "training_support_true": 766,
+      "training_support_predicted": 697
+    },
+    {
+      "true_assignee": "robert.mader@posteo.de",
+      "predicted_assignee": "stransky@redhat.com",
+      "count": 46,
+      "training_support_true": 3,
+      "training_support_predicted": 229
+    }
+  ],
+  "status": "COMPLETE",
+  "raw_mozilla_accessed": false,
+  "model_trained": false,
+  "predictions_created": false,
+  "test_used": false
+}

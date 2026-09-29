@@ -1,0 +1,191 @@
+{
+  "operation": "MOD-036 OP-014",
+  "purpose": "Determine whether the validated T4 target_assignee semantics can supervise the T8 assignment_recommendation output.",
+  "json_evidence": [
+    {
+      "path": "modeling/T4/contracts/t4_model_contract.json",
+      "exists": true,
+      "readable": true,
+      "target_fields": {
+        "root.population.expected_distinct_target_assignees": 4809,
+        "root.population.observed_distinct_target_assignees": 4809,
+        "root.operational_target.target_column": "target_assignee",
+        "root.operational_target.target_event_must_be_strictly_after_creation": true,
+        "root.operational_target.blank_target_excluded": true,
+        "root.feature_boundary.current_assigned_to_is_target_side_information": true,
+        "root.feature_boundary.post_creation_information_forbidden": true,
+        "root.feature_boundary.future_assignment_information_forbidden": true,
+        "root.dataset_integrity_observed.blank_target_rows": 0,
+        "root.dataset_integrity_observed.blank_creation_rows": 0,
+        "root.dataset_integrity_observed.target_distribution.aaronleventhal@moonset.net": 207,
+        "root.dataset_integrity_observed.target_distribution.events@dom.bugs": 311,
+        "root.dataset_integrity_observed.target_distribution.mozilla-bugzilla@future.shiny.co.il": 7,
+        "root.evaluation_protocol.evaluation_rows": 35626,
+        "root.evaluation_protocol.evaluation_fraction": 0.2,
+        "root.evaluation_protocol.candidate_space.training_observed_candidates": 4139,
+        "root.evaluation_protocol.candidate_space.global_historical_assignees": 4809,
+        "root.evaluation_protocol.candidate_space.global_universe_must_not_be_used_for_evaluation": true,
+        "root.evaluation_protocol.unseen_evaluation_targets.retain_in_evaluation": true,
+        "root.evaluation_metrics.unseen_target_evaluation": "reported separately; never converted into negatives",
+        "root.modeling_constraints.test_or_evaluation_selection": false,
+        "root.modeling_constraints.future_candidate_leakage": false,
+        "root.modeling_constraints.operational_assignee_eligibility_claim": false,
+        "root.candidate_selection_policy.candidate_selection_uses_training_validation_only": true,
+        "root.candidate_selection_policy.locked_evaluation_not_used_for_selection": true,
+        "root.candidate_selection_policy.must_preserve_open_world_unseen_target_information": true,
+        "root.controls.target_frozen": true,
+        "root.controls.candidate_space_training_only": true,
+        "root.controls.unseen_targets_retained": true,
+        "root.controls.unseen_targets_not_negatives": true
+      }
+    },
+    {
+      "path": "modeling/T4/analysis/t4_final_closure.json",
+      "exists": false
+    },
+    {
+      "path": "modeling/T4/metrics/t4_final_metrics.json",
+      "exists": false
+    },
+    {
+      "path": "modeling/T4/analysis/t4_retrieval_analysis.json",
+      "exists": false
+    }
+  ],
+  "csv_evidence": [
+    {
+      "path": "modeling/T4/derived/t4_features.csv",
+      "exists": true,
+      "status": "INSPECTED",
+      "columns": [
+        "ID",
+        "Creation time",
+        "Creator",
+        "Creator Detail",
+        "Summary",
+        "Description",
+        "target_assignee"
+      ],
+      "target_columns": [
+        "target_assignee"
+      ],
+      "sample_rows": [
+        {
+          "target_assignee": "ahale@mozilla.com"
+        },
+        {
+          "target_assignee": "ahale@mozilla.com"
+        },
+        {
+          "target_assignee": "alwu@mozilla.com"
+        },
+        {
+          "target_assignee": "bdekoz@mozilla.com"
+        },
+        {
+          "target_assignee": "botond@mozilla.com"
+        }
+      ]
+    },
+    {
+      "path": "modeling/T4/derived/t4_train.csv",
+      "exists": true,
+      "status": "INSPECTED",
+      "columns": [
+        "ID",
+        "Creation time",
+        "Creator",
+        "Creator Detail",
+        "Summary",
+        "Description",
+        "target_assignee"
+      ],
+      "target_columns": [
+        "target_assignee"
+      ],
+      "sample_rows": [
+        {
+          "target_assignee": "brade@netscape.com"
+        },
+        {
+          "target_assignee": "bobj@netscape.com"
+        },
+        {
+          "target_assignee": "harishd@netscape.com"
+        },
+        {
+          "target_assignee": "chrisk@netscape.com"
+        },
+        {
+          "target_assignee": "erik@netscape.com"
+        }
+      ]
+    },
+    {
+      "path": "modeling/T4/derived/t4_eval.csv",
+      "exists": true,
+      "status": "INSPECTED",
+      "columns": [
+        "ID",
+        "Creation time",
+        "Creator",
+        "Creator Detail",
+        "Summary",
+        "Description",
+        "target_assignee"
+      ],
+      "target_columns": [
+        "target_assignee"
+      ],
+      "sample_rows": [
+        {
+          "target_assignee": "xeonchen@gmail.com"
+        },
+        {
+          "target_assignee": "mbrodesser@mozilla.com"
+        },
+        {
+          "target_assignee": "dminor@mozilla.com"
+        },
+        {
+          "target_assignee": "khyperia@mozilla.com"
+        },
+        {
+          "target_assignee": "amarchesini@mozilla.com"
+        }
+      ]
+    }
+  ],
+  "contract_checks": {
+    "contract_found": true,
+    "target_column_is_target_assignee": true,
+    "strictly_after_creation": true,
+    "future_assignment_forbidden": true,
+    "blank_target_excluded": true
+  },
+  "reconciliation": {
+    "t4_target_name": "target_assignee",
+    "t4_target_event": "first valid assignment event strictly after Creation",
+    "t4_target_population": "historical target assignees observed after Creation",
+    "t8_assignment_recommendation": "machine-generated recommendation of an assignee or group for an incoming ticket",
+    "semantic_relationship": "T4 target_assignee is a legitimate supervised historical assignment outcome candidate for T8 assignment recommendation, provided the T8 development population preserves the same Creation boundary and target-event definition.",
+    "important_restrictions": [
+      "Current assigned_to at Creation is target-side information and must not be used as a Creation-time predictive feature when it represents future assignment information.",
+      "The recommendation must operate over the valid historical assignee candidate space rather than inventing a new label.",
+      "T4 retrieval scores remain retrieval evidence.",
+      "T1 category evidence may support assignment reasoning but is not itself the assignment target.",
+      "Missing retrieval or category evidence must not be interpreted as negative assignment evidence.",
+      "No post-Creation feature may enter the T8 prediction input.",
+      "No synthetic assignment label may be constructed."
+    ],
+    "development_eligibility": true
+  },
+  "controls": {
+    "training_performed": false,
+    "prediction_generation_performed": false,
+    "model_selected": false,
+    "model_modified": false,
+    "dataset_modified": false,
+    "post_creation_information_used_for_prediction": false
+  }
+}

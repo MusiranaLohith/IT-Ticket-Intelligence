@@ -1,0 +1,42 @@
+{
+  "experiment_id": "T4-MOD-007",
+  "stage": "SMOKE_BENCHMARK",
+  "status": "COMPLETE",
+  "train_rows": 142501,
+  "full_evaluation_rows": 35626,
+  "smoke_evaluation_rows": 1000,
+  "training_candidate_assignees": 4139,
+  "retrieval_k": 20,
+  "tfidf": {
+    "max_features": 20000,
+    "ngram_range": [
+      1,
+      1
+    ],
+    "min_df": 2,
+    "max_df": 0.995,
+    "sublinear_tf": true
+  },
+  "retrieval_seconds": 2.679732322692871,
+  "metrics": {
+    "hit_at_1": 0.348,
+    "hit_at_3": 0.442,
+    "hit_at_5": 0.49,
+    "hit_at_10": 0.543
+  },
+  "candidate_generation": {
+    "rows_with_true_target_in_retrieved_assignee_candidates": 571,
+    "candidate_generation_rate": 0.571
+  },
+  "open_world": {
+    "covered_rows": 975,
+    "unseen_rows": 25,
+    "unseen_rate": 0.025
+  },
+  "raw_mozilla_accessed": false,
+  "target_reconstructed": false,
+  "test_used": false,
+  "full_evaluation_run": false,
+  "purpose": "Runtime and retrieval-feasibility benchmark before full T4-MOD-007 evaluation.",
+  "total_runtime_seconds": 31.314806699752808
+}

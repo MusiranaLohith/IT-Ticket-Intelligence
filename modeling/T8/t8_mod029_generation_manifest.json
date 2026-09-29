@@ -1,0 +1,76 @@
+{
+  "module": "T8-MOD-029",
+  "status": "COMPLETE",
+  "purpose": "Controlled joint T2/T7 chronological OoF generation",
+  "fusion_performed": false,
+  "synthetic_t8_target_created": false,
+  "synthetic_t8_score_created": false,
+  "source": {
+    "t2_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/scripts/t2_class_weighted.py",
+    "t2_sha256": "80f8244ededc2b901101e18510c5bdff1cab9999a214474e65f7a716c8e98025",
+    "t7_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/scripts/t7_mod010_log_normal_aft_baseline.py",
+    "t7_sha256": "cb458a7f18d7fd2110e3f8a433f9ed280733d356daaea6f5aff680d1883c59be"
+  },
+  "development_population": {
+    "joint_rows": 20648,
+    "warmup_rows": 4130,
+    "prediction_rows": 16518
+  },
+  "chronological_blocks": [
+    {
+      "prediction_block": "B1",
+      "status": "WARMUP_ONLY",
+      "prediction_rows": 4130,
+      "prediction_start": "1998-11-01 05:32:12+00:00",
+      "prediction_end": "2004-05-12 00:42:27+00:00"
+    },
+    {
+      "prediction_block": "B2",
+      "status": "PASS",
+      "prediction_rows": 4130,
+      "prediction_start": "2004-05-12 10:08:19+00:00",
+      "prediction_end": "2016-06-24 09:00:15+00:00",
+      "t2_history_rows": 4130,
+      "t7_history_rows": 79830,
+      "t2_elapsed_seconds": 8.496732950210571,
+      "t7_elapsed_seconds": 27.480068922042847
+    },
+    {
+      "prediction_block": "B3",
+      "status": "PASS",
+      "prediction_rows": 4130,
+      "prediction_start": "2016-06-26 18:08:47+00:00",
+      "prediction_end": "2017-10-17 13:48:48+00:00",
+      "t2_history_rows": 8260,
+      "t7_history_rows": 278087,
+      "t2_elapsed_seconds": 13.893864870071411,
+      "t7_elapsed_seconds": 100.5952877998352
+    },
+    {
+      "prediction_block": "B4",
+      "status": "PASS",
+      "prediction_rows": 4129,
+      "prediction_start": "2017-10-17 14:14:52+00:00",
+      "prediction_end": "2018-11-12 15:25:56+00:00",
+      "t2_history_rows": 12390,
+      "t7_history_rows": 319685,
+      "t2_elapsed_seconds": 25.947859048843384,
+      "t7_elapsed_seconds": 83.72677874565125
+    },
+    {
+      "prediction_block": "B5",
+      "status": "PASS",
+      "prediction_rows": 4129,
+      "prediction_start": "2018-11-12 16:52:12+00:00",
+      "prediction_end": "2019-12-19 11:52:32+00:00",
+      "t2_history_rows": 16519,
+      "t7_history_rows": 352229,
+      "t2_elapsed_seconds": 31.746859788894653,
+      "t7_elapsed_seconds": 114.0373888015747
+    }
+  ],
+  "t2_oof_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/t8_mod029_t2_oof.csv",
+  "t7_oof_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/t8_mod029_t7_oof.csv",
+  "joint_oof_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/t8_mod029_joint_oof.csv",
+  "runtime_seconds": 426.59758281707764
+}

@@ -1,0 +1,3456 @@
+{
+  "operation": "FMP-06-OP-002",
+  "operation_name": "Runtime Producer Consumer Interface Audit",
+  "operation_type": "READ_ONLY_RUNTIME_PRODUCER_CONSUMER_AUDIT",
+  "timestamp_utc": "2026-09-26T10:14:39.788940+00:00",
+  "authoritative_artifacts": {
+    "T8_validation": {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/mod036/op026/t8_mod036_op026_decision_engine_validation.json",
+      "exists": true,
+      "readable": true,
+      "top_level_keys": [
+        "operation",
+        "operation_name",
+        "status",
+        "closure_status",
+        "validated_operations",
+        "population",
+        "observed_overall_states",
+        "observed_consistency_states",
+        "evidence_count_distribution",
+        "closure_criteria",
+        "architecture",
+        "limitations",
+        "next_phase",
+        "artifacts"
+      ],
+      "string_evidence": [
+        {
+          "path": "operation_name",
+          "value": "Decision Engine Validation and Closure"
+        },
+        {
+          "path": "closure_status",
+          "value": "T8_DECISION_ENGINE_CLOSED"
+        },
+        {
+          "path": "observed_overall_states[0]",
+          "value": "INSUFFICIENT_EVIDENCE"
+        },
+        {
+          "path": "observed_consistency_states[0]",
+          "value": "INSUFFICIENT_EVIDENCE"
+        },
+        {
+          "path": "limitations[1]",
+          "value": "The decision engine is a variable-evidence composition layer rather than a single universally supervised predictor."
+        },
+        {
+          "path": "limitations[3]",
+          "value": "T7 resolution evidence retains native survival-analysis semantics."
+        },
+        {
+          "path": "limitations[4]",
+          "value": "T5 duplicate probability is retained as calibrated evidence; no automation threshold is selected."
+        },
+        {
+          "path": "next_phase.purpose",
+          "value": "Confidence and calibration layer"
+        },
+        {
+          "path": "artifacts.decision_predictions",
+          "value": "modeling/T8/mod036/op025/t8_mod036_op025_decision_engine_predictions.csv"
+        },
+        {
+          "path": "artifacts.closure_report",
+          "value": "modeling/T8/mod036/op026/t8_mod036_op026_decision_engine_validation.json"
+        }
+      ],
+      "error": null
+    },
+    "T9_closure": {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op015_final_integrated_closure.json",
+      "exists": true,
+      "readable": true,
+      "top_level_keys": [
+        "operation",
+        "title",
+        "status",
+        "purpose",
+        "prior_operations",
+        "contract_validation",
+        "semantic_lock_validation",
+        "task_evidence",
+        "final_evidence_statement",
+        "OP014_boundary",
+        "controls",
+        "control_validation",
+        "closure",
+        "methodological_restrictions"
+      ],
+      "string_evidence": [
+        {
+          "path": "title",
+          "value": "Final Integrated Evidence Synthesis & Closure"
+        },
+        {
+          "path": "purpose",
+          "value": "Perform the final read-only integration of completed T9 evidence and close the T9 empirical confidence/calibration boundary."
+        },
+        {
+          "path": "task_evidence.T5.status",
+          "value": "EMPIRICAL_CALIBRATION_EVIDENCE_ESTABLISHED"
+        },
+        {
+          "path": "task_evidence.T7.status",
+          "value": "NATIVE_SURVIVAL_EVIDENCE_CLOSED"
+        },
+        {
+          "path": "final_evidence_statement.T2",
+          "value": "No accepted native probability artifact for probability calibration."
+        },
+        {
+          "path": "final_evidence_statement.T3",
+          "value": "No accepted native probability artifact for probability calibration."
+        },
+        {
+          "path": "final_evidence_statement.T5",
+          "value": "Empirical calibration improvement evidence is established. No formal calibration method winner was selected."
+        },
+        {
+          "path": "final_evidence_statement.T6",
+          "value": "Native query-level retrieval/ranking evaluation and reliability evidence are established. Ordinary binary probability calibration is not established."
+        },
+        {
+          "path": "OP014_boundary.cross_task_status",
+          "value": "TASK_SPECIFIC_EVIDENCE_BOUNDARY_CLOSED"
+        },
+        {
+          "path": "OP014_boundary.T8_interface",
+          "value": "ACCEPTED_TASK_SPECIFIC_INTERFACE"
+        },
+        {
+          "path": "closure.scope",
+          "value": "T9 confidence, calibration, native evaluation, uncertainty, reliability, and cross-task evidence boundary."
+        },
+        {
+          "path": "closure.empirical_boundary",
+          "value": "T9 establishes task-specific empirical evidence only. Heterogeneous task outputs remain tied to their native predictive quantities and observation structures."
+        },
+        {
+          "path": "closure.calibration_boundary",
+          "value": "T5 has empirical calibration improvement evidence without formal method selection. T2 and T3 lack accepted native probability artifacts. T4 and T6 remain native ranking/retrieval quantities. T7 remains a survival quantity with censoring-aware uncertainty."
+        },
+        {
+          "path": "closure.final_interpretation",
+          "value": "T9 is closed as an evidence and calibration boundary. It does not create a universal confidence/risk score or an autonomous decision policy. The resulting T8 interface remains task-specific, provenance-preserving, and uncertainty-aware."
+        },
+        {
+          "path": "methodological_restrictions[8]",
+          "value": "No new prediction generation."
+        },
+        {
+          "path": "methodological_restrictions[17]",
+          "value": "Unavailable evidence remains unavailable."
+        }
+      ],
+      "error": null
+    },
+    "T10_consolidation": {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/project_consolidation.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "load_json",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "json"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    }
+  },
+  "t8_runtime_sources": [
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod001_evidence_case_audit.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "print_rule",
+        "inspect_modeling_structure",
+        "inspect_artifact",
+        "print_artifact_result",
+        "verify_raw_archive_not_opened",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "__future__",
+        "csv",
+        "sys",
+        "pathlib"
+      ],
+      "keyword_hits": [
+        "artifact",
+        "layer",
+        "evidence",
+        "execution",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod002_native_evidence_semantic_audit.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "is_blank",
+        "display_counter",
+        "classify_availability",
+        "audit_file_exists",
+        "profile_columns",
+        "profile_availability"
+      ],
+      "class_names": [],
+      "imports": [
+        "csv",
+        "os",
+        "sys",
+        "collections"
+      ],
+      "keyword_hits": [
+        "artifact",
+        "layer",
+        "evidence",
+        "runtime",
+        "execution",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod003_common_population_overlap_audit.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "is_blank",
+        "classify_available",
+        "combination_label"
+      ],
+      "class_names": [],
+      "imports": [
+        "csv",
+        "sys",
+        "collections",
+        "itertools"
+      ],
+      "keyword_hits": [
+        "input",
+        "artifact",
+        "layer",
+        "evidence",
+        "execution",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod004_native_task_output_inventory.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "is_blank",
+        "display_value",
+        "population_stats"
+      ],
+      "class_names": [],
+      "imports": [
+        "csv",
+        "sys",
+        "collections"
+      ],
+      "keyword_hits": [
+        "input",
+        "output",
+        "artifact",
+        "layer",
+        "evidence",
+        "execution",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod005_prediction_artifact_inventory.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "task_mentions",
+        "should_skip",
+        "human_size",
+        "inspect_csv_header"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "csv",
+        "sys"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "execution",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod006_prediction_artifact_content_audit.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "file_info",
+        "classify_name",
+        "print_section",
+        "inspect_csv",
+        "summarize_numeric_array",
+        "inspect_npz",
+        "find_relevant_jsons",
+        "inspect_json",
+        "inspect_task_metadata",
+        "main",
+        "walk"
+      ],
+      "class_names": [],
+      "imports": [
+        "csv",
+        "json",
+        "os",
+        "sys",
+        "pathlib",
+        "numpy"
+      ],
+      "keyword_hits": [
+        "artifact",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod007_prediction_population_id_provenance.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "print_header",
+        "normalize_id",
+        "find_id_column",
+        "read_csv_ids",
+        "read_csv_header_and_rows",
+        "load_json",
+        "flatten_strings",
+        "print_population_result"
+      ],
+      "class_names": [],
+      "imports": [
+        "csv",
+        "json",
+        "re",
+        "zipfile",
+        "pathlib",
+        "numpy"
+      ],
+      "keyword_hits": [
+        "input",
+        "output",
+        "artifact",
+        "layer",
+        "evidence",
+        "runtime",
+        "execution",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod008_targeted_prediction_provenance.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "normalize_id",
+        "read_csv_column",
+        "read_csv_ids",
+        "print_header"
+      ],
+      "class_names": [],
+      "imports": [
+        "csv",
+        "json",
+        "pathlib",
+        "numpy"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "layer",
+        "evidence",
+        "runtime",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod009_prediction_evidence_eligibility_audit.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "normalize_id",
+        "read_id_set",
+        "print_header"
+      ],
+      "class_names": [],
+      "imports": [
+        "csv",
+        "pathlib",
+        "collections"
+      ],
+      "keyword_hits": [
+        "artifact",
+        "layer",
+        "evidence",
+        "runtime",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod010_outcome_evaluation_target_feasibility.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "print_header",
+        "read_header",
+        "read_rows_selected",
+        "load_json",
+        "flatten_strings",
+        "print_relevant_json_fields"
+      ],
+      "class_names": [],
+      "imports": [
+        "csv",
+        "json",
+        "pathlib"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "layer",
+        "evidence",
+        "runtime",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod011_fusion_evaluation_design_audit.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "print_header",
+        "read_header",
+        "load_json",
+        "flatten_strings"
+      ],
+      "class_names": [],
+      "imports": [
+        "csv",
+        "json",
+        "pathlib"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "layer",
+        "evidence",
+        "execution",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod012_cross_task_overlap_audit.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "print_header",
+        "load_csv_ids",
+        "load_json",
+        "find_strings",
+        "find_csv_references"
+      ],
+      "class_names": [],
+      "imports": [
+        "csv",
+        "json",
+        "pathlib"
+      ],
+      "keyword_hits": [
+        "artifact",
+        "evidence",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod012_cross_task_split_inventory.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "print_header",
+        "discover_files",
+        "csv_header"
+      ],
+      "class_names": [],
+      "imports": [
+        "csv",
+        "pathlib"
+      ],
+      "keyword_hits": [
+        "artifact",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod013_clean_candidate_population_audit.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "print_header",
+        "load_ids",
+        "percentage"
+      ],
+      "class_names": [],
+      "imports": [
+        "csv",
+        "pathlib"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod014_candidate_cohort_composition_audit.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "read_csv",
+        "read_ids",
+        "safe_float",
+        "pct",
+        "distribution",
+        "print_distribution",
+        "jensen_shannon",
+        "categorical_counts",
+        "compare_categorical",
+        "mean",
+        "median",
+        "summarize_numeric",
+        "build_rows_by_id",
+        "clean_pair",
+        "kl"
+      ],
+      "class_names": [],
+      "imports": [
+        "csv",
+        "json",
+        "math",
+        "pathlib",
+        "collections"
+      ],
+      "keyword_hits": [
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod015_native_baseline_definition.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "read_csv",
+        "read_ids",
+        "pct",
+        "safe_float",
+        "confusion_binary",
+        "binary_metrics",
+        "binary_average_precision",
+        "print_binary_result",
+        "clean_pair"
+      ],
+      "class_names": [],
+      "imports": [
+        "csv",
+        "math",
+        "pathlib",
+        "collections",
+        "numpy"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "runtime",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod016_evidence_addition_ablation_design.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "read_csv",
+        "ids_from_rows",
+        "read_ids",
+        "clean_pair",
+        "clean_multi",
+        "status_line"
+      ],
+      "class_names": [],
+      "imports": [
+        "csv",
+        "pathlib"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod017_t2_t7_evidence_association.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "safe_float",
+        "read_csv",
+        "mean",
+        "median",
+        "accuracy",
+        "pct",
+        "quantile",
+        "quartile_bins"
+      ],
+      "class_names": [],
+      "imports": [
+        "csv",
+        "math",
+        "pathlib"
+      ],
+      "keyword_hits": [
+        "artifact",
+        "evidence",
+        "runtime",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod018_fusion_training_population_audit.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "read_csv",
+        "read_ids",
+        "json_files",
+        "text_contains"
+      ],
+      "class_names": [],
+      "imports": [
+        "csv",
+        "json",
+        "pathlib"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod019_development_prediction_feasibility.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "read_csv_info",
+        "read_json",
+        "flatten_strings",
+        "relevant_json_text",
+        "print_csv_info",
+        "compare_prediction_to_split"
+      ],
+      "class_names": [],
+      "imports": [
+        "csv",
+        "json",
+        "pathlib"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod020_t7_development_generation_audit.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "read_text",
+        "read_json",
+        "flatten_json",
+        "print_section"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "re"
+      ],
+      "keyword_hits": [
+        "input",
+        "output",
+        "artifact",
+        "evidence",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod021_t7_oof_design_audit.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "load_rows",
+        "parse_creation",
+        "print_header"
+      ],
+      "class_names": [],
+      "imports": [
+        "csv",
+        "datetime",
+        "pathlib"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "runtime",
+        "execution",
+        "prediction",
+        "decision",
+        "policy"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod022_joint_t2_t7_oof_design_audit.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "load_csv",
+        "parse_creation",
+        "get_id",
+        "chronological_records",
+        "print_header",
+        "inspect_source_tree"
+      ],
+      "class_names": [],
+      "imports": [
+        "csv",
+        "datetime",
+        "pathlib"
+      ],
+      "keyword_hits": [
+        "artifact",
+        "evidence",
+        "runtime",
+        "execution",
+        "prediction",
+        "decision",
+        "policy"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod023_t2_warmup_class_coverage_audit.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "load_csv",
+        "load_json",
+        "parse_creation",
+        "print_header",
+        "get_target",
+        "get_id"
+      ],
+      "class_names": [],
+      "imports": [
+        "csv",
+        "json",
+        "datetime",
+        "pathlib"
+      ],
+      "keyword_hits": [
+        "artifact",
+        "runtime",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod024_oof_fold_model_contract_audit.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "load_csv",
+        "load_json",
+        "parse_creation",
+        "get_id",
+        "chronological_records",
+        "print_header",
+        "print_json_value",
+        "find_first_existing",
+        "recursive_find_keys",
+        "search_text"
+      ],
+      "class_names": [],
+      "imports": [
+        "csv",
+        "json",
+        "datetime",
+        "pathlib"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "layer",
+        "evidence",
+        "runtime",
+        "prediction",
+        "decision",
+        "policy"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod025_t7_frozen_contract_discovery.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "load_json",
+        "print_header",
+        "relative",
+        "recursive_find_keys",
+        "text_contains_any"
+      ],
+      "class_names": [],
+      "imports": [
+        "json",
+        "re",
+        "pathlib"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "prediction",
+        "decision",
+        "policy"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod026_t7_final_model_contract_audit.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "load_json",
+        "print_header",
+        "relative",
+        "recursive_find_keys",
+        "show_selected_keys",
+        "search_script"
+      ],
+      "class_names": [],
+      "imports": [
+        "json",
+        "pathlib"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "prediction",
+        "policy"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod027_t7_lognormal_feature_preprocessing_audit.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "print_header",
+        "relative",
+        "print_code_context"
+      ],
+      "class_names": [],
+      "imports": [
+        "ast",
+        "re",
+        "pathlib",
+        "json",
+        "json"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod028_joint_t2_t7_oof_protocol_audit.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "header",
+        "load_json",
+        "require_file",
+        "read_csv",
+        "normalize_creation",
+        "chronological_sort",
+        "print_population",
+        "class_counts",
+        "format_counts",
+        "get_first_existing_key",
+        "audit_design"
+      ],
+      "class_names": [],
+      "imports": [
+        "json",
+        "pathlib",
+        "numpy",
+        "pandas"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod028b_t2_final_implementation_audit.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "header",
+        "require_file",
+        "load_json",
+        "source",
+        "print_matching_lines",
+        "ast_string"
+      ],
+      "class_names": [],
+      "imports": [
+        "ast",
+        "json",
+        "pathlib"
+      ],
+      "keyword_hits": [
+        "input",
+        "artifact",
+        "evidence",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod029_joint_oof_generation.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "log",
+        "sha256_file",
+        "load_csv",
+        "normalize_creation",
+        "sort_creation",
+        "extract_function_source",
+        "recover_t2_namespace",
+        "recover_t7_namespace",
+        "resolve_splits",
+        "require_columns",
+        "validate_input_schemas",
+        "validate_unique_ids",
+        "validate_split_integrity",
+        "build_common_population",
+        "make_blocks",
+        "fit_t2_fold",
+        "fit_t7_fold",
+        "t7_history_before",
+        "validate_oof_result",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "__future__",
+        "ast",
+        "hashlib",
+        "json",
+        "time",
+        "pathlib",
+        "types",
+        "typing",
+        "numpy",
+        "pandas",
+        "importlib.util",
+        "sklearn.feature_extraction.text",
+        "sklearn.linear_model"
+      ],
+      "keyword_hits": [
+        "input",
+        "output",
+        "artifact",
+        "runtime",
+        "execute",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod032_op002_controlled_fusion_training.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "make_fusion_pipeline",
+        "evaluate_candidate"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "pandas",
+        "sklearn.linear_model",
+        "sklearn.metrics",
+        "sklearn.pipeline",
+        "sklearn.preprocessing"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod032_op003_development_result_audit.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "numpy",
+        "pandas",
+        "sklearn.metrics"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod032_op004_chronological_robustness_audit.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "make_model",
+        "evaluate"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "numpy",
+        "pandas",
+        "sklearn.linear_model",
+        "sklearn.metrics",
+        "sklearn.pipeline",
+        "sklearn.preprocessing"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod032_op005_t7_priority_association_audit.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "numpy",
+        "pandas",
+        "sklearn.metrics"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod033_op001_t4_t5_prediction_artifact_audit.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "discover_files",
+        "inspect_csv",
+        "classify_candidates"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "pandas"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod033_op002_t4_t5_validation_artifact_content_audit.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "inspect_structure",
+        "summarize"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "json"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod033_op003_t4_t5_generation_feasibility_audit.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "source_files",
+        "relevant_lines",
+        "find_contract_terms"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "re"
+      ],
+      "keyword_hits": [
+        "output",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod033_op004_summary.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "show_section"
+      ],
+      "class_names": [],
+      "imports": [
+        "__future__",
+        "json",
+        "pathlib"
+      ],
+      "keyword_hits": [
+        "input",
+        "artifact",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod033_op004_t4_t5_development_provenance_audit.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "section",
+        "discover_files",
+        "inspect_csv",
+        "inspect_json",
+        "inspect_text",
+        "classify_paths"
+      ],
+      "class_names": [],
+      "imports": [
+        "__future__",
+        "json",
+        "re",
+        "pathlib",
+        "pandas"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod033_op005_development_population_audit.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "read_ids",
+        "inspect_population"
+      ],
+      "class_names": [],
+      "imports": [
+        "__future__",
+        "json",
+        "pathlib",
+        "pandas"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod033_op006_t4_t5_generation_contract.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [],
+      "class_names": [],
+      "imports": [
+        "__future__",
+        "json",
+        "pathlib"
+      ],
+      "keyword_hits": [
+        "output",
+        "evidence",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod033_op007_t4_t5_development_generation.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "fail"
+      ],
+      "class_names": [],
+      "imports": [
+        "__future__",
+        "json",
+        "pathlib",
+        "numpy",
+        "pandas"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "runtime",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod034_op001_t4_t5_fusion_contract_audit.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "pandas",
+        "numpy"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "runtime",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod034_op002_t4_t5_native_interaction_analysis.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "numpy",
+        "pandas"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "runtime",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod034_op003_native_outcome_audit.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "candidate_columns"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "pandas",
+        "numpy"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "runtime",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod034_op004_native_evidence_addition.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "topk_hit_rate"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "numpy",
+        "pandas",
+        "sklearn.metrics"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "runtime",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod034_op006_robust_stratification.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "pandas",
+        "numpy",
+        "sklearn.metrics"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "runtime",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod034_op007_fusion_experiment_gate.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "json"
+      ],
+      "keyword_hits": [
+        "artifact",
+        "evidence",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod034_op008_fusion_split_audit.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "pandas"
+      ],
+      "keyword_hits": [
+        "artifact",
+        "evidence",
+        "runtime"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod034_op009_fusion_mechanism_audit.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "json"
+      ],
+      "keyword_hits": [
+        "artifact",
+        "evidence",
+        "runtime",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod034_op010_t4_ablation_feasibility.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "pandas",
+        "numpy"
+      ],
+      "keyword_hits": [
+        "input",
+        "artifact",
+        "evidence",
+        "runtime",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod034_op011_t4_controlled_ablation.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "numpy",
+        "pandas",
+        "sklearn.preprocessing",
+        "sklearn.linear_model",
+        "sklearn.metrics"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "runtime"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod034_op012_t5_controlled_ablation.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "make_features"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "numpy",
+        "pandas",
+        "sklearn.linear_model",
+        "sklearn.metrics"
+      ],
+      "keyword_hits": [
+        "artifact",
+        "evidence",
+        "runtime",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod034_op013_fusion_closure.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "json"
+      ],
+      "keyword_hits": [
+        "artifact",
+        "evidence",
+        "runtime",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod035_op001_final_synthesis.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "json"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "layer",
+        "evidence",
+        "runtime",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod036_op001_decision_engine_inventory.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "json"
+      ],
+      "keyword_hits": [
+        "input",
+        "output",
+        "artifact",
+        "layer",
+        "evidence",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod036_op002_task_output_inventory.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "inspect_csv",
+        "discover_candidates"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "csv"
+      ],
+      "keyword_hits": [
+        "input",
+        "output",
+        "artifact",
+        "evidence",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod036_op003_authoritative_artifact_resolution.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "is_excluded",
+        "task_matches",
+        "score_candidate",
+        "inspect_json",
+        "inspect_csv_header",
+        "inspect_artifact"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "csv",
+        "json",
+        "re"
+      ],
+      "keyword_hits": [
+        "input",
+        "output",
+        "artifact",
+        "evidence",
+        "prediction",
+        "decision",
+        "interface"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod036_op004_native_input_validation.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "inspect_csv",
+        "inspect_json",
+        "inspect"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "csv",
+        "json"
+      ],
+      "keyword_hits": [
+        "input",
+        "output",
+        "artifact",
+        "evidence",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod036_op005_t1_t3_output_resolution.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "excluded",
+        "task_match",
+        "score",
+        "inspect_csv",
+        "inspect_json"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "csv",
+        "json",
+        "re"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod036_op006_t1_t3_provenance_trace.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "load_json",
+        "extract_recursive"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "json"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod036_op007_model_interface_validation.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "load_json",
+        "inspect_model"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "joblib"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "prediction",
+        "decision",
+        "interface"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod036_op008_t1_t3_artifact_structure.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "describe_value",
+        "load_json",
+        "inventory_directory",
+        "walk"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "joblib"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod036_op009_t1_model_resolution.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "load_json",
+        "inspect_model"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "joblib"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "prediction",
+        "decision",
+        "interface"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod036_op011_decision_engine_input_schema.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "json"
+      ],
+      "keyword_hits": [
+        "input",
+        "output",
+        "artifact",
+        "layer",
+        "evidence",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod036_op012_decision_engine_architecture.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "json"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod036_op013_learning_target_audit.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "load_json",
+        "inspect_json_targets",
+        "inspect_csv",
+        "main",
+        "walk"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "csv",
+        "re"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod036_op014_assignment_target_reconciliation.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "load_json",
+        "inspect_json",
+        "inspect_csv",
+        "main",
+        "walk"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "csv"
+      ],
+      "keyword_hits": [
+        "input",
+        "output",
+        "artifact",
+        "evidence",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod036_op015_trainable_component_design.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "json"
+      ],
+      "keyword_hits": [
+        "input",
+        "output",
+        "artifact",
+        "evidence",
+        "prediction",
+        "decision",
+        "policy"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod036_op016_component_contracts.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "json"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "prediction",
+        "decision",
+        "policy",
+        "interface"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod036_op017_development_population.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "read_csv",
+        "norm_id",
+        "find_id",
+        "build_index",
+        "pick",
+        "parse_float",
+        "parse_int",
+        "stable_hash",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "csv",
+        "json",
+        "hashlib"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "prediction",
+        "decision",
+        "policy"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod036_op018_population_audit.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "read_csv",
+        "find_id",
+        "summarize_columns",
+        "build_ids",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "csv",
+        "json"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "layer",
+        "evidence",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod036_op019_priority_component_baseline.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "resolve_column",
+        "get_id",
+        "get_text",
+        "get_target",
+        "prepare",
+        "target_distribution",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "csv",
+        "json",
+        "sklearn.feature_extraction.text",
+        "sklearn.linear_model",
+        "sklearn.metrics"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "runtime",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod036_op019a_t2_native_population_resolution.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "read_csv_header",
+        "inspect_json",
+        "score_csv",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "csv",
+        "json"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod036_op019b_t2_split_resolution.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "load_rows",
+        "get_id",
+        "inspect_provenance",
+        "target_distribution",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "csv",
+        "json"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod036_op020_assignment_component_baseline.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "load_csv",
+        "resolve_column",
+        "get_id",
+        "get_target",
+        "aggregate_neighbor_scores",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "csv",
+        "json",
+        "collections",
+        "numpy"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "runtime",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod036_op021_duplicate_component_baseline.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "resolve_column",
+        "to_binary_target",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "csv",
+        "json",
+        "numpy",
+        "sklearn.metrics"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "runtime",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod036_op022_t7_output_resolution.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "normalize",
+        "resolve_column",
+        "inspect_csv",
+        "classify_column",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "csv",
+        "json",
+        "numpy"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "runtime",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod036_op023_resolution_component_baseline.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "normalize",
+        "resolve_column",
+        "parse_float",
+        "classify_resolution_context",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "csv",
+        "json",
+        "numpy"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "runtime",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod036_op024_decision_input_composition.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "normalize",
+        "read_csv",
+        "resolve_id",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "csv",
+        "json"
+      ],
+      "keyword_hits": [
+        "input",
+        "output",
+        "artifact",
+        "evidence",
+        "runtime",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod036_op025_decision_engine_composition.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "normalize",
+        "read_csv",
+        "resolve_column",
+        "parse_float",
+        "parse_bool",
+        "load_component",
+        "priority_record",
+        "assignment_record",
+        "duplicate_record",
+        "resolution_record",
+        "determine_overall_state",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "csv",
+        "json"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "runtime",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod036_op026_decision_engine_validation.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "load_json",
+        "read_csv",
+        "require",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "csv",
+        "json"
+      ],
+      "keyword_hits": [
+        "input",
+        "output",
+        "artifact",
+        "layer",
+        "evidence",
+        "runtime",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/scripts/t8_mod036_plots.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "load_json",
+        "save_bar_chart",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "matplotlib.pyplot"
+      ],
+      "keyword_hits": [
+        "input",
+        "output",
+        "artifact",
+        "evidence",
+        "runtime",
+        "decision"
+      ],
+      "error": null
+    }
+  ],
+  "t9_runtime_sources": [
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/scripts/t9_mod037_final_plots.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "require_file",
+        "load_json",
+        "savefig",
+        "print_columns"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "json",
+        "numpy",
+        "pandas",
+        "matplotlib.pyplot"
+      ],
+      "keyword_hits": [
+        "artifact",
+        "layer",
+        "evidence",
+        "runtime",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/scripts/t9_mod037_op001_contract.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "pathlib",
+        "json"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/scripts/t9_mod037_op002_native_output_inventory.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "safe_relative",
+        "semantic_matches",
+        "filename_matches",
+        "scalar_summary",
+        "inspect_csv",
+        "inspect_npz",
+        "inspect_json",
+        "inspect_file",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "__future__",
+        "json",
+        "pathlib",
+        "typing",
+        "numpy",
+        "pandas"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/scripts/t9_mod037_op003_calibration_feasibility.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "rel",
+        "exists",
+        "inspect_csv",
+        "inspect_npz",
+        "inspect",
+        "discover_t3_candidates",
+        "csv_columns",
+        "load_csv_columns",
+        "evaluate_t2",
+        "evaluate_t3",
+        "evaluate_t4",
+        "evaluate_t5",
+        "evaluate_t6",
+        "evaluate_t7",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "__future__",
+        "json",
+        "pathlib",
+        "typing",
+        "numpy",
+        "pandas"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/scripts/t9_mod037_op004_native_output_acceptance.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "rel",
+        "fail",
+        "passed",
+        "inspect_csv",
+        "inspect_npz",
+        "unique_id_check",
+        "numeric_probability_check",
+        "probability_matrix_check",
+        "accept_t2",
+        "accept_t4",
+        "accept_t5",
+        "accept_t6",
+        "accept_t7",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "__future__",
+        "json",
+        "pathlib",
+        "typing",
+        "numpy",
+        "pandas"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/scripts/t9_mod037_op004a_t2_probability_resolution.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "rel",
+        "inspect_csv",
+        "inspect_npz",
+        "inspect_file",
+        "discover_candidates",
+        "validate_probability_csv",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "__future__",
+        "json",
+        "pathlib",
+        "typing",
+        "numpy",
+        "pandas"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/scripts/t9_mod037_op005_output_semantics_lock.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "load_json",
+        "validate_previous_operations",
+        "validate_boundary",
+        "validate_controls",
+        "main",
+        "collect_failures"
+      ],
+      "class_names": [],
+      "imports": [
+        "__future__",
+        "json",
+        "pathlib",
+        "typing"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/scripts/t9_mod037_op006_t5_calibration_population_audit.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "fail",
+        "finite_array",
+        "probability_range_valid",
+        "binary_target_valid",
+        "load_json",
+        "validate_op005",
+        "audit_t5_artifact",
+        "audit_population",
+        "audit_probability_semantics",
+        "audit_alignment",
+        "audit_boundary_controls",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "__future__",
+        "json",
+        "pathlib",
+        "typing",
+        "numpy",
+        "pandas"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "runtime",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/scripts/t9_mod037_op007_t5_calibration_protocol.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "load_json",
+        "validate_op005",
+        "validate_op006",
+        "validate_protocol",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "__future__",
+        "json",
+        "pathlib",
+        "typing"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "execute",
+        "prediction",
+        "decision",
+        "policy"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/scripts/t9_mod037_op008_t5_empirical_calibration.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "load_json",
+        "clip_probabilities",
+        "validate_previous_operations",
+        "load_native_data",
+        "validate_native_data",
+        "expected_calibration_error",
+        "compute_metrics",
+        "bootstrap_metrics",
+        "reliability_table",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "__future__",
+        "json",
+        "pathlib",
+        "typing",
+        "numpy",
+        "pandas",
+        "sklearn.metrics"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "runtime",
+        "execute",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/scripts/t9_mod037_op009_t5_uncertainty_reliability.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "load_json",
+        "fail",
+        "validate_previous_operations",
+        "audit_bootstrap",
+        "audit_reliability",
+        "summarize_reliability",
+        "build_metric_summary",
+        "calculate_interval_overlap",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "__future__",
+        "json",
+        "pathlib",
+        "typing",
+        "numpy",
+        "pandas"
+      ],
+      "keyword_hits": [
+        "input",
+        "output",
+        "artifact",
+        "evidence",
+        "runtime",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/scripts/t9_mod037_op010_t5_calibration_evidence_synthesis.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "load_json",
+        "fail",
+        "validate_previous_operations",
+        "load_empirical_evidence",
+        "validate_evidence_structure",
+        "point_estimate_table",
+        "reliability_flags",
+        "compare_metrics",
+        "build_evidence_rules",
+        "derive_conclusion",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "__future__",
+        "json",
+        "pathlib",
+        "typing",
+        "numpy",
+        "pandas"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "runtime",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/scripts/t9_mod037_op011_t4_ranking_evaluation.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "load_json",
+        "require_file",
+        "resolve_column",
+        "normalize_ids",
+        "normalize_targets",
+        "validate_op011a",
+        "validate_previous_operations",
+        "load_native_sources",
+        "audit_source_schema",
+        "audit_populations",
+        "audit_candidate_space",
+        "audit_target_availability",
+        "evaluate_top1",
+        "audit_output_semantics",
+        "determine_calibration_readiness",
+        "build_controls",
+        "validate_controls",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "__future__",
+        "json",
+        "pathlib",
+        "typing",
+        "pandas"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "runtime",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/scripts/t9_mod037_op011a_t4_prior_artifact_schema.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "load_json",
+        "summarize_value",
+        "find_key_paths",
+        "find_paths_containing",
+        "inspect_artifact",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "__future__",
+        "json",
+        "pathlib",
+        "typing"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/scripts/t9_mod037_op011b_prior_value_resolution.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "load",
+        "summarize",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "__future__",
+        "json",
+        "pathlib"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/scripts/t9_mod037_op012a_t6_prior_artifact_schema.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "require_file",
+        "load_json",
+        "frame_summary",
+        "resolve_column",
+        "value_summary",
+        "resolve_op004",
+        "resolve_op005",
+        "resolve_t6_contract",
+        "resolve_t6_data_schema",
+        "resolve_ranking_columns",
+        "audit_ranking_values",
+        "inventory_other_rankings",
+        "resolve_supporting_artifacts",
+        "resolve_t6_boundary",
+        "build_controls",
+        "validate_controls",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "__future__",
+        "json",
+        "pathlib",
+        "typing",
+        "pandas"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "runtime",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/scripts/t9_mod037_op012b_t6_target_observation_audit.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "require_file",
+        "load_json",
+        "normalize_series",
+        "summarize_column",
+        "resolve_column",
+        "validate_prior_operations",
+        "load_t6_data",
+        "resolve_t6_schema",
+        "audit_target_observed",
+        "audit_query_candidate_structure",
+        "audit_score_structure",
+        "audit_split_integrity",
+        "audit_observation_by_split",
+        "build_controls",
+        "validate_controls",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "__future__",
+        "json",
+        "pathlib",
+        "typing",
+        "pandas"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "runtime",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/scripts/t9_mod037_op012c_t6_native_ranking_evaluation.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "require_file",
+        "load_json",
+        "normalize_id",
+        "validate_prior_operations",
+        "load_rankings",
+        "validate_input",
+        "build_query_results",
+        "extract_query_level_results",
+        "calculate_ranking_metrics",
+        "evaluate_by_split",
+        "audit_eval_population",
+        "build_controls",
+        "validate_controls",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "__future__",
+        "json",
+        "pathlib",
+        "typing",
+        "pandas"
+      ],
+      "keyword_hits": [
+        "input",
+        "output",
+        "artifact",
+        "evidence",
+        "runtime",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/scripts/t9_mod037_op012d_t6_ranking_reliability.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "require_file",
+        "load_json",
+        "validate_prior_operations",
+        "load_query_results",
+        "validate_query_results",
+        "metric_hit_at_k",
+        "metric_mrr",
+        "calculate_point_estimates",
+        "bootstrap_metrics",
+        "summarize_bootstrap",
+        "summarize_rank_distribution",
+        "evaluate_split",
+        "build_controls",
+        "validate_controls",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "__future__",
+        "json",
+        "pathlib",
+        "typing",
+        "numpy",
+        "pandas"
+      ],
+      "keyword_hits": [
+        "input",
+        "output",
+        "artifact",
+        "evidence",
+        "runtime",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/scripts/t9_mod037_op013a_t7_prior_artifact_schema.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "load_json",
+        "safe_json_value",
+        "validate_t9_boundary",
+        "discover_t7_files",
+        "classify_path",
+        "inspect_json",
+        "inspect_csv",
+        "inspect_parquet",
+        "inspect_file",
+        "identify_candidates",
+        "build_controls",
+        "validate_controls",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "__future__",
+        "json",
+        "pathlib",
+        "typing",
+        "pandas"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "runtime",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/scripts/t9_mod037_op013b_t7_survival_semantics_audit.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "require_file",
+        "load_json",
+        "normalize_columns",
+        "find_id_column",
+        "validate_t9_boundary",
+        "audit_contract",
+        "load_split",
+        "inspect_prediction_artifact",
+        "audit_alignment",
+        "compare_prediction_artifacts",
+        "inspect_supporting_audits",
+        "build_controls",
+        "validate_controls",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "__future__",
+        "json",
+        "pathlib",
+        "typing",
+        "numpy",
+        "pandas"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "runtime",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/scripts/t9_mod037_op013c_t7_full_evidence_scan.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "load_json",
+        "compact_value",
+        "json_structure",
+        "recursive_text_hits",
+        "read_csv_header",
+        "read_json_evidence",
+        "inspect_text_file",
+        "inspect_tree",
+        "compare_prediction_headers",
+        "audit_prior_operations",
+        "scan_high_value_files",
+        "scan_t7_scripts",
+        "discover_relevant_files",
+        "build_reconciliation",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "__future__",
+        "csv",
+        "json",
+        "pathlib",
+        "typing"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "runtime",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/scripts/t9_mod037_op013c_t7_native_survival_evaluation.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "require_file",
+        "load_json",
+        "normalize_frame",
+        "find_id_column",
+        "validate_prior_operations",
+        "load_eval_population",
+        "load_prediction",
+        "align_prediction_to_eval",
+        "audit_prediction_ranges",
+        "censoring_km",
+        "censoring_survival_at",
+        "censoring_survival_before",
+        "ipcw_brier_score",
+        "survival_calibration_summary",
+        "kaplan_meier_event_survival",
+        "kaplan_meier_survival_at",
+        "harrell_c_index",
+        "median_survival_descriptive_error",
+        "compare_native_outputs",
+        "build_controls",
+        "validate_controls",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "__future__",
+        "json",
+        "pathlib",
+        "typing",
+        "numpy",
+        "pandas"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "runtime",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/scripts/t9_mod037_op013d_t7_existing_evidence_reconciliation.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "require_file",
+        "load_json",
+        "load_csv",
+        "get_nested",
+        "first_present",
+        "number_or_none",
+        "validate_prior_operations",
+        "validate_artifact_presence",
+        "extract_population_evidence",
+        "extract_model_audit",
+        "extract_final_comparison",
+        "extract_calibration_evidence",
+        "extract_final_closure",
+        "classify_remaining_gaps",
+        "build_controls",
+        "validate_controls",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "__future__",
+        "csv",
+        "json",
+        "pathlib",
+        "typing"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "runtime",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/scripts/t9_mod037_op013e_t7_survival_uncertainty_reliability.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "require_file",
+        "load_json",
+        "normalize_columns",
+        "find_id_column",
+        "validate_prior_operations",
+        "load_evaluation",
+        "load_prediction",
+        "align_prediction",
+        "censoring_km",
+        "censoring_survival_before",
+        "censoring_survival_at",
+        "build_horizon_components",
+        "weighted_brier",
+        "bootstrap_mean",
+        "reliability_summary",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "__future__",
+        "json",
+        "pathlib",
+        "typing",
+        "numpy",
+        "pandas"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "runtime",
+        "prediction"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/scripts/t9_mod037_op013f_t7_evidence_synthesis.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "require_file",
+        "load_json",
+        "status_of",
+        "assert_pass",
+        "load_prior_evidence",
+        "validate_t7_prior_boundary",
+        "validate_semantics",
+        "validate_existing_evidence",
+        "validate_uncertainty",
+        "reconcile_population",
+        "build_native_quantity_status",
+        "build_controls",
+        "validate_controls",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "__future__",
+        "json",
+        "pathlib",
+        "typing",
+        "pandas"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "runtime",
+        "prediction",
+        "decision"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/scripts/t9_mod037_op014_cross_task_evidence_synthesis.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "require_file",
+        "load_json",
+        "require_pass",
+        "load_evidence",
+        "validate_t5",
+        "validate_t4",
+        "validate_t6",
+        "validate_t7",
+        "validate_t2_t3",
+        "validate_cross_task_restrictions",
+        "build_task_matrix",
+        "build_t8_interface",
+        "build_controls",
+        "validate_controls",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "__future__",
+        "json",
+        "pathlib",
+        "typing"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "runtime",
+        "prediction",
+        "interface"
+      ],
+      "error": null
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/scripts/t9_mod037_op015_final_integrated_closure.py",
+      "exists": true,
+      "readable": true,
+      "syntax_valid": true,
+      "function_names": [
+        "load_json",
+        "require_pass",
+        "load_prior_evidence",
+        "validate_contract",
+        "validate_semantic_lock",
+        "validate_task_evidence",
+        "validate_op014",
+        "build_final_evidence_statement",
+        "build_final_controls",
+        "validate_final_controls",
+        "main"
+      ],
+      "class_names": [],
+      "imports": [
+        "__future__",
+        "json",
+        "pathlib",
+        "typing"
+      ],
+      "keyword_hits": [
+        "output",
+        "artifact",
+        "evidence",
+        "runtime",
+        "prediction",
+        "decision",
+        "policy",
+        "interface"
+      ],
+      "error": null
+    }
+  ],
+  "interfaces": {
+    "T1_to_T7": {
+      "producer_consumer_runtime": "NOT_ESTABLISHED_BY_THIS_AUDIT",
+      "reason": "T1-T7 contain frozen task artifacts, but this operation does not assume that sequential task predictions form a runtime execution chain."
+    },
+    "T7_to_T8": {
+      "producer_consumer_runtime": "INTERFACE_ARTIFACT_PRESENT",
+      "reason": "T8 validation artifact explicitly records evidence-engine inputs, native evidence semantics, and evidence-layer architecture."
+    },
+    "T8_to_T9": {
+      "producer_consumer_runtime": "INTEGRATION_ARTIFACT_PRESENT",
+      "reason": "T9 closure records integrated task evidence and semantic lock validation, but this audit does not execute T8 into T9."
+    },
+    "T9_to_T10": {
+      "producer_consumer_runtime": "POLICY_ARCHITECTURE_PRESENT",
+      "reason": "T10 project consolidation contains policy architecture and decision-support boundaries, but empirical policy execution is not performed here."
+    }
+  },
+  "e2e_runtime_execution": "NOT_ESTABLISHED_BY_THIS_OPERATION",
+  "safeguards": {
+    "models_loaded": false,
+    "predictions_generated": false,
+    "retraining_performed": false,
+    "calibration_fitted": false,
+    "threshold_selected": false,
+    "threshold_optimized": false,
+    "policy_modified": false,
+    "artifacts_modified": false
+  },
+  "status": "PASS"
+}

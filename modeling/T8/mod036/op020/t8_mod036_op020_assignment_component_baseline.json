@@ -1,0 +1,56 @@
+{
+  "operation": "MOD-036 OP-020",
+  "component": "assignment",
+  "status": "PASS",
+  "sources": {
+    "t4_train": "modeling/T4/derived/t4_train.csv",
+    "t4_eval": "modeling/T4/derived/t4_eval.csv",
+    "retrieval": "modeling/T4/results/mod011_checkpoints/t4_mod011_retrieval.npz"
+  },
+  "population": {
+    "train_rows": 142501,
+    "evaluation_rows": 35626,
+    "train_unique_ids": 142501,
+    "evaluation_unique_ids": 35626
+  },
+  "native_semantics": {
+    "task_type": "candidate_ranking",
+    "target": "target_assignee",
+    "recommendation_type": "ranked_assignment_candidates",
+    "neighbor_count": 20,
+    "retrieval_keys": [
+      "neighbor_indices",
+      "neighbor_scores"
+    ]
+  },
+  "alignment": {
+    "retrieval_rows": 35626,
+    "evaluation_rows": 35626,
+    "aligned": true,
+    "invalid_neighbor_indices": 0
+  },
+  "metrics": {
+    "top1_accuracy": 0.26626621007129625,
+    "top3_recall": 0.33489586257227866,
+    "top5_recall": 0.36493010722506036,
+    "top10_recall": 0.40607982933812387,
+    "top20_recall": 0.4354404086902824,
+    "target_present_rows": 15513,
+    "unseen_target_rows": 20113,
+    "unseen_target_rate": 0.5645595913097177,
+    "no_recommendation_rows": 0,
+    "no_recommendation_rate": 0.0
+  },
+  "outputs": {
+    "predictions": "modeling/T8/mod036/op020/t8_mod036_op020_assignment_predictions.csv"
+  },
+  "controls": {
+    "post_creation_information_used": false,
+    "locked_t4_evaluation_used": false,
+    "target_converted_to_negative": false,
+    "candidate_universe_expanded": false,
+    "probability_conversion_performed": false,
+    "blind_probability_averaging": false,
+    "arbitrary_cross_task_weighting": false
+  }
+}

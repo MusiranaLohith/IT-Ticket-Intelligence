@@ -1,0 +1,406 @@
+{
+  "operation": "F-OP-007",
+  "title": "OP-025 / OP-026 Contract Reconciliation",
+  "status": "PASS",
+  "read_only": true,
+  "models_executed": false,
+  "model_modified": false,
+  "retraining_performed": false,
+  "threshold_selection_performed": false,
+  "locked_test_reused_for_policy_selection": false,
+  "op025": {
+    "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/mod036/op025/t8_mod036_op025_decision_engine_predictions.csv",
+    "exists": true,
+    "readable": true,
+    "row_count": 119895,
+    "column_count": 19,
+    "columns": [
+      "id",
+      "available_components",
+      "evidence_count",
+      "overall_triage_state",
+      "priority_state",
+      "priority_recommendation",
+      "assignment_state",
+      "assignment_recommendation",
+      "assignment_status",
+      "assignment_target_present",
+      "duplicate_state",
+      "p_duplicate",
+      "resolution_state",
+      "predicted_median_survival_seconds",
+      "survival_probability_at_211583_seconds",
+      "survival_probability_at_1780179_seconds",
+      "survival_probability_at_14608619_seconds",
+      "resolution_context",
+      "cross_task_consistency"
+    ],
+    "ticket_id_column": "id",
+    "unique_ticket_ids": 119895
+  },
+  "op026": {
+    "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/mod036/op026/t8_mod036_op026_decision_engine_validation.json",
+    "exists": true,
+    "readable": true,
+    "top_level_type": "dict",
+    "top_level_keys": [
+      "operation",
+      "operation_name",
+      "status",
+      "closure_status",
+      "validated_operations",
+      "population",
+      "observed_overall_states",
+      "observed_consistency_states",
+      "evidence_count_distribution",
+      "closure_criteria",
+      "architecture",
+      "limitations",
+      "next_phase",
+      "artifacts"
+    ],
+    "relevant_evidence": [
+      {
+        "path": "root.population",
+        "key": "population",
+        "value": {
+          "decision_engine_union": 119895,
+          "all_four_intersection": 0,
+          "prediction_rows": 119895,
+          "unique_prediction_ids": 119895
+        },
+        "matched_keywords": [
+          "119895",
+          "prediction",
+          "population"
+        ]
+      },
+      {
+        "path": "root.population.decision_engine_union",
+        "key": "decision_engine_union",
+        "value": 119895,
+        "matched_keywords": [
+          "119895",
+          "population"
+        ]
+      },
+      {
+        "path": "root.population.all_four_intersection",
+        "key": "all_four_intersection",
+        "value": 0,
+        "matched_keywords": [
+          "population"
+        ]
+      },
+      {
+        "path": "root.population.prediction_rows",
+        "key": "prediction_rows",
+        "value": 119895,
+        "matched_keywords": [
+          "119895",
+          "prediction",
+          "population"
+        ]
+      },
+      {
+        "path": "root.population.unique_prediction_ids",
+        "key": "unique_prediction_ids",
+        "value": 119895,
+        "matched_keywords": [
+          "119895",
+          "prediction",
+          "population"
+        ]
+      },
+      {
+        "path": "root.observed_overall_states",
+        "key": "observed_overall_states",
+        "value": [
+          "INSUFFICIENT_EVIDENCE",
+          "SUPPORTED"
+        ],
+        "matched_keywords": [
+          "evidence",
+          "supported",
+          "insufficient"
+        ]
+      },
+      {
+        "path": "root.observed_overall_states[0]",
+        "key": "0",
+        "value": "INSUFFICIENT_EVIDENCE",
+        "matched_keywords": [
+          "evidence",
+          "insufficient"
+        ]
+      },
+      {
+        "path": "root.observed_overall_states[1]",
+        "key": "1",
+        "value": "SUPPORTED",
+        "matched_keywords": [
+          "supported"
+        ]
+      },
+      {
+        "path": "root.observed_consistency_states",
+        "key": "observed_consistency_states",
+        "value": [
+          "INSUFFICIENT_EVIDENCE",
+          "SUPPORTED"
+        ],
+        "matched_keywords": [
+          "evidence",
+          "supported",
+          "insufficient"
+        ]
+      },
+      {
+        "path": "root.observed_consistency_states[0]",
+        "key": "0",
+        "value": "INSUFFICIENT_EVIDENCE",
+        "matched_keywords": [
+          "evidence",
+          "insufficient"
+        ]
+      },
+      {
+        "path": "root.observed_consistency_states[1]",
+        "key": "1",
+        "value": "SUPPORTED",
+        "matched_keywords": [
+          "supported"
+        ]
+      },
+      {
+        "path": "root.evidence_count_distribution",
+        "key": "evidence_count_distribution",
+        "value": {
+          "2": 9727,
+          "1": 109649,
+          "3": 519
+        },
+        "matched_keywords": [
+          "evidence"
+        ]
+      },
+      {
+        "path": "root.evidence_count_distribution.2",
+        "key": "2",
+        "value": 9727,
+        "matched_keywords": [
+          "evidence"
+        ]
+      },
+      {
+        "path": "root.evidence_count_distribution.1",
+        "key": "1",
+        "value": 109649,
+        "matched_keywords": [
+          "evidence"
+        ]
+      },
+      {
+        "path": "root.evidence_count_distribution.3",
+        "key": "3",
+        "value": 519,
+        "matched_keywords": [
+          "evidence"
+        ]
+      },
+      {
+        "path": "root.closure_criteria",
+        "key": "closure_criteria",
+        "value": {
+          "component_baselines_established": true,
+          "input_population_resolved": true,
+          "decision_population_composed": true,
+          "prediction_artifact_valid": true,
+          "state_semantics_valid": true,
+          "native_task_semantics_preserved": true,
+          "arbitrary_probability_fusion_avoided": true,
+          "synthetic_universal_target_avoided": true,
+          "locked_test_not_used_for_selection": true
+        },
+        "matched_keywords": [
+          "prediction",
+          "population",
+          "component",
+          "native"
+        ]
+      },
+      {
+        "path": "root.closure_criteria.component_baselines_established",
+        "key": "component_baselines_established",
+        "value": true,
+        "matched_keywords": [
+          "component"
+        ]
+      },
+      {
+        "path": "root.closure_criteria.input_population_resolved",
+        "key": "input_population_resolved",
+        "value": true,
+        "matched_keywords": [
+          "population"
+        ]
+      },
+      {
+        "path": "root.closure_criteria.decision_population_composed",
+        "key": "decision_population_composed",
+        "value": true,
+        "matched_keywords": [
+          "population"
+        ]
+      },
+      {
+        "path": "root.closure_criteria.prediction_artifact_valid",
+        "key": "prediction_artifact_valid",
+        "value": true,
+        "matched_keywords": [
+          "prediction"
+        ]
+      },
+      {
+        "path": "root.closure_criteria.native_task_semantics_preserved",
+        "key": "native_task_semantics_preserved",
+        "value": true,
+        "matched_keywords": [
+          "native"
+        ]
+      },
+      {
+        "path": "root.architecture",
+        "key": "architecture",
+        "value": {
+          "variable_evidence": true,
+          "missing_evidence_is_unavailable": true,
+          "native_task_semantics_preserved": true,
+          "blind_probability_averaging": false,
+          "arbitrary_cross_task_weights": false,
+          "synthetic_universal_target": false,
+          "post_creation_features_added": false
+        },
+        "matched_keywords": [
+          "evidence",
+          "unavailable",
+          "native",
+          "missing"
+        ]
+      },
+      {
+        "path": "root.architecture.variable_evidence",
+        "key": "variable_evidence",
+        "value": true,
+        "matched_keywords": [
+          "evidence"
+        ]
+      },
+      {
+        "path": "root.architecture.missing_evidence_is_unavailable",
+        "key": "missing_evidence_is_unavailable",
+        "value": true,
+        "matched_keywords": [
+          "evidence",
+          "unavailable",
+          "missing"
+        ]
+      },
+      {
+        "path": "root.architecture.native_task_semantics_preserved",
+        "key": "native_task_semantics_preserved",
+        "value": true,
+        "matched_keywords": [
+          "native"
+        ]
+      },
+      {
+        "path": "root.limitations",
+        "key": "limitations",
+        "value": [
+          "No universal four-task population exists.",
+          "The decision engine is a variable-evidence composition layer rather than a single universally supervised predictor.",
+          "No empirical claim of cross-task predictive improvement is established by this closure.",
+          "T7 resolution evidence retains native survival-analysis semantics.",
+          "T5 duplicate probability is retained as calibrated evidence; no automation threshold is selected."
+        ],
+        "matched_keywords": [
+          "population",
+          "evidence",
+          "native"
+        ]
+      },
+      {
+        "path": "root.limitations[0]",
+        "key": "0",
+        "value": "No universal four-task population exists.",
+        "matched_keywords": [
+          "population"
+        ]
+      },
+      {
+        "path": "root.limitations[1]",
+        "key": "1",
+        "value": "The decision engine is a variable-evidence composition layer rather than a single universally supervised predictor.",
+        "matched_keywords": [
+          "evidence"
+        ]
+      },
+      {
+        "path": "root.limitations[3]",
+        "key": "3",
+        "value": "T7 resolution evidence retains native survival-analysis semantics.",
+        "matched_keywords": [
+          "evidence",
+          "native"
+        ]
+      },
+      {
+        "path": "root.limitations[4]",
+        "key": "4",
+        "value": "T5 duplicate probability is retained as calibrated evidence; no automation threshold is selected.",
+        "matched_keywords": [
+          "evidence"
+        ]
+      },
+      {
+        "path": "root.artifacts",
+        "key": "artifacts",
+        "value": {
+          "decision_predictions": "modeling/T8/mod036/op025/t8_mod036_op025_decision_engine_predictions.csv",
+          "closure_report": "modeling/T8/mod036/op026/t8_mod036_op026_decision_engine_validation.json"
+        },
+        "matched_keywords": [
+          "op025",
+          "prediction"
+        ]
+      },
+      {
+        "path": "root.artifacts.decision_predictions",
+        "key": "decision_predictions",
+        "value": "modeling/T8/mod036/op025/t8_mod036_op025_decision_engine_predictions.csv",
+        "matched_keywords": [
+          "op025",
+          "prediction"
+        ]
+      }
+    ]
+  },
+  "op026_population_references": [
+    "modeling/T8/mod036/op025/t8_mod036_op025_decision_engine_predictions.csv"
+  ],
+  "checks": {
+    "op025_population_identity": true,
+    "op026_validation_readable": true,
+    "op026_references_op025_population": true,
+    "population_vs_evidence_semantics": true
+  },
+  "semantic_interpretation": {
+    "op025_role": "ROW_LEVEL_TICKET_POPULATION",
+    "op026_role": "DOWNSTREAM_DECISION_ENGINE_VALIDATION",
+    "evidence_state_columns_required_in_op025": false,
+    "missing_evidence_not_negative": true,
+    "native_semantics_preserved": true
+  },
+  "contract_resolution": "OP025_POPULATION_TO_OP026_VALIDATION_CHAIN_CONFIRMED"
+}

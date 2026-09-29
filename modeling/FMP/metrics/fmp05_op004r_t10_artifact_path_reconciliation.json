@@ -1,0 +1,751 @@
+{
+  "operation": "FMP-05-OP-004R",
+  "operation_type": "READ_ONLY_T10_ARTIFACT_PATH_RECONCILIATION",
+  "status": "PASS",
+  "task_roots": {
+    "T4": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4",
+    "T5": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5",
+    "T7": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7",
+    "T9": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9"
+  },
+  "artifacts": {
+    "T4": {
+      "root_exists": true,
+      "candidate_count": 3,
+      "candidates": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/t4_mod010_comparison.json",
+          "relative_path": "modeling/T4/results/t4_mod010_comparison.json",
+          "readable": true,
+          "top_level_type": "dict",
+          "top_level_keys": [
+            "comparability",
+            "controls",
+            "deltas",
+            "experiment",
+            "experiments",
+            "future_features_used",
+            "interpretation",
+            "metrics",
+            "mod009_screening",
+            "population",
+            "purpose",
+            "ranking_metrics_mod007",
+            "raw_mozilla_accessed",
+            "split_changed",
+            "status",
+            "target_reconstructed",
+            "test_used"
+          ],
+          "status_values": [
+            {
+              "key": "status",
+              "value": "COMPLETE"
+            }
+          ],
+          "closure_values": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/t4_mod013_closure.json",
+          "relative_path": "modeling/T4/results/t4_mod013_closure.json",
+          "readable": true,
+          "top_level_type": "dict",
+          "top_level_keys": [
+            "artifact_type",
+            "bm25_ranking_metrics",
+            "bm25_vs_mod007",
+            "closure_status",
+            "controls",
+            "correction",
+            "experiment",
+            "experiment_summary",
+            "findings",
+            "long_tail",
+            "open_world",
+            "population",
+            "source_artifacts",
+            "status",
+            "system_role",
+            "true_assignee_retrieval_coverage",
+            "unsupported_claims"
+          ],
+          "status_values": [
+            {
+              "key": "status",
+              "value": "COMPLETE"
+            },
+            {
+              "key": "closure_status",
+              "value": "SUPPORTED_WITH_LIMITATIONS"
+            }
+          ],
+          "closure_values": [
+            {
+              "key": "closure_status",
+              "value": "SUPPORTED_WITH_LIMITATIONS"
+            }
+          ]
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/t4_r1_metrics.json",
+          "relative_path": "modeling/T4/results/t4_r1_metrics.json",
+          "readable": true,
+          "top_level_type": "dict",
+          "top_level_keys": [
+            "candidate_classes",
+            "covered_evaluation",
+            "description",
+            "evaluation_rows",
+            "experiment",
+            "metrics",
+            "model",
+            "open_world",
+            "runtime",
+            "status",
+            "tfidf",
+            "train_rows",
+            "unseen_target_behavior"
+          ],
+          "status_values": [
+            {
+              "key": "status",
+              "value": "COMPLETE"
+            }
+          ],
+          "closure_values": []
+        }
+      ]
+    },
+    "T5": {
+      "root_exists": true,
+      "candidate_count": 5,
+      "candidates": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod005_validation_metrics.json",
+          "relative_path": "modeling/T5/metrics/t5_mod005_validation_metrics.json",
+          "readable": true,
+          "top_level_type": "dict",
+          "top_level_keys": [
+            "confusion_matrix_at_0_5",
+            "evaluation_set_used",
+            "metrics",
+            "model",
+            "operation",
+            "operation_name",
+            "probability_output",
+            "status",
+            "task",
+            "threshold_optimization",
+            "training",
+            "validation"
+          ],
+          "status_values": [
+            {
+              "key": "status",
+              "value": "BASELINE_VALIDATION_COMPLETE"
+            }
+          ],
+          "closure_values": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod006_calibration_metrics.json",
+          "relative_path": "modeling/T5/metrics/t5_mod006_calibration_metrics.json",
+          "readable": true,
+          "top_level_type": "dict",
+          "top_level_keys": [
+            "brier_score",
+            "expected_calibration_error",
+            "n_calibration_bins",
+            "negative",
+            "official_evaluation_used",
+            "operation",
+            "operation_name",
+            "positive",
+            "probability_summary",
+            "rows",
+            "source",
+            "status",
+            "threshold_diagnostics",
+            "threshold_optimization"
+          ],
+          "status_values": [
+            {
+              "key": "status",
+              "value": "PASS"
+            }
+          ],
+          "closure_values": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod007_calibration_comparison.json",
+          "relative_path": "modeling/T5/metrics/t5_mod007_calibration_comparison.json",
+          "readable": true,
+          "top_level_type": "dict",
+          "top_level_keys": [
+            "base_model",
+            "calibration_fit_data",
+            "calibration_fraction",
+            "calibration_methods",
+            "calibration_partition",
+            "classifier_fit_partition",
+            "group_controls",
+            "isotonic_calibrated",
+            "model_selection",
+            "official_evaluation_used",
+            "operation",
+            "operation_name",
+            "random_seed",
+            "sigmoid_calibrated",
+            "status",
+            "threshold_optimization",
+            "validation_partition",
+            "validation_used_for_calibrator_fit"
+          ],
+          "status_values": [
+            {
+              "key": "status",
+              "value": "CALIBRATION_COMPARISON_COMPLETE"
+            }
+          ],
+          "closure_values": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod009_locked_evaluation_metrics.json",
+          "relative_path": "modeling/T5/metrics/t5_mod009_locked_evaluation_metrics.json",
+          "readable": true,
+          "top_level_type": "dict",
+          "top_level_keys": [
+            "controls",
+            "evaluation_artifact",
+            "evaluation_population",
+            "locked_pipeline",
+            "metrics",
+            "operation",
+            "operation_name",
+            "status"
+          ],
+          "status_values": [
+            {
+              "key": "status",
+              "value": "LOCKED_EVALUATION_COMPLETE"
+            }
+          ],
+          "closure_values": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod011_final_closure.json",
+          "relative_path": "modeling/T5/metrics/t5_mod011_final_closure.json",
+          "readable": true,
+          "top_level_type": "dict",
+          "top_level_keys": [
+            "closure_statement",
+            "controls",
+            "final_role",
+            "final_status",
+            "generalization_evidence",
+            "limitations",
+            "locked_evaluation_evidence",
+            "operation",
+            "operation_name",
+            "selected_pipeline",
+            "split_definition",
+            "status",
+            "task",
+            "task_definition",
+            "timestamp_utc",
+            "validation_evidence"
+          ],
+          "status_values": [
+            {
+              "key": "final_status",
+              "value": "SUPPORTED_WITH_LIMITATIONS"
+            },
+            {
+              "key": "closure_statement",
+              "value": "T5 Binary Duplicate Detection is closed for the current controlled modeling cycle. The frozen pipeline is retained as a secondary decision-support signal with limitations. The official evaluation was used only for locked final assessment and not for model selection, calibration, threshold optimization, or refitting."
+            },
+            {
+              "key": "status",
+              "value": "CLOSED"
+            }
+          ],
+          "closure_values": [
+            {
+              "key": "closure_statement",
+              "value": "T5 Binary Duplicate Detection is closed for the current controlled modeling cycle. The frozen pipeline is retained as a secondary decision-support signal with limitations. The official evaluation was used only for locked final assessment and not for model selection, calibration, threshold optimization, or refitting."
+            }
+          ]
+        }
+      ]
+    },
+    "T7": {
+      "root_exists": true,
+      "candidate_count": 2,
+      "candidates": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod011_final_model_comparison_audit.json",
+          "relative_path": "modeling/T7/metrics/t7_mod011_final_model_comparison_audit.json",
+          "readable": true,
+          "top_level_type": "dict",
+          "top_level_keys": [
+            "artifacts",
+            "comparison",
+            "evaluation_population",
+            "evidence_statement",
+            "interpretation_boundary",
+            "kaplan_meier_reference",
+            "lognormal_aft",
+            "model_refitting",
+            "models_compared",
+            "new_feature_engineering",
+            "operation",
+            "operation_purpose",
+            "raw_archive_access",
+            "source_schema",
+            "status",
+            "task",
+            "weibull_aft"
+          ],
+          "status_values": [
+            {
+              "key": "status",
+              "value": "COMPLETE"
+            },
+            {
+              "key": "evidence_statement",
+              "value": "The evaluated predictive survival models do not show uniform improvement across the reported metrics and horizons. The evidence should therefore be carried forward as model-performance limitations."
+            }
+          ],
+          "closure_values": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod012_final_closure.json",
+          "relative_path": "modeling/T7/metrics/t7_mod012_final_closure.json",
+          "readable": true,
+          "top_level_type": "dict",
+          "top_level_keys": [
+            "calibration",
+            "chronological_split",
+            "closure_type",
+            "data_boundary",
+            "evidence_chain",
+            "final_comparison",
+            "final_project_status",
+            "limitations",
+            "operation",
+            "population",
+            "predictive_models",
+            "source_evidence",
+            "status",
+            "supported_role",
+            "survival_baselines",
+            "task",
+            "task_definition"
+          ],
+          "status_values": [
+            {
+              "key": "status",
+              "value": "COMPLETE"
+            },
+            {
+              "key": "final_project_status",
+              "value": {
+                "T7_modeling": "COMPLETE",
+                "T7_closure": "CLOSED",
+                "supported_as": "SECONDARY_DECISION_SUPPORT_SIGNAL",
+                "not_supported_as": [
+                  "Autonomous resolution-time decision",
+                  "Autonomous workflow automation",
+                  "Validated human-review threshold",
+                  "Production-grade calibrated survival service"
+                ]
+              }
+            }
+          ],
+          "closure_values": [
+            {
+              "key": "closure_type",
+              "value": "FINAL_T7_CLOSURE"
+            }
+          ]
+        }
+      ]
+    },
+    "T9": {
+      "root_exists": true,
+      "candidate_count": 4,
+      "candidates": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/plots/t9_mod037_final_visualization_manifest.json",
+          "relative_path": "modeling/T9/mod037/plots/t9_mod037_final_visualization_manifest.json",
+          "readable": true,
+          "top_level_type": "dict",
+          "top_level_keys": [
+            "cross_task_probability_aggregation",
+            "interpretation",
+            "model_selection",
+            "new_calibration_fitting",
+            "new_model_fitting",
+            "new_prediction_generation",
+            "new_probability_generation",
+            "plots",
+            "purpose",
+            "semantic_boundary_changed",
+            "status",
+            "target_modification",
+            "threshold_selection",
+            "universal_confidence_score_created",
+            "universal_risk_score_created"
+          ],
+          "status_values": [
+            {
+              "key": "status",
+              "value": "PASS"
+            }
+          ],
+          "closure_values": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op011_t4_ranking_evaluation.json",
+          "relative_path": "modeling/T9/mod037/t9_mod037_op011_t4_ranking_evaluation.json",
+          "readable": true,
+          "top_level_type": "dict",
+          "top_level_keys": [
+            "OP-011A_validation",
+            "artifacts_used",
+            "calibration_readiness",
+            "candidate_space_audit",
+            "control_validation",
+            "controls",
+            "decision",
+            "interpretation_boundary",
+            "native_output_semantics",
+            "native_source_population",
+            "native_top1_evaluation",
+            "operation",
+            "operation_type",
+            "population_identity_audit",
+            "previous_operation_validation",
+            "source_schema",
+            "status",
+            "target_availability",
+            "title"
+          ],
+          "status_values": [
+            {
+              "key": "status",
+              "value": "PASS"
+            }
+          ],
+          "closure_values": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op012c_t6_native_ranking_evaluation.json",
+          "relative_path": "modeling/T9/mod037/t9_mod037_op012c_t6_native_ranking_evaluation.json",
+          "readable": true,
+          "top_level_type": "dict",
+          "top_level_keys": [
+            "artifacts_used",
+            "calibration_boundary",
+            "control_validation",
+            "controls",
+            "decision",
+            "evaluation_population",
+            "evaluation_query_results_artifact",
+            "input_validation",
+            "interpretation",
+            "methodological_restrictions",
+            "operation",
+            "previous_operation_validation",
+            "purpose",
+            "ranking_construction",
+            "source",
+            "split_results",
+            "status",
+            "title"
+          ],
+          "status_values": [
+            {
+              "key": "status",
+              "value": "PASS"
+            }
+          ],
+          "closure_values": []
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op015_final_integrated_closure.json",
+          "relative_path": "modeling/T9/mod037/t9_mod037_op015_final_integrated_closure.json",
+          "readable": true,
+          "top_level_type": "dict",
+          "top_level_keys": [
+            "OP014_boundary",
+            "closure",
+            "contract_validation",
+            "control_validation",
+            "controls",
+            "final_evidence_statement",
+            "methodological_restrictions",
+            "operation",
+            "prior_operations",
+            "purpose",
+            "semantic_lock_validation",
+            "status",
+            "task_evidence",
+            "title"
+          ],
+          "status_values": [
+            {
+              "key": "status",
+              "value": "PASS"
+            },
+            {
+              "key": "final_evidence_statement",
+              "value": {
+                "T2": "No accepted native probability artifact for probability calibration.",
+                "T3": "No accepted native probability artifact for probability calibration.",
+                "T4": "Native candidate-space ranking evaluation is established. Universal probability calibration is not established.",
+                "T5": "Empirical calibration improvement evidence is established. No formal calibration method winner was selected.",
+                "T6": "Native query-level retrieval/ranking evaluation and reliability evidence are established. Ordinary binary probability calibration is not established.",
+                "T7": "Native survival evaluation, uncertainty, and descriptive reliability are established. Formal survival calibration and formal calibration uncertainty are not established.",
+                "cross_task": "Task-specific quantities cannot be treated as numerically comparable probabilities. No universal confidence/risk construct is empirically established or created."
+              }
+            }
+          ],
+          "closure_values": [
+            {
+              "key": "closure",
+              "value": {
+                "status": "T9_MOD-037_CLOSED",
+                "scope": "T9 confidence, calibration, native evaluation, uncertainty, reliability, and cross-task evidence boundary.",
+                "empirical_boundary": "T9 establishes task-specific empirical evidence only. Heterogeneous task outputs remain tied to their native predictive quantities and observation structures.",
+                "calibration_boundary": "T5 has empirical calibration improvement evidence without formal method selection. T2 and T3 lack accepted native probability artifacts. T4 and T6 remain native ranking/retrieval quantities. T7 remains a survival quantity with censoring-aware uncertainty.",
+                "cross_task_boundary": "Cross-task numerical probability comparability is not established and is prohibited by the frozen methodology.",
+                "universal_confidence": "NOT_ESTABLISHED_AND_NOT_CREATED",
+                "universal_risk": "NOT_ESTABLISHED_AND_NOT_CREATED",
+                "synthetic_fusion_target": "NOT_CREATED",
+                "automatic_action_policy": "NOT_ESTABLISHED",
+                "human_review_boundary": "NOT_ESTABLISHED_BY_T9",
+                "locked_test": "NOT_USED_FOR_CALIBRATION_SELECTION",
+                "final_interpretation": "T9 is closed as an evidence and calibration boundary. It does not create a universal confidence/risk score or an autonomous decision policy. The resulting T8 interface remains task-specific, provenance-preserving, and uncertainty-aware."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "closure_candidates": {
+    "T4": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/t4_mod013_closure.json",
+        "relative_path": "modeling/T4/results/t4_mod013_closure.json",
+        "readable": true,
+        "top_level_type": "dict",
+        "top_level_keys": [
+          "artifact_type",
+          "bm25_ranking_metrics",
+          "bm25_vs_mod007",
+          "closure_status",
+          "controls",
+          "correction",
+          "experiment",
+          "experiment_summary",
+          "findings",
+          "long_tail",
+          "open_world",
+          "population",
+          "source_artifacts",
+          "status",
+          "system_role",
+          "true_assignee_retrieval_coverage",
+          "unsupported_claims"
+        ],
+        "status_values": [
+          {
+            "key": "status",
+            "value": "COMPLETE"
+          },
+          {
+            "key": "closure_status",
+            "value": "SUPPORTED_WITH_LIMITATIONS"
+          }
+        ],
+        "closure_values": [
+          {
+            "key": "closure_status",
+            "value": "SUPPORTED_WITH_LIMITATIONS"
+          }
+        ]
+      }
+    ],
+    "T5": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod011_final_closure.json",
+        "relative_path": "modeling/T5/metrics/t5_mod011_final_closure.json",
+        "readable": true,
+        "top_level_type": "dict",
+        "top_level_keys": [
+          "closure_statement",
+          "controls",
+          "final_role",
+          "final_status",
+          "generalization_evidence",
+          "limitations",
+          "locked_evaluation_evidence",
+          "operation",
+          "operation_name",
+          "selected_pipeline",
+          "split_definition",
+          "status",
+          "task",
+          "task_definition",
+          "timestamp_utc",
+          "validation_evidence"
+        ],
+        "status_values": [
+          {
+            "key": "final_status",
+            "value": "SUPPORTED_WITH_LIMITATIONS"
+          },
+          {
+            "key": "closure_statement",
+            "value": "T5 Binary Duplicate Detection is closed for the current controlled modeling cycle. The frozen pipeline is retained as a secondary decision-support signal with limitations. The official evaluation was used only for locked final assessment and not for model selection, calibration, threshold optimization, or refitting."
+          },
+          {
+            "key": "status",
+            "value": "CLOSED"
+          }
+        ],
+        "closure_values": [
+          {
+            "key": "closure_statement",
+            "value": "T5 Binary Duplicate Detection is closed for the current controlled modeling cycle. The frozen pipeline is retained as a secondary decision-support signal with limitations. The official evaluation was used only for locked final assessment and not for model selection, calibration, threshold optimization, or refitting."
+          }
+        ]
+      }
+    ],
+    "T7": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod012_final_closure.json",
+        "relative_path": "modeling/T7/metrics/t7_mod012_final_closure.json",
+        "readable": true,
+        "top_level_type": "dict",
+        "top_level_keys": [
+          "calibration",
+          "chronological_split",
+          "closure_type",
+          "data_boundary",
+          "evidence_chain",
+          "final_comparison",
+          "final_project_status",
+          "limitations",
+          "operation",
+          "population",
+          "predictive_models",
+          "source_evidence",
+          "status",
+          "supported_role",
+          "survival_baselines",
+          "task",
+          "task_definition"
+        ],
+        "status_values": [
+          {
+            "key": "status",
+            "value": "COMPLETE"
+          },
+          {
+            "key": "final_project_status",
+            "value": {
+              "T7_modeling": "COMPLETE",
+              "T7_closure": "CLOSED",
+              "supported_as": "SECONDARY_DECISION_SUPPORT_SIGNAL",
+              "not_supported_as": [
+                "Autonomous resolution-time decision",
+                "Autonomous workflow automation",
+                "Validated human-review threshold",
+                "Production-grade calibrated survival service"
+              ]
+            }
+          }
+        ],
+        "closure_values": [
+          {
+            "key": "closure_type",
+            "value": "FINAL_T7_CLOSURE"
+          }
+        ]
+      }
+    ],
+    "T9": [
+      {
+        "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op015_final_integrated_closure.json",
+        "relative_path": "modeling/T9/mod037/t9_mod037_op015_final_integrated_closure.json",
+        "readable": true,
+        "top_level_type": "dict",
+        "top_level_keys": [
+          "OP014_boundary",
+          "closure",
+          "contract_validation",
+          "control_validation",
+          "controls",
+          "final_evidence_statement",
+          "methodological_restrictions",
+          "operation",
+          "prior_operations",
+          "purpose",
+          "semantic_lock_validation",
+          "status",
+          "task_evidence",
+          "title"
+        ],
+        "status_values": [
+          {
+            "key": "status",
+            "value": "PASS"
+          },
+          {
+            "key": "final_evidence_statement",
+            "value": {
+              "T2": "No accepted native probability artifact for probability calibration.",
+              "T3": "No accepted native probability artifact for probability calibration.",
+              "T4": "Native candidate-space ranking evaluation is established. Universal probability calibration is not established.",
+              "T5": "Empirical calibration improvement evidence is established. No formal calibration method winner was selected.",
+              "T6": "Native query-level retrieval/ranking evaluation and reliability evidence are established. Ordinary binary probability calibration is not established.",
+              "T7": "Native survival evaluation, uncertainty, and descriptive reliability are established. Formal survival calibration and formal calibration uncertainty are not established.",
+              "cross_task": "Task-specific quantities cannot be treated as numerically comparable probabilities. No universal confidence/risk construct is empirically established or created."
+            }
+          }
+        ],
+        "closure_values": [
+          {
+            "key": "closure",
+            "value": {
+              "status": "T9_MOD-037_CLOSED",
+              "scope": "T9 confidence, calibration, native evaluation, uncertainty, reliability, and cross-task evidence boundary.",
+              "empirical_boundary": "T9 establishes task-specific empirical evidence only. Heterogeneous task outputs remain tied to their native predictive quantities and observation structures.",
+              "calibration_boundary": "T5 has empirical calibration improvement evidence without formal method selection. T2 and T3 lack accepted native probability artifacts. T4 and T6 remain native ranking/retrieval quantities. T7 remains a survival quantity with censoring-aware uncertainty.",
+              "cross_task_boundary": "Cross-task numerical probability comparability is not established and is prohibited by the frozen methodology.",
+              "universal_confidence": "NOT_ESTABLISHED_AND_NOT_CREATED",
+              "universal_risk": "NOT_ESTABLISHED_AND_NOT_CREATED",
+              "synthetic_fusion_target": "NOT_CREATED",
+              "automatic_action_policy": "NOT_ESTABLISHED",
+              "human_review_boundary": "NOT_ESTABLISHED_BY_T9",
+              "locked_test": "NOT_USED_FOR_CALIBRATION_SELECTION",
+              "final_interpretation": "T9 is closed as an evidence and calibration boundary. It does not create a universal confidence/risk score or an autonomous decision policy. The resulting T8 interface remains task-specific, provenance-preserving, and uncertainty-aware."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "read_only_safeguards": {
+    "models_loaded": false,
+    "predictions_generated": false,
+    "retraining_performed": false,
+    "calibration_fitted": false,
+    "threshold_selected": false,
+    "policy_modified": false,
+    "artifacts_modified": false
+  }
+}

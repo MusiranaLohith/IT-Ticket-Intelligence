@@ -1,0 +1,29 @@
+{
+  "operation": "T2-VIZ-001",
+  "task": "T2 \u2014 Priority Prediction",
+  "dataset": "Mozilla CORE",
+  "visualizations": [
+    {
+      "name": "Validation vs Locked Test",
+      "file": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/plots/t2_validation_vs_test.png",
+      "purpose": "Show final-model generalization change"
+    },
+    {
+      "name": "Per-Class F1",
+      "file": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/plots/t2_test_per_class_f1.png",
+      "purpose": "Show class-dependent predictive performance"
+    },
+    {
+      "name": "Locked-Test Confusion Matrix",
+      "file": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/plots/t2_test_confusion_matrix.png",
+      "purpose": "Show dominant misclassification patterns"
+    }
+  ],
+  "integrity": {
+    "training": false,
+    "refitting": false,
+    "test_tuning": false,
+    "dataset_modified": false
+  },
+  "status": "COMPLETE"
+}

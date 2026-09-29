@@ -1,0 +1,16 @@
+{
+  "operation": "T3-MOD-025",
+  "status": "FEASIBILITY_COMPLETE",
+  "model": "distilbert-base-uncased",
+  "training_seconds": 10036.816281080246,
+  "validation_seconds": 228.445725440979,
+  "total_seconds": 10268.100615262985,
+  "validation_macro_f1": 0.29663315276577507,
+  "validation_accuracy": 0.7220060527453523,
+  "validation_weighted_f1": 0.6689419070240422,
+  "classical_reference_macro_f1": 0.348017,
+  "classical_reference_model": "T3-MOD-008",
+  "test_used": false,
+  "raw_mozilla_accessed": false,
+  "dataset_modified": false
+}

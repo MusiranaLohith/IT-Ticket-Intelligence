@@ -1,0 +1,68 @@
+{
+  "operation": "T5-MOD-007",
+  "operation_name": "Calibration Comparison",
+  "calibration_fraction": 0.2,
+  "random_seed": 42,
+  "classifier_fit_partition": {
+    "rows": 394483,
+    "positive": 2722,
+    "negative": 391761
+  },
+  "calibration_partition": {
+    "rows": 24415,
+    "positive": 171,
+    "negative": 24244
+  },
+  "validation_partition": {
+    "rows": 74091,
+    "positive": 480,
+    "negative": 73611
+  },
+  "group_controls": {
+    "group_definition": "normalized Summary + normalized Description",
+    "total_groups": 417819,
+    "classifier_fit_groups": 393467,
+    "calibration_groups": 24352,
+    "crossing_groups": 0
+  },
+  "calibration_methods": [
+    "sigmoid",
+    "isotonic"
+  ],
+  "base_model": {
+    "average_precision": 0.16377630768463408,
+    "pr_auc": 0.16377630768463408,
+    "roc_auc": 0.8969287312131792,
+    "log_loss": 0.11953384007668892,
+    "brier_score": 0.031018998152599814,
+    "threshold_0_5_precision": 0.0942936673625609,
+    "threshold_0_5_recall": 0.5645833333333333,
+    "threshold_0_5_positive_predictions": 2874
+  },
+  "sigmoid_calibrated": {
+    "average_precision": 0.16377630768463408,
+    "pr_auc": 0.16377630768463408,
+    "roc_auc": 0.8969287312131792,
+    "log_loss": 0.028358865729015772,
+    "brier_score": 0.005860260617751882,
+    "threshold_0_5_precision": 0.46808510638297873,
+    "threshold_0_5_recall": 0.04583333333333333,
+    "threshold_0_5_positive_predictions": 47
+  },
+  "isotonic_calibrated": {
+    "average_precision": 0.14869819508663887,
+    "pr_auc": 0.14869819508663887,
+    "roc_auc": 0.8948104732988276,
+    "log_loss": 0.029845500624698273,
+    "brier_score": 0.005843631923421229,
+    "threshold_0_5_precision": 0.4634146341463415,
+    "threshold_0_5_recall": 0.03958333333333333,
+    "threshold_0_5_positive_predictions": 41
+  },
+  "calibration_fit_data": "separate group-aware calibration partition",
+  "validation_used_for_calibrator_fit": false,
+  "official_evaluation_used": false,
+  "threshold_optimization": false,
+  "model_selection": false,
+  "status": "CALIBRATION_COMPARISON_COMPLETE"
+}

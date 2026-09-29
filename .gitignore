@@ -1,0 +1,89 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# IDE
+.idea/
+.vscode/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Logs / temporary files
+*.log
+*.tmp
+*.temp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Deployment backups
+deployment/**/app.py.*backup*
+deployment/**/app.py.before-*
+deployment/**/app.js.before-*
+deployment/**/index.html.before-*
+deployment/**/style.css.before-*
+deployment/**/style.css.before-*
+deployment/**/__pycache__/
+deployment/scripts/__pycache__/
+deployment/tests/__pycache__/
+
+# Large modelling datasets / generated data
+modeling/**/derived/
+modeling/**/splits/
+
+# Large model checkpoints / temporary training outputs
+modeling/**/results/*/checkpoints/
+modeling/**/models/*feasibility*/
+
+# Python-generated caches
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Local databases / runtime state
+*.db
+*.sqlite
+*.sqlite3
+
+# Accidental ImageMagick/PostScript artefacts at repository root
+hashlib
+json
+
+# Large research-only modelling outputs
+modeling/T3/models/t3_word_char_tfidf_logreg.joblib
+modeling/T3/models/t3_baseline_tfidf_logreg.joblib
+modeling/T3/models/t3_svm_class_weighted.joblib
+modeling/T3/models/t3_linear_svm.joblib
+
+modeling/T4/results/r1_checkpoints/
+
+modeling/T6/metrics/*.csv
+modeling/T7/baselines/*.csv
+modeling/T8/mod036/*.csv
+modeling/T8/mod036/op025/*.csv
+modeling/T8/mod036/op020/*.csv
+
+# Large runtime training datasets required by the local deployment
+# These remain local because they exceed GitHub's normal 100 MiB file limit.
+modeling/T4/derived/t4_train.csv
+modeling/T7/splits/t7_train.csv
+
+# T4 checkpoint directory contains one large runtime model plus
+# other research checkpoints. Ignore the directory, then explicitly
+# allow the two frozen runtime artefacts.
+modeling/T4/results/mod007_checkpoints/*
+!modeling/T4/results/mod007_checkpoints/t4_mod007_tfidf.joblib
+!modeling/T4/results/mod007_checkpoints/t4_mod007_neighbors.joblib
+
+# Deployment backup snapshots
+deployment/frontend/*-backup
+deployment/frontend/*.before-deploy*
+deployment/backend/*-backup
+deployment/backend/*.before-deploy*

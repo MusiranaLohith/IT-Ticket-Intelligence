@@ -1,0 +1,57 @@
+{
+  "task": "T7 Resolution-Time Estimation",
+  "operation": "MOD-010",
+  "status": "COMPLETE",
+  "purpose": "Controlled alternative survival distribution to assess whether Weibull model-form assumptions explain the observed predictive limitations.",
+  "model": {
+    "family": "LogNormal_AFT",
+    "training_rows": 411052,
+    "evaluation_rows": 102764,
+    "feature_count": 21,
+    "sigma": 16.259349942778254
+  },
+  "feature_boundary": {
+    "creation_only": true,
+    "post_creation_history_used": false,
+    "current_status_used": false,
+    "current_resolution_used": false,
+    "evaluation_fitting": false,
+    "raw_archive_access": false
+  },
+  "optimization": {
+    "success": true,
+    "iterations": 80,
+    "objective": 6940446.696608409
+  },
+  "evaluation_metrics": {
+    "harrell_concordance_index": 0.5568745548761679,
+    "comparable_pairs": 4940830150,
+    "ipcw_brier": [
+      {
+        "horizon_seconds": 211583.0,
+        "mean_predicted_survival": 0.24813129813665083,
+        "ipcw_brier_score": 0.4739882052966035
+      },
+      {
+        "horizon_seconds": 1780179.0,
+        "mean_predicted_survival": 0.20863975505011756,
+        "ipcw_brier_score": 0.3709262798833482
+      },
+      {
+        "horizon_seconds": 14608619.0,
+        "mean_predicted_survival": 0.17350985237459227,
+        "ipcw_brier_score": 0.20190683817023508
+      }
+    ]
+  },
+  "horizons_seconds": [
+    211583.0,
+    1780179.0,
+    14608619.0
+  ],
+  "artifacts": {
+    "model": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod010_log_normal_aft_model.json",
+    "predictions": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/derived/t7_mod010_evaluation_predictions.csv",
+    "audit": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod010_log_normal_aft_audit.json"
+  }
+}

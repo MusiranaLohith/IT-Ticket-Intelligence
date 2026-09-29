@@ -1,0 +1,54 @@
+{
+  "task_id": "T6",
+  "operation_id": "MOD-010",
+  "operation_name": "TF-IDF Reproducibility / Integrity Check",
+  "status": "COMPLETED",
+  "population": {
+    "mod004_rows": 2722,
+    "mod009_rows": 274922,
+    "mod004_queries": 2722,
+    "mod009_queries": 2722,
+    "queries_only_mod004": 0,
+    "queries_only_mod009": 0
+  },
+  "ranking_identity": {
+    "positive_candidate_mismatches": 0,
+    "positive_rank_mismatches": 348,
+    "top_candidate_mismatches": 60,
+    "top_role_mismatches": 22,
+    "queries_with_ranking_identity_change": 364
+  },
+  "score_difference": {
+    "mean_absolute_top_score_difference": 0.003584087071532682,
+    "median_absolute_top_score_difference": 0.0020853007255235423,
+    "max_absolute_top_score_difference": 0.10488208871140525,
+    "mean_absolute_positive_score_difference": 0.003235187514190238,
+    "median_absolute_positive_score_difference": 0.0018790793593467005,
+    "max_absolute_positive_score_difference": 0.10488208871140525,
+    "queries_with_score_difference": 2722
+  },
+  "rank_difference": {
+    "mean_absolute_rank_difference": 0.3038207200587803,
+    "max_absolute_rank_difference": 25
+  },
+  "top20_failure_sets": {
+    "mod004": 173,
+    "mod009_reconstructed": 183,
+    "common": 170,
+    "mod004_only": 3,
+    "mod009_only": 13
+  },
+  "controls": {
+    "raw_dataset_read": false,
+    "model_training": false,
+    "semantic_model_loading": false,
+    "target_modification": false,
+    "candidate_pool_modification": false,
+    "calibration": false,
+    "threshold_optimization": false
+  },
+  "artifacts": {
+    "report": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod010_tfidf_reproducibility_report.json",
+    "mismatches": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod010_tfidf_query_mismatches.csv"
+  }
+}

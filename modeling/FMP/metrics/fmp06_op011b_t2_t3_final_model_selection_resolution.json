@@ -1,0 +1,2106 @@
+{
+  "operation": "FMP-06 OP-011B",
+  "operation_title": "T2/T3 Final Model Selection Resolution",
+  "status": "PARTIAL",
+  "purpose": "Resolve authoritative frozen model artifacts from T2/T3 final closure records.",
+  "inference_performed": false,
+  "retraining_performed": false,
+  "artifacts_modified": false,
+  "tasks": {
+    "T2": {
+      "task": "T2",
+      "closure_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/analysis/t2_final_closure.json",
+      "closure_exists": true,
+      "closure_readable": true,
+      "closure_summary": {
+        "closure_status": "CLOSED",
+        "final_model": {
+          "operation": "T2-MOD-007",
+          "name": "TF-IDF + Class-Weighted Logistic Regression",
+          "selection_basis": "validation macro-F1 with minority-class performance considered",
+          "final_model_selected": true
+        }
+      },
+      "reference_fields": [
+        {
+          "json_path": "final_model",
+          "key": "final_model",
+          "value": {
+            "operation": "T2-MOD-007",
+            "name": "TF-IDF + Class-Weighted Logistic Regression",
+            "selection_basis": "validation macro-F1 with minority-class performance considered",
+            "final_model_selected": true
+          }
+        }
+      ],
+      "resolved_artifact_references": [],
+      "joblib_files": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/models/t2_baseline_tfidf_logreg.joblib",
+          "relative_path": "modeling/T2/models/t2_baseline_tfidf_logreg.joblib",
+          "size_bytes": 14317721
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/models/t2_class_weighted_tfidf_logreg.joblib",
+          "relative_path": "modeling/T2/models/t2_class_weighted_tfidf_logreg.joblib",
+          "size_bytes": 14317753
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/models/t2_tfidf_linear_svm.joblib",
+          "relative_path": "modeling/T2/models/t2_tfidf_linear_svm.joblib",
+          "size_bytes": 14317605
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/models/t2_weighted_tfidf_linear_svm.joblib",
+          "relative_path": "modeling/T2/models/t2_weighted_tfidf_linear_svm.joblib",
+          "size_bytes": 14317266
+        }
+      ],
+      "source_candidates": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/scripts/t2_baseline.py",
+          "relative_path": "modeling/T2/scripts/t2_baseline.py",
+          "syntax_valid": true,
+          "functions": [
+            "build_text",
+            "fail",
+            "main"
+          ],
+          "reference_hits": [
+            {
+              "line": 5,
+              "patterns": [
+                "joblib"
+              ],
+              "text": "import joblib"
+            },
+            {
+              "line": 36,
+              "patterns": [
+                "joblib"
+              ],
+              "text": "MODEL_FILE = MODEL_ROOT / \"t2_baseline_tfidf_logreg.joblib\""
+            },
+            {
+              "line": 265,
+              "patterns": [
+                "predict("
+              ],
+              "text": "y_pred = model.predict("
+            },
+            {
+              "line": 271,
+              "patterns": [
+                "predict_proba"
+              ],
+              "text": "y_proba = model.predict_proba("
+            },
+            {
+              "line": 371,
+              "patterns": [
+                "joblib"
+              ],
+              "text": "joblib.dump("
+            }
+          ],
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/scripts/t2_baseline_comparison.py",
+          "relative_path": "modeling/T2/scripts/t2_baseline_comparison.py",
+          "syntax_valid": true,
+          "functions": [
+            "fail",
+            "get_evaluation_block",
+            "load_json",
+            "main"
+          ],
+          "reference_hits": [
+            {
+              "line": 103,
+              "patterns": [
+                "load("
+              ],
+              "text": "return json.load(f)"
+            }
+          ],
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/scripts/t2_class_weighted.py",
+          "relative_path": "modeling/T2/scripts/t2_class_weighted.py",
+          "syntax_valid": true,
+          "functions": [
+            "build_text",
+            "fail",
+            "main"
+          ],
+          "reference_hits": [
+            {
+              "line": 5,
+              "patterns": [
+                "joblib"
+              ],
+              "text": "import joblib"
+            },
+            {
+              "line": 36,
+              "patterns": [
+                "joblib",
+                "t2_class_weighted_tfidf_logreg"
+              ],
+              "text": "MODEL_FILE = MODEL_ROOT / \"t2_class_weighted_tfidf_logreg.joblib\""
+            },
+            {
+              "line": 244,
+              "patterns": [
+                "predict("
+              ],
+              "text": "y_pred = model.predict("
+            },
+            {
+              "line": 248,
+              "patterns": [
+                "predict_proba"
+              ],
+              "text": "y_proba = model.predict_proba("
+            },
+            {
+              "line": 353,
+              "patterns": [
+                "joblib"
+              ],
+              "text": "joblib.dump("
+            }
+          ],
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/scripts/t2_error_analysis.py",
+          "relative_path": "modeling/T2/scripts/t2_error_analysis.py",
+          "syntax_valid": true,
+          "functions": [
+            "build_text",
+            "distribution",
+            "fail",
+            "main"
+          ],
+          "reference_hits": [
+            {
+              "line": 5,
+              "patterns": [
+                "joblib"
+              ],
+              "text": "import joblib"
+            },
+            {
+              "line": 30,
+              "patterns": [
+                "joblib"
+              ],
+              "text": "/ \"t2_baseline_tfidf_logreg.joblib\""
+            },
+            {
+              "line": 192,
+              "patterns": [
+                "joblib",
+                "load("
+              ],
+              "text": "artifact = joblib.load("
+            },
+            {
+              "line": 226,
+              "patterns": [
+                "predict("
+              ],
+              "text": "y_pred = model.predict("
+            }
+          ],
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/scripts/t2_final_closure.py",
+          "relative_path": "modeling/T2/scripts/t2_final_closure.py",
+          "syntax_valid": true,
+          "functions": [
+            "load_json",
+            "main"
+          ],
+          "reference_hits": [
+            {
+              "line": 66,
+              "patterns": [
+                "load("
+              ],
+              "text": "return json.load(f)"
+            }
+          ],
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/scripts/t2_final_generalization_analysis.py",
+          "relative_path": "modeling/T2/scripts/t2_final_generalization_analysis.py",
+          "syntax_valid": true,
+          "functions": [
+            "build_confusion_counts",
+            "build_distributions",
+            "class_error_summary",
+            "load_json",
+            "load_predictions",
+            "main",
+            "top_errors"
+          ],
+          "reference_hits": [
+            {
+              "line": 58,
+              "patterns": [
+                "load("
+              ],
+              "text": "return json.load(f)"
+            }
+          ],
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/scripts/t2_final_test_evaluation.py",
+          "relative_path": "modeling/T2/scripts/t2_final_test_evaluation.py",
+          "syntax_valid": true,
+          "functions": [
+            "load_test_data",
+            "main",
+            "predict_with_artifact"
+          ],
+          "reference_hits": [
+            {
+              "line": 4,
+              "patterns": [
+                "joblib"
+              ],
+              "text": "import joblib"
+            },
+            {
+              "line": 36,
+              "patterns": [
+                "joblib",
+                "t2_class_weighted_tfidf_logreg"
+              ],
+              "text": "/ \"t2_class_weighted_tfidf_logreg.joblib\""
+            },
+            {
+              "line": 169,
+              "patterns": [
+                "predict("
+              ],
+              "text": "return model_artifact.predict("
+            },
+            {
+              "line": 218,
+              "patterns": [
+                "predict("
+              ],
+              "text": "return classifier.predict("
+            },
+            {
+              "line": 254,
+              "patterns": [
+                "joblib",
+                "load("
+              ],
+              "text": "model_artifact = joblib.load("
+            }
+          ],
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/scripts/t2_generate_plots.py",
+          "relative_path": "modeling/T2/scripts/t2_generate_plots.py",
+          "syntax_valid": true,
+          "functions": [
+            "build_confusion_matrix",
+            "create_confusion_matrix_plot",
+            "create_per_class_f1_plot",
+            "create_performance_plot",
+            "load_json",
+            "load_predictions",
+            "main"
+          ],
+          "reference_hits": [
+            {
+              "line": 64,
+              "patterns": [
+                "load("
+              ],
+              "text": "return json.load(f)"
+            }
+          ],
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/scripts/t2_svm.py",
+          "relative_path": "modeling/T2/scripts/t2_svm.py",
+          "syntax_valid": true,
+          "functions": [
+            "build_text",
+            "fail",
+            "main"
+          ],
+          "reference_hits": [
+            {
+              "line": 5,
+              "patterns": [
+                "joblib"
+              ],
+              "text": "import joblib"
+            },
+            {
+              "line": 36,
+              "patterns": [
+                "joblib"
+              ],
+              "text": "MODEL_FILE = MODEL_ROOT / \"t2_tfidf_linear_svm.joblib\""
+            },
+            {
+              "line": 258,
+              "patterns": [
+                "predict("
+              ],
+              "text": "y_pred = model.predict("
+            },
+            {
+              "line": 264,
+              "patterns": [
+                "decision_function"
+              ],
+              "text": "decision_scores = model.decision_function("
+            },
+            {
+              "line": 366,
+              "patterns": [
+                "joblib"
+              ],
+              "text": "joblib.dump("
+            }
+          ],
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/scripts/t2_weighted_svm.py",
+          "relative_path": "modeling/T2/scripts/t2_weighted_svm.py",
+          "syntax_valid": true,
+          "functions": [
+            "build_text",
+            "fail",
+            "main"
+          ],
+          "reference_hits": [
+            {
+              "line": 5,
+              "patterns": [
+                "joblib"
+              ],
+              "text": "import joblib"
+            },
+            {
+              "line": 42,
+              "patterns": [
+                "joblib"
+              ],
+              "text": "/ \"t2_weighted_tfidf_linear_svm.joblib\""
+            },
+            {
+              "line": 244,
+              "patterns": [
+                "predict("
+              ],
+              "text": "y_pred = model.predict("
+            },
+            {
+              "line": 305,
+              "patterns": [
+                "joblib"
+              ],
+              "text": "joblib.dump("
+            }
+          ],
+          "error": null
+        }
+      ],
+      "resolution_status": "CLOSURE_READABLE_BUT_ARTIFACT_REFERENCE_NOT_RESOLVED"
+    },
+    "T3": {
+      "task": "T3",
+      "closure_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/analysis/t3_final_closure.json",
+      "closure_exists": true,
+      "closure_readable": true,
+      "closure_summary": {
+        "status": "CLOSED"
+      },
+      "reference_fields": [],
+      "resolved_artifact_references": [],
+      "joblib_files": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/models/t3_baseline_tfidf_logreg.joblib",
+          "relative_path": "modeling/T3/models/t3_baseline_tfidf_logreg.joblib",
+          "size_bytes": 17315557
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib",
+          "relative_path": "modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib",
+          "size_bytes": 17315561
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/models/t3_linear_svm.joblib",
+          "relative_path": "modeling/T3/models/t3_linear_svm.joblib",
+          "size_bytes": 17315261
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/models/t3_svm_class_weighted.joblib",
+          "relative_path": "modeling/T3/models/t3_svm_class_weighted.joblib",
+          "size_bytes": 17315277
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/models/t3_word_char_tfidf_logreg.joblib",
+          "relative_path": "modeling/T3/models/t3_word_char_tfidf_logreg.joblib",
+          "size_bytes": 80837857
+        }
+      ],
+      "source_candidates": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_advanced_branch_decision.py",
+          "relative_path": "modeling/T3/scripts/t3_advanced_branch_decision.py",
+          "syntax_valid": true,
+          "functions": [],
+          "reference_hits": [
+            {
+              "line": 14,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "/ \"modeling/T3/analysis/t3_classical_model_comparison.json\""
+            },
+            {
+              "line": 19,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "/ \"modeling/T3/metrics/t3_distilbert_feasibility_validation_metrics.json\""
+            },
+            {
+              "line": 24,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "/ \"modeling/T3/analysis/t3_advanced_branch_closure.json\""
+            },
+            {
+              "line": 32,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_026_START\")"
+            },
+            {
+              "line": 51,
+              "patterns": [
+                "load("
+              ],
+              "text": "classical = json.load(f)"
+            },
+            {
+              "line": 54,
+              "patterns": [
+                "load("
+              ],
+              "text": "distilbert = json.load(f)"
+            },
+            {
+              "line": 204,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"task\": \"T3_SEVERITY_PREDICTION\","
+            },
+            {
+              "line": 309,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_026_COMPLETE\")"
+            }
+          ],
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_advanced_model_contract.py",
+          "relative_path": "modeling/T3/scripts/t3_advanced_model_contract.py",
+          "syntax_valid": true,
+          "functions": [
+            "main"
+          ],
+          "reference_hits": [
+            {
+              "line": 14,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "/ \"t3_advanced_model_contract.json\""
+            },
+            {
+              "line": 19,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_019_START\")"
+            },
+            {
+              "line": 22,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"task\": \"T3_SEVERITY_PREDICTION\","
+            },
+            {
+              "line": 155,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"TASK=T3_SEVERITY_PREDICTION\")"
+            },
+            {
+              "line": 178,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_019_COMPLETE\")"
+            }
+          ],
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_baseline.py",
+          "relative_path": "modeling/T3/scripts/t3_baseline.py",
+          "syntax_valid": true,
+          "functions": [
+            "combine_text",
+            "main"
+          ],
+          "reference_hits": [
+            {
+              "line": 4,
+              "patterns": [
+                "joblib"
+              ],
+              "text": "import joblib"
+            },
+            {
+              "line": 25,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "TRAIN_PATH = SPLIT_DIR / \"t3_train.csv\""
+            },
+            {
+              "line": 26,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "VALIDATION_PATH = SPLIT_DIR / \"t3_validation.csv\""
+            },
+            {
+              "line": 28,
+              "patterns": [
+                "joblib",
+                "t3_"
+              ],
+              "text": "MODEL_PATH = MODEL_DIR / \"t3_baseline_tfidf_logreg.joblib\""
+            },
+            {
+              "line": 29,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "METRICS_PATH = METRIC_DIR / \"t3_baseline_validation_metrics.json\""
+            },
+            {
+              "line": 44,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_007_START\")"
+            },
+            {
+              "line": 86,
+              "patterns": [
+                "predict("
+              ],
+              "text": "predictions = model.predict(X_validation)"
+            },
+            {
+              "line": 135,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"task\": \"T3_SEVERITY_PREDICTION\","
+            },
+            {
+              "line": 145,
+              "patterns": [
+                "joblib"
+              ],
+              "text": "joblib.dump("
+            },
+            {
+              "line": 161,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"task\": \"T3_SEVERITY_PREDICTION\","
+            },
+            {
+              "line": 199,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_007_COMPLETE\")"
+            }
+          ],
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_baseline_comparison.py",
+          "relative_path": "modeling/T3/scripts/t3_baseline_comparison.py",
+          "syntax_valid": true,
+          "functions": [
+            "load_json",
+            "main"
+          ],
+          "reference_hits": [
+            {
+              "line": 13,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "METRIC_DIR / \"t3_baseline_validation_metrics.json\""
+            },
+            {
+              "line": 17,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "METRIC_DIR / \"t3_class_weighted_validation_metrics.json\""
+            },
+            {
+              "line": 21,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "ANALYSIS_DIR / \"t3_baseline_comparison.json\""
+            },
+            {
+              "line": 29,
+              "patterns": [
+                "load("
+              ],
+              "text": "return json.load(f)"
+            },
+            {
+              "line": 33,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_009_START\")"
+            },
+            {
+              "line": 57,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"task\": \"T3_SEVERITY_PREDICTION\","
+            },
+            {
+              "line": 181,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_009_COMPLETE\")"
+            }
+          ],
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_class_weighted.py",
+          "relative_path": "modeling/T3/scripts/t3_class_weighted.py",
+          "syntax_valid": true,
+          "functions": [
+            "combine_text",
+            "main"
+          ],
+          "reference_hits": [
+            {
+              "line": 4,
+              "patterns": [
+                "joblib"
+              ],
+              "text": "import joblib"
+            },
+            {
+              "line": 25,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "TRAIN_PATH = SPLIT_DIR / \"t3_train.csv\""
+            },
+            {
+              "line": 26,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "VALIDATION_PATH = SPLIT_DIR / \"t3_validation.csv\""
+            },
+            {
+              "line": 28,
+              "patterns": [
+                "joblib",
+                "t3_"
+              ],
+              "text": "MODEL_PATH = MODEL_DIR / \"t3_class_weighted_tfidf_logreg.joblib\""
+            },
+            {
+              "line": 29,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "METRICS_PATH = METRIC_DIR / \"t3_class_weighted_validation_metrics.json\""
+            },
+            {
+              "line": 44,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_008_START\")"
+            },
+            {
+              "line": 86,
+              "patterns": [
+                "predict("
+              ],
+              "text": "predictions = model.predict(X_validation)"
+            },
+            {
+              "line": 135,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"task\": \"T3_SEVERITY_PREDICTION\","
+            },
+            {
+              "line": 145,
+              "patterns": [
+                "joblib"
+              ],
+              "text": "joblib.dump("
+            },
+            {
+              "line": 161,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"task\": \"T3_SEVERITY_PREDICTION\","
+            },
+            {
+              "line": 211,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_008_COMPLETE\")"
+            }
+          ],
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_classical_comparison.py",
+          "relative_path": "modeling/T3/scripts/t3_classical_comparison.py",
+          "syntax_valid": true,
+          "functions": [
+            "load_metrics",
+            "main"
+          ],
+          "reference_hits": [
+            {
+              "line": 15,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "/ \"t3_classical_model_comparison.json\""
+            },
+            {
+              "line": 19,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"T3-MOD-007\": \"t3_baseline_validation_metrics.json\","
+            },
+            {
+              "line": 20,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"T3-MOD-008\": \"t3_class_weighted_validation_metrics.json\","
+            },
+            {
+              "line": 21,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"T3-MOD-015\": \"t3_linear_svm_validation_metrics.json\","
+            },
+            {
+              "line": 22,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"T3-MOD-016\": \"t3_svm_class_weighted_validation_metrics.json\","
+            },
+            {
+              "line": 35,
+              "patterns": [
+                "load("
+              ],
+              "text": "return json.load(f)"
+            },
+            {
+              "line": 39,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_017_START\")"
+            },
+            {
+              "line": 76,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"task\": \"T3_SEVERITY_PREDICTION\","
+            },
+            {
+              "line": 134,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_017_COMPLETE\")"
+            }
+          ],
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_distilbert_feasibility.py",
+          "relative_path": "modeling/T3/scripts/t3_distilbert_feasibility.py",
+          "syntax_valid": true,
+          "functions": [
+            "__getitem__",
+            "__init__",
+            "__len__",
+            "build_text",
+            "load_split"
+          ],
+          "reference_hits": [
+            {
+              "line": 24,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "DATA_PATH = PROJECT_ROOT / \"modeling/T3/derived/t3_features.csv\""
+            },
+            {
+              "line": 27,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "OUTPUT_MODEL = PROJECT_ROOT / \"modeling/T3/models/t3_distilbert_feasibility\""
+            },
+            {
+              "line": 28,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "OUTPUT_METRICS = PROJECT_ROOT / \"modeling/T3/metrics/t3_distilbert_feasibility_validation_metrics.json\""
+            },
+            {
+              "line": 29,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "OUTPUT_ANALYSIS = PROJECT_ROOT / \"modeling/T3/analysis/t3_distilbert_feasibility.json\""
+            },
+            {
+              "line": 91,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "path = SPLIT_DIR / f\"t3_{name}.csv\""
+            },
+            {
+              "line": 103,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_025_START\")"
+            },
+            {
+              "line": 449,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"task\": \"T3_SEVERITY_PREDICTION\","
+            },
+            {
+              "line": 530,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_025_COMPLETE\")"
+            }
+          ],
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_environment_check.py",
+          "relative_path": "modeling/T3/scripts/t3_environment_check.py",
+          "syntax_valid": true,
+          "functions": [
+            "main",
+            "package_status"
+          ],
+          "reference_hits": [
+            {
+              "line": 21,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_020_START\")"
+            },
+            {
+              "line": 102,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_020_COMPLETE\")"
+            }
+          ],
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_error_analysis.py",
+          "relative_path": "modeling/T3/scripts/t3_error_analysis.py",
+          "syntax_valid": true,
+          "functions": [
+            "combine_text",
+            "main"
+          ],
+          "reference_hits": [
+            {
+              "line": 4,
+              "patterns": [
+                "joblib"
+              ],
+              "text": "import joblib"
+            },
+            {
+              "line": 17,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "VALIDATION_PATH = SPLIT_DIR / \"t3_validation.csv\""
+            },
+            {
+              "line": 18,
+              "patterns": [
+                "joblib",
+                "t3_"
+              ],
+              "text": "MODEL_PATH = MODEL_DIR / \"t3_baseline_tfidf_logreg.joblib\""
+            },
+            {
+              "line": 19,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "OUTPUT_PATH = ANALYSIS_DIR / \"t3_error_analysis.json\""
+            },
+            {
+              "line": 34,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_012_START\")"
+            },
+            {
+              "line": 41,
+              "patterns": [
+                "joblib",
+                "load("
+              ],
+              "text": "artifact = joblib.load(MODEL_PATH)"
+            },
+            {
+              "line": 53,
+              "patterns": [
+                "predict("
+              ],
+              "text": "predictions = model.predict(X)"
+            },
+            {
+              "line": 134,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"task\": \"T3_SEVERITY_PREDICTION\","
+            },
+            {
+              "line": 195,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_012_COMPLETE\")"
+            }
+          ],
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_final_closure.py",
+          "relative_path": "modeling/T3/scripts/t3_final_closure.py",
+          "syntax_valid": true,
+          "functions": [],
+          "reference_hits": [
+            {
+              "line": 17,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"t3_class_weighted_validation_metrics.json\""
+            },
+            {
+              "line": 23,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"t3_final_test_metrics.json\""
+            },
+            {
+              "line": 29,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"t3_final_generalization_analysis.json\""
+            },
+            {
+              "line": 35,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"t3_advanced_branch_closure.json\""
+            },
+            {
+              "line": 41,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"t3_final_closure.json\""
+            },
+            {
+              "line": 49,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_029_START\")"
+            },
+            {
+              "line": 76,
+              "patterns": [
+                "load("
+              ],
+              "text": "validation = json.load(f)"
+            },
+            {
+              "line": 84,
+              "patterns": [
+                "load("
+              ],
+              "text": "test = json.load(f)"
+            },
+            {
+              "line": 92,
+              "patterns": [
+                "load("
+              ],
+              "text": "generalization = json.load(f)"
+            },
+            {
+              "line": 100,
+              "patterns": [
+                "load("
+              ],
+              "text": "advanced = json.load(f)"
+            },
+            {
+              "line": 370,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"task\": \"T3_SEVERITY_PREDICTION\","
+            },
+            {
+              "line": 498,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_029_COMPLETE\")"
+            }
+          ],
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_generalization_analysis.py",
+          "relative_path": "modeling/T3/scripts/t3_generalization_analysis.py",
+          "syntax_valid": true,
+          "functions": [],
+          "reference_hits": [
+            {
+              "line": 17,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"t3_class_weighted_validation_metrics.json\""
+            },
+            {
+              "line": 23,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"t3_final_test_metrics.json\""
+            },
+            {
+              "line": 29,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"t3_final_generalization_analysis.json\""
+            },
+            {
+              "line": 39,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_028_START\")"
+            },
+            {
+              "line": 62,
+              "patterns": [
+                "load("
+              ],
+              "text": "validation = json.load(f)"
+            },
+            {
+              "line": 70,
+              "patterns": [
+                "load("
+              ],
+              "text": "test = json.load(f)"
+            },
+            {
+              "line": 340,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"task\": \"T3_SEVERITY_PREDICTION\","
+            },
+            {
+              "line": 443,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_028_COMPLETE\")"
+            }
+          ],
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_generate_plots.py",
+          "relative_path": "modeling/T3/scripts/t3_generate_plots.py",
+          "syntax_valid": true,
+          "functions": [],
+          "reference_hits": [
+            {
+              "line": 20,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"t3_class_weighted_validation_metrics.json\""
+            },
+            {
+              "line": 26,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"t3_final_test_metrics.json\""
+            },
+            {
+              "line": 32,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"t3_final_generalization_analysis.json\""
+            },
+            {
+              "line": 42,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "/ \"t3_visualization_manifest.json\""
+            },
+            {
+              "line": 52,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_VIZ_001_START\")"
+            },
+            {
+              "line": 55,
+              "patterns": [
+                "load("
+              ],
+              "text": "validation = json.load(f)"
+            },
+            {
+              "line": 58,
+              "patterns": [
+                "load("
+              ],
+              "text": "test = json.load(f)"
+            },
+            {
+              "line": 61,
+              "patterns": [
+                "load("
+              ],
+              "text": "generalization = json.load(f)"
+            },
+            {
+              "line": 119,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "plot1 = PLOTS_DIR / \"t3_validation_vs_test.png\""
+            },
+            {
+              "line": 148,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "plot2 = PLOTS_DIR / \"t3_test_per_class_f1.png\""
+            },
+            {
+              "line": 201,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "/ \"t3_test_confusion_matrix.png\""
+            },
+            {
+              "line": 251,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "/ \"t3_test_true_vs_predicted_distribution.png\""
+            },
+            {
+              "line": 264,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"task\": \"T3_SEVERITY_PREDICTION\","
+            },
+            {
+              "line": 318,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_VIZ_001_COMPLETE\")"
+            }
+          ],
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_inspect_errors.py",
+          "relative_path": "modeling/T3/scripts/t3_inspect_errors.py",
+          "syntax_valid": true,
+          "functions": [
+            "main"
+          ],
+          "reference_hits": [
+            {
+              "line": 12,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "ANALYSIS_DIR / \"t3_error_analysis.json\""
+            },
+            {
+              "line": 16,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "ANALYSIS_DIR / \"t3_error_inspection.json\""
+            },
+            {
+              "line": 31,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_013_START\")"
+            },
+            {
+              "line": 37,
+              "patterns": [
+                "load("
+              ],
+              "text": "data = json.load(f)"
+            },
+            {
+              "line": 40,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"task\": \"T3_SEVERITY_PREDICTION\","
+            },
+            {
+              "line": 147,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_013_COMPLETE\")"
+            }
+          ],
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_linear_svm.py",
+          "relative_path": "modeling/T3/scripts/t3_linear_svm.py",
+          "syntax_valid": true,
+          "functions": [
+            "clean_text",
+            "main"
+          ],
+          "reference_hits": [
+            {
+              "line": 5,
+              "patterns": [
+                "joblib"
+              ],
+              "text": "from joblib import dump"
+            },
+            {
+              "line": 15,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "DERIVED_PATH = PROJECT_ROOT / \"modeling\" / \"T3\" / \"derived\" / \"t3_features.csv\""
+            },
+            {
+              "line": 20,
+              "patterns": [
+                "joblib",
+                "t3_"
+              ],
+              "text": "MODEL_PATH = MODEL_DIR / \"t3_linear_svm.joblib\""
+            },
+            {
+              "line": 21,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "METRICS_PATH = METRICS_DIR / \"t3_linear_svm_validation_metrics.json\""
+            },
+            {
+              "line": 33,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_015_START\")"
+            },
+            {
+              "line": 40,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "train_ids = pd.read_csv(SPLIT_DIR / \"t3_train.csv\")[\"ID\"]"
+            },
+            {
+              "line": 41,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "validation_ids = pd.read_csv(SPLIT_DIR / \"t3_validation.csv\")[\"ID\"]"
+            },
+            {
+              "line": 81,
+              "patterns": [
+                "predict("
+              ],
+              "text": "predictions = model.predict(X_validation)"
+            },
+            {
+              "line": 107,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"task\": \"T3_SEVERITY_PREDICTION\","
+            },
+            {
+              "line": 173,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_015_COMPLETE\")"
+            }
+          ],
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_locked_test.py",
+          "relative_path": "modeling/T3/scripts/t3_locked_test.py",
+          "syntax_valid": true,
+          "functions": [],
+          "reference_hits": [
+            {
+              "line": 4,
+              "patterns": [
+                "joblib"
+              ],
+              "text": "import joblib"
+            },
+            {
+              "line": 25,
+              "patterns": [
+                "joblib",
+                "t3_"
+              ],
+              "text": "/ \"modeling/T3/models/t3_class_weighted_tfidf_logreg.joblib\""
+            },
+            {
+              "line": 30,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "/ \"modeling/T3/splits/t3_test.csv\""
+            },
+            {
+              "line": 35,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "/ \"modeling/T3/metrics/t3_final_test_metrics.json\""
+            },
+            {
+              "line": 40,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "/ \"modeling/T3/analysis/t3_locked_test_evaluation.json\""
+            },
+            {
+              "line": 46,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_027_START\")"
+            },
+            {
+              "line": 65,
+              "patterns": [
+                "joblib",
+                "load("
+              ],
+              "text": "artifact = joblib.load(MODEL_PATH)"
+            },
+            {
+              "line": 213,
+              "patterns": [
+                "predict("
+              ],
+              "text": "# classifier.predict() ONLY"
+            },
+            {
+              "line": 221,
+              "patterns": [
+                "predict("
+              ],
+              "text": "predictions = model.predict(X_test)"
+            },
+            {
+              "line": 360,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"task\": \"T3_SEVERITY_PREDICTION\","
+            },
+            {
+              "line": 470,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_027_COMPLETE\")"
+            }
+          ],
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_materialize.py",
+          "relative_path": "modeling/T3/scripts/t3_materialize.py",
+          "syntax_valid": true,
+          "functions": [
+            "main"
+          ],
+          "reference_hits": [
+            {
+              "line": 7,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"DTM-002_T3_FIRST_SEVERITY_derived.csv\""
+            },
+            {
+              "line": 13,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "OUTPUT = OUTPUT_DIR / \"t3_features.csv\""
+            },
+            {
+              "line": 28,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_004_START\")"
+            },
+            {
+              "line": 71,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "f\"UNEXPECTED_T3_ROW_COUNT={len(features)}\""
+            },
+            {
+              "line": 129,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_004_COMPLETE\")"
+            }
+          ],
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_model_comparison.py",
+          "relative_path": "modeling/T3/scripts/t3_model_comparison.py",
+          "syntax_valid": true,
+          "functions": [
+            "load_json",
+            "main",
+            "validate_common_conditions"
+          ],
+          "reference_hits": [
+            {
+              "line": 13,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "METRIC_DIR / \"t3_baseline_validation_metrics.json\""
+            },
+            {
+              "line": 17,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "METRIC_DIR / \"t3_class_weighted_validation_metrics.json\""
+            },
+            {
+              "line": 21,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "METRIC_DIR / \"t3_word_char_validation_metrics.json\""
+            },
+            {
+              "line": 25,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "ANALYSIS_DIR / \"t3_model_comparison.json\""
+            },
+            {
+              "line": 33,
+              "patterns": [
+                "load("
+              ],
+              "text": "return json.load(f)"
+            },
+            {
+              "line": 57,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_011_START\")"
+            },
+            {
+              "line": 72,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"task\": \"T3_SEVERITY_PREDICTION\","
+            },
+            {
+              "line": 226,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_011_COMPLETE\")"
+            }
+          ],
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_model_contract.py",
+          "relative_path": "modeling/T3/scripts/t3_model_contract.py",
+          "syntax_valid": true,
+          "functions": [
+            "main"
+          ],
+          "reference_hits": [
+            {
+              "line": 19,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "T3_ROOT = PROJECT_ROOT / \"modeling\" / \"T3\""
+            },
+            {
+              "line": 21,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "CONTRACTS_DIR = T3_ROOT / \"contracts\""
+            },
+            {
+              "line": 25,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "/ \"t3_model_contract.json\""
+            },
+            {
+              "line": 31,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_001_START\")"
+            },
+            {
+              "line": 211,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"DTM-002_T3_FIRST_SEVERITY_derived.csv\""
+            },
+            {
+              "line": 307,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"TASK=T3_SEVERITY_PREDICTION\""
+            },
+            {
+              "line": 364,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"T3_MOD_001_COMPLETE\""
+            }
+          ],
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_selection_criterion.py",
+          "relative_path": "modeling/T3/scripts/t3_selection_criterion.py",
+          "syntax_valid": true,
+          "functions": [
+            "main"
+          ],
+          "reference_hits": [
+            {
+              "line": 10,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "OUTPUT_PATH = CONTRACT_DIR / \"t3_model_selection_criterion.json\""
+            },
+            {
+              "line": 16,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_014_START\")"
+            },
+            {
+              "line": 19,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"task\": \"T3_SEVERITY_PREDICTION\","
+            },
+            {
+              "line": 49,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"status\": \"FROZEN_FOR_T3_CANDIDATE_SELECTION\","
+            },
+            {
+              "line": 72,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_014_COMPLETE\")"
+            }
+          ],
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_split.py",
+          "relative_path": "modeling/T3/scripts/t3_split.py",
+          "syntax_valid": true,
+          "functions": [
+            "distribution",
+            "main"
+          ],
+          "reference_hits": [
+            {
+              "line": 15,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "/ \"t3_features.csv\""
+            },
+            {
+              "line": 30,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "/ \"t3_split_report.json\""
+            },
+            {
+              "line": 61,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_006_START\")"
+            },
+            {
+              "line": 139,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "train_path = OUTPUT_DIR / \"t3_train.csv\""
+            },
+            {
+              "line": 140,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "validation_path = OUTPUT_DIR / \"t3_validation.csv\""
+            },
+            {
+              "line": 141,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "test_path = OUTPUT_DIR / \"t3_test.csv\""
+            },
+            {
+              "line": 255,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_006_COMPLETE\")"
+            }
+          ],
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_svm_class_weighted.py",
+          "relative_path": "modeling/T3/scripts/t3_svm_class_weighted.py",
+          "syntax_valid": true,
+          "functions": [
+            "clean_text",
+            "main"
+          ],
+          "reference_hits": [
+            {
+              "line": 5,
+              "patterns": [
+                "joblib"
+              ],
+              "text": "from joblib import dump"
+            },
+            {
+              "line": 15,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "DERIVED_PATH = PROJECT_ROOT / \"modeling\" / \"T3\" / \"derived\" / \"t3_features.csv\""
+            },
+            {
+              "line": 20,
+              "patterns": [
+                "joblib",
+                "t3_"
+              ],
+              "text": "MODEL_PATH = MODEL_DIR / \"t3_svm_class_weighted.joblib\""
+            },
+            {
+              "line": 21,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "METRICS_PATH = METRICS_DIR / \"t3_svm_class_weighted_validation_metrics.json\""
+            },
+            {
+              "line": 33,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_016_START\")"
+            },
+            {
+              "line": 40,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "train_ids = pd.read_csv(SPLIT_DIR / \"t3_train.csv\")[\"ID\"]"
+            },
+            {
+              "line": 41,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "validation_ids = pd.read_csv(SPLIT_DIR / \"t3_validation.csv\")[\"ID\"]"
+            },
+            {
+              "line": 81,
+              "patterns": [
+                "predict("
+              ],
+              "text": "predictions = model.predict(X_validation)"
+            },
+            {
+              "line": 109,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"task\": \"T3_SEVERITY_PREDICTION\","
+            },
+            {
+              "line": 178,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_016_COMPLETE\")"
+            }
+          ],
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_transformer_smoke_test.py",
+          "relative_path": "modeling/T3/scripts/t3_transformer_smoke_test.py",
+          "syntax_valid": true,
+          "functions": [
+            "main"
+          ],
+          "reference_hits": [
+            {
+              "line": 17,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "/ \"t3_transformer_smoke_test.json\""
+            },
+            {
+              "line": 24,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_024_START\")"
+            },
+            {
+              "line": 60,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"task\": \"T3_SEVERITY_PREDICTION\","
+            },
+            {
+              "line": 94,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_024_COMPLETE\")"
+            }
+          ],
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_validate.py",
+          "relative_path": "modeling/T3/scripts/t3_validate.py",
+          "syntax_valid": true,
+          "functions": [
+            "main"
+          ],
+          "reference_hits": [
+            {
+              "line": 8,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "INPUT = PROJECT_ROOT / \"modeling\" / \"T3\" / \"derived\" / \"t3_features.csv\""
+            },
+            {
+              "line": 9,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "OUTPUT = PROJECT_ROOT / \"modeling\" / \"T3\" / \"analysis\" / \"t3_validation_report.json\""
+            },
+            {
+              "line": 35,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_005_START\")"
+            },
+            {
+              "line": 161,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_005_COMPLETE\")"
+            }
+          ],
+          "error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_word_char.py",
+          "relative_path": "modeling/T3/scripts/t3_word_char.py",
+          "syntax_valid": true,
+          "functions": [
+            "combine_text",
+            "main"
+          ],
+          "reference_hits": [
+            {
+              "line": 4,
+              "patterns": [
+                "joblib"
+              ],
+              "text": "import joblib"
+            },
+            {
+              "line": 26,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "TRAIN_PATH = SPLIT_DIR / \"t3_train.csv\""
+            },
+            {
+              "line": 27,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "VALIDATION_PATH = SPLIT_DIR / \"t3_validation.csv\""
+            },
+            {
+              "line": 29,
+              "patterns": [
+                "joblib",
+                "t3_"
+              ],
+              "text": "MODEL_PATH = MODEL_DIR / \"t3_word_char_tfidf_logreg.joblib\""
+            },
+            {
+              "line": 30,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "METRICS_PATH = METRIC_DIR / \"t3_word_char_validation_metrics.json\""
+            },
+            {
+              "line": 45,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_010_START\")"
+            },
+            {
+              "line": 149,
+              "patterns": [
+                "predict("
+              ],
+              "text": "predictions = model.predict("
+            },
+            {
+              "line": 203,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"task\": \"T3_SEVERITY_PREDICTION\","
+            },
+            {
+              "line": 217,
+              "patterns": [
+                "joblib"
+              ],
+              "text": "joblib.dump("
+            },
+            {
+              "line": 241,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "\"task\": \"T3_SEVERITY_PREDICTION\","
+            },
+            {
+              "line": 302,
+              "patterns": [
+                "t3_"
+              ],
+              "text": "print(\"T3_MOD_010_COMPLETE\")"
+            }
+          ],
+          "error": null
+        }
+      ],
+      "resolution_status": "CLOSURE_READABLE_BUT_ARTIFACT_REFERENCE_NOT_RESOLVED"
+    }
+  },
+  "safeguards": {
+    "prediction_generated": false,
+    "model_fitted": false,
+    "locked_test_used_for_selection": false,
+    "threshold_selected": false,
+    "threshold_optimized": false,
+    "universal_confidence_created": false,
+    "universal_risk_created": false,
+    "synthetic_target_created": false
+  },
+  "next_gate": "Proceed to FMP-06 OP-011 controlled single-ticket inference after frozen T1-T7 runtime interfaces are resolved."
+}

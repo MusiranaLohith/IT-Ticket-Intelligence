@@ -1,0 +1,48 @@
+{
+  "operation": "T5-MOD-009",
+  "operation_name": "Locked Evaluation",
+  "evaluation_artifact": "/run/media/whiteblack/User 1/Datasets/Mozilla_CORE/DTM-002_T5_EVAL_GROUP_AWARE.csv",
+  "evaluation_population": {
+    "rows": 20827,
+    "positive": 1318,
+    "negative": 19509,
+    "unique_ids": 20827
+  },
+  "locked_pipeline": {
+    "features": [
+      "Creator",
+      "Creator Detail",
+      "Summary",
+      "Description"
+    ],
+    "representation": "word-level TF-IDF unigram/bigram",
+    "classifier": "balanced LogisticRegression",
+    "calibration": "sigmoid",
+    "probability_output": "p_duplicate"
+  },
+  "metrics": {
+    "average_precision": 0.12583280543036882,
+    "pr_auc": 0.12583280543036882,
+    "roc_auc": 0.6781415853279965,
+    "log_loss": 0.27250018754800265,
+    "brier_score": 0.059906950851585296,
+    "threshold_0_5": {
+      "precision": 0.4782608695652174,
+      "recall": 0.00834597875569044,
+      "f1": 0.01640566741237882,
+      "positive_predictions": 23
+    }
+  },
+  "controls": {
+    "model_refit": false,
+    "calibrator_refit": false,
+    "vectorizer_refit": false,
+    "threshold_optimization": false,
+    "evaluation_used_for_selection": false,
+    "evaluation_used_for_calibration": false,
+    "synthetic_data": false,
+    "raw_archive_scanned": false,
+    "target_provenance_used_as_feature": false
+  },
+  "status": "LOCKED_EVALUATION_COMPLETE"
+}

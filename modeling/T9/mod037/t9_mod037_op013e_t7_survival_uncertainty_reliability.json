@@ -1,0 +1,242 @@
+{
+  "operation": "T9_MOD-037_OP-013E",
+  "title": "T7 Native Survival Uncertainty & Reliability Analysis",
+  "status": "PASS",
+  "purpose": "Quantify uncertainty and descriptive reliability around already-established native T7 fixed-horizon survival outputs without fitting a new model or converting the survival task into binary classification.",
+  "previous_operation_validation": {
+    "status": "PASS",
+    "checks": {
+      "OP-004_T7_acceptance": "PASS",
+      "OP-005": "PASS",
+      "OP-013A": "PASS",
+      "OP-013B": "PASS",
+      "OP-013C": "PASS",
+      "OP-013D": "PASS"
+    },
+    "failed": []
+  },
+  "evaluation_population": {
+    "rows": 102764,
+    "events": 81583,
+    "censored": 21181,
+    "event_rate": 0.7938869643065665,
+    "censor_rate": 0.2061130356934335
+  },
+  "alignment": {
+    "MOD-007": {
+      "label": "MOD-007",
+      "evaluation_rows": 102764,
+      "prediction_rows": 102764,
+      "evaluation_id_column": "ID",
+      "prediction_id_column": "ID",
+      "alignment_basis": "exact_id_alignment",
+      "status": "PASS"
+    },
+    "MOD-010": {
+      "label": "MOD-010",
+      "evaluation_rows": 102764,
+      "prediction_rows": 102764,
+      "evaluation_id_column": "ID",
+      "prediction_id_column": "ID",
+      "alignment_basis": "exact_id_alignment",
+      "status": "PASS"
+    }
+  },
+  "bootstrap_configuration": {
+    "replicates": 1000,
+    "seed": 37013,
+    "confidence_interval": "95%",
+    "reliability_bins": 10,
+    "weight_structure": "fixed full-sample censoring survival weights"
+  },
+  "bootstrap_results": [
+    {
+      "artifact": "MOD-007",
+      "horizon_seconds": 211583,
+      "metric": "IPCW_Brier_fixed_weight_bootstrap",
+      "point_estimate": 0.5559985321807023,
+      "ci_lower_95": 0.5544761999247596,
+      "ci_upper_95": 0.5574050774167377,
+      "bootstrap_std": 0.0007629280277082441,
+      "bootstrap_replicates": 1000,
+      "evaluated_rows": 102764,
+      "evaluation_fraction": 1.0
+    },
+    {
+      "artifact": "MOD-007",
+      "horizon_seconds": 1780179,
+      "metric": "IPCW_Brier_fixed_weight_bootstrap",
+      "point_estimate": 0.4198363067966984,
+      "ci_lower_95": 0.4178074398684295,
+      "ci_upper_95": 0.42206926444685205,
+      "bootstrap_std": 0.0011067280673330787,
+      "bootstrap_replicates": 1000,
+      "evaluated_rows": 102277,
+      "evaluation_fraction": 0.9952609863376279
+    },
+    {
+      "artifact": "MOD-007",
+      "horizon_seconds": 14608619,
+      "metric": "IPCW_Brier_fixed_weight_bootstrap",
+      "point_estimate": 0.23683864136079438,
+      "ci_lower_95": 0.23467095254453788,
+      "ci_upper_95": 0.23905330466756355,
+      "bootstrap_std": 0.001162764807287027,
+      "bootstrap_replicates": 1000,
+      "evaluated_rows": 98993,
+      "evaluation_fraction": 0.9633042699778133
+    },
+    {
+      "artifact": "MOD-010",
+      "horizon_seconds": 211583,
+      "metric": "IPCW_Brier_fixed_weight_bootstrap",
+      "point_estimate": 0.4739882052966109,
+      "ci_lower_95": 0.47283792154530846,
+      "ci_upper_95": 0.47516606090377156,
+      "bootstrap_std": 0.0005967545015584935,
+      "bootstrap_replicates": 1000,
+      "evaluated_rows": 102764,
+      "evaluation_fraction": 1.0
+    },
+    {
+      "artifact": "MOD-010",
+      "horizon_seconds": 1780179,
+      "metric": "IPCW_Brier_fixed_weight_bootstrap",
+      "point_estimate": 0.3737595964103446,
+      "ci_lower_95": 0.3720889514581441,
+      "ci_upper_95": 0.3756227145435487,
+      "bootstrap_std": 0.0008940377885495265,
+      "bootstrap_replicates": 1000,
+      "evaluated_rows": 102277,
+      "evaluation_fraction": 0.9952609863376279
+    },
+    {
+      "artifact": "MOD-010",
+      "horizon_seconds": 14608619,
+      "metric": "IPCW_Brier_fixed_weight_bootstrap",
+      "point_estimate": 0.2219803178729526,
+      "ci_lower_95": 0.2200548789208965,
+      "ci_upper_95": 0.22392993697933805,
+      "bootstrap_std": 0.0009978392133079262,
+      "bootstrap_replicates": 1000,
+      "evaluated_rows": 98993,
+      "evaluation_fraction": 0.9633042699778133
+    }
+  ],
+  "reliability_global": [
+    {
+      "artifact": "MOD-007",
+      "horizon_seconds": 211583,
+      "bins": 10,
+      "weighted_mean_absolute_gap": 0.638429862253151,
+      "maximum_bin_absolute_gap": 0.6985991276088838,
+      "smallest_bin_rows": 10276,
+      "largest_bin_rows": 10277
+    },
+    {
+      "artifact": "MOD-007",
+      "horizon_seconds": 1780179,
+      "bins": 10,
+      "weighted_mean_absolute_gap": 0.4156755468641418,
+      "maximum_bin_absolute_gap": 0.4824676237295622,
+      "smallest_bin_rows": 10227,
+      "largest_bin_rows": 10228
+    },
+    {
+      "artifact": "MOD-007",
+      "horizon_seconds": 14608619,
+      "bins": 10,
+      "weighted_mean_absolute_gap": 0.16289574087558265,
+      "maximum_bin_absolute_gap": 0.31192512394195543,
+      "smallest_bin_rows": 9899,
+      "largest_bin_rows": 9900
+    },
+    {
+      "artifact": "MOD-010",
+      "horizon_seconds": 211583,
+      "bins": 10,
+      "weighted_mean_absolute_gap": 0.5707546930664944,
+      "maximum_bin_absolute_gap": 0.6298480033556135,
+      "smallest_bin_rows": 10276,
+      "largest_bin_rows": 10277
+    },
+    {
+      "artifact": "MOD-010",
+      "horizon_seconds": 1780179,
+      "bins": 10,
+      "weighted_mean_absolute_gap": 0.3566683177940015,
+      "maximum_bin_absolute_gap": 0.41811348667541304,
+      "smallest_bin_rows": 10227,
+      "largest_bin_rows": 10228
+    },
+    {
+      "artifact": "MOD-010",
+      "horizon_seconds": 14608619,
+      "bins": 10,
+      "weighted_mean_absolute_gap": 0.11392576506182395,
+      "maximum_bin_absolute_gap": 0.25581564106112414,
+      "smallest_bin_rows": 9899,
+      "largest_bin_rows": 9900
+    }
+  ],
+  "bootstrap_summary_csv": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op013e_t7_bootstrap_summary.csv",
+  "reliability_summary_csv": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op013e_t7_reliability_summary.csv",
+  "interpretation": {
+    "uncertainty_type": "Fixed-censoring-weight bootstrap uncertainty around existing native fixed-horizon IPCW Brier contributions.",
+    "formal_calibration": "NOT_ESTABLISHED",
+    "reliability_status": "DESCRIPTIVE_NATIVE_SURVIVAL_RELIABILITY",
+    "binary_conversion": "NO",
+    "censoring_relabelling": "NO",
+    "model_selection": "NO",
+    "method_selection": "NO",
+    "locked_test_use": "NO",
+    "universal_confidence": "NOT_CREATED",
+    "universal_risk_score": "NOT_CREATED",
+    "bootstrap_limitation": "Bootstrap uncertainty conditions on the full-sample censoring-weight structure. It does not re-estimate the censoring survival function inside every replicate.",
+    "reliability_limitation": "Bin-level weighted observed survival comparisons are descriptive reliability evidence, not a fitted formal survival calibration model.",
+    "mod007_mod010_selection": "No model is selected."
+  },
+  "controls": {
+    "artifact_read_only": true,
+    "model_fitted": false,
+    "prediction_generated": false,
+    "probability_generated": false,
+    "calibration_fitted": false,
+    "target_created": false,
+    "target_relabelled": false,
+    "censoring_relabelled": false,
+    "survival_to_binary_conversion": false,
+    "threshold_selected": false,
+    "model_selected": false,
+    "locked_test_used": false,
+    "universal_confidence_created": false,
+    "universal_risk_score_created": false,
+    "existing_t7_artifacts_modified": false,
+    "post_creation_information_used": false,
+    "native_survival_semantics_preserved": true,
+    "censoring_aware_evaluation_preserved": true,
+    "fixed_censoring_weights_used_for_bootstrap": true
+  },
+  "control_validation": {
+    "status": "PASS",
+    "failed_controls": []
+  },
+  "methodological_restrictions": [
+    "Existing native T7 survival outputs are evaluated as-is.",
+    "Right censoring is preserved.",
+    "No censored observation is relabelled as an observed event.",
+    "No survival quantity is converted into a binary classifier.",
+    "No calibration model is fitted.",
+    "No model is selected.",
+    "No threshold is selected.",
+    "No locked test is used.",
+    "No universal confidence score is created.",
+    "No universal risk score is created.",
+    "Bootstrap uncertainty is explicitly conditional on the fixed full-sample censoring-weight structure."
+  ],
+  "artifacts_generated": [
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op013e_t7_survival_uncertainty_reliability.json",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op013e_t7_bootstrap_summary.csv",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op013e_t7_reliability_summary.csv"
+  ]
+}

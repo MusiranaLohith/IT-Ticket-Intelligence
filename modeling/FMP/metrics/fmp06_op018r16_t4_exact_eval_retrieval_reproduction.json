@@ -1,0 +1,28 @@
+{
+  "operation": "FMP-06 OP-018R16",
+  "operation_name": "T4 exact evaluation retrieval reproduction",
+  "status": "PASS",
+  "finding": "Frozen T4 TF-IDF and NearestNeighbors reproduce the stored MOD-007 retrieval artifact for the same evaluation rows.",
+  "read_only": true,
+  "training_or_fitting": false,
+  "evaluation_metric_calculation": false,
+  "locked_test_used": false,
+  "artifact_modified": false,
+  "evaluation_rows": 35626,
+  "stored_retrieval_rows": 35626,
+  "population_alignment": true,
+  "probe_rows": 3,
+  "probe_ids": [
+    "1551410",
+    "1551425",
+    "1551452"
+  ],
+  "frozen_metric": "cosine",
+  "frozen_algorithm": "brute",
+  "frozen_n_neighbors": 20,
+  "index_exact_match": true,
+  "similarity_match": true,
+  "max_abs_similarity_difference": 0.0,
+  "exact_reproduction": true,
+  "output": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/FMP/metrics/fmp06_op018r16_t4_exact_eval_retrieval_reproduction.json"
+}

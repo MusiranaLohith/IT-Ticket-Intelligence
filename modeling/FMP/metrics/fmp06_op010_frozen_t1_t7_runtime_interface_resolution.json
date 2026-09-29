@@ -1,0 +1,2498 @@
+{
+  "operation": "FMP-06 OP-010",
+  "operation_title": "Frozen T1-T7 Runtime Interface Resolution",
+  "status": "PARTIAL",
+  "purpose": "Resolve the runtime interfaces of the frozen T1-T7 components before controlled raw-ticket inference.",
+  "runtime_execution_performed": false,
+  "inference_performed": false,
+  "retraining_performed": false,
+  "task_statuses": {
+    "T1": "RESOLVED",
+    "T2": "UNRESOLVED",
+    "T3": "UNRESOLVED",
+    "T4": "RESOLVED",
+    "T5": "RESOLVED",
+    "T6": "RESOLVED",
+    "T7": "RESOLVED"
+  },
+  "resolved_tasks": [
+    "T1",
+    "T4",
+    "T5",
+    "T6",
+    "T7"
+  ],
+  "partial_tasks": [],
+  "unresolved_tasks": [
+    "T2",
+    "T3"
+  ],
+  "task_results": {
+    "T1": {
+      "task": "T1",
+      "closure": {
+        "task": "T1",
+        "closure_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/analysis/t1_final_closure.json",
+        "closure_exists": true,
+        "closure_readable": true,
+        "status": null,
+        "closure_status": null,
+        "supported_as": null,
+        "not_supported_as": null,
+        "selected_model": null
+      },
+      "artifact_inventory": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/baselines/t1_it_support_char_svm.joblib",
+          "exists": true,
+          "size_bytes": 2179887
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/analysis/t1_it_support_3model_compare.json",
+          "exists": true,
+          "size_bytes": 12213
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/analysis/t1_final_closure.json",
+          "exists": true,
+          "size_bytes": 2128
+        }
+      ],
+      "implementation_candidates": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/derived/t1_vscode_derive.py",
+          "relative_path": "modeling/T1/derived/t1_vscode_derive.py",
+          "keyword_hits": [
+            "char"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "clean_value",
+            "canonicalize_target",
+            "extract_targets",
+            "choose_target",
+            "remove_target_marker_matches",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/scripts/fmp01_t1_artifact_structure_check.py",
+          "relative_path": "modeling/T1/scripts/fmp01_t1_artifact_structure_check.py",
+          "keyword_hits": [
+            "char",
+            "decision_function"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/scripts/fmp01_t1_calibration_feasibility.py",
+          "relative_path": "modeling/T1/scripts/fmp01_t1_calibration_feasibility.py",
+          "keyword_hits": [
+            "char",
+            "decision_function"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/scripts/fmp01_t1_development_calibration_feasibility.py",
+          "relative_path": "modeling/T1/scripts/fmp01_t1_development_calibration_feasibility.py",
+          "keyword_hits": [
+            "LinearSVC",
+            "char",
+            "decision_function",
+            "predict("
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "fail"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/scripts/fmp01_t1_evidence_consistency.py",
+          "relative_path": "modeling/T1/scripts/fmp01_t1_evidence_consistency.py",
+          "keyword_hits": [
+            "char"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "load_json",
+            "get_nested",
+            "print_value",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/scripts/fmp01_t1_evidence_inventory.py",
+          "relative_path": "modeling/T1/scripts/fmp01_t1_evidence_inventory.py",
+          "keyword_hits": [
+            "char"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "load_json",
+            "summarize_value",
+            "print_dict_structure",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/scripts/fmp01_t1_final_closure.py",
+          "relative_path": "modeling/T1/scripts/fmp01_t1_final_closure.py",
+          "keyword_hits": [
+            "LinearSVC",
+            "char",
+            "decision_function",
+            "predict("
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "load_json"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/splits/t1_it_support_3model_compare.py",
+          "relative_path": "modeling/T1/splits/t1_it_support_3model_compare.py",
+          "keyword_hits": [
+            "char",
+            "predict("
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "normalize_text",
+            "load_predictor",
+            "evaluate_model",
+            "subset_metrics",
+            "main",
+            "__init__",
+            "predict",
+            "deltas"
+          ],
+          "classes": [
+            "FeatureModelAdapter"
+          ],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/splits/t1_it_support_baseline.py",
+          "relative_path": "modeling/T1/splits/t1_it_support_baseline.py",
+          "keyword_hits": [
+            "TfidfVectorizer",
+            "predict("
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "clean",
+            "create_model",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/splits/t1_it_support_char_svm.py",
+          "relative_path": "modeling/T1/splits/t1_it_support_char_svm.py",
+          "keyword_hits": [
+            "LinearSVC",
+            "TfidfVectorizer",
+            "char",
+            "predict("
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "normalize_text",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/splits/t1_it_support_group_eval.py",
+          "relative_path": "modeling/T1/splits/t1_it_support_group_eval.py",
+          "keyword_hits": [
+            "predict("
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "normalize_text",
+            "safe_float",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/splits/t1_it_support_model_subset_compare.py",
+          "relative_path": "modeling/T1/splits/t1_it_support_model_subset_compare.py",
+          "keyword_hits": [
+            "predict("
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "normalize_text",
+            "accuracy",
+            "analyze_model",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/splits/t1_it_support_subset_analysis.py",
+          "relative_path": "modeling/T1/splits/t1_it_support_subset_analysis.py",
+          "keyword_hits": [
+            "predict("
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "normalize_text",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/splits/t1_it_support_svm.py",
+          "relative_path": "modeling/T1/splits/t1_it_support_svm.py",
+          "keyword_hits": [
+            "LinearSVC",
+            "TfidfVectorizer",
+            "predict("
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "load_csv",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/splits/t1_it_support_svm_errors.py",
+          "relative_path": "modeling/T1/splits/t1_it_support_svm_errors.py",
+          "keyword_hits": [
+            "predict("
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "load_csv",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/splits/t1_vscode_advanced.py",
+          "relative_path": "modeling/T1/splits/t1_vscode_advanced.py",
+          "keyword_hits": [
+            "LinearSVC",
+            "TfidfVectorizer",
+            "predict("
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "clean",
+            "build_text",
+            "create_model",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/splits/t1_vscode_baseline.py",
+          "relative_path": "modeling/T1/splits/t1_vscode_baseline.py",
+          "keyword_hits": [
+            "TfidfVectorizer",
+            "predict("
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "clean",
+            "build_text",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/splits/t1_vscode_feature_compare.py",
+          "relative_path": "modeling/T1/splits/t1_vscode_feature_compare.py",
+          "keyword_hits": [
+            "TfidfVectorizer",
+            "predict("
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "clean",
+            "build_summary_text",
+            "build_combined_text",
+            "create_model",
+            "evaluate_model",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        }
+      ],
+      "resolution": {
+        "status": "RESOLVED",
+        "interface_contract": {
+          "input_grain": "single ticket text",
+          "expected_native_output": "ticket category/class prediction",
+          "runtime_operation": "classifier inference",
+          "probability_semantics": "not established as calibrated probability"
+        },
+        "evidence_notes": [
+          "Frozen artifact, closure evidence, and an implementation candidate are all present.",
+          "Resolution here means interface evidence is sufficient for the next controlled inference operation; it does not prove successful runtime execution."
+        ]
+      }
+    },
+    "T2": {
+      "task": "T2",
+      "closure": {
+        "task": "T2",
+        "closure_path": null,
+        "closure_exists": false,
+        "closure_readable": false,
+        "status": null,
+        "closure_status": null,
+        "supported_as": null,
+        "not_supported_as": null,
+        "selected_model": null
+      },
+      "artifact_inventory": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/models/t2_class_weighted_tfidf_logreg.joblib",
+          "exists": true,
+          "size_bytes": 14317753
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/metrics/t2_final_test_metrics.json",
+          "exists": false,
+          "size_bytes": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/metrics/t2_locked_test_predictions.csv",
+          "exists": false,
+          "size_bytes": null
+        }
+      ],
+      "implementation_candidates": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/scripts/t2_baseline.py",
+          "relative_path": "modeling/T2/scripts/t2_baseline.py",
+          "keyword_hits": [
+            "LogisticRegression",
+            "TfidfVectorizer",
+            "predict(",
+            "predict_proba"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "fail",
+            "build_text",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/scripts/t2_class_weighted.py",
+          "relative_path": "modeling/T2/scripts/t2_class_weighted.py",
+          "keyword_hits": [
+            "LogisticRegression",
+            "TfidfVectorizer",
+            "predict(",
+            "predict_proba"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "fail",
+            "build_text",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/scripts/t2_error_analysis.py",
+          "relative_path": "modeling/T2/scripts/t2_error_analysis.py",
+          "keyword_hits": [
+            "LogisticRegression",
+            "predict(",
+            "predicted_priority"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "fail",
+            "build_text",
+            "distribution",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/scripts/t2_final_generalization_analysis.py",
+          "relative_path": "modeling/T2/scripts/t2_final_generalization_analysis.py",
+          "keyword_hits": [
+            "actual_priority",
+            "predicted_priority"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "load_json",
+            "load_predictions",
+            "build_confusion_counts",
+            "build_distributions",
+            "top_errors",
+            "class_error_summary",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/scripts/t2_final_test_evaluation.py",
+          "relative_path": "modeling/T2/scripts/t2_final_test_evaluation.py",
+          "keyword_hits": [
+            "actual_priority",
+            "predict(",
+            "predicted_priority"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "load_test_data",
+            "predict_with_artifact",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/scripts/t2_generate_plots.py",
+          "relative_path": "modeling/T2/scripts/t2_generate_plots.py",
+          "keyword_hits": [
+            "actual_priority",
+            "predicted_priority"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "load_json",
+            "load_predictions",
+            "build_confusion_matrix",
+            "create_performance_plot",
+            "create_per_class_f1_plot",
+            "create_confusion_matrix_plot",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/scripts/t2_svm.py",
+          "relative_path": "modeling/T2/scripts/t2_svm.py",
+          "keyword_hits": [
+            "TfidfVectorizer",
+            "predict("
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "fail",
+            "build_text",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/scripts/t2_weighted_svm.py",
+          "relative_path": "modeling/T2/scripts/t2_weighted_svm.py",
+          "keyword_hits": [
+            "TfidfVectorizer",
+            "predict("
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "fail",
+            "build_text",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        }
+      ],
+      "resolution": {
+        "status": "UNRESOLVED",
+        "interface_contract": {
+          "input_grain": "single ticket",
+          "expected_native_output": "priority class prediction",
+          "runtime_operation": "classifier inference",
+          "probability_semantics": "no universal automated confidence threshold"
+        },
+        "evidence_notes": [
+          "Authoritative closure artifact was not found.",
+          "Closure artifact could not be read.",
+          "Resolution here means interface evidence is sufficient for the next controlled inference operation; it does not prove successful runtime execution."
+        ]
+      }
+    },
+    "T3": {
+      "task": "T3",
+      "closure": {
+        "task": "T3",
+        "closure_path": null,
+        "closure_exists": false,
+        "closure_readable": false,
+        "status": null,
+        "closure_status": null,
+        "supported_as": null,
+        "not_supported_as": null,
+        "selected_model": null
+      },
+      "artifact_inventory": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/metrics/t3_locked_test_predictions.csv",
+          "exists": false,
+          "size_bytes": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/metrics/t3_locked_test_metrics.json",
+          "exists": false,
+          "size_bytes": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/metrics/t3_final_closure.json",
+          "exists": false,
+          "size_bytes": null
+        }
+      ],
+      "implementation_candidates": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_advanced_branch_decision.py",
+          "relative_path": "modeling/T3/scripts/t3_advanced_branch_decision.py",
+          "keyword_hits": [
+            "locked",
+            "severity"
+          ],
+          "syntax_valid": true,
+          "functions": [],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_advanced_model_contract.py",
+          "relative_path": "modeling/T3/scripts/t3_advanced_model_contract.py",
+          "keyword_hits": [
+            "locked",
+            "severity"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_baseline.py",
+          "relative_path": "modeling/T3/scripts/t3_baseline.py",
+          "keyword_hits": [
+            "TfidfVectorizer",
+            "predict(",
+            "severity"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "combine_text",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_baseline_comparison.py",
+          "relative_path": "modeling/T3/scripts/t3_baseline_comparison.py",
+          "keyword_hits": [
+            "severity"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "load_json",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_class_weighted.py",
+          "relative_path": "modeling/T3/scripts/t3_class_weighted.py",
+          "keyword_hits": [
+            "TfidfVectorizer",
+            "predict(",
+            "severity"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "combine_text",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_classical_comparison.py",
+          "relative_path": "modeling/T3/scripts/t3_classical_comparison.py",
+          "keyword_hits": [
+            "locked",
+            "severity"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "load_metrics",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_distilbert_feasibility.py",
+          "relative_path": "modeling/T3/scripts/t3_distilbert_feasibility.py",
+          "keyword_hits": [
+            "classification",
+            "severity"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "build_text",
+            "load_split",
+            "__init__",
+            "__len__",
+            "__getitem__"
+          ],
+          "classes": [
+            "TicketDataset"
+          ],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_error_analysis.py",
+          "relative_path": "modeling/T3/scripts/t3_error_analysis.py",
+          "keyword_hits": [
+            "predict(",
+            "severity"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "combine_text",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_final_closure.py",
+          "relative_path": "modeling/T3/scripts/t3_final_closure.py",
+          "keyword_hits": [
+            "locked",
+            "severity"
+          ],
+          "syntax_valid": true,
+          "functions": [],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_generalization_analysis.py",
+          "relative_path": "modeling/T3/scripts/t3_generalization_analysis.py",
+          "keyword_hits": [
+            "classification",
+            "locked",
+            "severity"
+          ],
+          "syntax_valid": true,
+          "functions": [],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_generate_plots.py",
+          "relative_path": "modeling/T3/scripts/t3_generate_plots.py",
+          "keyword_hits": [
+            "locked",
+            "severity"
+          ],
+          "syntax_valid": true,
+          "functions": [],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_inspect_errors.py",
+          "relative_path": "modeling/T3/scripts/t3_inspect_errors.py",
+          "keyword_hits": [
+            "severity"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_linear_svm.py",
+          "relative_path": "modeling/T3/scripts/t3_linear_svm.py",
+          "keyword_hits": [
+            "TfidfVectorizer",
+            "predict(",
+            "severity"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "clean_text",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_locked_test.py",
+          "relative_path": "modeling/T3/scripts/t3_locked_test.py",
+          "keyword_hits": [
+            "locked",
+            "predict(",
+            "severity"
+          ],
+          "syntax_valid": true,
+          "functions": [],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_materialize.py",
+          "relative_path": "modeling/T3/scripts/t3_materialize.py",
+          "keyword_hits": [
+            "severity"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_model_comparison.py",
+          "relative_path": "modeling/T3/scripts/t3_model_comparison.py",
+          "keyword_hits": [
+            "severity"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "load_json",
+            "validate_common_conditions",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_model_contract.py",
+          "relative_path": "modeling/T3/scripts/t3_model_contract.py",
+          "keyword_hits": [
+            "locked",
+            "severity"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_selection_criterion.py",
+          "relative_path": "modeling/T3/scripts/t3_selection_criterion.py",
+          "keyword_hits": [
+            "locked",
+            "severity"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_split.py",
+          "relative_path": "modeling/T3/scripts/t3_split.py",
+          "keyword_hits": [
+            "severity"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "distribution",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_svm_class_weighted.py",
+          "relative_path": "modeling/T3/scripts/t3_svm_class_weighted.py",
+          "keyword_hits": [
+            "TfidfVectorizer",
+            "predict(",
+            "severity"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "clean_text",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_transformer_smoke_test.py",
+          "relative_path": "modeling/T3/scripts/t3_transformer_smoke_test.py",
+          "keyword_hits": [
+            "severity"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_validate.py",
+          "relative_path": "modeling/T3/scripts/t3_validate.py",
+          "keyword_hits": [
+            "severity"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T3/scripts/t3_word_char.py",
+          "relative_path": "modeling/T3/scripts/t3_word_char.py",
+          "keyword_hits": [
+            "TfidfVectorizer",
+            "predict(",
+            "severity"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "combine_text",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        }
+      ],
+      "resolution": {
+        "status": "UNRESOLVED",
+        "interface_contract": {
+          "input_grain": "single ticket",
+          "expected_native_output": "severity class prediction",
+          "runtime_operation": "classifier inference",
+          "probability_semantics": "not an autonomous severity decision"
+        },
+        "evidence_notes": [
+          "Authoritative closure artifact was not found.",
+          "Closure artifact could not be read.",
+          "No candidate frozen runtime artifact was found.",
+          "Resolution here means interface evidence is sufficient for the next controlled inference operation; it does not prove successful runtime execution."
+        ]
+      }
+    },
+    "T4": {
+      "task": "T4",
+      "closure": {
+        "task": "T4",
+        "closure_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/t4_mod013_closure.json",
+        "closure_exists": true,
+        "closure_readable": true,
+        "status": "COMPLETE",
+        "closure_status": "SUPPORTED_WITH_LIMITATIONS",
+        "supported_as": null,
+        "not_supported_as": null,
+        "selected_model": null
+      },
+      "artifact_inventory": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/t4_mod013_closure.json",
+          "exists": true,
+          "size_bytes": 6363
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/results/t4_r1_metrics.json",
+          "exists": true,
+          "size_bytes": 1227
+        }
+      ],
+      "implementation_candidates": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/scripts/t4_baseline.py",
+          "relative_path": "modeling/T4/scripts/t4_baseline.py",
+          "keyword_hits": [
+            "assignee",
+            "candidate"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "fail",
+            "combine_features",
+            "top_k_accuracy",
+            "candidate_coverage_metrics",
+            "class_concentration",
+            "main",
+            "share"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/scripts/t4_baseline_contract.py",
+          "relative_path": "modeling/T4/scripts/t4_baseline_contract.py",
+          "keyword_hits": [
+            "assignee",
+            "candidate"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "fail",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/scripts/t4_baseline_r1.py",
+          "relative_path": "modeling/T4/scripts/t4_baseline_r1.py",
+          "keyword_hits": [
+            "assignee",
+            "candidate"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "combined_text",
+            "load_data",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/scripts/t4_compare_r1_mod007.py",
+          "relative_path": "modeling/T4/scripts/t4_compare_r1_mod007.py",
+          "keyword_hits": [
+            "Hit@",
+            "assignee",
+            "ranking"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "load_json",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/scripts/t4_materialize.py",
+          "relative_path": "modeling/T4/scripts/t4_materialize.py",
+          "keyword_hits": [
+            "assignee"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/scripts/t4_mod007_retrieval_analysis.py",
+          "relative_path": "modeling/T4/scripts/t4_mod007_retrieval_analysis.py",
+          "keyword_hits": [
+            "Hit@",
+            "assignee",
+            "retrieval"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/scripts/t4_mod007_similarity_analysis.py",
+          "relative_path": "modeling/T4/scripts/t4_mod007_similarity_analysis.py",
+          "keyword_hits": [
+            "retrieval"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "percentile",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/scripts/t4_mod007_true_assignee_coverage.py",
+          "relative_path": "modeling/T4/scripts/t4_mod007_true_assignee_coverage.py",
+          "keyword_hits": [
+            "assignee",
+            "candidate",
+            "retrieval"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/scripts/t4_mod008.py",
+          "relative_path": "modeling/T4/scripts/t4_mod008.py",
+          "keyword_hits": [
+            "Hit@",
+            "assignee",
+            "candidate",
+            "retrieval"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "make_text",
+            "retrieve",
+            "run_word",
+            "run_char",
+            "run_word_char",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/scripts/t4_mod008_analysis.py",
+          "relative_path": "modeling/T4/scripts/t4_mod008_analysis.py",
+          "keyword_hits": [
+            "Hit@",
+            "assignee",
+            "ranking",
+            "retrieval"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "load_json",
+            "pp",
+            "fmt",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/scripts/t4_mod008_full.py",
+          "relative_path": "modeling/T4/scripts/t4_mod008_full.py",
+          "keyword_hits": [
+            "Hit@",
+            "assignee",
+            "candidate",
+            "retrieval"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "make_text",
+            "retrieve",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/scripts/t4_mod009.py",
+          "relative_path": "modeling/T4/scripts/t4_mod009.py",
+          "keyword_hits": [
+            "Hit@",
+            "assignee",
+            "candidate",
+            "retrieval"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "combine_text",
+            "bm25_documents",
+            "bm25_queries",
+            "compute_idf",
+            "apply_idf",
+            "extract_top_indices",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/scripts/t4_mod010.py",
+          "relative_path": "modeling/T4/scripts/t4_mod010.py",
+          "keyword_hits": [
+            "Hit@",
+            "ranking",
+            "retrieval"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "load_json",
+            "fmt",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/scripts/t4_mod011.py",
+          "relative_path": "modeling/T4/scripts/t4_mod011.py",
+          "keyword_hits": [
+            "assignee",
+            "candidate",
+            "ranking",
+            "retrieval"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "build_text",
+            "bm25_weight_matrix",
+            "bm25_query_matrix",
+            "calculate_ranking_metrics",
+            "calculate_support_buckets",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/scripts/t4_mod012.py",
+          "relative_path": "modeling/T4/scripts/t4_mod012.py",
+          "keyword_hits": [
+            "assignee",
+            "candidate",
+            "ranking",
+            "retrieval"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "load_checkpoint",
+            "retrieval_metrics",
+            "true_assignee_positions",
+            "support_bucket",
+            "support_analysis",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/scripts/t4_mod013.py",
+          "relative_path": "modeling/T4/scripts/t4_mod013.py",
+          "keyword_hits": [
+            "Hit@",
+            "assignee",
+            "candidate",
+            "ranking",
+            "retrieval"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "load_json",
+            "pp",
+            "delta_pp",
+            "main",
+            "fmt"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/scripts/t4_mod014.py",
+          "relative_path": "modeling/T4/scripts/t4_mod014.py",
+          "keyword_hits": [
+            "Hit@",
+            "assignee",
+            "retrieval"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "load_json",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/scripts/t4_model_contract.py",
+          "relative_path": "modeling/T4/scripts/t4_model_contract.py",
+          "keyword_hits": [
+            "assignee",
+            "candidate"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "sha256_file",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/scripts/t4_plt001.py",
+          "relative_path": "modeling/T4/scripts/t4_plt001.py",
+          "keyword_hits": [
+            "Hit@",
+            "ranking",
+            "retrieval"
+          ],
+          "syntax_valid": true,
+          "functions": [],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/scripts/t4_plt002.py",
+          "relative_path": "modeling/T4/scripts/t4_plt002.py",
+          "keyword_hits": [
+            "Hit@"
+          ],
+          "syntax_valid": true,
+          "functions": [],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/scripts/t4_plt003.py",
+          "relative_path": "modeling/T4/scripts/t4_plt003.py",
+          "keyword_hits": [
+            "ranking"
+          ],
+          "syntax_valid": true,
+          "functions": [],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/scripts/t4_plt004.py",
+          "relative_path": "modeling/T4/scripts/t4_plt004.py",
+          "keyword_hits": [
+            "Hit@",
+            "assignee"
+          ],
+          "syntax_valid": true,
+          "functions": [],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/scripts/t4_plt005.py",
+          "relative_path": "modeling/T4/scripts/t4_plt005.py",
+          "keyword_hits": [
+            "assignee",
+            "retrieval"
+          ],
+          "syntax_valid": true,
+          "functions": [],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/scripts/t4_plt007.py",
+          "relative_path": "modeling/T4/scripts/t4_plt007.py",
+          "keyword_hits": [
+            "assignee"
+          ],
+          "syntax_valid": true,
+          "functions": [],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/scripts/t4_plt008.py",
+          "relative_path": "modeling/T4/scripts/t4_plt008.py",
+          "keyword_hits": [
+            "assignee",
+            "retrieval"
+          ],
+          "syntax_valid": true,
+          "functions": [],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/scripts/t4_r1_analysis.py",
+          "relative_path": "modeling/T4/scripts/t4_r1_analysis.py",
+          "keyword_hits": [
+            "assignee",
+            "candidate"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/scripts/t4_ranking_baseline.py",
+          "relative_path": "modeling/T4/scripts/t4_ranking_baseline.py",
+          "keyword_hits": [
+            "assignee",
+            "candidate",
+            "ranking",
+            "retrieval"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "build_text",
+            "validate_data",
+            "rank_assignees",
+            "reciprocal_rank",
+            "ndcg_binary",
+            "main",
+            "rank_assignees_for_row",
+            "bucket_for_support"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/scripts/t4_ranking_contract.py",
+          "relative_path": "modeling/T4/scripts/t4_ranking_contract.py",
+          "keyword_hits": [
+            "Hit@",
+            "assignee",
+            "candidate",
+            "ranking",
+            "retrieval"
+          ],
+          "syntax_valid": true,
+          "functions": [],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/scripts/t4_split.py",
+          "relative_path": "modeling/T4/scripts/t4_split.py",
+          "keyword_hits": [
+            "assignee",
+            "candidate"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "class_support",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T4/scripts/t4_validate.py",
+          "relative_path": "modeling/T4/scripts/t4_validate.py",
+          "keyword_hits": [
+            "assignee"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        }
+      ],
+      "resolution": {
+        "status": "RESOLVED",
+        "interface_contract": {
+          "input_grain": "ticket/query",
+          "expected_native_output": "historical assignee candidate ranking",
+          "runtime_operation": "candidate retrieval/ranking",
+          "probability_semantics": "ranking score, not universal probability"
+        },
+        "evidence_notes": [
+          "Frozen artifact, closure evidence, and an implementation candidate are all present.",
+          "Resolution here means interface evidence is sufficient for the next controlled inference operation; it does not prove successful runtime execution."
+        ]
+      }
+    },
+    "T5": {
+      "task": "T5",
+      "closure": {
+        "task": "T5",
+        "closure_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod011_final_closure.json",
+        "closure_exists": true,
+        "closure_readable": true,
+        "status": "CLOSED",
+        "closure_status": null,
+        "supported_as": null,
+        "not_supported_as": null,
+        "selected_model": null
+      },
+      "artifact_inventory": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod009_locked_evaluation_metrics.json",
+          "exists": true,
+          "size_bytes": 1387
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod006_calibration_metrics.json",
+          "exists": true,
+          "size_bytes": 3177
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod007_calibration_comparison.json",
+          "exists": true,
+          "size_bytes": 2079
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/metrics/t5_mod011_final_closure.json",
+          "exists": true,
+          "size_bytes": 5177
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod007_calibrated_tfidf.joblib",
+          "exists": true,
+          "size_bytes": 4041492
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/models/t5_mod007_calibration_models.joblib",
+          "exists": true,
+          "size_bytes": 802449
+        }
+      ],
+      "implementation_candidates": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/scripts/t5_mod001_contract_reconciliation.py",
+          "relative_path": "modeling/T5/scripts/t5_mod001_contract_reconciliation.py",
+          "keyword_hits": [
+            "duplicate"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "fail",
+            "read_header",
+            "validate_schema",
+            "count_rows_and_target",
+            "inspect_id_uniqueness",
+            "inspect_split_id_uniqueness",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/scripts/t5_mod002_baseline_contract.py",
+          "relative_path": "modeling/T5/scripts/t5_mod002_baseline_contract.py",
+          "keyword_hits": [
+            "LogisticRegression",
+            "calibration",
+            "duplicate",
+            "p_duplicate"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/scripts/t5_mod005_baseline_training.py",
+          "relative_path": "modeling/T5/scripts/t5_mod005_baseline_training.py",
+          "keyword_hits": [
+            "LogisticRegression",
+            "duplicate",
+            "p_duplicate",
+            "predict_proba"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "fail",
+            "combine_text",
+            "load_dataset",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/scripts/t5_mod006_calibration_analysis.py",
+          "relative_path": "modeling/T5/scripts/t5_mod006_calibration_analysis.py",
+          "keyword_hits": [
+            "calibration",
+            "duplicate",
+            "p_duplicate"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "fail",
+            "calculate_ece",
+            "probability_summary",
+            "threshold_analysis",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/scripts/t5_mod007_calibration_comparison.py",
+          "relative_path": "modeling/T5/scripts/t5_mod007_calibration_comparison.py",
+          "keyword_hits": [
+            "LogisticRegression",
+            "calibration",
+            "predict_proba"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "fail",
+            "normalized_content_key",
+            "deterministic_group_value",
+            "combine_text",
+            "load_rows",
+            "target_stats",
+            "calculate_metrics",
+            "fit_sigmoid_calibrator",
+            "apply_sigmoid_calibrator",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/scripts/t5_mod008_model_selection_lock.py",
+          "relative_path": "modeling/T5/scripts/t5_mod008_model_selection_lock.py",
+          "keyword_hits": [
+            "LogisticRegression",
+            "calibration",
+            "duplicate",
+            "p_duplicate"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "fail",
+            "require_close",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/scripts/t5_mod009_artifact_diagnostic.py",
+          "relative_path": "modeling/T5/scripts/t5_mod009_artifact_diagnostic.py",
+          "keyword_hits": [
+            "calibration"
+          ],
+          "syntax_valid": true,
+          "functions": [],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/scripts/t5_mod009_evaluation_schema_diagnostic.py",
+          "relative_path": "modeling/T5/scripts/t5_mod009_evaluation_schema_diagnostic.py",
+          "keyword_hits": [
+            "LogisticRegression",
+            "calibration",
+            "duplicate",
+            "p_duplicate",
+            "predict_proba"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "fail",
+            "combine_text",
+            "load_evaluation_rows",
+            "calculate_metrics",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/scripts/t5_mod009_locked_evaluation.py",
+          "relative_path": "modeling/T5/scripts/t5_mod009_locked_evaluation.py",
+          "keyword_hits": [
+            "LogisticRegression",
+            "calibration",
+            "duplicate",
+            "p_duplicate",
+            "predict_proba"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "fail",
+            "combine_text",
+            "load_evaluation_rows",
+            "calculate_metrics",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/scripts/t5_mod009_mod007_artifact_contents.py",
+          "relative_path": "modeling/T5/scripts/t5_mod009_mod007_artifact_contents.py",
+          "keyword_hits": [
+            "calibration"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "describe_object"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/scripts/t5_mod009_recover_mod007_vectorizer.py",
+          "relative_path": "modeling/T5/scripts/t5_mod009_recover_mod007_vectorizer.py",
+          "keyword_hits": [
+            "LogisticRegression",
+            "calibration"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "fail",
+            "normalized_content_key",
+            "deterministic_group_value",
+            "combine_text",
+            "load_rows",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/scripts/t5_mod010_generalization_analysis.py",
+          "relative_path": "modeling/T5/scripts/t5_mod010_generalization_analysis.py",
+          "keyword_hits": [
+            "LogisticRegression",
+            "calibration"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "fail",
+            "load_json",
+            "extract_validation_metrics",
+            "extract_evaluation_metrics",
+            "relative_change",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/scripts/t5_mod011_final_closure.py",
+          "relative_path": "modeling/T5/scripts/t5_mod011_final_closure.py",
+          "keyword_hits": [
+            "LogisticRegression",
+            "calibration",
+            "duplicate",
+            "p_duplicate"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "fail",
+            "load_json",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T5/scripts/t5_visualization.py",
+          "relative_path": "modeling/T5/scripts/t5_visualization.py",
+          "keyword_hits": [
+            "calibration",
+            "duplicate",
+            "p_duplicate"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "load_json",
+            "save_plot",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        }
+      ],
+      "resolution": {
+        "status": "RESOLVED",
+        "interface_contract": {
+          "input_grain": "ticket pair",
+          "expected_native_output": "duplicate relationship score/probability",
+          "runtime_operation": "binary duplicate inference",
+          "probability_semantics": "native p_duplicate exists; operational threshold not established"
+        },
+        "evidence_notes": [
+          "Frozen artifact, closure evidence, and an implementation candidate are all present.",
+          "Resolution here means interface evidence is sufficient for the next controlled inference operation; it does not prove successful runtime execution."
+        ]
+      }
+    },
+    "T6": {
+      "task": "T6",
+      "closure": {
+        "task": "T6",
+        "closure_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_final_closure.json",
+        "closure_exists": true,
+        "closure_readable": true,
+        "status": "CLOSED",
+        "closure_status": null,
+        "supported_as": null,
+        "not_supported_as": null,
+        "selected_model": {
+          "name": "Corrected Hybrid Lexical + Semantic Duplicate-Related Retrieval",
+          "operation": "MOD-010",
+          "lexical_component": "MOD-004 exact TF-IDF cosine retrieval",
+          "semantic_component": "all-MiniLM-L6-v2 semantic similarity",
+          "lexical_weight": 0.5,
+          "semantic_weight": 0.5,
+          "selection_split": "TRAIN"
+        }
+      },
+      "artifact_inventory": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_final_closure.json",
+          "exists": true,
+          "size_bytes": 5819
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod010_corrected_hybrid_results.json",
+          "exists": true,
+          "size_bytes": 6325
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod010_final_comparison.json",
+          "exists": true,
+          "size_bytes": 2690
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod010_exact_reproduction_report.json",
+          "exists": true,
+          "size_bytes": 1992
+        }
+      ],
+      "implementation_candidates": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/scripts/t6_baseline_tfidf_retrieval.py",
+          "relative_path": "modeling/T6/scripts/t6_baseline_tfidf_retrieval.py",
+          "keyword_hits": [
+            "query",
+            "ranking",
+            "retrieval",
+            "semantic",
+            "tfidf"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "clean_text",
+            "build_text",
+            "reciprocal_rank",
+            "dcg_at_k",
+            "ndcg_single_positive",
+            "rank_candidates",
+            "main",
+            "log",
+            "evaluate_split",
+            "mean_metric"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/scripts/t6_construct_group_aware_split.py",
+          "relative_path": "modeling/T6/scripts/t6_construct_group_aware_split.py",
+          "keyword_hits": [
+            "query",
+            "semantic"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "normalize_text",
+            "content_group_hash",
+            "fail",
+            "ensure_directories",
+            "write_json",
+            "count_query_rows",
+            "count_positive_rows",
+            "count_non_positive_rows",
+            "main",
+            "log"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/scripts/t6_final_model_selection_and_closure.py",
+          "relative_path": "modeling/T6/scripts/t6_final_model_selection_and_closure.py",
+          "keyword_hits": [
+            "hybrid",
+            "query",
+            "ranking",
+            "retrieval",
+            "semantic",
+            "tfidf"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "load_json",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/scripts/t6_mod005_baseline_error_analysis.py",
+          "relative_path": "modeling/T6/scripts/t6_mod005_baseline_error_analysis.py",
+          "keyword_hits": [
+            "query",
+            "ranking",
+            "retrieval"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "validate_input",
+            "summarize_split",
+            "main",
+            "gap_summary",
+            "log",
+            "metric_delta",
+            "failure_concentration"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/scripts/t6_mod006_failure_case_characterization.py",
+          "relative_path": "modeling/T6/scripts/t6_mod006_failure_case_characterization.py",
+          "keyword_hits": [
+            "query",
+            "ranking",
+            "retrieval"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "safe_text",
+            "tokenize",
+            "combined_query_text",
+            "combined_candidate_text",
+            "lexical_overlap",
+            "length_stats",
+            "validate_columns",
+            "main",
+            "log",
+            "aggregate"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/scripts/t6_mod007_bm25_retrieval.py",
+          "relative_path": "modeling/T6/scripts/t6_mod007_bm25_retrieval.py",
+          "keyword_hits": [
+            "query",
+            "ranking",
+            "retrieval",
+            "tfidf"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "is_observed_positive",
+            "safe_text",
+            "tokenize",
+            "build_query_text",
+            "build_candidate_text",
+            "validate_split",
+            "evaluate_split",
+            "main",
+            "__init__",
+            "score",
+            "score_all",
+            "log"
+          ],
+          "classes": [
+            "BM25"
+          ],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/scripts/t6_mod008_semantic_failure_retrieval.py",
+          "relative_path": "modeling/T6/scripts/t6_mod008_semantic_failure_retrieval.py",
+          "keyword_hits": [
+            "query",
+            "ranking",
+            "retrieval",
+            "semantic",
+            "tfidf"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "safe_text",
+            "build_query_text",
+            "build_candidate_text",
+            "validate_columns",
+            "validate_failure_population",
+            "validate_query_group",
+            "calculate_metrics",
+            "main",
+            "log"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/scripts/t6_mod009_hybrid_lexical_semantic_retrieval.py",
+          "relative_path": "modeling/T6/scripts/t6_mod009_hybrid_lexical_semantic_retrieval.py",
+          "keyword_hits": [
+            "hybrid",
+            "query",
+            "ranking",
+            "retrieval",
+            "semantic",
+            "tfidf"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "normalize_target_observed",
+            "validate_split",
+            "clean_text",
+            "build_text",
+            "rank_metrics",
+            "get_positive_ranks",
+            "minmax_normalize_within_query",
+            "evaluate_weight",
+            "choose_training_weight",
+            "main",
+            "movement_summary"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/scripts/t6_mod010_corrected_hybrid_reconstruction.py",
+          "relative_path": "modeling/T6/scripts/t6_mod010_corrected_hybrid_reconstruction.py",
+          "keyword_hits": [
+            "hybrid",
+            "query",
+            "ranking",
+            "semantic",
+            "tfidf"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "clean_text",
+            "build_mod004_text",
+            "minmax_normalize_within_query",
+            "rank_metrics",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/scripts/t6_mod010_diagnose_mod009_lexical_reconstruction.py",
+          "relative_path": "modeling/T6/scripts/t6_mod010_diagnose_mod009_lexical_reconstruction.py",
+          "keyword_hits": [
+            "hybrid",
+            "query",
+            "ranking",
+            "tfidf"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "clean_text",
+            "build_mod004_text",
+            "build_mod009_text",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/scripts/t6_mod010_exact_tfidf_reproduction.py",
+          "relative_path": "modeling/T6/scripts/t6_mod010_exact_tfidf_reproduction.py",
+          "keyword_hits": [
+            "hybrid",
+            "query",
+            "ranking",
+            "semantic",
+            "tfidf"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "clean_text",
+            "build_text",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/scripts/t6_mod010_final_hybrid_comparison.py",
+          "relative_path": "modeling/T6/scripts/t6_mod010_final_hybrid_comparison.py",
+          "keyword_hits": [
+            "hybrid",
+            "query",
+            "ranking",
+            "retrieval",
+            "semantic",
+            "tfidf"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/scripts/t6_mod010_inspect_artifact_schemas.py",
+          "relative_path": "modeling/T6/scripts/t6_mod010_inspect_artifact_schemas.py",
+          "keyword_hits": [
+            "hybrid",
+            "query",
+            "ranking",
+            "semantic",
+            "tfidf"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "require_columns",
+            "normalize_bool",
+            "reconstruct_query_summary",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/scripts/t6_visualization.py",
+          "relative_path": "modeling/T6/scripts/t6_visualization.py",
+          "keyword_hits": [
+            "hybrid",
+            "query",
+            "ranking",
+            "retrieval",
+            "semantic",
+            "tfidf"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "save_figure",
+            "positive_ranks",
+            "main",
+            "count_bands"
+          ],
+          "classes": [],
+          "syntax_error": null
+        }
+      ],
+      "resolution": {
+        "status": "RESOLVED",
+        "interface_contract": {
+          "input_grain": "query ticket",
+          "expected_native_output": "similar-ticket candidate ranking",
+          "runtime_operation": "lexical + semantic retrieval/ranking",
+          "probability_semantics": "retrieval/ranking score; not binary probability"
+        },
+        "evidence_notes": [
+          "Frozen artifact, closure evidence, and an implementation candidate are all present.",
+          "Resolution here means interface evidence is sufficient for the next controlled inference operation; it does not prove successful runtime execution."
+        ]
+      }
+    },
+    "T7": {
+      "task": "T7",
+      "closure": {
+        "task": "T7",
+        "closure_path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod012_final_closure.json",
+        "closure_exists": true,
+        "closure_readable": true,
+        "status": "COMPLETE",
+        "closure_status": null,
+        "supported_as": null,
+        "not_supported_as": null,
+        "selected_model": null
+      },
+      "artifact_inventory": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod012_final_closure.json",
+          "exists": true,
+          "size_bytes": 4425
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod011_final_model_comparison_audit.json",
+          "exists": true,
+          "size_bytes": 2680
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod010_log_normal_aft_model.json",
+          "exists": true,
+          "size_bytes": 2899
+        }
+      ],
+      "implementation_candidates": [
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/scripts/t7_mod003_build_modeling_dataset.py",
+          "relative_path": "modeling/T7/scripts/t7_mod003_build_modeling_dataset.py",
+          "keyword_hits": [
+            "censor"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "fail",
+            "remove_if_exists",
+            "ensure_directories",
+            "parse_raw_creation_timestamp",
+            "parse_target_creation_timestamp",
+            "creation_timestamps_equal",
+            "load_target_artifact",
+            "validate_feature_artifact",
+            "build_sqlite_staging",
+            "materialize_final_dataset",
+            "validate_final_dataset",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/scripts/t7_mod003_duplicate_feature_diagnostic.py",
+          "relative_path": "modeling/T7/scripts/t7_mod003_duplicate_feature_diagnostic.py",
+          "keyword_hits": [
+            "AFT"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "clean_ids",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/scripts/t7_mod004_feature_temporal_split_audit.py",
+          "relative_path": "modeling/T7/scripts/t7_mod004_feature_temporal_split_audit.py",
+          "keyword_hits": [
+            "AFT",
+            "censor"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "fail",
+            "parse_creation",
+            "parse_int",
+            "percentile",
+            "summarize_feature",
+            "event_summary",
+            "temporal_summary",
+            "check_temporal_order",
+            "diagnostic_chronological_split",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/scripts/t7_mod005_freeze_chronological_split.py",
+          "relative_path": "modeling/T7/scripts/t7_mod005_freeze_chronological_split.py",
+          "keyword_hits": [
+            "AFT",
+            "censor"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "fail",
+            "parse_creation",
+            "event_summary",
+            "main",
+            "write_split"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/scripts/t7_mod006_survival_baselines.py",
+          "relative_path": "modeling/T7/scripts/t7_mod006_survival_baselines.py",
+          "keyword_hits": [
+            "AFT",
+            "censor",
+            "survival"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "load_split",
+            "build_grouped_statistics",
+            "build_kaplan_meier",
+            "build_nelson_aalen",
+            "survival_at_time",
+            "build_censoring_survival",
+            "ipcw_brier_score",
+            "percentile",
+            "find_survival_landmark",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/scripts/t7_mod007_predictive_survival_baseline.py",
+          "relative_path": "modeling/T7/scripts/t7_mod007_predictive_survival_baseline.py",
+          "keyword_hits": [
+            "AFT",
+            "Weibull",
+            "censor",
+            "survival"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "read_rows",
+            "parse_creation",
+            "text_features",
+            "build_frequency_maps",
+            "build_features",
+            "fit_standardizer",
+            "standardize",
+            "build_censoring_km",
+            "censor_survival_at",
+            "censor_survival_before",
+            "ipcw_brier",
+            "efficient_harrell_concordance",
+            "percentile",
+            "main",
+            "__init__",
+            "negative_log_likelihood",
+            "fit",
+            "shape_",
+            "survival",
+            "median_time",
+            "__init__",
+            "add",
+            "prefix_sum"
+          ],
+          "classes": [
+            "WeibullAFT",
+            "FenwickTree"
+          ],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/scripts/t7_mod008_predictive_vs_reference_evaluation.py",
+          "relative_path": "modeling/T7/scripts/t7_mod008_predictive_vs_reference_evaluation.py",
+          "keyword_hits": [
+            "AFT",
+            "Weibull",
+            "censor",
+            "survival"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "load_evaluation",
+            "load_predictions",
+            "load_km_curve",
+            "load_json",
+            "km_survival_at",
+            "build_censoring_km",
+            "censor_survival_at",
+            "censor_survival_before",
+            "ipcw_brier",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/scripts/t7_mod009_survival_calibration.py",
+          "relative_path": "modeling/T7/scripts/t7_mod009_survival_calibration.py",
+          "keyword_hits": [
+            "censor",
+            "survival"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "load_evaluation",
+            "load_predictions",
+            "calibration_for_horizon",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/scripts/t7_mod010_log_normal_aft_baseline.py",
+          "relative_path": "modeling/T7/scripts/t7_mod010_log_normal_aft_baseline.py",
+          "keyword_hits": [
+            "AFT",
+            "LogNormal",
+            "Weibull",
+            "censor",
+            "survival"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "read_rows",
+            "parse_creation",
+            "text_features",
+            "frequency_maps",
+            "make_features",
+            "standardize_fit",
+            "censoring_km",
+            "G_at",
+            "G_before",
+            "ipcw_brier",
+            "concordance",
+            "main",
+            "__init__",
+            "objective",
+            "fit",
+            "sigma",
+            "survival",
+            "median",
+            "__init__",
+            "add",
+            "query"
+          ],
+          "classes": [
+            "LogNormalAFT",
+            "Fenwick"
+          ],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/scripts/t7_mod011_final_model_comparison.py",
+          "relative_path": "modeling/T7/scripts/t7_mod011_final_model_comparison.py",
+          "keyword_hits": [
+            "AFT",
+            "LogNormal",
+            "Weibull",
+            "survival"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "load_json",
+            "load_csv",
+            "find_column",
+            "find_horizon_column",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/scripts/t7_mod012_final_closure.py",
+          "relative_path": "modeling/T7/scripts/t7_mod012_final_closure.py",
+          "keyword_hits": [
+            "AFT",
+            "LogNormal",
+            "Weibull",
+            "censor",
+            "survival"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "load_json",
+            "main"
+          ],
+          "classes": [],
+          "syntax_error": null
+        },
+        {
+          "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/scripts/t7_mod013_generate_visualizations.py",
+          "relative_path": "modeling/T7/scripts/t7_mod013_generate_visualizations.py",
+          "keyword_hits": [
+            "AFT",
+            "LogNormal",
+            "Weibull",
+            "censor",
+            "survival"
+          ],
+          "syntax_valid": true,
+          "functions": [
+            "require_column",
+            "seconds_to_days",
+            "save_figure",
+            "load_json"
+          ],
+          "classes": [],
+          "syntax_error": null
+        }
+      ],
+      "resolution": {
+        "status": "RESOLVED",
+        "interface_contract": {
+          "input_grain": "ticket",
+          "expected_native_output": "native time-to-resolution survival output",
+          "runtime_operation": "survival prediction",
+          "probability_semantics": "censoring-aware survival semantics; not universal risk"
+        },
+        "evidence_notes": [
+          "Frozen artifact, closure evidence, and an implementation candidate are all present.",
+          "Resolution here means interface evidence is sufficient for the next controlled inference operation; it does not prove successful runtime execution."
+        ]
+      }
+    }
+  },
+  "safeguards": {
+    "model_fitted": false,
+    "prediction_generated": false,
+    "locked_test_used_for_selection": false,
+    "threshold_selected": false,
+    "threshold_optimized": false,
+    "universal_confidence_created": false,
+    "universal_risk_created": false,
+    "synthetic_target_created": false,
+    "frozen_artifact_modified": false,
+    "post_creation_information_used": false
+  },
+  "interpretation": {
+    "meaning_of_resolved": "The frozen artifact, closure evidence, and an implementation candidate provide enough evidence to define the next controlled inference interface.",
+    "not_proven": [
+      "successful runtime execution",
+      "end-to-end raw-ticket execution",
+      "production readiness",
+      "autonomous operation generation",
+      "validated human-review boundary",
+      "validated automation threshold"
+    ]
+  },
+  "next_gate": "Resolve PARTIAL/UNRESOLVED task interfaces before single-ticket inference."
+}

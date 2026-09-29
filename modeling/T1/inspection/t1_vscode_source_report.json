@@ -1,0 +1,37 @@
+{
+  "status": "INSPECTION_COMPLETE",
+  "data_root": "/run/media/whiteblack/User 1/Datasets",
+  "read_only": true,
+  "raw_source_modified": false,
+  "candidate_count": 1,
+  "candidates": [
+    {
+      "file": "/run/media/whiteblack/User 1/Datasets/GitBugs/vscode_bugs.csv.zip",
+      "format": "zip",
+      "member_count": 2,
+      "csv_members": [
+        "vscode_bugs.csv",
+        "__MACOSX/._vscode_bugs.csv"
+      ],
+      "csv_inspections": [
+        {
+          "member": "vscode_bugs.csv",
+          "columns": [
+            "Issue id",
+            "Summary",
+            "Created",
+            "Resolved",
+            "Description",
+            "Resolution"
+          ]
+        },
+        {
+          "member": "__MACOSX/._vscode_bugs.csv",
+          "columns": [
+            "\u0000\u0005\u0016\u0007\u0000\u0002\u0000\u0000Mac OS X        \u0000\u0002\u0000\u0000\u0000\t\u0000\u0000\u00002\u0000\u0000\u0000�\u0000\u0000\u0000\u0002\u0000\u0000\u0001\u001f\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000ATTR\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u001f\u0000\u0000\u0000�\u0000\u0000\u0000?\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0003\u0000\u0000\u0000�\u0000\u0000\u0000\u0010\u0000\u0000\u001acom.apple.lastuseddate#PS\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0000\u0000\u0000"
+          ]
+        }
+      ]
+    }
+  ]
+}

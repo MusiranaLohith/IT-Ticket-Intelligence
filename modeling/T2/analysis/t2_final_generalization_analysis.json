@@ -1,0 +1,255 @@
+{
+  "operation": "T2-MOD-021",
+  "operation_name": "Final Test Error & Generalization Analysis",
+  "task": "T2",
+  "dataset": "Mozilla CORE",
+  "model": {
+    "operation": "T2-MOD-007",
+    "name": "TF-IDF + Class-Weighted Logistic Regression"
+  },
+  "validation": {
+    "accuracy": 0.446102,
+    "macro_f1": 0.31045,
+    "weighted_f1": 0.443565,
+    "source": "T2-MOD-019"
+  },
+  "test": {
+    "rows": 4425,
+    "accuracy": 0.4201129943502825,
+    "macro_f1": 0.26495957519937885,
+    "weighted_f1": 0.42540851125365187,
+    "source": "T2-MOD-020"
+  },
+  "generalization_change": {
+    "accuracy_change": -0.02598900564971751,
+    "macro_f1_change": -0.045490424800621154,
+    "weighted_f1_change": -0.01815648874634812,
+    "accuracy_change_percentage_points": -2.598900564971751,
+    "macro_f1_change_percentage_points": -4.549042480062115,
+    "weighted_f1_change_percentage_points": -1.815648874634812
+  },
+  "test_per_class": {
+    "P1": {
+      "precision": 0.2560728744939271,
+      "recall": 0.4048,
+      "f1": 0.3137011779293242,
+      "support": 625
+    },
+    "P2": {
+      "precision": 0.4161988773055333,
+      "recall": 0.33679428942245293,
+      "f1": 0.37230989956958394,
+      "support": 1541
+    },
+    "P3": {
+      "precision": 0.5434782608695652,
+      "recall": 0.5175734232065479,
+      "f1": 0.530209617755857,
+      "support": 2077
+    },
+    "P4": {
+      "precision": 0.03125,
+      "recall": 0.06060606060606061,
+      "f1": 0.041237113402061855,
+      "support": 33
+    },
+    "P5": {
+      "precision": 0.06756756756756757,
+      "recall": 0.06711409395973154,
+      "f1": 0.06734006734006734,
+      "support": 149
+    }
+  },
+  "test_actual_distribution": {
+    "P1": 625,
+    "P2": 1541,
+    "P3": 2077,
+    "P4": 33,
+    "P5": 149
+  },
+  "test_predicted_distribution": {
+    "P1": 988,
+    "P2": 1247,
+    "P3": 1978,
+    "P4": 64,
+    "P5": 148
+  },
+  "test_prediction_distribution_difference": {
+    "P1": {
+      "actual_count": 625,
+      "predicted_count": 988,
+      "actual_percentage": 14.124293785310735,
+      "predicted_percentage": 22.327683615819208,
+      "difference_percentage_points": 8.203389830508472
+    },
+    "P2": {
+      "actual_count": 1541,
+      "predicted_count": 1247,
+      "actual_percentage": 34.82485875706215,
+      "predicted_percentage": 28.18079096045198,
+      "difference_percentage_points": -6.64406779661017
+    },
+    "P3": {
+      "actual_count": 2077,
+      "predicted_count": 1978,
+      "actual_percentage": 46.93785310734464,
+      "predicted_percentage": 44.70056497175141,
+      "difference_percentage_points": -2.237288135593224
+    },
+    "P4": {
+      "actual_count": 33,
+      "predicted_count": 64,
+      "actual_percentage": 0.7457627118644068,
+      "predicted_percentage": 1.4463276836158192,
+      "difference_percentage_points": 0.7005649717514124
+    },
+    "P5": {
+      "actual_count": 149,
+      "predicted_count": 148,
+      "actual_percentage": 3.367231638418079,
+      "predicted_percentage": 3.344632768361582,
+      "difference_percentage_points": -0.02259887005649705
+    }
+  },
+  "test_confusion_matrix": {
+    "P1": {
+      "P1": 253,
+      "P2": 162,
+      "P3": 191,
+      "P4": 2,
+      "P5": 17
+    },
+    "P2": {
+      "P1": 354,
+      "P2": 519,
+      "P3": 614,
+      "P4": 10,
+      "P5": 44
+    },
+    "P3": {
+      "P1": 349,
+      "P2": 533,
+      "P3": 1075,
+      "P4": 43,
+      "P5": 77
+    },
+    "P4": {
+      "P1": 2,
+      "P2": 10,
+      "P3": 19,
+      "P4": 2,
+      "P5": 0
+    },
+    "P5": {
+      "P1": 30,
+      "P2": 23,
+      "P3": 79,
+      "P4": 7,
+      "P5": 10
+    }
+  },
+  "top_test_errors": [
+    {
+      "actual": "P2",
+      "predicted": "P3",
+      "count": 614
+    },
+    {
+      "actual": "P3",
+      "predicted": "P2",
+      "count": 533
+    },
+    {
+      "actual": "P2",
+      "predicted": "P1",
+      "count": 354
+    },
+    {
+      "actual": "P3",
+      "predicted": "P1",
+      "count": 349
+    },
+    {
+      "actual": "P1",
+      "predicted": "P3",
+      "count": 191
+    },
+    {
+      "actual": "P1",
+      "predicted": "P2",
+      "count": 162
+    },
+    {
+      "actual": "P5",
+      "predicted": "P3",
+      "count": 79
+    },
+    {
+      "actual": "P3",
+      "predicted": "P5",
+      "count": 77
+    },
+    {
+      "actual": "P2",
+      "predicted": "P5",
+      "count": 44
+    },
+    {
+      "actual": "P3",
+      "predicted": "P4",
+      "count": 43
+    }
+  ],
+  "test_class_error_summary": {
+    "P1": {
+      "support": 625,
+      "correct": 253,
+      "errors": 372,
+      "error_rate": 0.5952
+    },
+    "P2": {
+      "support": 1541,
+      "correct": 519,
+      "errors": 1022,
+      "error_rate": 0.6632057105775471
+    },
+    "P3": {
+      "support": 2077,
+      "correct": 1075,
+      "errors": 1002,
+      "error_rate": 0.4824265767934521
+    },
+    "P4": {
+      "support": 33,
+      "correct": 2,
+      "errors": 31,
+      "error_rate": 0.9393939393939394
+    },
+    "P5": {
+      "support": 149,
+      "correct": 10,
+      "errors": 139,
+      "error_rate": 0.9328859060402684
+    }
+  },
+  "interpretation": {
+    "observations": [
+      "Test accuracy is lower than validation accuracy, indicating reduced performance on the later held-out period.",
+      "Test macro-F1 decreases more strongly than accuracy, indicating that the generalization loss is particularly important for class-balanced performance.",
+      "P4 and P5 remain difficult on the final test period, with substantially lower F1 than P1-P3.",
+      "The model continues to concentrate predictions toward the more represented priority classes.",
+      "The results do not support treating the T2 model as a uniformly reliable five-class priority predictor.",
+      "The evidence supports using T2 as a confidence-aware decision-support signal rather than an unquestioned automated priority assignment."
+    ],
+    "model_reliability": "limited and class-dependent",
+    "minority_class_reliability": "weak for P4 and P5",
+    "recommended_system_role": "decision-support signal requiring confidence-aware handling and human-review consideration"
+  },
+  "integrity": {
+    "retraining_performed": false,
+    "refitting_performed": false,
+    "test_tuning_performed": false,
+    "dataset_modified": false
+  },
+  "status": "GENERALIZATION_ANALYSIS_COMPLETE"
+}

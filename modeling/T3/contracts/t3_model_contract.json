@@ -1,0 +1,129 @@
+{
+  "operation": "T3-MOD-001",
+  "task": "T3",
+  "task_name": "Severity Prediction",
+  "dataset": "Mozilla CORE",
+  "status": "READY_FOR_CONTROLLED_MODELING",
+  "target": {
+    "name": "first operational post-Creation Severity",
+    "classes": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+    ],
+    "selection_rule": "First post-Creation History event containing a Severity change; use the first Severity change within that event.",
+    "admissible_added_values": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+    ],
+    "excluded_target_values": [
+      "S3 S3"
+    ],
+    "historical_severity_mapping": "FORBIDDEN",
+    "current_final_severity": "FORBIDDEN_AS_CREATION_TARGET"
+  },
+  "prediction_boundary": {
+    "name": "Creation",
+    "type": "Creation-time cutoff",
+    "post_creation_information": "FORBIDDEN",
+    "current_state_backfill": "FORBIDDEN"
+  },
+  "horizon": {
+    "type": "event-based first-observable outcome",
+    "fixed_hour_horizon": false,
+    "description": "The prediction target is the first admissible post-Creation Severity event rather than an arbitrary fixed-hour state."
+  },
+  "features": {
+    "admitted": [
+      "Summary",
+      "Description"
+    ],
+    "boundary": "Creation-time ticket content",
+    "forbidden": [
+      "post-Creation History",
+      "target-event information",
+      "current/final Severity",
+      "current mutable state",
+      "future information",
+      "target-derived features",
+      "historical Severity relabeling"
+    ]
+  },
+  "migration_policy": {
+    "documented_migration": "2022-10-11/2022-10-12",
+    "migration_actor": "automation@bmo.tld",
+    "excluded_migration_events": 39832,
+    "treatment": "Exclude from ordinary operational T3 target population",
+    "raw_history_modified": false
+  },
+  "eligibility": {
+    "authoritative_pre_exclusion_population": 70671,
+    "migration_exclusions": 39832,
+    "final_supervised_population": 30839,
+    "malformed_history_as_negative": false,
+    "no_observation_as_negative": false
+  },
+  "class_distribution": {
+    "S1": {
+      "count": 227,
+      "percentage": 0.74
+    },
+    "S2": {
+      "count": 2886,
+      "percentage": 9.36
+    },
+    "S3": {
+      "count": 20955,
+      "percentage": 67.95
+    },
+    "S4": {
+      "count": 6771,
+      "percentage": 21.96
+    }
+  },
+  "validated_artifact": {
+    "path": "/run/media/whiteblack/User 1/Datasets/Mozilla_CORE/DTM-002_T3_FIRST_SEVERITY_derived.csv",
+    "rows": 30839,
+    "columns": 11,
+    "validated": true,
+    "validation_operation": "DTM-002 OP-049",
+    "readiness_operation": "DTM-002 OP-055"
+  },
+  "validation_status": {
+    "structural_validation": "PASS",
+    "target_accounting": "PASS",
+    "temporal_integrity": "PASS",
+    "migration_exclusion": "PASS",
+    "feature_availability": "PASS",
+    "semantic_leakage_review": "PASS",
+    "duplicate_consistency": "PASS",
+    "class_eligibility_accounting": "PASS"
+  },
+  "modeling_constraints": {
+    "advanced_model_required": false,
+    "test_set": "Must remain locked until final model selection.",
+    "model_selection": "Must be based on training/validation evidence only.",
+    "class_imbalance": "Must be explicitly considered during modeling and evaluation.",
+    "minority_classes": [
+      "S1",
+      "S2"
+    ],
+    "calibration": "Categorical probability/confidence evaluation is permitted and should remain task-specific."
+  },
+  "integrity": {
+    "training_started": false,
+    "model_selected": false,
+    "test_used": false,
+    "dataset_modified": false,
+    "raw_source_modified": false,
+    "rn136_modified": false
+  },
+  "source_decision": {
+    "dtm_status": "CLOSED",
+    "dtm_readiness": "PASS",
+    "modeling_readiness": "READY_FOR_CONTROLLED_MODELING"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "operation": "F-OP-011",
+  "title": "Final Component Distribution Reconciliation",
+  "status": "PASS",
+  "read_only": true,
+  "models_executed": false,
+  "model_modified": false,
+  "retraining_performed": false,
+  "threshold_selection_performed": false,
+  "locked_test_reused_for_policy_selection": false,
+  "source": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/mod036/op026/t8_mod036_op026_decision_engine_validation.json",
+  "raw_distribution": {
+    "2": 9727,
+    "1": 109649,
+    "3": 519
+  },
+  "normalized_distribution": {
+    "2": 9727,
+    "1": 109649,
+    "3": 519
+  },
+  "reconciled_distribution": {
+    "1": 109649,
+    "2": 9727,
+    "3": 519,
+    "4": 0
+  },
+  "expected_distribution": {
+    "1": 109649,
+    "2": 9727,
+    "3": 519,
+    "4": 0
+  },
+  "per_category_checks": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true
+  },
+  "observed_total": 119895,
+  "expected_total": 119895,
+  "total_check": true,
+  "exact_reconciliation": true,
+  "semantic_interpretation": {
+    "absent_component_category_means_zero_observed_instances": true,
+    "synthetic_rows_created": false,
+    "population_modified": false,
+    "native_evidence_semantics_preserved": true
+  }
+}

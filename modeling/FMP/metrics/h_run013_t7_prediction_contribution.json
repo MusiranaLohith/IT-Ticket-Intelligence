@@ -1,0 +1,440 @@
+{
+  "operation": "H-RUN-013",
+  "operation_name": "T7 Prediction Contribution Decomposition",
+  "status": "PASS",
+  "feature_count": 21,
+  "features": [
+    {
+      "index": 0,
+      "feature": "creator_frequency_log1p",
+      "raw_value": 0.0,
+      "standardization_mean": 5.347149484351965,
+      "standardization_std": 2.778873869731118,
+      "standardized_value": -1.924214532583068,
+      "beta": -0.12340342801349583,
+      "contribution_to_linear_predictor": 0.23745466955413713
+    },
+    {
+      "index": 1,
+      "feature": "creator_detail_frequency_log1p",
+      "raw_value": 0.0,
+      "standardization_mean": 2.2294632163480856,
+      "standardization_std": 1.6648898794672375,
+      "standardized_value": -1.3391055131294995,
+      "beta": -0.22491529444930908,
+      "contribution_to_linear_predictor": 0.3011853107842145
+    },
+    {
+      "index": 2,
+      "feature": "summary_chars_log1p",
+      "raw_value": 3.7376696182833684,
+      "standardization_mean": 4.145639886570709,
+      "standardization_std": 0.49499872751643575,
+      "standardized_value": -0.8241844788859479,
+      "beta": 0.13520808138997747,
+      "contribution_to_linear_predictor": -0.11143640210156742
+    },
+    {
+      "index": 3,
+      "feature": "summary_words_log1p",
+      "raw_value": 1.9459101490553132,
+      "standardization_mean": 2.194224686620196,
+      "standardization_std": 0.42318216229058797,
+      "standardized_value": -0.5867793108783534,
+      "beta": 0.3309687359112039,
+      "contribution_to_linear_predictor": -0.19420560678025597
+    },
+    {
+      "index": 4,
+      "feature": "summary_digits_log1p",
+      "raw_value": 0.0,
+      "standardization_mean": 0.3981353121586747,
+      "standardization_std": 0.7578329085902389,
+      "standardized_value": -0.5253602841018177,
+      "beta": -0.3143311443440842,
+      "contribution_to_linear_predictor": 0.16513709929465753
+    },
+    {
+      "index": 5,
+      "feature": "summary_lines_log1p",
+      "raw_value": 0.0,
+      "standardization_mean": 0.0,
+      "standardization_std": 1.0,
+      "standardized_value": 0.0,
+      "beta": 0.0,
+      "contribution_to_linear_predictor": 0.0
+    },
+    {
+      "index": 6,
+      "feature": "summary_uppercase_log1p",
+      "raw_value": 1.3862943611198906,
+      "standardization_mean": 1.4095671645511128,
+      "standardization_std": 0.8253013614487303,
+      "standardized_value": -0.028199157929861163,
+      "beta": -0.11754794360133392,
+      "contribution_to_linear_predictor": 0.003314753025944428
+    },
+    {
+      "index": 7,
+      "feature": "summary_missing",
+      "raw_value": 0.0,
+      "standardization_mean": 0.0,
+      "standardization_std": 1.0,
+      "standardized_value": 0.0,
+      "beta": 0.0,
+      "contribution_to_linear_predictor": 0.0
+    },
+    {
+      "index": 8,
+      "feature": "description_chars_log1p",
+      "raw_value": 5.501258210544727,
+      "standardization_mean": 6.110574301073749,
+      "standardization_std": 1.6411747860408885,
+      "standardized_value": -0.3712682498607682,
+      "beta": 0.7602783260895162,
+      "contribution_to_linear_predictor": -0.28226720353432905
+    },
+    {
+      "index": 9,
+      "feature": "description_words_log1p",
+      "raw_value": 3.713572066704308,
+      "standardization_mean": 3.986452663121047,
+      "standardization_std": 1.3393296208874534,
+      "standardized_value": -0.2037441658580846,
+      "beta": 0.21682993357796834,
+      "contribution_to_linear_predictor": -0.04417783394990705
+    },
+    {
+      "index": 10,
+      "feature": "description_digits_log1p",
+      "raw_value": 0.0,
+      "standardization_mean": 2.8590208412490083,
+      "standardization_std": 1.9235060012368592,
+      "standardized_value": -1.486359200028797,
+      "beta": -0.5527778108803403,
+      "contribution_to_linear_predictor": 0.8216263847737723
+    },
+    {
+      "index": 11,
+      "feature": "description_lines_log1p",
+      "raw_value": 0.0,
+      "standardization_mean": 0.0,
+      "standardization_std": 1.0,
+      "standardized_value": 0.0,
+      "beta": 0.0,
+      "contribution_to_linear_predictor": 0.0
+    },
+    {
+      "index": 12,
+      "feature": "description_uppercase_log1p",
+      "raw_value": 2.3978952727983707,
+      "standardization_mean": 3.098959560644981,
+      "standardization_std": 1.5616898457869537,
+      "standardized_value": -0.44891390549660376,
+      "beta": -0.22991929275001233,
+      "contribution_to_linear_predictor": 0.10321396765742501
+    },
+    {
+      "index": 13,
+      "feature": "description_missing",
+      "raw_value": 0.0,
+      "standardization_mean": 0.03281336667866839,
+      "standardization_std": 0.17814783087644648,
+      "standardized_value": -0.18419178340389636,
+      "beta": 0.11670077200457585,
+      "contribution_to_linear_predictor": -0.021495323320134326
+    },
+    {
+      "index": 14,
+      "feature": "creation_year_scaled",
+      "raw_value": 1.6,
+      "standardization_mean": 0.15910590387562612,
+      "standardization_std": 0.6425626471027805,
+      "standardized_value": 2.24241807802111,
+      "beta": 0.8572757038367161,
+      "contribution_to_linear_predictor": 1.9223705361317232
+    },
+    {
+      "index": 15,
+      "feature": "creation_month_sin",
+      "raw_value": -0.8660254037844384,
+      "standardization_mean": 0.023763114802244897,
+      "standardization_std": 0.7125410026730227,
+      "standardized_value": -1.248754128181726,
+      "beta": -0.05119327902284837,
+      "contribution_to_linear_predictor": 0.06392781851494087
+    },
+    {
+      "index": 16,
+      "feature": "creation_month_cos",
+      "raw_value": -0.5000000000000004,
+      "standardization_mean": -0.03409386416645023,
+      "standardization_std": 0.7003986310045762,
+      "standardized_value": -0.6652013799131856,
+      "beta": 0.02593533772195976,
+      "contribution_to_linear_predictor": -0.01725222244116213
+    },
+    {
+      "index": 17,
+      "feature": "creation_weekday_sin",
+      "raw_value": -0.9749279121818236,
+      "standardization_mean": 0.16013137094003485,
+      "standardization_std": 0.6788903245230384,
+      "standardized_value": -1.6719332153088295,
+      "beta": -0.050357096464383765,
+      "contribution_to_linear_predictor": 0.08419370220531404
+    },
+    {
+      "index": 18,
+      "feature": "creation_weekday_cos",
+      "raw_value": -0.2225209339563146,
+      "standardization_mean": -0.11845061058626963,
+      "standardization_std": 0.7067073822746958,
+      "standardized_value": -0.14726084088024005,
+      "beta": 0.00015343206452288481,
+      "contribution_to_linear_predictor": -2.2594534839631267e-05
+    },
+    {
+      "index": 19,
+      "feature": "creation_hour_sin",
+      "raw_value": -1.0,
+      "standardization_mean": 0.013074771642003508,
+      "standardization_std": 0.7024162518209779,
+      "standardized_value": -1.4422712586954807,
+      "beta": 0.037799425213742265,
+      "contribution_to_linear_predictor": -0.05451702458098975
+    },
+    {
+      "index": 20,
+      "feature": "creation_hour_cos",
+      "raw_value": -1.8369701987210297e-16,
+      "standardization_mean": 0.18365614254688145,
+      "standardization_std": 0.6875397303646514,
+      "standardized_value": -0.2671207705327453,
+      "beta": 0.00013477156396692167,
+      "contribution_to_linear_predictor": -3.600028401274729e-05
+    }
+  ],
+  "ranked_absolute_contributors": [
+    {
+      "index": 14,
+      "feature": "creation_year_scaled",
+      "raw_value": 1.6,
+      "standardization_mean": 0.15910590387562612,
+      "standardization_std": 0.6425626471027805,
+      "standardized_value": 2.24241807802111,
+      "beta": 0.8572757038367161,
+      "contribution_to_linear_predictor": 1.9223705361317232
+    },
+    {
+      "index": 10,
+      "feature": "description_digits_log1p",
+      "raw_value": 0.0,
+      "standardization_mean": 2.8590208412490083,
+      "standardization_std": 1.9235060012368592,
+      "standardized_value": -1.486359200028797,
+      "beta": -0.5527778108803403,
+      "contribution_to_linear_predictor": 0.8216263847737723
+    },
+    {
+      "index": 1,
+      "feature": "creator_detail_frequency_log1p",
+      "raw_value": 0.0,
+      "standardization_mean": 2.2294632163480856,
+      "standardization_std": 1.6648898794672375,
+      "standardized_value": -1.3391055131294995,
+      "beta": -0.22491529444930908,
+      "contribution_to_linear_predictor": 0.3011853107842145
+    },
+    {
+      "index": 8,
+      "feature": "description_chars_log1p",
+      "raw_value": 5.501258210544727,
+      "standardization_mean": 6.110574301073749,
+      "standardization_std": 1.6411747860408885,
+      "standardized_value": -0.3712682498607682,
+      "beta": 0.7602783260895162,
+      "contribution_to_linear_predictor": -0.28226720353432905
+    },
+    {
+      "index": 0,
+      "feature": "creator_frequency_log1p",
+      "raw_value": 0.0,
+      "standardization_mean": 5.347149484351965,
+      "standardization_std": 2.778873869731118,
+      "standardized_value": -1.924214532583068,
+      "beta": -0.12340342801349583,
+      "contribution_to_linear_predictor": 0.23745466955413713
+    },
+    {
+      "index": 3,
+      "feature": "summary_words_log1p",
+      "raw_value": 1.9459101490553132,
+      "standardization_mean": 2.194224686620196,
+      "standardization_std": 0.42318216229058797,
+      "standardized_value": -0.5867793108783534,
+      "beta": 0.3309687359112039,
+      "contribution_to_linear_predictor": -0.19420560678025597
+    },
+    {
+      "index": 4,
+      "feature": "summary_digits_log1p",
+      "raw_value": 0.0,
+      "standardization_mean": 0.3981353121586747,
+      "standardization_std": 0.7578329085902389,
+      "standardized_value": -0.5253602841018177,
+      "beta": -0.3143311443440842,
+      "contribution_to_linear_predictor": 0.16513709929465753
+    },
+    {
+      "index": 2,
+      "feature": "summary_chars_log1p",
+      "raw_value": 3.7376696182833684,
+      "standardization_mean": 4.145639886570709,
+      "standardization_std": 0.49499872751643575,
+      "standardized_value": -0.8241844788859479,
+      "beta": 0.13520808138997747,
+      "contribution_to_linear_predictor": -0.11143640210156742
+    },
+    {
+      "index": 12,
+      "feature": "description_uppercase_log1p",
+      "raw_value": 2.3978952727983707,
+      "standardization_mean": 3.098959560644981,
+      "standardization_std": 1.5616898457869537,
+      "standardized_value": -0.44891390549660376,
+      "beta": -0.22991929275001233,
+      "contribution_to_linear_predictor": 0.10321396765742501
+    },
+    {
+      "index": 17,
+      "feature": "creation_weekday_sin",
+      "raw_value": -0.9749279121818236,
+      "standardization_mean": 0.16013137094003485,
+      "standardization_std": 0.6788903245230384,
+      "standardized_value": -1.6719332153088295,
+      "beta": -0.050357096464383765,
+      "contribution_to_linear_predictor": 0.08419370220531404
+    },
+    {
+      "index": 15,
+      "feature": "creation_month_sin",
+      "raw_value": -0.8660254037844384,
+      "standardization_mean": 0.023763114802244897,
+      "standardization_std": 0.7125410026730227,
+      "standardized_value": -1.248754128181726,
+      "beta": -0.05119327902284837,
+      "contribution_to_linear_predictor": 0.06392781851494087
+    },
+    {
+      "index": 19,
+      "feature": "creation_hour_sin",
+      "raw_value": -1.0,
+      "standardization_mean": 0.013074771642003508,
+      "standardization_std": 0.7024162518209779,
+      "standardized_value": -1.4422712586954807,
+      "beta": 0.037799425213742265,
+      "contribution_to_linear_predictor": -0.05451702458098975
+    },
+    {
+      "index": 9,
+      "feature": "description_words_log1p",
+      "raw_value": 3.713572066704308,
+      "standardization_mean": 3.986452663121047,
+      "standardization_std": 1.3393296208874534,
+      "standardized_value": -0.2037441658580846,
+      "beta": 0.21682993357796834,
+      "contribution_to_linear_predictor": -0.04417783394990705
+    },
+    {
+      "index": 13,
+      "feature": "description_missing",
+      "raw_value": 0.0,
+      "standardization_mean": 0.03281336667866839,
+      "standardization_std": 0.17814783087644648,
+      "standardized_value": -0.18419178340389636,
+      "beta": 0.11670077200457585,
+      "contribution_to_linear_predictor": -0.021495323320134326
+    },
+    {
+      "index": 16,
+      "feature": "creation_month_cos",
+      "raw_value": -0.5000000000000004,
+      "standardization_mean": -0.03409386416645023,
+      "standardization_std": 0.7003986310045762,
+      "standardized_value": -0.6652013799131856,
+      "beta": 0.02593533772195976,
+      "contribution_to_linear_predictor": -0.01725222244116213
+    },
+    {
+      "index": 6,
+      "feature": "summary_uppercase_log1p",
+      "raw_value": 1.3862943611198906,
+      "standardization_mean": 1.4095671645511128,
+      "standardization_std": 0.8253013614487303,
+      "standardized_value": -0.028199157929861163,
+      "beta": -0.11754794360133392,
+      "contribution_to_linear_predictor": 0.003314753025944428
+    },
+    {
+      "index": 20,
+      "feature": "creation_hour_cos",
+      "raw_value": -1.8369701987210297e-16,
+      "standardization_mean": 0.18365614254688145,
+      "standardization_std": 0.6875397303646514,
+      "standardized_value": -0.2671207705327453,
+      "beta": 0.00013477156396692167,
+      "contribution_to_linear_predictor": -3.600028401274729e-05
+    },
+    {
+      "index": 18,
+      "feature": "creation_weekday_cos",
+      "raw_value": -0.2225209339563146,
+      "standardization_mean": -0.11845061058626963,
+      "standardization_std": 0.7067073822746958,
+      "standardized_value": -0.14726084088024005,
+      "beta": 0.00015343206452288481,
+      "contribution_to_linear_predictor": -2.2594534839631267e-05
+    },
+    {
+      "index": 5,
+      "feature": "summary_lines_log1p",
+      "raw_value": 0.0,
+      "standardization_mean": 0.0,
+      "standardization_std": 1.0,
+      "standardized_value": 0.0,
+      "beta": 0.0,
+      "contribution_to_linear_predictor": 0.0
+    },
+    {
+      "index": 7,
+      "feature": "summary_missing",
+      "raw_value": 0.0,
+      "standardization_mean": 0.0,
+      "standardization_std": 1.0,
+      "standardized_value": 0.0,
+      "beta": 0.0,
+      "contribution_to_linear_predictor": 0.0
+    },
+    {
+      "index": 11,
+      "feature": "description_lines_log1p",
+      "raw_value": 0.0,
+      "standardization_mean": 0.0,
+      "standardization_std": 1.0,
+      "standardized_value": 0.0,
+      "beta": 0.0,
+      "contribution_to_linear_predictor": 0.0
+    }
+  ],
+  "linear_predictor": 2.9770140304149306,
+  "predicted_median_duration_seconds": 19.629117104199928,
+  "controls": {
+    "training": false,
+    "retraining": false,
+    "locked_test_use": false,
+    "prediction_modification": false,
+    "threshold_selection": false
+  },
+  "interpretation_boundary": "This operation decomposes the existing frozen T7 prediction into standardized feature contributions. It does not modify the model or establish an operational decision threshold."
+}

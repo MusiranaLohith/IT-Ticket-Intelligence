@@ -1,0 +1,167 @@
+{
+  "task": "T3_SEVERITY_PREDICTION",
+  "evaluation_split": "VALIDATION_ONLY",
+  "test_used": false,
+  "models": {
+    "T3-MOD-007": {
+      "model": "TF-IDF + Logistic Regression",
+      "class_weight": null,
+      "train_rows": 21587,
+      "validation_rows": 4626,
+      "feature_count": 288972,
+      "accuracy": 0.7455685257241678,
+      "macro_f1": 0.3048406686411903,
+      "weighted_f1": 0.6819056084522465,
+      "per_class": {
+        "S1": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 20
+        },
+        "S2": {
+          "precision": 0.6,
+          "recall": 0.024640657084188913,
+          "f1": 0.047337278106508875,
+          "support": 487
+        },
+        "S3": {
+          "precision": 0.7643074048119598,
+          "recall": 0.9567251461988304,
+          "f1": 0.8497597714582522,
+          "support": 3420
+        },
+        "S4": {
+          "precision": 0.5076923076923077,
+          "recall": 0.23605150214592274,
+          "f1": 0.322265625,
+          "support": 699
+        }
+      }
+    },
+    "T3-MOD-008": {
+      "model": "TF-IDF + Logistic Regression",
+      "class_weight": "balanced",
+      "train_rows": 21587,
+      "validation_rows": 4626,
+      "feature_count": 288972,
+      "accuracy": 0.5845222654561176,
+      "macro_f1": 0.3480174180281372,
+      "weighted_f1": 0.6148412546447116,
+      "per_class": {
+        "S1": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 20
+        },
+        "S2": {
+          "precision": 0.23049645390070922,
+          "recall": 0.4004106776180698,
+          "f1": 0.29257314328582146,
+          "support": 487
+        },
+        "S3": {
+          "precision": 0.8109527381845462,
+          "recall": 0.6321637426900585,
+          "f1": 0.710483075911929,
+          "support": 3420
+        },
+        "S4": {
+          "precision": 0.31981566820276497,
+          "recall": 0.49642346208869814,
+          "f1": 0.3890134529147982,
+          "support": 699
+        }
+      }
+    },
+    "T3-MOD-010": {
+      "model": "Word TF-IDF + Character TF-IDF + Logistic Regression",
+      "class_weight": null,
+      "train_rows": 21587,
+      "validation_rows": 4626,
+      "feature_count": 1499419,
+      "accuracy": 0.7414613056636403,
+      "macro_f1": 0.31619284565993494,
+      "weighted_f1": 0.6850641448377104,
+      "per_class": {
+        "S1": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 20
+        },
+        "S2": {
+          "precision": 0.5116279069767442,
+          "recall": 0.045174537987679675,
+          "f1": 0.0830188679245283,
+          "support": 487
+        },
+        "S3": {
+          "precision": 0.766928011404134,
+          "recall": 0.9438596491228071,
+          "f1": 0.8462445930003932,
+          "support": 3420
+        },
+        "S4": {
+          "precision": 0.48128342245989303,
+          "recall": 0.2575107296137339,
+          "f1": 0.33550792171481825,
+          "support": 699
+        }
+      }
+    }
+  },
+  "feature_details": {
+    "T3-MOD-007": {
+      "word_features": 288972,
+      "character_features": 0,
+      "combined_features": 288972
+    },
+    "T3-MOD-008": {
+      "word_features": 288972,
+      "character_features": 0,
+      "combined_features": 288972
+    },
+    "T3-MOD-010": {
+      "word_features": 288972,
+      "character_features": 1210447,
+      "combined_features": 1499419
+    }
+  },
+  "pairwise_changes": {
+    "T3-MOD-007_vs_T3-MOD-008": {
+      "accuracy_change": -0.16104626026805013,
+      "macro_f1_change": 0.04317674938694688,
+      "weighted_f1_change": -0.06706435380753484,
+      "per_class_f1_change": {
+        "S1": 0.0,
+        "S2": 0.2452358651793126,
+        "S3": -0.13927669554632316,
+        "S4": 0.06674782791479822
+      }
+    },
+    "T3-MOD-007_vs_T3-MOD-010": {
+      "accuracy_change": -0.004107220060527439,
+      "macro_f1_change": 0.011352177018744636,
+      "weighted_f1_change": 0.003158536385463928,
+      "per_class_f1_change": {
+        "S1": 0.0,
+        "S2": 0.03568158981801942,
+        "S3": -0.0035151784578589806,
+        "S4": 0.013242296714818247
+      }
+    },
+    "T3-MOD-008_vs_T3-MOD-010": {
+      "accuracy_change": 0.1569390402075227,
+      "macro_f1_change": -0.03182457236820224,
+      "weighted_f1_change": 0.07022289019299877,
+      "per_class_f1_change": {
+        "S1": 0.0,
+        "S2": -0.20955427536129317,
+        "S3": 0.13576151708846418,
+        "S4": -0.05350553119997997
+      }
+    }
+  }
+}

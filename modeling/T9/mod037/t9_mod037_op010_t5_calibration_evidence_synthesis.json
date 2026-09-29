@@ -1,0 +1,386 @@
+{
+  "operation": "T9_MOD-037_OP-010",
+  "title": "T5 Calibration Evidence Synthesis & Method Selection Audit",
+  "status": "PASS",
+  "operation_type": "EVIDENCE_SYNTHESIS_AND_METHOD_SELECTION_AUDIT",
+  "previous_operation_validation": {
+    "checks": {
+      "OP-005_status": {
+        "status": "PASS",
+        "observed": "PASS"
+      },
+      "OP-006_status": {
+        "status": "PASS",
+        "observed": "PASS"
+      },
+      "OP-007_status": {
+        "status": "PASS",
+        "observed": "PASS"
+      },
+      "OP-008_status": {
+        "status": "PASS",
+        "observed": "PASS"
+      },
+      "OP-009_status": {
+        "status": "PASS",
+        "observed": "PASS"
+      },
+      "OP-007_calibration_fitting": {
+        "status": "PASS",
+        "observed": false
+      },
+      "OP-007_threshold_selection": {
+        "status": "PASS",
+        "observed": false
+      },
+      "OP-007_locked_test": {
+        "status": "PASS",
+        "observed": false
+      },
+      "OP-008_calibration_fitting_performed": {
+        "status": "PASS",
+        "observed": false
+      },
+      "OP-008_threshold_selection_performed": {
+        "status": "PASS",
+        "observed": false
+      },
+      "OP-008_automation_threshold_selected": {
+        "status": "PASS",
+        "observed": false
+      },
+      "OP-008_review_threshold_selected": {
+        "status": "PASS",
+        "observed": false
+      },
+      "OP-008_universal_confidence_created": {
+        "status": "PASS",
+        "observed": false
+      },
+      "OP-008_universal_risk_score_created": {
+        "status": "PASS",
+        "observed": false
+      },
+      "OP-008_locked_test_used": {
+        "status": "PASS",
+        "observed": false
+      },
+      "OP-009_new_calibration_fitted": {
+        "status": "PASS",
+        "observed": false
+      },
+      "OP-009_new_probability_generated": {
+        "status": "PASS",
+        "observed": false
+      },
+      "OP-009_automation_threshold_selected": {
+        "status": "PASS",
+        "observed": false
+      },
+      "OP-009_review_threshold_selected": {
+        "status": "PASS",
+        "observed": false
+      },
+      "OP-009_locked_test_used": {
+        "status": "PASS",
+        "observed": false
+      },
+      "OP-009_universal_confidence_created": {
+        "status": "PASS",
+        "observed": false
+      },
+      "OP-009_universal_risk_score_created": {
+        "status": "PASS",
+        "observed": false
+      }
+    },
+    "failed_checks": [],
+    "status": "PASS"
+  },
+  "evidence_structure_validation": {
+    "checks": {
+      "metric_probability_fields": {
+        "status": "PASS",
+        "observed": [
+          "p_base",
+          "p_isotonic",
+          "p_sigmoid"
+        ]
+      },
+      "reliability_probability_fields": {
+        "status": "PASS",
+        "observed": [
+          "p_base",
+          "p_isotonic",
+          "p_sigmoid"
+        ]
+      },
+      "metric_set": {
+        "status": "PASS",
+        "observed": [
+          "average_precision",
+          "brier_score",
+          "ece",
+          "log_loss",
+          "mce",
+          "roc_auc"
+        ]
+      },
+      "metric_rows": {
+        "status": "PASS",
+        "observed": 18
+      },
+      "reliability_rows": {
+        "status": "PASS",
+        "observed": 3
+      }
+    },
+    "failed_checks": [],
+    "status": "PASS"
+  },
+  "point_estimate_and_uncertainty_table": [
+    {
+      "probability_field": "p_base",
+      "brier_score": 0.0310099626434788,
+      "brier_score_ci_lower": 0.0301705336123697,
+      "brier_score_ci_upper": 0.0318549125609399,
+      "log_loss": 0.1195264853313933,
+      "log_loss_ci_lower": 0.117049099295573,
+      "log_loss_ci_upper": 0.1220644560479094,
+      "ece": 0.0757956083565719,
+      "ece_ci_lower": 0.0747111300571867,
+      "ece_ci_upper": 0.0768837568318133,
+      "mce": 0.7462829819471514,
+      "mce_ci_lower": 0.7197403964502285,
+      "mce_ci_upper": 0.7791258933506892,
+      "roc_auc": 0.8967750508868694,
+      "roc_auc_ci_lower": 0.8812501054246873,
+      "roc_auc_ci_upper": 0.9119215786080432,
+      "average_precision": 0.1660634329266569,
+      "average_precision_ci_lower": 0.1351312242312376,
+      "average_precision_ci_upper": 0.2017053222210946
+    },
+    {
+      "probability_field": "p_sigmoid",
+      "brier_score": 0.0058618703212836,
+      "brier_score_ci_lower": 0.0057010604435163,
+      "brier_score_ci_upper": 0.006009262715757,
+      "log_loss": 0.0283663890777089,
+      "log_loss_ci_lower": 0.0273228810016379,
+      "log_loss_ci_upper": 0.0293775746201059,
+      "ece": 0.0010506276993786,
+      "ece_ci_lower": 0.0006622759803108,
+      "ece_ci_upper": 0.0014740485848289,
+      "mce": 0.7276874869494073,
+      "mce_ci_lower": 0.1876976007602925,
+      "mce_ci_upper": 0.9030691091358122,
+      "roc_auc": 0.8967750508868694,
+      "roc_auc_ci_lower": 0.8812501054246873,
+      "roc_auc_ci_upper": 0.9119215786080432,
+      "average_precision": 0.1660634329266569,
+      "average_precision_ci_lower": 0.1351312242312376,
+      "average_precision_ci_upper": 0.2017053222210946
+    },
+    {
+      "probability_field": "p_isotonic",
+      "brier_score": 0.0058448623856275,
+      "brier_score_ci_lower": 0.005711540222963,
+      "brier_score_ci_upper": 0.0059670846359554,
+      "log_loss": 0.0297539332477566,
+      "log_loss_ci_lower": 0.0278778390035884,
+      "log_loss_ci_upper": 0.0317831849999494,
+      "ece": 0.0013212449446698,
+      "ece_ci_lower": 0.0008566113241147,
+      "ece_ci_upper": 0.0018204422643426,
+      "mce": 0.1150046594376637,
+      "mce_ci_lower": 0.0432615538370336,
+      "mce_ci_upper": 0.2344532035413133,
+      "roc_auc": 0.8947307217444856,
+      "roc_auc_ci_lower": 0.879260868577726,
+      "roc_auc_ci_upper": 0.9099813529199668,
+      "average_precision": 0.1496827497831077,
+      "average_precision_ci_lower": 0.1237350925789574,
+      "average_precision_ci_upper": 0.1795163305615179
+    }
+  ],
+  "metric_comparison": {
+    "brier_score": {
+      "values": {
+        "p_base": 0.0310099626434788,
+        "p_sigmoid": 0.0058618703212836,
+        "p_isotonic": 0.0058448623856275
+      },
+      "minimum_value": 0.0058448623856275,
+      "minimum_representations": [
+        "p_isotonic"
+      ]
+    },
+    "log_loss": {
+      "values": {
+        "p_base": 0.1195264853313933,
+        "p_sigmoid": 0.0283663890777089,
+        "p_isotonic": 0.0297539332477566
+      },
+      "minimum_value": 0.0283663890777089,
+      "minimum_representations": [
+        "p_sigmoid"
+      ]
+    },
+    "ece": {
+      "values": {
+        "p_base": 0.0757956083565719,
+        "p_sigmoid": 0.0010506276993786,
+        "p_isotonic": 0.0013212449446698
+      },
+      "minimum_value": 0.0010506276993786,
+      "minimum_representations": [
+        "p_sigmoid"
+      ]
+    },
+    "mce": {
+      "values": {
+        "p_base": 0.7462829819471514,
+        "p_sigmoid": 0.7276874869494073,
+        "p_isotonic": 0.1150046594376637
+      },
+      "minimum_value": 0.1150046594376637,
+      "minimum_representations": [
+        "p_isotonic"
+      ]
+    },
+    "roc_auc": {
+      "values": {
+        "p_base": 0.8967750508868694,
+        "p_sigmoid": 0.8967750508868694,
+        "p_isotonic": 0.8947307217444856
+      },
+      "maximum_value": 0.8967750508868694,
+      "maximum_representations": [
+        "p_base",
+        "p_sigmoid"
+      ]
+    },
+    "average_precision": {
+      "values": {
+        "p_base": 0.1660634329266569,
+        "p_sigmoid": 0.1660634329266569,
+        "p_isotonic": 0.1496827497831077
+      },
+      "maximum_value": 0.1660634329266569,
+      "maximum_representations": [
+        "p_base",
+        "p_sigmoid"
+      ]
+    }
+  },
+  "reliability_evidence": {
+    "p_base": {
+      "populated_bins": 14,
+      "empty_bins": 0,
+      "minimum_bin_count": 47,
+      "sparse_bins_lt_100": 1,
+      "maximum_absolute_gap": 0.7327007606720759
+    },
+    "p_isotonic": {
+      "populated_bins": 8,
+      "empty_bins": 6,
+      "minimum_bin_count": 25,
+      "sparse_bins_lt_100": 3,
+      "maximum_absolute_gap": 0.0537541335499602
+    },
+    "p_sigmoid": {
+      "populated_bins": 12,
+      "empty_bins": 2,
+      "minimum_bin_count": 1,
+      "sparse_bins_lt_100": 7,
+      "maximum_absolute_gap": 0.903069109135812
+    }
+  },
+  "evidence_rules": {
+    "p_base_calibration_evidence": {
+      "status": "NOT_ESTABLISHED",
+      "reason": "Native p_base exhibits substantial calibration error in the observed validation evidence and therefore cannot be described as empirically well-calibrated from this evidence."
+    },
+    "sparse_bin_limitation": {
+      "status": "PRESENT",
+      "by_representation": {
+        "p_base": true,
+        "p_isotonic": true,
+        "p_sigmoid": true
+      },
+      "interpretation": "Sparse or empty reliability bins limit the strength of local calibration interpretation, especially where individual bins contain very few observations."
+    },
+    "discrimination_behavior": {
+      "p_base_roc_auc": 0.8967750508868694,
+      "p_sigmoid_roc_auc": 0.8967750508868694,
+      "p_isotonic_roc_auc": 0.8947307217444856,
+      "p_sigmoid_delta_vs_base": 0.0,
+      "p_isotonic_delta_vs_base": -0.0020443291423837273,
+      "interpretation": "Sigmoid representation preserves the observed ROC-AUC numerically, while isotonic shows a small reduction in the observed ROC-AUC. These are descriptive observations, not significance tests."
+    },
+    "single_metric_selection_prohibited": {
+      "status": "ENFORCED",
+      "reason": "The T9 protocol requires joint consideration of proper scoring metrics, calibration diagnostics, discrimination context, reliability support, and uncertainty."
+    },
+    "universal_score": {
+      "status": "PROHIBITED",
+      "confidence_score_created": false,
+      "risk_score_created": false
+    }
+  },
+  "conclusion": {
+    "selection_status": "CALIBRATION_IMPROVEMENT_SUPPORTED_BUT_METHOD_SELECTION_REQUIRES_CAUTION",
+    "selected_method": "NOT_FORMALLY_SELECTED",
+    "rationale": "Both p_sigmoid and p_isotonic materially improve the observed proper-scoring/calibration diagnostics relative to p_base. However, reliability-bin sparsity is present for both transformed representations, and the available evidence is validation-population evidence rather than an independent locked-test calibration comparison. Therefore this operation does not declare one method universally superior or establish an automation-ready calibrated probability.",
+    "observations": [
+      "p_base has materially larger Brier, log-loss, and ECE values than the two transformed representations in the observed validation evidence.",
+      "p_sigmoid and p_isotonic both show substantially lower Brier and ECE than p_base.",
+      "p_sigmoid retains the same observed ROC-AUC as p_base in this validation artifact.",
+      "p_isotonic has a small observed ROC-AUC reduction relative to p_base.",
+      "p_sigmoid contains sparse reliability bins, including a minimum populated-bin count of 1.",
+      "p_isotonic contains empty and sparse reliability bins as well.",
+      "The evidence therefore supports a task-specific calibration improvement relative to p_base, but local reliability estimates in sparse regions remain limited."
+    ],
+    "supporting_conditions": {
+      "p_sigmoid_improves_vs_p_base": true,
+      "p_isotonic_improves_vs_p_base": true,
+      "p_sigmoid_sparse_bins": true,
+      "p_isotonic_sparse_or_empty_bins": true
+    }
+  },
+  "controls": {
+    "new_model_fitted": false,
+    "new_calibration_fitted": false,
+    "new_probability_generated": false,
+    "target_created": false,
+    "target_relabelled": false,
+    "automation_threshold_selected": false,
+    "review_threshold_selected": false,
+    "locked_test_used": false,
+    "universal_confidence_created": false,
+    "universal_risk_score_created": false,
+    "cross_task_probability_comparison_performed": false,
+    "arbitrary_cross_task_weights_used": false,
+    "single_metric_method_selection_used": false,
+    "native_t5_probability_semantics_preserved": true,
+    "validation_prevalence_preserved": true
+  },
+  "control_failures": [],
+  "artifacts_used": {
+    "OP-005": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op005_output_semantics_lock.json",
+    "OP-006": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op006_t5_calibration_population_audit.json",
+    "OP-007": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op007_t5_calibration_protocol.json",
+    "OP-008": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op008_t5_empirical_calibration.json",
+    "OP-009": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op009_t5_uncertainty_reliability.json",
+    "OP-009_metrics": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op009_t5_metric_uncertainty_summary.csv",
+    "OP-009_reliability": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op009_t5_reliability_summary.csv"
+  },
+  "interpretation_boundary": [
+    "This operation synthesizes validation evidence and does not create a new probability model.",
+    "Improved calibration diagnostics do not imply a universal confidence or ticket-risk score.",
+    "Sparse reliability bins reduce the strength of local calibration interpretation.",
+    "Confidence-interval overlap is descriptive and is not a formal hypothesis test.",
+    "No automation or human-review threshold is established."
+  ],
+  "decision": "T5 calibration evidence has been synthesized under the frozen T9 protocol. The operation records the evidence-supported calibration status without creating a universal score or automation decision."
+}

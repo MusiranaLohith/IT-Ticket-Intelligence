@@ -1,0 +1,187 @@
+{
+  "operation": "T3-MOD-028",
+  "task": "T3_SEVERITY_PREDICTION",
+  "model": "T3-MOD-008",
+  "evaluation_design": {
+    "validation_rows": 4626,
+    "test_rows": 4626,
+    "test_used_for_selection": false,
+    "retrained": false,
+    "refit": false
+  },
+  "overall_generalization": {
+    "validation": {
+      "accuracy": 0.5845222654561176,
+      "macro_f1": 0.3480174180281372,
+      "weighted_f1": 0.6148412546447116
+    },
+    "test": {
+      "accuracy": 0.5540423692174665,
+      "macro_f1": 0.3036817032407433,
+      "weighted_f1": 0.6030788055367481
+    },
+    "test_minus_validation": {
+      "accuracy": -0.030479896238651105,
+      "macro_f1": -0.0443357147873939,
+      "weighted_f1": -0.011762449107963535
+    }
+  },
+  "per_class_generalization": {
+    "S1": {
+      "validation": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 20
+      },
+      "test": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 13
+      },
+      "f1_change": 0.0
+    },
+    "S2": {
+      "validation": {
+        "precision": 0.23049645390070922,
+        "recall": 0.4004106776180698,
+        "f1": 0.29257314328582146,
+        "support": 487
+      },
+      "test": {
+        "precision": 0.13257575757575757,
+        "recall": 0.3115727002967359,
+        "f1": 0.18600531443755536,
+        "support": 337
+      },
+      "f1_change": -0.1065678288482661
+    },
+    "S3": {
+      "validation": {
+        "precision": 0.8109527381845462,
+        "recall": 0.6321637426900585,
+        "f1": 0.710483075911929,
+        "support": 3420
+      },
+      "test": {
+        "precision": 0.83672670321065,
+        "recall": 0.5864434687156971,
+        "f1": 0.6895772829945144,
+        "support": 3644
+      },
+      "f1_change": -0.02090579291741468
+    },
+    "S4": {
+      "validation": {
+        "precision": 0.31981566820276497,
+        "recall": 0.49642346208869814,
+        "f1": 0.3890134529147982,
+        "support": 699
+      },
+      "test": {
+        "precision": 0.25455987311657413,
+        "recall": 0.5079113924050633,
+        "f1": 0.33914421553090335,
+        "support": 632
+      },
+      "f1_change": -0.04986923738389487
+    }
+  },
+  "test_confusion_pairs": [
+    {
+      "actual": "S3",
+      "predicted": "S4",
+      "count": 901
+    },
+    {
+      "actual": "S3",
+      "predicted": "S2",
+      "count": 590
+    },
+    {
+      "actual": "S4",
+      "predicted": "S3",
+      "count": 216
+    },
+    {
+      "actual": "S2",
+      "predicted": "S3",
+      "count": 196
+    },
+    {
+      "actual": "S4",
+      "predicted": "S2",
+      "count": 94
+    },
+    {
+      "actual": "S2",
+      "predicted": "S4",
+      "count": 34
+    },
+    {
+      "actual": "S3",
+      "predicted": "S1",
+      "count": 16
+    },
+    {
+      "actual": "S1",
+      "predicted": "S3",
+      "count": 5
+    },
+    {
+      "actual": "S1",
+      "predicted": "S4",
+      "count": 5
+    },
+    {
+      "actual": "S1",
+      "predicted": "S2",
+      "count": 3
+    },
+    {
+      "actual": "S2",
+      "predicted": "S1",
+      "count": 2
+    },
+    {
+      "actual": "S4",
+      "predicted": "S1",
+      "count": 1
+    }
+  ],
+  "test_prediction_distribution": {
+    "counts": {
+      "S1": 19,
+      "S2": 792,
+      "S3": 2554,
+      "S4": 1261
+    },
+    "shares": {
+      "S1": 0.004107220060527454,
+      "S2": 0.17120622568093385,
+      "S3": 0.5520968439256377,
+      "S4": 0.27258971033290097
+    }
+  },
+  "observations": {
+    "s1_test_f1_zero": true,
+    "s3_prediction_dominant": true,
+    "test_s1_f1": 0.0,
+    "test_s2_f1": 0.18600531443755536,
+    "test_s3_f1": 0.6895772829945144,
+    "test_s4_f1": 0.33914421553090335
+  },
+  "interpretation": {
+    "primary_metric": "macro_f1",
+    "statement": "The final generalization assessment compares the selected T3-MOD-008 candidate's validation metrics with its locked test metrics. The analysis documents overall and per-class changes and the structure of test-set misclassifications without changing the model or selection decision."
+  },
+  "controls": {
+    "test_used_for_selection": false,
+    "model_retrained": false,
+    "model_refit": false,
+    "raw_mozilla_accessed": false,
+    "dataset_modified": false
+  },
+  "status": "GENERALIZATION_ANALYSIS_COMPLETE"
+}

@@ -1,0 +1,46 @@
+{
+  "task_id": "T6",
+  "visualization_only": true,
+  "source_artifacts": [
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod010_corrected_hybrid_results.json",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod010_corrected_hybrid_query_rankings.csv"
+  ],
+  "controls": {
+    "raw_dataset_read": false,
+    "model_training": false,
+    "embedding_recomputation": false,
+    "calibration": false,
+    "threshold_optimization": false,
+    "model_selection": false,
+    "target_modification": false,
+    "candidate_pool_modification": false
+  },
+  "evaluation_population": {
+    "rows": 82416,
+    "queries": 816,
+    "observed_positive_queries": 816,
+    "candidates_per_query": 101
+  },
+  "plots": [
+    {
+      "file": "t6_recall_at_k_comparison.png",
+      "purpose": "EVAL Recall@K comparison for TF-IDF, semantic, and corrected hybrid retrieval."
+    },
+    {
+      "file": "t6_final_metric_comparison.png",
+      "purpose": "EVAL comparison of frozen TF-IDF baseline and corrected hybrid across retrieval metrics."
+    },
+    {
+      "file": "t6_train_hybrid_weight_selection.png",
+      "purpose": "TRAIN-only hybrid semantic-weight selection."
+    },
+    {
+      "file": "t6_positive_rank_distribution.png",
+      "purpose": "Distribution of observed-positive ranks within the frozen EVAL candidate pools."
+    },
+    {
+      "file": "t6_positive_rank_movement.png",
+      "purpose": "EVAL query counts showing whether the observed positive rank improved, worsened, or remained unchanged."
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "operation": "A-OP-001",
+  "operation_title": "T1 Calibration Requirement Audit",
+  "status": "PASS",
+  "read_only": true,
+  "model_modified": false,
+  "retraining_performed": false,
+  "threshold_optimization_performed": false,
+  "locked_test_reused": false,
+  "project_root": "/home/whiteblack/Documents/IT-Ticket-Triage-System",
+  "files_discovered": 4,
+  "missing_targets": [
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T10"
+  ],
+  "t1_closure_summary": {
+    "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/analysis/t1_final_closure.json",
+    "readable": true,
+    "decision_scores_are_probabilities": "NOT_ESTABLISHED",
+    "calibration_required_by_closure": "NOT_ESTABLISHED",
+    "calibration_status_evidence": "closure explicitly contains 'not calibrated'",
+    "decision_score_evidence": "closure contains decision-score semantics",
+    "probability_term_present": true
+  },
+  "file_evidence": [
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/analysis/t1_final_closure.json",
+      "readable": true,
+      "keyword_matches": {
+        "calibrat": [
+          "present"
+        ],
+        "probability": [
+          "present"
+        ],
+        "probabilities": [
+          "present"
+        ],
+        "threshold": [
+          "present"
+        ],
+        "t1": [
+          "present"
+        ]
+      }
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T1/analysis/t1_it_support_3model_compare.json",
+      "readable": true,
+      "keyword_matches": {
+        "t1": [
+          "present"
+        ]
+      }
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T8/mod036/op026/t8_mod036_op026_decision_engine_validation.json",
+      "readable": true,
+      "keyword_matches": {
+        "calibrat": [
+          "present"
+        ],
+        "probability": [
+          "present"
+        ],
+        "confidence": [
+          "present"
+        ],
+        "threshold": [
+          "present"
+        ]
+      }
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T9/mod037/t9_mod037_op015_final_integrated_closure.json",
+      "readable": true,
+      "keyword_matches": {
+        "calibrat": [
+          "present"
+        ],
+        "probability": [
+          "present"
+        ],
+        "probabilities": [
+          "present"
+        ],
+        "confidence": [
+          "present"
+        ],
+        "threshold": [
+          "present"
+        ]
+      }
+    }
+  ],
+  "decision_boundary": {
+    "calibration_is_not_assumed": true,
+    "calibration_should_only_proceed_if_downstream_contract_requires_probability_like_t1_output": true,
+    "this_operation_does_not_authorize_calibration": true
+  }
+}

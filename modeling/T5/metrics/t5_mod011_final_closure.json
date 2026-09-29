@@ -1,0 +1,147 @@
+{
+  "operation": "T5-MOD-011",
+  "operation_name": "Final Task Closure",
+  "timestamp_utc": "2026-09-18T08:17:55.213578+00:00",
+  "task": "T5 \u2014 Binary Duplicate Detection",
+  "task_definition": {
+    "task": "Binary Duplicate Detection",
+    "target": {
+      "name": "T5 target",
+      "type": "binary",
+      "positive": "First observed post-Creation 'Dupe of' addition",
+      "negative": "No observed post-Creation 'Dupe of' addition through the administrative observation endpoint",
+      "interpretation": "Relationship-existence detection; not target-ticket identification or pairing"
+    },
+    "canonical_population": {
+      "rows": 513816,
+      "positive": 4691,
+      "negative": 509125,
+      "unique_ids": 513816,
+      "normalized_content_groups": 512504
+    },
+    "features": [
+      "Creator",
+      "Creator Detail",
+      "Summary",
+      "Description"
+    ],
+    "excluded_from_inference": [
+      "Dupe of",
+      "Assigned to",
+      "Assigned to detail",
+      "post-Creation History",
+      "target-ticket information"
+    ]
+  },
+  "split_definition": {
+    "official_boundary": "Creation year < 2024 = training; Creation year >= 2024 = evaluation",
+    "group_definition": "Normalized Summary + Description",
+    "group_integrity": true,
+    "training_rows": 492989,
+    "training_positive": 3373,
+    "training_negative": 489616,
+    "evaluation_rows": 20827,
+    "evaluation_positive": 1318,
+    "evaluation_negative": 19509,
+    "cross_split_normalized_content_groups": 0,
+    "train_eval_id_overlap": 0,
+    "crossing_groups": 5,
+    "crossing_group_rows": 10,
+    "crossing_group_action": "All five crossing groups assigned to TRAIN to preserve group integrity"
+  },
+  "selected_pipeline": {
+    "representation": "Word-level TF-IDF unigram/bigram",
+    "vectorizer": {
+      "ngram_range": [
+        1,
+        2
+      ],
+      "min_df": 2,
+      "max_features": 100000,
+      "sublinear_tf": true,
+      "lowercase": true
+    },
+    "classifier": {
+      "type": "LogisticRegression",
+      "class_weight": "balanced",
+      "solver": "liblinear",
+      "max_iter": 1000,
+      "random_state": 42
+    },
+    "calibration": "Sigmoid",
+    "probability_output": "p_duplicate",
+    "threshold": {
+      "value": 0.5,
+      "status": "descriptive_only",
+      "optimized": false
+    }
+  },
+  "validation_evidence": {
+    "average_precision": 0.16377630768463408,
+    "roc_auc": 0.8969287312131792,
+    "log_loss": 0.028358865729015772,
+    "brier_score": 0.005860260617751882
+  },
+  "locked_evaluation_evidence": {
+    "average_precision": 0.12583280543036882,
+    "roc_auc": 0.6781415853279965,
+    "log_loss": 0.27250018754800265,
+    "brier_score": 0.059906950851585296,
+    "threshold_0_5": {
+      "precision": 0.4782608695652174,
+      "recall": 0.00834597875569044,
+      "f1": 0.01640566741237882,
+      "positive_predictions": 23
+    }
+  },
+  "generalization_evidence": {
+    "average_precision": {
+      "validation": 0.16377630768463408,
+      "locked_evaluation": 0.12583280543036882,
+      "absolute_change": -0.037943502254265266,
+      "relative_change_percent": -23.167882333340224
+    },
+    "roc_auc": {
+      "validation": 0.8969287312131792,
+      "locked_evaluation": 0.6781415853279965,
+      "absolute_change": -0.21878714588518267,
+      "relative_change_percent": -24.392924239281843
+    },
+    "log_loss": {
+      "validation": 0.028358865729015772,
+      "locked_evaluation": 0.27250018754800265,
+      "absolute_change": 0.24414132181898687,
+      "relative_change_percent": 860.899459632443
+    },
+    "brier_score": {
+      "validation": 0.005860260617751882,
+      "locked_evaluation": 0.059906950851585296,
+      "absolute_change": 0.05404669023383341,
+      "relative_change_percent": 922.2574516586405
+    }
+  },
+  "final_role": "SECONDARY_DECISION_SUPPORT_SIGNAL",
+  "final_status": "SUPPORTED_WITH_LIMITATIONS",
+  "limitations": [
+    "Temporal generalization degradation was observed between validation and the official evaluation population.",
+    "Locked evaluation AP was 0.125833 and ROC-AUC was 0.678142.",
+    "The descriptive 0.5 threshold produced 23 positive predictions with 0.008346 recall.",
+    "No operational threshold was established.",
+    "No autonomous duplicate determination or human-review removal is supported.",
+    "The target detects observed duplicate-relationship existence, not the identity of the duplicate target ticket."
+  ],
+  "controls": {
+    "model_refit": false,
+    "calibrator_refit": false,
+    "vectorizer_refit": false,
+    "threshold_optimization": false,
+    "evaluation_used_for_selection": false,
+    "evaluation_used_for_calibration": false,
+    "evaluation_modified": false,
+    "raw_dataset_modified": false,
+    "synthetic_data": false,
+    "autonomous_decision_support_claim": false
+  },
+  "closure_statement": "T5 Binary Duplicate Detection is closed for the current controlled modeling cycle. The frozen pipeline is retained as a secondary decision-support signal with limitations. The official evaluation was used only for locked final assessment and not for model selection, calibration, threshold optimization, or refitting.",
+  "status": "CLOSED"
+}

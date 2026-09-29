@@ -1,0 +1,1846 @@
+{
+  "operation": "FMP-06 OP-018R17",
+  "operation_name": "T6 native runtime input contract inspection",
+  "read_only": true,
+  "training_or_fitting": false,
+  "evaluation_metrics": false,
+  "locked_test_used": false,
+  "artifact_modified": false,
+  "t6_root": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6",
+  "csv_sources": [
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/derived/t6_content_group_assignments.csv",
+      "status": "READABLE",
+      "columns": [
+        "query_id",
+        "query_creation_time",
+        "creation_year",
+        "content_group_hash",
+        "assigned_side"
+      ],
+      "column_count": 5,
+      "sample_rows": [
+        {
+          "query_id": 1872597,
+          "query_creation_time": "2024-01-01 20:20:27+00:00",
+          "creation_year": 2024,
+          "content_group_hash": "1c6469dcab209ba56a47e51a7a94dfe312d0e761a845772c214dfa641bdfd14b",
+          "assigned_side": "EVAL"
+        },
+        {
+          "query_id": 1872603,
+          "query_creation_time": "2024-01-01 21:59:23+00:00",
+          "creation_year": 2024,
+          "content_group_hash": "77f97c95f0ba9b176ad214d37bf00a91d057fee68996af599fba96f5936e09f5",
+          "assigned_side": "EVAL"
+        },
+        {
+          "query_id": 1872633,
+          "query_creation_time": "2024-01-02 08:06:34+00:00",
+          "creation_year": 2024,
+          "content_group_hash": "2356d67f50b564ae5ca6d708cca4bc00139dd1c5bf0ef698119230faa0baa5d8",
+          "assigned_side": "EVAL"
+        },
+        {
+          "query_id": 1872729,
+          "query_creation_time": "2024-01-02 23:59:19+00:00",
+          "creation_year": 2024,
+          "content_group_hash": "b22f4ebd750a7f9a20d1e7b3e01cebd91d8a5b6ba131b40565d5a37957a83b4e",
+          "assigned_side": "EVAL"
+        },
+        {
+          "query_id": 1872802,
+          "query_creation_time": "2024-01-03 12:56:26+00:00",
+          "creation_year": 2024,
+          "content_group_hash": "2e733323644f811e056f308ffbc0b0e8d448ad1e16402f84f1427a1830800f5e",
+          "assigned_side": "EVAL"
+        }
+      ]
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod004_query_rankings.csv",
+      "status": "READABLE",
+      "columns": [
+        "split",
+        "query_id",
+        "positive_candidate_id",
+        "positive_rank",
+        "top_candidate_id",
+        "top_candidate_role",
+        "top_score",
+        "positive_score"
+      ],
+      "column_count": 8,
+      "sample_rows": [
+        {
+          "split": "train",
+          "query_id": 1023761,
+          "positive_candidate_id": 217769,
+          "positive_rank": 1,
+          "top_candidate_id": 217769,
+          "top_candidate_role": "positive",
+          "top_score": 0.1024327413686122,
+          "positive_score": 0.1024327413686122
+        },
+        {
+          "split": "train",
+          "query_id": 1033149,
+          "positive_candidate_id": 563436,
+          "positive_rank": 4,
+          "top_candidate_id": 836875,
+          "top_candidate_role": "observable_non_positive",
+          "top_score": 0.2618571423713691,
+          "positive_score": 0.1437302385848848
+        },
+        {
+          "split": "train",
+          "query_id": 1037103,
+          "positive_candidate_id": 1037100,
+          "positive_rank": 1,
+          "top_candidate_id": 1037100,
+          "top_candidate_role": "positive",
+          "top_score": 0.460373159287527,
+          "positive_score": 0.460373159287527
+        },
+        {
+          "split": "train",
+          "query_id": 1098204,
+          "positive_candidate_id": 656891,
+          "positive_rank": 1,
+          "top_candidate_id": 656891,
+          "top_candidate_role": "positive",
+          "top_score": 0.0967904507980488,
+          "positive_score": 0.0967904507980488
+        },
+        {
+          "split": "train",
+          "query_id": 1115085,
+          "positive_candidate_id": 837489,
+          "positive_rank": 1,
+          "top_candidate_id": 837489,
+          "top_candidate_role": "positive",
+          "top_score": 0.4131239750978249,
+          "positive_score": 0.4131239750978249
+        }
+      ]
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod005_rank_distribution.csv",
+      "status": "READABLE",
+      "columns": [
+        "split",
+        "metric",
+        "value",
+        "successful_queries",
+        "total_queries"
+      ],
+      "column_count": 5,
+      "sample_rows": [
+        {
+          "split": "train",
+          "metric": "Recall@1",
+          "value": 0.6825813221406086,
+          "successful_queries": 1301,
+          "total_queries": 1906
+        },
+        {
+          "split": "train",
+          "metric": "Recall@3",
+          "value": 0.8037775445960126,
+          "successful_queries": 1532,
+          "total_queries": 1906
+        },
+        {
+          "split": "train",
+          "metric": "Recall@5",
+          "value": 0.8457502623294858,
+          "successful_queries": 1612,
+          "total_queries": 1906
+        },
+        {
+          "split": "train",
+          "metric": "Recall@10",
+          "value": 0.8950682056663168,
+          "successful_queries": 1706,
+          "total_queries": 1906
+        },
+        {
+          "split": "train",
+          "metric": "Recall@20",
+          "value": 0.9349422875131164,
+          "successful_queries": 1782,
+          "total_queries": 1906
+        }
+      ]
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod005_top20_failures.csv",
+      "status": "READABLE",
+      "columns": [
+        "split",
+        "query_id",
+        "positive_candidate_id",
+        "positive_rank",
+        "top_candidate_id",
+        "top_candidate_role",
+        "top_score",
+        "positive_score",
+        "score_gap_top1_minus_positive"
+      ],
+      "column_count": 9,
+      "sample_rows": [
+        {
+          "split": "eval",
+          "query_id": 1910935,
+          "positive_candidate_id": 1481298,
+          "positive_rank": 21,
+          "top_candidate_id": 1488655,
+          "top_candidate_role": "observable_non_positive",
+          "top_score": 0.106905084194916,
+          "positive_score": 0.0338383480777944,
+          "score_gap_top1_minus_positive": 0.0730667361171216
+        },
+        {
+          "split": "eval",
+          "query_id": 1908275,
+          "positive_candidate_id": 1739559,
+          "positive_rank": 21,
+          "top_candidate_id": 1516952,
+          "top_candidate_role": "observable_non_positive",
+          "top_score": 0.0961539675878801,
+          "positive_score": 0.0376094816613617,
+          "score_gap_top1_minus_positive": 0.0585444859265184
+        },
+        {
+          "split": "eval",
+          "query_id": 1903889,
+          "positive_candidate_id": 1885232,
+          "positive_rank": 22,
+          "top_candidate_id": 1196924,
+          "top_candidate_role": "observable_non_positive",
+          "top_score": 0.0916206943080695,
+          "positive_score": 0.0345247532860545,
+          "score_gap_top1_minus_positive": 0.057095941022015
+        },
+        {
+          "split": "eval",
+          "query_id": 1890426,
+          "positive_candidate_id": 1404972,
+          "positive_rank": 23,
+          "top_candidate_id": 1873199,
+          "top_candidate_role": "observable_non_positive",
+          "top_score": 0.0933481101953445,
+          "positive_score": 0.0316913837723557,
+          "score_gap_top1_minus_positive": 0.0616567264229888
+        },
+        {
+          "split": "eval",
+          "query_id": 1886543,
+          "positive_candidate_id": 1886247,
+          "positive_rank": 23,
+          "top_candidate_id": 851290,
+          "top_candidate_role": "observable_non_positive",
+          "top_score": 0.0917306499322453,
+          "positive_score": 0.0444821731995284,
+          "score_gap_top1_minus_positive": 0.0472484767327169
+        }
+      ]
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod006_failure_cases.csv",
+      "status": "READABLE",
+      "columns": [
+        "split",
+        "query_id",
+        "positive_candidate_id",
+        "positive_rank",
+        "rank_band",
+        "top_candidate_id",
+        "top_candidate_role",
+        "top_score",
+        "positive_score",
+        "score_gap_top1_minus_positive",
+        "query_characters",
+        "query_tokens",
+        "candidate_characters",
+        "candidate_tokens",
+        "lexical_overlap_tokens",
+        "query_token_overlap_ratio",
+        "positive_similarity_zero",
+        "query_text_empty",
+        "candidate_text_empty",
+        "query_creation_time",
+        "candidate_creation_time",
+        "target_observed",
+        "target_type"
+      ],
+      "column_count": 23,
+      "sample_rows": [
+        {
+          "split": "eval",
+          "query_id": 1910935,
+          "positive_candidate_id": 1481298,
+          "positive_rank": 21,
+          "rank_band": "21-50",
+          "top_candidate_id": 1488655,
+          "top_candidate_role": "observable_non_positive",
+          "top_score": 0.106905084194916,
+          "positive_score": 0.0338383480777944,
+          "score_gap_top1_minus_positive": 0.0730667361171216,
+          "query_characters": 1575,
+          "query_tokens": 268,
+          "candidate_characters": 456,
+          "candidate_tokens": 79,
+          "lexical_overlap_tokens": 22,
+          "query_token_overlap_ratio": 0.1629629629629629,
+          "positive_similarity_zero": false,
+          "query_text_empty": false,
+          "candidate_text_empty": false,
+          "query_creation_time": "2024-07-31 21:52:45",
+          "candidate_creation_time": "2018-08-07 01:30:45",
+          "target_observed": true,
+          "target_type": "point_in_time_dupe_target"
+        },
+        {
+          "split": "eval",
+          "query_id": 1908275,
+          "positive_candidate_id": 1739559,
+          "positive_rank": 21,
+          "rank_band": "21-50",
+          "top_candidate_id": 1516952,
+          "top_candidate_role": "observable_non_positive",
+          "top_score": 0.0961539675878801,
+          "positive_score": 0.0376094816613617,
+          "score_gap_top1_minus_positive": 0.0585444859265184,
+          "query_characters": 833,
+          "query_tokens": 135,
+          "candidate_characters": 963,
+          "candidate_tokens": 166,
+          "lexical_overlap_tokens": 19,
+          "query_token_overlap_ratio": 0.2261904761904762,
+          "positive_similarity_zero": false,
+          "query_text_empty": false,
+          "candidate_text_empty": false,
+          "query_creation_time": "2024-07-17 07:07:11",
+          "candidate_creation_time": "2021-11-05 10:40:53",
+          "target_observed": true,
+          "target_type": "point_in_time_dupe_target"
+        },
+        {
+          "split": "eval",
+          "query_id": 1903889,
+          "positive_candidate_id": 1885232,
+          "positive_rank": 22,
+          "rank_band": "21-50",
+          "top_candidate_id": 1196924,
+          "top_candidate_role": "observable_non_positive",
+          "top_score": 0.0916206943080695,
+          "positive_score": 0.0345247532860545,
+          "score_gap_top1_minus_positive": 0.057095941022015,
+          "query_characters": 1109,
+          "query_tokens": 189,
+          "candidate_characters": 430,
+          "candidate_tokens": 48,
+          "lexical_overlap_tokens": 12,
+          "query_token_overlap_ratio": 0.1052631578947368,
+          "positive_similarity_zero": false,
+          "query_text_empty": false,
+          "candidate_text_empty": false,
+          "query_creation_time": "2024-06-21 02:00:40",
+          "candidate_creation_time": "2024-03-14 04:20:40",
+          "target_observed": true,
+          "target_type": "point_in_time_dupe_target"
+        },
+        {
+          "split": "eval",
+          "query_id": 1890426,
+          "positive_candidate_id": 1404972,
+          "positive_rank": 23,
+          "rank_band": "21-50",
+          "top_candidate_id": 1873199,
+          "top_candidate_role": "observable_non_positive",
+          "top_score": 0.0933481101953445,
+          "positive_score": 0.0316913837723557,
+          "score_gap_top1_minus_positive": 0.0616567264229888,
+          "query_characters": 874,
+          "query_tokens": 142,
+          "candidate_characters": 320,
+          "candidate_tokens": 46,
+          "lexical_overlap_tokens": 14,
+          "query_token_overlap_ratio": 0.14,
+          "positive_similarity_zero": false,
+          "query_text_empty": false,
+          "candidate_text_empty": false,
+          "query_creation_time": "2024-04-09 02:45:05",
+          "candidate_creation_time": "2017-10-02 21:34:43",
+          "target_observed": true,
+          "target_type": "point_in_time_dupe_target"
+        },
+        {
+          "split": "eval",
+          "query_id": 1886543,
+          "positive_candidate_id": 1886247,
+          "positive_rank": 23,
+          "rank_band": "21-50",
+          "top_candidate_id": 851290,
+          "top_candidate_role": "observable_non_positive",
+          "top_score": 0.0917306499322453,
+          "positive_score": 0.0444821731995284,
+          "score_gap_top1_minus_positive": 0.0472484767327169,
+          "query_characters": 2823,
+          "query_tokens": 488,
+          "candidate_characters": 498,
+          "candidate_tokens": 78,
+          "lexical_overlap_tokens": 26,
+          "query_token_overlap_ratio": 0.1192660550458715,
+          "positive_similarity_zero": false,
+          "query_text_empty": false,
+          "candidate_text_empty": false,
+          "query_creation_time": "2024-03-20 23:33:23",
+          "candidate_creation_time": "2024-03-19 23:29:13",
+          "target_observed": true,
+          "target_type": "point_in_time_dupe_target"
+        }
+      ]
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod006_failure_rank_distribution.csv",
+      "status": "READABLE",
+      "columns": [
+        "split",
+        "rank_band",
+        "count",
+        "proportion_of_failures"
+      ],
+      "column_count": 4,
+      "sample_rows": [
+        {
+          "split": "train",
+          "rank_band": "21-50",
+          "count": 76,
+          "proportion_of_failures": 0.6129032258064516
+        },
+        {
+          "split": "train",
+          "rank_band": "51-75",
+          "count": 30,
+          "proportion_of_failures": 0.2419354838709677
+        },
+        {
+          "split": "train",
+          "rank_band": "76-100",
+          "count": 16,
+          "proportion_of_failures": 0.1290322580645161
+        },
+        {
+          "split": "train",
+          "rank_band": "101",
+          "count": 2,
+          "proportion_of_failures": 0.0161290322580645
+        },
+        {
+          "split": "eval",
+          "rank_band": "21-50",
+          "count": 30,
+          "proportion_of_failures": 0.6122448979591837
+        }
+      ]
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod007_bm25_query_rankings.csv",
+      "status": "READABLE",
+      "columns": [
+        "split",
+        "query_id",
+        "query_creation_time",
+        "positive_candidate_id",
+        "positive_rank",
+        "top_candidate_id",
+        "top_candidate_role",
+        "top_score",
+        "positive_score",
+        "score_gap_top1_minus_positive",
+        "query_token_count"
+      ],
+      "column_count": 11,
+      "sample_rows": [
+        {
+          "split": "train",
+          "query_id": 1023761,
+          "query_creation_time": "2014-06-11 14:26:47",
+          "positive_candidate_id": 217769,
+          "positive_rank": 7,
+          "top_candidate_id": 857745,
+          "top_candidate_role": "observable_non_positive",
+          "top_score": 61.69611163822675,
+          "positive_score": 37.68315892081245,
+          "score_gap_top1_minus_positive": 24.0129527174143,
+          "query_token_count": 175
+        },
+        {
+          "split": "train",
+          "query_id": 1033149,
+          "query_creation_time": "2014-07-02 09:34:48",
+          "positive_candidate_id": 563436,
+          "positive_rank": 1,
+          "top_candidate_id": 563436,
+          "top_candidate_role": "positive",
+          "top_score": 43.6730911412037,
+          "positive_score": 43.6730911412037,
+          "score_gap_top1_minus_positive": 0.0,
+          "query_token_count": 94
+        },
+        {
+          "split": "train",
+          "query_id": 1037103,
+          "query_creation_time": "2014-07-11 01:10:37",
+          "positive_candidate_id": 1037100,
+          "positive_rank": 1,
+          "top_candidate_id": 1037100,
+          "top_candidate_role": "positive",
+          "top_score": 68.33414081107577,
+          "positive_score": 68.33414081107577,
+          "score_gap_top1_minus_positive": 0.0,
+          "query_token_count": 36
+        },
+        {
+          "split": "train",
+          "query_id": 1098204,
+          "query_creation_time": "2014-11-13 15:07:16",
+          "positive_candidate_id": 656891,
+          "positive_rank": 1,
+          "top_candidate_id": 656891,
+          "top_candidate_role": "positive",
+          "top_score": 86.2202913436204,
+          "positive_score": 86.2202913436204,
+          "score_gap_top1_minus_positive": 0.0,
+          "query_token_count": 263
+        },
+        {
+          "split": "train",
+          "query_id": 1115085,
+          "query_creation_time": "2014-12-24 01:06:42",
+          "positive_candidate_id": 837489,
+          "positive_rank": 1,
+          "top_candidate_id": 837489,
+          "top_candidate_role": "positive",
+          "top_score": 99.24023769065168,
+          "positive_score": 99.24023769065168,
+          "score_gap_top1_minus_positive": 0.0,
+          "query_token_count": 152
+        }
+      ]
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod008_semantic_failure_rankings.csv",
+      "status": "READABLE",
+      "columns": [
+        "split",
+        "query_id",
+        "positive_candidate_id",
+        "original_tfidf_rank",
+        "semantic_positive_rank",
+        "semantic_top_candidate_id",
+        "semantic_top_score",
+        "semantic_positive_score",
+        "semantic_score_gap_top1_minus_positive"
+      ],
+      "column_count": 9,
+      "sample_rows": [
+        {
+          "split": "eval",
+          "query_id": 1910935,
+          "positive_candidate_id": 1481298,
+          "original_tfidf_rank": 21,
+          "semantic_positive_rank": 3,
+          "semantic_top_candidate_id": 1488655,
+          "semantic_top_score": 0.5268063545227051,
+          "semantic_positive_score": 0.482925683259964,
+          "semantic_score_gap_top1_minus_positive": 0.043880671262741
+        },
+        {
+          "split": "eval",
+          "query_id": 1908275,
+          "positive_candidate_id": 1739559,
+          "original_tfidf_rank": 21,
+          "semantic_positive_rank": 16,
+          "semantic_top_candidate_id": 202102,
+          "semantic_top_score": 0.7149821519851685,
+          "semantic_positive_score": 0.5359317064285278,
+          "semantic_score_gap_top1_minus_positive": 0.1790504455566406
+        },
+        {
+          "split": "eval",
+          "query_id": 1903889,
+          "positive_candidate_id": 1885232,
+          "original_tfidf_rank": 22,
+          "semantic_positive_rank": 2,
+          "semantic_top_candidate_id": 49120,
+          "semantic_top_score": 0.6365615129470825,
+          "semantic_positive_score": 0.6130769848823547,
+          "semantic_score_gap_top1_minus_positive": 0.0234845280647277
+        },
+        {
+          "split": "eval",
+          "query_id": 1890426,
+          "positive_candidate_id": 1404972,
+          "original_tfidf_rank": 23,
+          "semantic_positive_rank": 2,
+          "semantic_top_candidate_id": 1873199,
+          "semantic_top_score": 0.6069061756134033,
+          "semantic_positive_score": 0.5387118458747864,
+          "semantic_score_gap_top1_minus_positive": 0.0681943297386169
+        },
+        {
+          "split": "eval",
+          "query_id": 1886543,
+          "positive_candidate_id": 1886247,
+          "original_tfidf_rank": 23,
+          "semantic_positive_rank": 2,
+          "semantic_top_candidate_id": 1385885,
+          "semantic_top_score": 0.6086894273757935,
+          "semantic_positive_score": 0.5966728925704956,
+          "semantic_score_gap_top1_minus_positive": 0.0120165348052978
+        }
+      ]
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod009_hybrid_query_rankings.csv",
+      "status": "READABLE",
+      "columns": [
+        "split",
+        "query_id",
+        "candidate_id",
+        "target_observed",
+        "tfidf_score",
+        "semantic_score",
+        "tfidf_score_normalized",
+        "semantic_score_normalized",
+        "hybrid_score"
+      ],
+      "column_count": 9,
+      "sample_rows": [
+        {
+          "split": "TRAIN",
+          "query_id": 1023761,
+          "candidate_id": 217769,
+          "target_observed": true,
+          "tfidf_score": 0.1041147960499194,
+          "semantic_score": 0.7731983661651611,
+          "tfidf_score_normalized": 1.0,
+          "semantic_score_normalized": 1.0,
+          "hybrid_score": 1.0
+        },
+        {
+          "split": "TRAIN",
+          "query_id": 1023761,
+          "candidate_id": 72572,
+          "target_observed": false,
+          "tfidf_score": 0.0249229277693655,
+          "semantic_score": 0.5874933004379272,
+          "tfidf_score_normalized": 0.2318924763054471,
+          "semantic_score_normalized": 0.7144562015967184,
+          "hybrid_score": 0.4731743389510827
+        },
+        {
+          "split": "TRAIN",
+          "query_id": 1023761,
+          "candidate_id": 725152,
+          "target_observed": false,
+          "tfidf_score": 0.0316408305053798,
+          "semantic_score": 0.3560729920864105,
+          "tfidf_score_normalized": 0.2970515860349982,
+          "semantic_score_normalized": 0.3586197379247426,
+          "hybrid_score": 0.3278356619798704
+        },
+        {
+          "split": "TRAIN",
+          "query_id": 1023761,
+          "candidate_id": 694763,
+          "target_observed": false,
+          "tfidf_score": 0.0172496768169252,
+          "semantic_score": 0.2345783114433288,
+          "tfidf_score_normalized": 0.1574671354751804,
+          "semantic_score_normalized": 0.1718071032733252,
+          "hybrid_score": 0.1646371193742528
+        },
+        {
+          "split": "TRAIN",
+          "query_id": 1023761,
+          "candidate_id": 155283,
+          "target_observed": false,
+          "tfidf_score": 0.0176877243914589,
+          "semantic_score": 0.3962197303771972,
+          "tfidf_score_normalized": 0.161715900468872,
+          "semantic_score_normalized": 0.4203501603026204,
+          "hybrid_score": 0.2910330303857462
+        }
+      ]
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod010_corrected_hybrid_query_rankings.csv",
+      "status": "READABLE",
+      "columns": [
+        "split",
+        "query_id",
+        "candidate_id",
+        "target_observed",
+        "semantic_score",
+        "tfidf_score",
+        "tfidf_score_normalized",
+        "semantic_score_normalized",
+        "hybrid_score"
+      ],
+      "column_count": 9,
+      "sample_rows": [
+        {
+          "split": "TRAIN",
+          "query_id": 1023761,
+          "candidate_id": 217769,
+          "target_observed": true,
+          "semantic_score": 0.7731983661651611,
+          "tfidf_score": 0.1024327413686122,
+          "tfidf_score_normalized": 1.0,
+          "semantic_score_normalized": 1.0,
+          "hybrid_score": 1.0
+        },
+        {
+          "split": "TRAIN",
+          "query_id": 1023761,
+          "candidate_id": 72572,
+          "target_observed": false,
+          "semantic_score": 0.5874933004379272,
+          "tfidf_score": 0.0247254879052685,
+          "tfidf_score_normalized": 0.22535792890421,
+          "semantic_score_normalized": 0.7144562015967185,
+          "hybrid_score": 0.4699070652504643
+        },
+        {
+          "split": "TRAIN",
+          "query_id": 1023761,
+          "candidate_id": 725152,
+          "target_observed": false,
+          "semantic_score": 0.3560729920864105,
+          "tfidf_score": 0.0295706558702347,
+          "tfidf_score_normalized": 0.2736580653767836,
+          "semantic_score_normalized": 0.3586197379247426,
+          "hybrid_score": 0.3161389016507631
+        },
+        {
+          "split": "TRAIN",
+          "query_id": 1023761,
+          "candidate_id": 694763,
+          "target_observed": false,
+          "semantic_score": 0.2345783114433288,
+          "tfidf_score": 0.0136925027052479,
+          "tfidf_score_normalized": 0.115373157537341,
+          "semantic_score_normalized": 0.1718071032733252,
+          "hybrid_score": 0.1435901304053331
+        },
+        {
+          "split": "TRAIN",
+          "query_id": 1023761,
+          "candidate_id": 155283,
+          "target_observed": false,
+          "semantic_score": 0.3962197303771972,
+          "tfidf_score": 0.0172231317490983,
+          "tfidf_score_normalized": 0.1505690198655514,
+          "semantic_score_normalized": 0.4203501603026204,
+          "hybrid_score": 0.2854595900840859
+        }
+      ]
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod010_corrected_lexical_reconciliation.csv",
+      "status": "READABLE",
+      "columns": [
+        "split",
+        "query_id",
+        "candidate_id",
+        "exact_mod004_score",
+        "corrected_tfidf_score",
+        "absolute_difference"
+      ],
+      "column_count": 6,
+      "sample_rows": [
+        {
+          "split": "TRAIN",
+          "query_id": 1023761,
+          "candidate_id": 217769,
+          "exact_mod004_score": 0.1024327413686122,
+          "corrected_tfidf_score": 0.1024327413686122,
+          "absolute_difference": 0.0
+        },
+        {
+          "split": "TRAIN",
+          "query_id": 1023761,
+          "candidate_id": 72572,
+          "exact_mod004_score": 0.0247254879052685,
+          "corrected_tfidf_score": 0.0247254879052685,
+          "absolute_difference": 0.0
+        },
+        {
+          "split": "TRAIN",
+          "query_id": 1023761,
+          "candidate_id": 725152,
+          "exact_mod004_score": 0.0295706558702347,
+          "corrected_tfidf_score": 0.0295706558702347,
+          "absolute_difference": 0.0
+        },
+        {
+          "split": "TRAIN",
+          "query_id": 1023761,
+          "candidate_id": 694763,
+          "exact_mod004_score": 0.0136925027052479,
+          "corrected_tfidf_score": 0.0136925027052479,
+          "absolute_difference": 0.0
+        },
+        {
+          "split": "TRAIN",
+          "query_id": 1023761,
+          "candidate_id": 155283,
+          "exact_mod004_score": 0.0172231317490983,
+          "corrected_tfidf_score": 0.0172231317490983,
+          "absolute_difference": 0.0
+        }
+      ]
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod010_direct_score_differences.csv",
+      "status": "READABLE",
+      "columns": [
+        "split",
+        "query_id",
+        "candidate_id",
+        "exact_tfidf_score",
+        "tfidf_score",
+        "score_difference",
+        "absolute_score_difference"
+      ],
+      "column_count": 7,
+      "sample_rows": [
+        {
+          "split": "EVAL",
+          "query_id": 1905227,
+          "candidate_id": 1569081,
+          "exact_tfidf_score": 0.8740906898288243,
+          "tfidf_score": 0.9789727785402296,
+          "score_difference": -0.1048820887114052,
+          "absolute_score_difference": 0.1048820887114052
+        },
+        {
+          "split": "TRAIN",
+          "query_id": 1803682,
+          "candidate_id": 1609737,
+          "exact_tfidf_score": 0.6490861624848772,
+          "tfidf_score": 0.7511518521789676,
+          "score_difference": -0.1020656896940904,
+          "absolute_score_difference": 0.1020656896940904
+        },
+        {
+          "split": "TRAIN",
+          "query_id": 1853061,
+          "candidate_id": 1852636,
+          "exact_tfidf_score": 0.938169403294064,
+          "tfidf_score": 0.9977601107975038,
+          "score_difference": -0.0595907075034398,
+          "absolute_score_difference": 0.0595907075034398
+        },
+        {
+          "split": "EVAL",
+          "query_id": 1901383,
+          "candidate_id": 1901241,
+          "exact_tfidf_score": 0.5298238991661591,
+          "tfidf_score": 0.5848472259487667,
+          "score_difference": -0.0550233267826075,
+          "absolute_score_difference": 0.0550233267826075
+        },
+        {
+          "split": "TRAIN",
+          "query_id": 1762246,
+          "candidate_id": 1762109,
+          "exact_tfidf_score": 0.5541191820015201,
+          "tfidf_score": 0.599762910438762,
+          "score_difference": -0.0456437284372418,
+          "absolute_score_difference": 0.0456437284372418
+        }
+      ]
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod010_exact_reproduction_mismatches.csv",
+      "status": "READABLE",
+      "columns": [
+        "split",
+        "query_id",
+        "positive_candidate_id_original",
+        "positive_rank_original",
+        "top_candidate_id_original",
+        "top_candidate_role_original",
+        "top_score_original",
+        "positive_score_original",
+        "positive_candidate_id_exact",
+        "positive_rank_exact",
+        "top_candidate_id_exact",
+        "top_candidate_role_exact",
+        "top_score_exact",
+        "positive_score_exact",
+        "positive_candidate_match",
+        "positive_rank_match",
+        "top_candidate_match",
+        "top_role_match",
+        "top_score_difference",
+        "positive_score_difference",
+        "absolute_top_score_difference",
+        "absolute_positive_score_difference",
+        "rank_difference"
+      ],
+      "column_count": 23,
+      "sample_rows": []
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/metrics/t6_mod010_tfidf_query_mismatches.csv",
+      "status": "READABLE",
+      "columns": [
+        "split",
+        "query_id",
+        "positive_candidate_id",
+        "positive_rank",
+        "top_candidate_id",
+        "top_candidate_role",
+        "top_score",
+        "positive_score",
+        "positive_candidate_id_reconstructed",
+        "positive_rank_reconstructed",
+        "top_candidate_id_reconstructed",
+        "top_candidate_role_reconstructed",
+        "top_score_reconstructed",
+        "positive_score_reconstructed",
+        "positive_candidate_match",
+        "positive_rank_match",
+        "top_candidate_match",
+        "top_role_match",
+        "top_score_difference",
+        "positive_score_difference",
+        "absolute_top_score_difference",
+        "absolute_positive_score_difference",
+        "rank_difference"
+      ],
+      "column_count": 23,
+      "sample_rows": [
+        {
+          "split": "train",
+          "query_id": 1023761,
+          "positive_candidate_id": 217769,
+          "positive_rank": 1,
+          "top_candidate_id": 217769,
+          "top_candidate_role": "positive",
+          "top_score": 0.1024327413686122,
+          "positive_score": 0.1024327413686122,
+          "positive_candidate_id_reconstructed": 217769,
+          "positive_rank_reconstructed": 1,
+          "top_candidate_id_reconstructed": 217769,
+          "top_candidate_role_reconstructed": "positive",
+          "top_score_reconstructed": 0.1041147960499194,
+          "positive_score_reconstructed": 0.1041147960499194,
+          "positive_candidate_match": true,
+          "positive_rank_match": true,
+          "top_candidate_match": true,
+          "top_role_match": true,
+          "top_score_difference": 0.0016820546813071,
+          "positive_score_difference": 0.0016820546813071,
+          "absolute_top_score_difference": 0.0016820546813071,
+          "absolute_positive_score_difference": 0.0016820546813071,
+          "rank_difference": 0
+        },
+        {
+          "split": "train",
+          "query_id": 1033149,
+          "positive_candidate_id": 563436,
+          "positive_rank": 4,
+          "top_candidate_id": 836875,
+          "top_candidate_role": "observable_non_positive",
+          "top_score": 0.2618571423713691,
+          "positive_score": 0.1437302385848848,
+          "positive_candidate_id_reconstructed": 563436,
+          "positive_rank_reconstructed": 4,
+          "top_candidate_id_reconstructed": 836875,
+          "top_candidate_role_reconstructed": "observable_non_positive",
+          "top_score_reconstructed": 0.2666262360987056,
+          "positive_score_reconstructed": 0.1377493317379322,
+          "positive_candidate_match": true,
+          "positive_rank_match": true,
+          "top_candidate_match": true,
+          "top_role_match": true,
+          "top_score_difference": 0.0047690937273365,
+          "positive_score_difference": -0.0059809068469525,
+          "absolute_top_score_difference": 0.0047690937273365,
+          "absolute_positive_score_difference": 0.0059809068469525,
+          "rank_difference": 0
+        },
+        {
+          "split": "train",
+          "query_id": 1037103,
+          "positive_candidate_id": 1037100,
+          "positive_rank": 1,
+          "top_candidate_id": 1037100,
+          "top_candidate_role": "positive",
+          "top_score": 0.460373159287527,
+          "positive_score": 0.460373159287527,
+          "positive_candidate_id_reconstructed": 1037100,
+          "positive_rank_reconstructed": 1,
+          "top_candidate_id_reconstructed": 1037100,
+          "top_candidate_role_reconstructed": "positive",
+          "top_score_reconstructed": 0.4787617922537509,
+          "positive_score_reconstructed": 0.4787617922537509,
+          "positive_candidate_match": true,
+          "positive_rank_match": true,
+          "top_candidate_match": true,
+          "top_role_match": true,
+          "top_score_difference": 0.0183886329662238,
+          "positive_score_difference": 0.0183886329662238,
+          "absolute_top_score_difference": 0.0183886329662238,
+          "absolute_positive_score_difference": 0.0183886329662238,
+          "rank_difference": 0
+        },
+        {
+          "split": "train",
+          "query_id": 1098204,
+          "positive_candidate_id": 656891,
+          "positive_rank": 1,
+          "top_candidate_id": 656891,
+          "top_candidate_role": "positive",
+          "top_score": 0.0967904507980488,
+          "positive_score": 0.0967904507980488,
+          "positive_candidate_id_reconstructed": 656891,
+          "positive_rank_reconstructed": 1,
+          "top_candidate_id_reconstructed": 656891,
+          "top_candidate_role_reconstructed": "positive",
+          "top_score_reconstructed": 0.098239581105266,
+          "positive_score_reconstructed": 0.098239581105266,
+          "positive_candidate_match": true,
+          "positive_rank_match": true,
+          "top_candidate_match": true,
+          "top_role_match": true,
+          "top_score_difference": 0.0014491303072172,
+          "positive_score_difference": 0.0014491303072172,
+          "absolute_top_score_difference": 0.0014491303072172,
+          "absolute_positive_score_difference": 0.0014491303072172,
+          "rank_difference": 0
+        },
+        {
+          "split": "train",
+          "query_id": 1115085,
+          "positive_candidate_id": 837489,
+          "positive_rank": 1,
+          "top_candidate_id": 837489,
+          "top_candidate_role": "positive",
+          "top_score": 0.4131239750978249,
+          "positive_score": 0.4131239750978249,
+          "positive_candidate_id_reconstructed": 837489,
+          "positive_rank_reconstructed": 1,
+          "top_candidate_id_reconstructed": 837489,
+          "top_candidate_role_reconstructed": "positive",
+          "top_score_reconstructed": 0.4220024154726296,
+          "positive_score_reconstructed": 0.4220024154726296,
+          "positive_candidate_match": true,
+          "positive_rank_match": true,
+          "top_candidate_match": true,
+          "top_role_match": true,
+          "top_score_difference": 0.0088784403748047,
+          "positive_score_difference": 0.0088784403748047,
+          "absolute_top_score_difference": 0.0088784403748047,
+          "absolute_positive_score_difference": 0.0088784403748047,
+          "rank_difference": 0
+        }
+      ]
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/splits/t6_eval_group_aware.csv",
+      "status": "READABLE",
+      "columns": [
+        "query_id",
+        "query_creation_time",
+        "query_creator",
+        "query_creator_detail",
+        "query_summary",
+        "query_description",
+        "candidate_id",
+        "candidate_creation_time",
+        "candidate_creator",
+        "candidate_creator_detail",
+        "candidate_summary",
+        "candidate_description",
+        "candidate_role",
+        "target_observed",
+        "target_type",
+        "sampling_protocol",
+        "sampling_seed"
+      ],
+      "column_count": 17,
+      "sample_rows": [
+        {
+          "query_id": 1872597,
+          "query_creation_time": "2024-01-01 20:20:27",
+          "query_creator": "weizmangal@gmail.com",
+          "query_creator_detail": "{'nick': 'weizmangal', 'email': 'weizmangal@gmail.com', 'id': 740943, 'real_name': '', 'name': 'weizmangal@gmail.com'}",
+          "query_summary": "getSelection API of text in closed shadow root leaks encapsulated DOM nodes",
+          "query_description": "Created attachment 9370659\\\\ndemo\\\\n\\\\nUser Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36\\\\n\\\\nSteps to reproduce:\\\\n\\\\nEither visit https://weizmangal.com/firefox-shadow-dom-selection-leak-demo/ or:\\\\n\\\\n* Open blank document on Firefox\\\\n* Create a closed ShadowRoot and inject it with a text node with \\\\\"xxx\\\\\" as its content\\\\n* run `find(\\\\\"xxx\\\\\")`\\\\n* call `const xyz = getSelection().anchorNode`\\\\n\\\\n\\\\nActual results:\\\\n\\\\n`xyz` holds a reference to the text node that lives within the closed shadow root\\\\n\\\\n\\\\nExpected results:\\\\n\\\\n`xyz` should hold a reference to the host node of the closed shadow root (line in Chrome) or null (like in Safari):\\\\n\\\\n* In Chrome/Safari, text in closed shadow root remains safe from outer breach\\\\n* In Firefox, text in closed shadow root can be breached from outside",
+          "candidate_id": 1562561,
+          "candidate_creation_time": "2019-07-01 12:42:45",
+          "candidate_creator": "mbrodesser@igalia.com",
+          "candidate_creator_detail": "{'real_name': 'Mirko Brodesser (:mbrodesser-Igalia)', 'email': 'mbrodesser@igalia.com', 'name': 'mbrodesser@igalia.com', 'id': 725227, 'nick': 'mbrodesser-Igalia'}",
+          "candidate_summary": "Don't expose Shadow DOM nodes via Selection API",
+          "candidate_description": null,
+          "candidate_role": "positive",
+          "target_observed": true,
+          "target_type": "point_in_time_dupe_target",
+          "sampling_protocol": "T6-DCS-v2",
+          "sampling_seed": null
+        },
+        {
+          "query_id": 1872597,
+          "query_creation_time": "2024-01-01 20:20:27",
+          "query_creator": "weizmangal@gmail.com",
+          "query_creator_detail": "{'nick': 'weizmangal', 'email': 'weizmangal@gmail.com', 'id': 740943, 'real_name': '', 'name': 'weizmangal@gmail.com'}",
+          "query_summary": "getSelection API of text in closed shadow root leaks encapsulated DOM nodes",
+          "query_description": "Created attachment 9370659\\\\ndemo\\\\n\\\\nUser Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36\\\\n\\\\nSteps to reproduce:\\\\n\\\\nEither visit https://weizmangal.com/firefox-shadow-dom-selection-leak-demo/ or:\\\\n\\\\n* Open blank document on Firefox\\\\n* Create a closed ShadowRoot and inject it with a text node with \\\\\"xxx\\\\\" as its content\\\\n* run `find(\\\\\"xxx\\\\\")`\\\\n* call `const xyz = getSelection().anchorNode`\\\\n\\\\n\\\\nActual results:\\\\n\\\\n`xyz` holds a reference to the text node that lives within the closed shadow root\\\\n\\\\n\\\\nExpected results:\\\\n\\\\n`xyz` should hold a reference to the host node of the closed shadow root (line in Chrome) or null (like in Safari):\\\\n\\\\n* In Chrome/Safari, text in closed shadow root remains safe from outer breach\\\\n* In Firefox, text in closed shadow root can be breached from outside",
+          "candidate_id": 1534010,
+          "candidate_creation_time": "2019-03-09 19:37:04",
+          "candidate_creator": "marceljung1@t-online.de",
+          "candidate_creator_detail": "{'email': 'marceljung1@t-online.de', 'id': 629139, 'name': 'marceljung1@t-online.de', 'real_name': 'DoktorDementor', 'nick': 'marceljung1'}",
+          "candidate_summary": "Graphic glitches on youtube",
+          "candidate_description": "User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:67.0) Gecko/20100101 Firefox/67.0\\\\n\\\\nSteps to reproduce:\\\\n\\\\nPlaying normally Youtube videos.\\\\n\\\\n\\\\nActual results:\\\\n\\\\nWhen I move the mouse over the Youtube symbols such as subtitle resolution and full screen, the symbols flicker briefly or disappear for two seconds.\\\\n\\\\n\\\\nExpected results:\\\\n\\\\nThe symbols should not flicker when i get the mouse over it.\\\\n\\\\n\\\\ntransalted with deepl.",
+          "candidate_role": "observable_non_positive",
+          "target_observed": false,
+          "target_type": null,
+          "sampling_protocol": "T6-DCS-v2",
+          "sampling_seed": 2.772487038425002e+18
+        },
+        {
+          "query_id": 1872597,
+          "query_creation_time": "2024-01-01 20:20:27",
+          "query_creator": "weizmangal@gmail.com",
+          "query_creator_detail": "{'nick': 'weizmangal', 'email': 'weizmangal@gmail.com', 'id': 740943, 'real_name': '', 'name': 'weizmangal@gmail.com'}",
+          "query_summary": "getSelection API of text in closed shadow root leaks encapsulated DOM nodes",
+          "query_description": "Created attachment 9370659\\\\ndemo\\\\n\\\\nUser Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36\\\\n\\\\nSteps to reproduce:\\\\n\\\\nEither visit https://weizmangal.com/firefox-shadow-dom-selection-leak-demo/ or:\\\\n\\\\n* Open blank document on Firefox\\\\n* Create a closed ShadowRoot and inject it with a text node with \\\\\"xxx\\\\\" as its content\\\\n* run `find(\\\\\"xxx\\\\\")`\\\\n* call `const xyz = getSelection().anchorNode`\\\\n\\\\n\\\\nActual results:\\\\n\\\\n`xyz` holds a reference to the text node that lives within the closed shadow root\\\\n\\\\n\\\\nExpected results:\\\\n\\\\n`xyz` should hold a reference to the host node of the closed shadow root (line in Chrome) or null (like in Safari):\\\\n\\\\n* In Chrome/Safari, text in closed shadow root remains safe from outer breach\\\\n* In Firefox, text in closed shadow root can be breached from outside",
+          "candidate_id": 188550,
+          "candidate_creation_time": "2003-01-11 01:14:54",
+          "candidate_creator": "dpalm@writeme.com",
+          "candidate_creator_detail": "{'name': 'dpalm@writeme.com', 'nick': 'dpalm', 'id': 82804, 'email': 'dpalm@writeme.com', 'real_name': 'Daniel Palm'}",
+          "candidate_summary": "input fields do not correclty render text when using stylesheets that specify an input background color",
+          "candidate_description": "User-Agent:       Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.3a) Gecko/20021212\\\\nBuild Identifier: Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.3a) Gecko/20021212\\\\n\\\\nThis problem reproduces in our companies webpages, but you can only view the\\\\npages with an account at our company (NetLedger.com). (I am a QA engineer at\\\\nNetledger, and as I work under Linux, I cannot use Internet Exploder, but it is\\\\ndifficult to use our product with current versions of Mozilla, because of this bug)\\\\nThe problem is that certain text fields (input type='text') use a style, and the\\\\nstyle specifies that the background of the input be #FFFFE5 (which is a light\\\\nyellow color) and that the text color is black. However, when newer version of\\\\nmozillas (and even some not as new versions like 1.2) the text is invisible (I'm\\\\nassuming that the text is being displayed as #FFFFE5 on an #FFFFE5 background,\\\\ntherefore invisible, but maybe its not displaying at all)\\\\n\\\\nI've seen this in both the XFT and regular builds of mozilla. It also appeared\\\\nin Pheonix in windows, so I know it's not just a linux issue. Its something in\\\\nGecko. \\\\n\\\\nIt is hard to enter text when you cannot read it. \\\\nI've included a portion of our css that I hope may be helpful( I dont know a lot\\\\nabout CSS) \\\\n\\\\n.inputrtreq         { font-size: 9pt; color: #000000; background-color: #FFFFE5;\\\\ntext-align: right; }\\\\n\\\\ncontact me if you need html and full css files, I will try and get them to you.\\\\n(Though I am including snippets)\\\\n\\\\n\\\\nReproducible: Always\\\\n\\\\nSteps to Reproduce:\\\\n1. Go to a website where input fields use the CSS shown in the details\\\\n2. Notice that the text you enter is invisible\\\\n3.\\\\n\\\\nActual Results:  \\\\nI can't see the text against the yellow background\\\\n\\\\nExpected Results:  \\\\nDisplayed black text against the yellow background.\\\\n\\\\nheres the full CSS file that I believe is being used:.portletlabel {  font-size:\\\\n8pt; font-weight: bold }\\\\n.crumb {  font-size: 8pt }\\\\n.headbarsub { font-size: 8pt; font-weight: normal }\\\\n.ontab {  font-size: 8pt; text-decoration: none; font-weight: bold}\\\\n.offtab {  font-size: 8pt; text-decoration: none; font-weight: bold}\\\\n.ontabbottom {  font-size: 8pt; text-decoration: none; }\\\\n.offtabbottom {  font-size: 8pt; text-decoration: none; }\\\\n.bgontabbottom {  font-size: 8pt;}\\\\n.bgofftabbottom {  font-size: 8pt;}\\\\n.ontabhover {  font-size: 8pt; text-decoration: underline; font-weight: bold }\\\\n.offtabhover {  font-size: 8pt; text-decoration: underline; font-weight: bold}\\\\n.btntext {  font-size: 8pt; text-decoration: none}\\\\n.btntexthover {  font-size: 8pt; text-decoration: underline}\\\\n.medtext         \t{ font-size: 9pt }\\\\n.medtextbold     \t{ font-size: 9pt; font-weight: bold }\\\\n.medtextboldnolink\t{ font-size: 9pt; font-weight: bold ; color: #000000 ;\\\\ntext-decoration: none}\\\\n.text               { font-size: 8pt }\\\\n.textctr            { font-size: 8pt; text-align: center}\\\\n.textrt             { font-size: 8pt; text-align: right}\\\\n.inputrt            { font-size: 9pt; color: #000000; text-align: right; }\\\\n.inputrtreq         { font-size: 9pt; color: #000000; background-color: #FFFFE5;\\\\ntext-align: right; }\\\\n.textnolink         { font-size: 8pt; text-decoration: none}\\\\n.textul             { font-size: 8pt; text-decoration: underline}\\\\n.textbold           { font-size: 8pt; font-weight: bold }\\\\n.textboldctr        { font-size: 8pt; font-weight: bold; text-align: center }\\\\n.textboldrt         { font-size: 8pt; font-weight: bold; text-align: right }\\\\n.textboldul         { font-size: 8pt; font-weight: bold ; text-decoration:\\\\nunderline}\\\\n.textboldnolink     { font-size: 8pt; font-weight: bold ; color: #000000 ;\\\\ntext-decoration: none}\\\\n.textdark           { font-size: 8pt; color: #FFFFFF; background-color: #666666}\\\\n.textdarkbold       { font-size: 8pt; color: #FFFFFF; background-color: #666666;\\\\nfont-weight: bold}\\\\n.textdarkboldnolink { font-size: 8pt; color: #FFFFFF; background-color: #666666;\\\\nfont-weight: bold; text-decoration: none}\\\\n.textdarkboldul     { font-size: 8pt; color: #FFFFFF; background-color: #666666;\\\\nfont-weight: bold; text-decoration: underline}\\\\n.textdarkctr        { font-size: 8pt; color: #FFFFFF; background-color: #666666;\\\\ntext-align: center}\\\\n.textdarkrt         { font-size: 8pt; color: #FFFFFF; background-color: #666666;\\\\ntext-align: right}\\\\n.textboldul         { font-size: 8pt; color: #000000; font-weight: bold;\\\\ntext-decoration: underline}\\\\n.input              { font-size: 9pt; color: #000000; }\\\\n.inputreq           { font-size: 9pt; color: #000000; background-color: #FFFFE5 }\\\\n.nlbutton           { font-size: 9pt; color: #000000; font-weight: bold; }\\\\n.bgbutton           { font-size: 9pt; color: #000000; font-weight: bold; }\\\\n.textwhite          { font-size: 8pt; color: #FFFFFF}\\\\n.textwhitenolink    { font-size: 8pt; color: #FFFFFF; text-decoration: none }\\\\n.textwhitert        { font-size: 8pt; color: #FFFFFF ; text-align: right}\\\\n.textmedium         { font-size: 8pt; color: #000000; background-color: #AAAAAA}\\\\n.textmediumctr      { font-size: 8pt; color: #000000; background-color: #AAAAAA\\\\n; text-align: center}\\\\n.textmediumrt       { font-size: 8pt; color: #000000; background-color: #AAAAAA\\\\n; text-align: right}\\\\n.smalltext {  font-size: 8pt }\\\\n.tinytext {  font-size: 7pt}\\\\n.smalltextul { font-size: 8pt ; text-decoration: underline}\\\\n.smalltextrt { font-size: 8pt ; text-align: right}\\\\n.smalltextctr { font-size: 8pt ; text-align: center}\\\\n.smalltextb { font-size: 8pt ; font-weight: bold}\\\\n.smalltextbrt { font-size: 8pt ; font-weight: bold; text-align: right}\\\\n.smalltextbnolink { font-size: 8pt ; font-weight: bold; text-decoration: none}\\\\n.smalltextnolink { font-size: 8pt ; text-decoration: none}\\\\n.smallgraytext { font-size: 8pt ; ; color: #666666;}\\\\n.tinygraytext { font-size: 7pt ; ; color: #666666;}\\\\n.smallgraytextul { font-size: 8pt ; ; color: #666666; text-decoration: underline;}\\\\n.smallgraytextrt { font-size: 8pt ; text-align: right ; color: #666666; }\\\\n.smallgraytextnolink { font-size: 8pt ; color: #666666; text-decoration: none}\\\\n.smalltextsub1 { font-size: 8pt ; text-indent: 20pt}\\\\n.pic {  text-align: center; vertical-align: top;  font-size: 8pt ; font-weight:\\\\nnormal}\\\\n.ctr {  text-align: center}\\\\n.rt { text-align: right }\\\\n.graylt { background-color: #CCCCCC }\\\\n.graymd { background-color: #AAAAAA }\\\\n.graydk {  background-color: #666666 }\\\\n.errortext {  font-size: 8pt; color: #EE0000; background-color: #FFF4F4}\\\\n.tasktitle { font-size: 14 pt;}\\\\n.taskstatus { font-size: 14 pt;}\\\\n.bigboldtext { font-size: 16 pt; font-weight:bold}\\\\n.buttontext { font-size: 8pt ; text-decoration: none ; color: #000000}\\\\n.bigbuttontextb { font-size: 10pt ; text-decoration: none ; color: #FFFFFF;\\\\nfont-weight: bold}\\\\n.adtext {  font-size: 8pt; color: #000000; text-decoration: none;}\\\\n.segmentnavlarge\t\t{ font-size: 12pt; font-weight: bold; text-align: center}\\\\n.segmentnavtext\t\t{ font-size: 10pt}\\\\n.segmentnavtexton\t\t{ font-size: 11pt;  color: #CC0000; font-weight: bold;}\\\\n.listtable { background-color: white; border-width: 1 0 0 0; border-color:\\\\nwhite; border-style: solid; }\\\\n.listheader { height: 100%; padding: 2px; vertical-align: top; border-style:\\\\nsolid; border-width: 0 1 1 0; background-color: #CCCCCC; border-color:  white\\\\n#54647A #54647A white; margin-left: 1; }\\\\n.portlet { background-color: #DFE2E7}\\\\n.portletlabel { color: #000000; background-color: #DFE2E7; }\\\\n.bgbar {  background-color: #C1C8D2}\\\\n.bglt {  background-color: #F3F4F7}\\\\n.bglttext { background-color: #F3F4F7; font-size: 8pt; color: #000000}\\\\n.bglttextctr { background-color: #F3F4F7; font-size: 8pt ; text-align: center;\\\\ncolor: #000000}\\\\n.bglttextrt { background-color: #F3F4F7; font-size: 8pt ; text-align: right;\\\\ncolor: #000000}\\\\n.bgbutton { background-color: #FFE599 }\\\\n.bgmd { background-color: #DFE2E7}\\\\n.bgontab {  background-color: #C1C8D2; text-align: center; vertical-align: middle}\\\\n.bgofftab { background-color: #8491A4; text-align: center; vertical-align: middle}\\\\n.bgontabbottom { color: #000000; background-color: #F3F4F7;}\\\\n.bgofftabbottom { color: #666666; background-color: #DFE2E7;}\\\\n.bgontabbottommid { color: #000000; background-color: #F3F4F7; border-style:\\\\nsolid; border-width: 1 0 1 0; border-color: #cccccc white #F3F4F7 white;}\\\\n.bgofftabbottommid { color: #666666; background-color: #DFE2E7; border-style:\\\\nsolid; border-width: 1 0 1 0; border-color: #DFE2E7 white #cccccc white;}\\\\n.ontabbottom { color: #000000; }\\\\n.offtabbottom { color: #666666; }\\\\n.bgon {  background-color: #C1C8D2;}\\\\n.bgoff { background-color: #8491A4;}\\\\n.headbar { font-size: 8pt; color: #424548; text-decoration: none;\\\\nbackground-color: #C1C8D2}\\\\n.headbarsub { color: #424548 }\\\\n.crumb { color: #728197 }\\\\n.ontab { color: #000000}\\\\n.offtab { color: #FFFFFF}\\\\n.ontabhover { color: #000000}\\\\n.offtabhover { color: #FFFFFF}\\\\n.btntext { color: #FFFFFF}\\\\n.btntexthover { color: #FFFFFF}\\\\n.smalltextlt { font-size: 8pt ; background-color: #F3F4F7; color: #000000}\\\\n.tasktitle { color: #000000 }\\\\n.taskstatus { color: #8491A4}\\\\n.texttable          { font-size: 8pt; color: #000000; background-color: #F3F4F7;\\\\npadding: 2 5 2 5 ; border-style: solid; border-width: 1 0 0 0; border-color:\\\\nwhite; vertical-align: top;}\\\\n.texttablebold      { font-size: 8pt; color: #000000; background-color: #F3F4F7;\\\\npadding: 2 5 2 5; font-weight: bold; border-style: solid; border-width: 1 0 0 0;\\\\nborder-color: white; vertical-align: top;}\\\\n.texttablectr       { font-size: 8pt; color: #000000; background-color: #F3F4F7;\\\\ntext-align: center; padding: 2 5 2 5; border-style: solid; border-width: 1 0 0\\\\n0; border-color: white; vertical-align: top;}\\\\n.texttablert        { font-size: 8pt; color: #000000; background-color: #F3F4F7;\\\\ntext-align: right; padding: 2 5 2 5; border-style: solid; border-width: 1 0 0 0;\\\\nborder-color: white; vertical-align: top;}\\\\n.printtexttable     { font-size: 8pt; color: #000000; padding: 2 5 2 5;\\\\nborder-style: solid; border-width: 1 0 0 0; border-color: white; vertical-align:\\\\ntop;}\\\\n.printtexttablebold { font-size: 8pt; color: #000000; padding: 2 5 2 5;\\\\nfont-weight: bold; border-style: solid; border-width: 1 0 0 0; border-color:\\\\nwhite; vertical-align: top;}\\\\n.printtexttablectr  { font-size: 8pt; color: #000000; text-align: center;\\\\npadding: 2 5 2 5; border-style: solid; border-width: 1 0 0 0; border-color:\\\\nwhite; vertical-align: top;}\\\\n.printtexttablert   { font-size: 8pt; color: #000000; text-align: right;\\\\npadding: 2 5 2 5; border-style: solid; border-width: 1 0 0 0; border-color:\\\\nwhite; vertical-align: top;}\\\\n.seltexttable       { background-color: #737982; font-size: 8pt; padding: 2 5 2\\\\n5; color: #ffffff; border-style: solid; border-width: 1 0 0 0; border-color:\\\\nwhite; vertical-align: top;}\\\\n.seltexttablectr    { background-color: #737982; font-size: 8pt ; text-align:\\\\ncenter; padding: 2 5 2 5; color: #ffffff; border-style: solid; border-width: 1 0\\\\n0 0; border-color: white; vertical-align: top;}\\\\n.seltexttablert     { background-color: #737982; font-size: 8pt ; text-align:\\\\nright; padding: 2 5 2 5; color: #ffffff; border-style: solid; border-width: 1 0\\\\n0 0; border-color: white; vertical-align: top;}\\\\n.smalltextrt { color: #000000}\\\\n.smalltext { color: #000000}\\\\n.tinytext { color: #000000}\\\\n.text { color: #000000}\\\\n.textbold { color: #000000}\\\\n.textboldul { color: #000000}\\\\n.textboldnolink { color: #000000}\\\\n.listheadernosort { height: 100%; padding: 2 5 2 5; vertical-align: top; color:\\\\n#666666; background-color: #F3F4F7; }\\\\n.medtext         \t{ color: #000000 }\\\\n.medtextbold     \t{ color: #000000 }\\\\n.medtextboldnolink\t{ color: #000000 }\\\\n.bgltmedtext \t\t{ background-color: #F3F4F7; font-size: 9pt; color: #000000}\\\\n.ddmAnchor {text-decoration: none; cursor: default;}\\\\n.ddmInnerTable {border-style: solid; border-width: 1; border-color: #FFFFFF\\\\n#8492A5 #8492A5 #FFFFFF;}\\\\n.ddmText { FONT-SIZE: 8pt; text-decoration: none; vertical-align: center;}\\\\n.ddmTextHasChild  { FONT-SIZE: 8pt; text-decoration: none; vertical-align: center;}\\\\n.ddmTextSeperator { FONT-SIZE: 8pt; text-decoration: none;}\\\\n.ddmSeperator {background-color: #8492A5}\\\\n.ddmSeperatorEmpty {background-color: #FFFFFF}\\\\n.ddmTextOver { background-color:#FFFFFF; FONT-SIZE: 8pt; text-decoration: none;\\\\nvertical-align: center;}\\\\n.ddmDiv {position: absolute; background: #DFE2E7; border-style: solid;\\\\nborder-width: 1; border-color: #44546B; padding: 0; cursor: default;}\\\\n.ddmSpan { }\\\\n.ddmArrow {font-family: WebDings; position: absolute; COLOR: #8492A5;\\\\nvertical-align: center; FONT-SIZE: 8pt;}\\\\n.ddmArrowOver {font-family: WebDings; background-color: #FFFFFF position:\\\\nabsolute; vertical-align: center; FONT-SIZE: 8pt;}\\\\n.dropdownInput { background-color: white; color: black; font-size: 8pt;\\\\npadding-left: 1; border-style: solid; border-width: 1; border-color: #999999;\\\\nbackground-image: url(/images/forms/ddarrow.gif); background-repeat: no-repeat;\\\\nbackground-position: center right; cursor: default}\\\\n.dropdownDiv { position: absolute; background: white; border-color: #999999;\\\\nborder-style: solid; border-width: 1; cursor: default; padding: 2;\\\\nscrollbar-face-color: #dddddd; scrollbar-highlight-color: #dddddd;\\\\nscrollbar-3dlight-color: #dddddd;\\\\nscrollbar-darkshadow-color: #dddddd; scrollbar-shadow-color: #999999;\\\\nscrollbar-arrow-color: black; scrollbar-track-color: #eeeeee; \\\\nfont-size: 8pt; white-space: nowrap;  }\t\\\\n.dropdownNotSelected { FONT-SIZE: 8pt; color: black; }\\\\n.dropdownSelected { FONT-SIZE: 8pt; color: white; background-color: #222288; }\\\\n.bg {  background-color: #FFFFFF }\\\\n.num { font-size: 8pt; background-color: #FFFFFF; text-align: right}\\\\n.numb { font-size: 8pt; background-color: #FFFFFF; text-align: right ;\\\\nfont-weight: bold }\\\\n.stringb { font-size: 8pt; background-color: #FFFFFF ; font-weight: bold }\\\\n.stringbctr { font-size: 8pt; background-color: #FFFFFF ; font-weight: bold ;\\\\ntext-align: center }\\\\n.company { font-size: 14pt; font-weight: bold; text-align: center}\\\\n.rpttitle { font-size: 16pt; font-weight: bold; text-align: center}\\\\n.rptsubtitle { font-size: 14pt; font-weight: bold; text-align: center}\\\\n.bgmdtext { background-color: #DFE2E7; font-size: 8pt; color: }\\\\n.bgmdtextctr { background-color: #DFE2E7; font-size: 8pt ; text-align: center;\\\\ncolor: #000000}\\\\n.bgmdtextrt { background-color: #DFE2E7; font-size: 8pt ; text-align: right;\\\\ncolor: #000000}\\\\n.labelRow { visibility: hidden }\\\\ntextarea { overflow: auto; border-style: solid; border-width: 1; border-color:\\\\n#999999 }\\\\ninput { border-style: solid; border-width: 1; border-color: #999999 }\\\\n.inputrt { border-style: solid; border-width: 1; border-color: #999999 }\\\\n.inputreq { border-style: solid; border-width: 1; border-color: #999999; }\\\\n.inputrtreq { border-style: solid; border-width: 1; border-color: #999999; }\\\\n.bgbutton { border-style: solid; border-width: 1; border-color: #999999 }\\\\n.nlbutton { border-style: solid; border-width: 1; border-color: #999999;}\\\\n@media screen {\\\\nbody { font-family: Verdana,Helvetica,sans-serif }\\\\ntd { font-family: Verdana,Helvetica,sans-serif }\\\\nselect { font-family: Verdana,Helvetica,sans-serif; }\\\\ntextarea { font-family: Verdana,Helvetica,sans-serif; }\\\\ninput { font-family: Verdana,Helvetica,sans-serif; }\\\\n.noprint { }\\\\n.printonly { display: none; }\\\\n.scrollarea { overflow: auto; }\\\\n}\\\\n@media print {\\\\nbody { font-family: Arial,Helvetica,sans-serif; }\\\\ntd { font-family: Arial,Helvetica,sans-serif; }\\\\ntextarea { font-family: Arial,Helvetica,sans-serif; }\\\\nselect { font-family: Arial,Helvetica,sans-serif; }\\\\ninput { font-family: Arial,Helvetica,sans-serif; }\\\\n.noprint { display: none; }\\\\n.printonly { }\\\\n.scrollarea { }\\\\n}\\\\n\\\\n\\\\n----------------------------------------------------------------------\\\\nHTML SNIPPET\\\\n\\\\n<TD nowrap title='Report Title'><span id=\\\\\"title_fs\\\\\" style=\\\\\"white-space:\\\\nnowrap\\\\\"><input onChange=\\\\\"window.ischanged =\\\\ntrue;this.isvalid=validate_field(this,'text',true,false);this.checkvalid=false;\\\\\"\\\\nname=\\\\\"title\\\\\" type=\\\\\"text\\\\\" maxlength=\\\\\"40\\\\\" onFocus=\\\\\"if (this.isvalid == true ||\\\\nthis.isvalid == false) this.checkvalid=true;\\\\\" class=\\\\\"inputreq\\\\\" onBlur=\\\\\"if\\\\n(this.checkvalid == true)\\\\n{this.isvalid=validate_field(this,'text',false,false);}if (this.isvalid ==\\\\nfalse) {this.focus(); this.select(); }\\\\\" size=\\\\\"20\\\\\" value=\\\\\"A/P Register\\\\\"></span>",
+          "candidate_role": "observable_non_positive",
+          "target_observed": false,
+          "target_type": null,
+          "sampling_protocol": "T6-DCS-v2",
+          "sampling_seed": 2.772487038425002e+18
+        },
+        {
+          "query_id": 1872597,
+          "query_creation_time": "2024-01-01 20:20:27",
+          "query_creator": "weizmangal@gmail.com",
+          "query_creator_detail": "{'nick': 'weizmangal', 'email': 'weizmangal@gmail.com', 'id': 740943, 'real_name': '', 'name': 'weizmangal@gmail.com'}",
+          "query_summary": "getSelection API of text in closed shadow root leaks encapsulated DOM nodes",
+          "query_description": "Created attachment 9370659\\\\ndemo\\\\n\\\\nUser Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36\\\\n\\\\nSteps to reproduce:\\\\n\\\\nEither visit https://weizmangal.com/firefox-shadow-dom-selection-leak-demo/ or:\\\\n\\\\n* Open blank document on Firefox\\\\n* Create a closed ShadowRoot and inject it with a text node with \\\\\"xxx\\\\\" as its content\\\\n* run `find(\\\\\"xxx\\\\\")`\\\\n* call `const xyz = getSelection().anchorNode`\\\\n\\\\n\\\\nActual results:\\\\n\\\\n`xyz` holds a reference to the text node that lives within the closed shadow root\\\\n\\\\n\\\\nExpected results:\\\\n\\\\n`xyz` should hold a reference to the host node of the closed shadow root (line in Chrome) or null (like in Safari):\\\\n\\\\n* In Chrome/Safari, text in closed shadow root remains safe from outer breach\\\\n* In Firefox, text in closed shadow root can be breached from outside",
+          "candidate_id": 1857289,
+          "candidate_creation_time": "2023-10-05 22:52:17",
+          "candidate_creator": "richard@fevrier.io",
+          "candidate_creator_detail": "{'nick': 'richard', 'name': 'richard@fevrier.io', 'id': 735757, 'email': 'richard@fevrier.io', 'real_name': ''}",
+          "candidate_summary": "[Linux][Wayland][Firefox] Unable to use Meta/Super key for ui.key.accelkey",
+          "candidate_description": "User Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/118.0\\\\n\\\\nSteps to reproduce:\\\\n\\\\nHello, I tried to use Meta/Super as ui.key.accelkey instead of Ctrl by replacing the default value which is 17 for 91.\\\\nThis workflow is perfectly working under Xorg/XWayland but not under Wayland (the easiest way to test is to use the MOZ_ENABLE_WAYLAND env var).\\\\n\\\\nYou can find the original issue here: https://github.com/hyprwm/Hyprland/issues/3499\\\\nAll the credit should be attributed to https://github.com/vaxerski\\\\n\\\\n\\\\nActual results:\\\\n\\\\nCtrl was still the accelKey even after changing the value and rebooted Firefox.\\\\n\\\\n\\\\nExpected results:\\\\n\\\\nShould be able to use Meta/Super as accelKey.",
+          "candidate_role": "observable_non_positive",
+          "target_observed": false,
+          "target_type": null,
+          "sampling_protocol": "T6-DCS-v2",
+          "sampling_seed": 2.772487038425002e+18
+        },
+        {
+          "query_id": 1872597,
+          "query_creation_time": "2024-01-01 20:20:27",
+          "query_creator": "weizmangal@gmail.com",
+          "query_creator_detail": "{'nick': 'weizmangal', 'email': 'weizmangal@gmail.com', 'id': 740943, 'real_name': '', 'name': 'weizmangal@gmail.com'}",
+          "query_summary": "getSelection API of text in closed shadow root leaks encapsulated DOM nodes",
+          "query_description": "Created attachment 9370659\\\\ndemo\\\\n\\\\nUser Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36\\\\n\\\\nSteps to reproduce:\\\\n\\\\nEither visit https://weizmangal.com/firefox-shadow-dom-selection-leak-demo/ or:\\\\n\\\\n* Open blank document on Firefox\\\\n* Create a closed ShadowRoot and inject it with a text node with \\\\\"xxx\\\\\" as its content\\\\n* run `find(\\\\\"xxx\\\\\")`\\\\n* call `const xyz = getSelection().anchorNode`\\\\n\\\\n\\\\nActual results:\\\\n\\\\n`xyz` holds a reference to the text node that lives within the closed shadow root\\\\n\\\\n\\\\nExpected results:\\\\n\\\\n`xyz` should hold a reference to the host node of the closed shadow root (line in Chrome) or null (like in Safari):\\\\n\\\\n* In Chrome/Safari, text in closed shadow root remains safe from outer breach\\\\n* In Firefox, text in closed shadow root can be breached from outside",
+          "candidate_id": 1723231,
+          "candidate_creation_time": "2021-07-31 03:53:35",
+          "candidate_creator": "intermittent-bug-filer@mozilla.bugs",
+          "candidate_creator_detail": "{'name': 'intermittent-bug-filer@mozilla.bugs', 'id': 573381, 'nick': 'intermittent-bug-filer', 'real_name': 'Treeherder Bug Filer', 'email': 'intermittent-bug-filer@mozilla.bugs'}",
+          "candidate_summary": "Intermittent /css/selectors/first-letter-flag-001.html | Testing http://web-platform.test:8000/css/selectors/first-letter-flag-001.html == http://web-platform.test:8000/css/selectors/first-letter-flag-001-ref.html",
+          "candidate_description": "**Filed by:** smolnar [at] mozilla.com\\\\n**Parsed log:** https://treeherder.mozilla.org/logviewer?job_id=346944017&repo=autoland\\\\n**Full log:** https://firefox-ci-tc.services.mozilla.com/api/queue/v1/task/C2lw1BbISVOBfP1reB_M-A/runs/0/artifacts/public/logs/live_backing.log\\\\n**Reftest URL:** https://hg.mozilla.org/mozilla-central/raw-file/tip/layout/tools/reftest/reftest-analyzer.xhtml#logurl=https://firefox-ci-tc.services.mozilla.com/api/queue/v1/task/C2lw1BbISVOBfP1reB_M-A/runs/0/artifacts/public/logs/live_backing.log&only_show_unexpected=1\\\\n\\\\n---\\\\n```\\\\nReftest shows UK flag\\\\nINFO - TEST-START | /css/selectors/first-letter-flag-001.html\\\\n[task 2021-07-30T21:44:45.169Z] 21:44:45     INFO - PID 6384 | 1627681485168\tMarionette\tINFO\tTesting http://web-platform.test:8000/css/selectors/first-letter-flag-001.html == http://web-platform.test:8000/css/selectors/first-letter-flag-001-ref.html\\\\n[task 2021-07-30T21:44:45.320Z] 21:44:45     INFO - PID 6384 | 1627681485320\tMarionette\tINFO\tNo differences allowed\\\\n[task 2021-07-30T21:44:45.363Z] 21:44:45     INFO - TEST-UNEXPECTED-FAIL | /css/selectors/first-letter-flag-001.html | Testing http://web-platform.test:8000/css/selectors/first-letter-flag-001.html == http://web-platform.test:8000/css/selectors/first-letter-flag-001-ref.html\\\\n[task 2021-07-30T21:44:45.363Z] 21:44:45     INFO - Found 2428 pixels different, maximum difference per channel 255\\\\n[task 2021-07-30T21:44:45.363Z] 21:44:45     INFO - REFTEST   IMAGE 1 (TEST): data:image/png;base64\\\\nINFO - REFTEST   IMAGE 2 (REFERENCE): data:image/png;base6\\\\nINFO - TEST-INFO took 185ms\\\\n[task 2021-07-30T21:44:45.397Z] 21:44:45     INFO - PID 6384 | 1627681485397\tMarionette\tINFO\tStopped listening on port 58250\\\\n[task 2021-07-30T21:44:45.522Z] 21:44:45     INFO - PID 6384 | JavaScript error: resource:///modules/Interactions.jsm, line 230: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]\\\\n[task 2021-07-30T21:44:46.010Z] 21:44:46     INFO - Browser exited with return code 0\\\\n[task 2021-07-30T21:44:46.012Z] 21:44:46     INFO - Closing logging queue\\\\n[task 2021-07-30T21:44:46.012Z] 21:44:46     INFO - queue closed\\\\n[task 2021-07-30T21:44:46.070Z] 21:44:46     INFO - Application command: Z:\\\\task_1627680784\\\\build\\\\application\\\\firefox\\\\firefox.exe -marionette about:blank --wait-for-browser -profile C:\\\\Users\\\\task_1627680784\\\\AppData\\\\Local\\\\Temp\\\\tmp6g36t3qn\\\\n[task 2021-07-30T21:44:46.073Z] 21:44:46     INFO - Starting runner\\\\n[task 2021-07-30T21:44:46.641Z] 21:44:46     INFO - PID 6476 | 1627681486641\tMarionette\tINFO\tMarionette enabled\\\\n[task 2021-07-30T21:44:46.987Z] 21:44:46     INFO - PID 4664 | console.warn: SearchSettings: \\\\\"get: No settings file exists, new profile?\\\\\" (new NotFoundError(\\\\\"Could not open the file at C:\\\\\\\\Users\\\\\\\\task_1627680784\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\tmpel9d61on\\\\\\\\search.json.mozlz4\\\\\", (void 0)))\\\\n[task 2021-07-30T21:44:47.934Z] 21:44:47     INFO - PID 4664 | 1627681487933\tMarionette\tINFO\tListening on port 58273\\\\n[task 2021-07-30T21:44:48.398Z] 21:44:48     INFO - TEST-START | /density-size-correction/density-corrected-image-svg-aspect-ratio-cross-origin.sub.html\\\\n```",
+          "candidate_role": "observable_non_positive",
+          "target_observed": false,
+          "target_type": null,
+          "sampling_protocol": "T6-DCS-v2",
+          "sampling_seed": 2.772487038425002e+18
+        }
+      ]
+    },
+    {
+      "path": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T6/splits/t6_train_group_aware.csv",
+      "status": "READABLE",
+      "columns": [
+        "query_id",
+        "query_creation_time",
+        "query_creator",
+        "query_creator_detail",
+        "query_summary",
+        "query_description",
+        "candidate_id",
+        "candidate_creation_time",
+        "candidate_creator",
+        "candidate_creator_detail",
+        "candidate_summary",
+        "candidate_description",
+        "candidate_role",
+        "target_observed",
+        "target_type",
+        "sampling_protocol",
+        "sampling_seed"
+      ],
+      "column_count": 17,
+      "sample_rows": [
+        {
+          "query_id": 1023761,
+          "query_creation_time": "2014-06-11 14:26:47",
+          "query_creator": "mozilla@chrisrebert.com",
+          "query_creator_detail": "{'name': 'mozilla@chrisrebert.com', 'id': 58202, 'real_name': 'Chris Rebert', 'nick': 'mozilla', 'email': 'mozilla@chrisrebert.com'}",
+          "query_summary": "With empty <tbody>, only top border in fully-bordered table is displayed (border-collapse:collapse, collapsed/collapsing borders bug)",
+          "query_description": "Created attachment 8438289\\\\nScreenshots showing rendering differences\\\\n\\\\nUser Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.114 Safari/537.36\\\\n\\\\nSteps to reproduce:\\\\n\\\\n1. In Firefox 30.0, go to http://jsfiddle.net/rZLCu/show/ or http://jsfiddle.net/rZLCu/\\\\n\\\\n\\\\nActual results:\\\\n\\\\nOut of all the borders set on the table and its cells, only the top border on the table itself seems to get displayed.\\\\n\\\\n\\\\nExpected results:\\\\n\\\\nAll the borders on the table and its cells should get displayed.\\\\n\\\\n\\\\n==Further info==\\\\nClick the \\\\\"Add Row\\\\\" button, and the borders will magically appear. Click the \\\\\"Remove\\\\\" button, and the borders will magically disappear again.\\\\n\\\\nOriginal issue: https://github.com/twbs/bootstrap/issues/13453",
+          "candidate_id": 217769,
+          "candidate_creation_time": "2003-08-30 02:24:31",
+          "candidate_creator": "urkle@outoforder.cc",
+          "candidate_creator_detail": "{'nick': 'urkle', 'id': 23562, 'name': 'urkle@outoforder.cc', 'email': 'urkle@outoforder.cc', 'real_name': 'Edward Rudd'}",
+          "candidate_summary": "[BC] border collapse borders not correct when empty row groups are involved",
+          "candidate_description": "User-Agent:       Mozilla/5.0 Galeon/1.2.11 (X11; Linux i686; U;) Gecko/20030703\\\\nBuild Identifier: Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.5b) Gecko/20030827\\\\n\\\\nonly the left pixel of the link is clickable..\\\\n\\\\nReproducible: Always\\\\n\\\\nSteps to Reproduce:",
+          "candidate_role": "positive",
+          "target_observed": true,
+          "target_type": "point_in_time_dupe_target",
+          "sampling_protocol": "T6-DCS-v2",
+          "sampling_seed": null
+        },
+        {
+          "query_id": 1023761,
+          "query_creation_time": "2014-06-11 14:26:47",
+          "query_creator": "mozilla@chrisrebert.com",
+          "query_creator_detail": "{'name': 'mozilla@chrisrebert.com', 'id': 58202, 'real_name': 'Chris Rebert', 'nick': 'mozilla', 'email': 'mozilla@chrisrebert.com'}",
+          "query_summary": "With empty <tbody>, only top border in fully-bordered table is displayed (border-collapse:collapse, collapsed/collapsing borders bug)",
+          "query_description": "Created attachment 8438289\\\\nScreenshots showing rendering differences\\\\n\\\\nUser Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.114 Safari/537.36\\\\n\\\\nSteps to reproduce:\\\\n\\\\n1. In Firefox 30.0, go to http://jsfiddle.net/rZLCu/show/ or http://jsfiddle.net/rZLCu/\\\\n\\\\n\\\\nActual results:\\\\n\\\\nOut of all the borders set on the table and its cells, only the top border on the table itself seems to get displayed.\\\\n\\\\n\\\\nExpected results:\\\\n\\\\nAll the borders on the table and its cells should get displayed.\\\\n\\\\n\\\\n==Further info==\\\\nClick the \\\\\"Add Row\\\\\" button, and the borders will magically appear. Click the \\\\\"Remove\\\\\" button, and the borders will magically disappear again.\\\\n\\\\nOriginal issue: https://github.com/twbs/bootstrap/issues/13453",
+          "candidate_id": 72572,
+          "candidate_creation_time": "2001-03-20 05:54:20",
+          "candidate_creator": "sspitzer@mozilla.org",
+          "candidate_creator_detail": "{'nick': 'sspitzer', 'name': 'sspitzer@mozilla.org', 'id': 1193, 'email': 'sspitzer@mozilla.org', 'real_name': '(not reading, please use seth@sspitzer.org instead)'}",
+          "candidate_summary": "style error to the console when I collapse / expand \"Local Folders\"",
+          "candidate_description": "this is on the modern skin.\\\\n\\\\nframe: Box (0x8ba9270) style: 0x8a6b2a0 {\\\\n  http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul|* weight: 0 { di\\\\nsplay: 18[0x12]enum }\\\\n  http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul|* weight: 0 { -m\\\\noz-user-focus: 1[0x1]enum }\\\\n  http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul|treechildren wei\\\\nght: 1 { -moz-user-focus: none }\\\\n  http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul|treechildren wei\\\\nght: 1 { display: 22[0x16]enum }\\\\n  http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul|treechildren wei\\\\nght: 1 { }\\\\n  http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul|treechildren > h\\\\nttp://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul|treeitem weight: 2 \\\\n{ display: none }\\\\n  http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul|treechildren > h\\\\nttp://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul|treeitem[|open=true\\\\n] weight: 258 { display: 22[0x16]enum }\\\\n}\\\\nWrong parent style context:  style: 0x8d2e1e0 {\\\\n  http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul|* weight: 0 { di\\\\nsplay: 18[0x12]enum }\\\\n  http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul|* weight: 0 { -m\\\\noz-user-focus: 1[0x1]enum }\\\\n  http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul|treeitem weight:\\\\n 1 { display: 22[0x16]enum }\\\\n  http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul|treeitem weight:\\\\n 1 { }\\\\n  http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul|treeitem weight:\\\\n 1 { -moz-binding: url(\\\\\"chrome://global/content/treeBindings.xml#treeitem\\\\\") }\\\\n  http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul|treeitem weight:\\\\n 1 { list-style-image: none }\\\\n  *|*.folderTreeItem weight: 256 { list-style-image: url(\\\\\"chrome://messenger/ski\\\\nn/icons/folder-closed.gif\\\\\") }\\\\n  *|*.folderTreeItem[|IsServer=true] weight: 512 { list-style-image: url(\\\\\"chrome\\\\n://messenger/skin/icons/server-mail.gif\\\\\") }\\\\n  *|*.folderTreeItem[|IsServer=true][|open=true] weight: 768 { list-style-image:\\\\n url(\\\\\"chrome://messenger/skin/icons/server-mail.gif\\\\\") }\\\\n  *|*.folderTreeItem[|IsServer=true][|ServerType=none] weight: 768 { list-style-\\\\nimage: url(\\\\\"chrome://messenger/skin/icons/server-local.gif\\\\\") }\\\\n  *|*.folderTreeItem[|IsServer=true][|ServerType=none][|open=true] weight: 1024 \\\\n{ list-style-image: url(\\\\\"chrome://messenger/skin/icons/server-local.gif\\\\\") }\\\\n}\\\\nshould be using:  style: 0x8bb4428 {\\\\n  http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul|* weight: 0 { di\\\\nsplay: 18[0x12]enum }\\\\n  http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul|* weight: 0 { -m\\\\noz-user-focus: 1[0x1]enum }\\\\n  http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul|treeitem weight:\\\\n 1 { display: 22[0x16]enum }\\\\n  http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul|treeitem weight:\\\\n 1 { }\\\\n  http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul|treeitem weight:\\\\n 1 { -moz-binding: url(\\\\\"chrome://global/content/treeBindings.xml#treeitem\\\\\") }\\\\n  http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul|treeitem weight:\\\\n 1 { list-style-image: none }\\\\n  *|*.folderTreeItem weight: 256 { list-style-image: url(\\\\\"chrome://messenger/ski\\\\nn/icons/folder-closed.gif\\\\\") }\\\\n  *|*.folderTreeItem[|IsServer=true] weight: 512 { list-style-image: url(\\\\\"chrome\\\\n://messenger/skin/icons/server-mail.gif\\\\\") }\\\\n  *|*.folderTreeItem[|IsServer=true][|ServerType=none] weight: 768 { list-style-\\\\nimage: url(\\\\\"chrome://messenger/skin/icons/server-local.gif\\\\\") }\\\\n}",
+          "candidate_role": "observable_non_positive",
+          "target_observed": false,
+          "target_type": null,
+          "sampling_protocol": "T6-DCS-v2",
+          "sampling_seed": 1.5237494068192796e+18
+        },
+        {
+          "query_id": 1023761,
+          "query_creation_time": "2014-06-11 14:26:47",
+          "query_creator": "mozilla@chrisrebert.com",
+          "query_creator_detail": "{'name': 'mozilla@chrisrebert.com', 'id': 58202, 'real_name': 'Chris Rebert', 'nick': 'mozilla', 'email': 'mozilla@chrisrebert.com'}",
+          "query_summary": "With empty <tbody>, only top border in fully-bordered table is displayed (border-collapse:collapse, collapsed/collapsing borders bug)",
+          "query_description": "Created attachment 8438289\\\\nScreenshots showing rendering differences\\\\n\\\\nUser Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.114 Safari/537.36\\\\n\\\\nSteps to reproduce:\\\\n\\\\n1. In Firefox 30.0, go to http://jsfiddle.net/rZLCu/show/ or http://jsfiddle.net/rZLCu/\\\\n\\\\n\\\\nActual results:\\\\n\\\\nOut of all the borders set on the table and its cells, only the top border on the table itself seems to get displayed.\\\\n\\\\n\\\\nExpected results:\\\\n\\\\nAll the borders on the table and its cells should get displayed.\\\\n\\\\n\\\\n==Further info==\\\\nClick the \\\\\"Add Row\\\\\" button, and the borders will magically appear. Click the \\\\\"Remove\\\\\" button, and the borders will magically disappear again.\\\\n\\\\nOriginal issue: https://github.com/twbs/bootstrap/issues/13453",
+          "candidate_id": 725152,
+          "candidate_creation_time": "2012-02-08 06:06:28",
+          "candidate_creator": "joseph.k.olivas@intel.com",
+          "candidate_creator_detail": "{'real_name': 'Joe Olivas', 'nick': 'joseph.k.olivas', 'email': 'joseph.k.olivas@intel.com', 'name': 'joseph.k.olivas@intel.com', 'id': 419880}",
+          "candidate_summary": "Stereoscopic 3D videos not properly detected",
+          "candidate_description": "User Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:13.0a1) Gecko/20120206 Firefox/13.0a1\\\\nBuild ID: 20120207170854\\\\n\\\\nSteps to reproduce:\\\\n\\\\nVisiting some of the S3D videos on YouTube such as http://www.youtube.com/watch?v=wNXCo6vEQRc&feature=html5_3d aren't being detected as S3D.\\\\n\\\\n\\\\nActual results:\\\\n\\\\nin gfx/layers/d3d10/ImageLayerD3DD10.cpp, checking the stereo mode with yuvImage->mData.mStereoMode is returning STEREO_MODE_MONO so the S3D path is being passed over. This is being done here: http://hg.mozilla.org/mozilla-central/file/ede0d3cd7e3a/gfx/layers/d3d10/ImageLayerD3D10.cpp#l221\\\\n\\\\n\\\\nExpected results:\\\\n\\\\nyuvImage->mData.mStereoMode should be returning the expected mode so the S3D path is taken.",
+          "candidate_role": "observable_non_positive",
+          "target_observed": false,
+          "target_type": null,
+          "sampling_protocol": "T6-DCS-v2",
+          "sampling_seed": 1.5237494068192796e+18
+        },
+        {
+          "query_id": 1023761,
+          "query_creation_time": "2014-06-11 14:26:47",
+          "query_creator": "mozilla@chrisrebert.com",
+          "query_creator_detail": "{'name': 'mozilla@chrisrebert.com', 'id': 58202, 'real_name': 'Chris Rebert', 'nick': 'mozilla', 'email': 'mozilla@chrisrebert.com'}",
+          "query_summary": "With empty <tbody>, only top border in fully-bordered table is displayed (border-collapse:collapse, collapsed/collapsing borders bug)",
+          "query_description": "Created attachment 8438289\\\\nScreenshots showing rendering differences\\\\n\\\\nUser Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.114 Safari/537.36\\\\n\\\\nSteps to reproduce:\\\\n\\\\n1. In Firefox 30.0, go to http://jsfiddle.net/rZLCu/show/ or http://jsfiddle.net/rZLCu/\\\\n\\\\n\\\\nActual results:\\\\n\\\\nOut of all the borders set on the table and its cells, only the top border on the table itself seems to get displayed.\\\\n\\\\n\\\\nExpected results:\\\\n\\\\nAll the borders on the table and its cells should get displayed.\\\\n\\\\n\\\\n==Further info==\\\\nClick the \\\\\"Add Row\\\\\" button, and the borders will magically appear. Click the \\\\\"Remove\\\\\" button, and the borders will magically disappear again.\\\\n\\\\nOriginal issue: https://github.com/twbs/bootstrap/issues/13453",
+          "candidate_id": 694763,
+          "candidate_creation_time": "2011-10-15 20:11:44",
+          "candidate_creator": "Ms2ger@gmail.com",
+          "candidate_creator_detail": "{'id': 302720, 'email': 'Ms2ger@gmail.com', 'name': 'Ms2ger@gmail.com', 'nick': 'Ms2ger', 'real_name': ':Ms2ger (he/him; ⌚ UTC+1/+2)'}",
+          "candidate_summary": "Remove nsIScriptContext::DidSetDocument",
+          "candidate_description": "Created attachment 567282\\\\nPatch v1",
+          "candidate_role": "observable_non_positive",
+          "target_observed": false,
+          "target_type": null,
+          "sampling_protocol": "T6-DCS-v2",
+          "sampling_seed": 1.5237494068192796e+18
+        },
+        {
+          "query_id": 1023761,
+          "query_creation_time": "2014-06-11 14:26:47",
+          "query_creator": "mozilla@chrisrebert.com",
+          "query_creator_detail": "{'name': 'mozilla@chrisrebert.com', 'id': 58202, 'real_name': 'Chris Rebert', 'nick': 'mozilla', 'email': 'mozilla@chrisrebert.com'}",
+          "query_summary": "With empty <tbody>, only top border in fully-bordered table is displayed (border-collapse:collapse, collapsed/collapsing borders bug)",
+          "query_description": "Created attachment 8438289\\\\nScreenshots showing rendering differences\\\\n\\\\nUser Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.114 Safari/537.36\\\\n\\\\nSteps to reproduce:\\\\n\\\\n1. In Firefox 30.0, go to http://jsfiddle.net/rZLCu/show/ or http://jsfiddle.net/rZLCu/\\\\n\\\\n\\\\nActual results:\\\\n\\\\nOut of all the borders set on the table and its cells, only the top border on the table itself seems to get displayed.\\\\n\\\\n\\\\nExpected results:\\\\n\\\\nAll the borders on the table and its cells should get displayed.\\\\n\\\\n\\\\n==Further info==\\\\nClick the \\\\\"Add Row\\\\\" button, and the borders will magically appear. Click the \\\\\"Remove\\\\\" button, and the borders will magically disappear again.\\\\n\\\\nOriginal issue: https://github.com/twbs/bootstrap/issues/13453",
+          "candidate_id": 155283,
+          "candidate_creation_time": "2002-07-02 06:20:52",
+          "candidate_creator": "relf@os2.ru",
+          "candidate_creator_detail": "{'email': 'relf@os2.ru', 'nick': 'relf', 'real_name': 'Max Alekseyev', 'name': 'relf@os2.ru', 'id': 41741}",
+          "candidate_summary": "Mozilla crashes in MOZJS.DLL",
+          "candidate_description": "From Bugzilla Helper:\\\\nUser-Agent: Mozilla/5.0 (OS/2; U; Warp 4.5; en-US; rv:1.1a+) Gecko/20020701\\\\nBuildID:    2002070108\\\\n\\\\n07-01-2002  17:45:18  SYS3171  PID 0b14  TID 0001  Slot 00e7\\\\nP:\\\\INTERNET\\\\MOZILLA\\\\MOZILLA.EXE\\\\nc0000005\\\\n1d2a3282\\\\nP1=00000002  P2=0002ff8c  P3=XXXXXXXX  P4=XXXXXXXX  \\\\nEAX=00a52920  EBX=00e1c89c  ECX=00030184  EDX=00000004\\\\nESI=00faae30  EDI=00e1c860  \\\\nDS=0053  DSACC=f0f3  DSLIM=ffffffff  \\\\nES=0053  ESACC=f0f3  ESLIM=ffffffff  \\\\nFS=150b  FSACC=00f3  FSLIM=00000030\\\\nGS=0000  GSACC=****  GSLIM=********\\\\nCS:EIP=005b:1d2a3282  CSACC=f0df  CSLIM=ffffffff\\\\nSS:ESP=0053:0002ff90  SSACC=f0f3  SSLIM=ffffffff\\\\nEBP=000303d0  FLG=00212202\\\\n\\\\nMOZJS.DLL 0001:00023282\\\\n\\\\n\\\\nReproducible: Always\\\\nSteps to Reproduce:\\\\n1. Open the url\\\\n2.\\\\n3.",
+          "candidate_role": "observable_non_positive",
+          "target_observed": false,
+          "target_type": null,
+          "sampling_protocol": "T6-DCS-v2",
+          "sampling_seed": 1.5237494068192796e+18
+        }
+      ]
+    }
+  ],
+  "python_sources": [
+    "modeling/T6/scripts/t6_baseline_tfidf_retrieval.py",
+    "modeling/T6/scripts/t6_construct_group_aware_split.py",
+    "modeling/T6/scripts/t6_final_model_selection_and_closure.py",
+    "modeling/T6/scripts/t6_mod005_baseline_error_analysis.py",
+    "modeling/T6/scripts/t6_mod006_failure_case_characterization.py",
+    "modeling/T6/scripts/t6_mod007_bm25_retrieval.py",
+    "modeling/T6/scripts/t6_mod008_semantic_failure_retrieval.py",
+    "modeling/T6/scripts/t6_mod009_hybrid_lexical_semantic_retrieval.py",
+    "modeling/T6/scripts/t6_mod010_corrected_hybrid_reconstruction.py",
+    "modeling/T6/scripts/t6_mod010_diagnose_mod009_lexical_reconstruction.py",
+    "modeling/T6/scripts/t6_mod010_exact_tfidf_reproduction.py",
+    "modeling/T6/scripts/t6_mod010_final_hybrid_comparison.py",
+    "modeling/T6/scripts/t6_mod010_inspect_artifact_schemas.py",
+    "modeling/T6/scripts/t6_mod010_tfidf_reproducibility_check.py",
+    "modeling/T6/scripts/t6_visualization.py"
+  ],
+  "function_sources": {
+    "modeling/T6/scripts/t6_baseline_tfidf_retrieval.py": {
+      "clean_text": "def clean_text(value: object) -> str:\n    \"\"\"Convert a value into deterministic text.\"\"\"\n    if pd.isna(value):\n        return \"\"\n    return str(value).strip()",
+      "build_text": "def build_text(\n    frame: pd.DataFrame,\n    columns: list[str],\n) -> pd.Series:\n    \"\"\"\n    Concatenate the four permitted Creation-time fields.\n\n    Field names are included as textual markers so that the representation\n    remains field-aware while staying within a simple classical baseline.\n    \"\"\"\n    parts = []\n\n    for column in columns:\n        field_name = column.replace(\"_\", \" \")\n        values = frame[column].map(clean_text)\n\n        parts.append(\n            field_name\n            + \" \"\n            + values\n        )\n\n    result = parts[0]\n\n    for part in parts[1:]:\n        result = result + \" \" + part\n\n    return result"
+    },
+    "modeling/T6/scripts/t6_mod007_bm25_retrieval.py": {
+      "build_query_text": "def build_query_text(row: pd.Series) -> str:\n    parts = [\n        safe_text(row[\"query_creator\"]),\n        safe_text(row[\"query_creator_detail\"]),\n        safe_text(row[\"query_summary\"]),\n        safe_text(row[\"query_description\"]),\n    ]\n\n    return \" \".join(\n        part for part in parts if part\n    )",
+      "build_candidate_text": "def build_candidate_text(row: pd.Series) -> str:\n    parts = [\n        safe_text(row[\"candidate_creator\"]),\n        safe_text(row[\"candidate_creator_detail\"]),\n        safe_text(row[\"candidate_summary\"]),\n        safe_text(row[\"candidate_description\"]),\n    ]\n\n    return \" \".join(\n        part for part in parts if part\n    )"
+    },
+    "modeling/T6/scripts/t6_mod008_semantic_failure_retrieval.py": {
+      "build_query_text": "def build_query_text(row: pd.Series) -> str:\n    \"\"\"\n    Reproduce the four admitted creation-time query fields.\n    \"\"\"\n\n    parts = [\n        safe_text(row[\"query_creator\"]),\n        safe_text(row[\"query_creator_detail\"]),\n        safe_text(row[\"query_summary\"]),\n        safe_text(row[\"query_description\"]),\n    ]\n\n    return \" \".join(\n        part for part in parts if part\n    )",
+      "build_candidate_text": "def build_candidate_text(row: pd.Series) -> str:\n    \"\"\"\n    Reproduce the four admitted creation-time candidate fields.\n    \"\"\"\n\n    parts = [\n        safe_text(row[\"candidate_creator\"]),\n        safe_text(row[\"candidate_creator_detail\"]),\n        safe_text(row[\"candidate_summary\"]),\n        safe_text(row[\"candidate_description\"]),\n    ]\n\n    return \" \".join(\n        part for part in parts if part\n    )"
+    },
+    "modeling/T6/scripts/t6_mod009_hybrid_lexical_semantic_retrieval.py": {
+      "clean_text": "def clean_text(value) -> str:\n    if pd.isna(value):\n        return \"\"\n\n    return str(value).strip()",
+      "build_text": "def build_text(\n    df: pd.DataFrame,\n    fields: list[str],\n) -> pd.Series:\n    return (\n        df[fields]\n        .fillna(\"\")\n        .astype(str)\n        .agg(\" \".join, axis=1)\n        .str.replace(r\"\\s+\", \" \", regex=True)\n        .str.strip()\n    )"
+    },
+    "modeling/T6/scripts/t6_mod010_corrected_hybrid_reconstruction.py": {
+      "clean_text": "def clean_text(value: object) -> str:\n\n    if pd.isna(value):\n        return \"\"\n\n    return str(value).strip()"
+    },
+    "modeling/T6/scripts/t6_mod010_diagnose_mod009_lexical_reconstruction.py": {
+      "clean_text": "def clean_text(value: object) -> str:\n\n    if pd.isna(value):\n        return \"\"\n\n    return str(value).strip()"
+    },
+    "modeling/T6/scripts/t6_mod010_exact_tfidf_reproduction.py": {
+      "clean_text": "def clean_text(value: object) -> str:\n\n    if pd.isna(value):\n        return \"\"\n\n    return str(value).strip()",
+      "build_text": "def build_text(\n    frame: pd.DataFrame,\n    columns: list[str],\n) -> pd.Series:\n\n    parts = []\n\n    for column in columns:\n\n        field_name = column.replace(\n            \"_\",\n            \" \",\n        )\n\n        values = frame[column].map(\n            clean_text\n        )\n\n        parts.append(\n            field_name\n            + \" \"\n            + values\n        )\n\n    result = parts[0]\n\n    for part in parts[1:]:\n\n        result = (\n            result\n            + \" \"\n            + part\n        )\n\n    return result"
+    }
+  },
+  "source_hits": [
+    {
+      "file": "modeling/T6/scripts/t6_baseline_tfidf_retrieval.py",
+      "term": "query"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_baseline_tfidf_retrieval.py",
+      "term": "candidate"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_baseline_tfidf_retrieval.py",
+      "term": "text"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_baseline_tfidf_retrieval.py",
+      "term": "summary"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_baseline_tfidf_retrieval.py",
+      "term": "description"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_baseline_tfidf_retrieval.py",
+      "term": "TfidfVectorizer"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_baseline_tfidf_retrieval.py",
+      "term": "cosine"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_baseline_tfidf_retrieval.py",
+      "term": "transform"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_baseline_tfidf_retrieval.py",
+      "term": "semantic"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_baseline_tfidf_retrieval.py",
+      "term": "similarity"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_baseline_tfidf_retrieval.py",
+      "term": "rank"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_construct_group_aware_split.py",
+      "term": "query"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_construct_group_aware_split.py",
+      "term": "candidate"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_construct_group_aware_split.py",
+      "term": "target_observed"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_construct_group_aware_split.py",
+      "term": "text"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_construct_group_aware_split.py",
+      "term": "summary"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_construct_group_aware_split.py",
+      "term": "description"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_construct_group_aware_split.py",
+      "term": "semantic"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_final_model_selection_and_closure.py",
+      "term": "query"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_final_model_selection_and_closure.py",
+      "term": "candidate"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_final_model_selection_and_closure.py",
+      "term": "target_observed"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_final_model_selection_and_closure.py",
+      "term": "cosine"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_final_model_selection_and_closure.py",
+      "term": "semantic"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_final_model_selection_and_closure.py",
+      "term": "hybrid"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_final_model_selection_and_closure.py",
+      "term": "similarity"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_final_model_selection_and_closure.py",
+      "term": "rank"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod005_baseline_error_analysis.py",
+      "term": "query"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod005_baseline_error_analysis.py",
+      "term": "candidate"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod005_baseline_error_analysis.py",
+      "term": "text"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod005_baseline_error_analysis.py",
+      "term": "summary"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod005_baseline_error_analysis.py",
+      "term": "similarity"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod005_baseline_error_analysis.py",
+      "term": "rank"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod006_failure_case_characterization.py",
+      "term": "query"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod006_failure_case_characterization.py",
+      "term": "candidate"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod006_failure_case_characterization.py",
+      "term": "target_observed"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod006_failure_case_characterization.py",
+      "term": "text"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod006_failure_case_characterization.py",
+      "term": "summary"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod006_failure_case_characterization.py",
+      "term": "description"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod006_failure_case_characterization.py",
+      "term": "cosine"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod006_failure_case_characterization.py",
+      "term": "similarity"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod006_failure_case_characterization.py",
+      "term": "rank"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod007_bm25_retrieval.py",
+      "term": "query"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod007_bm25_retrieval.py",
+      "term": "candidate"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod007_bm25_retrieval.py",
+      "term": "target_observed"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod007_bm25_retrieval.py",
+      "term": "text"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod007_bm25_retrieval.py",
+      "term": "summary"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod007_bm25_retrieval.py",
+      "term": "description"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod007_bm25_retrieval.py",
+      "term": "rank"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod008_semantic_failure_retrieval.py",
+      "term": "query"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod008_semantic_failure_retrieval.py",
+      "term": "candidate"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod008_semantic_failure_retrieval.py",
+      "term": "target_observed"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod008_semantic_failure_retrieval.py",
+      "term": "text"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod008_semantic_failure_retrieval.py",
+      "term": "summary"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod008_semantic_failure_retrieval.py",
+      "term": "description"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod008_semantic_failure_retrieval.py",
+      "term": "cosine"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod008_semantic_failure_retrieval.py",
+      "term": "transform"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod008_semantic_failure_retrieval.py",
+      "term": "semantic"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod008_semantic_failure_retrieval.py",
+      "term": "embedding"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod008_semantic_failure_retrieval.py",
+      "term": "similarity"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod008_semantic_failure_retrieval.py",
+      "term": "rank"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod009_hybrid_lexical_semantic_retrieval.py",
+      "term": "query"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod009_hybrid_lexical_semantic_retrieval.py",
+      "term": "candidate"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod009_hybrid_lexical_semantic_retrieval.py",
+      "term": "target_observed"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod009_hybrid_lexical_semantic_retrieval.py",
+      "term": "text"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod009_hybrid_lexical_semantic_retrieval.py",
+      "term": "summary"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod009_hybrid_lexical_semantic_retrieval.py",
+      "term": "description"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod009_hybrid_lexical_semantic_retrieval.py",
+      "term": "cosine"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod009_hybrid_lexical_semantic_retrieval.py",
+      "term": "transform"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod009_hybrid_lexical_semantic_retrieval.py",
+      "term": "semantic"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod009_hybrid_lexical_semantic_retrieval.py",
+      "term": "hybrid"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod009_hybrid_lexical_semantic_retrieval.py",
+      "term": "embedding"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod009_hybrid_lexical_semantic_retrieval.py",
+      "term": "similarity"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod009_hybrid_lexical_semantic_retrieval.py",
+      "term": "rank"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_corrected_hybrid_reconstruction.py",
+      "term": "query"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_corrected_hybrid_reconstruction.py",
+      "term": "candidate"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_corrected_hybrid_reconstruction.py",
+      "term": "target_observed"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_corrected_hybrid_reconstruction.py",
+      "term": "text"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_corrected_hybrid_reconstruction.py",
+      "term": "summary"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_corrected_hybrid_reconstruction.py",
+      "term": "description"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_corrected_hybrid_reconstruction.py",
+      "term": "transform"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_corrected_hybrid_reconstruction.py",
+      "term": "semantic"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_corrected_hybrid_reconstruction.py",
+      "term": "hybrid"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_corrected_hybrid_reconstruction.py",
+      "term": "embedding"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_corrected_hybrid_reconstruction.py",
+      "term": "rank"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_diagnose_mod009_lexical_reconstruction.py",
+      "term": "query"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_diagnose_mod009_lexical_reconstruction.py",
+      "term": "candidate"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_diagnose_mod009_lexical_reconstruction.py",
+      "term": "text"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_diagnose_mod009_lexical_reconstruction.py",
+      "term": "summary"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_diagnose_mod009_lexical_reconstruction.py",
+      "term": "description"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_diagnose_mod009_lexical_reconstruction.py",
+      "term": "transform"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_diagnose_mod009_lexical_reconstruction.py",
+      "term": "hybrid"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_diagnose_mod009_lexical_reconstruction.py",
+      "term": "rank"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_exact_tfidf_reproduction.py",
+      "term": "query"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_exact_tfidf_reproduction.py",
+      "term": "candidate"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_exact_tfidf_reproduction.py",
+      "term": "target_observed"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_exact_tfidf_reproduction.py",
+      "term": "text"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_exact_tfidf_reproduction.py",
+      "term": "summary"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_exact_tfidf_reproduction.py",
+      "term": "description"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_exact_tfidf_reproduction.py",
+      "term": "transform"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_exact_tfidf_reproduction.py",
+      "term": "semantic"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_exact_tfidf_reproduction.py",
+      "term": "hybrid"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_exact_tfidf_reproduction.py",
+      "term": "rank"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_final_hybrid_comparison.py",
+      "term": "query"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_final_hybrid_comparison.py",
+      "term": "candidate"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_final_hybrid_comparison.py",
+      "term": "target_observed"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_final_hybrid_comparison.py",
+      "term": "cosine"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_final_hybrid_comparison.py",
+      "term": "semantic"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_final_hybrid_comparison.py",
+      "term": "hybrid"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_final_hybrid_comparison.py",
+      "term": "rank"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_inspect_artifact_schemas.py",
+      "term": "query"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_inspect_artifact_schemas.py",
+      "term": "candidate"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_inspect_artifact_schemas.py",
+      "term": "target_observed"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_inspect_artifact_schemas.py",
+      "term": "summary"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_inspect_artifact_schemas.py",
+      "term": "semantic"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_inspect_artifact_schemas.py",
+      "term": "hybrid"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_mod010_inspect_artifact_schemas.py",
+      "term": "rank"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_visualization.py",
+      "term": "query"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_visualization.py",
+      "term": "candidate"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_visualization.py",
+      "term": "target_observed"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_visualization.py",
+      "term": "semantic"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_visualization.py",
+      "term": "hybrid"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_visualization.py",
+      "term": "embedding"
+    },
+    {
+      "file": "modeling/T6/scripts/t6_visualization.py",
+      "term": "rank"
+    }
+  ],
+  "artifact_candidates": [
+    {
+      "path": "modeling/T6/models/t6_mod004_tfidf_vectorizer.joblib",
+      "size_bytes": 4235872
+    }
+  ],
+  "status": "INSPECTION_COMPLETE"
+}

@@ -1,0 +1,23 @@
+{
+  "operation": "T7 MOD-013",
+  "purpose": "Post-closure visualization generation",
+  "model_refit": false,
+  "raw_archive_access": false,
+  "target_reconstruction": false,
+  "source_artifacts": [
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/derived/t7_mod006_kaplan_meier_curve.csv",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/derived/t7_mod006_nelson_aalen_curve.csv",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod008_predictive_vs_reference.csv",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod009_survival_calibration.csv",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod007_predictive_survival_audit.json",
+    "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/metrics/t7_mod010_log_normal_aft_audit.json"
+  ],
+  "plots": [
+    "t7_mod013_kaplan_meier_survival_curve.png",
+    "t7_mod013_nelson_aalen_cumulative_hazard.png",
+    "t7_mod013_ipcw_brier_comparison.png",
+    "t7_mod013_survival_calibration_style.png",
+    "t7_mod013_cindex_comparison.png"
+  ],
+  "status": "COMPLETE"
+}

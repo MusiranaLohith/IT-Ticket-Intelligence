@@ -1,0 +1,65 @@
+{
+  "operation": "FMP-06 OP-018R27",
+  "status": "PASS",
+  "read_only": true,
+  "training_performed": false,
+  "fitting_performed": false,
+  "prediction_performed": true,
+  "evaluation_performed": false,
+  "locked_test_used": false,
+  "artifact_modified": false,
+  "source": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T7/scripts/t7_mod010_log_normal_aft_baseline.py",
+  "model_type": "LogNormal_AFT",
+  "feature_count": 21,
+  "feature_names": [
+    "creator_frequency_log1p",
+    "creator_detail_frequency_log1p",
+    "summary_chars_log1p",
+    "summary_words_log1p",
+    "summary_digits_log1p",
+    "summary_lines_log1p",
+    "summary_uppercase_log1p",
+    "summary_missing",
+    "description_chars_log1p",
+    "description_words_log1p",
+    "description_digits_log1p",
+    "description_lines_log1p",
+    "description_uppercase_log1p",
+    "description_missing",
+    "creation_year_scaled",
+    "creation_month_sin",
+    "creation_month_cos",
+    "creation_weekday_sin",
+    "creation_weekday_cos",
+    "creation_hour_sin",
+    "creation_hour_cos"
+  ],
+  "sigma": 16.259349942778254,
+  "probe_ids": [
+    "1664573",
+    "1664575",
+    "1664577"
+  ],
+  "observed_durations": [
+    1642378.0,
+    258257.0,
+    56522507.0
+  ],
+  "event_values": [
+    1,
+    1,
+    1
+  ],
+  "linear_predictor": [
+    3.537859992022756,
+    4.118847896889011,
+    3.221260154341329
+  ],
+  "predicted_median_duration": [
+    34.39323857550942,
+    61.48836050929119,
+    25.05967935617892
+  ],
+  "authoritative_feature_builder_used": true,
+  "interpretation": "The authoritative T7 MOD-010 make_features() implementation was executed directly on three native evaluation rows using frozen model coefficients. No fitting or parameter selection was performed."
+}

@@ -1,0 +1,11 @@
+{
+  "operation": "T2-MOD-006",
+  "status": "COMPLETE",
+  "train_rows": 20648,
+  "validation_rows": 4425,
+  "test_loaded": false,
+  "train_validation_overlap": 0,
+  "model_file": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/models/t2_baseline_tfidf_logreg.joblib",
+  "metrics_file": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/metrics/t2_baseline_metrics.json",
+  "confusion_matrix_file": "/home/whiteblack/Documents/IT-Ticket-Triage-System/modeling/T2/metrics/t2_baseline_confusion_matrix.csv"
+}
